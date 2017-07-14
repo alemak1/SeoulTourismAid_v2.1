@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9B5618E3C09F558559566A7 /* libPods-Seoul Tourism Aid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */; };
+		BD38F0A51F18F2380012ABCB /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0A41F18F2380012ABCB /* YTPlayerView.m */; };
+		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
+		BD38F0B01F19036C0012ABCB /* VideoThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0AF1F19036C0012ABCB /* VideoThumbnailCell.m */; };
+		BD38F0B31F1903D50012ABCB /* SeoulVideoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B21F1903D50012ABCB /* SeoulVideoCollectionViewController.m */; };
+		BD38F0B61F1912410012ABCB /* MainVideoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B51F1912410012ABCB /* MainVideoPreviewController.m */; };
+		BD38F0B91F191CDB0012ABCB /* VideoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B81F191CDB0012ABCB /* VideoScrollViewController.m */; };
+		BD3A45211F18A3EC00DA5A75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45201F18A3EC00DA5A75 /* main.m */; };
+		BD3A45241F18A3EC00DA5A75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45231F18A3EC00DA5A75 /* AppDelegate.m */; };
+		BD3A45271F18A3EC00DA5A75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45261F18A3EC00DA5A75 /* ViewController.m */; };
+		BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45281F18A3EC00DA5A75 /* Main.storyboard */; };
+		BD3A452D1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3A452B1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld */; };
+		BD3A452F1F18A3ED00DA5A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3A452E1F18A3ED00DA5A75 /* Assets.xcassets */; };
+		BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45301F18A3ED00DA5A75 /* LaunchScreen.storyboard */; };
+		BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45391F18A3F600DA5A75 /* Podfile */; };
+		BD3A453D1F18A4BB00DA5A75 /* CLLocation+Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A453C1F18A4BB00DA5A75 /* CLLocation+Constants.m */; };
+		BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */; };
+		BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A45401F18A4D100DA5A75 /* MapKit.framework */; };
+		BD3A45441F18A5B000DA5A75 /* SpecificLocationMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45431F18A5B000DA5A75 /* SpecificLocationMapController.m */; };
+		BD3A45481F18B41900DA5A75 /* UserLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45471F18B41900DA5A75 /* UserLocationManager.m */; };
+		BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */; };
+		BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD3A454B1F18BF9B00DA5A75 /* Seoul.geojson */; };
+		BD3A454F1F18C09900DA5A75 /* WayPointConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A454E1F18C09900DA5A75 /* WayPointConfiguration.m */; };
+		BD3A45521F18C2D900DA5A75 /* GoogleURLGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */; };
+		BD3A45551F18CDCB00DA5A75 /* GoogleJSONResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20B418F62862684F29CBBD52 /* Pods-Seoul Tourism Aid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seoul Tourism Aid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid.release.xcconfig"; sourceTree = "<group>"; };
+		BD38F0A31F18F2380012ABCB /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		BD38F0A41F18F2380012ABCB /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		BD38F0AA1F18F2670012ABCB /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
+		BD38F0AC1F18F5420012ABCB /* YouTubeiOSPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeiOSPlayerHelper.h; sourceTree = "<group>"; };
+		BD38F0AE1F19035E0012ABCB /* VideoThumbnailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoThumbnailCell.h; sourceTree = "<group>"; };
+		BD38F0AF1F19036C0012ABCB /* VideoThumbnailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoThumbnailCell.m; sourceTree = "<group>"; };
+		BD38F0B11F1903BD0012ABCB /* SeoulVideoCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeoulVideoCollectionViewController.h; sourceTree = "<group>"; };
+		BD38F0B21F1903D50012ABCB /* SeoulVideoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeoulVideoCollectionViewController.m; sourceTree = "<group>"; };
+		BD38F0B41F1912360012ABCB /* MainVideoPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainVideoPreviewController.h; sourceTree = "<group>"; };
+		BD38F0B51F1912410012ABCB /* MainVideoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVideoPreviewController.m; sourceTree = "<group>"; };
+		BD38F0B71F191CCB0012ABCB /* VideoScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoScrollViewController.h; sourceTree = "<group>"; };
+		BD38F0B81F191CDB0012ABCB /* VideoScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoScrollViewController.m; sourceTree = "<group>"; };
+		BD3A451C1F18A3EC00DA5A75 /* Seoul Tourism Aid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seoul Tourism Aid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3A45201F18A3EC00DA5A75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD3A45221F18A3EC00DA5A75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD3A45231F18A3EC00DA5A75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD3A45251F18A3EC00DA5A75 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BD3A45261F18A3EC00DA5A75 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BD3A45291F18A3EC00DA5A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD3A452C1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Seoul_Tourism_Aid.xcdatamodel; sourceTree = "<group>"; };
+		BD3A452E1F18A3ED00DA5A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD3A45311F18A3ED00DA5A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD3A45331F18A3ED00DA5A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD3A45391F18A3F600DA5A75 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD3A453B1F18A4BB00DA5A75 /* CLLocation+Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Constants.h"; sourceTree = "<group>"; };
+		BD3A453C1F18A4BB00DA5A75 /* CLLocation+Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Constants.m"; sourceTree = "<group>"; };
+		BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BD3A45401F18A4D100DA5A75 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BD3A45421F18A5A000DA5A75 /* SpecificLocationMapController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecificLocationMapController.h; sourceTree = "<group>"; };
+		BD3A45431F18A5B000DA5A75 /* SpecificLocationMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificLocationMapController.m; sourceTree = "<group>"; };
+		BD3A45451F18B28900DA5A75 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BD3A45461F18B40F00DA5A75 /* UserLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLocationManager.h; sourceTree = "<group>"; };
+		BD3A45471F18B41900DA5A75 /* UserLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationManager.m; sourceTree = "<group>"; };
+		BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PlaceIDInformation.plist; sourceTree = "<group>"; };
+		BD3A454B1F18BF9B00DA5A75 /* Seoul.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Seoul.geojson; path = "../../Alphabet Pilot Flies to Seoul/Alphabet Pilot Flies to Seoul/Seoul.geojson"; sourceTree = "<group>"; };
+		BD3A454D1F18C08D00DA5A75 /* WayPointConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WayPointConfiguration.h; sourceTree = "<group>"; };
+		BD3A454E1F18C09900DA5A75 /* WayPointConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WayPointConfiguration.m; sourceTree = "<group>"; };
+		BD3A45501F18C2CF00DA5A75 /* GoogleURLGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleURLGenerator.h; sourceTree = "<group>"; };
+		BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleURLGenerator.m; sourceTree = "<group>"; };
+		BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleJSONResponseParser.h; sourceTree = "<group>"; };
+		BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleJSONResponseParser.m; sourceTree = "<group>"; };
+		D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seoul Tourism Aid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A1474CE2ECB707CC2EDFCE /* Pods-Seoul Tourism Aid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seoul Tourism Aid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD3A45191F18A3EC00DA5A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */,
+				BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */,
+				B9B5618E3C09F558559566A7 /* libPods-Seoul Tourism Aid.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EF658D733D4DCD626933478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD3A45401F18A4D100DA5A75 /* MapKit.framework */,
+				BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */,
+				D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		613BD6AE93E51D8614EEBEF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0A1474CE2ECB707CC2EDFCE /* Pods-Seoul Tourism Aid.debug.xcconfig */,
+				20B418F62862684F29CBBD52 /* Pods-Seoul Tourism Aid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BD38F0A21F18F2270012ABCB /* YouTubeAPIUtils */ = {
+			isa = PBXGroup;
+			children = (
+				BD38F0AA1F18F2670012ABCB /* Assets.bundle */,
+				BD38F0A31F18F2380012ABCB /* YTPlayerView.h */,
+				BD38F0A41F18F2380012ABCB /* YTPlayerView.m */,
+				BD38F0AC1F18F5420012ABCB /* YouTubeiOSPlayerHelper.h */,
+			);
+			name = YouTubeAPIUtils;
+			sourceTree = "<group>";
+		};
+		BD38F0AD1F1903380012ABCB /* CollectionViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD38F0AE1F19035E0012ABCB /* VideoThumbnailCell.h */,
+				BD38F0AF1F19036C0012ABCB /* VideoThumbnailCell.m */,
+				BD38F0B11F1903BD0012ABCB /* SeoulVideoCollectionViewController.h */,
+				BD38F0B21F1903D50012ABCB /* SeoulVideoCollectionViewController.m */,
+				BD38F0B41F1912360012ABCB /* MainVideoPreviewController.h */,
+				BD38F0B51F1912410012ABCB /* MainVideoPreviewController.m */,
+				BD38F0B71F191CCB0012ABCB /* VideoScrollViewController.h */,
+				BD38F0B81F191CDB0012ABCB /* VideoScrollViewController.m */,
+			);
+			name = CollectionViewControllers;
+			sourceTree = "<group>";
+		};
+		BD3A45131F18A3EC00DA5A75 = {
+			isa = PBXGroup;
+			children = (
+				BD3A45391F18A3F600DA5A75 /* Podfile */,
+				BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */,
+				BD3A451D1F18A3EC00DA5A75 /* Products */,
+				613BD6AE93E51D8614EEBEF8 /* Pods */,
+				3EF658D733D4DCD626933478 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BD3A451D1F18A3EC00DA5A75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD3A451C1F18A3EC00DA5A75 /* Seoul Tourism Aid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
+			isa = PBXGroup;
+			children = (
+				BD38F0AD1F1903380012ABCB /* CollectionViewControllers */,
+				BD38F0A21F18F2270012ABCB /* YouTubeAPIUtils */,
+				BD3A454B1F18BF9B00DA5A75 /* Seoul.geojson */,
+				BD3A453B1F18A4BB00DA5A75 /* CLLocation+Constants.h */,
+				BD3A453C1F18A4BB00DA5A75 /* CLLocation+Constants.m */,
+				BD3A45221F18A3EC00DA5A75 /* AppDelegate.h */,
+				BD3A45231F18A3EC00DA5A75 /* AppDelegate.m */,
+				BD3A45251F18A3EC00DA5A75 /* ViewController.h */,
+				BD3A45261F18A3EC00DA5A75 /* ViewController.m */,
+				BD3A45281F18A3EC00DA5A75 /* Main.storyboard */,
+				BD3A452E1F18A3ED00DA5A75 /* Assets.xcassets */,
+				BD3A45301F18A3ED00DA5A75 /* LaunchScreen.storyboard */,
+				BD3A45331F18A3ED00DA5A75 /* Info.plist */,
+				BD3A452B1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld */,
+				BD3A451F1F18A3EC00DA5A75 /* Supporting Files */,
+				BD3A45421F18A5A000DA5A75 /* SpecificLocationMapController.h */,
+				BD3A45431F18A5B000DA5A75 /* SpecificLocationMapController.m */,
+				BD3A45451F18B28900DA5A75 /* Constants.h */,
+				BD3A45461F18B40F00DA5A75 /* UserLocationManager.h */,
+				BD3A45471F18B41900DA5A75 /* UserLocationManager.m */,
+				BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */,
+				BD3A454D1F18C08D00DA5A75 /* WayPointConfiguration.h */,
+				BD3A454E1F18C09900DA5A75 /* WayPointConfiguration.m */,
+				BD3A45501F18C2CF00DA5A75 /* GoogleURLGenerator.h */,
+				BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */,
+				BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */,
+				BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */,
+			);
+			path = "Seoul Tourism Aid";
+			sourceTree = "<group>";
+		};
+		BD3A451F1F18A3EC00DA5A75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD3A45201F18A3EC00DA5A75 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD3A451B1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD3A45361F18A3ED00DA5A75 /* Build configuration list for PBXNativeTarget "Seoul Tourism Aid" */;
+			buildPhases = (
+				A28F89D3C5776298958542BE /* [CP] Check Pods Manifest.lock */,
+				BD3A45181F18A3EC00DA5A75 /* Sources */,
+				BD3A45191F18A3EC00DA5A75 /* Frameworks */,
+				BD3A451A1F18A3EC00DA5A75 /* Resources */,
+				FEA3A7F2D8973B53FBB8DB22 /* [CP] Embed Pods Frameworks */,
+				4A57CDCF0A93D5454BE60E5D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Seoul Tourism Aid";
+			productName = "Seoul Tourism Aid";
+			productReference = BD3A451C1F18A3EC00DA5A75 /* Seoul Tourism Aid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD3A45141F18A3EC00DA5A75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = AlexMakedonski;
+				TargetAttributes = {
+					BD3A451B1F18A3EC00DA5A75 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = T9J39WJJ9G;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = BD3A45171F18A3EC00DA5A75 /* Build configuration list for PBXProject "Seoul Tourism Aid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD3A45131F18A3EC00DA5A75;
+			productRefGroup = BD3A451D1F18A3EC00DA5A75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD3A451B1F18A3EC00DA5A75 /* Seoul Tourism Aid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD3A451A1F18A3EC00DA5A75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
+				BD3A452F1F18A3ED00DA5A75 /* Assets.xcassets in Resources */,
+				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
+				BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */,
+				BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */,
+				BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */,
+				BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A57CDCF0A93D5454BE60E5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A28F89D3C5776298958542BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEA3A7F2D8973B53FBB8DB22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD3A45181F18A3EC00DA5A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD3A453D1F18A4BB00DA5A75 /* CLLocation+Constants.m in Sources */,
+				BD38F0A51F18F2380012ABCB /* YTPlayerView.m in Sources */,
+				BD3A45271F18A3EC00DA5A75 /* ViewController.m in Sources */,
+				BD3A452D1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld in Sources */,
+				BD3A45241F18A3EC00DA5A75 /* AppDelegate.m in Sources */,
+				BD3A45481F18B41900DA5A75 /* UserLocationManager.m in Sources */,
+				BD3A45521F18C2D900DA5A75 /* GoogleURLGenerator.m in Sources */,
+				BD3A454F1F18C09900DA5A75 /* WayPointConfiguration.m in Sources */,
+				BD3A45211F18A3EC00DA5A75 /* main.m in Sources */,
+				BD38F0B91F191CDB0012ABCB /* VideoScrollViewController.m in Sources */,
+				BD3A45551F18CDCB00DA5A75 /* GoogleJSONResponseParser.m in Sources */,
+				BD38F0B01F19036C0012ABCB /* VideoThumbnailCell.m in Sources */,
+				BD38F0B31F1903D50012ABCB /* SeoulVideoCollectionViewController.m in Sources */,
+				BD3A45441F18A5B000DA5A75 /* SpecificLocationMapController.m in Sources */,
+				BD38F0B61F1912410012ABCB /* MainVideoPreviewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BD3A45281F18A3EC00DA5A75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD3A45291F18A3EC00DA5A75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD3A45301F18A3ED00DA5A75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD3A45311F18A3ED00DA5A75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD3A45341F18A3ED00DA5A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD3A45351F18A3ED00DA5A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD3A45371F18A3ED00DA5A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0A1474CE2ECB707CC2EDFCE /* Pods-Seoul Tourism Aid.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T9J39WJJ9G;
+				INFOPLIST_FILE = "Seoul Tourism Aid/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexMakedonski.Seoul-Tourism-Aid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD3A45381F18A3ED00DA5A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20B418F62862684F29CBBD52 /* Pods-Seoul Tourism Aid.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T9J39WJJ9G;
+				INFOPLIST_FILE = "Seoul Tourism Aid/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexMakedonski.Seoul-Tourism-Aid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD3A45171F18A3EC00DA5A75 /* Build configuration list for PBXProject "Seoul Tourism Aid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD3A45341F18A3ED00DA5A75 /* Debug */,
+				BD3A45351F18A3ED00DA5A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD3A45361F18A3ED00DA5A75 /* Build configuration list for PBXNativeTarget "Seoul Tourism Aid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD3A45371F18A3ED00DA5A75 /* Debug */,
+				BD3A45381F18A3ED00DA5A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD3A452B1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD3A452C1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodel */,
+			);
+			currentVersion = BD3A452C1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodel */;
+			path = Seoul_Tourism_Aid.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BD3A45141F18A3EC00DA5A75 /* Project object */;
+}
