@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Oa-Ww-eY9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a60-CG-c5f">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,7 +28,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNY-UM-yk3">
-                                <rect key="frame" x="77" y="90.5" width="614" height="22.5"/>
+                                <rect key="frame" x="77" y="90.5" width="614" height="23"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Location Viewer">
                                         <attributes>
@@ -59,7 +59,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="253"/>
+            <point key="canvasLocation" x="491" y="122"/>
+        </scene>
+        <!--Location Search Controller-->
+        <scene sceneID="MDS-aX-oIY">
+            <objects>
+                <viewController id="33E-rR-NXt" customClass="GMSLocationSearchController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rHG-Qh-DDE"/>
+                        <viewControllerLayoutGuide type="bottom" id="snO-U8-k3G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ryG-MM-RfV">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feE-9I-UQh">
+                                <rect key="frame" x="317.5" y="497" width="133" height="30"/>
+                                <state key="normal" title="Pick a nearby place"/>
+                                <connections>
+                                    <action selector="pickPlace:" destination="33E-rR-NXt" eventType="touchUpInside" id="YsK-8h-kWk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="feE-9I-UQh" firstAttribute="centerY" secondItem="ryG-MM-RfV" secondAttribute="centerY" id="EXd-Ox-ruf"/>
+                            <constraint firstItem="feE-9I-UQh" firstAttribute="centerX" secondItem="ryG-MM-RfV" secondAttribute="centerX" id="lVb-85-q3u"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXa-fU-G3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1278" y="-73"/>
+        </scene>
+        <!--Entry View Controller Pad-->
+        <scene sceneID="hfh-ek-0Re">
+            <objects>
+                <collectionViewController id="a60-CG-c5f" customClass="EntryViewControllerPad" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6L1-Fa-XGL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vx0-e0-MnE">
+                            <size key="itemSize" width="200" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="60" maxX="20" maxY="60"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SKViewCell" id="aHQ-0P-ITU" customClass="SKViewCell">
+                                <rect key="frame" x="20" y="60" width="200" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eea-mM-Pby" customClass="SKView">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                            <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="eea-mM-Pby" firstAttribute="top" secondItem="aHQ-0P-ITU" secondAttribute="top" id="Hbv-Rm-H7W"/>
+                                    <constraint firstAttribute="bottom" secondItem="eea-mM-Pby" secondAttribute="bottom" id="L3p-8d-RTF"/>
+                                    <constraint firstItem="eea-mM-Pby" firstAttribute="leading" secondItem="aHQ-0P-ITU" secondAttribute="leading" id="d57-83-6tF"/>
+                                    <constraint firstAttribute="trailing" secondItem="eea-mM-Pby" secondAttribute="trailing" id="zBj-ww-0z1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="skView" destination="eea-mM-Pby" id="sws-Lq-0u6"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="a60-CG-c5f" id="pXv-dN-UVJ"/>
+                            <outlet property="delegate" destination="a60-CG-c5f" id="5q0-Bi-ojJ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TD-kq-0Te" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1221" y="-257"/>
         </scene>
         <!--Seoul Video Collection View Controller-->
         <scene sceneID="mi9-3S-Met">
@@ -108,7 +188,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMN-Oo-ubP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1684" y="-1421"/>
+            <point key="canvasLocation" x="-1461" y="-1663"/>
         </scene>
         <!--Main Video Preview Controller-->
         <scene sceneID="X0D-cv-yN9">
@@ -251,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvC-sn-HTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2367" y="-1543"/>
+            <point key="canvasLocation" x="-2100" y="-1295"/>
         </scene>
         <!--Video Scroll View Controller-->
         <scene sceneID="PD0-9b-RB1">
@@ -299,7 +379,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKx-3Z-ik2">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="31.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="32"/>
                                 <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
@@ -313,13 +393,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AkO-kG-Ke7">
-                                <rect key="frame" x="0.0" y="31.5" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="32" width="768" height="205"/>
                                 <connections>
                                     <segue destination="EoX-wJ-VHl" kind="embed" identifier="embedSeg1" id="hdP-CL-caO"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJx-j7-roo">
-                                <rect key="frame" x="20" y="236.5" width="728" height="51"/>
+                                <rect key="frame" x="20" y="237" width="728" height="51"/>
                                 <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
@@ -333,13 +413,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uX-Us-g0Z">
-                                <rect key="frame" x="0.0" y="287.5" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="288" width="768" height="205"/>
                                 <connections>
                                     <segue destination="EoX-wJ-VHl" kind="embed" identifier="embedSeg2" id="IKE-np-pAz"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ter-oU-Ex2">
-                                <rect key="frame" x="20" y="492.5" width="728" height="51"/>
+                                <rect key="frame" x="20" y="493" width="728" height="51"/>
                                 <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
@@ -353,13 +433,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epA-gt-yFv">
-                                <rect key="frame" x="0.0" y="543.5" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="544" width="768" height="205"/>
                                 <connections>
                                     <segue destination="EoX-wJ-VHl" kind="embed" identifier="embedSeg3" id="vF6-uR-9nW"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-VV-0Mx">
-                                <rect key="frame" x="20" y="748.5" width="728" height="51"/>
+                                <rect key="frame" x="20" y="749" width="728" height="51"/>
                                 <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
@@ -373,7 +453,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EL-Ul-mjm">
-                                <rect key="frame" x="0.0" y="799.5" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="800" width="768" height="205"/>
                                 <connections>
                                     <segue destination="EoX-wJ-VHl" kind="embed" identifier="embedSeg4" id="q4v-6n-FNa"/>
                                 </connections>
@@ -446,14 +526,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RF1-Yg-jEY">
-                                <rect key="frame" x="269" y="569.5" width="30" height="30"/>
+                                <rect key="frame" x="269" y="570" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playVideo:" destination="56v-qq-9fk" eventType="touchUpInside" id="BKi-ip-Z78"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kE-GW-tQ5">
-                                <rect key="frame" x="439.5" y="569.5" width="32" height="30"/>
+                                <rect key="frame" x="440" y="570" width="32" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopVideo:" destination="56v-qq-9fk" eventType="touchUpInside" id="TFy-Ij-UcG"/>
@@ -478,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2N-tm-bVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692" y="170"/>
+            <point key="canvasLocation" x="-36" y="762"/>
         </scene>
         <!--Seoul Video Collection View Controller-->
         <scene sceneID="NfC-Xs-W39">

@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "SpecificLocationMapController.h"
+#import "EntryViewController.h"
+#import "EntryViewGameSceneController.h"
 
 @import GoogleMaps;
+@import GooglePlaces;
 
 @interface AppDelegate ()
 
@@ -17,18 +20,24 @@
 
 @implementation AppDelegate
 
-static BOOL willInstantiateRVCFromStoryboard = false;
+static BOOL willInstantiateRVCFromStoryboard = true;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [GMSServices provideAPIKey:@"AIzaSyArHUCFbCpteGQQ8z1rx4lPCcw97ywcdU8"];
+    [GMSServices provideAPIKey:@"AIzaSyBlXDAHWUBY1sbC5VYiavtv83OsOJ_sFq8"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyBlXDAHWUBY1sbC5VYiavtv83OsOJ_sFq8"];
     
     /** API Keys
      
      AIzaSyBPnC1u4_B_biijIss--6a28CMYCvVI96g
      AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg
-     
+     AIzaSyDXsq38mKrqMomkoMyIJtyPtNdp0mdbOsA
+     AIzaSyDXsq38mKrqMomkoMyIJtyPtNdp0mdbOsA
+     AIzaSyArHUCFbCpteGQQ8z1rx4lPCcw97ywcdU8
+     AIzaSyArdLXVQO_Ppb0aXZ3WjJtn94dsK5-gjf8
+     AIzaSyBlXDAHWUBY1sbC5VYiavtv83OsOJ_sFq8
+
      **/
     
     // Override point for customization after application launch.
@@ -38,13 +47,19 @@ static BOOL willInstantiateRVCFromStoryboard = false;
         
         self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
 
-        
+        /**
         UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         SpecificLocationMapController* SLMController = [mainStoryboard instantiateViewControllerWithIdentifier:@"SpecificLocationMapController"];
         
+        **/
         
-        [self.window setRootViewController:SLMController];
+        /**
+        EntryViewController* entryViewController = [[EntryViewController alloc] init];
+        **/
+        
+        EntryViewGameSceneController* gameSceneController = [[EntryViewGameSceneController alloc] init];
+        [self.window setRootViewController:gameSceneController];
         
         [self.window makeKeyAndVisible];
     }

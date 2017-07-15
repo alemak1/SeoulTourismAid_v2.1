@@ -73,7 +73,10 @@ NSDictionary* _placeIDInfo;
     
     [self.locationLabel setText:@"Incheon Airport"];
     
-    
+    GMSMarker* marker = [GMSMarker markerWithPosition:airportLocation.coordinate];
+    marker.title = @"Incheon International Airport";
+    marker.map = googleMapView;
+    marker.icon = [UIImage imageNamed:@"airportB"];
     
     
     
@@ -91,13 +94,28 @@ NSDictionary* _placeIDInfo;
         
     }
 
-    [[[NSURLSession sharedSession] dataTaskWithURL:[self getURL] completionHandler:^(NSData* data, NSURLResponse* response, NSError*error){
+    [[[NSURLSession sharedSession] dataTaskWithURL:[self getURLWithPlaceIDForDestinationKey:@"Itaewon"] completionHandler:^(NSData* data, NSURLResponse* response, NSError*error){
         
-        //Do error handling...
+        if(error){
+            
+            NSLog(@"Error: failed to donwload JSON data with error %@",[error localizedDescription]);
+        }
         
-        //Validate the response....
         
-        //Check that the data is available...
+        if([response isKindOfClass:[NSHTTPURLResponse class]]){
+            
+            NSHTTPURLResponse* urlResponse = (NSHTTPURLResponse*)response;
+            
+            if(urlResponse.statusCode != 200){
+                NSLog(@"Error: received bad HTTP response; the requested API endpoint is not available, status code: %d",urlResponse.statusCode);
+            }
+        }
+        
+        
+        if(!data){
+            NSLog(@"JSON data unavailable");
+        }
+        
         
         NSError* jsonError;
         
@@ -105,6 +123,12 @@ NSDictionary* _placeIDInfo;
         
         NSLog(@"JSON Dict %@",[jsonDict description]);
         
+        NSString* errorMessage = jsonDict[@"error_message"];
+        NSString* status = jsonDict[@"status"];
+        
+        if([status isEqualToString:@"REQUEST_DENIED"]){
+            NSLog(@"Your API requesst has been denied: %@",errorMessage);
+        }
         
     }] resume];
     
@@ -127,7 +151,7 @@ NSDictionary* _placeIDInfo;
     NSString* destinationString =[NSString stringWithFormat:@"%f,%f",destinationLocation.coordinate.latitude,destinationLocation.coordinate.longitude];
     
     
-    NSString* urlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&key=%@",originString,destinationString,GOOGLE_API_KEY];
+    NSString* urlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&api=%@",originString,destinationString,GOOGLE_API_KEY];
     
     
     return [NSURL URLWithString:urlString];
