@@ -64,6 +64,7 @@ typedef enum IconBitmask{
 @property SKSpriteNode* mainMenuButton;
 @property SKNode* optionsSelectionPanel;
 @property SKNode* overlayNode;
+@property SKNode* worldNode;
 
 @property SKSpriteNode* imageGalleryButton;
 @property SKSpriteNode* youTubeVideoButton;
@@ -78,11 +79,16 @@ typedef enum IconBitmask{
 @property SKSpriteNode* regionMonitoringButton;
 
 
+
+
 @end
 
 @implementation EntryGameScene
 
+BOOL _gameIsPaused = false;
+BOOL _mainMenuIsActive = false;
 BOOL _notificationHasBeenSent = false;
+
 CGFloat _lastPlayerVelocity = 0.00;
 NSTimeInterval _notificationDelayCount = 0.00;
 NSTimeInterval _notificationDelayInterval = 5.00;
@@ -114,16 +120,24 @@ NSOperationQueue* _operationQueue;
     [self.overlayNode setZPosition:20.0];
     
     SKNode* overlayCollection = [SKNode nodeWithFileNamed:@"EntryUIOverlay"];
-    SKSpriteNode* mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
+    self.mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
     
+  
     self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"RootNode"];
     
     [self configureOptionsPanelButtons];
     
-    [mainMenuButton moveToParent:self.overlayNode];
     
-    //TODO: set position of main menu button as a fraction
-    [mainMenuButton setPosition:CGPointMake(0.00, 200.00)];
+    [self.mainMenuButton moveToParent:self.overlayNode];
+    
+    CGFloat yPos = [UIScreen mainScreen].bounds.size.height*0.40;
+    CGFloat xPos = [UIScreen mainScreen].bounds.size.width*0.30;
+    
+    [self.mainMenuButton setPosition:CGPointMake(xPos, yPos)];
+    
+    
+    NSLog(@"Player bunny information: %@",[self.userBunny description]);
+    
     
 }
 
@@ -190,23 +204,14 @@ NSOperationQueue* _operationQueue;
     
     for (UITouch*touch in touches) {
         
-        CGPoint touchPos = [touch locationInNode:self.overlayNode];
+        
+        CGPoint touchPos = [touch locationInNode:self];
         
         
-        if([self.mainMenuButton containsPoint:touchPos]){
+        if([self.userBunny containsPoint:touchPos] && !_gameIsPaused){
             
-            [self.optionsSelectionPanel moveToParent:self.overlayNode];
-            [self.optionsSelectionPanel setPosition:CGPointMake(0.00, 0.00)];
-
-            [self setPaused:YES];
-            return;
-        }
-        
-        
-        touchPos = [touch locationInNode:self];
-
-        
-        if([self.userBunny containsPoint:touchPos]){
+    
+            
             if(self.userBunny.physicsBody.velocity.dy == 0){
                 
                 CGVector jumpImpulse = CGVectorMake(0.00, 400.0);
@@ -215,6 +220,199 @@ NSOperationQueue* _operationQueue;
             }
             
         }
+        
+        
+        
+        touchPos = [touch locationInNode:self.overlayNode];
+        
+        
+        if([self.mainMenuButton containsPoint:touchPos]){
+            
+            if(_mainMenuIsActive){
+                
+                [self setPaused:NO];
+                
+                SKLabelNode* label = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
+                
+                [label setText:@"Main Menu"];
+                
+                [self.optionsSelectionPanel removeFromParent];
+                
+                _mainMenuIsActive = false;
+                
+                _gameIsPaused = false;
+                
+            } else {
+                NSLog(@"Node at touch point is menu button...");
+                
+                [self.optionsSelectionPanel moveToParent:self.overlayNode];
+                
+                [self setPaused:YES];
+                
+                SKLabelNode* label = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
+                
+                [label setText:@"Back to Bunny Selector"];
+                
+                _mainMenuIsActive = true;
+                
+                _gameIsPaused = true;
+                
+            }
+           
+            return;
+        }
+        
+        /** Weather Forecast Button **/
+        
+        if([self.weatherForecastButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to weather forecast controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_WEATHER_INFO_NOTIFICATION object:nil];
+
+            
+            return;
+        }
+        
+        
+        /** YouTube Video Button **/
+        
+        if([self.youTubeVideoButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to YouTube Video controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_YOUTUBE_VIDEO_NOTIFICATION object:nil];
+            
+            return;
+        }
+        
+        /** Bunny Game  Button **/
+        
+        if([self.bunnyGameButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to Bunny Game controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_BUNNY_GAME_NOTIFICATION object:nil];
+
+            
+            return;
+        }
+        
+        /** Product Info  Button **/
+        
+        if([self.productInfoButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to Product Info controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_PRODUCT_INFO_NOTIFICATION object:nil];
+
+            
+            return;
+        }
+        
+        
+        /** App Info Controller  Button **/
+        
+        if([self.appInformationButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to App Info controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_APP_INFO_NOTIFICATION object:nil];
+
+            
+            
+            return;
+        }
+        
+        
+        /** Montiored Region  Button **/
+        
+        if([self.regionMonitoringButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to Region Monitoring Info controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_MONITORED_REGIONS_NOTIFICATION object:nil];
+
+            
+            return;
+        }
+        
+        /** Navigation Aid Info  Button **/
+        
+        if([self.navigationAidButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to Navigation Info controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_NAVIGATION_AID_NOTIFICATION object:nil];
+
+            
+            return;
+        }
+        
+        /** Tourist Site Info  Button **/
+        
+        if([self.touristSiteInfoButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to Tourist Site Info controller...");
+            
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_TOURISM_SITE_INFO_NOTIFICATION object:nil];
+
+            
+            return;
+        }
+        
+        /** Image Gallery  Button **/
+        
+        if([self.imageGalleryButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to Image Gallery Info controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_IMAGE_GALLERY_NOTIFICATION object:nil];
+            
+            
+            return;
+        }
+        
+        
+        /** Language Help  Button **/
+        
+        if([self.languageHelpButton containsPoint:touchPos]){
+            
+            NSLog(@"Go to Language Help  controller...");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_KOREAN_AUDIO_NOTIFICATION object:nil];
+
+            
+            
+            return;
+        }
+        
+        
+        /** Back to Bunny Selector Button **/
+
+        
+        if([self.backToBunnySelectionButton containsPoint:touchPos]){
+            NSLog(@"Node at touch point is menu button...");
+            
+            [self.optionsSelectionPanel removeFromParent];
+            
+            [self setPaused:NO];
+            
+            _gameIsPaused = false;
+            
+            SKLabelNode* mainMenuText = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
+            
+            [mainMenuText setText:@"Main Menu"];
+            
+            return;
+        }
+        
+        
+        
+        
+        
+        
     }
     
    
@@ -402,20 +600,6 @@ NSOperationQueue* _operationQueue;
 }
 
 
--(void)configureOptionsPanelButtons{
-    
-    self.imageGalleryButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ImageGalleryOption"];
-    self.youTubeVideoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TourismVideoOption"];
-    self.touristSiteInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TouristSiteOption"];
-    self.appInformationButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"AppInformationOption"];
-    self.bunnyGameButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BunnyGameOption"];
-    self.productInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ProductPriceOption"];
-    self.languageHelpButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"LanguageHelpOption"];
-    self.navigationAidButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"NavigationAidOption"];
-    self.backToBunnySelectionButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BackToBunnySelectorOption"];
-    self.weatherForecastButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"WeatherOption"];
-    self.regionMonitoringButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RegionMonitoringOption"];
-}
 
 -(void)showIconDebugInfo{
     NSLog(@"ChatIcon successfully allocated and initialized with info: %@",[self.chatIcon description]);
@@ -436,32 +620,6 @@ NSOperationQueue* _operationQueue;
     NSLog(@"CompassIcon successfully allocated and initialized with info: %@",[self.compassIcon description]);
 
 }
-
-
--(void) showUIButtonDebugInfo{
-    NSLog(@"The Flickr Image Gallery Option Button was loaded with info: %@",[self.imageGalleryButton description]);
-    
-    NSLog(@"The YouTube Video  Gallery Option Button was loaded with info: %@",[self.youTubeVideoButton description]);
-    
-    
-    NSLog(@"The Tourist Site Info Option Button was loaded with info: %@",[self.touristSiteInfoButton description]);
-    
-    NSLog(@"The App Information Option Button was loaded with info: %@",[self.appInformationButton description]);
-    
-    NSLog(@"The Launch Bunny Game Option Button was loaded with info: %@",[self.bunnyGameButton description]);
-    
-    NSLog(@"The Product Info Option Button was loaded with info: %@",[self.productInfoButton description]);
-    
-    NSLog(@"The Language Option Button was loaded with info: %@",[self.languageHelpButton description]);
-    
-    NSLog(@"The Region Monitoring Option Button was loaded with info: %@",[self.regionMonitoringButton description]);
-    
-    NSLog(@"The Weather Forecast Option Button was loaded with info: %@",[self.weatherForecastButton description]);
-    
-    
-    NSLog(@"The Back to Bunny Selection Option Button was loaded with info: %@",[self.backToBunnySelectionButton description]);
-}
-
 
 -(void) configurePlayerBunny{
     
@@ -558,6 +716,24 @@ NSOperationQueue* _operationQueue;
     [self.informationIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
     
 }
+
+
+-(void)configureOptionsPanelButtons{
+    
+    self.imageGalleryButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ImageGalleryOption"];
+    self.youTubeVideoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TourismVideoOption"];
+    self.touristSiteInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TouristSiteOption"];
+    self.appInformationButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"AppInformationOption"];
+    self.bunnyGameButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BunnyGameOption"];
+    self.productInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ProductPriceOption"];
+    self.languageHelpButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"LanguageHelpOption"];
+    self.navigationAidButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"NavigationAidOption"];
+    self.backToBunnySelectionButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BackToBunnySelectorOption"];
+    self.weatherForecastButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"WeatherOption"];
+    self.regionMonitoringButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RegionMonitoringOption"];
+}
+
+
 
 #pragma makr SKPHYSICS CONTACT DELEGATE METHOD
 

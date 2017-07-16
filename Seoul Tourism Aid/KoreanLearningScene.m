@@ -42,6 +42,26 @@ typedef enum IconBitmask{
 
 @property (readonly) CGFloat playerVelocityDx;
 
+/** UIElements **/
+
+@property SKSpriteNode* mainMenuButton;
+@property SKNode* optionsSelectionPanel;
+@property SKNode* overlayNode;
+@property SKNode* worldNode;
+
+@property SKSpriteNode* imageGalleryButton;
+@property SKSpriteNode* youTubeVideoButton;
+@property SKSpriteNode* touristSiteInfoButton;
+@property SKSpriteNode* appInformationButton;
+@property SKSpriteNode* bunnyGameButton;
+@property SKSpriteNode* productInfoButton;
+@property SKSpriteNode* languageHelpButton;
+@property SKSpriteNode* navigationAidButton;
+@property SKSpriteNode* backToBunnySelectionButton;
+@property SKSpriteNode* weatherForecastButton;
+@property SKSpriteNode* regionMonitoringButton;
+
+
 
 
 @end
@@ -58,7 +78,9 @@ NSTimeInterval _lastUpdatedTime = 0.00;
 CMMotionManager* _mainMotionManager;
 NSOperationQueue* _helperOperationQueue;
 
--(void)sceneDidLoad{
+
+
+-(void)didMoveToView:(SKView *)view{
     
     
     if([self.motionManager isDeviceMotionAvailable]){
@@ -70,11 +92,37 @@ NSOperationQueue* _helperOperationQueue;
     
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
     
-    //[self configureBackgroundSceneAndIconNodes];
+    self.worldNode = [[SKNode alloc] init];
+    [self addChild:self.worldNode];
+    [self.worldNode setZPosition:-5];
+    
+    [self configureBackgroundSceneAndIconNodes];
     
     [self configurePlayerBunny];
     
+    self.overlayNode = [[SKNode alloc] init];
+    [self addChild:self.overlayNode];
+    [self.overlayNode setPosition:CGPointMake(0.00, 0.00)];
+    [self.overlayNode setZPosition:20.0];
+    
+    SKNode* overlayCollection = [SKNode nodeWithFileNamed:@"EntryUIOverlay"];
+    self.mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
+    
+    self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"RootNode"];
+    
+    [self configureOptionsPanelButtons];
+    
+    
+    [self.mainMenuButton moveToParent:self.overlayNode];
+    
+    [self.mainMenuButton setPosition:CGPointMake(0.00, 200.00)];
+    
     NSLog(@"Player bunny information: %@",[self.userBunny description]);
+    
+}
+
+-(void)sceneDidLoad{
+    
 }
 
 
@@ -139,7 +187,32 @@ NSOperationQueue* _helperOperationQueue;
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     for (UITouch*touch in touches) {
-        CGPoint touchPos = [touch locationInNode:self];
+        
+        CGPoint touchPos = [touch locationInNode:self.overlayNode];
+        
+        
+        if([self.overlayNode nodeAtPoint:touchPos] == self.mainMenuButton){
+            NSLog(@"Node at touch point is menu button...");
+            
+            [self.optionsSelectionPanel moveToParent:self.overlayNode];
+            
+            [self setPaused:YES];
+            return;
+        }
+        
+        
+        if([self.mainMenuButton containsPoint:touchPos]){
+            NSLog(@"Main menu button was touched...");
+            
+            [self.optionsSelectionPanel moveToParent:self.overlayNode];
+            
+            [self setPaused:YES];
+            return;
+        }
+        
+        
+        
+        touchPos = [touch locationInNode:self];
         
         if([self.userBunny containsPoint:touchPos]){
             if(self.userBunny.physicsBody.velocity.dy == 0){
@@ -314,7 +387,8 @@ NSOperationQueue* _helperOperationQueue;
     
     SKNode* backgroundScene = [SKNode nodeWithFileNamed:@"KoreanLearningSceneBackground"];
     SKNode* backgroundNode = [backgroundScene childNodeWithName:@"RootNode"];
-    [backgroundNode moveToParent:self];
+    [backgroundNode moveToParent:self.worldNode];
+    
     
     
     for(SKSpriteNode*node in backgroundNode.children){
@@ -326,7 +400,7 @@ NSOperationQueue* _helperOperationQueue;
     }
     
 
-    CGFloat posOffset = -self.view.bounds.size.height*0.80;
+    CGFloat posOffset = [UIScreen mainScreen].bounds.size.height*0.00;
     [backgroundNode setPosition:CGPointMake(0.0, posOffset)];
     [backgroundNode setScale:0.50];
     [backgroundNode setZPosition:-1];
@@ -368,7 +442,7 @@ NSOperationQueue* _helperOperationQueue;
     [self.userBunny runAction:walkingAnimation withKey:@"walkingAnimation"];
     
     
-    [self addChild:self.userBunny];
+    [self.worldNode addChild:self.userBunny];
     
     
     
@@ -416,6 +490,48 @@ NSOperationQueue* _helperOperationQueue;
     [objectNode.physicsBody setContactTestBitMask:PLAYER_BUNNY];
     
 }
+
+-(void)configureOptionsPanelButtons{
+    
+    self.imageGalleryButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ImageGalleryOption"];
+    self.youTubeVideoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TourismVideoOption"];
+    self.touristSiteInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TouristSiteOption"];
+    self.appInformationButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"AppInformationOption"];
+    self.bunnyGameButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BunnyGameOption"];
+    self.productInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ProductPriceOption"];
+    self.languageHelpButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"LanguageHelpOption"];
+    self.navigationAidButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"NavigationAidOption"];
+    self.backToBunnySelectionButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BackToBunnySelectorOption"];
+    self.weatherForecastButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"WeatherOption"];
+    self.regionMonitoringButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RegionMonitoringOption"];
+}
+
+
+-(void) showUIButtonDebugInfo{
+    NSLog(@"The Flickr Image Gallery Option Button was loaded with info: %@",[self.imageGalleryButton description]);
+    
+    NSLog(@"The YouTube Video  Gallery Option Button was loaded with info: %@",[self.youTubeVideoButton description]);
+    
+    
+    NSLog(@"The Tourist Site Info Option Button was loaded with info: %@",[self.touristSiteInfoButton description]);
+    
+    NSLog(@"The App Information Option Button was loaded with info: %@",[self.appInformationButton description]);
+    
+    NSLog(@"The Launch Bunny Game Option Button was loaded with info: %@",[self.bunnyGameButton description]);
+    
+    NSLog(@"The Product Info Option Button was loaded with info: %@",[self.productInfoButton description]);
+    
+    NSLog(@"The Language Option Button was loaded with info: %@",[self.languageHelpButton description]);
+    
+    NSLog(@"The Region Monitoring Option Button was loaded with info: %@",[self.regionMonitoringButton description]);
+    
+    NSLog(@"The Weather Forecast Option Button was loaded with info: %@",[self.weatherForecastButton description]);
+    
+    
+    NSLog(@"The Back to Bunny Selection Option Button was loaded with info: %@",[self.backToBunnySelectionButton description]);
+}
+
+
 
 #pragma makr SKPHYSICS CONTACT DELEGATE METHOD
 

@@ -186,6 +186,36 @@ SKView* _skView;
     
 }
 
+-(void)presentMonitoredRegionsControllerRequestAlert{
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"App Information Aid" message:@"Do you want to learn more information about how to use this app or leave a review?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:okay];
+    [alertController addAction:cancel];
+    
+    
+    [self showViewController:alertController sender:nil];
+    
+}
+
+-(void)presentBunnyGameRequestAlert{
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"App Information Aid" message:@"Do you want to learn more information about how to use this app or leave a review?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:okay];
+    [alertController addAction:cancel];
+    
+    
+    [self showViewController:alertController sender:nil];
+    
+}
+
 #pragma mark ****** HELPER METHODS FOR REGISTERING AND REMOVING NOTIFICATIONS
 
 -(void) registerNotifications{
@@ -206,6 +236,10 @@ SKView* _skView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentWeatherInfoControllerRequestAlert) name:DID_REQUEST_WEATHER_INFO_NOTIFICATION object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentBunnyGameRequestAlert) name:DID_REQUEST_BUNNY_GAME_NOTIFICATION object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentMonitoredRegionsControllerRequestAlert) name:DID_REQUEST_MONITORED_REGIONS_NOTIFICATION object:nil];
+    
 }
 
 -(void)removeNotifications{
@@ -224,6 +258,10 @@ SKView* _skView;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_PRODUCT_INFO_NOTIFICATION object:nil];
 
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_NAVIGATION_AID_NOTIFICATION object:nil];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_MONITORED_REGIONS_NOTIFICATION object:nil];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_BUNNY_GAME_NOTIFICATION object:nil];
 
 
     
