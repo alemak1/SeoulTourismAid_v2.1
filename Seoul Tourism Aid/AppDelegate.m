@@ -11,6 +11,8 @@
 #import "EntryViewController.h"
 #import "EntryViewGameSceneController.h"
 #import "GeneralGameSceneController.h"
+#import "GMSLocationSearchController.h"
+#import "LocationSearchController.h"
 
 @import GoogleMaps;
 @import GooglePlaces;
@@ -26,20 +28,12 @@ static BOOL willInstantiateRVCFromStoryboard = true;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [GMSServices provideAPIKey:@"AIzaSyBlXDAHWUBY1sbC5VYiavtv83OsOJ_sFq8"];
-    [GMSPlacesClient provideAPIKey:@"AIzaSyBlXDAHWUBY1sbC5VYiavtv83OsOJ_sFq8"];
-    
-    /** API Keys
-     
-     AIzaSyBPnC1u4_B_biijIss--6a28CMYCvVI96g
-     AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg
-     AIzaSyDXsq38mKrqMomkoMyIJtyPtNdp0mdbOsA
-     AIzaSyDXsq38mKrqMomkoMyIJtyPtNdp0mdbOsA
-     AIzaSyArHUCFbCpteGQQ8z1rx4lPCcw97ywcdU8
-     AIzaSyArdLXVQO_Ppb0aXZ3WjJtn94dsK5-gjf8
-     AIzaSyBlXDAHWUBY1sbC5VYiavtv83OsOJ_sFq8
+    /** Service Account Key: f00b9c3b783e0d8f5ea26fcbb59188dda8a11bee **/
+    /** API Key: AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg**/
 
-     **/
+    [GMSServices provideAPIKey:@"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"];
+    
     
     // Override point for customization after application launch.
     
@@ -52,8 +46,8 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         SpecificLocationMapController* SLMController = [mainStoryboard instantiateViewControllerWithIdentifier:@"SpecificLocationMapController"];
-        
         **/
+    
         
         /**
         EntryViewController* entryViewController = [[EntryViewController alloc] init];
@@ -65,9 +59,19 @@ static BOOL willInstantiateRVCFromStoryboard = true;
          
          **/
         
+        /**
         GeneralGameSceneController* generalGameSceneController = [[GeneralGameSceneController alloc]init];
+        **/
         
-        [self.window setRootViewController:generalGameSceneController];
+        /**
+        GMSLocationSearchController* gmsLocationSearchController = [[GMSLocationSearchController alloc] init];
+        **/
+        
+        UIStoryboard* storyboardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
+        
+        LocationSearchController* searchController = [storyboardA instantiateViewControllerWithIdentifier:@"LocationSearchController_iPad"];
+        
+        [self.window setRootViewController:searchController];
         
         [self.window makeKeyAndVisible];
     }

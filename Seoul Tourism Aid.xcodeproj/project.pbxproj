@@ -10,6 +10,14 @@
 		B9B5618E3C09F558559566A7 /* libPods-Seoul Tourism Aid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */; };
 		BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2E091C1F1A457A00CB69D4 /* EntryGameSceneBackground.sks */; };
 		BD3145221F19D05D00999981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3145211F19D05D00999981 /* Assets.xcassets */; };
+		BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B1F21F1B6625000F5F7E /* LocationSearchController.m */; };
+		BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F51F1B663A000F5F7E /* StoryboardA.storyboard */; };
+		BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F61F1B663A000F5F7E /* StoryboardB.storyboard */; };
+		BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F91F1B669E000F5F7E /* StoryboardC.storyboard */; };
+		BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1FB1F1B66C0000F5F7E /* StoryboardD.storyboard */; };
+		BD32B2001F1B6CB7000F5F7E /* TouristSiteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B1FF1F1B6CB7000F5F7E /* TouristSiteConfiguration.m */; };
+		BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */; };
+		BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */; };
 		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
 		BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */; };
 		BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
@@ -59,6 +67,18 @@
 		BD3145211F19D05D00999981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD3145241F19DAC900999981 /* GMSLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSLocationSearchController.h; sourceTree = "<group>"; };
 		BD3145251F19DAD600999981 /* GMSLocationSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSLocationSearchController.m; sourceTree = "<group>"; };
+		BD32B1F11F1B6625000F5F7E /* LocationSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSearchController.h; sourceTree = "<group>"; };
+		BD32B1F21F1B6625000F5F7E /* LocationSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSearchController.m; sourceTree = "<group>"; };
+		BD32B1F51F1B663A000F5F7E /* StoryboardA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardA.storyboard; sourceTree = "<group>"; };
+		BD32B1F61F1B663A000F5F7E /* StoryboardB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
+		BD32B1F91F1B669E000F5F7E /* StoryboardC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardC.storyboard; sourceTree = "<group>"; };
+		BD32B1FB1F1B66C0000F5F7E /* StoryboardD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardD.storyboard; sourceTree = "<group>"; };
+		BD32B1FE1F1B6CB7000F5F7E /* TouristSiteConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristSiteConfiguration.h; sourceTree = "<group>"; };
+		BD32B1FF1F1B6CB7000F5F7E /* TouristSiteConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteConfiguration.m; sourceTree = "<group>"; };
+		BD32B2011F1B6CD8000F5F7E /* OverlayConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayConfiguration.h; sourceTree = "<group>"; };
+		BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayConfiguration.m; sourceTree = "<group>"; };
+		BD32B2041F1B7957000F5F7E /* GoogleLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleLocationSearchController.h; sourceTree = "<group>"; };
+		BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleLocationSearchController.m; sourceTree = "<group>"; };
 		BD35A4821F19F908003C337B /* UIColor+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HelperMethods.h"; sourceTree = "<group>"; };
 		BD35A4831F19F908003C337B /* UIColor+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HelperMethods.m"; sourceTree = "<group>"; };
 		BD35A4851F1A0EF7003C337B /* MenuComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuComponent.h; sourceTree = "<group>"; };
@@ -150,10 +170,49 @@
 		BD3145231F19DA9F00999981 /* SearchController */ = {
 			isa = PBXGroup;
 			children = (
+				BD32B1F11F1B6625000F5F7E /* LocationSearchController.h */,
+				BD32B1F21F1B6625000F5F7E /* LocationSearchController.m */,
 				BD3145241F19DAC900999981 /* GMSLocationSearchController.h */,
 				BD3145251F19DAD600999981 /* GMSLocationSearchController.m */,
+				BD32B2041F1B7957000F5F7E /* GoogleLocationSearchController.h */,
+				BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */,
 			);
 			name = SearchController;
+			sourceTree = "<group>";
+		};
+		BD32B1F01F1B65D4000F5F7E /* GoogleMapsSDKUtils */ = {
+			isa = PBXGroup;
+			children = (
+				BD3A454D1F18C08D00DA5A75 /* WayPointConfiguration.h */,
+				BD3A454E1F18C09900DA5A75 /* WayPointConfiguration.m */,
+				BD3A45501F18C2CF00DA5A75 /* GoogleURLGenerator.h */,
+				BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */,
+				BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */,
+				BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */,
+			);
+			name = GoogleMapsSDKUtils;
+			sourceTree = "<group>";
+		};
+		BD32B1F41F1B6631000F5F7E /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				BD32B1F51F1B663A000F5F7E /* StoryboardA.storyboard */,
+				BD32B1F61F1B663A000F5F7E /* StoryboardB.storyboard */,
+				BD32B1F91F1B669E000F5F7E /* StoryboardC.storyboard */,
+				BD32B1FB1F1B66C0000F5F7E /* StoryboardD.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		BD32B1FD1F1B6CAB000F5F7E /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD32B1FE1F1B6CB7000F5F7E /* TouristSiteConfiguration.h */,
+				BD32B1FF1F1B6CB7000F5F7E /* TouristSiteConfiguration.m */,
+				BD32B2011F1B6CD8000F5F7E /* OverlayConfiguration.h */,
+				BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */,
+			);
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 		BD35A47B1F19F851003C337B /* EntryViewControllers */ = {
@@ -238,6 +297,9 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD32B1FD1F1B6CAB000F5F7E /* DataModels */,
+				BD32B1F41F1B6631000F5F7E /* StoryBoards */,
+				BD32B1F01F1B65D4000F5F7E /* GoogleMapsSDKUtils */,
 				BD38F2B21F1B296700471E16 /* KoreanLearningGame */,
 				BD35A47B1F19F851003C337B /* EntryViewControllers */,
 				BD3145231F19DA9F00999981 /* SearchController */,
@@ -262,12 +324,6 @@
 				BD3A45461F18B40F00DA5A75 /* UserLocationManager.h */,
 				BD3A45471F18B41900DA5A75 /* UserLocationManager.m */,
 				BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */,
-				BD3A454D1F18C08D00DA5A75 /* WayPointConfiguration.h */,
-				BD3A454E1F18C09900DA5A75 /* WayPointConfiguration.m */,
-				BD3A45501F18C2CF00DA5A75 /* GoogleURLGenerator.h */,
-				BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */,
-				BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */,
-				BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */,
 			);
 			path = "Seoul Tourism Aid";
 			sourceTree = "<group>";
@@ -348,6 +404,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
+				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
+				BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */,
 				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
 				BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */,
 				BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */,
@@ -356,6 +414,8 @@
 				BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */,
 				BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */,
 				BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */,
+				BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */,
+				BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,12 +476,15 @@
 			files = (
 				BD38F2D71F1B37E700471E16 /* KoreanLearningScene.m in Sources */,
 				BD38F2D61F1B37DA00471E16 /* GeneralGameSceneController.m in Sources */,
+				BD32B2001F1B6CB7000F5F7E /* TouristSiteConfiguration.m in Sources */,
 				BD38F2D51F1B369B00471E16 /* GoogleJSONResponseParser.m in Sources */,
 				BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */,
 				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
+				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
 				BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */,
 				BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */,
+				BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */,
 				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
 				BD38F2CE1F1B365C00471E16 /* AppDelegate.m in Sources */,
 				BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */,
@@ -430,6 +493,7 @@
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
 				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,
 				BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */,
+				BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */,
 				BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */,
 				BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */,
 				BD38F2C51F1B361200471E16 /* EntryViewGameSceneController.m in Sources */,

@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FGTranslator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PINCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Seoul Tourism Aid.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>F44A22111B308893F0DD9C3CB39FC3B0</key>
+		<key>9D488E645C5071F8274140234F68B528</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4EEEDD97152B10A23DBE319FBB90E48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFAFB55453D161D2BB5CFB30C68A54D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFDEA63B75DC92E8A7A592D0E9189C45</key>
 		<dict>
 			<key>primary</key>
 			<true/>

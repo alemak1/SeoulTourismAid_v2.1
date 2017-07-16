@@ -34,7 +34,7 @@
 }
 
 
--(instancetype)initWithLocatino:(CLLocation*)location andWithName:(NSString*)name{
+-(instancetype)initWithLocation:(CLLocation*)location andWithName:(NSString*)name{
     if(self = [super init]){
         self.name = name;
         self.location = location;

@@ -11,8 +11,8 @@
 
 @import GoogleMaps;
 @import GooglePlaces;
+@import GooglePlacePicker;
 
-/**
 @interface GMSLocationSearchController () <GMSPlacePickerViewControllerDelegate>
 
 
@@ -65,4 +65,4 @@
 
 @end
  
- **/
+ 

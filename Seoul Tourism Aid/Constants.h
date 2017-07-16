@@ -9,7 +9,7 @@
 #ifndef Constants_h
 #define Constants_h
 
-#define GOOGLE_API_KEY @"AIzaSyBlXDAHWUBY1sbC5VYiavtv83OsOJ_sFq8"
+#define GOOGLE_API_KEY @"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"
 
 #define DID_REQUEST_KOREAN_AUDIO_NOTIFICATION @"requestedKoreanAudioNotification"
 #define DID_REQUEST_TOURISM_SITE_INFO_NOTIFICATION @"requestedTouristSiteInfoNotification"

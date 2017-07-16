@@ -70,7 +70,7 @@ NSOperationQueue* _helperOperationQueue;
     
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
     
-    [self configureBackgroundSceneAndIconNodes];
+    //[self configureBackgroundSceneAndIconNodes];
     
     [self configurePlayerBunny];
     

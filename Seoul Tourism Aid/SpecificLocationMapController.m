@@ -11,6 +11,8 @@
 #import "UserLocationManager.h"
 #import "CLLocation+Constants.h"
 #import "Constants.h"
+#import "GoogleURLGenerator.h"
+#import "WayPointConfiguration.h"
 
 @import GoogleMaps;
 
@@ -78,23 +80,15 @@ NSDictionary* _placeIDInfo;
     marker.map = googleMapView;
     marker.icon = [UIImage imageNamed:@"airportB"];
     
+    WayPointConfiguration* origin = [[WayPointConfiguration alloc] initWithPlaceID:[self.placeIDInfo valueForKey:@"Itaewon"] andWithName:@"Itaewon"];
+    WayPointConfiguration* destination = [[WayPointConfiguration alloc] initWithPlaceID:[self.placeIDInfo valueForKey:@"Seoul Grand Park"] andWithName:@"Seoul Grand Park"];
     
+    NSURL* url = [GoogleURLGenerator getURLFromOrigin:origin toDestination:destination];
     
-    __block CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
-    
-    if(userLocation == nil){
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 6.00*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-            
-            NSLog(@"%@",[[self getURL] absoluteString]);
-            NSLog(@"%@",[[self getURLWithPlaceIDForDestinationKey:@"World Cup Stadium"] absoluteString]);
-            
-            NSLog(@"The user location after 6.00 secondss is lat: %f, long: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
-        });
-        
-    }
+    NSLog(@"The URL is %@",[url absoluteString]);
 
-    [[[NSURLSession sharedSession] dataTaskWithURL:[self getURLWithPlaceIDForDestinationKey:@"Itaewon"] completionHandler:^(NSData* data, NSURLResponse* response, NSError*error){
+    
+    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData* data, NSURLResponse* response, NSError*error){
         
         if(error){
             
@@ -107,7 +101,7 @@ NSDictionary* _placeIDInfo;
             NSHTTPURLResponse* urlResponse = (NSHTTPURLResponse*)response;
             
             if(urlResponse.statusCode != 200){
-                NSLog(@"Error: received bad HTTP response; the requested API endpoint is not available, status code: %d",urlResponse.statusCode);
+                NSLog(@"Error: received bad HTTP response; the requested API endpoint is not available, status code: %ld",urlResponse.statusCode);
             }
         }
         
@@ -193,3 +187,23 @@ NSDictionary* _placeIDInfo;
 
 
 @end
+
+
+/** 
+ 
+ 
+ __block CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+ 
+ if(userLocation == nil){
+ 
+ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 6.00*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+ 
+ NSLog(@"%@",[[self getURL] absoluteString]);
+ NSLog(@"%@",[[self getURLWithPlaceIDForDestinationKey:@"World Cup Stadium"] absoluteString]);
+ 
+ NSLog(@"The user location after 6.00 secondss is lat: %f, long: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+ });
+ 
+ }
+ 
+ **/

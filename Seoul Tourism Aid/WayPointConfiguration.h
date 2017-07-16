@@ -23,7 +23,7 @@
 
 -(instancetype)initWithPlaceID:(NSString*)placeID andWithName:(NSString*)name;
 -(instancetype)initWithAddress:(NSString*)address andWithName:(NSString*)name;
--(instancetype)initWithLocatino:(CLLocation*)location andWithName:(NSString*)name;
+-(instancetype)initWithLocation:(CLLocation*)location andWithName:(NSString*)name;
 
 -(NSString*)getFormattedQueryParameter;
 
