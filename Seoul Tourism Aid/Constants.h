@@ -19,5 +19,5 @@
 #define DID_REQUEST_IMAGE_GALLERY_NOTIFICATION @"requestedImageGalleryNotification"
 #define DID_REQUEST_APP_INFO_NOTIFICATION @"requestedAppInfoNotification"
 #define DID_REQUEST_WEATHER_INFO_NOTIFICATION @"requestedWeatherNotification"
-
+#define DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION @"didEncounterQuestionObjectNotification"
 #endif /* Constants_h */

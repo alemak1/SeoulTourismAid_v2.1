@@ -1,28 +1,22 @@
 //
-//  EntryGameScene.m
+//  KoreanLearningScene.m
 //  Seoul Tourism Aid
 //
-//  Created by Aleksander Makedonski on 7/15/17.
+//  Created by Aleksander Makedonski on 7/16/17.
 //  Copyright © 2017 AlexMakedonski. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+
 #import <CoreMotion/CoreMotion.h>
-#import "EntryGameScene.h"
+#import "KoreanLearningScene.h"
 #import "Constants.h"
 
-@interface EntryGameScene () <SKPhysicsContactDelegate>
+@interface KoreanLearningScene () <SKPhysicsContactDelegate>
 
 typedef enum IconBitmask{
     PLAYER_BUNNY = 1,
-    CHAT_ICON = 2,
-    WEATHER_ICON = 4,
-    PAINTING_ICON = 8,
-    TV_ICON = 16,
-    TEMPLE_ICON = 32,
-    COMPASS_ICON = 64,
-    INFORMATION_ICON = 128,
-    SHOPPING_ICON =  256
+    OBJECT_ICON = 2,
+    ENEMY = 4
 }IconBitmask;
 
 @property SKSpriteNode* userBunny;
@@ -48,34 +42,24 @@ typedef enum IconBitmask{
 
 @property (readonly) CGFloat playerVelocityDx;
 
-/** References to the Option Icons **/
-
-@property SKSpriteNode* chatIcon;
-@property SKSpriteNode* weatherIcon;
-@property SKSpriteNode* templeIcon;
-@property SKSpriteNode* informationIcon;
-@property SKSpriteNode* shoppingIcon;
-@property SKSpriteNode* compassIcon;
-@property SKSpriteNode* tvIcon;
-@property SKSpriteNode* paintingIcon;
 
 
 @end
 
-@implementation EntryGameScene
+@implementation KoreanLearningScene
 
-BOOL _notificationHasBeenSent = false;
-CGFloat _lastPlayerVelocity = 0.00;
-NSTimeInterval _notificationDelayCount = 0.00;
-NSTimeInterval _notificationDelayInterval = 5.00;
+BOOL _notificationHasJustBeenSent = false;
+CGFloat _lastUpdatedPlayerVelocity = 0.00;
+NSTimeInterval _notificationDelayFrameCount = 0.00;
+NSTimeInterval _notificationDelayTimeInterval = 5.00;
 
-NSTimeInterval _lastUpdateTime = 0.00;
+NSTimeInterval _lastUpdatedTime = 0.00;
 
-CMMotionManager* _motionManager;
-NSOperationQueue* _operationQueue;
+CMMotionManager* _mainMotionManager;
+NSOperationQueue* _helperOperationQueue;
 
 -(void)sceneDidLoad{
-
+    
     
     if([self.motionManager isDeviceMotionAvailable]){
         [self.motionManager setDeviceMotionUpdateInterval:1.00];
@@ -83,14 +67,14 @@ NSOperationQueue* _operationQueue;
     }
     
     [self.physicsWorld setContactDelegate:self];
-
+    
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
     
     [self configureBackgroundSceneAndIconNodes];
     
     [self configurePlayerBunny];
-
     
+    NSLog(@"Player bunny information: %@",[self.userBunny description]);
 }
 
 
@@ -98,23 +82,23 @@ NSOperationQueue* _operationQueue;
 
 -(void)update:(NSTimeInterval)currentTime{
     
-    NSTimeInterval frameCount = currentTime - _lastUpdateTime;
+    NSTimeInterval frameCount = currentTime - _lastUpdatedTime;
     
-    if(_notificationHasBeenSent){
+    if(_notificationHasJustBeenSent){
         
-        _notificationDelayCount += frameCount;
+        _notificationDelayFrameCount += frameCount;
         
-        if(_notificationDelayCount > _notificationDelayInterval){
+        if(_notificationDelayFrameCount > _notificationDelayTimeInterval){
             
-            _notificationHasBeenSent = false;
-
-            _notificationDelayCount = 0;
+            _notificationHasJustBeenSent = false;
+            
+            _notificationDelayFrameCount = 0;
         }
         
     }
     
     
-    _lastUpdateTime = currentTime;
+    _lastUpdatedTime = currentTime;
 }
 
 
@@ -122,7 +106,7 @@ NSOperationQueue* _operationQueue;
 -(void)didEvaluateActions{
     
     BOOL currentPlayerMovementIsRight = self.playerVelocityDx > 10.0 ? YES : NO;
-    BOOL lastPlayerMovementIsRight = _lastPlayerVelocity > 10.0 ? YES: NO;
+    BOOL lastPlayerMovementIsRight = _lastUpdatedPlayerVelocity > 10.0 ? YES: NO;
     
     BOOL currentPlayerMovementIsLeft = !(currentPlayerMovementIsRight);
     BOOL lastPlayerMovementIsLeft = !(lastPlayerMovementIsRight);
@@ -138,15 +122,15 @@ NSOperationQueue* _operationQueue;
         [self configureLeftMovementAnimation];
     }
     
-    _lastPlayerVelocity = self.playerVelocityDx;
+    _lastUpdatedPlayerVelocity = self.playerVelocityDx;
 }
 
 
 -(void)didSimulatePhysics{
     
-   CGVector horizontalMovementVector = [self getHorizontalImpulseForDeviceMotion];
+    CGVector horizontalMovementVector = [self getHorizontalImpulseForDeviceMotion];
     
-   /** NSLog(@"The horizontal movement vector(dx) is: %f",horizontalMovementVector.dx); **/
+    /** NSLog(@"The horizontal movement vector(dx) is: %f",horizontalMovementVector.dx); **/
     
     [self.userBunny.physicsBody applyForce:horizontalMovementVector];
     
@@ -168,7 +152,7 @@ NSOperationQueue* _operationQueue;
         }
     }
     
-   
+    
     
 }
 
@@ -197,24 +181,24 @@ NSOperationQueue* _operationQueue;
 
 -(CMMotionManager *)motionManager{
     
-    if(_motionManager == nil){
-        _motionManager = [[CMMotionManager alloc] init];
+    if(_mainMotionManager == nil){
+        _mainMotionManager = [[CMMotionManager alloc] init];
     }
     
-    return _motionManager;
+    return _mainMotionManager;
 }
 
 -(NSOperationQueue *)operationQueue{
     
-    if(_operationQueue == nil){
-        _operationQueue = [[NSOperationQueue alloc] init];
+    if(_helperOperationQueue == nil){
+        _helperOperationQueue = [[NSOperationQueue alloc] init];
     }
     
-    return _operationQueue;
+    return _helperOperationQueue;
 }
 
 -(void)motionDebugInfo:(CMDeviceMotion*)deviceMotion{
-
+    
     double pitch = [deviceMotion attitude].pitch;
     double yaw = [deviceMotion attitude].yaw;
     double roll = [deviceMotion attitude].roll;
@@ -243,12 +227,12 @@ NSOperationQueue* _operationQueue;
         
         if(self.roll < -M_PI/12 /**&& self.xRotationRate < 0**/){
             
-           /** NSLog(@"Roll is less than zero"); **/
+            /** NSLog(@"Roll is less than zero"); **/
             double absVal = fabs(self.roll+M_PI/12)/(2*M_PI);
             dx = -310.00*(1-absVal);
-
+            
         }
-       
+        
         
     }
     
@@ -257,18 +241,18 @@ NSOperationQueue* _operationQueue;
         
         if(self.pitch > 0 && self.yRotationRate > 0){
             
-           /** NSLog(@"Pitch is greater than zero"); **/
-
+            /** NSLog(@"Pitch is greater than zero"); **/
+            
             dx = 260.00;
-
+            
         }
         
         if(self.pitch < 0 && self.yRotationRate < 0){
             
             /** NSLog(@"Pitch is less than zero"); **/
-
+            
             dx = -260.00;
-
+            
         }
         
     }
@@ -286,28 +270,28 @@ NSOperationQueue* _operationQueue;
 
 -(double)roll{
     return [self.deviceMotion attitude].roll;
-
+    
 }
 
 -(double)yaw{
     return [self.deviceMotion attitude].yaw;
-
+    
 }
 
 
 -(double)xRotationRate{
     return [self.deviceMotion rotationRate].x;
-
+    
 }
 
 -(double)yRotationRate{
     return [self.deviceMotion rotationRate].y;
-
+    
 }
 
 -(double)zRotation{
     return [self.deviceMotion rotationRate].z;
-
+    
     
 }
 
@@ -328,48 +312,36 @@ NSOperationQueue* _operationQueue;
 
 -(void) configureBackgroundSceneAndIconNodes{
     
-    SKNode* backgroundScene = [SKNode nodeWithFileNamed:@"EntryGameSceneBackground"];
+    SKNode* backgroundScene = [SKNode nodeWithFileNamed:@"KoreanLearningSceneBackground"];
     SKNode* backgroundNode = [backgroundScene childNodeWithName:@"RootNode"];
     [backgroundNode moveToParent:self];
     
-    self.chatIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"ChatIcon"];
-    [self.chatIcon.physicsBody setCategoryBitMask:2];
     
-    self.weatherIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"WeatherIcon"];
-    self.templeIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"TempleIcon"];
-    self.informationIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"InformationIcon"];
-    self.shoppingIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"ShoppingIcon"];
-    self.compassIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"CompassIcon"];
-    self.tvIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"TVIcon"];
-    self.paintingIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"PaintingIcon"];
+    for(SKSpriteNode*node in backgroundNode.children){
+        if([node.name containsString:@"Object"]){
+            NSLog(@"Configuring bitmaks for object with node name: %@",node.name);
+            [self configureBitmasksForObjectIcon:node];
+            
+        }
+    }
     
-    [self configureBitmasksForIcons];
-    
+
     CGFloat posOffset = -self.view.bounds.size.height*0.80;
     [backgroundNode setPosition:CGPointMake(0.0, posOffset)];
     [backgroundNode setScale:0.50];
-    [backgroundNode setZPosition:5.00];
+    [backgroundNode setZPosition:-1];
     
 }
 
 -(void)showIconDebugInfo{
-    NSLog(@"ChatIcon successfully allocated and initialized with info: %@",[self.chatIcon description]);
     
-    NSLog(@"WeatherIcon successfully allocated and initialized with info: %@",[self.weatherIcon description]);
+    for(SKSpriteNode*node in self.children){
+        if([node.name containsString:@"Object"]){
+            
+            
+        }
+    }
     
-    NSLog(@"TempleIcon successfully allocated and initialized with info: %@",[self.templeIcon description]);
-    
-    NSLog(@"InformationIcon successfully allocated and initialized with info: %@",[self.informationIcon description]);
-    
-    NSLog(@"ShoppingIcon successfully allocated and initialized with info: %@",[self.shoppingIcon description]);
-    
-    NSLog(@"TVIcon successfully allocated and initialized with info: %@",[self.tvIcon description]);
-
-    
-    NSLog(@"PaintingIcon successfully allocated and initialized with info: %@",[self.paintingIcon description]);
-
-    NSLog(@"CompassIcon successfully allocated and initialized with info: %@",[self.compassIcon description]);
-
 }
 
 -(void) configurePlayerBunny{
@@ -395,17 +367,18 @@ NSOperationQueue* _operationQueue;
     
     [self.userBunny runAction:walkingAnimation withKey:@"walkingAnimation"];
     
+    
     [self addChild:self.userBunny];
     
     
-
+    
 }
 
 
 -(void)configurePlayerBunnyBitmask{
     [self.userBunny.physicsBody setCategoryBitMask:PLAYER_BUNNY];
     
-    u_int32_t contactBitMask = CHAT_ICON | WEATHER_ICON | PAINTING_ICON | TV_ICON | TEMPLE_ICON | COMPASS_ICON | SHOPPING_ICON | INFORMATION_ICON;
+    u_int32_t contactBitMask = OBJECT_ICON | ENEMY;
     
     [self.userBunny.physicsBody setContactTestBitMask:contactBitMask];
 }
@@ -420,7 +393,7 @@ NSOperationQueue* _operationQueue;
     SKAction* walkingAnimation = [SKAction repeatActionForever:walkAction];
     
     [self.userBunny runAction:walkingAnimation withKey:@"walkingAnimation"];
-
+    
 }
 
 
@@ -433,38 +406,14 @@ NSOperationQueue* _operationQueue;
     SKAction* walkingAnimation = [SKAction repeatActionForever:walkAction];
     
     [self.userBunny runAction:walkingAnimation withKey:@"walkingAnimation"];
-
-
+    
+    
     
 }
 
--(void)configureBitmasksForIcons{
-    [self.paintingIcon.physicsBody setCategoryBitMask:PAINTING_ICON];
-    [self.paintingIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.templeIcon.physicsBody setCategoryBitMask:TEMPLE_ICON];
-    [self.templeIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.tvIcon.physicsBody setCategoryBitMask:TV_ICON];
-    [self.tvIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.chatIcon.physicsBody setCategoryBitMask:CHAT_ICON];
-    [self.chatIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.weatherIcon.physicsBody setCategoryBitMask:WEATHER_ICON];
-    [self.weatherIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.templeIcon.physicsBody setCategoryBitMask:TEMPLE_ICON];
-    [self.templeIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.compassIcon.physicsBody setCategoryBitMask:COMPASS_ICON];
-    [self.compassIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.shoppingIcon.physicsBody setCategoryBitMask:SHOPPING_ICON];
-    [self.shoppingIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
-    
-    [self.informationIcon.physicsBody setCategoryBitMask:INFORMATION_ICON];
-    [self.informationIcon.physicsBody setContactTestBitMask:PLAYER_BUNNY];
+-(void)configureBitmasksForObjectIcon:(SKSpriteNode*)objectNode{
+    [objectNode.physicsBody setCategoryBitMask:OBJECT_ICON];
+    [objectNode.physicsBody setContactTestBitMask:PLAYER_BUNNY];
     
 }
 
@@ -476,54 +425,53 @@ NSOperationQueue* _operationQueue;
     SKPhysicsBody* bodyB = contact.bodyB;
     
     SKPhysicsBody* otherBody = bodyA.categoryBitMask == PLAYER_BUNNY ? bodyB : bodyA;
+    SKSpriteNode* otherBodyNode = (SKSpriteNode*)otherBody.node;
     
     IconBitmask otherBody_bitmask = otherBody.categoryBitMask;
     
-    if(_notificationHasBeenSent){
+    if(_notificationHasJustBeenSent){
         return;
     }
     
     switch (otherBody_bitmask) {
-        case CHAT_ICON:
-            NSLog(@"Player contacted chat icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_KOREAN_AUDIO_NOTIFICATION object:nil];
+        case OBJECT_ICON:
+            [self showQuestionInformationForObject:otherBodyNode];
+            [self postQuestionObjectNotificationForObjectNode:otherBodyNode];
             break;
-        case WEATHER_ICON:
-            NSLog(@"Player contacted weather icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_WEATHER_INFO_NOTIFICATION object:nil];
-            break;
-        case PAINTING_ICON:
-            NSLog(@"Player contacted painting icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_IMAGE_GALLERY_NOTIFICATION object:nil];
-            break;
-        case TEMPLE_ICON:
-            NSLog(@"Player contacted temple icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_TOURISM_SITE_INFO_NOTIFICATION object:nil];
-            break;
-        case TV_ICON:
-            NSLog(@"Player contacted tv icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_YOUTUBE_VIDEO_NOTIFICATION object:nil];
-            break;
-        case INFORMATION_ICON:
-            NSLog(@"Player contacted information icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_APP_INFO_NOTIFICATION object:nil];
-            break;
-        case SHOPPING_ICON:
-            NSLog(@"Player contacted shopping icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_PRODUCT_INFO_NOTIFICATION object:nil];
-            break;
-        case COMPASS_ICON:
-            NSLog(@"Player contacted compass icon");
-            [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_NAVIGATION_AID_NOTIFICATION object:nil];
+        case ENEMY:
             break;
         default:
             break;
     }
     
-    _notificationHasBeenSent = true;
+    _notificationHasJustBeenSent = true;
     
 }
 
 
+-(void)postQuestionObjectNotificationForObjectNode:(SKSpriteNode*)objectNode{
+    
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil userInfo:objectNode.userData];
+    
+}
+
+-(void)showQuestionInformationForObject:(SKSpriteNode*)node{
+    
+    NSString* question = [node.userData valueForKey:@"Question"];
+    NSString* choice1 = [node.userData valueForKey:@"Choice1"];
+    NSString* choice2 = [node.userData valueForKey:@"Choice2"];
+    NSString* choice3 = [node.userData valueForKey:@"Choice3"];
+    NSString* choice4 = [node.userData valueForKey:@"Choice4"];
+    NSInteger answer = [[node.userData valueForKey:@"Answer"] integerValue];
+    
+    NSLog(@"Question: %@, Choice (1): %@, Choice (2): %@, Choice (3): %@, Choice (4): %@, Answer: %ld",question,choice1,choice2,choice3,choice4,answer);
+
+
+
+}
+
 
 @end
+
+

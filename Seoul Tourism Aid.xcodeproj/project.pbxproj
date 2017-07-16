@@ -8,39 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		B9B5618E3C09F558559566A7 /* libPods-Seoul Tourism Aid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */; };
-		BD2E09101F1A20AF00CB69D4 /* SKViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E090F1F1A20AF00CB69D4 /* SKViewCell.m */; };
-		BD2E09131F1A288B00CB69D4 /* EntryViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E09121F1A288B00CB69D4 /* EntryViewControllerPad.m */; };
-		BD2E09161F1A30E200CB69D4 /* EntryViewGameSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E09151F1A30E200CB69D4 /* EntryViewGameSceneController.m */; };
-		BD2E09191F1A329C00CB69D4 /* EntryGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E09181F1A329C00CB69D4 /* EntryGameScene.m */; };
 		BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2E091C1F1A457A00CB69D4 /* EntryGameSceneBackground.sks */; };
 		BD3145221F19D05D00999981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3145211F19D05D00999981 /* Assets.xcassets */; };
-		BD3145261F19DAD600999981 /* GMSLocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3145251F19DAD600999981 /* GMSLocationSearchController.m */; };
-		BD35A4841F19F908003C337B /* UIColor+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4831F19F908003C337B /* UIColor+HelperMethods.m */; };
-		BD35A4871F1A0EF7003C337B /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
-		BD35A48A1F1A0F0B003C337B /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4891F1A0F0B003C337B /* EntryViewController.m */; };
-		BD38F0A51F18F2380012ABCB /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0A41F18F2380012ABCB /* YTPlayerView.m */; };
 		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
-		BD38F0B01F19036C0012ABCB /* VideoThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0AF1F19036C0012ABCB /* VideoThumbnailCell.m */; };
-		BD38F0B31F1903D50012ABCB /* SeoulVideoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B21F1903D50012ABCB /* SeoulVideoCollectionViewController.m */; };
-		BD38F0B61F1912410012ABCB /* MainVideoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B51F1912410012ABCB /* MainVideoPreviewController.m */; };
-		BD38F0B91F191CDB0012ABCB /* VideoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B81F191CDB0012ABCB /* VideoScrollViewController.m */; };
-		BD3A45211F18A3EC00DA5A75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45201F18A3EC00DA5A75 /* main.m */; };
-		BD3A45241F18A3EC00DA5A75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45231F18A3EC00DA5A75 /* AppDelegate.m */; };
-		BD3A45271F18A3EC00DA5A75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45261F18A3EC00DA5A75 /* ViewController.m */; };
+		BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */; };
+		BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
+		BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4891F1A0F0B003C337B /* EntryViewController.m */; };
+		BD38F2C21F1B360400471E16 /* UIColor+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4831F19F908003C337B /* UIColor+HelperMethods.m */; };
+		BD38F2C31F1B360700471E16 /* SKViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E090F1F1A20AF00CB69D4 /* SKViewCell.m */; };
+		BD38F2C41F1B360D00471E16 /* EntryViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E09121F1A288B00CB69D4 /* EntryViewControllerPad.m */; };
+		BD38F2C51F1B361200471E16 /* EntryViewGameSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E09151F1A30E200CB69D4 /* EntryViewGameSceneController.m */; };
+		BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E09181F1A329C00CB69D4 /* EntryGameScene.m */; };
+		BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3145251F19DAD600999981 /* GMSLocationSearchController.m */; };
+		BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0AF1F19036C0012ABCB /* VideoThumbnailCell.m */; };
+		BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B21F1903D50012ABCB /* SeoulVideoCollectionViewController.m */; };
+		BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B51F1912410012ABCB /* MainVideoPreviewController.m */; };
+		BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0B81F191CDB0012ABCB /* VideoScrollViewController.m */; };
+		BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A453C1F18A4BB00DA5A75 /* CLLocation+Constants.m */; };
+		BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F0A41F18F2380012ABCB /* YTPlayerView.m */; };
+		BD38F2CE1F1B365C00471E16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45231F18A3EC00DA5A75 /* AppDelegate.m */; };
+		BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45261F18A3EC00DA5A75 /* ViewController.m */; };
+		BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45431F18A5B000DA5A75 /* SpecificLocationMapController.m */; };
+		BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45471F18B41900DA5A75 /* UserLocationManager.m */; };
+		BD38F2D21F1B367F00471E16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45201F18A3EC00DA5A75 /* main.m */; };
+		BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A454E1F18C09900DA5A75 /* WayPointConfiguration.m */; };
+		BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */; };
+		BD38F2D51F1B369B00471E16 /* GoogleJSONResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */; };
+		BD38F2D61F1B37DA00471E16 /* GeneralGameSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F2B91F1B308400471E16 /* GeneralGameSceneController.m */; };
+		BD38F2D71F1B37E700471E16 /* KoreanLearningScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F2B41F1B29A200471E16 /* KoreanLearningScene.m */; };
 		BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45281F18A3EC00DA5A75 /* Main.storyboard */; };
-		BD3A452D1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3A452B1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld */; };
 		BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45301F18A3ED00DA5A75 /* LaunchScreen.storyboard */; };
 		BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45391F18A3F600DA5A75 /* Podfile */; };
-		BD3A453D1F18A4BB00DA5A75 /* CLLocation+Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A453C1F18A4BB00DA5A75 /* CLLocation+Constants.m */; };
 		BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */; };
 		BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A45401F18A4D100DA5A75 /* MapKit.framework */; };
-		BD3A45441F18A5B000DA5A75 /* SpecificLocationMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45431F18A5B000DA5A75 /* SpecificLocationMapController.m */; };
-		BD3A45481F18B41900DA5A75 /* UserLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45471F18B41900DA5A75 /* UserLocationManager.m */; };
 		BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */; };
 		BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD3A454B1F18BF9B00DA5A75 /* Seoul.geojson */; };
-		BD3A454F1F18C09900DA5A75 /* WayPointConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A454E1F18C09900DA5A75 /* WayPointConfiguration.m */; };
-		BD3A45521F18C2D900DA5A75 /* GoogleURLGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */; };
-		BD3A45551F18CDCB00DA5A75 /* GoogleJSONResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,11 @@
 		BD38F0B51F1912410012ABCB /* MainVideoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVideoPreviewController.m; sourceTree = "<group>"; };
 		BD38F0B71F191CCB0012ABCB /* VideoScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoScrollViewController.h; sourceTree = "<group>"; };
 		BD38F0B81F191CDB0012ABCB /* VideoScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoScrollViewController.m; sourceTree = "<group>"; };
+		BD38F2B31F1B299700471E16 /* KoreanLearningScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoreanLearningScene.h; sourceTree = "<group>"; };
+		BD38F2B41F1B29A200471E16 /* KoreanLearningScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KoreanLearningScene.m; sourceTree = "<group>"; };
+		BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = KoreanLearningSceneBackground.sks; sourceTree = "<group>"; };
+		BD38F2B81F1B307800471E16 /* GeneralGameSceneController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralGameSceneController.h; sourceTree = "<group>"; };
+		BD38F2B91F1B308400471E16 /* GeneralGameSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralGameSceneController.m; sourceTree = "<group>"; };
 		BD3A451C1F18A3EC00DA5A75 /* Seoul Tourism Aid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seoul Tourism Aid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3A45201F18A3EC00DA5A75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD3A45221F18A3EC00DA5A75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -197,6 +204,18 @@
 			name = CollectionViewControllers;
 			sourceTree = "<group>";
 		};
+		BD38F2B21F1B296700471E16 /* KoreanLearningGame */ = {
+			isa = PBXGroup;
+			children = (
+				BD38F2B31F1B299700471E16 /* KoreanLearningScene.h */,
+				BD38F2B41F1B29A200471E16 /* KoreanLearningScene.m */,
+				BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */,
+				BD38F2B81F1B307800471E16 /* GeneralGameSceneController.h */,
+				BD38F2B91F1B308400471E16 /* GeneralGameSceneController.m */,
+			);
+			name = KoreanLearningGame;
+			sourceTree = "<group>";
+		};
 		BD3A45131F18A3EC00DA5A75 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +238,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD38F2B21F1B296700471E16 /* KoreanLearningGame */,
 				BD35A47B1F19F851003C337B /* EntryViewControllers */,
 				BD3145231F19DA9F00999981 /* SearchController */,
 				BD38F0AD1F1903380012ABCB /* CollectionViewControllers */,
@@ -331,6 +351,7 @@
 				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
 				BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */,
 				BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */,
+				BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */,
 				BD3145221F19D05D00999981 /* Assets.xcassets in Resources */,
 				BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */,
 				BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */,
@@ -393,29 +414,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD2E09101F1A20AF00CB69D4 /* SKViewCell.m in Sources */,
-				BD3A453D1F18A4BB00DA5A75 /* CLLocation+Constants.m in Sources */,
-				BD38F0A51F18F2380012ABCB /* YTPlayerView.m in Sources */,
-				BD3145261F19DAD600999981 /* GMSLocationSearchController.m in Sources */,
-				BD2E09131F1A288B00CB69D4 /* EntryViewControllerPad.m in Sources */,
-				BD3A45271F18A3EC00DA5A75 /* ViewController.m in Sources */,
-				BD3A452D1F18A3EC00DA5A75 /* Seoul_Tourism_Aid.xcdatamodeld in Sources */,
-				BD3A45241F18A3EC00DA5A75 /* AppDelegate.m in Sources */,
-				BD35A4871F1A0EF7003C337B /* MenuComponent.m in Sources */,
-				BD3A45481F18B41900DA5A75 /* UserLocationManager.m in Sources */,
-				BD3A45521F18C2D900DA5A75 /* GoogleURLGenerator.m in Sources */,
-				BD2E09191F1A329C00CB69D4 /* EntryGameScene.m in Sources */,
-				BD3A454F1F18C09900DA5A75 /* WayPointConfiguration.m in Sources */,
-				BD3A45211F18A3EC00DA5A75 /* main.m in Sources */,
-				BD35A4841F19F908003C337B /* UIColor+HelperMethods.m in Sources */,
-				BD38F0B91F191CDB0012ABCB /* VideoScrollViewController.m in Sources */,
-				BD3A45551F18CDCB00DA5A75 /* GoogleJSONResponseParser.m in Sources */,
-				BD38F0B01F19036C0012ABCB /* VideoThumbnailCell.m in Sources */,
-				BD38F0B31F1903D50012ABCB /* SeoulVideoCollectionViewController.m in Sources */,
-				BD35A48A1F1A0F0B003C337B /* EntryViewController.m in Sources */,
-				BD3A45441F18A5B000DA5A75 /* SpecificLocationMapController.m in Sources */,
-				BD2E09161F1A30E200CB69D4 /* EntryViewGameSceneController.m in Sources */,
-				BD38F0B61F1912410012ABCB /* MainVideoPreviewController.m in Sources */,
+				BD38F2D71F1B37E700471E16 /* KoreanLearningScene.m in Sources */,
+				BD38F2D61F1B37DA00471E16 /* GeneralGameSceneController.m in Sources */,
+				BD38F2D51F1B369B00471E16 /* GoogleJSONResponseParser.m in Sources */,
+				BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */,
+				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
+				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
+				BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */,
+				BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */,
+				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
+				BD38F2CE1F1B365C00471E16 /* AppDelegate.m in Sources */,
+				BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */,
+				BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */,
+				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
+				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
+				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,
+				BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */,
+				BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */,
+				BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */,
+				BD38F2C51F1B361200471E16 /* EntryViewGameSceneController.m in Sources */,
+				BD38F2C41F1B360D00471E16 /* EntryViewControllerPad.m in Sources */,
+				BD38F2C31F1B360700471E16 /* SKViewCell.m in Sources */,
+				BD38F2C21F1B360400471E16 /* UIColor+HelperMethods.m in Sources */,
+				BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */,
+				BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

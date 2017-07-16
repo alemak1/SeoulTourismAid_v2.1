@@ -10,6 +10,7 @@
 #import "SpecificLocationMapController.h"
 #import "EntryViewController.h"
 #import "EntryViewGameSceneController.h"
+#import "GeneralGameSceneController.h"
 
 @import GoogleMaps;
 @import GooglePlaces;
@@ -58,8 +59,15 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         EntryViewController* entryViewController = [[EntryViewController alloc] init];
         **/
         
+        /**
+        
         EntryViewGameSceneController* gameSceneController = [[EntryViewGameSceneController alloc] init];
-        [self.window setRootViewController:gameSceneController];
+         
+         **/
+        
+        GeneralGameSceneController* generalGameSceneController = [[GeneralGameSceneController alloc]init];
+        
+        [self.window setRootViewController:generalGameSceneController];
         
         [self.window makeKeyAndVisible];
     }
