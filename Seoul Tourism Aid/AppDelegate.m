@@ -49,15 +49,15 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         **/
     
         
-        /**
+        
         EntryViewController* entryViewController = [[EntryViewController alloc] init];
-        **/
         
+        
+    
         /**
-        
         EntryViewGameSceneController* gameSceneController = [[EntryViewGameSceneController alloc] init];
-         
          **/
+        
         
         /**
         GeneralGameSceneController* generalGameSceneController = [[GeneralGameSceneController alloc]init];
@@ -67,11 +67,14 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         GMSLocationSearchController* gmsLocationSearchController = [[GMSLocationSearchController alloc] init];
         **/
         
+        /**
+        
         UIStoryboard* storyboardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
         
         LocationSearchController* searchController = [storyboardA instantiateViewControllerWithIdentifier:@"LocationSearchController_iPad"];
+        **/
         
-        [self.window setRootViewController:searchController];
+        [self.window setRootViewController:entryViewController];
         
         [self.window makeKeyAndVisible];
     }

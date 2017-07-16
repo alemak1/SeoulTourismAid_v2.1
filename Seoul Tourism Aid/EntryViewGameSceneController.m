@@ -12,6 +12,7 @@
 #import "EntryGameScene.h"
 #import "Constants.h"
 
+
 @interface EntryViewGameSceneController ()
 
 @property (readonly) SKView* skView;
@@ -80,7 +81,15 @@ SKView* _skView;
 -(void)presentWeatherInfoControllerRequestAlert{
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Weather Forecast" message:@"Do you want to get weather forecasts for major cities in Korea?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+    
+        UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
+        
+        UINavigationController* weatherNavigationController = [storyboardD instantiateViewControllerWithIdentifier:@"WeatherNavigationController"];
+        
+        [self showViewController:weatherNavigationController sender:nil];
+        
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     

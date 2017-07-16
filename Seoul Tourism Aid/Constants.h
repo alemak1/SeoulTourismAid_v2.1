@@ -20,4 +20,7 @@
 #define DID_REQUEST_APP_INFO_NOTIFICATION @"requestedAppInfoNotification"
 #define DID_REQUEST_WEATHER_INFO_NOTIFICATION @"requestedWeatherNotification"
 #define DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION @"didEncounterQuestionObjectNotification"
+
+#define DARK_SKY_API @"ee1cc0493ff35cc8dc97394f1fcb0348"
+
 #endif /* Constants_h */

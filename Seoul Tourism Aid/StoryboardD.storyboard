@@ -2891,7 +2891,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0r-xg-HKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1222" y="-3457"/>
+            <point key="canvasLocation" x="-1140" y="-3377"/>
         </scene>
         <!--Weather Detail Controller-->
         <scene sceneID="Zp2-GI-NrJ">

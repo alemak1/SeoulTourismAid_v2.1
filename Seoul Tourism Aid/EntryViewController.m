@@ -80,11 +80,16 @@
 - (void)showMenu:(UIGestureRecognizer *)gestureRecognizer {
     [self.menuComponent showMenuWithSelectionHandler:^(NSInteger selectedOptionIndex) {
         
+        
+        UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        
         UIStoryboard* storyBoardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
         
         UIStoryboard* storyBoardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
         
-        UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
         
         UIViewController* requestedViewController;
         
@@ -114,7 +119,7 @@
                 break;
             case 4:
                 //Weather
-                 requestedViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"WeatherNavigationController"];
+                 requestedViewController = [storyboardD instantiateViewControllerWithIdentifier:@"WeatherNavigationController"];
                 NSLog(@"You selected option %d",(int)selectedOptionIndex);
 
                 break;
