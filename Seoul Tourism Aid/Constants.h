@@ -24,6 +24,8 @@
 #define DID_REQUEST_BUNNY_GAME_NOTIFICATION @"didRequestBunnyGameNotification"
 #define DID_REQUEST_MONITORED_REGIONS_NOTIFICATION @"didRequestMonitoredRegionsNotification"
 
+#define DID_REQUEST_GAME_RESTART_NOTIFICATION @"didRequestGameRestartNotification"
+
 
 #define DARK_SKY_API @"ee1cc0493ff35cc8dc97394f1fcb0348"
 

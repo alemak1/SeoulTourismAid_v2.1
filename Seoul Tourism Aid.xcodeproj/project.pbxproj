@@ -31,6 +31,8 @@
 		BD32B2001F1B6CB7000F5F7E /* TouristSiteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B1FF1F1B6CB7000F5F7E /* TouristSiteConfiguration.m */; };
 		BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */; };
 		BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */; };
+		BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD355AF21F1C3A460000CB55 /* GameObjectList.plist */; };
+		BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF51F1C4A540000CB55 /* GameQuestion.m */; };
 		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
 		BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */; };
 		BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
@@ -116,6 +118,9 @@
 		BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayConfiguration.m; sourceTree = "<group>"; };
 		BD32B2041F1B7957000F5F7E /* GoogleLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleLocationSearchController.h; sourceTree = "<group>"; };
 		BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleLocationSearchController.m; sourceTree = "<group>"; };
+		BD355AF21F1C3A460000CB55 /* GameObjectList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameObjectList.plist; sourceTree = "<group>"; };
+		BD355AF41F1C4A480000CB55 /* GameQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameQuestion.h; sourceTree = "<group>"; };
+		BD355AF51F1C4A540000CB55 /* GameQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameQuestion.m; sourceTree = "<group>"; };
 		BD35A4821F19F908003C337B /* UIColor+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HelperMethods.h"; sourceTree = "<group>"; };
 		BD35A4831F19F908003C337B /* UIColor+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HelperMethods.m"; sourceTree = "<group>"; };
 		BD35A4851F1A0EF7003C337B /* MenuComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuComponent.h; sourceTree = "<group>"; };
@@ -353,6 +358,9 @@
 				BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */,
 				BD38F2B81F1B307800471E16 /* GeneralGameSceneController.h */,
 				BD38F2B91F1B308400471E16 /* GeneralGameSceneController.m */,
+				BD355AF21F1C3A460000CB55 /* GameObjectList.plist */,
+				BD355AF41F1C4A480000CB55 /* GameQuestion.h */,
+				BD355AF51F1C4A540000CB55 /* GameQuestion.m */,
 			);
 			name = KoreanLearningGame;
 			sourceTree = "<group>";
@@ -499,6 +507,7 @@
 				BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */,
 				BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */,
 				BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */,
+				BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */,
 				BD2EDB811F1B8F8500C86D37 /* WeatherForecastSites.plist in Resources */,
 				BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */,
 				BD2EDBA01F1B92F900C86D37 /* EntryUIOverlay.sks in Resources */,
@@ -580,6 +589,7 @@
 				BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */,
 				BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */,
 				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
+				BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */,
 				BD2EDB9E1F1B905400C86D37 /* WebViewController.m in Sources */,
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
 				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,

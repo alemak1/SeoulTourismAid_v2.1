@@ -10,6 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "KoreanLearningScene.h"
 #import "Constants.h"
+#import "GameQuestion.h"
 
 @interface KoreanLearningScene () <SKPhysicsContactDelegate>
 
@@ -49,18 +50,9 @@ typedef enum IconBitmask{
 @property SKNode* overlayNode;
 @property SKNode* worldNode;
 
-@property SKSpriteNode* imageGalleryButton;
-@property SKSpriteNode* youTubeVideoButton;
-@property SKSpriteNode* touristSiteInfoButton;
-@property SKSpriteNode* appInformationButton;
-@property SKSpriteNode* bunnyGameButton;
-@property SKSpriteNode* productInfoButton;
-@property SKSpriteNode* languageHelpButton;
-@property SKSpriteNode* navigationAidButton;
-@property SKSpriteNode* backToBunnySelectionButton;
-@property SKSpriteNode* weatherForecastButton;
-@property SKSpriteNode* regionMonitoringButton;
-
+@property SKSpriteNode* restartButton;
+@property SKSpriteNode* returnToMenuButton;
+@property SKSpriteNode* returnToGameButton;
 
 
 
@@ -83,6 +75,12 @@ NSOperationQueue* _helperOperationQueue;
 -(void)didMoveToView:(SKView *)view{
     
     
+    NSData* gameQuestionData = [[NSUserDefaults standardUserDefaults] objectForKey:@"gameQuestionData"];
+    GameQuestion* gameQuestion1 = [NSKeyedUnarchiver unarchiveObjectWithData:gameQuestionData];
+    
+    NSLog(@"Question: %@, Choice 1: %@, Choice 2: %@, Choice 3: %@, Choice 4: %@",gameQuestion1.question,gameQuestion1.choice1,gameQuestion1.choice2,gameQuestion1.choice3,gameQuestion1.choice4);
+    
+    
     if([self.motionManager isDeviceMotionAvailable]){
         [self.motionManager setDeviceMotionUpdateInterval:1.00];
         [self.motionManager startDeviceMotionUpdatesToQueue:self.operationQueue withHandler:self.handler];
@@ -92,30 +90,15 @@ NSOperationQueue* _helperOperationQueue;
     
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
     
-    self.worldNode = [[SKNode alloc] init];
-    [self addChild:self.worldNode];
-    [self.worldNode setZPosition:-5];
+    [self configureWorldNode];
     
     [self configureBackgroundSceneAndIconNodes];
     
     [self configurePlayerBunny];
     
-    self.overlayNode = [[SKNode alloc] init];
-    [self addChild:self.overlayNode];
-    [self.overlayNode setPosition:CGPointMake(0.00, 0.00)];
-    [self.overlayNode setZPosition:20.0];
+    [self configureOverlayNode];
     
-    SKNode* overlayCollection = [SKNode nodeWithFileNamed:@"EntryUIOverlay"];
-    self.mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
-    
-    self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"RootNode"];
-    
-    [self configureOptionsPanelButtons];
-    
-    
-    [self.mainMenuButton moveToParent:self.overlayNode];
-    
-    [self.mainMenuButton setPosition:CGPointMake(0.00, 200.00)];
+    [self configureOverlayButtons];
     
     NSLog(@"Player bunny information: %@",[self.userBunny description]);
     
@@ -190,25 +173,78 @@ NSOperationQueue* _helperOperationQueue;
         
         CGPoint touchPos = [touch locationInNode:self.overlayNode];
         
-        
-        if([self.overlayNode nodeAtPoint:touchPos] == self.mainMenuButton){
-            NSLog(@"Node at touch point is menu button...");
-            
-            [self.optionsSelectionPanel moveToParent:self.overlayNode];
-            
-            [self setPaused:YES];
-            return;
-        }
-        
-        
         if([self.mainMenuButton containsPoint:touchPos]){
-            NSLog(@"Main menu button was touched...");
+            if(self.isPaused){
+                
+                SKLabelNode*label = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
+                
+                [label setText:@"Game Options"];
+                
+                [self.optionsSelectionPanel removeFromParent];
+                
+                [self setPaused:NO];
+                
+            } else {
+                NSLog(@"Node at touch point is menu button...");
+                
+                
+                SKLabelNode*label = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
+                
+                [label setText:@"Resume Game"];
+                
+                [self.optionsSelectionPanel moveToParent:self.overlayNode];
+                
+                [self.optionsSelectionPanel setPosition:CGPointMake(0.00, 0.00)];
+                
+                [self setPaused:YES];
+                
+                
+            }
             
-            [self.optionsSelectionPanel moveToParent:self.overlayNode];
+            return;
             
-            [self setPaused:YES];
+            
+        }
+        
+        
+        
+        
+        if(self.isPaused){
+            
+            
+            if([self.returnToGameButton containsPoint:touchPos]){
+                SKLabelNode*label = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
+                
+                [label setText:@"Game Options"];
+                
+                [self.optionsSelectionPanel removeFromParent];
+                
+                [self setPaused:NO];
+
+            }
+            
+            if([self.returnToMenuButton containsPoint:touchPos]){
+                
+                
+            }
+            
+            if([self.restartButton containsPoint:touchPos]){
+                SKLabelNode*label = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
+                
+                [label setText:@"Game Options"];
+                
+                [self setPaused:NO];
+                
+                [self.optionsSelectionPanel removeFromParent];
+
+                [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_GAME_RESTART_NOTIFICATION object:nil];
+                
+            }
+            
             return;
         }
+        
+       
         
         
         
@@ -449,6 +485,39 @@ NSOperationQueue* _helperOperationQueue;
 }
 
 
+-(void)configureWorldNode{
+    self.worldNode = [[SKNode alloc] init];
+    [self addChild:self.worldNode];
+    [self.worldNode setZPosition:-5];
+}
+
+-(void)configureOverlayNode{
+    
+    self.overlayNode = [[SKNode alloc] init];
+    [self addChild:self.overlayNode];
+    [self.overlayNode setPosition:CGPointMake(0.00, 0.00)];
+    [self.overlayNode setZPosition:20.0];
+    
+}
+
+-(void)configureOverlayButtons{
+    
+    SKNode* overlayCollection = [SKNode nodeWithFileNamed:@"EntryUIOverlay"];
+    
+    self.mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
+    
+    self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"GameOptionsMenu"];
+    NSLog(@"Game Options Menu is: %@",[self.optionsSelectionPanel description]);
+    
+    [self configureOptionsPanelButtons];
+    
+    
+    [self.mainMenuButton moveToParent:self.overlayNode];
+    
+    [self.mainMenuButton setPosition:CGPointMake(0.00, 200.00)];
+}
+
+
 -(void)configurePlayerBunnyBitmask{
     [self.userBunny.physicsBody setCategoryBitMask:PLAYER_BUNNY];
     
@@ -493,42 +562,23 @@ NSOperationQueue* _helperOperationQueue;
 
 -(void)configureOptionsPanelButtons{
     
-    self.imageGalleryButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ImageGalleryOption"];
-    self.youTubeVideoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TourismVideoOption"];
-    self.touristSiteInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"TouristSiteOption"];
-    self.appInformationButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"AppInformationOption"];
-    self.bunnyGameButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BunnyGameOption"];
-    self.productInfoButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"ProductPriceOption"];
-    self.languageHelpButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"LanguageHelpOption"];
-    self.navigationAidButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"NavigationAidOption"];
-    self.backToBunnySelectionButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BackToBunnySelectorOption"];
-    self.weatherForecastButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"WeatherOption"];
-    self.regionMonitoringButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RegionMonitoringOption"];
+    self.returnToGameButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BackToGameButton"];
+    self.returnToMenuButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"AppMainMenuButton"];
+    self.restartButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RestartButton"];
+    
+    [self showUIButtonDebugInfo];
+   
 }
 
 
 -(void) showUIButtonDebugInfo{
-    NSLog(@"The Flickr Image Gallery Option Button was loaded with info: %@",[self.imageGalleryButton description]);
+    NSLog(@"The Restart Button was loaded with info: %@",[self.restartButton description]);
     
-    NSLog(@"The YouTube Video  Gallery Option Button was loaded with info: %@",[self.youTubeVideoButton description]);
-    
-    
-    NSLog(@"The Tourist Site Info Option Button was loaded with info: %@",[self.touristSiteInfoButton description]);
-    
-    NSLog(@"The App Information Option Button was loaded with info: %@",[self.appInformationButton description]);
-    
-    NSLog(@"The Launch Bunny Game Option Button was loaded with info: %@",[self.bunnyGameButton description]);
-    
-    NSLog(@"The Product Info Option Button was loaded with info: %@",[self.productInfoButton description]);
-    
-    NSLog(@"The Language Option Button was loaded with info: %@",[self.languageHelpButton description]);
-    
-    NSLog(@"The Region Monitoring Option Button was loaded with info: %@",[self.regionMonitoringButton description]);
-    
-    NSLog(@"The Weather Forecast Option Button was loaded with info: %@",[self.weatherForecastButton description]);
+    NSLog(@"The Return to Main Menu Button was loaded with info: %@",[self.returnToMenuButton description]);
     
     
-    NSLog(@"The Back to Bunny Selection Option Button was loaded with info: %@",[self.backToBunnySelectionButton description]);
+    NSLog(@"The Return to Game  Button was loaded with info: %@",[self.returnToGameButton description]);
+   
 }
 
 

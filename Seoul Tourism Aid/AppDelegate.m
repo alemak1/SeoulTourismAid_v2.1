@@ -74,7 +74,7 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         LocationSearchController* searchController = [storyboardA instantiateViewControllerWithIdentifier:@"LocationSearchController_iPad"];
         **/
         
-        [self.window setRootViewController:gameSceneController];
+        [self.window setRootViewController:generalGameSceneController];
         
         [self.window makeKeyAndVisible];
     }

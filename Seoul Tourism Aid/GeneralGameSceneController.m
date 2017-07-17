@@ -11,9 +11,9 @@
 #import "GeneralGameSceneController.h"
 #import "KoreanLearningScene.h"
 #import "Constants.h"
+#import "GameQuestion.h"
 
 @interface GeneralGameSceneController ()
-
 
 @property (readonly) SKView* skView;
 
@@ -28,13 +28,15 @@ SKView* _mainSkView;
 
 -(void)viewWillLayoutSubviews{
     
+    
+    GameQuestion* gameQuestion1 = [[GameQuestion alloc] initWithQuestion:@"What is the Korean word for this?" andWithChoice1:@"코끼리" andWithChoice2:@"사자" andWithChoice3:@"고양이" andWithChoice4:@"개" andWithAnswer:1];
+    
+    NSData*gameQuestionData = [NSKeyedArchiver archivedDataWithRootObject:gameQuestion1];
+    [[NSUserDefaults standardUserDefaults] setObject:gameQuestionData forKey:@"gameQuestionData"];
+    
     [self registerNotifications];
     
-    SKScene* gameScene = [[KoreanLearningScene alloc] initWithSize:self.view.bounds.size];
-    
-    [self.skView presentScene:gameScene];
-    
-    
+    [self startGame];
     
 }
 
@@ -55,6 +57,14 @@ SKView* _mainSkView;
     }
     
     return _mainSkView;
+    
+}
+
+-(void)startGame{
+    
+    SKScene* gameScene = [[KoreanLearningScene alloc] initWithSize:self.view.bounds.size];
+    
+    [self.skView presentScene:gameScene];
     
 }
 
@@ -96,13 +106,16 @@ SKView* _mainSkView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentQuestionPromptViewController:) name:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil];
     
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentQuestionPromptViewController:) name:DID_REQUEST_GAME_RESTART_NOTIFICATION object:nil];
+    
 }
 
 -(void)removeNotifications{
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil];
     
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_GAME_RESTART_NOTIFICATION object:nil];
+
     
 }
 
