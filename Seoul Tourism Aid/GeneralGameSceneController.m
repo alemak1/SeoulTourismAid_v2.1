@@ -12,6 +12,7 @@
 #import "KoreanLearningScene.h"
 #import "Constants.h"
 #import "GameQuestion.h"
+#import "GameObjectArchiverKeys.h"
 
 @interface GeneralGameSceneController ()
 
@@ -28,11 +29,7 @@ SKView* _mainSkView;
 
 -(void)viewWillLayoutSubviews{
     
-    
-    GameQuestion* gameQuestion1 = [[GameQuestion alloc] initWithQuestion:@"What is the Korean word for this?" andWithChoice1:@"코끼리" andWithChoice2:@"사자" andWithChoice3:@"고양이" andWithChoice4:@"개" andWithAnswer:1];
-    
-    NSData*gameQuestionData = [NSKeyedArchiver archivedDataWithRootObject:gameQuestion1];
-    [[NSUserDefaults standardUserDefaults] setObject:gameQuestionData forKey:@"gameQuestionData"];
+    [self archiveGameQuestions];
     
     [self registerNotifications];
     
@@ -69,21 +66,55 @@ SKView* _mainSkView;
 }
 
 -(void)presentQuestionPromptViewController:(NSNotification*)notification{
-    NSString* question = [notification.userInfo valueForKey:@"Question"];
-    NSString* choice1 = [notification.userInfo valueForKey:@"Choice1"];
-    NSString* choice2 = [notification.userInfo valueForKey:@"Choice2"];
-    NSString* choice3 = [notification.userInfo valueForKey:@"Choice3"];
-    NSString* choice4 = [notification.userInfo valueForKey:@"Choice4"];
+    
+    NSString* gameQuestionKey = [notification.userInfo valueForKey:@"nodeName"];
+    
+    NSData* gameQuestionData = [[NSUserDefaults standardUserDefaults] objectForKey:gameQuestionKey];
+    
+    GameQuestion* gameQuestion = [NSKeyedUnarchiver unarchiveObjectWithData:gameQuestionData];
+    
+    //TOOD: use gameQuestion to populate alert controller title, message, and choice fields
+    
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:gameQuestion.question message:@"Choose From the Answer Choices Below:" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* choice1Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(1) %@",gameQuestion.choice1] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+    
+        
+        if(gameQuestion.answer == 1){
+            NSLog(@"You scored a point");
+        }
+    
+    }];
+    
+    UIAlertAction* choice2Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(2) %@",gameQuestion.choice2] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+        
+        
+        if(gameQuestion.answer == 2){
+            NSLog(@"You scored a point");
 
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:question message:@"Choose From the Answer Choices Below:" preferredStyle:UIAlertControllerStyleAlert];
+        }
+        
+    }];
     
-    UIAlertAction* choice1Action = [UIAlertAction actionWithTitle:@"(1)" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* choice3Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(3) %@",gameQuestion.choice3] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+        
+        
+        if(gameQuestion.answer == 3){
+            NSLog(@"You scored a point");
+
+        }
+        
+    }];
     
-    UIAlertAction* choice2Action = [UIAlertAction actionWithTitle:@"(2)" style:UIAlertActionStyleDefault handler:nil];
-    
-    UIAlertAction* choice3Action = [UIAlertAction actionWithTitle:@"(3)" style:UIAlertActionStyleDefault handler:nil];
-    
-    UIAlertAction* choice4Action = [UIAlertAction actionWithTitle:@"(4)" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* choice4Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(4) %@", gameQuestion.choice4] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+        
+        
+        if(gameQuestion.answer == 4){
+            NSLog(@"You scored a point");
+
+        }
+        
+    }];
     
     [alertController addAction:choice1Action];
     [alertController addAction:choice2Action];
@@ -118,5 +149,27 @@ SKView* _mainSkView;
 
     
 }
+
+
+-(void) archiveGameQuestions{
+    
+    [self archiveGameQuestionWithKey:kPen andWithQuestion:nil andWithChoice1:nil andWithChoice2:nil andWithChoice3:nil andWithChoice4:nil andWithAnswer:nil];
+    
+    [self archiveGameQuestionWithKey:kPencil andWithQuestion:nil andWithChoice1:nil andWithChoice2:nil andWithChoice3:nil andWithChoice4:nil andWithAnswer:nil];
+
+    
+}
+
+-(void)archiveGameQuestionWithKey:(NSString*)archiverKey andWithQuestion:(NSString*)question andWithChoice1:(NSString*)choice1 andWithChoice2:(NSString*)choice2 andWithChoice3:(NSString*)choice3 andWithChoice4:(NSString*)choice4 andWithAnswer:(NSInteger)answer{
+    
+    GameQuestion* gameQuestion = [[GameQuestion alloc] initWithQuestion:archiverKey andWithChoice1:choice1 andWithChoice2:choice2 andWithChoice3:choice3 andWithChoice4:choice4 andWithAnswer:answer];
+    
+    NSData*gameQuestionData = [NSKeyedArchiver archivedDataWithRootObject:gameQuestion];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:gameQuestionData forKey:kElephant];
+    
+    
+}
+
 
 @end

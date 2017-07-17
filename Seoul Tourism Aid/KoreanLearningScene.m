@@ -11,6 +11,7 @@
 #import "KoreanLearningScene.h"
 #import "Constants.h"
 #import "GameQuestion.h"
+#import "GameObjectArchiverKeys.h"
 
 @interface KoreanLearningScene () <SKPhysicsContactDelegate>
 
@@ -75,12 +76,8 @@ NSOperationQueue* _helperOperationQueue;
 -(void)didMoveToView:(SKView *)view{
     
     
-    NSData* gameQuestionData = [[NSUserDefaults standardUserDefaults] objectForKey:@"gameQuestionData"];
-    GameQuestion* gameQuestion1 = [NSKeyedUnarchiver unarchiveObjectWithData:gameQuestionData];
-    
-    NSLog(@"Question: %@, Choice 1: %@, Choice 2: %@, Choice 3: %@, Choice 4: %@",gameQuestion1.question,gameQuestion1.choice1,gameQuestion1.choice2,gameQuestion1.choice3,gameQuestion1.choice4);
-    
-    
+   
+   
     if([self.motionManager isDeviceMotionAvailable]){
         [self.motionManager setDeviceMotionUpdateInterval:1.00];
         [self.motionManager startDeviceMotionUpdatesToQueue:self.operationQueue withHandler:self.handler];
@@ -427,10 +424,32 @@ NSOperationQueue* _helperOperationQueue;
     
     
     
-    for(SKSpriteNode*node in backgroundNode.children){
-        if([node.name containsString:@"Object"]){
+    for(__strong SKNode*node in backgroundNode.children){
+        if([node.name containsString:@"object"]){
+            
+            int32_t totalPossibleGameObjects = (int32_t)[GAME_OBJECTS_ARRAY count];
+            
+            NSUInteger randomNameIndex = arc4random_uniform(totalPossibleGameObjects);
+            
+            NSString* randomName = [GAME_OBJECTS_ARRAY objectAtIndex:randomNameIndex];
+            
+            SKTexture* objectTexture = [SKTexture textureWithImageNamed:randomName];
+            
+            SKSpriteNode* objectNode = [SKSpriteNode spriteNodeWithTexture:objectTexture];
+            
+            SKPhysicsBody* objectPB = [SKPhysicsBody bodyWithTexture:objectTexture size:objectTexture.size];
+            
+            [objectNode setPhysicsBody: objectPB];
+            
+            [objectNode setName:randomName];
+            
+            [objectNode setPosition:CGPointMake(node.position.x, node.position.y)];
+            
+            
+            [self.worldNode addChild:objectNode];
+            
             NSLog(@"Configuring bitmaks for object with node name: %@",node.name);
-            [self configureBitmasksForObjectIcon:node];
+            [self configureBitmasksForObjectIcon:objectNode];
             
         }
     }
@@ -617,8 +636,9 @@ NSOperationQueue* _helperOperationQueue;
 
 -(void)postQuestionObjectNotificationForObjectNode:(SKSpriteNode*)objectNode{
     
+    NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:objectNode.name,@"nodeName", nil];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil userInfo:objectNode.userData];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil userInfo:userInfo];
     
 }
 

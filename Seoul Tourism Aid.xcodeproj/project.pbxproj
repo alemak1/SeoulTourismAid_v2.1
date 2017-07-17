@@ -33,6 +33,7 @@
 		BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */; };
 		BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD355AF21F1C3A460000CB55 /* GameObjectList.plist */; };
 		BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF51F1C4A540000CB55 /* GameQuestion.m */; };
+		BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */; };
 		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
 		BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */; };
 		BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
@@ -121,6 +122,8 @@
 		BD355AF21F1C3A460000CB55 /* GameObjectList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameObjectList.plist; sourceTree = "<group>"; };
 		BD355AF41F1C4A480000CB55 /* GameQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameQuestion.h; sourceTree = "<group>"; };
 		BD355AF51F1C4A540000CB55 /* GameQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameQuestion.m; sourceTree = "<group>"; };
+		BD355AF71F1C50040000CB55 /* GameObjectArchiverKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameObjectArchiverKeys.h; sourceTree = "<group>"; };
+		BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObjectArchiverKeys.m; sourceTree = "<group>"; };
 		BD35A4821F19F908003C337B /* UIColor+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HelperMethods.h"; sourceTree = "<group>"; };
 		BD35A4831F19F908003C337B /* UIColor+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HelperMethods.m"; sourceTree = "<group>"; };
 		BD35A4851F1A0EF7003C337B /* MenuComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuComponent.h; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 				BD355AF21F1C3A460000CB55 /* GameObjectList.plist */,
 				BD355AF41F1C4A480000CB55 /* GameQuestion.h */,
 				BD355AF51F1C4A540000CB55 /* GameQuestion.m */,
+				BD355AF71F1C50040000CB55 /* GameObjectArchiverKeys.h */,
+				BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */,
 			);
 			name = KoreanLearningGame;
 			sourceTree = "<group>";
@@ -576,6 +581,7 @@
 				BD38F2D51F1B369B00471E16 /* GoogleJSONResponseParser.m in Sources */,
 				BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */,
 				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
+				BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
 				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
 				BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */,
