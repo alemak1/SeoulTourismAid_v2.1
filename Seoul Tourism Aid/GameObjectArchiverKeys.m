@@ -25,7 +25,7 @@
  NSString* const kCoffee = @"coffee";
  NSString* const kBottle = @"bottle";
  NSString* const kFork = @"fork";
- NSString* const kSpoon = @"sppon";
+ NSString* const kSpoon = @"spoon";
  NSString* const kKnife = @"knife";
  NSString* const kBlender = @"blender";
  NSString* const kBag = @"bag";

@@ -54,7 +54,7 @@ typedef enum IconBitmask{
 @property SKSpriteNode* restartButton;
 @property SKSpriteNode* returnToMenuButton;
 @property SKSpriteNode* returnToGameButton;
-
+@property SKNode* scoreBoard;
 
 
 @end
@@ -62,11 +62,13 @@ typedef enum IconBitmask{
 @implementation KoreanLearningScene
 
 BOOL _notificationHasJustBeenSent = false;
+
 CGFloat _lastUpdatedPlayerVelocity = 0.00;
 NSTimeInterval _notificationDelayFrameCount = 0.00;
-NSTimeInterval _notificationDelayTimeInterval = 5.00;
-
+NSTimeInterval _notificationDelayTimeInterval = 3.00;
 NSTimeInterval _lastUpdatedTime = 0.00;
+
+int _playerScore = 0;
 
 CMMotionManager* _mainMotionManager;
 NSOperationQueue* _helperOperationQueue;
@@ -76,7 +78,7 @@ NSOperationQueue* _helperOperationQueue;
 -(void)didMoveToView:(SKView *)view{
     
     
-   
+    _playerScore = 0;
    
     if([self.motionManager isDeviceMotionAvailable]){
         [self.motionManager setDeviceMotionUpdateInterval:1.00];
@@ -98,6 +100,8 @@ NSOperationQueue* _helperOperationQueue;
     [self configureOverlayButtons];
     
     NSLog(@"Player bunny information: %@",[self.userBunny description]);
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayerScore:) name:DID_SCORE_POINT_NOTIFICATION object:nil];
     
 }
 
@@ -162,13 +166,35 @@ NSOperationQueue* _helperOperationQueue;
     
     [self.userBunny.physicsBody applyForce:horizontalMovementVector];
     
+    [self centerOnNode:self.userBunny];
 }
+
+
+-(void)centerOnNode:(SKNode*)node{
+    CGPoint cameraPositionInScene = [self convertPoint:node.position fromNode:self.worldNode];
+    
+    self.worldNode.position = CGPointMake(self.worldNode.position.x-cameraPositionInScene.x, self.worldNode.position.y - cameraPositionInScene.y);
+}
+
+
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     for (UITouch*touch in touches) {
         
-        CGPoint touchPos = [touch locationInNode:self.overlayNode];
+        CGPoint touchPos = [touch locationInNode:self.worldNode];
+        
+        if([self.userBunny containsPoint:touchPos]){
+            if(fabs(self.userBunny.physicsBody.velocity.dy) <= 0.10){
+                
+                CGVector jumpImpulse = CGVectorMake(0.00, 400.0);
+                [self.userBunny.physicsBody applyImpulse:jumpImpulse];
+                
+            }
+            
+        }
+        
+        touchPos = [touch locationInNode:self.overlayNode];
         
         if([self.mainMenuButton containsPoint:touchPos]){
             if(self.isPaused){
@@ -230,11 +256,18 @@ NSOperationQueue* _helperOperationQueue;
                 
                 [label setText:@"Game Options"];
                 
-                [self setPaused:NO];
+                [self setPaused:YES];
                 
                 [self.optionsSelectionPanel removeFromParent];
 
-                [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_GAME_RESTART_NOTIFICATION object:nil];
+                
+                SKTransition* transition = [SKTransition crossFadeWithDuration:0.50];
+                
+                KoreanLearningScene* newScene = [[KoreanLearningScene alloc] initWithSize:self.view.bounds.size];
+                
+                newScene.hasRestarted = true;
+                
+                [self.view presentScene:newScene transition:transition];
                 
             }
             
@@ -245,21 +278,16 @@ NSOperationQueue* _helperOperationQueue;
         
         
         
-        touchPos = [touch locationInNode:self];
-        
-        if([self.userBunny containsPoint:touchPos]){
-            if(self.userBunny.physicsBody.velocity.dy == 0){
-                
-                CGVector jumpImpulse = CGVectorMake(0.00, 400.0);
-                [self.userBunny.physicsBody applyImpulse:jumpImpulse];
-                
-            }
-            
-        }
+       
     }
     
     
     
+}
+
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_SCORE_POINT_NOTIFICATION object:nil];
 }
 
 -(void (^)(CMDeviceMotion *, NSError *))handler{
@@ -523,6 +551,7 @@ NSOperationQueue* _helperOperationQueue;
     
     SKNode* overlayCollection = [SKNode nodeWithFileNamed:@"EntryUIOverlay"];
     
+    
     self.mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
     
     self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"GameOptionsMenu"];
@@ -533,7 +562,35 @@ NSOperationQueue* _helperOperationQueue;
     
     [self.mainMenuButton moveToParent:self.overlayNode];
     
-    [self.mainMenuButton setPosition:CGPointMake(0.00, 200.00)];
+    CGFloat yPosOffset = [UIScreen mainScreen].bounds.size.height*0.40;
+    
+    [self.mainMenuButton setPosition:CGPointMake(0.00, -yPosOffset)];
+    
+    
+    
+    CGFloat yPosOffsetScoreboard = [UIScreen mainScreen].bounds.size.height*0.30;
+    
+    self.scoreBoard = [overlayCollection childNodeWithName:@"ScoreBoard"];
+    
+    [self.scoreBoard moveToParent:self.overlayNode];
+    
+    [self.scoreBoard setPosition:CGPointMake(0.00, yPosOffsetScoreboard)];
+    
+    if(!self.hasRestarted){
+        SKNode* introLabel = [overlayCollection childNodeWithName:@"IntroLabel"];
+    
+        [introLabel moveToParent:self.overlayNode];
+    
+        [introLabel setPosition:CGPointMake(0.00, 0.00)];
+    
+        SKAction* labelAction = [SKAction sequence:[NSArray arrayWithObjects:[SKAction waitForDuration:4.00],[SKAction runBlock:^{
+    
+        [introLabel removeFromParent];
+        
+        }], nil]];
+    
+        [introLabel runAction:labelAction];
+    }
 }
 
 
@@ -574,6 +631,7 @@ NSOperationQueue* _helperOperationQueue;
 }
 
 -(void)configureBitmasksForObjectIcon:(SKSpriteNode*)objectNode{
+    [objectNode.physicsBody setAffectedByGravity:YES];
     [objectNode.physicsBody setCategoryBitMask:OBJECT_ICON];
     [objectNode.physicsBody setContactTestBitMask:PLAYER_BUNNY];
     
@@ -620,8 +678,7 @@ NSOperationQueue* _helperOperationQueue;
     
     switch (otherBody_bitmask) {
         case OBJECT_ICON:
-            [self showQuestionInformationForObject:otherBodyNode];
-            [self postQuestionObjectNotificationForObjectNode:otherBodyNode];
+            [self handleContactForNode:otherBodyNode];
             break;
         case ENEMY:
             break;
@@ -631,6 +688,19 @@ NSOperationQueue* _helperOperationQueue;
     
     _notificationHasJustBeenSent = true;
     
+}
+
+-(void)handleContactForNode:(SKSpriteNode*)otherBodyNode{
+    
+    [self showQuestionInformationForObject:otherBodyNode];
+    [self postQuestionObjectNotificationForObjectNode:otherBodyNode];
+    _notificationHasJustBeenSent = true;
+    
+    [otherBodyNode runAction:[SKAction sequence:[NSArray arrayWithObjects:[SKAction waitForDuration:_notificationDelayTimeInterval-0.50], [SKAction runBlock:^{
+        
+        [otherBodyNode removeFromParent];
+        
+    }],nil]]];
 }
 
 
@@ -657,6 +727,25 @@ NSOperationQueue* _helperOperationQueue;
 
 }
 
+
+-(void)updatePlayerScore:(NSNotification*)notification{
+    _playerScore += 1;
+    
+    SKSpriteNode* scoreIcon = (SKSpriteNode*)[self.scoreBoard childNodeWithName:@"NumberIcon"];
+    
+    NSString* textureName = [NSString stringWithFormat:@"number%d",_playerScore];
+    
+    [scoreIcon setTexture:[SKTexture textureWithImageNamed:textureName]];
+    
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
 
 @end
 

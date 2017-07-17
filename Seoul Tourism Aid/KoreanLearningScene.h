@@ -14,6 +14,8 @@
 
 @interface KoreanLearningScene : SKScene
 
+@property BOOL hasRestarted;
+
 @end
 
 #endif /* KoreanLearningScene_h */

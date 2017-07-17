@@ -59,11 +59,25 @@ SKView* _mainSkView;
 
 -(void)startGame{
     
-    SKScene* gameScene = [[KoreanLearningScene alloc] initWithSize:self.view.bounds.size];
+    
+    KoreanLearningScene* gameScene = [[KoreanLearningScene alloc] initWithSize:self.view.bounds.size];
+    
+    gameScene.hasRestarted = false;
     
     [self.skView presentScene:gameScene];
     
 }
+
+-(void)restartGame{
+    
+    
+    KoreanLearningScene* gameScene = [[KoreanLearningScene alloc] initWithSize:self.view.bounds.size];
+    
+    gameScene.hasRestarted = true;
+    
+    [self.skView presentScene:gameScene];
+}
+
 
 -(void)presentQuestionPromptViewController:(NSNotification*)notification{
     
@@ -79,40 +93,32 @@ SKView* _mainSkView;
     
     UIAlertAction* choice1Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(1) %@",gameQuestion.choice1] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
     
+        [self showViewControllerForCorrectAnswer:1 andForGameQuestion:gameQuestion];
+
         
-        if(gameQuestion.answer == 1){
-            NSLog(@"You scored a point");
-        }
     
     }];
     
     UIAlertAction* choice2Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(2) %@",gameQuestion.choice2] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
         
         
-        if(gameQuestion.answer == 2){
-            NSLog(@"You scored a point");
+        [self showViewControllerForCorrectAnswer:2 andForGameQuestion:gameQuestion];
 
-        }
-        
     }];
     
     UIAlertAction* choice3Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(3) %@",gameQuestion.choice3] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
         
         
-        if(gameQuestion.answer == 3){
-            NSLog(@"You scored a point");
+        [self showViewControllerForCorrectAnswer:3 andForGameQuestion:gameQuestion];
 
-        }
         
     }];
     
     UIAlertAction* choice4Action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"(4) %@", gameQuestion.choice4] style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
         
         
-        if(gameQuestion.answer == 4){
-            NSLog(@"You scored a point");
-
-        }
+        [self showViewControllerForCorrectAnswer:4 andForGameQuestion:gameQuestion];
+        
         
     }];
     
@@ -126,6 +132,57 @@ SKView* _mainSkView;
 
 }
 
+-(void)showViewControllerForCorrectAnswer:(NSInteger)answer andForGameQuestion:(GameQuestion*)gameQuestion{
+    
+    
+    NSString* correctAnswer;
+    
+    switch (gameQuestion.answer) {
+        case 1:
+            correctAnswer = gameQuestion.choice1;
+            break;
+        case 2:
+            correctAnswer = gameQuestion.choice2;
+            break;
+        case 3:
+            correctAnswer = gameQuestion.choice3;
+            break;
+        case 4:
+            correctAnswer = gameQuestion.choice4;
+            break;
+        default:
+            correctAnswer = @"";
+            break;
+    }
+    
+    
+    
+    UIAlertController* feedbackAlertController;
+    
+    if(gameQuestion.answer == answer){
+        NSLog(@"You scored a point");
+        feedbackAlertController = [UIAlertController alertControllerWithTitle:@"Correct!" message:@"You scored 1 points." preferredStyle:UIAlertControllerStyleAlert];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:DID_SCORE_POINT_NOTIFICATION object:nil];
+        
+    } else {
+        
+        NSString* incorrectMessage = [NSString stringWithFormat:@"No, that's not correct.  The correct answer is (%ld) %@",gameQuestion.answer,correctAnswer];
+        
+        feedbackAlertController = [UIAlertController alertControllerWithTitle:@"Oops! Incorrect!" message:incorrectMessage preferredStyle:UIAlertControllerStyleAlert];
+        
+    }
+    
+    
+    UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    
+    [feedbackAlertController addAction:okayAction];
+    
+    [self showViewController:feedbackAlertController sender:nil];
+    
+    
+}
+
 -(void)dealloc{
     [self removeNotifications];
 }
@@ -137,7 +194,7 @@ SKView* _mainSkView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentQuestionPromptViewController:) name:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil];
     
-     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentQuestionPromptViewController:) name:DID_REQUEST_GAME_RESTART_NOTIFICATION object:nil];
+   
     
 }
 
@@ -145,7 +202,6 @@ SKView* _mainSkView;
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_GAME_RESTART_NOTIFICATION object:nil];
 
     
 }
@@ -158,6 +214,8 @@ SKView* _mainSkView;
     [self archiveGameQuestionWithKey:kPencil andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"열쇠" andWithChoice2:@"연필" andWithChoice3:@"가격" andWithChoice4:@"소금" andWithAnswer:2];
     
     [self archiveGameQuestionWithKey:kBook andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"가격" andWithChoice2:@"열쇠" andWithChoice3:@"식품" andWithChoice4:@"도서" andWithAnswer:4];
+    
+     [self archiveGameQuestionWithKey:kHeadPhones andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"가격" andWithChoice2:@"열쇠" andWithChoice3:@"식품" andWithChoice4:@"헤드폰" andWithAnswer:4];
     
     [self archiveGameQuestionWithKey:kBag andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"가방" andWithChoice2:@"가격" andWithChoice3:@"열쇠" andWithChoice4:@"돈" andWithAnswer:1];
     
@@ -196,7 +254,28 @@ SKView* _mainSkView;
      [self archiveGameQuestionWithKey:kBandaid andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"믹서기" andWithChoice2:@"밴드 원조" andWithChoice3:@"난로" andWithChoice4:@"휴대 전화" andWithAnswer:2];
     
     [self archiveGameQuestionWithKey:kToothBrush andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"믹서기" andWithChoice2:@"밴드 원조" andWithChoice3:@"칫솔" andWithChoice4:@"휴대 전화" andWithAnswer:3];
+    
+    
+       [self archiveGameQuestionWithKey:kPanda andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"돼지" andWithChoice2:@"팬더" andWithChoice3:@"원숭이" andWithChoice4:@"토끼" andWithAnswer:2];
+    
+    [self archiveGameQuestionWithKey:kPig andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"팬더" andWithChoice2:@"토끼" andWithChoice3:@"원숭이" andWithChoice4:@"돼지" andWithAnswer:4];
+    
+    
+    [self archiveGameQuestionWithKey:kMonkey andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"토끼" andWithChoice2:@"돼지"  andWithChoice3:@"코끼리" andWithChoice4:@"원숭이" andWithAnswer:4];
+    
+    [self archiveGameQuestionWithKey:kRabbit andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"토끼" andWithChoice2:@"코끼리" andWithChoice3:@"원숭이" andWithChoice4:@"돼지"  andWithAnswer:1];
+    
+    [self archiveGameQuestionWithKey:kSnake andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"코끼리" andWithChoice2:@"원숭이" andWithChoice3:@"뱀" andWithChoice4:@"팬더" andWithAnswer:3];
 
+    [self archiveGameQuestionWithKey:kHippo andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"코끼리" andWithChoice2:@"돼지"  andWithChoice3:@"원숭이" andWithChoice4:@"하마" andWithAnswer:4];
+    
+    
+    [self archiveGameQuestionWithKey:kElephant andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"코끼리" andWithChoice2:@"돼지"  andWithChoice3:@"팬더" andWithChoice4:@"토끼" andWithAnswer:1];
+    
+    [self archiveGameQuestionWithKey:kParrot andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"코끼리" andWithChoice2:@"돼지"  andWithChoice3:@"앵무새" andWithChoice4:@"토끼" andWithAnswer:3];
+    
+     [self archiveGameQuestionWithKey:kGiraffe andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"코끼리" andWithChoice2:@"돼지"  andWithChoice3:@"앵무새" andWithChoice4:@"기린" andWithAnswer:4];
+    
 }
 
 -(void)archiveGameQuestionWithKey:(NSString*)archiverKey andWithQuestion:(NSString*)question andWithChoice1:(NSString*)choice1 andWithChoice2:(NSString*)choice2 andWithChoice3:(NSString*)choice3 andWithChoice4:(NSString*)choice4 andWithAnswer:(NSInteger)answer{
@@ -210,5 +289,13 @@ SKView* _mainSkView;
     
 }
 
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
 
 @end
