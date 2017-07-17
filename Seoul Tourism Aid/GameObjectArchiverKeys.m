@@ -21,7 +21,7 @@
  NSString* const kToothBrush = @"toothbrush";
  NSString* const kBandaid = @"bandaid";
  NSString* const kSalt = @"salt";
- NSString* const kPepper = @"peppper";
+ NSString* const kPepper = @"pepper";
  NSString* const kCoffee = @"coffee";
  NSString* const kBottle = @"bottle";
  NSString* const kFork = @"fork";
