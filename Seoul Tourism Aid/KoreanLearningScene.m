@@ -187,7 +187,7 @@ NSOperationQueue* _helperOperationQueue;
         if([self.userBunny containsPoint:touchPos]){
             if(fabs(self.userBunny.physicsBody.velocity.dy) <= 0.10){
                 
-                CGVector jumpImpulse = CGVectorMake(0.00, 400.0);
+                CGVector jumpImpulse = CGVectorMake(0.00, 700.0);
                 [self.userBunny.physicsBody applyImpulse:jumpImpulse];
                 
             }
