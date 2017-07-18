@@ -342,16 +342,16 @@
     
     BOOL RW_CH = (horizontalSC == UIUserInterfaceSizeClassRegular && verticalSC == UIUserInterfaceSizeClassCompact);
     
-    self.optionCellHeight = 50.0;
+    self.optionCellHeight = 40.0;
     
 
     if(CW_CH){
-        self.optionCellHeight = 30.0;
+        self.optionCellHeight = 40.0;
 
     }
     
     if(RW_CH){
-        self.optionCellHeight = 30.0;
+        self.optionCellHeight = 40.0;
 
     }
     

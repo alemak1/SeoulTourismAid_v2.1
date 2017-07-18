@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>K-Pop Groups</key>
+	<array>
+		<string>Girl&apos;s Day (K-pop)</string>
+		<string>WINNER (K-pop)</string>
+		<string>iKon (K-pop)</string>
+		<string>I.O.I. (K-pop)</string>
+		<string>Teen Top (K-pop)</string>
+		<string>K.A.R.D (K-pop)</string>
+		<string>AOA (K-pop)</string>
+		<string>JYJ (K-pop)</string>
+		<string>KARA (K-pop)</string>
+		<string>CNBlue (K-pop)</string>
+		<string>Mamamoo (K-pop)</string>
+		<string>BtoB (K-pop)</string>
+		<string>GFriend (K-pop)</string>
+		<string>B1A4 (K-pop)</string>
+		<string>NCT (K-pop)</string>
+		<string>2PM (K-pop)</string>
+		<string>Red Velvet (K-pop)</string>
+		<string>Apink (K-pop)</string>
+		<string>Sistar (K-pop)</string>
+		<string>T-ara (K-pop)</string>
+		<string>BLACKPINK (K-pop)</string>
+		<string>TWICE (K-pop)</string>
+		<string>Wonder Girls (K-pop)</string>
+		<string>GOT7 (K-pop)</string>
+		<string>Infinite (K-pop)</string>
+		<string>Highlight (K-pop)</string>
+		<string>2NE1 (K-pop)</string>
+		<string>SHINee (K-pop)</string>
+		<string>Super Junior (K-pop)</string>
+		<string>BIGBANG (K-pop)</string>
+		<string>Girls&apos; Generation (K-pop)</string>
+		<string>BTS (K-pop)</string>
+		<string>EXO (K-pop)</string>
+	</array>
+	<key>Korean Dramas</key>
+	<array>
+		<string>A Frozen Flower(2008) (Korean Drama) </string>
+		<string>Lovers Vanished (2010) (Korean Drama) </string>
+		<string>My Brilliant Life (2014) (Korean Drama) </string>
+		<string>The Boys Who Cried Wolf (2015) (Korean Drama) </string>
+		<string>Phantom Detective (2016) (Korean Drama) </string>
+		<string>Tabloid Truth (2014) (Korean Drama) </string>
+	</array>
+	<key>Food</key>
+	<array>
+		<string>Bingsu</string>
+		<string>Nakji bokkeum</string>
+		<string>Ppeongtwigi</string>
+		<string>Bulgogi</string>
+		<string>Mudfish Soup</string>
+		<string>Dotorimuk</string>
+		<string>Naengmyeon</string>
+		<string>Gyeranjjim</string>
+		<string>Hobakjuk</string>
+		<string>Dubukimchi</string>
+		<string>Japchae</string>
+		<string>Agujjim</string>
+		<string>Bossam</string>
+		<string>Chuncheon dakgalbi</string>
+		<string>Galbi</string>
+		<string>Doenjang jjigae</string>
+		<string>Tteokguk</string>
+		<string>Kalguksu</string>
+		<string>Kongguksu</string>
+		<string>Jjambbong</string>
+		<string>Haemul Pajeon</string>
+		<string>Gamjatang</string>
+		<string>Doenjang</string>
+		<string>Gimbap</string>
+		<string>Samgyetang</string>
+		<string>Soy Sauce Crab</string>
+		<string>Gopchang</string>
+		<string>Kimchi Stew</string>
+		<string>Chimaek</string>
+		<string>Jjajangmyeon</string>
+		<string>Samgyeopsal</string>
+		<string>Soft Tofu Stew</string>
+		<string>Hangover Stew</string>
+		<string>Bibimbap</string>
+		<string>Tteok-bokki</string>
+		<string>Korean Barbecue</string>
+		<string>Kimchi</string>
+	</array>
+	<key>K-Pop Stars</key>
+	<array>
+		<string>IU (K-Pop)</string>
+		<string>Taeyeon (K-Pop)</string>
+		<string>Ailee (K-Pop)</string>
+		<string>BoA (K-Pop)</string>
+		<string>PSY (K-Pop)</string>
+		<string>Park Jin-young (K-Pop)</string>
+	</array>
+</dict>
+</plist>

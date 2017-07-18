@@ -94,7 +94,7 @@ typedef enum VIDEO_SECTION_4_CATEGORY{
     
     [videoThumbnailCell.cellPlayerView setDelegate:self];
     
-    
+
     return videoThumbnailCell;
 
 }

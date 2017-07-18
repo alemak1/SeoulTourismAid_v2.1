@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "GeneralGameSceneController.h"
 #import "EntryViewGameSceneController.h"
 #import "EntryGameScene.h"
 #import "Constants.h"
@@ -58,6 +59,10 @@ SKView* _skView;
     
 }
 
+
+-(IBAction)unwindToEntryViewGameSceneController:(UIStoryboardSegue *)segue {
+    
+}
 
 
 -(void)dealloc{
@@ -116,7 +121,16 @@ SKView* _skView;
 -(void)presentImageGalleryControllerRequestAlert{
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Explore Flickr Image Galleries" message:@"Do you want to explore image galleries with pictures of Korean food and K-pop stars?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+    
+    
+        UIStoryboard* storyboardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
+        
+        UIViewController* viewController = [storyboardB instantiateViewControllerWithIdentifier:@"SeoulFlickrSearchController_iPad"];
+        
+        [self showViewController:viewController sender:nil];
+        
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     
@@ -131,7 +145,15 @@ SKView* _skView;
     
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Explore YouTube Videos" message:@"Do you want to watch YouTube videos about tourism information and other fun things to do in Korea?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+        
+        UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        UIViewController* videoPreviewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainVideoPreviewController_iPad"];
+        
+        [self showViewController:videoPreviewController sender:nil];
+    
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     
@@ -202,9 +224,17 @@ SKView* _skView;
 }
 
 -(void)presentBunnyGameRequestAlert{
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"App Information Aid" message:@"Do you want to learn more information about how to use this app or leave a review?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Brainy Bunny Learns Korean" message:@"Do you want to play Brainy Bunny Learns Korean?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+                
+        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+        
+        GeneralGameSceneController* generalGameSceneController = [storyboardC instantiateViewControllerWithIdentifier:@"GeneralGameSceneController"];
+        
+        [self showViewController:generalGameSceneController sender:nil];
+    
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     

@@ -18,6 +18,7 @@
 
 @property (readonly) SKView* skView;
 
+@property (strong, nonatomic) IBOutlet SKView *storyboardSKView;
 
 @end
 
@@ -64,7 +65,7 @@ SKView* _mainSkView;
     
     gameScene.hasRestarted = false;
     
-    [self.skView presentScene:gameScene];
+    [self.storyboardSKView presentScene:gameScene];
     
 }
 
@@ -75,7 +76,7 @@ SKView* _mainSkView;
     
     gameScene.hasRestarted = true;
     
-    [self.skView presentScene:gameScene];
+    [self.storyboardSKView presentScene:gameScene];
 }
 
 
@@ -183,10 +184,18 @@ SKView* _mainSkView;
     
 }
 
+
+
 -(void)dealloc{
     [self removeNotifications];
 }
 
+
+-(void)dismissGeneralGameSceneController{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
 
 #pragma mark ****** HELPER METHODS FOR REGISTERING AND REMOVING NOTIFICATIONS
 
@@ -194,7 +203,7 @@ SKView* _mainSkView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentQuestionPromptViewController:) name:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil];
     
-   
+   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissGeneralGameSceneController) name:DID_REQUEST_BACK_TO_MAIN_MENU_NOTIFICATION object:nil];
     
 }
 
@@ -202,6 +211,7 @@ SKView* _mainSkView;
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_ENCOUNTER_QUESTION_OBJECT_NOTIFICATION object:nil];
     
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_BACK_TO_MAIN_MENU_NOTIFICATION object:nil];
 
     
 }

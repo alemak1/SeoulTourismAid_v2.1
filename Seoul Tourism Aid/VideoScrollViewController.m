@@ -36,7 +36,7 @@
     
     UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    MainVideoPreviewController* videoPreviewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainVideoPreviewController"];
+    MainVideoPreviewController* videoPreviewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainVideoPreviewController_iPhone"];
     
     [self addChildViewController:videoPreviewController];
     

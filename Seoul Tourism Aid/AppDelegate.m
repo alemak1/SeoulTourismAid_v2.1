@@ -13,6 +13,10 @@
 #import "GeneralGameSceneController.h"
 #import "GMSLocationSearchController.h"
 #import "LocationSearchController.h"
+#import "OCRController.h"
+
+#import "VideoScrollViewController.h"
+#import "MainVideoPreviewController.h"
 
 @import GoogleMaps;
 @import GooglePlaces;
@@ -42,39 +46,21 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         
         self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
 
-        /**
-        UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
-        SpecificLocationMapController* SLMController = [mainStoryboard instantiateViewControllerWithIdentifier:@"SpecificLocationMapController"];
-        **/
-    
+        UIViewController* rootViewController;
         
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad){
+            
+            rootViewController = [[EntryViewGameSceneController alloc] init];
+            
+        } else {
+            
+            rootViewController = [[EntryViewController alloc] init];
+        }
         
-        EntryViewController* entryViewController = [[EntryViewController alloc] init];
+     
         
-        
-    
-
-        EntryViewGameSceneController* gameSceneController = [[EntryViewGameSceneController alloc] init];
-    
-        
-        
-        
-        GeneralGameSceneController* generalGameSceneController = [[GeneralGameSceneController alloc]init];
-    
-        
-        /**
-        GMSLocationSearchController* gmsLocationSearchController = [[GMSLocationSearchController alloc] init];
-        **/
-        
-        /**
-        
-        UIStoryboard* storyboardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
-        
-        LocationSearchController* searchController = [storyboardA instantiateViewControllerWithIdentifier:@"LocationSearchController_iPad"];
-        **/
-        
-        [self.window setRootViewController:generalGameSceneController];
+        [self.window setRootViewController:rootViewController];
         
         [self.window makeKeyAndVisible];
     }

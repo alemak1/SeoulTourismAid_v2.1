@@ -187,8 +187,16 @@ NSOperationQueue* _helperOperationQueue;
         if([self.userBunny containsPoint:touchPos]){
             if(fabs(self.userBunny.physicsBody.velocity.dy) <= 0.10){
                 
-                CGVector jumpImpulse = CGVectorMake(0.00, 700.0);
-                [self.userBunny.physicsBody applyImpulse:jumpImpulse];
+                if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+                    CGVector jumpImpulse = CGVectorMake(0.00, 700.0);
+                    [self.userBunny.physicsBody applyImpulse:jumpImpulse];
+                }
+                
+                if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+                    CGVector jumpImpulse = CGVectorMake(0.00, 700.0);
+                    [self.userBunny.physicsBody applyImpulse:jumpImpulse];
+                }
+               
                 
             }
             
@@ -248,8 +256,15 @@ NSOperationQueue* _helperOperationQueue;
             
             if([self.returnToMenuButton containsPoint:touchPos]){
                 
+                [self setPaused:YES];
+                
+                [self.optionsSelectionPanel removeFromParent];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_BACK_TO_MAIN_MENU_NOTIFICATION object:nil userInfo:nil];
                 
             }
+            
+            /** Restart button may not be available for some versions of the game **/
             
             if([self.restartButton containsPoint:touchPos]){
                 SKLabelNode*label = (SKLabelNode*)[self.mainMenuButton childNodeWithName:@"MainMenuText"];
@@ -260,7 +275,9 @@ NSOperationQueue* _helperOperationQueue;
                 
                 [self.optionsSelectionPanel removeFromParent];
 
+                [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_GAME_RESTART_NOTIFICATION object:nil];
                 
+                /**
                 SKTransition* transition = [SKTransition crossFadeWithDuration:0.50];
                 
                 KoreanLearningScene* newScene = [[KoreanLearningScene alloc] initWithSize:self.view.bounds.size];
@@ -268,6 +285,7 @@ NSOperationQueue* _helperOperationQueue;
                 newScene.hasRestarted = true;
                 
                 [self.view presentScene:newScene transition:transition];
+                 **/
                 
             }
             
@@ -371,26 +389,10 @@ NSOperationQueue* _helperOperationQueue;
     }
     
     
-    if([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeLeft || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeRight){
-        
-        if(self.pitch > 0 && self.yRotationRate > 0){
-            
-            /** NSLog(@"Pitch is greater than zero"); **/
-            
-            dx = 260.00;
-            
-        }
-        
-        if(self.pitch < 0 && self.yRotationRate < 0){
-            
-            /** NSLog(@"Pitch is less than zero"); **/
-            
-            dx = -260.00;
-            
-        }
-        
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+        dx = dx*2.0;
     }
-    
+   
     return CGVectorMake(dx,0.00);
 }
 
@@ -641,8 +643,16 @@ NSOperationQueue* _helperOperationQueue;
     
     self.returnToGameButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"BackToGameButton"];
     self.returnToMenuButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"AppMainMenuButton"];
-    self.restartButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RestartButton"];
     
+    SKSpriteNode* restartButtonSpriteNode = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RestartButton"];
+    
+    if(restartButtonSpriteNode){
+        self.restartButton = restartButtonSpriteNode;
+
+    } else {
+        NSLog(@"No restart button available for this version of the game.");
+    }
+
     [self showUIButtonDebugInfo];
    
 }

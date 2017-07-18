@@ -106,38 +106,22 @@ NSOperationQueue* _operationQueue;
         [self.motionManager startDeviceMotionUpdatesToQueue:self.operationQueue withHandler:self.handler];
     }
     
+    _gameIsPaused = false;
+    
     [self.physicsWorld setContactDelegate:self];
 
+    [self configureWorldNode];
+    
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
     
     [self configureBackgroundSceneAndIconNodes];
     
     [self configurePlayerBunny];
 
-    self.overlayNode = [[SKNode alloc] init];
-    [self addChild:self.overlayNode];
-    [self.overlayNode setPosition:CGPointMake(0.00, 0.00)];
-    [self.overlayNode setZPosition:20.0];
+    [self configureOverlayNode];
     
-    SKNode* overlayCollection = [SKNode nodeWithFileNamed:@"EntryUIOverlay"];
-    self.mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
-    
-  
-    self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"RootNode"];
-    
-    [self configureOptionsPanelButtons];
-    
-    
-    [self.mainMenuButton moveToParent:self.overlayNode];
-    
-    CGFloat yPos = [UIScreen mainScreen].bounds.size.height*0.40;
-    CGFloat xPos = [UIScreen mainScreen].bounds.size.width*0.30;
-    
-    [self.mainMenuButton setPosition:CGPointMake(xPos, yPos)];
-    
-    
-    NSLog(@"Player bunny information: %@",[self.userBunny description]);
-    
+    [self configureOverlayButtons];
+
     
 }
 
@@ -198,6 +182,8 @@ NSOperationQueue* _operationQueue;
     
     [self.userBunny.physicsBody applyForce:horizontalMovementVector];
     
+    [self centerOnNode:self.userBunny];
+    
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -205,20 +191,17 @@ NSOperationQueue* _operationQueue;
     for (UITouch*touch in touches) {
         
         
-        CGPoint touchPos = [touch locationInNode:self];
+        CGPoint touchPos = [touch locationInNode:self.worldNode];
         
         
         if([self.userBunny containsPoint:touchPos] && !_gameIsPaused){
-            
-    
-            
-            if(self.userBunny.physicsBody.velocity.dy == 0){
-                
-                CGVector jumpImpulse = CGVectorMake(0.00, 400.0);
+            if(fabs(self.userBunny.physicsBody.velocity.dy) <= 0.10){
+                    
+                CGVector jumpImpulse = CGVectorMake(0.00, 700.0);
                 [self.userBunny.physicsBody applyImpulse:jumpImpulse];
-                
+                    
             }
-            
+            return;
         }
         
         
@@ -577,7 +560,7 @@ NSOperationQueue* _operationQueue;
     
     SKNode* backgroundScene = [SKNode nodeWithFileNamed:@"EntryGameSceneBackground"];
     SKNode* backgroundNode = [backgroundScene childNodeWithName:@"RootNode"];
-    [backgroundNode moveToParent:self];
+    [backgroundNode moveToParent:self.worldNode];
     
     self.chatIcon = (SKSpriteNode*)[backgroundNode childNodeWithName:@"ChatIcon"];
     [self.chatIcon.physicsBody setCategoryBitMask:2];
@@ -644,10 +627,43 @@ NSOperationQueue* _operationQueue;
     
     [self.userBunny runAction:walkingAnimation withKey:@"walkingAnimation"];
     
-    [self addChild:self.userBunny];
-    
+    [self.worldNode addChild:self.userBunny];
     
 
+}
+
+-(void)configureWorldNode{
+    
+    self.worldNode = [[SKNode alloc] init];
+    [self.worldNode setPosition:CGPointMake(0.00, 0.00)];
+    [self addChild:self.worldNode];
+
+}
+
+-(void)configureOverlayNode{
+    
+    self.overlayNode = [[SKNode alloc] init];
+    [self addChild:self.overlayNode];
+    [self.overlayNode setPosition:CGPointMake(0.00, 0.00)];
+    [self.overlayNode setZPosition:20.0];
+}
+
+-(void) configureOverlayButtons{
+    
+    SKNode* overlayCollection = [SKNode nodeWithFileNamed:@"EntryUIOverlay"];
+    self.mainMenuButton = (SKSpriteNode*)[overlayCollection childNodeWithName:@"MainMenuButton"];
+    
+    self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"RootNode"];
+    
+    [self configureOptionsPanelButtons];
+    
+    
+    [self.mainMenuButton moveToParent:self.overlayNode];
+    
+    CGFloat yPos = [UIScreen mainScreen].bounds.size.height*0.40;
+    CGFloat xPos = [UIScreen mainScreen].bounds.size.width*0.30;
+    
+    [self.mainMenuButton setPosition:CGPointMake(xPos, yPos)];
 }
 
 
@@ -732,6 +748,14 @@ NSOperationQueue* _operationQueue;
     self.weatherForecastButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"WeatherOption"];
     self.regionMonitoringButton = (SKSpriteNode*)[self.optionsSelectionPanel childNodeWithName:@"RegionMonitoringOption"];
 }
+
+-(void)centerOnNode:(SKNode*)node{
+    CGPoint cameraPositionInScene = [self convertPoint:node.position fromNode:self.worldNode];
+    
+    self.worldNode.position = CGPointMake(self.worldNode.position.x-cameraPositionInScene.x, self.worldNode.position.y - cameraPositionInScene.y);
+}
+
+
 
 
 

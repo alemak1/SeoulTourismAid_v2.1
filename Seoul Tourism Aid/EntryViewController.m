@@ -69,13 +69,16 @@
     self.menuComponent = [[MenuComponent alloc] initMenuWithFrame:desiredMenuFrame
                     targetView:self.view
                     direction:menuDirectionRightToLeft
-                    options:@[@"About the App", @"Explore Nearby", @"Visited Sites", @"Seoul Tourism",@"Weather",@"Survival Korean", @"Product Prices",@"Monitored Regions",@"Image Galleries"]
-                    optionImages:@[@"informationB", @"compassB", @"city1", @"templeB",@"cloudyA",@"chatA", @"shoppingCartB",@"mapAddressB",@"paintingB"]];
+                    options:@[@"About the App", @"Explore Nearby", @"Visited Sites", @"Seoul Tourism",@"Weather",@"Survival Korean", @"Product Prices",@"Monitored Regions",@"Tourism Videos",@"Image Galleries",@"Brainy Bunny Learns Korean"]
+                    optionImages:@[@"informationB", @"compassB", @"city1", @"templeB",@"cloudyA",@"chatA", @"shoppingCartB",@"mapAddressB",@"tvB",@"paintingB",@"bunny2_walk1"]];
     
   
 
 }
 
+-(IBAction)unwindBacktoEntryViewController:(UIStoryboardSegue *)segue {
+    
+}
 
 - (void)showMenu:(UIGestureRecognizer *)gestureRecognizer {
     [self.menuComponent showMenuWithSelectionHandler:^(NSInteger selectedOptionIndex) {
@@ -88,6 +91,7 @@
         
         UIStoryboard* storyBoardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
         
+        UIStoryboard* storyBoardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
         
         UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
         
@@ -131,14 +135,18 @@
                 requestedViewController = [storyBoardB instantiateViewControllerWithIdentifier:@"ProductPriceNavigationController"];
                 break;
             case 7:
-                requestedViewController = [self getMonitoredRegionsControllerFromStoryboard];
-                break;
+                //Monitored Regions
             case 8:
-                //Seoul Picture Gallery
+                //YouTubeTourism Videos
+                requestedViewController = [self getYouTubeVideoController];
+                break;
+            case 9:
+                //Flickr Image Galleries
                 requestedViewController = [self getSeoulFlickrSearchController];
-                
-                NSLog(@"You selected option %d",(int)selectedOptionIndex);
-
+                break;
+            case 10:
+                //Brainy Bunny Learns Korean
+                requestedViewController = [self getBunnyGameController];
                 break;
             default:
                 break;
@@ -154,6 +162,33 @@
     [self.menuComponent resetMenuView:[self traitCollection]];
 }
 
+
+
+-(UIViewController*)getBunnyGameController{
+    
+    UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+    
+    UIViewController* gameSceneController = [storyboardC instantiateViewControllerWithIdentifier:@"GeneralGameSceneController"];
+    
+    return gameSceneController;
+}
+
+
+-(UIViewController*)getYouTubeVideoController{
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    
+    NSString *storyBoardIdentifier = @"MainVideoPreviewController_iPad";
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        storyBoardIdentifier = @"MainVideoPreviewController_iPhone";
+    }
+    
+    
+    return [mainStoryboard instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+
+}
 
 -(UIViewController*)getSeoulFlickrSearchController{
     
