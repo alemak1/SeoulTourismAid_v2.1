@@ -17,6 +17,8 @@
 
 #import "VideoScrollViewController.h"
 #import "MainVideoPreviewController.h"
+#import "TranslationController.h"
+#import "DebugController.h"
 
 @import GoogleMaps;
 @import GooglePlaces;
@@ -59,8 +61,9 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         }
         
      
+        DebugController* debugController = [[DebugController alloc] init];
         
-        [self.window setRootViewController:rootViewController];
+        [self.window setRootViewController:debugController];
         
         [self.window makeKeyAndVisible];
     }

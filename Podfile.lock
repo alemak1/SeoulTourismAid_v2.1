@@ -36,6 +36,7 @@ PODS:
   - PINCache (2.3)
 
 DEPENDENCIES:
+  - AFNetworking (~> 2.5)
   - FGTranslator
   - GoogleMaps
   - GooglePlacePicker
@@ -49,6 +50,6 @@ SPEC CHECKSUMS:
   GooglePlaces: 4a7b22debfa1af65017b82943431822607e45201
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
 
-PODFILE CHECKSUM: bac97e628adeee16e6cf9b07238d62df359eae46
+PODFILE CHECKSUM: e8776f77f70f28a85e1bf28c62c0ebf13c9c28d1
 
 COCOAPODS: 1.2.1

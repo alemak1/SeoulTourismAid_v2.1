@@ -29,12 +29,17 @@
 		BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F61F1B663A000F5F7E /* StoryboardB.storyboard */; };
 		BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F91F1B669E000F5F7E /* StoryboardC.storyboard */; };
 		BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1FB1F1B66C0000F5F7E /* StoryboardD.storyboard */; };
-		BD32B2001F1B6CB7000F5F7E /* TouristSiteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B1FF1F1B6CB7000F5F7E /* TouristSiteConfiguration.m */; };
 		BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */; };
 		BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */; };
 		BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD355AF21F1C3A460000CB55 /* GameObjectList.plist */; };
 		BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF51F1C4A540000CB55 /* GameQuestion.m */; };
 		BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */; };
+		BD3713FE1F1E457500283629 /* TranslationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3713FD1F1E457500283629 /* TranslationController.m */; };
+		BD3728D01F1F3FDA009DFF50 /* OperatingHours.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728CF1F1F3FDA009DFF50 /* OperatingHours.m */; };
+		BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728D21F1F4AE2009DFF50 /* DebugController.m */; };
+		BD3728D61F1F4C4A009DFF50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3728D51F1F4C4A009DFF50 /* CloudKit.framework */; };
+		BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728D81F1F4C9B009DFF50 /* CloudKitHelper.m */; };
+		BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */; };
 		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
 		BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */; };
 		BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
@@ -80,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		20B418F62862684F29CBBD52 /* Pods-Seoul Tourism Aid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seoul Tourism Aid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid.release.xcconfig"; sourceTree = "<group>"; };
+		BD2A696A1F1F178500552521 /* DayOfWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOfWeek.h; sourceTree = "<group>"; };
 		BD2E090E1F1A208800CB69D4 /* SKViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKViewCell.h; sourceTree = "<group>"; };
 		BD2E090F1F1A20AF00CB69D4 /* SKViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKViewCell.m; sourceTree = "<group>"; };
 		BD2E09111F1A287700CB69D4 /* EntryViewControllerPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryViewControllerPad.h; sourceTree = "<group>"; };
@@ -124,8 +130,6 @@
 		BD32B1F61F1B663A000F5F7E /* StoryboardB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardB.storyboard; sourceTree = "<group>"; };
 		BD32B1F91F1B669E000F5F7E /* StoryboardC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardC.storyboard; sourceTree = "<group>"; };
 		BD32B1FB1F1B66C0000F5F7E /* StoryboardD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardD.storyboard; sourceTree = "<group>"; };
-		BD32B1FE1F1B6CB7000F5F7E /* TouristSiteConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristSiteConfiguration.h; sourceTree = "<group>"; };
-		BD32B1FF1F1B6CB7000F5F7E /* TouristSiteConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteConfiguration.m; sourceTree = "<group>"; };
 		BD32B2011F1B6CD8000F5F7E /* OverlayConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayConfiguration.h; sourceTree = "<group>"; };
 		BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayConfiguration.m; sourceTree = "<group>"; };
 		BD32B2041F1B7957000F5F7E /* GoogleLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleLocationSearchController.h; sourceTree = "<group>"; };
@@ -141,6 +145,18 @@
 		BD35A4861F1A0EF7003C337B /* MenuComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuComponent.m; sourceTree = "<group>"; };
 		BD35A4881F1A0F0B003C337B /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		BD35A4891F1A0F0B003C337B /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		BD3713FC1F1E456800283629 /* TranslationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslationController.h; sourceTree = "<group>"; };
+		BD3713FD1F1E457500283629 /* TranslationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationController.m; sourceTree = "<group>"; };
+		BD3728CE1F1F3FCF009DFF50 /* OperatingHours.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperatingHours.h; sourceTree = "<group>"; };
+		BD3728CF1F1F3FDA009DFF50 /* OperatingHours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatingHours.m; sourceTree = "<group>"; };
+		BD3728D11F1F4AD7009DFF50 /* DebugController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugController.h; sourceTree = "<group>"; };
+		BD3728D21F1F4AE2009DFF50 /* DebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugController.m; sourceTree = "<group>"; };
+		BD3728D41F1F4C45009DFF50 /* Seoul Tourism Aid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Seoul Tourism Aid.entitlements"; sourceTree = "<group>"; };
+		BD3728D51F1F4C4A009DFF50 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BD3728D71F1F4C9B009DFF50 /* CloudKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKitHelper.h; sourceTree = "<group>"; };
+		BD3728D81F1F4C9B009DFF50 /* CloudKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKitHelper.m; sourceTree = "<group>"; };
+		BD3728DB1F1F5376009DFF50 /* TouristSiteConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteConfiguration.h; sourceTree = "<group>"; };
+		BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteConfiguration.m; sourceTree = "<group>"; };
 		BD38F0A31F18F2380012ABCB /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		BD38F0A41F18F2380012ABCB /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		BD38F0AA1F18F2670012ABCB /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
@@ -211,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */,
+				BD3728D61F1F4C4A009DFF50 /* CloudKit.framework in Frameworks */,
 				BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */,
 				B9B5618E3C09F558559566A7 /* libPods-Seoul Tourism Aid.a in Frameworks */,
 			);
@@ -222,6 +239,7 @@
 		3EF658D733D4DCD626933478 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD3728D51F1F4C4A009DFF50 /* CloudKit.framework */,
 				BD3A45401F18A4D100DA5A75 /* MapKit.framework */,
 				BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */,
 				D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */,
@@ -236,6 +254,20 @@
 				20B418F62862684F29CBBD52 /* Pods-Seoul Tourism Aid.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BD2A69661F1F169C00552521 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD2A696A1F1F178500552521 /* DayOfWeek.h */,
+				BD3728CE1F1F3FCF009DFF50 /* OperatingHours.h */,
+				BD3728CF1F1F3FDA009DFF50 /* OperatingHours.m */,
+				BD3728D11F1F4AD7009DFF50 /* DebugController.h */,
+				BD3728D21F1F4AE2009DFF50 /* DebugController.m */,
+				BD3728DB1F1F5376009DFF50 /* TouristSiteConfiguration.h */,
+				BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */,
+			);
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 		BD2EDB791F1B8EC500C86D37 /* WeatherForecastControllers */ = {
@@ -265,6 +297,8 @@
 		BD2EDB941F1B900E00C86D37 /* OtherUtils */ = {
 			isa = PBXGroup;
 			children = (
+				BD3728D71F1F4C9B009DFF50 /* CloudKitHelper.h */,
+				BD3728D81F1F4C9B009DFF50 /* CloudKitHelper.m */,
 				BD2EDB991F1B903E00C86D37 /* UIViewController+HelperMethods.h */,
 				BD2EDB9A1F1B903E00C86D37 /* UIViewController+HelperMethods.m */,
 				BD2EDB951F1B901A00C86D37 /* UIView+HelperMethods.h */,
@@ -322,8 +356,6 @@
 		BD32B1FD1F1B6CAB000F5F7E /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				BD32B1FE1F1B6CB7000F5F7E /* TouristSiteConfiguration.h */,
-				BD32B1FF1F1B6CB7000F5F7E /* TouristSiteConfiguration.m */,
 				BD32B2011F1B6CD8000F5F7E /* OverlayConfiguration.h */,
 				BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */,
 			);
@@ -418,6 +450,8 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD3728D41F1F4C45009DFF50 /* Seoul Tourism Aid.entitlements */,
+				BD2A69661F1F169C00552521 /* DataModels */,
 				BD8A35D81F1DF7FF00346F88 /* FlickrViewController */,
 				BDB696931F1D1248001E2314 /* OCRControllers */,
 				BD2EDB981F1B903000C86D37 /* WebViewController */,
@@ -489,6 +523,8 @@
 			children = (
 				BDB696941F1D125E001E2314 /* OCRController.h */,
 				BDB696951F1D126A001E2314 /* OCRController.m */,
+				BD3713FC1F1E456800283629 /* TranslationController.h */,
+				BD3713FD1F1E457500283629 /* TranslationController.m */,
 			);
 			name = OCRControllers;
 			sourceTree = "<group>";
@@ -531,6 +567,12 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -638,12 +680,15 @@
 				BD38F2D71F1B37E700471E16 /* KoreanLearningScene.m in Sources */,
 				BD8A35E61F1DF85800346F88 /* FlickrPhotoCell.m in Sources */,
 				BD38F2D61F1B37DA00471E16 /* GeneralGameSceneController.m in Sources */,
-				BD32B2001F1B6CB7000F5F7E /* TouristSiteConfiguration.m in Sources */,
 				BD38F2D51F1B369B00471E16 /* GoogleJSONResponseParser.m in Sources */,
+				BD3728D01F1F3FDA009DFF50 /* OperatingHours.m in Sources */,
 				BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */,
 				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
+				BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */,
+				BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */,
 				BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
+				BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */,
 				BD32321F1F1E3082000E2236 /* FlickrProgressControllerIPAD.m in Sources */,
 				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
 				BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */,
@@ -662,6 +707,7 @@
 				BD2EDB9E1F1B905400C86D37 /* WebViewController.m in Sources */,
 				BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */,
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
+				BD3713FE1F1E457500283629 /* TranslationController.m in Sources */,
 				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,
 				BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */,
 				BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */,
@@ -806,6 +852,7 @@
 			baseConfigurationReference = F0A1474CE2ECB707CC2EDFCE /* Pods-Seoul Tourism Aid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Seoul Tourism Aid/Seoul Tourism Aid.entitlements";
 				DEVELOPMENT_TEAM = T9J39WJJ9G;
 				INFOPLIST_FILE = "Seoul Tourism Aid/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -819,6 +866,7 @@
 			baseConfigurationReference = 20B418F62862684F29CBBD52 /* Pods-Seoul Tourism Aid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Seoul Tourism Aid/Seoul Tourism Aid.entitlements";
 				DEVELOPMENT_TEAM = T9J39WJJ9G;
 				INFOPLIST_FILE = "Seoul Tourism Aid/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
