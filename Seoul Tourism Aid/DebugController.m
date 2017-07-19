@@ -8,6 +8,7 @@
 
 #import "DebugController.h"
 #import "OperatingHours.h"
+#import "TouristSiteConfiguration.h"
 #import "CloudKitHelper.h"
 
 @implementation DebugController
@@ -16,9 +17,9 @@
     
     CKDatabase* publicDB = [[CKContainer containerWithIdentifier:@"iCloud.SeoulTourism"] publicCloudDatabase];
     
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"name == 'The 4th Tunnel'"];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"title == 'The 4th Tunnel'"];
     
-    CKQuery* query = [[CKQuery alloc] initWithRecordType:@"OperatingHours" predicate:predicate];
+    CKQuery* query = [[CKQuery alloc] initWithRecordType:@"Annotation" predicate:predicate];
     
     
     [publicDB performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord*>*records,NSError*error){
@@ -28,11 +29,13 @@
         }
         
         for (CKRecord*record in records) {
-            NSLog(@"Record debug info: %@",[record description]);
+           // NSLog(@"Record debug info: %@",[record description]);
             
-           OperatingHours* operatingHours = [[OperatingHours alloc] initWithCKRecord:record];
-
-           [operatingHours showOperatingHoursSummary];
+            TouristSiteConfiguration* siteConfiguration = [[TouristSiteConfiguration alloc] initSimpleWithCKRecord:record];
+            
+           
+            [siteConfiguration showTouristSiteDebugInfo];
+            
         }
     
     }];

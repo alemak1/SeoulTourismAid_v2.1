@@ -27,6 +27,18 @@
     return self;
 }
 
+
+-(instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate andWithName:(NSString*)name{
+    
+    if(self = [super init]){
+        
+        _midCoordinate = coordinate;
+        _name = name;
+    }
+    
+    return self;
+}
+
 - (instancetype)initWithFilename:(NSString *)filename{
     self = [super init];
     if (self) {

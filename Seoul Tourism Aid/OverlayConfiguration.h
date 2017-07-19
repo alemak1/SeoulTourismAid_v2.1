@@ -35,7 +35,7 @@
 - (instancetype)initWithFilename:(NSString *)filename;
 -(instancetype)initWithDictionary:(NSDictionary*)properties;
 -(instancetype)initWithGMSPlace: (GMSPlace*)place;
-
+-(instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate andWithName:(NSString*)name;
 @end
 
 #endif /* OverlayConfiguration_h */

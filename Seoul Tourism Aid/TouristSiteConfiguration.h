@@ -47,8 +47,12 @@ typedef enum TouristSiteCategory{
 
 /** User-Initialized Properties **/
 
+@property NSString* siteTitle;
+@property NSString* siteSubtitle;
+
 @property NSString* googlePlaceID;
 @property NSString* siteDescription;
+@property CLLocation* location;
 
 @property CGFloat generalAdmissionFee;
 @property NSArray<NSString*>* detailedPriceInfoArray;
@@ -63,7 +67,7 @@ typedef enum TouristSiteCategory{
 @property NSString* physicalAddress;
 @property NSString* webAddress;
 
-@property NSString* largeImage;
+@property UIImage* largeImage;
 @property UIImage* calloutImage;
 @property NSArray<UIImage*>* accessoryImages;
 
@@ -89,9 +93,10 @@ typedef enum TouristSiteCategory{
 
 /** Initializers **/
 
--(instancetype)initWithGMSPlace:(GMSPlace *)place;
--(instancetype)initWithCKRecord:(CKRecord*)record;
+-(instancetype)initWithGMSPlace:(GMSPlace *)place andShouldApproximateProperties:(BOOL)shouldApproximate;
 
+-(instancetype)initSimpleWithCKRecord:(CKRecord*)record;
+-(instancetype)initWithCKRecord:(CKRecord*)record;
 -(instancetype)initWithConfigurationDict:(NSDictionary*)configurationDictionary;
 - (instancetype)initWithFilename:(NSString *)filename;
 
@@ -99,6 +104,8 @@ typedef enum TouristSiteCategory{
 -(NSString*)debugDescriptionB;
 
 -(CLRegion*) getRegionFromTouristConfiguration;
+
+-(void)showTouristSiteDebugInfo;
 
 
 @end

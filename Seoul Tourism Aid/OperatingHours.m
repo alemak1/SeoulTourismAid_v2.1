@@ -86,25 +86,40 @@
         
 
         NSArray* monArray = record[@"Monday"];
-        [mutableDict setObject:monArray forKey:@"Monday"];
+        if(monArray){
+            [mutableDict setObject:monArray forKey:@"Monday"];
+        }
 
         NSArray* tuesArray = record[@"Tuesday"];
-        [mutableDict setObject:tuesArray forKey:@"Tuesday"];
+        if(tuesArray){
+            [mutableDict setObject:tuesArray forKey:@"Tuesday"];
+        }
 
         NSArray* wedArray = record[@"Wednesday"];
+        if(wedArray){
         [mutableDict setObject:wedArray forKey:@"Wednesday"];
+        }
         
         NSArray* thursArray = record[@"Thursday"];
+        if(thursArray){
         [mutableDict setObject:thursArray forKey:@"Thursday"];
+        }
+        
         
         NSArray* friArray = record[@"Friday"];
-        [mutableDict setObject:friArray forKey:@"Friday"];
+        if(friArray){
+            [mutableDict setObject:friArray forKey:@"Friday"];
+        }
         
         NSArray* satArray = record[@"Saturday"];
+        if(satArray){
         [mutableDict setObject:satArray forKey:@"Saturday"];
+        }
         
         NSArray* sunArray = record[@"Sunday"];
-        [mutableDict setObject:sunArray forKey:@"Sunday"];
+        if(sunArray){
+            [mutableDict setObject:sunArray forKey:@"Sunday"];
+        }
         
         self.operatingHoursDict = [NSDictionary dictionaryWithDictionary:mutableDict];
         
@@ -121,8 +136,10 @@
 
         }
       
-        
-        self.name = record[@"name"];
+        NSString* name =  record[@"name"];
+        if(name){
+            self.name = name;
+        }
 
     }
     
