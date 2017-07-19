@@ -7,7 +7,8 @@
 //
 
 #import "TouristSiteConfiguration.h"
-
+#import "UserLocationManager.h"
+#import "NSString+HelperMethods.h"
 
 @interface TouristSiteConfiguration ()
 
@@ -472,5 +473,288 @@ NSString* siteDescription = record[@"description"]; //String
     [self.operatingHours showOperatingHoursSummary];
     
 }
+
+/** Helper function to convert the TouristConfigurationObject to a CLRegion that can be monitored for entry and exit events **/
+
+-(CLRegion*) getRegionFromTouristConfigurationBasedOnOverlayCoordinates{
+    
+    CLLocation * midLocation = [[CLLocation alloc] initWithLatitude:self.midCoordinate.latitude longitude:self.midCoordinate.longitude];
+    
+    CLLocation * overlayTopRightLocation = [[CLLocation alloc] initWithLatitude:self.overlayTopRightCoordinate.latitude longitude:self.midCoordinate.longitude];
+    
+    
+    double regionRadius = [midLocation distanceFromLocation: overlayTopRightLocation];
+    
+    CLRegion* region = [[CLCircularRegion alloc] initWithCenter:self.midCoordinate radius:regionRadius identifier: self.title];
+    
+    [region setNotifyOnExit:YES];
+    [region setNotifyOnEntry:YES];
+    
+    return region;
+    
+}
+
+-(CLRegion*) getLongRangeRadiusRegionFromTouristConfiguration{
+    
+    return [self getRegionFromTouristConfigurationWithRadius:200.00];
+    
+}
+
+
+-(CLRegion*) getIntermediateRadiusRegionFromTouristConfiguration{
+    
+    return [self getRegionFromTouristConfigurationWithRadius:150.00];
+    
+}
+
+-(CLRegion*) getShortRadiusRegionFromTouristConfiguration{
+    
+    return [self getRegionFromTouristConfigurationWithRadius:50.00];
+    
+}
+
+-(CLRegion*) getRegionFromTouristConfigurationWithRadius:(double)radius{
+    
+    
+    CLRegion* region = [[CLCircularRegion alloc] initWithCenter:self.location.coordinate radius:radius identifier: self.siteTitle];
+    
+    [region setNotifyOnExit:YES];
+    [region setNotifyOnEntry:YES];
+    
+    return region;
+    
+}
+
+-(BOOL)isOpen{
+    
+    if(self.operatingHours){
+        
+        /** First determine if the the current date falls within the open season **/
+        
+        NSDate* todayDate = [NSDate date];
+        NSDate* openingDate = [self.operatingHours getOpeningDate];
+        NSDate* closingDate = [self.operatingHours getClosingDate];
+        
+        if(openingDate != [todayDate earlierDate:openingDate] || closingDate != [todayDate laterDate:closingDate]){
+            
+            return NO;
+        }
+        
+        NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+        
+        NSDateComponents* todayDateComponents = [gregorian components:NSCalendarUnitWeekday|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:todayDate];
+        
+        NSInteger todayWeekday = [todayDateComponents weekday];
+        
+        NSString* todayString = [self getDayStringForNSCalendarWeekdayUnit:todayWeekday];
+        
+        double openingTime = [self.operatingHours getOpeningTimeForDay:todayString];
+        double closingTime = [self.operatingHours getClosingTimeForDay:todayString];
+        
+        /** For days closed, the opening time and closing time are set to -1 **/
+        
+        if(openingTime < 0 || closingTime < 0){
+            return NO;
+        }
+        
+        NSInteger currentHour = [todayDateComponents hour];
+        NSInteger currentMinute = [todayDateComponents minute];
+        NSInteger currentSecond = [todayDateComponents second];
+        
+        /** For establishments with regular day-time operating hours **/
+        
+        if(closingTime > openingTime){
+            
+            double currentTimeInSeconds = currentHour*3600 + currentMinute*60 + currentSecond;
+            
+            double openingTimeInSeconds = openingTime*3600;
+            double closingTimeInSeconds = closingTime*3600;
+            
+            if(currentTimeInSeconds > openingTimeInSeconds && currentTimeInSeconds < closingTimeInSeconds){
+                    return YES;
+            }
+        
+            
+        }
+        
+        /** For establishments with evening operating hours **/
+        if(closingTime < openingTime){
+            
+            NSString* previousDayString = [self getDayStringForNSCalendarWeekdayUnit:[self getPreviousDayWeekday:todayWeekday]];
+            
+            double previousDayClosingTime = [self.operatingHours getClosingTimeForDay:previousDayString];
+            
+            double todayOpeningTime = [self.operatingHours getOpeningTimeForDay:todayString];
+            
+            
+             double currentTimeInSeconds = currentHour*3600 + currentMinute*60 + currentSecond;
+            
+            double openingTimeInSeconds = todayOpeningTime*3600;
+            
+            double closingTimeInSeconds = previousDayClosingTime*3600;
+            
+            
+            /** The current time must be greater than the opening time for the current day, or less than the closing time of the previous day (which would be in the early hours of the current day), unless the establishment was closed on the previous day **/
+            if(currentTimeInSeconds > openingTimeInSeconds || (previousDayClosingTime > 0 && currentTimeInSeconds < closingTimeInSeconds)){
+                
+                return YES;
+                
+            } else {
+                return NO;
+            }
+        }
+        
+        
+    }
+    
+    return NO;
+}
+
+
+/**Before calling these functions, perform the Boolean check with isOpen **/
+
+-(NSTimeInterval)timeUntilOpening{
+    
+    NSDate* todayDate = [NSDate date];
+    
+    NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSDateComponents* todayDateComponents = [gregorian components:NSCalendarUnitWeekday|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:todayDate];
+    
+    NSInteger currentHour = [todayDateComponents hour];
+    NSInteger currentMinute = [todayDateComponents minute];
+    NSInteger currentSecond = [todayDateComponents second];
+    
+    double currentTimeInSeconds = currentHour*3600 + currentMinute*60 + currentSecond;
+   
+    return [self getOpeningTimeForToday]*3600 - currentTimeInSeconds;
+    
+}
+
+-(NSTimeInterval)timeUntilClosing{
+    
+    NSDate* todayDate = [NSDate date];
+    
+    NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSDateComponents* todayDateComponents = [gregorian components:NSCalendarUnitWeekday|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:todayDate];
+    
+    NSInteger currentHour = [todayDateComponents hour];
+    NSInteger currentMinute = [todayDateComponents minute];
+    NSInteger currentSecond = [todayDateComponents second];
+    
+    double currentTimeInSeconds = currentHour*3600 + currentMinute*60 + currentSecond;
+    
+    return [self getClosingTimeForToday]*3600 - currentTimeInSeconds;
+    
+
+    
+}
+
+
+-(NSString *)timeUntilClosingString{
+    
+    return [NSString timeFormattedStringFromTotalSeconds:self.timeUntilClosing];
+}
+
+-(NSString*)timeUntilOpeningString{
+    return [NSString timeFormattedStringFromTotalSeconds:self.timeUntilOpening];
+}
+
+-(double)getOpeningTimeForToday{
+    
+    NSDate* todayDate = [NSDate date];
+
+    NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSDateComponents* todayDateComponents = [gregorian components:NSCalendarUnitWeekday|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:todayDate];
+    
+    NSInteger todayWeekday = [todayDateComponents weekday];
+    
+    NSString* todayString = [self getDayStringForNSCalendarWeekdayUnit:todayWeekday];
+    
+    return [self.operatingHours getOpeningTimeForDay:todayString];
+    
+}
+
+-(double)getClosingTimeForToday{
+    NSDate* todayDate = [NSDate date];
+
+    NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSDateComponents* todayDateComponents = [gregorian components:NSCalendarUnitWeekday|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:todayDate];
+    
+    NSInteger todayWeekday = [todayDateComponents weekday];
+    
+    NSString* todayString = [self getDayStringForNSCalendarWeekdayUnit:todayWeekday];
+    
+    return [self.operatingHours getClosingTimeForDay:todayString];
+    
+}
+ 
+
+-(CGFloat)distanceFromUser{
+
+    CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+
+    return [self.location distanceFromLocation:userLocation];
+}
+
+-(NSString*)distanceFromUserString{
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [numberFormatter setMaximumFractionDigits:2];
+    
+    if(self.distanceFromUser == 0){
+        return @"";
+    }
+    
+    return [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.distanceFromUser]];
+    
+}
+
+-(NSInteger)getPreviousDayWeekday:(NSInteger)todayWeekday{
+    
+    if(todayWeekday == 1){
+        return 7;
+    } else {
+        
+        return todayWeekday - 1;
+    }
+
+}
+
+-(NSInteger)getNextDayWeekday:(NSInteger)todayWeekday{
+    
+    if(todayWeekday == 7){
+        return 1;
+    } else {
+        return todayWeekday + 1;
+    }
+}
+
+-(NSString*)getDayStringForNSCalendarWeekdayUnit:(NSInteger)weekdayUnit{
+    
+    switch (weekdayUnit) {
+        case 1:
+            return @"Sunday";
+        case 2:
+            return @"Monday";
+        case 3:
+            return @"Tuesday";
+        case 4:
+            return @"Wednesday";
+        case 5:
+            return @"Thursday";
+        case 6:
+            return @"Friday";
+        case 7:
+            return @"Saturday";
+     
+    }
+    
+    return nil;
+}
+
 
 @end

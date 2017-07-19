@@ -154,6 +154,7 @@
     return self.closingDate;
 }
 
+
 -(double)getClosingTimeForDay:(NSString*)day{
     
     return [[[self.operatingHoursDict valueForKey:day] lastObject] doubleValue];

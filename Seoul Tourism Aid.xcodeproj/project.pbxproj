@@ -80,6 +80,7 @@
 		BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35E21F1DF85800346F88 /* FlickrSearchResults.m */; };
 		BD8A35E91F1DF85800346F88 /* FlickrSearchTerms.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD8A35E31F1DF85800346F88 /* FlickrSearchTerms.plist */; };
 		BD8A35EC1F1DF8D100346F88 /* SeoulFlickrSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35EB1F1DF8D100346F88 /* SeoulFlickrSearchController.m */; };
+		BDA7BEDA1F1F8DF80084F39D /* NSString+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA7BED91F1F8DF80084F39D /* NSString+HelperMethods.m */; };
 		BDB696961F1D126A001E2314 /* OCRController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB696951F1D126A001E2314 /* OCRController.m */; };
 /* End PBXBuildFile section */
 
@@ -215,6 +216,8 @@
 		BD8A35E31F1DF85800346F88 /* FlickrSearchTerms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FlickrSearchTerms.plist; sourceTree = "<group>"; };
 		BD8A35EA1F1DF8D100346F88 /* SeoulFlickrSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeoulFlickrSearchController.h; sourceTree = "<group>"; };
 		BD8A35EB1F1DF8D100346F88 /* SeoulFlickrSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeoulFlickrSearchController.m; sourceTree = "<group>"; };
+		BDA7BED81F1F8DF80084F39D /* NSString+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HelperMethods.h"; sourceTree = "<group>"; };
+		BDA7BED91F1F8DF80084F39D /* NSString+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HelperMethods.m"; sourceTree = "<group>"; };
 		BDB696941F1D125E001E2314 /* OCRController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCRController.h; sourceTree = "<group>"; };
 		BDB696951F1D126A001E2314 /* OCRController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCRController.m; sourceTree = "<group>"; };
 		D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seoul Tourism Aid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +306,8 @@
 				BD2EDB9A1F1B903E00C86D37 /* UIViewController+HelperMethods.m */,
 				BD2EDB951F1B901A00C86D37 /* UIView+HelperMethods.h */,
 				BD2EDB961F1B901A00C86D37 /* UIView+HelperMethods.m */,
+				BDA7BED81F1F8DF80084F39D /* NSString+HelperMethods.h */,
+				BDA7BED91F1F8DF80084F39D /* NSString+HelperMethods.m */,
 			);
 			name = OtherUtils;
 			sourceTree = "<group>";
@@ -709,6 +714,7 @@
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
 				BD3713FE1F1E457500283629 /* TranslationController.m in Sources */,
 				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,
+				BDA7BEDA1F1F8DF80084F39D /* NSString+HelperMethods.m in Sources */,
 				BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */,
 				BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */,
 				BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */,

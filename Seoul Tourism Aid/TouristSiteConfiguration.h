@@ -72,23 +72,6 @@ typedef enum TouristSiteCategory{
 @property NSArray<UIImage*>* accessoryImages;
 
 
-/** Computed properties determined dynamically based on local time and user location info **/
-
-@property (readonly) BOOL isOpen;
-
-@property (readonly) NSString* timeUntilClosingString;
-@property (readonly) NSString* timeUntilOpeningString;
-
-@property (readonly) NSTimeInterval timeUntilClosing;
-@property (readonly) NSTimeInterval timeUntilOpening;
-
-@property (readonly) NSString* distanceFromUserString;
-@property (readonly) NSString* travelingTimeFromUserLocationString;
-
-@property (readonly) CGFloat distanceFromUser;
-@property (readonly) CGFloat travelingTimeFromUserLocation;
-
-
 /** Computed properties determined from Google Places API (based on Google PlaceID **/
 
 /** Initializers **/
@@ -100,10 +83,27 @@ typedef enum TouristSiteCategory{
 -(instancetype)initWithConfigurationDict:(NSDictionary*)configurationDictionary;
 - (instancetype)initWithFilename:(NSString *)filename;
 
--(NSString*)debugDescriptionA;
--(NSString*)debugDescriptionB;
 
--(CLRegion*) getRegionFromTouristConfiguration;
+/** Helper Functions to assist with region monitoring functionality **/
+
+
+-(CLRegion*) getRegionFromTouristConfigurationBasedOnOverlayCoordinates;
+-(CLRegion*) getShortRadiusRegionFromTouristConfiguration;
+-(CLRegion*) getIntermediateRadiusRegionFromTouristConfiguration;
+-(CLRegion*) getLongRangeRadiusRegionFromTouristConfiguration;
+
+/** Computed properties determined dynamically based on local time and user location info **/
+
+
+-(BOOL)isOpen;
+-(NSTimeInterval)timeUntilOpening;
+-(NSTimeInterval)timeUntilClosing;
+-(NSString *)timeUntilClosingString;
+-(NSString*)timeUntilOpeningString;
+-(CGFloat)distanceFromUser;
+-(NSString*)distanceFromUserString;
+
+/** Helper functions for debugging **/
 
 -(void)showTouristSiteDebugInfo;
 
