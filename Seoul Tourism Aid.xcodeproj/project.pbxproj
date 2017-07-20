@@ -20,7 +20,6 @@
 		BD2EDB931F1B8FD900C86D37 /* WFSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB921F1B8FD900C86D37 /* WFSManager.m */; };
 		BD2EDB971F1B901A00C86D37 /* UIView+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB961F1B901A00C86D37 /* UIView+HelperMethods.m */; };
 		BD2EDB9B1F1B903E00C86D37 /* UIViewController+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB9A1F1B903E00C86D37 /* UIViewController+HelperMethods.m */; };
-		BD2EDB9E1F1B905400C86D37 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB9D1F1B905400C86D37 /* WebViewController.m */; };
 		BD2EDBA01F1B92F900C86D37 /* EntryUIOverlay.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2EDB9F1F1B92F900C86D37 /* EntryUIOverlay.sks */; };
 		BD3145221F19D05D00999981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3145211F19D05D00999981 /* Assets.xcassets */; };
 		BD32321F1F1E3082000E2236 /* FlickrProgressControllerIPAD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32321E1F1E3082000E2236 /* FlickrProgressControllerIPAD.m */; };
@@ -31,15 +30,23 @@
 		BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1FB1F1B66C0000F5F7E /* StoryboardD.storyboard */; };
 		BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */; };
 		BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */; };
+		BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD32EA011F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist */; };
 		BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD355AF21F1C3A460000CB55 /* GameObjectList.plist */; };
 		BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF51F1C4A540000CB55 /* GameQuestion.m */; };
 		BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */; };
+		BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */; };
+		BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */; };
+		BD36668A1F20E66400BEBE4E /* WVController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666891F20E66400BEBE4E /* WVController.m */; };
 		BD3713FE1F1E457500283629 /* TranslationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3713FD1F1E457500283629 /* TranslationController.m */; };
 		BD3728D01F1F3FDA009DFF50 /* OperatingHours.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728CF1F1F3FDA009DFF50 /* OperatingHours.m */; };
 		BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728D21F1F4AE2009DFF50 /* DebugController.m */; };
 		BD3728D61F1F4C4A009DFF50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3728D51F1F4C4A009DFF50 /* CloudKit.framework */; };
 		BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728D81F1F4C9B009DFF50 /* CloudKitHelper.m */; };
 		BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */; };
+		BD3812221F2063F0003D7367 /* TouristSiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3812211F2063F0003D7367 /* TouristSiteManager.m */; };
+		BD3812281F20693A003D7367 /* TouristSiteCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3812251F20693A003D7367 /* TouristSiteCollectionViewCell.m */; };
+		BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3812271F20693A003D7367 /* TouristSiteCollectionViewController.m */; };
+		BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38122B1F20782B003D7367 /* TouristSiteCategorySelectionController.m */; };
 		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
 		BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */; };
 		BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
@@ -117,8 +124,6 @@
 		BD2EDB961F1B901A00C86D37 /* UIView+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HelperMethods.m"; sourceTree = "<group>"; };
 		BD2EDB991F1B903E00C86D37 /* UIViewController+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HelperMethods.h"; sourceTree = "<group>"; };
 		BD2EDB9A1F1B903E00C86D37 /* UIViewController+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HelperMethods.m"; sourceTree = "<group>"; };
-		BD2EDB9C1F1B905400C86D37 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		BD2EDB9D1F1B905400C86D37 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		BD2EDB9F1F1B92F900C86D37 /* EntryUIOverlay.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EntryUIOverlay.sks; sourceTree = "<group>"; };
 		BD3145211F19D05D00999981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD3145241F19DAC900999981 /* GMSLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSLocationSearchController.h; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 		BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayConfiguration.m; sourceTree = "<group>"; };
 		BD32B2041F1B7957000F5F7E /* GoogleLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleLocationSearchController.h; sourceTree = "<group>"; };
 		BD32B2051F1B7968000F5F7E /* GoogleLocationSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleLocationSearchController.m; sourceTree = "<group>"; };
+		BD32EA011F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		BD355AF21F1C3A460000CB55 /* GameObjectList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameObjectList.plist; sourceTree = "<group>"; };
 		BD355AF41F1C4A480000CB55 /* GameQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameQuestion.h; sourceTree = "<group>"; };
 		BD355AF51F1C4A540000CB55 /* GameQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameQuestion.m; sourceTree = "<group>"; };
@@ -146,6 +152,14 @@
 		BD35A4861F1A0EF7003C337B /* MenuComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuComponent.m; sourceTree = "<group>"; };
 		BD35A4881F1A0F0B003C337B /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		BD35A4891F1A0F0B003C337B /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		BD3666761F20C0A400BEBE4E /* TouristSiteDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteDetailController.h; sourceTree = "<group>"; };
+		BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteDetailController.m; sourceTree = "<group>"; };
+		BD3666791F20D01200BEBE4E /* DetailedInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailedInfoController.h; sourceTree = "<group>"; };
+		BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedInfoController.m; sourceTree = "<group>"; };
+		BD3666851F20E4E100BEBE4E /* WebPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPageController.h; sourceTree = "<group>"; };
+		BD3666861F20E4E100BEBE4E /* WebPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageController.m; sourceTree = "<group>"; };
+		BD3666881F20E65900BEBE4E /* WVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WVController.h; sourceTree = "<group>"; };
+		BD3666891F20E66400BEBE4E /* WVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVController.m; sourceTree = "<group>"; };
 		BD3713FC1F1E456800283629 /* TranslationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslationController.h; sourceTree = "<group>"; };
 		BD3713FD1F1E457500283629 /* TranslationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationController.m; sourceTree = "<group>"; };
 		BD3728CE1F1F3FCF009DFF50 /* OperatingHours.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperatingHours.h; sourceTree = "<group>"; };
@@ -158,6 +172,14 @@
 		BD3728D81F1F4C9B009DFF50 /* CloudKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKitHelper.m; sourceTree = "<group>"; };
 		BD3728DB1F1F5376009DFF50 /* TouristSiteConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteConfiguration.h; sourceTree = "<group>"; };
 		BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteConfiguration.m; sourceTree = "<group>"; };
+		BD3812201F2063E5003D7367 /* TouristSiteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteManager.h; sourceTree = "<group>"; };
+		BD3812211F2063F0003D7367 /* TouristSiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteManager.m; sourceTree = "<group>"; };
+		BD3812241F20693A003D7367 /* TouristSiteCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristSiteCollectionViewCell.h; sourceTree = "<group>"; };
+		BD3812251F20693A003D7367 /* TouristSiteCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteCollectionViewCell.m; sourceTree = "<group>"; };
+		BD3812261F20693A003D7367 /* TouristSiteCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristSiteCollectionViewController.h; sourceTree = "<group>"; };
+		BD3812271F20693A003D7367 /* TouristSiteCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteCollectionViewController.m; sourceTree = "<group>"; };
+		BD38122A1F20782B003D7367 /* TouristSiteCategorySelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristSiteCategorySelectionController.h; sourceTree = "<group>"; };
+		BD38122B1F20782B003D7367 /* TouristSiteCategorySelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteCategorySelectionController.m; sourceTree = "<group>"; };
 		BD38F0A31F18F2380012ABCB /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		BD38F0A41F18F2380012ABCB /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		BD38F0AA1F18F2670012ABCB /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
@@ -269,6 +291,8 @@
 				BD3728D21F1F4AE2009DFF50 /* DebugController.m */,
 				BD3728DB1F1F5376009DFF50 /* TouristSiteConfiguration.h */,
 				BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */,
+				BD3812201F2063E5003D7367 /* TouristSiteManager.h */,
+				BD3812211F2063F0003D7367 /* TouristSiteManager.m */,
 			);
 			name = DataModels;
 			sourceTree = "<group>";
@@ -315,8 +339,8 @@
 		BD2EDB981F1B903000C86D37 /* WebViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BD2EDB9C1F1B905400C86D37 /* WebViewController.h */,
-				BD2EDB9D1F1B905400C86D37 /* WebViewController.m */,
+				BD3666851F20E4E100BEBE4E /* WebPageController.h */,
+				BD3666861F20E4E100BEBE4E /* WebPageController.m */,
 			);
 			name = WebViewController;
 			sourceTree = "<group>";
@@ -390,6 +414,32 @@
 			name = EntryViewControllers;
 			sourceTree = "<group>";
 		};
+		BD36667C1F20DFFD00BEBE4E /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD3666881F20E65900BEBE4E /* WVController.h */,
+				BD3666891F20E66400BEBE4E /* WVController.m */,
+			);
+			name = WebViewController;
+			sourceTree = "<group>";
+		};
+		BD3812231F20692C003D7367 /* TouristSiteVCs */ = {
+			isa = PBXGroup;
+			children = (
+				BD38122A1F20782B003D7367 /* TouristSiteCategorySelectionController.h */,
+				BD38122B1F20782B003D7367 /* TouristSiteCategorySelectionController.m */,
+				BD3812241F20693A003D7367 /* TouristSiteCollectionViewCell.h */,
+				BD3812251F20693A003D7367 /* TouristSiteCollectionViewCell.m */,
+				BD3812261F20693A003D7367 /* TouristSiteCollectionViewController.h */,
+				BD3812271F20693A003D7367 /* TouristSiteCollectionViewController.m */,
+				BD3666761F20C0A400BEBE4E /* TouristSiteDetailController.h */,
+				BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */,
+				BD3666791F20D01200BEBE4E /* DetailedInfoController.h */,
+				BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */,
+			);
+			name = TouristSiteVCs;
+			sourceTree = "<group>";
+		};
 		BD38F0A21F18F2270012ABCB /* YouTubeAPIUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +505,8 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD36667C1F20DFFD00BEBE4E /* WebViewController */,
+				BD3812231F20692C003D7367 /* TouristSiteVCs */,
 				BD3728D41F1F4C45009DFF50 /* Seoul Tourism Aid.entitlements */,
 				BD2A69661F1F169C00552521 /* DataModels */,
 				BD8A35D81F1DF7FF00346F88 /* FlickrViewController */,
@@ -526,6 +578,7 @@
 		BDB696931F1D1248001E2314 /* OCRControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD32EA011F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist */,
 				BDB696941F1D125E001E2314 /* OCRController.h */,
 				BDB696951F1D126A001E2314 /* OCRController.m */,
 				BD3713FC1F1E456800283629 /* TranslationController.h */,
@@ -608,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
+				BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */,
 				BD8A35E91F1DF85800346F88 /* FlickrSearchTerms.plist in Resources */,
 				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
 				BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */,
@@ -682,6 +736,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3812281F20693A003D7367 /* TouristSiteCollectionViewCell.m in Sources */,
 				BD38F2D71F1B37E700471E16 /* KoreanLearningScene.m in Sources */,
 				BD8A35E61F1DF85800346F88 /* FlickrPhotoCell.m in Sources */,
 				BD38F2D61F1B37DA00471E16 /* GeneralGameSceneController.m in Sources */,
@@ -689,12 +744,14 @@
 				BD3728D01F1F3FDA009DFF50 /* OperatingHours.m in Sources */,
 				BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */,
 				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
+				BD3812221F2063F0003D7367 /* TouristSiteManager.m in Sources */,
 				BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */,
 				BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */,
 				BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
 				BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */,
 				BD32321F1F1E3082000E2236 /* FlickrProgressControllerIPAD.m in Sources */,
+				BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */,
 				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
 				BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */,
 				BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */,
@@ -709,14 +766,15 @@
 				BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */,
 				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
 				BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */,
-				BD2EDB9E1F1B905400C86D37 /* WebViewController.m in Sources */,
 				BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */,
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
+				BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */,
 				BD3713FE1F1E457500283629 /* TranslationController.m in Sources */,
 				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,
 				BDA7BEDA1F1F8DF80084F39D /* NSString+HelperMethods.m in Sources */,
 				BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */,
 				BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */,
+				BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */,
 				BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */,
 				BD8A35E71F1DF85800346F88 /* FlickrProgressController.m in Sources */,
 				BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */,
@@ -724,6 +782,7 @@
 				BD8A35E41F1DF85800346F88 /* FlickrHelper.m in Sources */,
 				BD2EDB841F1B8F9500C86D37 /* WeatherForecastCollectionController.m in Sources */,
 				BDB696961F1D126A001E2314 /* OCRController.m in Sources */,
+				BD36668A1F20E66400BEBE4E /* WVController.m in Sources */,
 				BD2EDB931F1B8FD900C86D37 /* WFSManager.m in Sources */,
 				BD8A35EC1F1DF8D100346F88 /* SeoulFlickrSearchController.m in Sources */,
 				BD2EDB7C1F1B8F7B00C86D37 /* WeatherIconManager.m in Sources */,
@@ -732,6 +791,7 @@
 				BD2EDB881F1B8FA200C86D37 /* WeatherDetailController.m in Sources */,
 				BD38F2C31F1B360700471E16 /* SKViewCell.m in Sources */,
 				BD2EDB971F1B901A00C86D37 /* UIView+HelperMethods.m in Sources */,
+				BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */,
 				BD38F2C21F1B360400471E16 /* UIColor+HelperMethods.m in Sources */,
 				BD2EDB901F1B8FB400C86D37 /* WeatherConfiguration.m in Sources */,
 				BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */,

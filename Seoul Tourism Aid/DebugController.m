@@ -15,11 +15,24 @@
 
 -(void)viewDidLoad{
     
+    
     CKDatabase* publicDB = [[CKContainer containerWithIdentifier:@"iCloud.SeoulTourism"] publicCloudDatabase];
     
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"title == 'The 4th Tunnel'"];
+    NSString* placeName = @"Sokcho Beach ";
+    
+    NSString* predicateString = [NSString stringWithFormat:@"title == '%@'",placeName];
+    
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:predicateString];
     
     CKQuery* query = [[CKQuery alloc] initWithRecordType:@"Annotation" predicate:predicate];
+    
+    
+   // NSLog(@"All of the known time zones are: ");
+    
+   // for (NSString*timeZoneName in [NSTimeZone knownTimeZoneNames]) {
+    //    NSLog(@"%@",timeZoneName);
+   // }
+    
     
     
     [publicDB performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord*>*records,NSError*error){
@@ -33,8 +46,22 @@
             
             TouristSiteConfiguration* siteConfiguration = [[TouristSiteConfiguration alloc] initSimpleWithCKRecord:record];
             
+            [siteConfiguration showOperatingHoursForSite];
+
            
-            [siteConfiguration showTouristSiteDebugInfo];
+            /**
+            if([siteConfiguration isOpen]){
+                NSLog(@"The %@ is Open.",placeName);
+                
+                NSLog(@"There are %@ hours until closing",[siteConfiguration timeUntilClosingString]);
+                
+            } else {
+                NSLog(@"The %@ is Closed.",placeName);
+                
+                NSLog(@"There are %@ hours until opening",[siteConfiguration timeUntilOpeningString]);
+
+            }
+             **/
             
         }
     

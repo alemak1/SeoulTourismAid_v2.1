@@ -18,7 +18,7 @@
 #import "UIViewController+HelperMethods.h"
 #import "Constants.h"
 
-#import "WebViewController.h"
+#import "WVController.h"
 
 @interface WeatherDisplayController () <UIPickerViewDelegate,UIPickerViewDataSource, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,NSURLSessionDelegate,NSURLSessionTaskDelegate,NSURLSessionDataDelegate>
 

@@ -11,6 +11,9 @@
 
 #define GOOGLE_API_KEY @"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"
 
+
+#define DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER @"didRequestLoadTouristSiteDetailController"
+
 #define DID_REQUEST_KOREAN_AUDIO_NOTIFICATION @"requestedKoreanAudioNotification"
 #define DID_REQUEST_TOURISM_SITE_INFO_NOTIFICATION @"requestedTouristSiteInfoNotification"
 #define DID_REQUEST_PRODUCT_INFO_NOTIFICATION @"requestedProductInfoNotification"

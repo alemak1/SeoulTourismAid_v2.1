@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <OIDAuthorizationService.h>
+#import <OIDAuthState.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +18,9 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 - (void)saveContext;
+
+@property(nonatomic, strong, nullable)
+id<OIDAuthorizationFlowSession> currentAuthorizationFlow;
 
 
 @end

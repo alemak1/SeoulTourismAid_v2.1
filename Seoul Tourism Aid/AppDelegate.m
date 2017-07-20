@@ -19,11 +19,16 @@
 #import "MainVideoPreviewController.h"
 #import "TranslationController.h"
 #import "DebugController.h"
+#import "TouristSiteCollectionViewController.h"
+
+
 
 @import GoogleMaps;
 @import GooglePlaces;
 
 @interface AppDelegate ()
+
+
 
 @end
 
@@ -40,6 +45,10 @@ static BOOL willInstantiateRVCFromStoryboard = true;
     [GMSServices provideAPIKey:@"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"];
     [GMSPlacesClient provideAPIKey:@"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"];
     
+    /** Set Korea as the default time zone for the application i.e. 9h + UTC **/
+    
+    NSTimeZone* koreaTimeZone = [NSTimeZone timeZoneForSecondsFromGMT:3600*9];
+    [NSTimeZone setDefaultTimeZone:koreaTimeZone];
     
     // Override point for customization after application launch.
     
@@ -60,16 +69,34 @@ static BOOL willInstantiateRVCFromStoryboard = true;
             rootViewController = [[EntryViewController alloc] init];
         }
         
+        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+        
+        TouristSiteCollectionViewController* touristSiteCVC = [storyboardC instantiateViewControllerWithIdentifier:@"TouristSiteCSCNavController"];
      
         DebugController* debugController = [[DebugController alloc] init];
         
-        [self.window setRootViewController:debugController];
+        [self.window setRootViewController:touristSiteCVC];
         
         [self.window makeKeyAndVisible];
     }
 
     
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+    // Sends the URL to the current authorization flow (if any) which will
+    // process it if it relates to an authorization response.
+    if ([_currentAuthorizationFlow resumeAuthorizationFlowWithURL:url]) {
+        _currentAuthorizationFlow = nil;
+        return YES;
+    }
+    
+    // Your additional URL handling (if any) goes here.
+    
+    return NO;
 }
 
 

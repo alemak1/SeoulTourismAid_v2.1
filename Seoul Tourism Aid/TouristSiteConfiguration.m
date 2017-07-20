@@ -21,15 +21,41 @@
 @synthesize coordinate = _coordinate;
 @synthesize midCoordinate = _midCoordinate;
 
+/** Some site configurations are powerd by Google and based on what Google determines to be a place of interest; other tourist site metadata is downloaded from iCloud and based on information from SeoulTourismBureau; the app attempts to separate functionalities powered by Google Services and those reliant upon iCloud, MapKit, and data gathered from Seoul Tourism Department **/
 
 #pragma mark ********** Initializers
 
--(instancetype)initWithGMSPlace:(GMSPlace *)place andShouldApproximateProperties:(BOOL)shouldApproximate{
+-(instancetype)initWithGMSPlaceID:(NSString *)placeID andShouldApproximateProperties:(BOOL)shouldApproximate{
+    
+    __block GMSPlace* place;
+    
+    [[GMSPlacesClient sharedClient] lookUpPlaceID:placeID callback:^(GMSPlace*result, NSError*error){
+        
+        place = result;
+    }];
+    
     
     if(self = [super initWithGMSPlace:place]){
         
         self.physicalAddress = place.formattedAddress;
         self.googlePlaceID = place.placeID;
+        
+        __block GMSPlacePhotoMetadata* photoMetaData;
+        
+        [[GMSPlacesClient sharedClient] lookUpPhotosForPlaceID:placeID callback:^(GMSPlacePhotoMetadataList* photos, NSError*error){
+            
+            photoMetaData = [photos.results firstObject];
+            
+            
+            [[GMSPlacesClient sharedClient] loadPlacePhoto:photoMetaData constrainedToSize:CGSizeMake(100.0, 200.0) scale:1.0 callback:^(UIImage*image,NSError*error){
+                
+                self.largeImage = image;
+                
+            }];
+        
+        }];
+        
+        
         
         if(shouldApproximate){
             [self approximateTouristSiteCategoryFromGMSPlace:place];
@@ -525,6 +551,30 @@ NSString* siteDescription = record[@"description"]; //String
     
 }
 
+
+
+-(NSString*)isOpenAccordingToGMS{
+    
+    __block NSString* isOpenStatus;
+    
+    [[GMSPlacesClient sharedClient] lookUpPlaceID:self.googlePlaceID callback:^(GMSPlace* place, NSError*error){
+        
+        GMSPlacesOpenNowStatus openNowStatus = place.openNowStatus;
+        
+        if(openNowStatus == kGMSPlacesOpenNowStatusYes){
+            isOpenStatus = @"Open";
+        } else if(openNowStatus == kGMSPlacesOpenNowStatusNo) {
+            isOpenStatus = @"Closed";
+        } else {
+            isOpenStatus = @"Indeterminate";
+        }
+        
+    }];
+    
+    return isOpenStatus;
+}
+
+
 -(BOOL)isOpen{
     
     if(self.operatingHours){
@@ -535,26 +585,38 @@ NSString* siteDescription = record[@"description"]; //String
         NSDate* openingDate = [self.operatingHours getOpeningDate];
         NSDate* closingDate = [self.operatingHours getClosingDate];
         
-        if(openingDate != [todayDate earlierDate:openingDate] || closingDate != [todayDate laterDate:closingDate]){
+        if(openingDate && closingDate){
+        
+            if(openingDate != [todayDate earlierDate:openingDate] || closingDate != [todayDate laterDate:closingDate]){
             
-            return NO;
+                return NO;
+            }
+            
         }
         
         NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
         
         NSDateComponents* todayDateComponents = [gregorian components:NSCalendarUnitWeekday|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:todayDate];
         
+        
         NSInteger todayWeekday = [todayDateComponents weekday];
         
         NSString* todayString = [self getDayStringForNSCalendarWeekdayUnit:todayWeekday];
         
         double openingTime = [self.operatingHours getOpeningTimeForDay:todayString];
+        NSLog(@"Opening time for today is %f",openingTime);
+        
         double closingTime = [self.operatingHours getClosingTimeForDay:todayString];
+        NSLog(@"Closing time for today is %f",closingTime);
         
         /** For days closed, the opening time and closing time are set to -1 **/
         
         if(openingTime < 0 || closingTime < 0){
-            return NO;
+            return NO; //Closed today
+        }
+        
+        if(openingTime == 0.00 && closingTime == 24.00){
+            return YES; //Always open
         }
         
         NSInteger currentHour = [todayDateComponents hour];
@@ -564,6 +626,7 @@ NSString* siteDescription = record[@"description"]; //String
         /** For establishments with regular day-time operating hours **/
         
         if(closingTime > openingTime){
+            NSLog(@"This place has daytime operating hours");
             
             double currentTimeInSeconds = currentHour*3600 + currentMinute*60 + currentSecond;
             
@@ -579,6 +642,7 @@ NSString* siteDescription = record[@"description"]; //String
         
         /** For establishments with evening operating hours **/
         if(closingTime < openingTime){
+            NSLog(@"The place has evening operating hours");
             
             NSString* previousDayString = [self getDayStringForNSCalendarWeekdayUnit:[self getPreviousDayWeekday:todayWeekday]];
             
@@ -591,11 +655,12 @@ NSString* siteDescription = record[@"description"]; //String
             
             double openingTimeInSeconds = todayOpeningTime*3600;
             
-            double closingTimeInSeconds = previousDayClosingTime*3600;
+            double earlyHoursClosingTime = previousDayClosingTime*3600;
             
+            BOOL wasClosedOnYesterday = previousDayClosingTime < 0;
             
             /** The current time must be greater than the opening time for the current day, or less than the closing time of the previous day (which would be in the early hours of the current day), unless the establishment was closed on the previous day **/
-            if(currentTimeInSeconds > openingTimeInSeconds || (previousDayClosingTime > 0 && currentTimeInSeconds < closingTimeInSeconds)){
+            if(currentTimeInSeconds > openingTimeInSeconds || (!wasClosedOnYesterday && currentTimeInSeconds < earlyHoursClosingTime)){
                 
                 return YES;
                 
@@ -607,7 +672,7 @@ NSString* siteDescription = record[@"description"]; //String
         
     }
     
-    return NO;
+    return YES;
 }
 
 
@@ -615,6 +680,25 @@ NSString* siteDescription = record[@"description"]; //String
 
 -(NSTimeInterval)timeUntilOpening{
     
+    if(self.isOpen){
+        return -10.00;
+    }
+    
+    double openingTimeForToday = [self getOpeningTimeForToday];
+    double closingTimeForToday = [self getClosingTimeForToday];
+    NSLog(@"The opening time for today is %f hours",openingTimeForToday);
+    NSLog(@"The closing time for today is %f hours",closingTimeForToday);
+
+
+    
+    if(openingTimeForToday == 0.00 && closingTimeForToday == 24.00){
+        //Always open
+        NSLog(@"The establishment is always open");
+        
+        return -5.00;
+    }
+    
+    
     NSDate* todayDate = [NSDate date];
     
     NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
@@ -624,15 +708,62 @@ NSString* siteDescription = record[@"description"]; //String
     NSInteger currentHour = [todayDateComponents hour];
     NSInteger currentMinute = [todayDateComponents minute];
     NSInteger currentSecond = [todayDateComponents second];
+    NSInteger currentWeekday = [todayDateComponents weekday];
+    
+    NSInteger tomorrowWeekday = [self getNextDayWeekday:currentWeekday];
+    NSString* tomorrowDayString = [self getDayStringForNSCalendarWeekdayUnit:tomorrowWeekday];
+    
+    double openingTimeTomorrow =[self.operatingHours getOpeningTimeForDay:tomorrowDayString];
+    
+    double closingTimeTomorrow = [self.operatingHours getClosingTimeForDay:tomorrowDayString];
+    
+    if(openingTimeForToday < 0.00 || closingTimeForToday < 0.00){
+        //Estabishment closed today
+        NSLog(@"The establishment is closed today");
+        
+        //TODO: determine if is open tomorrow
+        if(openingTimeTomorrow < 0.00 || closingTimeTomorrow < 24.00){
+            return -4.00; //Establishment is closed tomorrow
+        }
+    }
+    
+    
     
     double currentTimeInSeconds = currentHour*3600 + currentMinute*60 + currentSecond;
    
-    return [self getOpeningTimeForToday]*3600 - currentTimeInSeconds;
+    if(currentTimeInSeconds < openingTimeForToday*3600){
+        return [self getOpeningTimeForToday]*3600 - currentTimeInSeconds;
+    } else {
+        
+        if(openingTimeTomorrow < 0){
+            return -4; //The establishment is closed tomorrow
+        }
+        
+        return openingTimeTomorrow*3600 + (24*3600 - currentTimeInSeconds);
+    }
     
 }
 
 -(NSTimeInterval)timeUntilClosing{
     
+    double closingTimeForToday = [self getClosingTimeForToday];
+    double openiningTimeForToday = [self getOpeningTimeForToday];
+    
+    NSLog(@"The opening time for today is %f hours",openiningTimeForToday);
+    NSLog(@"The closing time for today is %f hours",closingTimeForToday);
+    
+
+    if(closingTimeForToday == 24.00 && openiningTimeForToday == 0.00){
+        
+        return -5.00; //Always open
+        
+    }
+
+    if(!self.isOpen){
+        return -10.00;
+    }
+    
+    
     NSDate* todayDate = [NSDate date];
     
     NSCalendar* gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
@@ -642,10 +773,32 @@ NSString* siteDescription = record[@"description"]; //String
     NSInteger currentHour = [todayDateComponents hour];
     NSInteger currentMinute = [todayDateComponents minute];
     NSInteger currentSecond = [todayDateComponents second];
+    NSInteger currentWeekday = [todayDateComponents weekday];
     
+    NSInteger nextDayWeekday = [self getNextDayWeekday:currentWeekday];
+    NSString* nextDayString = [self getDayStringForNSCalendarWeekdayUnit:nextDayWeekday];
+    
+   
     double currentTimeInSeconds = currentHour*3600 + currentMinute*60 + currentSecond;
     
-    return [self getClosingTimeForToday]*3600 - currentTimeInSeconds;
+   
+
+    if(closingTimeForToday > openiningTimeForToday){ /** Daytime-Hour establishments **/
+        
+        return closingTimeForToday*3600 - currentTimeInSeconds;
+
+    } else { /** Evening hour establishments **/
+        
+        if(currentTimeInSeconds > 24*3600){ //Current time is past midnight
+            
+            return closingTimeForToday*3600 - currentTimeInSeconds;
+            
+        } else { //Current time is before midnight
+            
+            return (24*3600 - currentTimeInSeconds) + closingTimeForToday*3600;
+        }
+        
+    }
     
 
     
@@ -654,10 +807,38 @@ NSString* siteDescription = record[@"description"]; //String
 
 -(NSString *)timeUntilClosingString{
     
+    if(self.timeUntilClosing == -10.00){
+        return @"Error: establishement is currently closed.";
+    }
+    
+    if(self.timeUntilClosing == -5.00){
+        return @"Always Open";
+    }
+    
     return [NSString timeFormattedStringFromTotalSeconds:self.timeUntilClosing];
 }
 
+
 -(NSString*)timeUntilOpeningString{
+    
+    
+    if(self.timeUntilOpening == -10.00){
+        return @"Error: establishment is current open";
+    }
+    
+    /** Establishment is always open **/
+    
+    if(self.timeUntilOpening == -5.00){
+        return @"Always Open";
+    }
+    
+    /** Establishment is currently closed, and will not open tomorrow either **/
+    
+    if(self.timeUntilOpening == -4.00){
+        return @"Closed Tomorrow";
+    }
+    
+    /** Establishement will open today or tomorrow at designated opening time **/
     return [NSString timeFormattedStringFromTotalSeconds:self.timeUntilOpening];
 }
 
@@ -756,5 +937,9 @@ NSString* siteDescription = record[@"description"]; //String
     return nil;
 }
 
+-(void)showOperatingHoursForSite{
+    
+    [self.operatingHours showOperatingHoursSummary];
+}
 
 @end

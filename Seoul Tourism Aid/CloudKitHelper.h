@@ -10,10 +10,22 @@
 #define CloudKitHelper_h
 
 #import <CloudKit/CloudKit.h>
+#import "TouristSiteConfiguration.h"
 //#import "WarMemorialAnnotation.h"
 //#import "WarMemorialNavigationController.h"
 
 @interface CloudKitHelper : NSObject
+
+
+/** Wrapper methods for CloudKit database query requests **/
+
+-(void)performAnnotationQueryForAllTouristSitesWithCompletionHandler:(void(^)(NSArray<CKRecord*>*results,NSError*error))completion;
+
+-(void)performAnnotationQueryWithTouristSiteCategory:(TouristSiteCategory)category andWithCompletionHandler:(void(^)(NSArray<CKRecord*>*results,NSError*error))completion;
+
+-(void)performQueryWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler;
+
+-(void)performLoopQueryWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler;
 
 /**
 -(void)executeQueryOperationOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName forWarMemorialNavigationController:(WarMemorialNavigationController*)navigationController;

@@ -76,7 +76,7 @@ typedef enum TouristSiteCategory{
 
 /** Initializers **/
 
--(instancetype)initWithGMSPlace:(GMSPlace *)place andShouldApproximateProperties:(BOOL)shouldApproximate;
+-(instancetype)initWithGMSPlace:(NSString *)placeID andShouldApproximateProperties:(BOOL)shouldApproximate;
 
 -(instancetype)initSimpleWithCKRecord:(CKRecord*)record;
 -(instancetype)initWithCKRecord:(CKRecord*)record;
@@ -106,7 +106,7 @@ typedef enum TouristSiteCategory{
 /** Helper functions for debugging **/
 
 -(void)showTouristSiteDebugInfo;
-
+-(void)showOperatingHoursForSite;
 
 @end
 

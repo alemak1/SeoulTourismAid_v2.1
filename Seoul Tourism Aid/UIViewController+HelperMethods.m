@@ -7,20 +7,20 @@
 //
 
 #import "UIViewController+HelperMethods.h"
-#import "WebViewController.h"
+#import "WVController.h"
 #import <WebKit/WebKit.h>
 
 @implementation UIViewController (HelperMethods)
 
 -(void)loadWebsiteWithURLAddress:(NSString*)urlAddress{
     
-    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
     
     NSLog(@"Loading Dark Sky Website...");
     
-    WebViewController* webViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"WebViewController"];
+    WVController* webViewController = [storyboardC instantiateViewControllerWithIdentifier:@"WVController"];
     
-    webViewController.urlAddress = urlAddress;
+    webViewController.webURLString = urlAddress;
     
     [self showViewController:webViewController sender:nil];
 
