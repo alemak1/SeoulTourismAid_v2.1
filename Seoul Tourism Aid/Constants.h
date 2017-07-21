@@ -10,7 +10,8 @@
 #define Constants_h
 
 #define GOOGLE_API_KEY @"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"
-
+#define CLIENT_ID @"625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com"
+#define REDIRECT_URL @"com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq"
 
 #define DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER @"didRequestLoadTouristSiteDetailController"
 

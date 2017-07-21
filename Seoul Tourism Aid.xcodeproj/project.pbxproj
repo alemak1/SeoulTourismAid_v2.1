@@ -82,6 +82,7 @@
 		BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD3A454B1F18BF9B00DA5A75 /* Seoul.geojson */; };
 		BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */; };
 		BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */; };
+		BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */; };
 		BD8A35E41F1DF85800346F88 /* FlickrHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DA1F1DF85800346F88 /* FlickrHelper.m */; };
 		BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DC1F1DF85800346F88 /* FlickrPhoto.m */; };
 		BD8A35E61F1DF85800346F88 /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DE1F1DF85800346F88 /* FlickrPhotoCell.m */; };
@@ -158,8 +159,6 @@
 		BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteDetailController.m; sourceTree = "<group>"; };
 		BD3666791F20D01200BEBE4E /* DetailedInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailedInfoController.h; sourceTree = "<group>"; };
 		BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedInfoController.m; sourceTree = "<group>"; };
-		BD3666851F20E4E100BEBE4E /* WebPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPageController.h; sourceTree = "<group>"; };
-		BD3666861F20E4E100BEBE4E /* WebPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageController.m; sourceTree = "<group>"; };
 		BD3666881F20E65900BEBE4E /* WVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WVController.h; sourceTree = "<group>"; };
 		BD3666891F20E66400BEBE4E /* WVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVController.m; sourceTree = "<group>"; };
 		BD3713FC1F1E456800283629 /* TranslationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslationController.h; sourceTree = "<group>"; };
@@ -230,6 +229,8 @@
 		BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoredRegionsController.h; sourceTree = "<group>"; };
 		BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredRegionsController.m; sourceTree = "<group>"; };
 		BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegionIdentifiers.plist; sourceTree = "<group>"; };
+		BD714D691F21FEEB003D4C66 /* DirectionsMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsMenuController.h; sourceTree = "<group>"; };
+		BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsMenuController.m; sourceTree = "<group>"; };
 		BD8A35D91F1DF85800346F88 /* FlickrHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrHelper.h; sourceTree = "<group>"; };
 		BD8A35DA1F1DF85800346F88 /* FlickrHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrHelper.m; sourceTree = "<group>"; };
 		BD8A35DB1F1DF85800346F88 /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
@@ -339,15 +340,6 @@
 				BDA7BED91F1F8DF80084F39D /* NSString+HelperMethods.m */,
 			);
 			name = OtherUtils;
-			sourceTree = "<group>";
-		};
-		BD2EDB981F1B903000C86D37 /* WebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BD3666851F20E4E100BEBE4E /* WebPageController.h */,
-				BD3666861F20E4E100BEBE4E /* WebPageController.m */,
-			);
-			name = WebViewController;
 			sourceTree = "<group>";
 		};
 		BD3145231F19DA9F00999981 /* SearchController */ = {
@@ -510,6 +502,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD714D681F21FEDE003D4C66 /* NavigationAidControllers */,
 				BD45566E1F21B1C100D21756 /* MonitoredRegionsController */,
 				BD36667C1F20DFFD00BEBE4E /* WebViewController */,
 				BD3812231F20692C003D7367 /* TouristSiteVCs */,
@@ -517,7 +510,6 @@
 				BD2A69661F1F169C00552521 /* DataModels */,
 				BD8A35D81F1DF7FF00346F88 /* FlickrViewController */,
 				BDB696931F1D1248001E2314 /* OCRControllers */,
-				BD2EDB981F1B903000C86D37 /* WebViewController */,
 				BD2EDB941F1B900E00C86D37 /* OtherUtils */,
 				BD2EDB791F1B8EC500C86D37 /* WeatherForecastControllers */,
 				BD32B1FD1F1B6CAB000F5F7E /* DataModels */,
@@ -568,6 +560,15 @@
 			);
 			name = MonitoredRegionsController;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		BD714D681F21FEDE003D4C66 /* NavigationAidControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD714D691F21FEEB003D4C66 /* DirectionsMenuController.h */,
+				BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */,
+			);
+			name = NavigationAidControllers;
 			sourceTree = "<group>";
 		};
 		BD8A35D81F1DF7FF00346F88 /* FlickrViewController */ = {
@@ -776,6 +777,7 @@
 				BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */,
 				BD2EDB8F1F1B8FB400C86D37 /* WeatherCollectionCell.m in Sources */,
 				BD2EDB891F1B8FA200C86D37 /* WeatherDisplayController.m in Sources */,
+				BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */,
 				BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */,
 				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
 				BD2EDB9B1F1B903E00C86D37 /* UIViewController+HelperMethods.m in Sources */,

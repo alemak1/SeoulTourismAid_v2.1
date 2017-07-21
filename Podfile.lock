@@ -34,15 +34,23 @@ PODS:
     - GooglePlaces (= 2.3.1)
   - GooglePlaces (2.3.1):
     - GoogleMaps/Base (= 2.3.1)
+  - GTMAppAuth (0.6.1):
+    - AppAuth (~> 0.9.0)
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.11):
+    - GTMSessionFetcher/Full (= 1.1.11)
+  - GTMSessionFetcher/Core (1.1.11)
+  - GTMSessionFetcher/Full (1.1.11):
+    - GTMSessionFetcher/Core (= 1.1.11)
   - PINCache (2.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
-  - AppAuth
   - FGTranslator
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - GTMAppAuth
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
@@ -51,8 +59,10 @@ SPEC CHECKSUMS:
   GoogleMaps: c66a71058b9b1294bcdd5463a68e357fa50c079f
   GooglePlacePicker: fc3564ac7a2ce314e78e42bfc1e16822ad1e5488
   GooglePlaces: 4a7b22debfa1af65017b82943431822607e45201
+  GTMAppAuth: ae710e1e53431e2bcdd57f9f92daa16a58a2947d
+  GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
 
-PODFILE CHECKSUM: dd9650010ebb90693254dc3460b0c9327c735d48
+PODFILE CHECKSUM: c45f55ae40dfba0483529ddce1a0aaaa058ed8a7
 
 COCOAPODS: 1.2.1

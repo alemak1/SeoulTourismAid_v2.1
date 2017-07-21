@@ -22,11 +22,20 @@
     
     [self.wvForWebPage setDelegate:self];
     
-    NSURL* url = [NSURL URLWithString:self.webURLString];
+    if(self.webURL){
+        
+        NSURLRequest* urlRequest = [NSURLRequest requestWithURL:self.webURL];
+
+        [self.wvForWebPage loadRequest:urlRequest];
+    } else {
+        NSURL* url = [NSURL URLWithString:self.webURLString];
+        
+        NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
+        
+        [self.wvForWebPage loadRequest:urlRequest];
+    }
     
-    NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
-    
-    [self.wvForWebPage loadRequest:urlRequest];
+ 
     
 }
 

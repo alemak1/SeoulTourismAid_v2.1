@@ -248,7 +248,7 @@
     
     CGRect labelFrame = CGRectMake(bgWidth*0.10, bgHeight*0.001, bgWidth*0.80, bgHeight*.40);
     UILabel* titleLabel = [[UILabel alloc] initWithFrame:labelFrame];
-    titleLabel.text = @"Preparing for landing in Seoul. Swipe from the right...";
+    titleLabel.text = @"Start using Seoul Tourism Aid. Swipe from the right...";
     titleLabel.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:30.0];
     titleLabel.textColor = [UIColor koreanRed];
     titleLabel.shadowColor = [UIColor koreanBlue];

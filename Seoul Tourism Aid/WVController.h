@@ -16,6 +16,7 @@
 
 
 @property NSString* webURLString;
+@property NSURL* webURL;
 
 @end
 

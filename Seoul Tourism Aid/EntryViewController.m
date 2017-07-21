@@ -30,7 +30,8 @@
     [super viewWillLayoutSubviews];
 
     
-
+    [[UserLocationManager sharedLocationManager] requestAuthorizationAndStartUpdates];
+    
     
  
 }
@@ -51,7 +52,7 @@
     
     
     self.seoulTowerImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [self.seoulTowerImageView setImage:[UIImage imageNamed:@"north_seoul_tower"]];
+    [self.seoulTowerImageView setImage:[UIImage imageNamed:@"guanghuamun"]];
     [self.seoulTowerImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.seoulTowerImageView setContentMode:UIViewContentModeScaleAspectFill];
     
@@ -105,7 +106,7 @@
                 break;
             case 1:
                 //Directions
-                 requestedViewController = [storyBoardA instantiateViewControllerWithIdentifier:@"DirectionsMenuController"];
+                requestedViewController = [self getNavigationAidMenuController];
                     NSLog(@"You selected option %d",(int)selectedOptionIndex);
 
                 break;
@@ -165,6 +166,13 @@
 }
 
 
+-(UIViewController*)getNavigationAidMenuController{
+    UIStoryboard* storyboardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
+    
+    UIViewController* gameSceneController = [storyboardA instantiateViewControllerWithIdentifier:@"DirectionsMenuController"];
+    
+    return gameSceneController;
+}
 
 -(UIViewController*)getBunnyGameController{
     

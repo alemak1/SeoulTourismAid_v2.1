@@ -20,7 +20,7 @@
 #import "TranslationController.h"
 #import "DebugController.h"
 #import "TouristSiteCollectionViewController.h"
-
+#import "WVController.h"
 
 
 @import GoogleMaps;
@@ -69,13 +69,17 @@ static BOOL willInstantiateRVCFromStoryboard = true;
             rootViewController = [[EntryViewController alloc] init];
         }
         
+        /**
         UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
         
         TouristSiteCollectionViewController* touristSiteCVC = [storyboardC instantiateViewControllerWithIdentifier:@"TouristSiteCSCNavController"];
      
         DebugController* debugController = [[DebugController alloc] init];
+        **/
         
-        [self.window setRootViewController:rootViewController];
+        TranslationController* translationController = [[TranslationController alloc] init];
+        
+        [self.window setRootViewController:translationController];
         
         [self.window makeKeyAndVisible];
     }
@@ -89,11 +93,20 @@ static BOOL willInstantiateRVCFromStoryboard = true;
             options:(NSDictionary<NSString *, id> *)options {
     // Sends the URL to the current authorization flow (if any) which will
     // process it if it relates to an authorization response.
+
     if ([_currentAuthorizationFlow resumeAuthorizationFlowWithURL:url]) {
         _currentAuthorizationFlow = nil;
+        
+        NSLog(@"Authorization redirect complete. Posting notification to perform API request....");
+        
+       // [[NSNotificationCenter defaultCenter] postNotificationName:@"STAppLaunchedWithURLNotification" object:nil];
         return YES;
     }
     
+   
+    
+    
+  
     // Your additional URL handling (if any) goes here.
     
     return NO;

@@ -10,6 +10,10 @@
 #import "DetailedInfoController.h"
 #import "WVController.h"
 #import "UserLocationManager.h"
+#import "GoogleURLGenerator.h"
+
+@import GoogleMaps;
+@import GooglePlaces;
 
 @interface TouristSiteDetailController ()
 
@@ -149,6 +153,47 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
 
 
 - (IBAction)getGoogleDirections:(UIButton *)sender {
+    
+    WayPointConfiguration* destinationWayPoint = [[WayPointConfiguration alloc] initWithLocation:self.touristSiteConfiguration.location andWithName:self.touristSiteConfiguration.siteTitle];
+    
+    NSURL* directionsRequestURL = [GoogleURLGenerator getURLFromUserLocationToDestination:destinationWayPoint];
+    
+    NSLog(@"Making directions request to URL: %@",directionsRequestURL.absoluteString);
+    
+    NSURLSession* session = [NSURLSession sharedSession];
+    
+    NSURLSessionDataTask* dataTask = [session dataTaskWithURL:directionsRequestURL completionHandler:^(NSData*data,NSURLResponse*response,NSError*error){
+        
+        if(error){
+            NSLog(@"Failed to obtain JSON response for directions request due to error: %@",[error localizedDescription]);
+        }
+        
+        if([response isKindOfClass:[NSHTTPURLResponse class]]){
+            NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+            
+            if(httpResponse.statusCode != 200){
+                NSLog(@"Failed to obtain JSON response with status code: %ld",(long)httpResponse.statusCode);
+            }
+        }
+        
+        if(!data){
+            NSLog(@"Failed to obtain JSON data.");
+        }
+        
+        NSError* jsonError = nil;
+        
+        NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+        
+        if(jsonError){
+            NSLog(@"Failed to obtain JSON response with JSON error: %@",[jsonError localizedDescription]);
+        }
+        
+        NSLog(@"JSON response info: %@",[jsonDict description]);
+    
+    }];
+    
+    [dataTask resume];
+    
 }
 
 - (IBAction)getMapsDirections:(id)sender {

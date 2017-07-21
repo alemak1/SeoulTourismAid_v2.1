@@ -5,6 +5,6 @@ pod 'GooglePlaces'
 pod 'GooglePlacePicker'
 pod 'FGTranslator'
 pod 'AFNetworking', '~> 2.5'
-pod 'AppAuth'
+pod 'GTMAppAuth'
 project "Seoul Tourism Aid"
 end
