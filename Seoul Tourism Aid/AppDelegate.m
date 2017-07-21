@@ -75,7 +75,7 @@ static BOOL willInstantiateRVCFromStoryboard = true;
      
         DebugController* debugController = [[DebugController alloc] init];
         
-        [self.window setRootViewController:touristSiteCVC];
+        [self.window setRootViewController:rootViewController];
         
         [self.window makeKeyAndVisible];
     }

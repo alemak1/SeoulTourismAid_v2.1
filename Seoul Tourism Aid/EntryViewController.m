@@ -117,7 +117,7 @@
                 break;
             case 3:
                 //Seoul tourism
-                 requestedViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"SeoulTourismNavigationController"];
+                requestedViewController = [self getSeoulTouristSiteInformationController];
                     NSLog(@"You selected option %d",(int)selectedOptionIndex);
 
                 break;
@@ -136,6 +136,8 @@
                 break;
             case 7:
                 //Monitored Regions
+                requestedViewController = [self getMonitoredRegionsControllerFromStoryboard];
+                break;
             case 8:
                 //YouTubeTourism Videos
                 requestedViewController = [self getYouTubeVideoController];
@@ -242,6 +244,26 @@
     return [mainStoryBoard instantiateViewControllerWithIdentifier:storyBoardIdentifier];
     
 }
+
+-(UIViewController*)getSeoulTouristSiteInformationController{
+    
+    // decide which kind of content we need based on the device idiom,
+    // when we load the proper storyboard, the "ContentController" class will take it from here
+    UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+    
+    
+    NSString *storyBoardIdentifier = @"TouristSiteCSCNavController_iPad";
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        storyBoardIdentifier = @"TouristSiteCSCNavController";
+    }
+    
+    
+    return [storyboardC instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+    
+}
+
 
 
 -(IBAction)unwindBackToHostelIndexPage:(UIStoryboardSegue *)unwindSegue{

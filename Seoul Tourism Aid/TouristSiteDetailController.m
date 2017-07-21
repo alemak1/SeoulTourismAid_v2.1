@@ -9,6 +9,7 @@
 #import "TouristSiteDetailController.h"
 #import "DetailedInfoController.h"
 #import "WVController.h"
+#import "UserLocationManager.h"
 
 @interface TouristSiteDetailController ()
 
@@ -54,16 +55,15 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
 
 -(void)viewDidLoad{
     
-    _alreadyPerformedPriceInfoSegue = false;
-    _alreadyPerformedOpHoursSegue = false;
-    _alreadyPerformedParkingInfoSegue = false;
-
+   
     
     [self.titleLabel setText:self.titleText];
     [self.subTitleLabel setText:self.subtitleText];
     [self.descriptionLabel setText:self.descriptionText];
     [self.regionMonitoringSwitch setOn:self.regionMonitoringStatus];
     [self.detailImageView setImage:self.detailImage];
+    
+    
 }
 
 - (IBAction)showDetailOperatingHoursVC:(UIButton *)sender {
@@ -113,22 +113,6 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
 }
 
 
--(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    
-    if([identifier isEqualToString:@"showPriceInfoSegue"]){
-        return !_alreadyPerformedPriceInfoSegue;
-    }
-    
-    if([identifier isEqualToString:@"showParkingFeeInfoSegue"]){
-        return !_alreadyPerformedParkingInfoSegue;
-    }
-    
-    if([identifier isEqualToString:@"showDetailedOperatingHoursSegue"]){
-        return !_alreadyPerformedOpHoursSegue;
-    }
-    
-    return YES;
-}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
@@ -184,5 +168,46 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
 }
 
 - (IBAction)changedRegionMonitoringStatus:(UISwitch *)sender {
+    
+    __block CLLocationDistance monitoringRadius;
+    
+    if([sender isOn]){
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Monitor Region?" message:@"If you would like to receive notifications when you are close to this tourist site, select from the options below for proximity radius. A smaller proximity radius means you must be closer to the site in order to receive notifications" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* intermediateRadiusChoice = [UIAlertAction actionWithTitle:@"Intermediate Range Monitoring (100 m)" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+            
+            monitoringRadius = 100.0;
+        }];
+        
+        UIAlertAction* longRangeRadius = [UIAlertAction actionWithTitle:@"Long Range Monitoring (200 m)" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+            
+            monitoringRadius = 200.0;
+        }];
+        
+        UIAlertAction* shortRadiusChoice = [UIAlertAction actionWithTitle:@"Short Range Monitoring (50 m)" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+            
+            monitoringRadius = 50.0;
+        }];
+        
+        [alertController addAction:shortRadiusChoice];
+        [alertController addAction:intermediateRadiusChoice];
+        [alertController addAction:longRangeRadius];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    
+    CLRegion* region = [[CLCircularRegion alloc] initWithCenter:self.touristSiteConfiguration.location.coordinate radius:monitoringRadius identifier:self.touristSiteConfiguration.siteTitle];
+    
+    if([sender isOn]){
+        
+        
+        [[UserLocationManager sharedLocationManager] startMonitoringForSingleRegion:region];
+        
+    } else {
+        
+        [[UserLocationManager sharedLocationManager] stopMonitoringForSingleRegion:region];
+        
+    }
+    
 }
 @end

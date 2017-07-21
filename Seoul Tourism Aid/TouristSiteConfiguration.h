@@ -86,7 +86,7 @@ typedef enum TouristSiteCategory{
 
 /** Helper Functions to assist with region monitoring functionality **/
 
-
+-(BOOL)isUnderRegionMonitoring;
 -(CLRegion*) getRegionFromTouristConfigurationBasedOnOverlayCoordinates;
 -(CLRegion*) getShortRadiusRegionFromTouristConfiguration;
 -(CLRegion*) getIntermediateRadiusRegionFromTouristConfiguration;

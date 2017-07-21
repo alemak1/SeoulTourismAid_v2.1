@@ -176,7 +176,7 @@ static UserLocationManager* mySharedLocationManager;
 }
 
 
--(BOOL)isBeingRegionMonitored:(NSString*)regionIdentifier{
+-(BOOL)isUnderRegionMonitoring:(NSString*)regionIdentifier{
     
     NSSet* monitoredRegions = [self monitoredRegions];
     

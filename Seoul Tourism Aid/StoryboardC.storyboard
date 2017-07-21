@@ -394,11 +394,11 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pBq-uN-r4E" userLabel="Back to Menu">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="48n-5b-ZqS" kind="unwind" unwindAction="unwindBacktoEntryViewController:" id="KW0-hI-e1f"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="returnToMainMenu:" destination="qz2-78-dRe" id="aIt-UD-EWQ"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -407,8 +407,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lho-zl-XFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="48n-5b-ZqS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="1306"/>
+            <point key="canvasLocation" x="159" y="1542"/>
         </scene>
         <!--Tourist Site Collection View Controller-->
         <scene sceneID="gfM-oP-LoU">
@@ -547,7 +548,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2R6-fI-Bmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1111.2" y="1408.2458770614694"/>
+            <point key="canvasLocation" x="-898" y="1752"/>
         </scene>
         <!--Controller-->
         <scene sceneID="TkW-zH-2hS">

@@ -80,6 +80,8 @@
 		BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A45401F18A4D100DA5A75 /* MapKit.framework */; };
 		BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */; };
 		BD3A454C1F18BF9B00DA5A75 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD3A454B1F18BF9B00DA5A75 /* Seoul.geojson */; };
+		BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */; };
+		BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */; };
 		BD8A35E41F1DF85800346F88 /* FlickrHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DA1F1DF85800346F88 /* FlickrHelper.m */; };
 		BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DC1F1DF85800346F88 /* FlickrPhoto.m */; };
 		BD8A35E61F1DF85800346F88 /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DE1F1DF85800346F88 /* FlickrPhotoCell.m */; };
@@ -225,6 +227,9 @@
 		BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleURLGenerator.m; sourceTree = "<group>"; };
 		BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleJSONResponseParser.h; sourceTree = "<group>"; };
 		BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleJSONResponseParser.m; sourceTree = "<group>"; };
+		BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoredRegionsController.h; sourceTree = "<group>"; };
+		BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredRegionsController.m; sourceTree = "<group>"; };
+		BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegionIdentifiers.plist; sourceTree = "<group>"; };
 		BD8A35D91F1DF85800346F88 /* FlickrHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrHelper.h; sourceTree = "<group>"; };
 		BD8A35DA1F1DF85800346F88 /* FlickrHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrHelper.m; sourceTree = "<group>"; };
 		BD8A35DB1F1DF85800346F88 /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
@@ -505,6 +510,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD45566E1F21B1C100D21756 /* MonitoredRegionsController */,
 				BD36667C1F20DFFD00BEBE4E /* WebViewController */,
 				BD3812231F20692C003D7367 /* TouristSiteVCs */,
 				BD3728D41F1F4C45009DFF50 /* Seoul Tourism Aid.entitlements */,
@@ -551,6 +557,17 @@
 				BD3A45201F18A3EC00DA5A75 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD45566E1F21B1C100D21756 /* MonitoredRegionsController */ = {
+			isa = PBXGroup;
+			children = (
+				BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */,
+				BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */,
+				BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */,
+			);
+			name = MonitoredRegionsController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		BD8A35D81F1DF7FF00346F88 /* FlickrViewController */ = {
@@ -663,6 +680,7 @@
 				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
 				BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */,
 				BD8A35E91F1DF85800346F88 /* FlickrSearchTerms.plist in Resources */,
+				BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */,
 				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
 				BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */,
 				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
@@ -786,6 +804,7 @@
 				BD2EDB931F1B8FD900C86D37 /* WFSManager.m in Sources */,
 				BD8A35EC1F1DF8D100346F88 /* SeoulFlickrSearchController.m in Sources */,
 				BD2EDB7C1F1B8F7B00C86D37 /* WeatherIconManager.m in Sources */,
+				BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */,
 				BD2EDB801F1B8F8500C86D37 /* WeatherForecastSite.m in Sources */,
 				BD38F2C41F1B360D00471E16 /* EntryViewControllerPad.m in Sources */,
 				BD2EDB881F1B8FA200C86D37 /* WeatherDetailController.m in Sources */,

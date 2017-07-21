@@ -35,7 +35,7 @@
 
 -(void)setPresentingViewControllerTo:(UIViewController*)presentingViewController;
 
--(BOOL)isBeingRegionMonitored:(NSString*)regionIdentifier;
+-(BOOL)isUnderRegionMonitoring:(NSString*)regionIdentifier;
 -(CLRegion*)getRegionWithIdentifier:(NSString*)regionIdentifier;
 
 

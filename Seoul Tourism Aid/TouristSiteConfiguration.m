@@ -551,6 +551,13 @@ NSString* siteDescription = record[@"description"]; //String
     
 }
 
+-(BOOL)isUnderRegionMonitoring{
+    
+    NSString* regionIdentifier = self.siteTitle;
+    
+    return [[UserLocationManager sharedLocationManager] isUnderRegionMonitoring:regionIdentifier];
+}
+
 
 
 -(NSString*)isOpenAccordingToGMS{

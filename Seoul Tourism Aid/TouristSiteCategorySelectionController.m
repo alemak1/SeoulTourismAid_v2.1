@@ -130,6 +130,7 @@
         detailController.subtitleText = self.selectedTouristSiteConfiguration.siteSubtitle;
         detailController.descriptionText = self.selectedTouristSiteConfiguration.siteDescription;
         detailController.detailImage = self.selectedTouristSiteConfiguration.largeImage;
+        detailController.regionMonitoringStatus = self.selectedTouristSiteConfiguration.isUnderRegionMonitoring;
     
     }
 }

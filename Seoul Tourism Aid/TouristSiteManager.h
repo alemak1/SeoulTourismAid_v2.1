@@ -17,6 +17,9 @@
 
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category;
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category andWithCompletionHandler:(void(^)(void))completionHandler;
+-(instancetype)initFromCloudWithAllTouristSitesandWithCompletionHandler:(void(^)(void))completionHandler;
+
+
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(void))completionHandler;
 
 -(NSInteger)totalNumberOfTouristSitesInMasterArray;

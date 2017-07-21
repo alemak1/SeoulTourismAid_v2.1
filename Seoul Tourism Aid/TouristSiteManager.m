@@ -54,6 +54,43 @@
 }
 
 
+-(instancetype)initFromCloudWithAllTouristSitesandWithCompletionHandler:(void(^)(void))completionHandler{
+    
+    self = [super init];
+    
+    [self.ckHelper performAnnotationQueryForAllTouristSitesWithCompletionHandler:^(NSArray<CKRecord*>*results,NSError*error){
+        
+        
+        if(error){
+            NSLog(@"An error occurred while downloading the results: %@",[error localizedDescription]);
+        }
+        
+        if(!results){
+            NSLog(@"Error: no results available for the download");
+        }
+        
+        NSMutableArray<TouristSiteConfiguration*>* touristSiteArray = [[NSMutableArray alloc] init];
+        
+        for(CKRecord*record in results){
+            
+            TouristSiteConfiguration* siteConfiguration = [[TouristSiteConfiguration alloc] initWithCKRecord:record];
+            
+            [touristSiteArray addObject:siteConfiguration];
+            
+        }
+        
+        self.configurationArray = [NSArray arrayWithArray:touristSiteArray];
+        
+        completionHandler();
+        
+    }];
+    
+    
+    
+    
+    return self;
+    
+}
 
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category andWithCompletionHandler:(void(^)(void))completionHandler{
     
@@ -145,6 +182,8 @@
     
     return _ckHelper;
 }
+
+
 
 #pragma mark COLLECTION VIEW DATA SOURCE METHODS
 
