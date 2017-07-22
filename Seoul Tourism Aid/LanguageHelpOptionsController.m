@@ -25,7 +25,8 @@
 @implementation LanguageHelpOptionsController
 
 -(void)viewDidLoad{
-    [self performDebugHTTPRequestForCloudVisionAPI];
+    
+    
 }
 
 
@@ -115,6 +116,8 @@
     }];
 }
 
-
+-(IBAction)unwindToLanguageHelpOptions:(UIStoryboardSegue *)segue{
+    
+}
 
 @end

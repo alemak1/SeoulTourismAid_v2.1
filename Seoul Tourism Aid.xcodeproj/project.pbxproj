@@ -82,6 +82,8 @@
 		BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */; };
 		BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A45401F18A4D100DA5A75 /* MapKit.framework */; };
 		BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */; };
+		BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */; };
+		BD3DCB031F234839001DB69B /* LanguageRecordingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCB021F234839001DB69B /* LanguageRecordingController.m */; };
 		BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */; };
 		BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */; };
 		BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD55E02E1F2270A000CFBE68 /* Seoul.geojson */; };
@@ -235,6 +237,10 @@
 		BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleURLGenerator.m; sourceTree = "<group>"; };
 		BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleJSONResponseParser.h; sourceTree = "<group>"; };
 		BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleJSONResponseParser.m; sourceTree = "<group>"; };
+		BD3DCAFE1F2338B5001DB69B /* LanguageTranslationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageTranslationController.h; sourceTree = "<group>"; };
+		BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTranslationController.m; sourceTree = "<group>"; };
+		BD3DCB011F234829001DB69B /* LanguageRecordingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageRecordingController.h; sourceTree = "<group>"; };
+		BD3DCB021F234839001DB69B /* LanguageRecordingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageRecordingController.m; sourceTree = "<group>"; };
 		BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoredRegionsController.h; sourceTree = "<group>"; };
 		BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredRegionsController.m; sourceTree = "<group>"; };
 		BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegionIdentifiers.plist; sourceTree = "<group>"; };
@@ -519,7 +525,7 @@
 				BD3728D41F1F4C45009DFF50 /* Seoul Tourism Aid.entitlements */,
 				BD2A69661F1F169C00552521 /* DataModels */,
 				BD8A35D81F1DF7FF00346F88 /* FlickrViewController */,
-				BDB696931F1D1248001E2314 /* OCRControllers */,
+				BDB696931F1D1248001E2314 /* LanguageHelpControllers */,
 				BD2EDB941F1B900E00C86D37 /* OtherUtils */,
 				BD2EDB791F1B8EC500C86D37 /* WeatherForecastControllers */,
 				BD32B1FD1F1B6CAB000F5F7E /* DataModels */,
@@ -603,7 +609,7 @@
 			name = FlickrViewController;
 			sourceTree = "<group>";
 		};
-		BDB696931F1D1248001E2314 /* OCRControllers */ = {
+		BDB696931F1D1248001E2314 /* LanguageHelpControllers */ = {
 			isa = PBXGroup;
 			children = (
 				BD32EA011F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist */,
@@ -618,8 +624,12 @@
 				BD3944CB1F22D6230024F92D /* MediaPickerManager.h */,
 				BD3944CC1F22D6540024F92D /* MediaPickerManager.m */,
 				BD3944CE1F22DA470024F92D /* MediaPickerManagerDelegate.h */,
+				BD3DCAFE1F2338B5001DB69B /* LanguageTranslationController.h */,
+				BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */,
+				BD3DCB011F234829001DB69B /* LanguageRecordingController.h */,
+				BD3DCB021F234839001DB69B /* LanguageRecordingController.m */,
 			);
-			name = OCRControllers;
+			name = LanguageHelpControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -781,6 +791,7 @@
 				BD3728D01F1F3FDA009DFF50 /* OperatingHours.m in Sources */,
 				BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */,
 				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
+				BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */,
 				BD3944CA1F22C83A0024F92D /* AuthorizationController.m in Sources */,
 				BD3812221F2063F0003D7367 /* TouristSiteManager.m in Sources */,
 				BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */,
@@ -797,6 +808,7 @@
 				BD2EDB8F1F1B8FB400C86D37 /* WeatherCollectionCell.m in Sources */,
 				BD2EDB891F1B8FA200C86D37 /* WeatherDisplayController.m in Sources */,
 				BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */,
+				BD3DCB031F234839001DB69B /* LanguageRecordingController.m in Sources */,
 				BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */,
 				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
 				BD2EDB9B1F1B903E00C86D37 /* UIViewController+HelperMethods.m in Sources */,

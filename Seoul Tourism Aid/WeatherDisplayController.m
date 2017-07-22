@@ -103,6 +103,9 @@
 static NSString* _baseURL = @"https://api.darksky.net/forecast/";
 static NSString* _apiKey = DARK_SKY_API;
 
+BOOL _userHasSelectedForecastPeriod = false;
+BOOL _userHasSelectedDate = false;
+
 NSOperationQueue* _backgroundOperationQueue;
 int backgroundSessionIndex = 0;
 
@@ -145,7 +148,7 @@ int backgroundSessionIndex = 0;
 
 - (IBAction)changedForecastDate:(UIDatePicker *)sender {
     
-  
+    _userHasSelectedDate = true;
 
 }
 
@@ -158,6 +161,8 @@ int backgroundSessionIndex = 0;
 
 
 - (IBAction)changedForecastPeriod:(UISlider *)sender {
+    
+    _userHasSelectedForecastPeriod = true;
     
     NSUInteger forecastPeriod = (NSUInteger)[self.forecastPeriodSlider value];
     
@@ -413,6 +418,40 @@ int backgroundSessionIndex = 0;
 
 -(void)getUpdatedJSONDataBasedOnAdjustedParameters{
     
+    if(!_userHasSelectedDate || !_userHasSelectedDate){
+        
+        
+        BOOL condition1 = !_userHasSelectedDate && _userHasSelectedForecastPeriod;
+        BOOL condition2 = _userHasSelectedDate && !_userHasSelectedForecastPeriod;
+        BOOL condition3 = !_userHasSelectedDate && !_userHasSelectedForecastPeriod;
+        
+        NSString* messageStr;
+        
+        if(condition1){
+            messageStr = @"Starting Forecast Date";
+        }
+        
+        if(condition2){
+            messageStr = @"Forecast Period";
+        }
+        
+        if(condition3){
+            messageStr = @"Forecast Period and Starting Date";
+        }
+        
+        NSString* finalMessage = [NSString stringWithFormat:@"Please select: %@",messageStr];
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Insufficient Information" message:finalMessage preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alertController addAction:okay];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    
     [self cancelPreviousURLSession];
     
     [self createAndStartDataTasksForNewURLSession];
@@ -494,7 +533,16 @@ int backgroundSessionIndex = 0;
     NSMutableArray<NSURL*>* urlArray = [[NSMutableArray alloc] init];
     
     int numberOfForecastDays = (int)[self.forecastPeriodSlider value];
+    
+    if(numberOfForecastDays == 0){
+        numberOfForecastDays = 1;
+    }
+    
     NSDate* runningDate = [self.datePicker date];
+    
+    if(runningDate == nil){
+        runningDate = [NSDate date];
+    }
     
     for(int i = 0; i < numberOfForecastDays; i++){
         
@@ -551,6 +599,8 @@ int backgroundSessionIndex = 0;
 }
 
 -(NSString *)currentRequestURI{
+    
+    
     
     CLLocationDegrees latitude = self.currentlySelectedLocationCoordinate.latitude;
     CLLocationDegrees longitude = self.currentlySelectedLocationCoordinate.longitude;
@@ -695,8 +745,10 @@ int backgroundSessionIndex = 0;
     [self.locationPicker selectRow:1 inComponent:0 animated:NO];
     [self.datePicker setDate:[NSDate date]];
     [self.forecastPeriodSlider setValue:1.00];
-    [self setCurrentlySelectedLocationCoordinate:CLLocationCoordinate2DMake(37.5616592, 126.8736235)];
+    self.currentlySelectedLocationCoordinate = [self.wfsManager getCoordinateForForecastSite:1];
+
     
+
 }
 
 @end

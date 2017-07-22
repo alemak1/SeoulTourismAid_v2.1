@@ -286,6 +286,9 @@ SKView* _mainSkView;
     
      [self archiveGameQuestionWithKey:kGiraffe andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"코끼리" andWithChoice2:@"돼지"  andWithChoice3:@"앵무새" andWithChoice4:@"기린" andWithAnswer:4];
     
+    [self archiveGameQuestionWithKey:kKnife andWithQuestion:@"What is the Korean character for this object?" andWithChoice1:@"칼" andWithChoice2:@"연필"  andWithChoice3:@"망치새" andWithChoice4:@"포크" andWithAnswer:1];
+    
+    
 }
 
 -(void)archiveGameQuestionWithKey:(NSString*)archiverKey andWithQuestion:(NSString*)question andWithChoice1:(NSString*)choice1 andWithChoice2:(NSString*)choice2 andWithChoice3:(NSString*)choice3 andWithChoice4:(NSString*)choice4 andWithAnswer:(NSInteger)answer{

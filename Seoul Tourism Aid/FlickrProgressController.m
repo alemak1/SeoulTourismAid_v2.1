@@ -16,7 +16,7 @@
 #import "FlickrPhotoCell.h"
 
 
-@interface FlickrProgressController () <UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface FlickrProgressController () <UITableViewDelegate,UITableViewDataSource>
 
 
 typedef enum SectionKey{
@@ -83,15 +83,15 @@ BOOL isLoading = false;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+    NSLog(@"Preparng to perform segue for Flickr search results...");
+    
+    
     if([segue.identifier isEqualToString:@"showFlickrPhotosSegue"]){
         
-        if(isLoading){
-            return;
-        }
-        
+    
         SeoulFlickSearchController* seoulFlickrSearchController = (SeoulFlickSearchController*)segue.destinationViewController;
         
-        NSLog(@"Preparing for segue to SeoulFlickrSearchController....");
+        NSLog(@"Segue idenetifier matched.  Preparing for segue to SeoulFlickrSearchController....");
         
         
         NSLog(@"The search results stored in the FlickProgressController is %@",[self.searchResults description]);

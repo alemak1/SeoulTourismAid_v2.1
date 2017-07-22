@@ -19,6 +19,9 @@
 #define kGoogleTokenEndpoint @"https://www.googleapis.com/oauth2/v4/token"
 #define kClientID @"625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com"
 #define kRedirectURL @"com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq:/oauthredirect"
+#define GOOGLE_TRANSLATE_BASE_URL_ENDPOINT @"https://translation.googleapis.com/language/translate/v2"
+#define GOOLE_SPEECH_RECOGNIZTION_BASE_URL_ENDPOINT @"https://speech.googleapis.com/v1/speech:recognize"
+#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 #define DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER @"didRequestLoadTouristSiteDetailController"
 
