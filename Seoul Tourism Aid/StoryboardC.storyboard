@@ -11,6 +11,187 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Language Help Options Controller-->
+        <scene sceneID="GDa-0P-f9w">
+            <objects>
+                <viewController storyboardIdentifier="LanguageOptionsController" id="D9b-mu-KDo" customClass="LanguageHelpOptionsController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KKV-Ho-S2U"/>
+                        <viewControllerLayoutGuide type="bottom" id="8li-UE-NLN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ptn-xd-VvS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hnk-sB-BfJ">
+                                <rect key="frame" x="16" y="0.0" width="288" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-cN-T1o">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="142"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Translate Typed Message to Korean">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Futura-CondensedMedium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWO-u3-Exj">
+                                        <rect key="frame" x="0.0" y="142" width="288" height="142"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Translate Recorded Text to Korean">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Futura-CondensedMedium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-02-LXh">
+                                        <rect key="frame" x="0.0" y="284" width="288" height="142"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Translate Korean Text From Image/Picture">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Futura-CondensedMedium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="GnN-UL-Jvx" kind="show" id="mYQ-Nv-bkF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NO7-nH-mqo">
+                                        <rect key="frame" x="0.0" y="426" width="288" height="142"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Back to Main Menu">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Futura-CondensedMedium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jyI-3p-iGu" kind="unwind" unwindAction="unwindBacktoEntryViewController:" id="aIc-Bm-1P7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hnk-sB-BfJ" secondAttribute="trailing" id="9Vc-Z1-LRF"/>
+                            <constraint firstItem="hnk-sB-BfJ" firstAttribute="top" secondItem="Ptn-xd-VvS" secondAttribute="topMargin" id="VUT-et-Zo4"/>
+                            <constraint firstItem="hnk-sB-BfJ" firstAttribute="leading" secondItem="Ptn-xd-VvS" secondAttribute="leadingMargin" id="auw-88-q9s"/>
+                            <constraint firstItem="8li-UE-NLN" firstAttribute="top" secondItem="hnk-sB-BfJ" secondAttribute="bottom" id="xoT-FI-4Dl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNk-Go-BOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jyI-3p-iGu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1393" y="145"/>
+        </scene>
+        <!--OCR Controller-->
+        <scene sceneID="Nw8-KI-FrI">
+            <objects>
+                <viewController id="GnN-UL-Jvx" userLabel="OCR Controller" customClass="OCRController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R9h-WM-3YX"/>
+                        <viewControllerLayoutGuide type="bottom" id="L0n-1R-l0C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L4n-e2-TFE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-Ra-8KR">
+                                <rect key="frame" x="110" y="448" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9w2-E3-xN9"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="cameraB"/>
+                                <connections>
+                                    <action selector="presentImagePickerController:" destination="GnN-UL-Jvx" eventType="touchUpInside" id="ank-IU-Ukp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1FF-uZ-MCm">
+                                <rect key="frame" x="16.5" y="170.5" width="288" height="227"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na1-7J-8bQ">
+                                <rect key="frame" x="16" y="18.5" width="288" height="113.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Translated Text goes here">
+                                        <attributes>
+                                            <color key="NSColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Futura-CondensedMedium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fJI-Ra-8KR" firstAttribute="centerX" secondItem="L4n-e2-TFE" secondAttribute="centerX" id="4r5-Bk-Lkm"/>
+                            <constraint firstItem="L0n-1R-l0C" firstAttribute="top" secondItem="fJI-Ra-8KR" secondAttribute="bottom" constant="20" id="Gy6-cp-b6N"/>
+                            <constraint firstItem="Na1-7J-8bQ" firstAttribute="height" secondItem="L4n-e2-TFE" secondAttribute="height" multiplier="0.2" id="PAE-kh-nFg"/>
+                            <constraint firstItem="1FF-uZ-MCm" firstAttribute="centerX" secondItem="Na1-7J-8bQ" secondAttribute="centerX" id="SOn-DM-Ye5"/>
+                            <constraint firstItem="Na1-7J-8bQ" firstAttribute="width" secondItem="1FF-uZ-MCm" secondAttribute="width" id="c0O-48-Cty"/>
+                            <constraint firstItem="1FF-uZ-MCm" firstAttribute="centerX" secondItem="L4n-e2-TFE" secondAttribute="centerX" id="hFh-Qa-LN4"/>
+                            <constraint firstItem="1FF-uZ-MCm" firstAttribute="width" secondItem="L4n-e2-TFE" secondAttribute="width" multiplier="0.9" id="iaH-sf-s5H"/>
+                            <constraint firstItem="1FF-uZ-MCm" firstAttribute="centerY" secondItem="L4n-e2-TFE" secondAttribute="centerY" id="lR7-0K-ehr"/>
+                            <constraint firstItem="1FF-uZ-MCm" firstAttribute="height" secondItem="L4n-e2-TFE" secondAttribute="height" multiplier="0.4" id="qId-jD-uf9"/>
+                            <constraint firstItem="1FF-uZ-MCm" firstAttribute="top" secondItem="Na1-7J-8bQ" secondAttribute="bottom" constant="38.5" id="vvh-Q1-Ow9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PAE-kh-nFg"/>
+                                <exclude reference="c0O-48-Cty"/>
+                                <exclude reference="SOn-DM-Ye5"/>
+                                <exclude reference="hFh-Qa-LN4"/>
+                                <exclude reference="iaH-sf-s5H"/>
+                                <exclude reference="lR7-0K-ehr"/>
+                                <exclude reference="qId-jD-uf9"/>
+                                <exclude reference="vvh-Q1-Ow9"/>
+                                <exclude reference="4r5-Bk-Lkm"/>
+                                <exclude reference="Gy6-cp-b6N"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="PAE-kh-nFg"/>
+                                <include reference="c0O-48-Cty"/>
+                                <include reference="SOn-DM-Ye5"/>
+                                <include reference="hFh-Qa-LN4"/>
+                                <include reference="iaH-sf-s5H"/>
+                                <include reference="lR7-0K-ehr"/>
+                                <include reference="qId-jD-uf9"/>
+                                <include reference="vvh-Q1-Ow9"/>
+                                <include reference="4r5-Bk-Lkm"/>
+                                <include reference="Gy6-cp-b6N"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="1FF-uZ-MCm" id="MVL-ks-1mU"/>
+                        <outlet property="translatedTextLabel" destination="Na1-7J-8bQ" id="2vO-mb-BrA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xc4-dn-kdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-624" y="145"/>
+        </scene>
         <!--General Game Scene Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -30,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-417" y="108"/>
+            <point key="canvasLocation" x="131" y="89"/>
         </scene>
         <!--Tourist Site Detail Controller-->
         <scene sceneID="Jyi-mr-lYc">
@@ -654,6 +835,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cameraB" width="100" height="100"/>
         <image name="compassB" width="40" height="40"/>
         <image name="googleMaps40" width="40" height="40"/>
         <image name="informationB" width="40" height="40"/>

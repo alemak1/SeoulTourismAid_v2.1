@@ -64,7 +64,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <RoutingCoverageFileReference
-         identifier = "../../Alphabet Pilot Flies to Seoul/Alphabet Pilot Flies to Seoul/Seoul.geojson">
+         identifier = "../Seoul Tourism Aid/Seoul.geojson">
       </RoutingCoverageFileReference>
    </LaunchAction>
    <ProfileAction

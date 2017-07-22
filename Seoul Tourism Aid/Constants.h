@@ -12,6 +12,13 @@
 #define GOOGLE_API_KEY @"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"
 #define CLIENT_ID @"625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com"
 #define REDIRECT_URL @"com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq"
+#define kGTMAppAuthAuthorizerKey @"GTMAppAuthAuthorizerKey"
+#define kGoogleTranslationAPIScope @"https://www.googleapis.com/auth/cloud-translation"
+#define kGoogleCloudServicesScope @"https://www.googleapis.com/auth/cloud-platform"
+#define kGoogleAuthorizationEndpoint @"https://accounts.google.com/o/oauth2/v2/auth"
+#define kGoogleTokenEndpoint @"https://www.googleapis.com/oauth2/v4/token"
+#define kClientID @"625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com"
+#define kRedirectURL @"com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq:/oauthredirect"
 
 #define DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER @"didRequestLoadTouristSiteDetailController"
 

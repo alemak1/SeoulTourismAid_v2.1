@@ -289,7 +289,7 @@
     [self.optionsTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.menuView addSubview:self.optionsTableView];
     
-    CGRect logoFrame = CGRectMake(menuFrameWidth*0.17, menuFrameHeight*0.05, 150, 150);
+    CGRect logoFrame = CGRectMake(menuFrameWidth*0.17, menuFrameHeight*0.05, menuFrameHeight*0.03, menuFrameHeight*0.03);
     
   
     

@@ -40,7 +40,6 @@
 @implementation TranslationController
 
 @synthesize delegateQueue = _delegateQueue;
-BOOL _authorizatonCompleted = false;
 
 -(NSOperationQueue *)delegateQueue{
     if(_delegateQueue == nil){
@@ -111,29 +110,19 @@ BOOL _authorizatonCompleted = false;
 
 -(void)viewDidAppear:(BOOL)animated{
     
-    if(!_authorizatonCompleted){
-    NSURL *authorizationEndpoint =
-    [NSURL URLWithString:@"https://accounts.google.com/o/oauth2/v2/auth"];
-    NSURL *tokenEndpoint =
-    [NSURL URLWithString:@"https://www.googleapis.com/oauth2/v4/token"];
+    GTMAppAuthFetcherAuthorization* fromKeychainAuthorization =
+    [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
     
-    OIDServiceConfiguration *configuration =
-    [[OIDServiceConfiguration alloc]
-     initWithAuthorizationEndpoint:authorizationEndpoint
-     tokenEndpoint:tokenEndpoint];
+    if(fromKeychainAuthorization){
+        return;
+    } else {
+
+
+        /** Get authentication request **/
     
-    // builds authentication request
-    OIDAuthorizationRequest *request = [[OIDAuthorizationRequest alloc] initWithConfiguration:configuration
-        clientId:@"625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com"
-        scopes:@[@"https://www.googleapis.com/auth/cloud-translation"]
-        redirectURL:[NSURL URLWithString:@"com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq:/oauthredirect"]
-        responseType:OIDResponseTypeCode
-        additionalParameters:nil];
+        OIDAuthorizationRequest *request = [self getOIDAuthorizationRequeset];
     
-    
-    // performs authentication request
-    
-    NSLog(@"Preparing to make authorization request to Google authorization server...");
+    /** Perform authentication request **/
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
@@ -145,22 +134,48 @@ BOOL _authorizatonCompleted = false;
             [[GTMAppAuthFetcherAuthorization alloc] initWithAuthState:authState];
             
             self.authorization = authorization;
-            _authorizatonCompleted = true;
+            
+            /** Serialize authorization in iOS keychain **/
+            
+            [GTMAppAuthFetcherAuthorization saveAuthorization:self.authorization toKeychainForName:kGTMAppAuthAuthorizerKey];
+            
             NSLog(@"Got authorization tokens. Access token: %@",
                   authState.lastTokenResponse.accessToken);
             
-        } else {
-            NSLog(@"Authorization error: %@", [error localizedDescription]);
-            self.authorization = nil;
-        }
+            
+            } else {
+                NSLog(@"Authorization error: %@", [error localizedDescription]);
+                self.authorization = nil;
+            }
         
-    }];
+        }];
     
-    } else {
-        [self performDebugHTTPRequestWithOIDTokenResponse];
     }
+    
 }
 
+-(OIDAuthorizationRequest*)getOIDAuthorizationRequeset{
+    NSURL *authorizationEndpoint = [NSURL URLWithString:kGoogleAuthorizationEndpoint];
+    NSURL *tokenEndpoint = [NSURL URLWithString:kGoogleTokenEndpoint];
+    
+    /** Get service configuration object **/
+    OIDServiceConfiguration *configuration =
+    [[OIDServiceConfiguration alloc]
+     initWithAuthorizationEndpoint:authorizationEndpoint
+     tokenEndpoint:tokenEndpoint];
+    
+    /** Build authentication request **/
+    
+    OIDAuthorizationRequest *request = [[OIDAuthorizationRequest alloc] initWithConfiguration:configuration
+        clientId:kClientID
+        scopes:@[kGoogleTranslationAPIScope,kGoogleCloudServicesScope]
+        redirectURL:[NSURL URLWithString:kRedirectURL]
+        responseType:OIDResponseTypeCode
+        additionalParameters:nil];
+    
+    return request;
+    
+}
 
 -(void)performDebugHTTPRequestWithOIDTokenResponse{
     
@@ -173,7 +188,7 @@ BOOL _authorizatonCompleted = false;
     NSString* sourceText = @"나는 사과가 좋다";
     NSString* targetLanguage = @"en";
     
-   NSDictionary* requestBodyDict = [NSDictionary dictionaryWithObjectsAndKeys:sourceText,@"q",targetLanguage,@"target", nil];
+    NSDictionary* requestBodyDict = [NSDictionary dictionaryWithObjectsAndKeys:sourceText,@"q",targetLanguage,@"target", nil];
     
     NSError* error = nil;
     
@@ -191,6 +206,90 @@ BOOL _authorizatonCompleted = false;
     
     GTMSessionFetcher *fetcher = [fetcherService fetcherWithRequest:request];
     
+    
+    [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
+        // Checks for an error.
+        /**
+         if (error) {
+         // OIDOAuthTokenErrorDomain indicates an issue with the authorization.
+         if ([error.domain isEqual:OIDOAuthTokenErrorDomain]) {
+         self.authorization = nil;
+         NSLog(@"Authorization error during token refresh, clearing state. %@",
+         [error localizedDescription]);
+         // Other errors are assumed transient.
+         } else {
+         NSLog(@"Transient error during token refresh. %@", [error localizedDescription]);
+         }
+         return;
+         }
+         **/
+        
+        // Parses the JSON response.
+        NSError *jsonError = nil;
+        id jsonDictionaryOrArray =
+        [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        
+        // JSON error.
+        if (jsonError) {
+            NSLog(@"JSON decoding error %@", jsonError);
+            return;
+        }
+        
+        // Success response!
+        NSLog(@"Success: %@", jsonDictionaryOrArray);
+    }];
+}
+
+
+-(void)performDebugHTTPRequestForCloudVisionAPI{
+    
+    NSLog(@"Preparing to make API request..");
+    
+    GTMSessionFetcherService *fetcherService = [[GTMSessionFetcherService alloc] init];
+    fetcherService.authorizer = self.authorization;
+    
+    UIImage* jpegImg = [UIImage imageNamed:@"korean_road_sign"];
+    NSData* imgData = UIImageJPEGRepresentation(jpegImg, 1.0);
+    NSString* imgStr = [imgData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
+    NSDictionary* contentDict = @{
+        @"content":imgStr
+        };
+   
+    NSDictionary* featureDict = @{
+            @"type":@"TEXT_DETECTION",
+            @"maxResults":@1
+    };
+    
+    
+    NSDictionary* request1 = @{
+        @"image":contentDict,
+        @"features": @[featureDict]
+                               
+    };
+    
+    NSDictionary* postDict = @{@"requests":@[request1]};
+    
+    NSError* error = nil;
+    
+    NSData* postData = [NSJSONSerialization dataWithJSONObject:postDict options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSURL* url = [NSURL URLWithString:@"https://vision.googleapis.com/v1/images:annotate"];
+    
+    // Creates a fetcher for the API call.
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:postData];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString* authValue = [NSString stringWithFormat:@"Bearer %@",self.authorization.authState.lastTokenResponse.accessToken];
+    
+    [request setValue:authValue forHTTPHeaderField:@"Authorization"];
+    
+    GTMSessionFetcher *fetcher = [fetcherService fetcherWithRequest:request];
+    
+    [fetcher setUseUploadTask:YES];
     
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         // Checks for an error.
@@ -223,90 +322,6 @@ BOOL _authorizatonCompleted = false;
         // Success response!
         NSLog(@"Success: %@", jsonDictionaryOrArray);
     }];
-    /**
-    NSLog(@"Performing debug HTPP Request with sample translation data...");
-    
-    NSString* sourceText = @"나는 사과가 좋다";
-    NSString* targetLanguage = @"en";
-    
-    NSDictionary* requestBodyDict = [NSDictionary dictionaryWithObjectsAndKeys:sourceText,@"q",targetLanguage,@"target", nil];
-    
-    NSError* error = nil;
-    
-    NSData* postData = [NSJSONSerialization dataWithJSONObject:requestBodyDict options:NSJSONWritingPrettyPrinted error:&error];
-    
-    if(error){
-        NSLog(@"Error occurred while serializing POST data %@",[error description]);
-    }
-    
-    NSString* accessToken = self.authState.lastTokenResponse.accessToken;
-    
-    NSString* accessTokenParameter = [NSString stringWithFormat:@"&access_token=%@",accessToken];
-    
-    NSString* modifiedURLString = [self.baseURLString stringByAppendingString:accessTokenParameter];
-    
-    NSURL* modifiedURL = [NSURL URLWithString:modifiedURLString];
-    
-    NSMutableURLRequest* urlRequest = [NSMutableURLRequest requestWithURL:modifiedURL];
-    
-    [urlRequest setHTTPMethod:@"POST"];
-    
-   // NSString* authorizationValue = [NSString stringWithFormat:@"Bearer %@",accessToken];
-    
-    [urlRequest setHTTPBody:postData];
-    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-TYpe"];
-   // [urlRequest setValue:authorizationValue forHTTPHeaderField:@"Authorization"];
-    
-    NSURLSessionConfiguration* sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    
-    NSURLSession* urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration];
-    
-    //NSURLSessionUploadTask* uploadTask = [urlSession uploadTaskWithRequest:urlRequest fromData:postData];
-    
-    
-    NSURLSessionDataTask* dataTask = [urlSession dataTaskWithRequest:urlRequest completionHandler:^(NSData*data,NSURLResponse*response,NSError*error){
-        
-        if(error){
-            NSLog(@"Error occurred getting translation data: %@",[error description]);
-        }
-        
-        if([response isKindOfClass:[NSHTTPURLResponse class]]){
-            
-            NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
-            
-            if(!(httpResponse.statusCode == 200)){
-                
-                NSLog(@"Failed to get requested data with status code: %ld",(long)httpResponse.statusCode);
-                
-                NSLog(@"HTTP Response description: %@",[httpResponse description]);
-                
-                NSLog(@"HTTP Response debug description: %@",[httpResponse debugDescription]);
-            }
-        }
-        
-        if(!data){
-            NSLog(@"Error: no response data available");
-        }
-        
-        NSError* jsonError = nil;
-        
-        NSDictionary* reponseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
-        
-        if(error){
-            NSLog(@"Error occurred converting JSON data to dictionary: %@",[jsonError description]);
-        }
-        
-        NSArray* translations = [[reponseDict valueForKey:@"data"] valueForKey:@"translations"];
-        
-        for (NSDictionary*jsonDict in translations) {
-            NSLog(@"Translated text available: %@",[jsonDict description]);
-        }
-        
-        
-    }];
-    
-    [dataTask resume];
-     **/
 }
 
 
@@ -359,6 +374,92 @@ BOOL _authorizatonCompleted = false;
 - (void)dismissAuthorizationAnimated:(BOOL)animated completion:(void (^)(void))completion{
     
 }
+ 
+ /**
+ NSLog(@"Performing debug HTPP Request with sample translation data...");
+ 
+ NSString* sourceText = @"나는 사과가 좋다";
+ NSString* targetLanguage = @"en";
+ 
+ NSDictionary* requestBodyDict = [NSDictionary dictionaryWithObjectsAndKeys:sourceText,@"q",targetLanguage,@"target", nil];
+ 
+ NSError* error = nil;
+ 
+ NSData* postData = [NSJSONSerialization dataWithJSONObject:requestBodyDict options:NSJSONWritingPrettyPrinted error:&error];
+ 
+ if(error){
+ NSLog(@"Error occurred while serializing POST data %@",[error description]);
+ }
+ 
+ NSString* accessToken = self.authState.lastTokenResponse.accessToken;
+ 
+ NSString* accessTokenParameter = [NSString stringWithFormat:@"&access_token=%@",accessToken];
+ 
+ NSString* modifiedURLString = [self.baseURLString stringByAppendingString:accessTokenParameter];
+ 
+ NSURL* modifiedURL = [NSURL URLWithString:modifiedURLString];
+ 
+ NSMutableURLRequest* urlRequest = [NSMutableURLRequest requestWithURL:modifiedURL];
+ 
+ [urlRequest setHTTPMethod:@"POST"];
+ 
+ // NSString* authorizationValue = [NSString stringWithFormat:@"Bearer %@",accessToken];
+ 
+ [urlRequest setHTTPBody:postData];
+ [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-TYpe"];
+ // [urlRequest setValue:authorizationValue forHTTPHeaderField:@"Authorization"];
+ 
+ NSURLSessionConfiguration* sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+ 
+ NSURLSession* urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+ 
+ //NSURLSessionUploadTask* uploadTask = [urlSession uploadTaskWithRequest:urlRequest fromData:postData];
+ 
+ 
+ NSURLSessionDataTask* dataTask = [urlSession dataTaskWithRequest:urlRequest completionHandler:^(NSData*data,NSURLResponse*response,NSError*error){
+ 
+ if(error){
+ NSLog(@"Error occurred getting translation data: %@",[error description]);
+ }
+ 
+ if([response isKindOfClass:[NSHTTPURLResponse class]]){
+ 
+ NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+ 
+ if(!(httpResponse.statusCode == 200)){
+ 
+ NSLog(@"Failed to get requested data with status code: %ld",(long)httpResponse.statusCode);
+ 
+ NSLog(@"HTTP Response description: %@",[httpResponse description]);
+ 
+ NSLog(@"HTTP Response debug description: %@",[httpResponse debugDescription]);
+ }
+ }
+ 
+ if(!data){
+ NSLog(@"Error: no response data available");
+ }
+ 
+ NSError* jsonError = nil;
+ 
+ NSDictionary* reponseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+ 
+ if(error){
+ NSLog(@"Error occurred converting JSON data to dictionary: %@",[jsonError description]);
+ }
+ 
+ NSArray* translations = [[reponseDict valueForKey:@"data"] valueForKey:@"translations"];
+ 
+ for (NSDictionary*jsonDict in translations) {
+ NSLog(@"Translated text available: %@",[jsonDict description]);
+ }
+ 
+ 
+ }];
+ 
+ [dataTask resume];
+ **/
 
-**/
+
+
 @end

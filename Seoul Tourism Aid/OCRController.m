@@ -8,195 +8,187 @@
 
 #import "OCRController.h"
 #import "Constants.h"
+#import "MediaPickerManagerDelegate.h"
+#import "MediaPickerManager.h"
+
+#import <OIDServiceConfiguration.h>
+#import <OIDAuthorizationService.h>
+#import <OIDAuthState.h>
+#import <OIDAuthorizationRequest.h>
+#import <OIDTokenResponse.h>
+#import <GTMAppAuth.h>
+#import <GTMAppAuthFetcherAuthorization.h>
+#import <GTMSessionFetcherService.h>
 
 
-@interface OCRController () <NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionTaskDelegate,NSURLSessionDownloadDelegate>
+@interface OCRController () <MediaPickerManagerDelegate>
+
+
+
+- (IBAction)presentImagePickerController:(UIButton *)sender;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *translatedTextLabel;
+
+
+
+@property (readonly) MediaPickerManager* mediaPickerManager;
+
+@property (nonatomic,weak)id<MediaPickerManagerDelegate> delegate;
+
+
 
 @end
 
+
 @implementation OCRController
+
+@synthesize delegate;
+@synthesize mediaPickerManager = _mediaPickerManager;
+
 
 -(void)viewDidLoad{
     
-    
-    NSString* urlString = [NSString stringWithFormat:@"https://vision.googleapis.com/v1/images:annotate?key=%@",GOOGLE_API_KEY];
-    
-    NSURL* url = [NSURL URLWithString:urlString];
-    
-    NSMutableURLRequest* urlRequest = [NSMutableURLRequest requestWithURL:url];
-    
-    UIImage* image = [UIImage imageNamed:@"korean_road_sign"];
-    
-    NSData* imageData = UIImagePNGRepresentation(image);
-    
-    NSString* base64encodedString = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
-    
-    NSLog(@"The base64encoded string for the image is: %@",base64encodedString);
-    
-    NSDictionary* requestBodyDict = [self createRequestBodyDictionaryWith:base64encodedString];
-    
-    NSLog(@"The request body for the upload task is: %@",[requestBodyDict description]);
-    
-    NSData* requestBodyJSON = [NSJSONSerialization dataWithJSONObject:requestBodyDict options:NSJSONWritingPrettyPrinted error:nil];
-    
-    [urlRequest setHTTPMethod:@"POST"];
-    
-    NSLog(@"The URL request object has been created: %@",[urlRequest description]);
-    
-    NSURLSessionConfiguration* sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    
-    NSURLSession* urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:nil];
-    
-    NSURLSessionUploadTask* uploadTask = [urlSession uploadTaskWithRequest:urlRequest fromData:requestBodyJSON];
-    
-    
-    
-    [uploadTask resume];
+
     
     
 }
 
 
-
-#pragma mark NSURLSessionDelegate methods
-
-/** Session-level authentication challenge **/
-
--(void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
-    
-}
-
--(void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error{
-    
-    NSLog(@"Session became invalid with error: %@",[error localizedDescription]);
-}
-
-
--(void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session{
+-(void)mediaPickerManager:(MediaPickerManager *)manager didFinishPickingImage:(UIImage *)image{
     
     
-}
-
-#pragma mark NSURLSessionDownloadDelegate
-
--(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location{
+    //Perform API call to Google Vision API
     
-}
+    [self performOCRAnalysisOnJPEGImage:image];
 
-
-
-#pragma mark NSURLSessionDataTask delegate
-
-/** Task-Level authentication challenge **/
-
--(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
     
-    NSURLProtectionSpace* protectionSpace = challenge.protectionSpace;
-
-    NSString* host = protectionSpace.host;
-    NSInteger port = protectionSpace.port;
-    NSString* realm = protectionSpace.realm;
+    //Use core image to crop the bounding box containing the relevant text
     
-    NSLog(@"Attempting to authenticate with server with host name: %@, at port: %d, and at realm: %@",host,port,realm);
     
-    NSURLCredential* proposedCredential = challenge.proposedCredential;
+    [manager dismissImagePickerController:YES withCompletionHandler:^{
     
-    if(proposedCredential){
-        NSLog(@"Credentials are required for initiating session and data task.");
+        //Store reference to image
         
-        NSLog(@"Information about proposed credential: %@",[proposedCredential description]);
+        //Set text display with text in image
         
-        NSArray* certificatesArray = proposedCredential.certificates;
+        [self.imageView setImage:image];
+    
+    }];
+}
 
+- (IBAction)presentImagePickerController:(UIButton *)sender {
+    
+    [self.mediaPickerManager presentImagePickerController:YES];
+}
+
+-(MediaPickerManager *)mediaPickerManager{
+    
+    if(_mediaPickerManager == nil){
         
-        if(!proposedCredential.hasPassword){
-            NSLog(@"Prompt user for password.");
+        _mediaPickerManager = [[MediaPickerManager alloc] initWithPresentingViewController:self];
+        
+        [_mediaPickerManager setDelegate:self];
+    }
+    
+    return _mediaPickerManager;
+    
+}
+
+
+-(void)performOCRAnalysisOnJPEGImage:(UIImage*)image{
+    
+    NSLog(@"Preparing to make API request..");
+    
+    GTMAppAuthFetcherAuthorization* fromKeychainAuthorization =
+    [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
+    
+    GTMSessionFetcherService *fetcherService = [[GTMSessionFetcherService alloc] init];
+    fetcherService.authorizer = fromKeychainAuthorization;
+    
+    /** Convert the captured image into a base64encoded string which can be submitted via the HTTP body to Google Servers **/
+    
+    self.imageView.image = image;
+    [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    
+    NSData* imgData = UIImageJPEGRepresentation(self.imageView.image, 1.0);
+    NSString* imgStr = [imgData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
+    NSDictionary* contentDict = @{
+            @"content":imgStr
+        };
+    
+    NSDictionary* featureDict = @{
+            @"type":@"TEXT_DETECTION",
+            @"maxResults":@1
+        };
+    
+    
+    NSDictionary* request1 = @{
+            @"image":contentDict,
+            @"features": @[featureDict]
+                               
+            };
+    
+    NSDictionary* postDict = @{@"requests":@[request1]};
+    
+    NSError* error = nil;
+    
+    NSData* postData = [NSJSONSerialization dataWithJSONObject:postDict options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSURL* url = [NSURL URLWithString:@"https://vision.googleapis.com/v1/images:annotate"];
+    
+    // Creates a fetcher for the API call.
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    
+    /** Set the HTTP Method as POST **/
+    
+    [request setHTTPMethod:@"POST"];
+    
+    /** Set Content-Type Header to 'application/json' **/
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    
+    /** Set the Request Data in the HTTP Body **/
+    
+    [request setHTTPBody:postData];
+
+    /** Set the access key as the value for 'authorizaiton' in a separate authorization header **/
+    NSString* authValue = [NSString stringWithFormat:@"Bearer %@",fromKeychainAuthorization.authState.lastTokenResponse.accessToken];
+    
+    [request setValue:authValue forHTTPHeaderField:@"Authorization"];
+    
+    
+    /** Initialize fetcher object with an NSURL request **/
+    
+    GTMSessionFetcher *fetcher = [fetcherService fetcherWithRequest:request];
+    
+    [fetcher setUseUploadTask:YES];
+    
+    [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
+        // Checks for an error.
+    
+        
+        
+        // Parses the JSON response.
+        NSError *jsonError = nil;
+        id jsonDictionaryOrArray =
+        [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        
+        // JSON error.
+        if (jsonError) {
+            NSLog(@"JSON decoding error %@", jsonError);
+            return;
         }
-    }
-
-    
-    NSError* authenticationError = challenge.error;
-    
-    if(authenticationError){
-        NSLog(@"Authentication failed due to authentication error: %@",[authenticationError localizedDescription]);
         
-        return;
-    
-    }
-    
-    NSURLResponse* failtureResponse = challenge.failureResponse;
-    
-    if(failtureResponse){
-        
-        NSString* responseURL = failtureResponse.URL.absoluteString;
-        
-        NSLog(@"Authentication failed with NSURL Failure Response info: %@. URL for failureResponse is %@",[failtureResponse description],responseURL);
-        
-        return;
-    }
+        // Success response!
+        NSLog(@"Success: %@", jsonDictionaryOrArray);
+    }];
 
-    
-    
-    
-   
-    /**
-    protectionSpace.receivesCredentialSecurely
-    
-    protectionSpace.serverTrust
-    **/
-    
 }
-
-
--(NSDictionary*)createRequestBodyDictionaryWith:(NSString*)base64encodedImageString{
-    
-    NSDictionary* imageDict = [NSDictionary dictionaryWithObjectsAndKeys:base64encodedImageString,@"content", nil];
-    
-    NSDictionary* featuresDict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"TEXT_DETECTION",@"type",@1,@"maxResults", nil];
-    
-    NSArray* featuresArray = [NSArray arrayWithObjects:featuresDict1, nil];
-    
-    NSDictionary* imageContextDict = [NSDictionary dictionaryWithObjectsAndKeys:@[@"ko"],@"languageHints", nil];
-    
-    NSDictionary* nestedDictionary = [NSDictionary dictionaryWithObjectsAndKeys:imageDict,@"image",featuresArray,@"features",imageContextDict,@"imageContext", nil];
-    
-    NSArray* array = [NSArray arrayWithObjects:nestedDictionary, nil];
-    
-    NSDictionary* requestBodyDictionary = [NSDictionary dictionaryWithObjectsAndKeys:array,@"requests", nil];
-    
-    return requestBodyDictionary;
-}
-
--(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
-    
-    if(error){
-        NSLog(@"Session completed with error: %@",[error description]);
-    }
-}
-
--(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend{
-    
-    NSLog(@"Already sent total bytes: %lld, Expected to send %lld more total bytes",totalBytesSent,totalBytesExpectedToSend);
-}
-
-
--(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics{
-    
-    
-}
-
-
-
--(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask{
-    
-}
-
-
-
--(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
-    
-    NSLog(@"Data received",[data description]);
-}
-
 
 @end

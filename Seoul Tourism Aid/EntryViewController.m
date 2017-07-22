@@ -12,6 +12,20 @@
 
 #import "EntryViewController.h"
 #import "UserLocationManager.h"
+#import "AuthorizationController.h"
+#import "LanguageHelpOptionsController.h"
+
+#import <OIDServiceConfiguration.h>
+#import <OIDAuthorizationService.h>
+#import <OIDAuthState.h>
+#import <OIDAuthorizationRequest.h>
+#import <OIDTokenResponse.h>
+
+#import <GTMAppAuth.h>
+#import <GTMAppAuthFetcherAuthorization.h>
+#import <GTMSessionFetcherService.h>
+
+#import "Constants.h"
 
 
 @interface EntryViewController ()
@@ -23,6 +37,8 @@
 
 
 @end
+
+
 
 @implementation EntryViewController
 
@@ -129,7 +145,8 @@
 
                 break;
             case 5:
-                //Korean Phrases Audio
+                //Language Help Menu Options
+                requestedViewController = [self getLanguageHelpMenuOptions];
                 break;
             case 6:
                 //Korean Product Prices
@@ -163,6 +180,34 @@
 
 -(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection{
     [self.menuComponent resetMenuView:[self traitCollection]];
+}
+
+
+
+-(UIViewController*)getLanguageHelpMenuOptions{
+    
+    GTMAppAuthFetcherAuthorization* fromKeychainAuthorization =
+    [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
+    
+    NSLog(@"Authorization token is %@",fromKeychainAuthorization.authState.lastTokenResponse.accessToken);
+    
+    UIViewController* nextViewController;
+    
+    if(fromKeychainAuthorization == nil){
+        AuthorizationController* authorizationController = [[AuthorizationController alloc] init];
+        
+        nextViewController = authorizationController;
+    } else {
+        
+        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+        
+        
+        nextViewController = [storyboardC instantiateViewControllerWithIdentifier:@"LanguageOptionsController"];
+        
+        NSLog(@"Authorization already obtained...");
+    }
+    
+    return nextViewController;
 }
 
 
