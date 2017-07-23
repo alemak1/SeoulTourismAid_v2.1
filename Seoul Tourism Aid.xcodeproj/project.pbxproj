@@ -84,6 +84,9 @@
 		BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */; };
 		BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */; };
 		BD3DCB031F234839001DB69B /* LanguageRecordingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCB021F234839001DB69B /* LanguageRecordingController.m */; };
+		BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3EA2381F2453B5002B6D29 /* NavigationAidEntryController.m */; };
+		BD3EA23C1F245444002B6D29 /* WarMemorialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3EA23B1F245444002B6D29 /* WarMemorialNavigationController.m */; };
+		BD3EA23F1F2454CF002B6D29 /* WarMemorialAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3EA23E1F2454CF002B6D29 /* WarMemorialAnnotation.m */; };
 		BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */; };
 		BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */; };
 		BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD55E02E1F2270A000CFBE68 /* Seoul.geojson */; };
@@ -241,6 +244,12 @@
 		BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTranslationController.m; sourceTree = "<group>"; };
 		BD3DCB011F234829001DB69B /* LanguageRecordingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageRecordingController.h; sourceTree = "<group>"; };
 		BD3DCB021F234839001DB69B /* LanguageRecordingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageRecordingController.m; sourceTree = "<group>"; };
+		BD3EA2371F2453B5002B6D29 /* NavigationAidEntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationAidEntryController.h; sourceTree = "<group>"; };
+		BD3EA2381F2453B5002B6D29 /* NavigationAidEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationAidEntryController.m; sourceTree = "<group>"; };
+		BD3EA23A1F245444002B6D29 /* WarMemorialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarMemorialNavigationController.h; sourceTree = "<group>"; };
+		BD3EA23B1F245444002B6D29 /* WarMemorialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarMemorialNavigationController.m; sourceTree = "<group>"; };
+		BD3EA23D1F2454CF002B6D29 /* WarMemorialAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarMemorialAnnotation.h; sourceTree = "<group>"; };
+		BD3EA23E1F2454CF002B6D29 /* WarMemorialAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarMemorialAnnotation.m; sourceTree = "<group>"; };
 		BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoredRegionsController.h; sourceTree = "<group>"; };
 		BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredRegionsController.m; sourceTree = "<group>"; };
 		BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegionIdentifiers.plist; sourceTree = "<group>"; };
@@ -583,6 +592,12 @@
 			children = (
 				BD714D691F21FEEB003D4C66 /* DirectionsMenuController.h */,
 				BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */,
+				BD3EA2371F2453B5002B6D29 /* NavigationAidEntryController.h */,
+				BD3EA2381F2453B5002B6D29 /* NavigationAidEntryController.m */,
+				BD3EA23A1F245444002B6D29 /* WarMemorialNavigationController.h */,
+				BD3EA23B1F245444002B6D29 /* WarMemorialNavigationController.m */,
+				BD3EA23D1F2454CF002B6D29 /* WarMemorialAnnotation.h */,
+				BD3EA23E1F2454CF002B6D29 /* WarMemorialAnnotation.m */,
 			);
 			name = NavigationAidControllers;
 			sourceTree = "<group>";
@@ -813,6 +828,7 @@
 				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
 				BD2EDB9B1F1B903E00C86D37 /* UIViewController+HelperMethods.m in Sources */,
 				BD38F2CE1F1B365C00471E16 /* AppDelegate.m in Sources */,
+				BD3EA23F1F2454CF002B6D29 /* WarMemorialAnnotation.m in Sources */,
 				BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */,
 				BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */,
 				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
@@ -820,6 +836,7 @@
 				BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */,
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
 				BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */,
+				BD3EA23C1F245444002B6D29 /* WarMemorialNavigationController.m in Sources */,
 				BD3713FE1F1E457500283629 /* TranslationController.m in Sources */,
 				BD3944CD1F22D6540024F92D /* MediaPickerManager.m in Sources */,
 				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,
@@ -847,6 +864,7 @@
 				BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */,
 				BD38F2C21F1B360400471E16 /* UIColor+HelperMethods.m in Sources */,
 				BD2EDB901F1B8FB400C86D37 /* WeatherConfiguration.m in Sources */,
+				BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */,
 				BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */,
 				BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */,
 			);

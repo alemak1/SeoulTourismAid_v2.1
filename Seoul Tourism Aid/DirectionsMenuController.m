@@ -13,9 +13,9 @@
 //#import "TouristLocationTableViewController.h"
 #import "UserLocationManager.h"
 //#import "MKDirectionsRequest+HelperMethods.h"
-//#import "WarMemorialNavigationController.h"
+#import "WarMemorialNavigationController.h"
 //#import "DestinationCategory.h"
-//#import "NavigationAidEntryController.h"
+#import "NavigationAidEntryController.h"
 //#import "HostelAreaNavigationController.h"
 //#import "TouristLocationTBNavigationController.h"
 #import "CloudKitHelper.h"
@@ -203,8 +203,9 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     
     UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    /**
+    
     switch (self.currentNextViewController) {
+            /**
         case MAPOGU_LOCATION_TABLEVIEW_CONTROLLER:
             nextViewController = [self getNavigationControllerForTouristLocationTableViewControllerWith:MAPOGU];
             break;
@@ -232,6 +233,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case POLYGON_NAVIGATION_CONTROLLER:
             nextViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"PolygonNavigationController"];
             break;
+            **/
         case NAVIGATION_AID_CONTROLLER_WAR_MEMORIAL:
             nextViewController = [self getNavigationAidControllerForArea:WAR_MEMORIAL_NAV_AREA];
             break;
@@ -244,16 +246,18 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case NAVIGATION_AID_CONTROLLER_SEOUL_GRAND_PARK:
             nextViewController = [self getNavigationAidControllerForArea:SEOUL_GRAND_PARK_AREA];
             break;
+            /**
         case TO_AIRPORT_DIRECTIONS_CONTROLLER:
             nextViewController = [self getToAirportDirectionsController];
             break;
         case TO_SEOUL_STATION_DIRECTIONS_CONTROLLER:
             nextViewController = [self getToSeoulStationDirectionsController];
             break;
+             **/
         default:
             break;
     }
-    **/
+
     
     [self showViewController:nextViewController sender:nil];
 }
@@ -382,7 +386,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
 }
 
 
-/**
+
 -(NavigationAidEntryController*) getNavigationAidControllerForArea:(NAVIGATION_AID_AREA)navigationAidArea{
     
     
@@ -404,20 +408,18 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     return nextViewController;
 }
 
-**/
 
-/**
+
+
 -(void) configureNavigationAidController:(NavigationAidEntryController*)nextViewController andForNavigationAidArea:(NAVIGATION_AID_AREA)navigationAidArea{
     
     
     switch (navigationAidArea) {
         case WAR_MEMORIAL_NAV_AREA:
-            nextViewController.annotationsFileSource = @"KoreanWarMemorialCircleRegions";
-            nextViewController.annotationViewImagePath = @"tankA";
-            nextViewController.polygonOverlayFileSources = [NSArray arrayWithObjects:@"WarMemorialMainBuilding",@"WeddingHall", nil];
-            nextViewController.mapCoordinateRegion = [self getWarMemorialMapRegion];
+            [self configureNavigationAidControlllerForKoreanWarMemorialSettings:nextViewController];
             break;
         case WORLD_CUP_STADIUM_NAV_AREA:
+            [self configureNavigationAidControllerForWorldCupParkSettings:nextViewController];
             break;
         case SEOUL_TOWER_NAV_AREA:
             break;
@@ -431,46 +433,9 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     }
     
 }
-**/
 
-/**
--(void)configureNavigationAidControllerForSeoulGrandParkSettings:(NavigationAidEntryController*)nextViewController{
-    
-    nextViewController.navigationRegionName = @"SeoulGrandPark";
-    nextViewController.annotationsFileSource = @"SeoulGrandParkRegions";
-    nextViewController.annotationViewImagePath = @"zooCageA";
-    nextViewController.polygonOverlayFileSources = [NSArray arrayWithObjects:@"SeoulGrandParkArea", nil];
-    nextViewController.mapCoordinateRegion = [self getSeoulGrandParkMapRegion];
-}
 
-**/
 
--(MKCoordinateRegion)getSeoulGrandParkMapRegion{
-    
-    
-    CLLocationCoordinate2D seoulGrandParkEntrance = CLLocationCoordinate2DMake(37.4294604,127.0124504);
-
-    MKCoordinateRegion warMemorialRegion = MKCoordinateRegionMake(seoulGrandParkEntrance, MKCoordinateSpanMake(0.02, 0.02));
-    
-    return warMemorialRegion;
-}
-
--(MKCoordinateRegion)getWarMemorialMapRegion{
-    
-    CLLocationCoordinate2D lowerRight = CLLocationCoordinate2DMake(37.5348, 126.9788);
-    CLLocationCoordinate2D upperRight = CLLocationCoordinate2DMake(37.5380, 126.9788);
-    CLLocationCoordinate2D upperLeft = CLLocationCoordinate2DMake(37.5380, 126.9755);
-    
-    CLLocationCoordinate2D warMemorialMainEntrance = CLLocationCoordinate2DMake(37.5365, 126.9772);
-    
-    CLLocationDegrees latDifference = fabs(upperRight.latitude - lowerRight.latitude);
-    CLLocationDegrees longDifference = fabs(upperRight.longitude - upperLeft.longitude);
-    
-    MKCoordinateSpan warMemorialSpan = MKCoordinateSpanMake(latDifference, longDifference);
-    MKCoordinateRegion warMemorialRegion = MKCoordinateRegionMake(warMemorialMainEntrance, warMemorialSpan);
-    
-    return warMemorialRegion;
-}
 /**
 
 -(LocationSearchController*)getLocationSearchController{
@@ -597,6 +562,97 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
 {
 }
 
+
+-(void) configureNavigationAidControllerForWorldCupParkSettings:(NavigationAidEntryController*)nextViewController{
+    
+    nextViewController.navigationRegionName = @"WorldCupStadium";
+    nextViewController.annotationsFileSource = @"";
+    nextViewController.annotationViewImagePath = @"streetStandA";
+    nextViewController.polygonOverlayFileSources = [NSArray arrayWithObjects:@"",@"", nil];
+    nextViewController.mapCoordinateRegion = [self getWorldCupStadiumMapRegion];
+    
+}
+
+
+-(MKCoordinateRegion)getWorldCupStadiumMapRegion{
+    
+    CLLocationCoordinate2D lowerRight = CLLocationCoordinate2DMake(37.5665962,126.8971703);
+    CLLocationCoordinate2D upperRight = CLLocationCoordinate2DMake(37.5696912,126.8972773);
+    CLLocationCoordinate2D upperLeft = CLLocationCoordinate2DMake(37.5698362,126.8933823);
+    
+    CLLocationCoordinate2D warMemorialMainEntrance = CLLocationCoordinate2DMake(37.568263,126.8950887);
+    
+    CLLocationDegrees latDifference = fabs(upperRight.latitude - lowerRight.latitude);
+    CLLocationDegrees longDifference = fabs(upperRight.longitude - upperLeft.longitude);
+    
+    MKCoordinateSpan warMemorialSpan = MKCoordinateSpanMake(latDifference, longDifference);
+    MKCoordinateRegion warMemorialRegion = MKCoordinateRegionMake(warMemorialMainEntrance, warMemorialSpan);
+    
+    return warMemorialRegion;
+}
+
+
+
+#pragma mark ******* HELPER FUNCTIONS FOR CONFIGURING KOREAN WAR MEMORIAL NAVIGATION AID
+
+-(void) configureNavigationAidControlllerForKoreanWarMemorialSettings: (NavigationAidEntryController*)nextViewController{
+    
+    nextViewController.navigationRegionName = @"KoreanWarMemorial";
+    nextViewController.annotationsFileSource = @"KoreanWarMemorialCircleRegions";
+    nextViewController.annotationViewImagePath = @"tankA";
+    nextViewController.polygonOverlayFileSources = [NSArray arrayWithObjects:@"WarMemorialMainBuilding",@"WeddingHall", nil];
+    nextViewController.mapCoordinateRegion = [self getWarMemorialMapRegion];
+    
+}
+
+
+-(MKCoordinateRegion)getWarMemorialMapRegion{
+    
+    CLLocationCoordinate2D lowerRight = CLLocationCoordinate2DMake(37.5348, 126.9788);
+    CLLocationCoordinate2D upperRight = CLLocationCoordinate2DMake(37.5380, 126.9788);
+    CLLocationCoordinate2D upperLeft = CLLocationCoordinate2DMake(37.5380, 126.9755);
+    
+    CLLocationCoordinate2D warMemorialMainEntrance = CLLocationCoordinate2DMake(37.5365, 126.9772);
+    
+    CLLocationDegrees latDifference = fabs(upperRight.latitude - lowerRight.latitude);
+    CLLocationDegrees longDifference = fabs(upperRight.longitude - upperLeft.longitude);
+    
+    MKCoordinateSpan warMemorialSpan = MKCoordinateSpanMake(latDifference, longDifference);
+    MKCoordinateRegion warMemorialRegion = MKCoordinateRegionMake(warMemorialMainEntrance, warMemorialSpan);
+    
+    return warMemorialRegion;
+}
+
+#pragma mark ******* HELPER FUNCTIONS FOR CONFIGURING SEOUL GRAND PARK NAVIGATION AID
+
+-(void)configureNavigationAidControllerForSeoulGrandParkSettings:(NavigationAidEntryController*)nextViewController{
+    
+    /** navigationRegionName is the searchable query parameter that specifies the navigation region for which annotations will be downloaded from CloudKit and is used to creat the NSPredicate object that is passed to the CKQuery used to download the annotations **/
+    
+    nextViewController.navigationRegionName = @"SeoulGrandPark";
+    
+    nextViewController.annotationsFileSource = @"SeoulGrandParkRegions";
+    
+    /** The annotation view image used to display annotations on the map view **/
+    
+    nextViewController.annotationViewImagePath = @"zooCageA";
+    
+    nextViewController.polygonOverlayFileSources = [NSArray arrayWithObjects:@"SeoulGrandParkArea", nil];
+    
+    nextViewController.mapCoordinateRegion = [self getSeoulGrandParkMapRegion];
+}
+
+
+
+-(MKCoordinateRegion)getSeoulGrandParkMapRegion{
+    
+    
+    CLLocationCoordinate2D seoulGrandParkEntrance = CLLocationCoordinate2DMake(37.4294604,127.0124504);
+    
+    MKCoordinateRegion warMemorialRegion = MKCoordinateRegionMake(seoulGrandParkEntrance, MKCoordinateSpanMake(0.02, 0.04));
+    
+    return warMemorialRegion;
+}
 
 
 @end

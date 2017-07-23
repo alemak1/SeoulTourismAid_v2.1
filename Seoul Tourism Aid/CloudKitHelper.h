@@ -11,8 +11,8 @@
 
 #import <CloudKit/CloudKit.h>
 #import "TouristSiteConfiguration.h"
-//#import "WarMemorialAnnotation.h"
-//#import "WarMemorialNavigationController.h"
+#import "WarMemorialAnnotation.h"
+#import "WarMemorialNavigationController.h"
 
 @interface CloudKitHelper : NSObject
 
@@ -27,10 +27,9 @@
 
 -(void)performLoopQueryWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler;
 
-/**
 -(void)executeQueryOperationOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName forWarMemorialNavigationController:(WarMemorialNavigationController*)navigationController;
 
-
+/**
 -(void)executeQueryOperationOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName andWithCompletionHandler:(void(^)(NSMutableArray<WarMemorialAnnotation*>*results))completion;
 
 

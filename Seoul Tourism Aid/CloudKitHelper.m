@@ -7,7 +7,7 @@
 //
 
 #import "CloudKitHelper.h"
-
+#import "WarMemorialNavigationController.h"
 
 @interface CloudKitHelper ()
 
@@ -250,22 +250,23 @@ NSOperationQueue* _dbOperationQueue;
     
     return _dbOperationQueue;
 }
-/**
+
 
 -(void)executeQueryOperationOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName forWarMemorialNavigationController:(__weak WarMemorialNavigationController*)navigationController{
     
     NSLog(@"Preparing to perform query on CloudKit public database...");
     
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"navigationRegionName == %@",navigationRegionName];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"navigationArea == %@",navigationRegionName];
     
     NSLog(@"Predicate initialized. Initializing query...");
     
-    CKQuery* query = [[CKQuery alloc] initWithRecordType:@"NavigationAidSite" predicate:predicate];
+    CKQuery* query = [[CKQuery alloc] initWithRecordType:@"AbbreviatedAnnotation" predicate:predicate];
+    
     
     CKQueryOperation* queryOperation = [[CKQueryOperation alloc] initWithQuery:query];
     
     __block int progressCount = 0;
-    __block int totalRecords = 30; //TODO: Depends on the recordType, can be preset based on the string identifier for the record type
+    __block int totalRecords = 35; //Depends on the RecordType, current number is arbitrary
     
     
     NSMutableArray* annotationsArray = [[NSMutableArray alloc] init];
@@ -279,12 +280,19 @@ NSOperationQueue* _dbOperationQueue;
     
     [queryOperation setRecordFetchedBlock:^(CKRecord*record){
         
+        NSLog(@"Initializing an annotation from a CKRecord...");
+        
         WarMemorialAnnotation* annotation = [[WarMemorialAnnotation alloc] initWithCKRecord:record];
+        
         [annotationsArray addObject:annotation];
+        
+        NSLog(@"Updating the progress count...");
+        
         progressCount++;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
+            NSLog(@"Preparing to update the progress view of the navigation controller");
             
             [navigationController updateProgressViewWithProgress:(CGFloat)progressCount/(CGFloat)totalRecords];
                     
@@ -303,7 +311,7 @@ NSOperationQueue* _dbOperationQueue;
     
         NSLog(@"Annotations array results are %@",[annotationsArray debugDescription]);
         
-        
+        /** If the annotations array is empty upon completing the CKOperation, perhaps due to a timeout or a bad connection, then the annotations array (i.e. data source) for the WarMemorailNavigation aid controller can still be obtained from a back-up plist **/
         
         if(annotationsArray == nil){
             NSLog(@"Error: No results obtained from record fetching.");
@@ -311,17 +319,27 @@ NSOperationQueue* _dbOperationQueue;
             return;
         }
         
+      
         
-        if(annotationsArray.count < totalRecords*0.70){
-            
-            [navigationController loadWarMemorialAnnotationsArrayFromPlist];
-            return;
-        }
+        /** Load the downloaded annotations array into the NavigationController **/
+        
+        NSLog(@"Checking the downloaded annotations...");
         
         navigationController.annotationStore = annotationsArray;
         
+        for (WarMemorialAnnotation*annotation in annotationsArray) {
+            NSLog(@"Annotation Information: %@",[annotation description]);
+        }
+        
+        /** Load the annotations from the annotation store into the MapView **/
+        
+        [navigationController loadAnnotations];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            [navigationController updateUserInterfaceOnMainQueue];
+            
+            NSLog(@"Preparing to update the WarMemorialNavigationController on the main queue");
+            
+            [navigationController updateUserInterfaceUponDownloadCompletion];
 
         });
         
@@ -330,6 +348,7 @@ NSOperationQueue* _dbOperationQueue;
     [self.publicDB addOperation:queryOperation];
 }
 
+/**
 -(void)performQueryOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName andWithCompletionHandler: (void(^)(NSArray<WarMemorialAnnotation*>*results,NSError*error))completion{
     
     

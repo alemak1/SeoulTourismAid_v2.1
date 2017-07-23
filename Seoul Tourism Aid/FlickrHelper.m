@@ -9,7 +9,7 @@
 
 #import "FlickrHelper.h"
 #import "FlickrSearchResults.h"
-
+#import "Constants.h"
 
 @interface FlickrHelper () <NSURLSessionDelegate,NSURLSessionTaskDelegate,NSURLSessionDataDelegate,NSURLSessionDownloadDelegate>
 
@@ -241,12 +241,11 @@ NSString* backgroundSessionIdentifier = @"backgroundSessionForFlickr";
 }
 
 -(NSString *)flickrAPI{
-    
-    return @"ede81da6aec653f7189e27b9f02f9d63";
+    return FLICKR_COMMERCIAL_API;
 }
 
 -(NSString *)flickrSecretCode{
-    return @"18857fc39870009e";
+    return FLICKR_SECRET_CODE;
 }
 
 -(NSURL*)getFlickrSearchURLForSearchTerm:(NSString*)searchTerm{

@@ -44,5 +44,6 @@
 
 
 #define DARK_SKY_API @"ee1cc0493ff35cc8dc97394f1fcb0348"
-
+#define FLICKR_COMMERCIAL_API @"38e3f5d1484cdcbebce6a46e830eb4d6"
+#define FLICKR_SECRET_CODE @"2572cb568f28239d"
 #endif /* Constants_h */

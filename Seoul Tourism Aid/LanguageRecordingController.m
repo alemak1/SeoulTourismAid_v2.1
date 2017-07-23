@@ -252,7 +252,7 @@ CGFloat _recordingSampleRate = 44100.0;
             @"encoding":@"LINEAR16",
             @"sampleRateHertz":[NSNumber numberWithFloat:16000],
             @"languageCode":@"en-US",
-            @"maxAlternatives":@5
+            @"maxAlternatives":@1
                 },
         @"audio":@{
                @"content":audioStr

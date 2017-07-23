@@ -24,41 +24,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hnk-sB-BfJ">
-                                <rect key="frame" x="56" y="40" width="263" height="597"/>
+                                <rect key="frame" x="93.5" y="0.0" width="188" height="667"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRw-qc-PtQ" userLabel="translateTextButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="263" height="110.5"/>
-                                        <state key="normal" backgroundImage="recorder50"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRw-qc-PtQ" userLabel="translateTextButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="123.5"/>
+                                        <state key="normal" image="recorder50"/>
                                         <connections>
                                             <segue destination="3Zh-aX-7TC" kind="show" id="l7w-vS-ux2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-cN-T1o">
-                                        <rect key="frame" x="0.0" y="110.5" width="263" height="64"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Translate Typed Message to Korean ">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="14" name="Futura-CondensedMedium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <segue destination="SnO-BV-04X" kind="show" id="fyq-d2-Un3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hm0-he-Xte" userLabel="translateRecordingButton">
-                                        <rect key="frame" x="0.0" y="174.5" width="263" height="110"/>
-                                        <state key="normal" backgroundImage="keyboard50"/>
-                                        <connections>
-                                            <segue destination="SnO-BV-04X" kind="show" id="eDd-op-Fzy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWO-u3-Exj">
-                                        <rect key="frame" x="0.0" y="284.5" width="263" height="64"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWO-u3-Exj">
+                                        <rect key="frame" x="0.0" y="123.5" width="188" height="71.5"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Translate Recorded Text to Korean">
@@ -74,15 +50,39 @@
                                             <segue destination="3Zh-aX-7TC" kind="show" id="dJl-MJ-D81"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtI-CN-G2G" userLabel="translatePictureButton">
-                                        <rect key="frame" x="0.0" y="348.5" width="263" height="110.5"/>
-                                        <state key="normal" backgroundImage="cameraA50"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hm0-he-Xte" userLabel="translateRecordingButton">
+                                        <rect key="frame" x="0.0" y="195" width="188" height="123"/>
+                                        <state key="normal" image="keyboard50"/>
+                                        <connections>
+                                            <segue destination="SnO-BV-04X" kind="show" id="eDd-op-Fzy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-cN-T1o">
+                                        <rect key="frame" x="0.0" y="318" width="188" height="71.5"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Translate Typed Message to Korean ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="14" name="Futura-CondensedMedium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="SnO-BV-04X" kind="show" id="fyq-d2-Un3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtI-CN-G2G" userLabel="translatePictureButton">
+                                        <rect key="frame" x="0.0" y="389.5" width="188" height="123.5"/>
+                                        <state key="normal" image="cameraA50"/>
                                         <connections>
                                             <segue destination="GnN-UL-Jvx" kind="show" id="FhX-Wr-y1d"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-02-LXh">
-                                        <rect key="frame" x="0.0" y="459" width="263" height="64"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-02-LXh">
+                                        <rect key="frame" x="0.0" y="513" width="188" height="71.5"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Translate Korean Text From Image/Picture">
@@ -99,7 +99,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NO7-nH-mqo">
-                                        <rect key="frame" x="0.0" y="523" width="263" height="74"/>
+                                        <rect key="frame" x="0.0" y="584.5" width="188" height="82.5"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to Main Menu">
@@ -120,17 +120,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="hnk-sB-BfJ" secondAttribute="trailing" constant="40" id="9Vc-Z1-LRF"/>
-                            <constraint firstItem="hnk-sB-BfJ" firstAttribute="top" secondItem="Ptn-xd-VvS" secondAttribute="topMargin" constant="40" id="VUT-et-Zo4"/>
-                            <constraint firstItem="hnk-sB-BfJ" firstAttribute="leading" secondItem="Ptn-xd-VvS" secondAttribute="leadingMargin" constant="40" id="auw-88-q9s"/>
-                            <constraint firstItem="8li-UE-NLN" firstAttribute="top" secondItem="hnk-sB-BfJ" secondAttribute="bottom" constant="30" id="xoT-FI-4Dl"/>
+                            <constraint firstItem="hnk-sB-BfJ" firstAttribute="height" secondItem="Ptn-xd-VvS" secondAttribute="height" id="OHj-M1-gJI"/>
+                            <constraint firstItem="hnk-sB-BfJ" firstAttribute="centerY" secondItem="Ptn-xd-VvS" secondAttribute="centerY" id="X6k-xP-X8k"/>
+                            <constraint firstItem="hnk-sB-BfJ" firstAttribute="centerX" secondItem="Ptn-xd-VvS" secondAttribute="centerX" id="YNr-ra-ukf"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNk-Go-BOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jyI-3p-iGu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1878" y="520"/>
+            <point key="canvasLocation" x="-1420" y="961"/>
         </scene>
         <!--Language Recording Controller-->
         <scene sceneID="sow-VM-6rb">
@@ -155,8 +154,8 @@
                                     <action selector="startRecording:" destination="3Zh-aX-7TC" eventType="touchUpInside" id="GTR-61-emB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hg3-tm-gUU" userLabel="returnToMenu">
-                                <rect key="frame" x="237" y="28" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hg3-tm-gUU" userLabel="returnToMenu">
+                                <rect key="frame" x="290" y="28" width="48" height="48"/>
                                 <state key="normal" backgroundImage="flatDark32"/>
                                 <connections>
                                     <segue destination="sIb-QM-sEI" kind="unwind" unwindAction="unwindToLanguageHelpOptions:" id="guM-5E-O2C"/>
@@ -337,10 +336,14 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ogi-fp-viY">
+                                <rect key="frame" x="177.5" y="403.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6I0-Av-qoi" firstAttribute="centerY" secondItem="yvk-hd-mOk" secondAttribute="centerY" id="0tz-ui-Qsu"/>
+                            <constraint firstItem="ogi-fp-viY" firstAttribute="centerY" secondItem="ck1-07-Q8R" secondAttribute="centerY" constant="80" id="4Yb-Iv-MxL"/>
                             <constraint firstItem="I8m-zg-D3Y" firstAttribute="top" secondItem="6I0-Av-qoi" secondAttribute="bottom" constant="19.5" id="5uM-aY-0Rt"/>
                             <constraint firstItem="mwx-UH-ORb" firstAttribute="width" secondItem="ck1-07-Q8R" secondAttribute="width" multiplier="0.9" id="83v-l1-Y6W"/>
                             <constraint firstItem="I8m-zg-D3Y" firstAttribute="height" secondItem="ck1-07-Q8R" secondAttribute="height" multiplier="0.2" id="CSD-7p-9qd"/>
@@ -353,6 +356,7 @@
                             <constraint firstItem="mwx-UH-ORb" firstAttribute="width" secondItem="I8m-zg-D3Y" secondAttribute="width" id="WII-yc-Eih"/>
                             <constraint firstItem="lQd-Po-T4E" firstAttribute="top" secondItem="yvk-hd-mOk" secondAttribute="bottom" constant="20" id="XXU-ct-BVg"/>
                             <constraint firstItem="mwx-UH-ORb" firstAttribute="height" secondItem="ck1-07-Q8R" secondAttribute="height" multiplier="0.42" id="aKN-Cc-0yM"/>
+                            <constraint firstItem="ogi-fp-viY" firstAttribute="centerX" secondItem="ck1-07-Q8R" secondAttribute="centerX" id="gw1-3q-mB7"/>
                             <constraint firstItem="yvk-hd-mOk" firstAttribute="leading" secondItem="6I0-Av-qoi" secondAttribute="trailing" constant="23" id="hRA-Bg-efk"/>
                             <constraint firstItem="6I0-Av-qoi" firstAttribute="centerX" secondItem="ck1-07-Q8R" secondAttribute="centerX" id="mbY-VC-99U"/>
                             <constraint firstItem="I8m-zg-D3Y" firstAttribute="width" secondItem="ck1-07-Q8R" secondAttribute="width" multiplier="0.9" id="rJs-4L-IMT"/>
@@ -408,6 +412,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="ogi-fp-viY" id="nVb-X1-kPT"/>
                         <outlet property="sourceLanguageTextView" destination="I8m-zg-D3Y" id="Gse-ot-OCr"/>
                         <outlet property="translatedTextLabel" destination="mwx-UH-ORb" id="Ho9-d7-d2G"/>
                     </connections>
@@ -415,7 +420,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvx-Pg-Of2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cON-J8-w38" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-831" y="520"/>
+            <point key="canvasLocation" x="-830" y="1155"/>
         </scene>
         <!--OCR Controller-->
         <scene sceneID="Nw8-KI-FrI">
@@ -515,7 +520,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xc4-dn-kdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="mwc-IU-nPi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="970"/>
+            <point key="canvasLocation" x="-583" y="1266"/>
         </scene>
         <!--General Game Scene Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -769,6 +774,11 @@
                                 <exclude reference="bGw-Rk-wMa"/>
                                 <exclude reference="gtE-e7-uz0"/>
                                 <exclude reference="l52-zR-dwg"/>
+                                <exclude reference="1Hd-9J-XDu"/>
+                                <exclude reference="1eA-8l-oKz"/>
+                                <exclude reference="HGw-fH-VOI"/>
+                                <exclude reference="QKb-vu-KCg"/>
+                                <exclude reference="ucY-yH-nKq"/>
                                 <exclude reference="ECk-8h-eW7"/>
                                 <exclude reference="N9x-vs-Sdr"/>
                                 <exclude reference="RHt-GB-81e"/>
@@ -776,11 +786,6 @@
                                 <exclude reference="RoI-j5-O5m"/>
                                 <exclude reference="agj-bD-6m4"/>
                                 <exclude reference="l4y-cs-5di"/>
-                                <exclude reference="1Hd-9J-XDu"/>
-                                <exclude reference="1eA-8l-oKz"/>
-                                <exclude reference="HGw-fH-VOI"/>
-                                <exclude reference="QKb-vu-KCg"/>
-                                <exclude reference="ucY-yH-nKq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -810,12 +815,12 @@
                                 <include reference="SDf-Ib-iaR"/>
                                 <include reference="Go5-JU-i6H"/>
                                 <include reference="bGw-Rk-wMa"/>
-                                <include reference="N9x-vs-Sdr"/>
-                                <exclude reference="agj-bD-6m4"/>
-                                <include reference="l4y-cs-5di"/>
                                 <include reference="1eA-8l-oKz"/>
                                 <include reference="HGw-fH-VOI"/>
                                 <include reference="QKb-vu-KCg"/>
+                                <include reference="N9x-vs-Sdr"/>
+                                <exclude reference="agj-bD-6m4"/>
+                                <include reference="l4y-cs-5di"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -850,12 +855,12 @@
                                 <include reference="rmU-Xm-gj4"/>
                                 <include reference="gtE-e7-uz0"/>
                                 <include reference="l52-zR-dwg"/>
+                                <include reference="1Hd-9J-XDu"/>
+                                <include reference="ucY-yH-nKq"/>
                                 <include reference="ECk-8h-eW7"/>
                                 <include reference="RHt-GB-81e"/>
                                 <include reference="Rhg-2k-k0e"/>
                                 <include reference="RoI-j5-O5m"/>
-                                <include reference="1Hd-9J-XDu"/>
-                                <include reference="ucY-yH-nKq"/>
                             </mask>
                         </variation>
                     </view>
@@ -921,7 +926,7 @@
         <scene sceneID="gfM-oP-LoU">
             <objects>
                 <collectionViewController storyboardIdentifier="TouristSiteCVC" id="4M4-dP-rUK" customClass="TouristSiteCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="jAY-hf-MwJ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jAY-hf-MwJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1043,7 +1048,7 @@
             <objects>
                 <navigationController storyboardIdentifier="TouristSiteCSCNavController" automaticallyAdjustsScrollViewInsets="NO" id="uqJ-65-02s" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Gfp-eO-hiZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gfp-eO-hiZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

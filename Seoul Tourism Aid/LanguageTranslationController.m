@@ -31,6 +31,7 @@
 
 - (IBAction)translateToKorean:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -39,6 +40,7 @@
 
 -(void)viewDidLoad{
     
+    [self.activityIndicator setHidden:YES];
     
     
     
@@ -119,6 +121,9 @@
         dispatch_async(dispatch_get_main_queue(), ^{
         
             [self.translatedTextLabel setText:translatedText];
+            [self.activityIndicator stopAnimating];
+            [self.activityIndicator setHidden:YES];
+            [self.translatedTextLabel setHidden:NO];
             
         });
         
@@ -150,6 +155,12 @@
     NSLog(@"Source text is: %@",sourceText);
     
     [self performTranslationsOnSourceText:sourceText andTargetLanguage:@"ko"];
+    
+    [self.sourceLanguageTextView resignFirstResponder];
+    
+    [self.activityIndicator setHidden:NO];
+    [self.activityIndicator startAnimating];
+    [self.translatedTextLabel setHidden:YES];
 }
 
 -(NSString*)parseJSONResponseForTranslatedText:(NSDictionary*)jsonDict{
