@@ -12,6 +12,7 @@
 #import "GoogleURLGenerator.h"
 #import "Constants.h"
 
+
 @implementation GoogleURLGenerator
 
 +(NSURL*)getURLFromOrigin:(WayPointConfiguration*)origin toDestination:(WayPointConfiguration*)destination{
@@ -20,7 +21,7 @@
     NSString* originQueryParameter = [origin getFormattedQueryParameter];
     NSString* destinationQueryParameter = [destination getFormattedQueryParameter];
     
-     NSString* urlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&api=%@",originQueryParameter,destinationQueryParameter,GOOGLE_API_KEY];
+     NSString* urlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@",originQueryParameter,destinationQueryParameter];
     
     
     return [NSURL URLWithString:urlString];
@@ -47,8 +48,6 @@
     }
     
     
-    modifiedURLString = [modifiedURLString stringByAppendingString:[NSString stringWithFormat:@"&api=%@",GOOGLE_API_KEY]];
-    
 
     return [NSURL URLWithString:modifiedURLString];
 }
@@ -64,7 +63,7 @@
     NSString* destinationString = [destination getFormattedQueryParameter];
     
     
-    NSString* urlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&key=%@",originString,destinationString,GOOGLE_API_KEY];
+    NSString* urlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@",originString,destinationString];
     
     return [NSURL URLWithString:urlString];
     
@@ -93,10 +92,7 @@
         modifiedURLString = [modifiedURLString stringByAppendingString:modifiedQueryParameter];
     }
     
-    
-    modifiedURLString = [modifiedURLString stringByAppendingString:[NSString stringWithFormat:@"&key=%@",GOOGLE_API_KEY]];
-    
-    
+   
     return [NSURL URLWithString:modifiedURLString];
     
     

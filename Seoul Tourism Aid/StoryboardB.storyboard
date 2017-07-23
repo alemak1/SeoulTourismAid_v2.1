@@ -365,7 +365,7 @@
         <scene sceneID="SJ8-Aw-ufK">
             <objects>
                 <collectionViewController id="T9T-gO-8Da" customClass="SeoulFlickSearchController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="P7G-kg-RDP">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="P7G-kg-RDP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1191,7 +1191,7 @@
         <scene sceneID="b4x-Ts-v0A">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductPriceController" id="9vq-uf-f8l" customClass="ProductPriceController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zjb-9f-LgT">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="zjb-9f-LgT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1241,7 +1241,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ProductPriceNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="OV6-BX-VD1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EmK-NH-Y8E">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EmK-NH-Y8E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1258,7 +1258,7 @@
         <scene sceneID="A0U-4M-RDt">
             <objects>
                 <navigationController id="ZDS-Jc-X7h" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TCE-0A-CyV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TCE-0A-CyV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1573,7 +1573,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MonitoredRegionsController" automaticallyAdjustsScrollViewInsets="NO" id="gDO-s1-NmE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dbG-TS-MGf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dbG-TS-MGf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1827,7 +1827,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MonitoredRegionsController_iPad" automaticallyAdjustsScrollViewInsets="NO" id="MJ4-5S-ldC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VPC-Pu-a42">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VPC-Pu-a42">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2194,7 +2194,7 @@
                 <navigationController storyboardIdentifier="WarMemorialNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Rnl-zt-I7I" customClass="NavigationAidEntryController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="z6i-c7-Gcg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DAV-5n-Zk5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DAV-5n-Zk5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2212,7 +2212,7 @@
             <objects>
                 <navigationController storyboardIdentifier="WarMemorialNavigationController_iPad" automaticallyAdjustsScrollViewInsets="NO" id="5Qe-Pi-SFg" customClass="NavigationAidEntryController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWl-lZ-gol">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gWl-lZ-gol">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2230,7 +2230,7 @@
             <objects>
                 <navigationController storyboardIdentifier="TouristLocationTableViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="YiP-ck-ka8" customClass="TouristLocationTBNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sNS-xt-W7P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sNS-xt-W7P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2248,7 +2248,7 @@
             <objects>
                 <navigationController storyboardIdentifier="TouristLocationTableViewNavigationController_iPad" automaticallyAdjustsScrollViewInsets="NO" id="WA1-lo-oWG" customClass="TouristLocationTBNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xKT-fU-O6A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xKT-fU-O6A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2283,7 +2283,7 @@
             <objects>
                 <navigationController storyboardIdentifier="SeoulFlickrSearchController" automaticallyAdjustsScrollViewInsets="NO" id="nWw-ze-fX1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aUv-6g-btU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aUv-6g-btU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

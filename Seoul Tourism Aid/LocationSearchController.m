@@ -11,6 +11,20 @@
 #import "UserLocationManager.h"
 #import "OverlayConfiguration.h"
 
+#import "AuthorizationController.h"
+#import "Constants.h"
+#import "AppDelegate.h"
+
+#import <OIDServiceConfiguration.h>
+#import <OIDAuthorizationService.h>
+#import <OIDAuthState.h>
+#import <OIDAuthorizationRequest.h>
+#import <OIDTokenResponse.h>
+
+#import <GTMAppAuth.h>
+#import <GTMAppAuthFetcherAuthorization.h>
+#import <GTMSessionFetcherService.h>
+#import "GoogleURLGenerator.h"
 
 
 @interface LocationSearchController ()
@@ -116,6 +130,87 @@
 }
 
 - (IBAction)getDirectionsInGoogleMaps:(UIButton *)sender {
+    
+    if(!self.selectedLocation){
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"No Location Selected" message:@"Select a location on the map to get directions in the Apple Maps App" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alertController addAction:okayAction];
+        
+        [self showViewController:alertController sender:nil];
+        
+        return;
+    }
+    
+    GTMAppAuthFetcherAuthorization* fromKeychainAuthorization =
+    [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
+    
+    if(!fromKeychainAuthorization){
+        AuthorizationController* authorizationController = [[AuthorizationController alloc] init];
+        
+        authorizationController.nextViewController = nil;
+    } else {
+        
+    }
+    
+    GTMSessionFetcherService *fetcherService = [[GTMSessionFetcherService alloc] init];
+    fetcherService.authorizer = fromKeychainAuthorization;
+    
+    WayPointConfiguration* destinationWaypoint = [[WayPointConfiguration alloc] initWithLocation:self.selectedLocation.placemark.location andWithName:@"Selected Destination"];
+    
+     NSURL* url = [GoogleURLGenerator getURLFromUserLocationToDestination:destinationWaypoint];
+    
+    NSLog(@"The url generated for this directions request is: %@",[url absoluteString]);
+    
+    // Create an URL request for the API call.
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    
+    /** Set the HTTP Method as POST **/
+    
+    [request setHTTPMethod:@"GET"];
+    
+    /** Set Content-Type Header to 'application/json' **/
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    
+    /** Set the access key as the value for 'authorizaiton' in a separate authorization header **/
+    NSString* authValue = [NSString stringWithFormat:@"Bearer %@",fromKeychainAuthorization.authState.lastTokenResponse.accessToken];
+    
+    [request setValue:authValue forHTTPHeaderField:@"Authorization"];
+    
+    
+    GTMSessionFetcher *fetcher = [fetcherService fetcherWithRequest:request];
+    
+    
+    [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
+        // Checks for an error.
+        
+        
+        
+        // Parses the JSON response.
+        NSError *jsonError = nil;
+        NSDictionary* jsonDict =
+        [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        
+        // JSON error.
+        if (jsonError) {
+            NSLog(@"JSON decoding error %@", jsonError);
+            return;
+        }
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"Directions JSON data: %@",[data description]);
+        });
+        
+        // Success response!
+        NSLog(@"Success: %@", jsonDict);
+    }];
+    
+
     
 }
 

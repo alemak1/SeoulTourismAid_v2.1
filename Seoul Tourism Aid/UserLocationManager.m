@@ -227,7 +227,10 @@ static UserLocationManager* mySharedLocationManager;
 // A core location error occurred.
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     
-    NSLog(@"didFailWithError: %@", error);
+    NSLog(@"didFailWithError description: %@", [error localizedDescription]);
+    NSLog(@"didFailWithError reason for failure: %@", [error localizedFailureReason]);
+
+    [self startUpdatingLocation];
     
 }
 
@@ -241,9 +244,9 @@ static UserLocationManager* mySharedLocationManager;
         
         _lastUpdatedUserLocation = newLocation;
         
-        /**
+        
          NSLog(@"The newLocation is lat: %f, long: %f",_lastUpdatedUserLocation.coordinate.latitude,_lastUpdatedUserLocation.coordinate.longitude);
-         **/
+        
         
         NSDictionary* userInfoDict = [NSDictionary dictionaryWithObjectsAndKeys:newLocation,@"userLocation", nil];
         
@@ -339,8 +342,6 @@ static UserLocationManager* mySharedLocationManager;
 
 -(CLLocationDistance)getDistanceToRegionCenter:(CLLocationCoordinate2D)regionCenter{
     /** Initialize a MapItem with user's current location **/
-    CLLocationCoordinate2D userLocation = self.lastUpdatedUserLocation.coordinate;
-    
     
     CLLocationDistance distanceBetweenEndpoints = [self.lastUpdatedUserLocation distanceFromLocation:[[CLLocation alloc] initWithLatitude:regionCenter.latitude longitude:regionCenter.longitude]];
     

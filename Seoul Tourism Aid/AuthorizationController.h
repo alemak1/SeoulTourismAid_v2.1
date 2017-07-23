@@ -14,6 +14,7 @@
 
 @interface AuthorizationController : UIViewController
 
+@property UIViewController* nextViewController;
 
 @end
 

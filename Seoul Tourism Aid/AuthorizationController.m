@@ -39,7 +39,11 @@
     [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
     
     if(fromKeychainAuthorization){
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:^{
+        
+            [self.presentingViewController showViewController:self.nextViewController sender:nil];
+        
+        }];
         return;
     } else {
         

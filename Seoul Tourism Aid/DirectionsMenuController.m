@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DirectionsMenuController.h"
-//#import "LocationSearchController.h"
+#import "LocationSearchController.h"
 //#import "ToHostelDirectionsController.h"
 //#import "TouristLocationTableViewController.h"
 #import "UserLocationManager.h"
@@ -93,6 +93,14 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
 
 
 
+-(void)viewDidLoad{
+    CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+    
+    
+    NSLog(@"The last updated user location is at lat: %f, long: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude)
+    ;
+    
+}
 
 #pragma mark UIPICKER VIEW DELEGATE AND DATASOURCE METHODS
 
@@ -215,9 +223,11 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case INSADONG_LOCATION_TABLEVIEW_CONTROLLER:
             nextViewController = [self getNavigationControllerForTouristLocationTableViewControllerWith:INSADONG];
             break;
+             **/
         case LOCATION_SEARCH_CONTROLLER:
             nextViewController = [self getLocationSearchController];
             break;
+            /**
         case MAPOGU_LOCAL_AREA_MAPVIEW:
             nextViewController = [self getLocalAreaAnnotationController:MAPOGU];
             break;
@@ -436,7 +446,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
 
 
 
-/**
+
 
 -(LocationSearchController*)getLocationSearchController{
     
@@ -457,7 +467,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     return nextViewController;
 
 }
-**/
+
 
 /**
 -(ToHostelDirectionsController*)getToAirportDirectionsController{
