@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Basic Phrases</key>
+	<array>
+		<dict>
+			<key>filePath</key>
+			<string>audioFile1</string>
+			<key>originalPhrase</key>
+			<string>I&apos;m lost.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>audioFile2</string>
+			<key>originalPhrase</key>
+			<string>How are you?</string>
+		</dict>
+	</array>
+	<key>Food</key>
+	<array>
+		<dict>
+			<key>filePath</key>
+			<string></string>
+			<key>originalPhrase</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Restaurants</key>
+	<array>
+		<dict>
+			<key>filePath</key>
+			<string></string>
+			<key>originalPhrase</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Miscellaneous</key>
+	<array>
+		<dict>
+			<key>filePath</key>
+			<string></string>
+			<key>originalPhrase</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Transportation</key>
+	<array>
+		<dict>
+			<key>filePath</key>
+			<string></string>
+			<key>originalPhrase</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>
