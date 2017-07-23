@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Seoul Grand Park Area</string>
+	<key>boundary </key>
+	<array>
+		<string>{37.4331702,127.0029923}</string>
+		<string>{37.4325572,127.0049883}</string>
+		<string>{37.4311342,127.0065223}</string>
+		<string>{37.4273132,127.0114363}</string>
+		<string>{37.4344912,127.0210493}</string>
+		<string>{37.4347592,127.0156633}</string>
+		<string>{37.4376092,127.0086683}</string>
+		<string>{37.4394452,127.0059863}</string>
+	</array>
+</dict>
+</plist>

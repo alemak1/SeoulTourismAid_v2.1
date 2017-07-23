@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>boundary</key>
+	<array>
+		<string>{37.5443,126.9541}</string>
+		<string>{37.5443,126.9547}</string>
+		<string>{37.5439,126.9542}</string>
+		<string>{37.5433,126.9547}</string>
+		<string>{37.5421,126.9549}</string>
+		<string>{37.5432,126.9531}</string>
+	</array>
+	<key>name</key>
+	<string>Petraeus Building</string>
+</dict>
+</plist>

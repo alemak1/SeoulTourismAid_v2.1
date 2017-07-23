@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>boundary</key>
+	<array>
+		<string>{37.5365,126.9756}</string>
+		<string>{37.5367,126.9757}</string>
+		<string>{37.5371,126.9757}</string>
+		<string>{37.5372,126.9755}</string>
+		<string>{37.5371,126.9751}</string>
+		<string>{37.5368, 126.9752}</string>
+		<string>{37.5365,126.9752}</string>
+		<string>{37.5365,126.9757}</string>
+	</array>
+	<key>name</key>
+	<string>Museum Wedding Hall</string>
+</dict>
+</plist>

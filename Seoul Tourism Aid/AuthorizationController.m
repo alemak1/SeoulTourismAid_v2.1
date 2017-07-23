@@ -90,8 +90,14 @@
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    [self dismissViewControllerAnimated:YES completion:nil];
+                    [self dismissViewControllerAnimated:YES completion:^{
+                        
+                        [[NSNotificationCenter defaultCenter] postNotificationName:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
 
+                    }];
+                    
+                    
+               
                 });
                 
                 

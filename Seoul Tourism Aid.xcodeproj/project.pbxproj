@@ -34,6 +34,33 @@
 		BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD355AF21F1C3A460000CB55 /* GameObjectList.plist */; };
 		BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF51F1C4A540000CB55 /* GameQuestion.m */; };
 		BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */; };
+		BD3570821F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3570811F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.m */; };
+		BD3570861F24CF2B003BE859 /* ToHostelDirectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3570851F24CF2B003BE859 /* ToHostelDirectionsController.m */; };
+		BD35708C1F24D197003BE859 /* PolygonMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3570891F24D197003BE859 /* PolygonMapController.m */; };
+		BD35708D1F24D197003BE859 /* PolygonSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35708B1F24D197003BE859 /* PolygonSelectionController.m */; };
+		BD3570961F24D1E7003BE859 /* BikeRouteMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3570901F24D1E7003BE859 /* BikeRouteMapController.m */; };
+		BD3570971F24D1E7003BE859 /* BikeRoutePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3570921F24D1E7003BE859 /* BikeRoutePoint.m */; };
+		BD3570981F24D1E7003BE859 /* BikingRoutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3570941F24D1E7003BE859 /* BikingRoutesController.m */; };
+		BD35709B1F24D1F1003BE859 /* BoundaryOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35709A1F24D1F1003BE859 /* BoundaryOverlay.m */; };
+		BD35709E1F24D248003BE859 /* DonatedRelicsExhibit.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD35709D1F24D248003BE859 /* DonatedRelicsExhibit.plist */; };
+		BD3570A01F24D255003BE859 /* Gwanghuamun.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD35709F1F24D255003BE859 /* Gwanghuamun.plist */; };
+		BD3570A51F24D270003BE859 /* KoreanWarExhibitRoom1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570A11F24D270003BE859 /* KoreanWarExhibitRoom1.plist */; };
+		BD3570A61F24D270003BE859 /* KoreanWarExhibitRoom2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570A21F24D270003BE859 /* KoreanWarExhibitRoom2.plist */; };
+		BD3570A71F24D270003BE859 /* KoreanWarExhibitRoom3.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570A31F24D270003BE859 /* KoreanWarExhibitRoom3.plist */; };
+		BD3570A81F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570A41F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist */; };
+		BD3570AA1F24D279003BE859 /* LottoHotel.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570A91F24D279003BE859 /* LottoHotel.plist */; };
+		BD3570AC1F24D283003BE859 /* NationalSecurityPavilionPath.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570AB1F24D283003BE859 /* NationalSecurityPavilionPath.plist */; };
+		BD3570B11F24D293003BE859 /* ParkRoute.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570AD1F24D293003BE859 /* ParkRoute.plist */; };
+		BD3570B21F24D293003BE859 /* path1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570AE1F24D293003BE859 /* path1.plist */; };
+		BD3570B31F24D293003BE859 /* path2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570AF1F24D293003BE859 /* path2.plist */; };
+		BD3570B41F24D293003BE859 /* PetraeusBuilding.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570B01F24D293003BE859 /* PetraeusBuilding.plist */; };
+		BD3570B61F24D2A3003BE859 /* ROKArmedForcesRoom.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570B51F24D2A3003BE859 /* ROKArmedForcesRoom.plist */; };
+		BD3570B91F24D2B6003BE859 /* SeoulGrandParkArea.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570B71F24D2B6003BE859 /* SeoulGrandParkArea.plist */; };
+		BD3570BA1F24D2B6003BE859 /* SeoulGrandParkRegions.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570B81F24D2B6003BE859 /* SeoulGrandParkRegions.plist */; };
+		BD3570BE1F24D2D1003BE859 /* WarHistoryExhibit.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570BB1F24D2D1003BE859 /* WarHistoryExhibit.plist */; };
+		BD3570BF1F24D2D1003BE859 /* WarHistoryExhibit2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570BC1F24D2D1003BE859 /* WarHistoryExhibit2.plist */; };
+		BD3570C01F24D2D1003BE859 /* WarMemorialMainBuilding.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570BD1F24D2D1003BE859 /* WarMemorialMainBuilding.plist */; };
+		BD3570C21F24D2E3003BE859 /* WeddingHall.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570C11F24D2E3003BE859 /* WeddingHall.plist */; };
 		BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */; };
 		BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */; };
 		BD36668A1F20E66400BEBE4E /* WVController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666891F20E66400BEBE4E /* WVController.m */; };
@@ -157,6 +184,43 @@
 		BD355AF51F1C4A540000CB55 /* GameQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameQuestion.m; sourceTree = "<group>"; };
 		BD355AF71F1C50040000CB55 /* GameObjectArchiverKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameObjectArchiverKeys.h; sourceTree = "<group>"; };
 		BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObjectArchiverKeys.m; sourceTree = "<group>"; };
+		BD3570801F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKDirectionsRequest+HelperMethods.h"; sourceTree = "<group>"; };
+		BD3570811F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKDirectionsRequest+HelperMethods.m"; sourceTree = "<group>"; };
+		BD3570831F24CEEE003BE859 /* TransportationMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationMode.h; sourceTree = "<group>"; };
+		BD3570841F24CF2B003BE859 /* ToHostelDirectionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToHostelDirectionsController.h; sourceTree = "<group>"; };
+		BD3570851F24CF2B003BE859 /* ToHostelDirectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToHostelDirectionsController.m; sourceTree = "<group>"; };
+		BD3570871F24CF47003BE859 /* DestinationCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationCategory.h; sourceTree = "<group>"; };
+		BD3570881F24D197003BE859 /* PolygonMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonMapController.h; sourceTree = "<group>"; };
+		BD3570891F24D197003BE859 /* PolygonMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonMapController.m; sourceTree = "<group>"; };
+		BD35708A1F24D197003BE859 /* PolygonSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonSelectionController.h; sourceTree = "<group>"; };
+		BD35708B1F24D197003BE859 /* PolygonSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonSelectionController.m; sourceTree = "<group>"; };
+		BD35708F1F24D1E7003BE859 /* BikeRouteMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeRouteMapController.h; sourceTree = "<group>"; };
+		BD3570901F24D1E7003BE859 /* BikeRouteMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeRouteMapController.m; sourceTree = "<group>"; };
+		BD3570911F24D1E7003BE859 /* BikeRoutePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeRoutePoint.h; sourceTree = "<group>"; };
+		BD3570921F24D1E7003BE859 /* BikeRoutePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeRoutePoint.m; sourceTree = "<group>"; };
+		BD3570931F24D1E7003BE859 /* BikingRoutesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikingRoutesController.h; sourceTree = "<group>"; };
+		BD3570941F24D1E7003BE859 /* BikingRoutesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikingRoutesController.m; sourceTree = "<group>"; };
+		BD3570991F24D1F1003BE859 /* BoundaryOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundaryOverlay.h; sourceTree = "<group>"; };
+		BD35709A1F24D1F1003BE859 /* BoundaryOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundaryOverlay.m; sourceTree = "<group>"; };
+		BD35709D1F24D248003BE859 /* DonatedRelicsExhibit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DonatedRelicsExhibit.plist; sourceTree = "<group>"; };
+		BD35709F1F24D255003BE859 /* Gwanghuamun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Gwanghuamun.plist; sourceTree = "<group>"; };
+		BD3570A11F24D270003BE859 /* KoreanWarExhibitRoom1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KoreanWarExhibitRoom1.plist; sourceTree = "<group>"; };
+		BD3570A21F24D270003BE859 /* KoreanWarExhibitRoom2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KoreanWarExhibitRoom2.plist; sourceTree = "<group>"; };
+		BD3570A31F24D270003BE859 /* KoreanWarExhibitRoom3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KoreanWarExhibitRoom3.plist; sourceTree = "<group>"; };
+		BD3570A41F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KoreanWarMemorialCircleRegions.plist; sourceTree = "<group>"; };
+		BD3570A91F24D279003BE859 /* LottoHotel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LottoHotel.plist; sourceTree = "<group>"; };
+		BD3570AB1F24D283003BE859 /* NationalSecurityPavilionPath.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NationalSecurityPavilionPath.plist; sourceTree = "<group>"; };
+		BD3570AD1F24D293003BE859 /* ParkRoute.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ParkRoute.plist; sourceTree = "<group>"; };
+		BD3570AE1F24D293003BE859 /* path1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = path1.plist; sourceTree = "<group>"; };
+		BD3570AF1F24D293003BE859 /* path2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = path2.plist; sourceTree = "<group>"; };
+		BD3570B01F24D293003BE859 /* PetraeusBuilding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PetraeusBuilding.plist; sourceTree = "<group>"; };
+		BD3570B51F24D2A3003BE859 /* ROKArmedForcesRoom.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ROKArmedForcesRoom.plist; sourceTree = "<group>"; };
+		BD3570B71F24D2B6003BE859 /* SeoulGrandParkArea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SeoulGrandParkArea.plist; sourceTree = "<group>"; };
+		BD3570B81F24D2B6003BE859 /* SeoulGrandParkRegions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SeoulGrandParkRegions.plist; sourceTree = "<group>"; };
+		BD3570BB1F24D2D1003BE859 /* WarHistoryExhibit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WarHistoryExhibit.plist; sourceTree = "<group>"; };
+		BD3570BC1F24D2D1003BE859 /* WarHistoryExhibit2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WarHistoryExhibit2.plist; sourceTree = "<group>"; };
+		BD3570BD1F24D2D1003BE859 /* WarMemorialMainBuilding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WarMemorialMainBuilding.plist; sourceTree = "<group>"; };
+		BD3570C11F24D2E3003BE859 /* WeddingHall.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeddingHall.plist; sourceTree = "<group>"; };
 		BD35A4821F19F908003C337B /* UIColor+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HelperMethods.h"; sourceTree = "<group>"; };
 		BD35A4831F19F908003C337B /* UIColor+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HelperMethods.m"; sourceTree = "<group>"; };
 		BD35A4851F1A0EF7003C337B /* MenuComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuComponent.h; sourceTree = "<group>"; };
@@ -355,6 +419,9 @@
 		BD2EDB941F1B900E00C86D37 /* OtherUtils */ = {
 			isa = PBXGroup;
 			children = (
+				BD3570831F24CEEE003BE859 /* TransportationMode.h */,
+				BD3570801F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.h */,
+				BD3570811F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.m */,
 				BD3728D71F1F4C9B009DFF50 /* CloudKitHelper.h */,
 				BD3728D81F1F4C9B009DFF50 /* CloudKitHelper.m */,
 				BD2EDB991F1B903E00C86D37 /* UIViewController+HelperMethods.h */,
@@ -411,6 +478,32 @@
 				BD32B2021F1B6CD8000F5F7E /* OverlayConfiguration.m */,
 			);
 			name = DataModels;
+			sourceTree = "<group>";
+		};
+		BD35709C1F24D233003BE859 /* SupportingPlists */ = {
+			isa = PBXGroup;
+			children = (
+				BD3570C11F24D2E3003BE859 /* WeddingHall.plist */,
+				BD3570AB1F24D283003BE859 /* NationalSecurityPavilionPath.plist */,
+				BD3570B51F24D2A3003BE859 /* ROKArmedForcesRoom.plist */,
+				BD3570B71F24D2B6003BE859 /* SeoulGrandParkArea.plist */,
+				BD3570B81F24D2B6003BE859 /* SeoulGrandParkRegions.plist */,
+				BD3570AD1F24D293003BE859 /* ParkRoute.plist */,
+				BD3570BB1F24D2D1003BE859 /* WarHistoryExhibit.plist */,
+				BD3570BC1F24D2D1003BE859 /* WarHistoryExhibit2.plist */,
+				BD3570BD1F24D2D1003BE859 /* WarMemorialMainBuilding.plist */,
+				BD3570AE1F24D293003BE859 /* path1.plist */,
+				BD3570AF1F24D293003BE859 /* path2.plist */,
+				BD3570B01F24D293003BE859 /* PetraeusBuilding.plist */,
+				BD3570A91F24D279003BE859 /* LottoHotel.plist */,
+				BD3570A11F24D270003BE859 /* KoreanWarExhibitRoom1.plist */,
+				BD3570A21F24D270003BE859 /* KoreanWarExhibitRoom2.plist */,
+				BD3570A31F24D270003BE859 /* KoreanWarExhibitRoom3.plist */,
+				BD3570A41F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist */,
+				BD35709F1F24D255003BE859 /* Gwanghuamun.plist */,
+				BD35709D1F24D248003BE859 /* DonatedRelicsExhibit.plist */,
+			);
+			name = SupportingPlists;
 			sourceTree = "<group>";
 		};
 		BD35A47B1F19F851003C337B /* EntryViewControllers */ = {
@@ -590,6 +683,19 @@
 		BD714D681F21FEDE003D4C66 /* NavigationAidControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD35709C1F24D233003BE859 /* SupportingPlists */,
+				BD3570991F24D1F1003BE859 /* BoundaryOverlay.h */,
+				BD35709A1F24D1F1003BE859 /* BoundaryOverlay.m */,
+				BD35708F1F24D1E7003BE859 /* BikeRouteMapController.h */,
+				BD3570901F24D1E7003BE859 /* BikeRouteMapController.m */,
+				BD3570911F24D1E7003BE859 /* BikeRoutePoint.h */,
+				BD3570921F24D1E7003BE859 /* BikeRoutePoint.m */,
+				BD3570931F24D1E7003BE859 /* BikingRoutesController.h */,
+				BD3570941F24D1E7003BE859 /* BikingRoutesController.m */,
+				BD3570881F24D197003BE859 /* PolygonMapController.h */,
+				BD3570891F24D197003BE859 /* PolygonMapController.m */,
+				BD35708A1F24D197003BE859 /* PolygonSelectionController.h */,
+				BD35708B1F24D197003BE859 /* PolygonSelectionController.m */,
 				BD714D691F21FEEB003D4C66 /* DirectionsMenuController.h */,
 				BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */,
 				BD3EA2371F2453B5002B6D29 /* NavigationAidEntryController.h */,
@@ -598,6 +704,9 @@
 				BD3EA23B1F245444002B6D29 /* WarMemorialNavigationController.m */,
 				BD3EA23D1F2454CF002B6D29 /* WarMemorialAnnotation.h */,
 				BD3EA23E1F2454CF002B6D29 /* WarMemorialAnnotation.m */,
+				BD3570841F24CF2B003BE859 /* ToHostelDirectionsController.h */,
+				BD3570851F24CF2B003BE859 /* ToHostelDirectionsController.m */,
+				BD3570871F24CF47003BE859 /* DestinationCategory.h */,
 			);
 			name = NavigationAidControllers;
 			sourceTree = "<group>";
@@ -720,25 +829,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3570B41F24D293003BE859 /* PetraeusBuilding.plist in Resources */,
+				BD3570AA1F24D279003BE859 /* LottoHotel.plist in Resources */,
+				BD3570BA1F24D2B6003BE859 /* SeoulGrandParkRegions.plist in Resources */,
 				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
+				BD3570C21F24D2E3003BE859 /* WeddingHall.plist in Resources */,
+				BD3570B31F24D293003BE859 /* path2.plist in Resources */,
 				BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */,
+				BD35709E1F24D248003BE859 /* DonatedRelicsExhibit.plist in Resources */,
+				BD3570B61F24D2A3003BE859 /* ROKArmedForcesRoom.plist in Resources */,
 				BD8A35E91F1DF85800346F88 /* FlickrSearchTerms.plist in Resources */,
+				BD3570A01F24D255003BE859 /* Gwanghuamun.plist in Resources */,
+				BD3570AC1F24D283003BE859 /* NationalSecurityPavilionPath.plist in Resources */,
+				BD3570B21F24D293003BE859 /* path1.plist in Resources */,
 				BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */,
 				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
 				BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */,
 				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
 				BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */,
+				BD3570A51F24D270003BE859 /* KoreanWarExhibitRoom1.plist in Resources */,
+				BD3570A81F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist in Resources */,
+				BD3570BE1F24D2D1003BE859 /* WarHistoryExhibit.plist in Resources */,
+				BD3570B11F24D293003BE859 /* ParkRoute.plist in Resources */,
 				BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */,
+				BD3570A71F24D270003BE859 /* KoreanWarExhibitRoom3.plist in Resources */,
 				BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */,
 				BD3145221F19D05D00999981 /* Assets.xcassets in Resources */,
 				BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */,
+				BD3570B91F24D2B6003BE859 /* SeoulGrandParkArea.plist in Resources */,
 				BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */,
 				BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */,
+				BD3570BF1F24D2D1003BE859 /* WarHistoryExhibit2.plist in Resources */,
 				BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */,
+				BD3570C01F24D2D1003BE859 /* WarMemorialMainBuilding.plist in Resources */,
 				BD2EDB811F1B8F8500C86D37 /* WeatherForecastSites.plist in Resources */,
 				BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */,
 				BD2EDBA01F1B92F900C86D37 /* EntryUIOverlay.sks in Resources */,
 				BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */,
+				BD3570A61F24D270003BE859 /* KoreanWarExhibitRoom2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,12 +948,15 @@
 				BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */,
 				BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */,
 				BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */,
+				BD35708D1F24D197003BE859 /* PolygonSelectionController.m in Sources */,
 				BD2EDB8F1F1B8FB400C86D37 /* WeatherCollectionCell.m in Sources */,
 				BD2EDB891F1B8FA200C86D37 /* WeatherDisplayController.m in Sources */,
 				BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */,
 				BD3DCB031F234839001DB69B /* LanguageRecordingController.m in Sources */,
+				BD3570981F24D1E7003BE859 /* BikingRoutesController.m in Sources */,
 				BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */,
 				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
+				BD3570961F24D1E7003BE859 /* BikeRouteMapController.m in Sources */,
 				BD2EDB9B1F1B903E00C86D37 /* UIViewController+HelperMethods.m in Sources */,
 				BD38F2CE1F1B365C00471E16 /* AppDelegate.m in Sources */,
 				BD3EA23F1F2454CF002B6D29 /* WarMemorialAnnotation.m in Sources */,
@@ -833,6 +964,7 @@
 				BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */,
 				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
 				BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */,
+				BD35708C1F24D197003BE859 /* PolygonMapController.m in Sources */,
 				BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */,
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
 				BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */,
@@ -843,11 +975,13 @@
 				BDA7BEDA1F1F8DF80084F39D /* NSString+HelperMethods.m in Sources */,
 				BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */,
 				BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */,
+				BD3570821F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.m in Sources */,
 				BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */,
 				BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */,
 				BD8A35E71F1DF85800346F88 /* FlickrProgressController.m in Sources */,
 				BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */,
 				BD38F2C51F1B361200471E16 /* EntryViewGameSceneController.m in Sources */,
+				BD35709B1F24D1F1003BE859 /* BoundaryOverlay.m in Sources */,
 				BD8A35E41F1DF85800346F88 /* FlickrHelper.m in Sources */,
 				BD2EDB841F1B8F9500C86D37 /* WeatherForecastCollectionController.m in Sources */,
 				BDB696961F1D126A001E2314 /* OCRController.m in Sources */,
@@ -863,6 +997,8 @@
 				BD2EDB971F1B901A00C86D37 /* UIView+HelperMethods.m in Sources */,
 				BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */,
 				BD38F2C21F1B360400471E16 /* UIColor+HelperMethods.m in Sources */,
+				BD3570861F24CF2B003BE859 /* ToHostelDirectionsController.m in Sources */,
+				BD3570971F24D1E7003BE859 /* BikeRoutePoint.m in Sources */,
 				BD2EDB901F1B8FB400C86D37 /* WeatherConfiguration.m in Sources */,
 				BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */,
 				BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */,

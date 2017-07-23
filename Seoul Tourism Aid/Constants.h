@@ -24,7 +24,7 @@
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 #define DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER @"didRequestLoadTouristSiteDetailController"
-
+#define DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION @"didReceiveUserAuthorizationNotification"
 #define DID_REQUEST_KOREAN_AUDIO_NOTIFICATION @"requestedKoreanAudioNotification"
 #define DID_REQUEST_TOURISM_SITE_INFO_NOTIFICATION @"requestedTouristSiteInfoNotification"
 #define DID_REQUEST_PRODUCT_INFO_NOTIFICATION @"requestedProductInfoNotification"

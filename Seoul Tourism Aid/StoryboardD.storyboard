@@ -198,7 +198,7 @@
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Z5f-AD-uXD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rO1-l1-h0H">
-                                <rect key="frame" x="176" y="7" width="128" height="30"/>
+                                <rect key="frame" x="1218" y="7" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Routes Menu"/>
@@ -1441,7 +1441,7 @@
                                 </connections>
                             </containerView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-T7-MF7">
-                                <rect key="frame" x="744" y="194.5" width="546.5" height="102.5"/>
+                                <rect key="frame" x="744" y="195" width="546.5" height="102.5"/>
                                 <date key="date" timeIntervalSinceReferenceDate="520343511.18172199">
                                     <!--2017-06-28 11:51:51 +0000-->
                                 </date>
@@ -1456,14 +1456,14 @@
                                 </connections>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ks5-7j-yqo">
-                                <rect key="frame" x="744" y="72" width="546.5" height="102.5"/>
+                                <rect key="frame" x="744" y="72.5" width="546.5" height="102.5"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Xfz-PO-w8Y" id="utK-Pd-hJD"/>
                                     <outlet property="delegate" destination="Xfz-PO-w8Y" id="LGL-uA-94f"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ac-L2-hjq">
-                                <rect key="frame" x="61" y="84" width="683" height="78"/>
+                                <rect key="frame" x="61" y="84" width="683" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Weather Forecast Location:">
                                         <attributes>
@@ -1489,7 +1489,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEn-hb-YV1">
-                                <rect key="frame" x="61" y="162" width="683" height="79"/>
+                                <rect key="frame" x="61" y="163" width="683" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Weather Forecast Date:">
                                         <attributes>
@@ -1511,7 +1511,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFF-Gp-2WB">
-                                <rect key="frame" x="61" y="241" width="683" height="47"/>
+                                <rect key="frame" x="61" y="242" width="683" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Forecast Period:">
                                         <attributes>
@@ -1533,13 +1533,13 @@
                                 </variation>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Vt-oC-Kqz">
-                                <rect key="frame" x="742" y="249" width="550.5" height="31"/>
+                                <rect key="frame" x="742" y="250" width="550.5" height="31"/>
                                 <connections>
                                     <action selector="changedForecastPeriod:" destination="Xfz-PO-w8Y" eventType="valueChanged" id="DRK-vQ-lb3"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast Period" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3q-vg-Cya">
-                                <rect key="frame" x="976" y="284" width="82.5" height="14"/>
+                                <rect key="frame" x="976" y="285" width="82.5" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1552,7 +1552,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kr0-gb-N2n">
-                                <rect key="frame" x="410.5" y="308" width="546.5" height="46.5"/>
+                                <rect key="frame" x="410.5" y="309" width="546.5" height="46.5"/>
                                 <state key="normal" image="cloudyA">
                                     <attributedString key="attributedTitle">
                                         <fragment content="  Get Forecast">
@@ -1740,6 +1740,15 @@
                                 <exclude reference="isY-6M-MyP"/>
                                 <exclude reference="r9g-sr-1fT"/>
                                 <exclude reference="zVH-7l-N7T"/>
+                                <exclude reference="1ZX-jg-UwL"/>
+                                <exclude reference="3Kr-gU-NTn"/>
+                                <exclude reference="8xl-ua-G4u"/>
+                                <exclude reference="IUQ-y1-WtM"/>
+                                <exclude reference="aU5-cP-WCs"/>
+                                <exclude reference="adp-NN-23v"/>
+                                <exclude reference="cU0-hx-2y3"/>
+                                <exclude reference="toQ-Ua-Tde"/>
+                                <exclude reference="uVR-ZU-sbd"/>
                                 <exclude reference="34E-Yc-czt"/>
                                 <exclude reference="HJf-Gh-O8x"/>
                                 <exclude reference="I2l-o4-qZW"/>
@@ -1781,15 +1790,6 @@
                                 <exclude reference="u30-I7-nIm"/>
                                 <exclude reference="wgg-5f-Fzf"/>
                                 <exclude reference="z2Y-5J-A2Z"/>
-                                <exclude reference="1ZX-jg-UwL"/>
-                                <exclude reference="3Kr-gU-NTn"/>
-                                <exclude reference="8xl-ua-G4u"/>
-                                <exclude reference="IUQ-y1-WtM"/>
-                                <exclude reference="aU5-cP-WCs"/>
-                                <exclude reference="adp-NN-23v"/>
-                                <exclude reference="cU0-hx-2y3"/>
-                                <exclude reference="toQ-Ua-Tde"/>
-                                <exclude reference="uVR-ZU-sbd"/>
                                 <exclude reference="3l4-eO-dqO"/>
                                 <exclude reference="6Ff-4u-D9x"/>
                                 <exclude reference="DYP-DY-Yvf"/>
@@ -1819,6 +1819,12 @@
                                 <exclude reference="LTa-bU-Qga"/>
                                 <exclude reference="WXW-9l-Jch"/>
                                 <include reference="YbS-ag-VrP"/>
+                                <include reference="1ZX-jg-UwL"/>
+                                <include reference="3Kr-gU-NTn"/>
+                                <exclude reference="KIG-gr-pbk"/>
+                                <exclude reference="KMU-3u-dh4"/>
+                                <exclude reference="rH1-is-HfC"/>
+                                <include reference="toQ-Ua-Tde"/>
                                 <exclude reference="AyS-n1-Baq"/>
                                 <include reference="XdI-Ec-7iP"/>
                                 <exclude reference="dqx-M3-cVM"/>
@@ -1842,12 +1848,6 @@
                                 <include reference="brj-Ln-rGG"/>
                                 <include reference="dCw-4R-2VO"/>
                                 <exclude reference="zLM-R6-vul"/>
-                                <include reference="1ZX-jg-UwL"/>
-                                <include reference="3Kr-gU-NTn"/>
-                                <exclude reference="KIG-gr-pbk"/>
-                                <exclude reference="KMU-3u-dh4"/>
-                                <exclude reference="rH1-is-HfC"/>
-                                <include reference="toQ-Ua-Tde"/>
                                 <exclude reference="1eS-6F-BcK"/>
                                 <exclude reference="3u0-Tf-u2J"/>
                                 <include reference="6Ff-4u-D9x"/>
@@ -1879,6 +1879,11 @@
                                 <exclude reference="WXW-9l-Jch"/>
                                 <exclude reference="Yds-NI-Ice"/>
                                 <exclude reference="isY-6M-MyP"/>
+                                <include reference="IUQ-y1-WtM"/>
+                                <exclude reference="KIG-gr-pbk"/>
+                                <exclude reference="KMU-3u-dh4"/>
+                                <include reference="adp-NN-23v"/>
+                                <exclude reference="rH1-is-HfC"/>
                                 <exclude reference="AyS-n1-Baq"/>
                                 <exclude reference="dqx-M3-cVM"/>
                                 <include reference="0ly-17-Zoy"/>
@@ -1906,11 +1911,6 @@
                                 <include reference="wgg-5f-Fzf"/>
                                 <exclude reference="z2Y-5J-A2Z"/>
                                 <exclude reference="zLM-R6-vul"/>
-                                <include reference="IUQ-y1-WtM"/>
-                                <exclude reference="KIG-gr-pbk"/>
-                                <exclude reference="KMU-3u-dh4"/>
-                                <include reference="adp-NN-23v"/>
-                                <exclude reference="rH1-is-HfC"/>
                                 <exclude reference="1eS-6F-BcK"/>
                                 <exclude reference="3u0-Tf-u2J"/>
                                 <include reference="DYP-DY-Yvf"/>
@@ -1931,6 +1931,9 @@
                                 <include reference="CvK-BE-QAy"/>
                                 <include reference="LTa-bU-Qga"/>
                                 <include reference="WXW-9l-Jch"/>
+                                <include reference="KIG-gr-pbk"/>
+                                <include reference="KMU-3u-dh4"/>
+                                <include reference="rH1-is-HfC"/>
                                 <include reference="AyS-n1-Baq"/>
                                 <include reference="dqx-M3-cVM"/>
                                 <include reference="4Fe-ek-Drh"/>
@@ -1943,9 +1946,6 @@
                                 <include reference="n6g-Hv-6c3"/>
                                 <include reference="NqQ-M2-Vpw"/>
                                 <include reference="zLM-R6-vul"/>
-                                <include reference="KIG-gr-pbk"/>
-                                <include reference="KMU-3u-dh4"/>
-                                <include reference="rH1-is-HfC"/>
                                 <include reference="1eS-6F-BcK"/>
                                 <include reference="3u0-Tf-u2J"/>
                                 <include reference="jHc-4u-P8U"/>
@@ -1975,6 +1975,13 @@
                                 <exclude reference="WXW-9l-Jch"/>
                                 <include reference="r9g-sr-1fT"/>
                                 <include reference="zVH-7l-N7T"/>
+                                <include reference="8xl-ua-G4u"/>
+                                <exclude reference="KIG-gr-pbk"/>
+                                <exclude reference="KMU-3u-dh4"/>
+                                <include reference="aU5-cP-WCs"/>
+                                <exclude reference="cU0-hx-2y3"/>
+                                <exclude reference="rH1-is-HfC"/>
+                                <include reference="uVR-ZU-sbd"/>
                                 <include reference="34E-Yc-czt"/>
                                 <exclude reference="AyS-n1-Baq"/>
                                 <include reference="HJf-Gh-O8x"/>
@@ -2002,13 +2009,6 @@
                                 <include reference="ezr-Xa-l38"/>
                                 <include reference="u30-I7-nIm"/>
                                 <exclude reference="zLM-R6-vul"/>
-                                <include reference="8xl-ua-G4u"/>
-                                <exclude reference="KIG-gr-pbk"/>
-                                <exclude reference="KMU-3u-dh4"/>
-                                <include reference="aU5-cP-WCs"/>
-                                <exclude reference="cU0-hx-2y3"/>
-                                <exclude reference="rH1-is-HfC"/>
-                                <include reference="uVR-ZU-sbd"/>
                                 <exclude reference="1eS-6F-BcK"/>
                                 <include reference="3l4-eO-dqO"/>
                                 <exclude reference="3u0-Tf-u2J"/>
@@ -2221,15 +2221,15 @@
                                 <exclude reference="nBz-gR-706"/>
                                 <exclude reference="pvT-3R-41J"/>
                                 <exclude reference="xPE-h0-UTG"/>
+                                <exclude reference="8GI-WC-3VJ"/>
+                                <exclude reference="Bya-1c-qDB"/>
+                                <exclude reference="VaR-mP-4is"/>
+                                <exclude reference="1lF-F3-G40"/>
+                                <exclude reference="nJN-9e-6bR"/>
                                 <exclude reference="0h7-kq-ywQ"/>
                                 <exclude reference="A6m-NV-xRf"/>
                                 <exclude reference="txG-Qx-Qqd"/>
                                 <exclude reference="wh5-fZ-3w6"/>
-                                <exclude reference="1lF-F3-G40"/>
-                                <exclude reference="nJN-9e-6bR"/>
-                                <exclude reference="8GI-WC-3VJ"/>
-                                <exclude reference="Bya-1c-qDB"/>
-                                <exclude reference="VaR-mP-4is"/>
                                 <exclude reference="4Rb-7t-qaG"/>
                                 <exclude reference="BeO-IQ-OZO"/>
                             </mask>
@@ -2244,15 +2244,15 @@
                                 <include reference="nBz-gR-706"/>
                                 <include reference="pvT-3R-41J"/>
                                 <include reference="xPE-h0-UTG"/>
+                                <include reference="8GI-WC-3VJ"/>
+                                <include reference="Bya-1c-qDB"/>
+                                <include reference="VaR-mP-4is"/>
+                                <include reference="1lF-F3-G40"/>
+                                <include reference="nJN-9e-6bR"/>
                                 <include reference="0h7-kq-ywQ"/>
                                 <include reference="A6m-NV-xRf"/>
                                 <include reference="txG-Qx-Qqd"/>
                                 <include reference="wh5-fZ-3w6"/>
-                                <include reference="1lF-F3-G40"/>
-                                <include reference="nJN-9e-6bR"/>
-                                <include reference="8GI-WC-3VJ"/>
-                                <include reference="Bya-1c-qDB"/>
-                                <include reference="VaR-mP-4is"/>
                                 <include reference="4Rb-7t-qaG"/>
                                 <include reference="BeO-IQ-OZO"/>
                             </mask>
@@ -2938,16 +2938,16 @@
                                 <rect key="frame" x="273" y="152.5" width="820" height="871.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-LY-Tsk">
-                                        <rect key="frame" x="0.0" y="0.0" width="820" height="174"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="820" height="174.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperatureA" translatesAutoresizingMaskIntoConstraints="NO" id="rJW-gX-wPF">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="174"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="174.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="7uh-3U-ldY"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-ce-AYT">
-                                                <rect key="frame" x="40" y="0.0" width="780" height="174"/>
+                                                <rect key="frame" x="40" y="0.0" width="780" height="174.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Temperature">
                                                         <attributes>
@@ -2962,16 +2962,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xio-AQ-oUb">
-                                        <rect key="frame" x="0.0" y="174" width="820" height="174.5"/>
+                                        <rect key="frame" x="0.0" y="174.5" width="820" height="174"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidityA" translatesAutoresizingMaskIntoConstraints="NO" id="5Vw-70-SZA">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="174.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="174"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="CTO-Pw-blZ"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="t7q-JB-wg0">
-                                                <rect key="frame" x="40" y="0.0" width="780" height="174.5"/>
+                                                <rect key="frame" x="40" y="0.0" width="780" height="174"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Humidity">
                                                         <attributes>
@@ -3142,7 +3142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-tD-br2">
-                                <rect key="frame" x="0.0" y="64" width="1366" height="276.5"/>
+                                <rect key="frame" x="0.0" y="64" width="1366" height="276"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-WN-Hal">
                                         <rect key="frame" x="0.0" y="0.0" width="1366" height="92"/>
@@ -3172,10 +3172,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YFY-pa-SK3">
-                                        <rect key="frame" x="0.0" y="92" width="1366" height="92.5"/>
+                                        <rect key="frame" x="0.0" y="92" width="1366" height="92"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GMF-dG-hD7">
-                                                <rect key="frame" x="0.0" y="0.0" width="1256" height="92.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1256" height="92"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="   Filter by Admission Fee:">
                                                         <attributes>
@@ -3199,7 +3199,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m3-Zt-0av">
-                                        <rect key="frame" x="0.0" y="184.5" width="1366" height="92"/>
+                                        <rect key="frame" x="0.0" y="184" width="1366" height="92"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XEG-e2-6ER">
                                                 <rect key="frame" x="0.0" y="0.0" width="683" height="92"/>
@@ -3248,7 +3248,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3F-qP-mU3">
-                                <rect key="frame" x="604" y="345.5" width="158" height="35.5"/>
+                                <rect key="frame" x="604" y="345" width="158" height="35.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Search Tourist Sites">
@@ -3330,7 +3330,7 @@
             <objects>
                 <navigationController storyboardIdentifier="SeoulTourismNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="xSA-EY-f9L" customClass="SeoulTourismNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bTY-fc-d4e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bTY-fc-d4e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3350,7 +3350,7 @@
             <objects>
                 <navigationController storyboardIdentifier="WeatherNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hXy-oF-CLz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nur-eU-X61">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nur-eU-X61">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3368,7 +3368,7 @@
             <objects>
                 <navigationController storyboardIdentifier="BikeRouteNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="FNi-LG-IPf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S3h-NW-3gv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="S3h-NW-3gv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3386,7 +3386,7 @@
             <objects>
                 <navigationController storyboardIdentifier="PolygonNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pYc-Gc-14Z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ukT-4V-BKP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ukT-4V-BKP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3404,7 +3404,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HostelAreaNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="o5I-X9-sVO" customClass="HostelAreaNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RRX-uI-WJB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RRX-uI-WJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

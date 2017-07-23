@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>description</key>
+		<string>Here you can buy a lot of cute stuffed animals and other souvenirs with animal themes.  It&apos;s close to the entrance of Seoul Grand Park, right next to the subway station exit.</string>
+		<key>imagePath</key>
+		<string>toy_world_shop_sgp</string>
+		<key>coordinate</key>
+		<string>{37.4345,127.0096}</string>
+		<key>subtitle</key>
+		<string>Close to Seoul Grand Park Station, Exit 2</string>
+		<key>title</key>
+		<string>Toy World Shop</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>You can ride the elephant train to get here from the Seoul Grand Park entrance.  A one-way ticket on the elephant train is 1000 KRW. It&apos;s a 10-20 minute walk if you decide not to ride the elephant train.</string>
+		<key>imagePath</key>
+		<string>seoul_zoo_entrance_sgp</string>
+		<key>coordinate</key>
+		<string>{37.4292,127.0158}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park Complex</string>
+		<key>title</key>
+		<string>Seoul Zoo Main Entrance</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>This is one of the first animal exhibits upon entering zoo. Try to come in an afternoon when the weather is good so you get to see the animals.</string>
+		<key>imagePath</key>
+		<string>gemsbok_exhibit</string>
+		<key>coordinate</key>
+		<string>{37.4283,127.0172}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Gemsbok Exhibit</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>This is one of the first animal exhibits upon entering zoo. Try to come in an afternoon when the weather is good so you get to see the animals.</string>
+		<key>imagePath</key>
+		<string>gemsbok_exhibit</string>
+		<key>coordinate</key>
+		<string>{37.4283,127.0172}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Gemsbok Exhibit</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>This is also one of the first animal exhibits upon entering zoo. Try to come in an afternoon when the weather is good so you get to see the animals.</string>
+		<key>imagePath</key>
+		<string>zebra_exhibit</string>
+		<key>coordinate</key>
+		<string>{37.4283,127.0178}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Zebra Exhibit</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>This is also one of the first animal exhibits upon entering zoo. Try to come in an afternoon when the weather is good so you get to see the animals.</string>
+		<key>imagePath</key>
+		<string>sitatunga_exhibit</string>
+		<key>coordinate</key>
+		<string>{37.4277,127.0183}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Sitatung Exhibit</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The zoo is divided into several sections, each of which features different animal exhibits and viewing area. Don&apos;t miss out on some of the indoor exhibits and education centers as well.</string>
+		<key>imagePath</key>
+		<string>first_african_pavilion</string>
+		<key>coordinate</key>
+		<string>{37.4269,127.0183}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>1st African Pavilion</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The rhinocerous may or may not be out depending on weather conditions and other factors.</string>
+		<key>imagePath</key>
+		<string>white_rhino</string>
+		<key>coordinate</key>
+		<string>{37.4256,127.0183}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>White Rhinocerous</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>This indoor museum/exhibit features models, displays, exhibits, and live insects as well. (Don&apos;t worry, they are safely locked inside glass display boxes).</string>
+		<key>imagePath</key>
+		<string>insectarium</string>
+		<key>coordinate</key>
+		<string>{37.4251,127.0181}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Insectarium</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The Asiatic water buffalo, Asian elephant, and White rhinoceros are grouped together in close proximity. If one is not in the mood to be seen, try your luck with the other ones!</string>
+		<key>imagePath</key>
+		<string>asian_buffalo</string>
+		<key>coordinate</key>
+		<string>{37.4242,127.0196}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Asian Buffalo</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>If you are tired from watching so many animals, stop here to rest and get something to eat.</string>
+		<key>imagePath</key>
+		<string>food_house</string>
+		<key>coordinate</key>
+		<string>{37.4237,127.0198}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Food House</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>If you are tired from watching so many animals, stop here to rest and get something to eat.</string>
+		<key>imagePath</key>
+		<string>food_house</string>
+		<key>coordinate</key>
+		<string>{37.4237,127.0198}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Food House</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>If you are tired from watching so many animals, stop here to rest and get something to eat.</string>
+		<key>imagePath</key>
+		<string>book_cafe</string>
+		<key>coordinate</key>
+		<string>{37.4233,127.0209}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Book Cafe and Rest Area</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The dromedary and bactrian camel are close to each other.  Don&apos;t miss out!</string>
+		<key>imagePath</key>
+		<string>camel_sgp</string>
+		<key>coordinate</key>
+		<string>{37.4234,127.0219}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Bactrian and Dromedary Camel</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The dromedary and bactrian camel are close to each other.  Don&apos;t miss out!</string>
+		<key>imagePath</key>
+		<string>camel_sgp</string>
+		<key>coordinate</key>
+		<string>{37.4234,127.0219}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Bactrian and Dromedary Camel</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The horses are close to the camel exhibit. Be sure to come when weather conditions are right, so you can see the animals out in all their glory.</string>
+		<key>imagePath</key>
+		<string>przewalskis_horse</string>
+		<key>coordinate</key>
+		<string>{37.4229,127.0222}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Przewalskis Horse</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Dall&apos;s Sheep is a sweet and gentle creature, don&apos;t forget to give them attention in your rush to see the tigers and elephants.</string>
+		<key>imagePath</key>
+		<string>dalls_sheep</string>
+		<key>coordinate</key>
+		<string>{37.4228,127.0225}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Dall&apos;s Sheep</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>An indoor aquarium with exhbitis for dolphins, seals, and sea lions.  It&apos;s usually open, but may be closed for construction.</string>
+		<key>imagePath</key>
+		<string>dolphin_encounters</string>
+		<key>coordinate</key>
+		<string>{37.4216,127.0219}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Dolphin Encounters</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The California sea lion, Jackass Penguin, and Harbor seal are grouped togeher in a common viewing area and part of the Dolphin Encounters complex.</string>
+		<key>imagePath</key>
+		<string>harbor_seal</string>
+		<key>coordinate</key>
+		<string>{37.4222,127.0223}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Harbor Seal</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The condor, eagle, and vulture and grouped together in a common viewing area, each species in its own separate cage.</string>
+		<key>imagePath</key>
+		<string>condor_eagle_vulture</string>
+		<key>coordinate</key>
+		<string>{37.4206,127.0217}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Condor, Eagle, and Vulture</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Guanacao is better known as a lama and is indigenous to South America.  He&apos;s here in Korea just for you!</string>
+		<key>imagePath</key>
+		<string>guanaco</string>
+		<key>coordinate</key>
+		<string>{37.4190,127.0218}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Guanaco</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The botanical gardens are right across from the Lion enclosure and under the ski lift. </string>
+		<key>imagePath</key>
+		<string>botanical_garden</string>
+		<key>coordinate</key>
+		<string>{37.4258,127.0223}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Botanical Gardens</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The lion cafe is entered by walking down a staircase.  It is a cafe literally inside the Lion encosure, so you can enjoy a meal and check out the lions from inside a glass-encased viewing area.</string>
+		<key>imagePath</key>
+		<string>lion_cafe</string>
+		<key>coordinate</key>
+		<string>{37.4263,127.0216}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Lion Cafe</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The Lion enclosure is one of the highlights of the zoo.  If you come during feeding time, you&apos;ll see the lions eagerly catch pieces of raw chicken and meat like a dog grabs a frisbee.</string>
+		<key>imagePath</key>
+		<string>lion_enclosure</string>
+		<key>coordinate</key>
+		<string>{37.4258,127.0221}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Lion Enclosure</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>This convenience store is right across from the Lion enclosure. Stop and go inside for a cool drink if you need a break.</string>
+		<key>imagePath</key>
+		<string>lion_enclosure_convenience_store</string>
+		<key>coordinate</key>
+		<string>{37.4261,127.0221}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Convenience Store (Lion Enclosure)</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The ape jungle tour is a series of exhibits featuring apes, gorillas, chimps, and other related animals.</string>
+		<key>imagePath</key>
+		<string>ape_jungle_tour</string>
+		<key>coordinate</key>
+		<string>{37.4273,127.0194}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Ape Jungle Tour</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The baobab tree is model tree close to the zoo entrance. You can climb to the top and enjoy a nice view of some of the surrounding exhibits.</string>
+		<key>imagePath</key>
+		<string>baobab_tree</string>
+		<key>coordinate</key>
+		<string>{37.4271,127.0187}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Baobab Tree</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Seoulland is an amusement park with fun rides and roller coasters. You can get there by elephant train. Admission for 1 adult is 40,000 KRW, with discounts for children, seniors, and if you are visiting at night.</string>
+		<key>imagePath</key>
+		<string>seoulland_entrance</string>
+		<key>coordinate</key>
+		<string>{37.4341,127.0168}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Seoulland Entrance</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The black bear exhibit has outdoor sections as well as semi-indoor sections with glass barriers and informational displays.</string>
+		<key>imagePath</key>
+		<string>black_bear</string>
+		<key>coordinate</key>
+		<string>{37.4206,127.0237}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Black Bear</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Close to the black bear exhibit, the conservation education center is a nice education area about conservation and the zoo animals in general.</string>
+		<key>imagePath</key>
+		<string>conservation_education_center</string>
+		<key>coordinate</key>
+		<string>{37.4192,127.0239}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Conservation Education Center</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>One of the star attractions of the zoo, the tiger exhibit is a must-see!</string>
+		<key>imagePath</key>
+		<string>tiger_exhibit</string>
+		<key>coordinate</key>
+		<string>{37.4219,127.0242}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Tiger Exhibit</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Across from the tiger and leopard viewing area, the food court and CU convenience store offer good rest areas and stopping points.</string>
+		<key>imagePath</key>
+		<string>food_court_tiger</string>
+		<key>coordinate</key>
+		<string>{37.4230,127.0245}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Food Court and CU Convenience Store</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The leopard exhibit is slightly elevated and alternates between outdoor viewing and semi-indoor (i.e. behind glass separator) display areas.</string>
+		<key>imagePath</key>
+		<string>leopard_display</string>
+		<key>coordinate</key>
+		<string>{37.4232,127.0253}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Leopard Exhibit</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>From South American llamas to African elephants to Asian tigers, the American Bison proves thise zoo has got it all!</string>
+		<key>imagePath</key>
+		<string>american_bison</string>
+		<key>coordinate</key>
+		<string>{37.4194,127.0233}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>American Bison</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The lowland tapir is a pretty docile creature and can be viewed from pretty close. Don&apos;t miss out!</string>
+		<key>imagePath</key>
+		<string>lowland_tapir</string>
+		<key>coordinate</key>
+		<string>{37.4183,127.0217}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>American Bison</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The red deer are usually out in large numbers in flocks, so they are fun to see together.</string>
+		<key>imagePath</key>
+		<string>red_deer</string>
+		<key>coordinate</key>
+		<string>{37.4194,127.0222}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Red Deer</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>A display area with various fowl such as peacocks and other birds.</string>
+		<key>imagePath</key>
+		<string>peafowl_village</string>
+		<key>coordinate</key>
+		<string>{37.4205,127.0238}</string>
+		<key>subtitle</key>
+		<string>Seoul Grand Park</string>
+		<key>title</key>
+		<string>Peafowl Village</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Part of the Asian Jungle complex, the crocodile is fun to watch from the overhead walkway.  It can also be viewed from a lower elevation.</string>
+		<key>imagePath</key>
+		<string>new_guinea_crocodile</string>
+		<key>coordinate</key>
+		<string>{37.4232,127.0235}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>New Guinea Crocodile</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The Asian jungle complex features snakes, crocodiles, and various reptiles, with indoor and outdoors exhibits.</string>
+		<key>imagePath</key>
+		<string>asian_jungle</string>
+		<key>coordinate</key>
+		<string>{37.4243,127.0239}</string>
+		<key>subtitle</key>
+		<string>Seoul Zoo</string>
+		<key>title</key>
+		<string>Asian Jungle</string>
+	</dict>
+</array>
+</plist>

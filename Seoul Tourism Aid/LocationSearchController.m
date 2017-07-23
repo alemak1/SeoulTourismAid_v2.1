@@ -47,6 +47,7 @@
 - (IBAction)searchLocationsInGoogleMaps:(UIButton *)sender;
 
 @property (readonly) CGRect mapViewFrame;
+@property (readonly) GTMAppAuthFetcherAuthorization* fetcherAuthorization;
 
 @end
 
@@ -73,14 +74,15 @@
     
     //Configure the map view so that it's coordinate region is centered on GDJ hostel
     
-    [self.mainMapView setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.001, 0.001))];
+    [self.mainMapView setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.01, 0.01))];
     
 }
 
 -(void)viewDidLoad{
     
+    /** If the user is not currently authorized to call Google APIs, an auhtorization view controller will be shown to obtain user consent. A notification is sent when this authorization controller is dismissed **/
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(performGoogleDirectionsSearchForSelectedLocation) name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
 }
 
 
@@ -105,7 +107,12 @@
     }
     
     
-    MKMapItem* fromLocation = [MKMapItem mapItemForCurrentLocation];
+    CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+    
+    MKPlacemark* userLocationPlacemark = [[MKPlacemark alloc] initWithCoordinate:userLocation.coordinate];
+    
+    MKMapItem* fromLocation = [[MKMapItem alloc] initWithPlacemark:userLocationPlacemark];
+    
     CLLocationCoordinate2D fromLocationCoordinate = fromLocation.placemark.coordinate;
     
     MKMapItem* toLocation = self.selectedLocation;
@@ -143,23 +150,27 @@
         return;
     }
     
-    GTMAppAuthFetcherAuthorization* fromKeychainAuthorization =
-    [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
     
-    if(!fromKeychainAuthorization){
+    if(!self.fetcherAuthorization){
         AuthorizationController* authorizationController = [[AuthorizationController alloc] init];
         
-        authorizationController.nextViewController = nil;
-    } else {
+        [self showViewController:authorizationController sender:nil];
         
+    } else {
+        [self performGoogleDirectionsSearchForSelectedLocation];
     }
     
+}
+
+
+-(void)performGoogleDirectionsSearchForSelectedLocation{
+    
     GTMSessionFetcherService *fetcherService = [[GTMSessionFetcherService alloc] init];
-    fetcherService.authorizer = fromKeychainAuthorization;
+    fetcherService.authorizer = self.fetcherAuthorization;
     
     WayPointConfiguration* destinationWaypoint = [[WayPointConfiguration alloc] initWithLocation:self.selectedLocation.placemark.location andWithName:@"Selected Destination"];
     
-     NSURL* url = [GoogleURLGenerator getURLFromUserLocationToDestination:destinationWaypoint];
+    NSURL* url = [GoogleURLGenerator getURLFromUserLocationToDestination:destinationWaypoint];
     
     NSLog(@"The url generated for this directions request is: %@",[url absoluteString]);
     
@@ -176,7 +187,7 @@
     
     
     /** Set the access key as the value for 'authorizaiton' in a separate authorization header **/
-    NSString* authValue = [NSString stringWithFormat:@"Bearer %@",fromKeychainAuthorization.authState.lastTokenResponse.accessToken];
+    NSString* authValue = [NSString stringWithFormat:@"Bearer %@",self.fetcherAuthorization.authState.lastTokenResponse.accessToken];
     
     [request setValue:authValue forHTTPHeaderField:@"Authorization"];
     
@@ -187,7 +198,9 @@
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         // Checks for an error.
         
-        
+        if(error){
+            NSLog(@"Error occurred: %@",[error localizedDescription]);
+        }
         
         // Parses the JSON response.
         NSError *jsonError = nil;
@@ -210,9 +223,11 @@
         NSLog(@"Success: %@", jsonDict);
     }];
     
+    
 
     
 }
+
 
 - (IBAction)searchLocationsInGoogleMaps:(UIButton *)sender {
     
@@ -274,6 +289,16 @@
     if([segue.identifier isEqualToString:@"showGoogleMapsSearchController"]){
         
     }
+}
+
+-(GTMAppAuthFetcherAuthorization *)fetcherAuthorization{
+    
+    return [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];;
+}
+
+-(void)dealloc{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

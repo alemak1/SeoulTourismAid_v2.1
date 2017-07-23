@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Lotto Hotel</string>
+	<key>boundary</key>
+	<array>
+		<string>{37.5451,126.9504}</string>
+		<string>{37.5456,126.9502}</string>
+		<string>{37.5455,126.9507}</string>
+		<string>{37.5452,126.9511}</string>
+		<string>{37.5451,126.9514}</string>
+		<string>{37.5448,126.9513}</string>
+		<string>{37.5444,126.9510}</string>
+		<string>{37.5442,126.9508}</string>
+		<string>{37.5443,126.9507}</string>
+	</array>
+</dict>
+</plist>

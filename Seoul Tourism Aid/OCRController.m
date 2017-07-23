@@ -39,7 +39,7 @@
 
 @property (nonatomic,weak)id<MediaPickerManagerDelegate> delegate;
 
-
+@property NSDictionary* savedJSONDict;
 
 @end
 
@@ -61,10 +61,6 @@
 -(void)mediaPickerManager:(MediaPickerManager *)manager didFinishPickingImage:(UIImage *)image{
     
     
-    //Perform API call to Google Vision API
-    
-    [self performOCRAnalysisOnJPEGImage:image];
-
     
     //Use core image to crop the bounding box containing the relevant text
     
@@ -76,7 +72,16 @@
         //Set text display with text in image
         
         [self.imageView setImage:image];
-    
+        
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+            //Perform API call to Google Vision API
+            
+            [self performOCRAnalysisOnJPEGImage:self.imageView.image];
+            
+            [self parseJSONDict:self.savedJSONDict];
+        });
     }];
 }
 
@@ -110,11 +115,15 @@
     fetcherService.authorizer = fromKeychainAuthorization;
     
     /** Convert the captured image into a base64encoded string which can be submitted via the HTTP body to Google Servers **/
-    
+    /**
     self.imageView.image = image;
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [self.imageView setClipsToBounds:YES];
     
-    NSData* imgData = UIImageJPEGRepresentation(self.imageView.image, 1.0);
+    UIImage* downsizedImg = [self imageWithImage:self.imageView.image scaledToSize:self.imageView.bounds.size];
+    **/
+    
+    NSData* imgData = UIImageJPEGRepresentation(image, 1.0);
     NSString* imgStr = [imgData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     
     NSDictionary* contentDict = @{
@@ -176,7 +185,8 @@
         
         // Parses the JSON response.
         NSError *jsonError = nil;
-        id jsonDictionaryOrArray =
+        
+        NSDictionary* jsonDict =
         [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
         // JSON error.
@@ -185,10 +195,37 @@
             return;
         }
         
-        // Success response!
-        NSLog(@"Success: %@", jsonDictionaryOrArray);
+        self.savedJSONDict = jsonDict;
+        
     }];
 
+}
+
+-(void) parseJSONDict:(NSDictionary*)jsonDict{
+    
+    NSLog(@"%@",[jsonDict description]);
+    
+    NSArray* responsesArray = jsonDict[@"ressponses"];
+    NSArray* textAnnotations = [responsesArray firstObject];
+    
+    for (NSDictionary*dict in textAnnotations) {
+        NSString* descriptionText = dict[@"description"];
+        NSLog(@"%@",descriptionText);
+
+    }
+    
+}
+
+
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    //UIGraphicsBeginImageContext(newSize);
+    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
+    // Pass 1.0 to force exact pixel size.
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 @end

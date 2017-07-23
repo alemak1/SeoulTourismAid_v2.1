@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>boundary</key>
+	<array>
+		<string>{37.5354,126.9775}</string>
+		<string>{37.5353,126.9776}</string>
+		<string>{37.5353,126.9783}</string>
+		<string>{37.5359,126.9782}</string>
+		<string>{37.5366,126.9782}</string>
+		<string>{37.5369,126.9782}</string>
+		<string>{37.5375,126.9781}</string>
+		<string>{37.5376,126.9779}</string>
+		<string>{37.5377,126.9775}</string>
+		<string>{37.5377,126.9768}</string>
+		<string>{37.5377,126.9761}</string>
+		<string>{37.5372,126.9761}</string>
+		<string>{37.5368,126.9762}</string>
+		<string>{37.5363,126.9762}</string>
+		<string>{37.5353,126.9762}</string>
+		<string>{37.5352,126.9763}</string>
+		<string>{37.5354,126.9768}</string>
+		<string>{37.5354,126.9773}</string>
+		<string>{37.5354,126.9775}</string>
+	</array>
+	<key>name</key>
+	<string>Korean War Memorial Main Building</string>
+</dict>
+</plist>

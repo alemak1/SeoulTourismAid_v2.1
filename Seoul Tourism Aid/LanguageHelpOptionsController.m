@@ -7,7 +7,7 @@
 //
 
 #import "LanguageHelpOptionsController.h"
-
+#import "AuthorizationController.h"
 
 #import <OIDServiceConfiguration.h>
 #import <OIDAuthorizationService.h>
@@ -22,11 +22,48 @@
 #import "AppDelegate.h"
 #import "Constants.h"
 
+@interface LanguageHelpOptionsController ()
+
+@property(readonly)GTMAppAuthFetcherAuthorization* authorization;
+
+@end
+
 @implementation LanguageHelpOptionsController
 
+
+
 -(void)viewDidLoad{
+
+ 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissViewControllerIfUnauthorized) name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
     
+    if(!self.authorization){
+        AuthorizationController* authorizationController = [[AuthorizationController alloc] init];
+        
+        [self presentViewController:authorizationController animated:YES completion:nil];
+        
+    }
+      
     
+}
+
+
+-(void)dismissViewControllerIfUnauthorized{
+    
+    /** If the user is still unauthorized after providing the information to the Google OAuth consent-request screen, then the current view controller should be dismissed and services made unavailable to the user **/
+    
+    if(!self.authorization){
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Translation Services Unavailable" message:@"Translation services (whether for recorded speech, photographed characters, or written text) are unavailable unless user is authorized through their Google Account" preferredStyle:UIAlertControllerStyleAlert];
+    
+        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [alertController addAction:okay];
+    
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 
@@ -114,6 +151,10 @@
         // Success response!
         NSLog(@"Success: %@", jsonDictionaryOrArray);
     }];
+}
+
+-(GTMAppAuthFetcherAuthorization *)authorization{
+    return [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
 }
 
 -(IBAction)unwindToLanguageHelpOptions:(UIStoryboardSegue *)segue{

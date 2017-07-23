@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Guanghuamun Outer Wall</string>
+	<key>boundary</key>
+	<array>
+		<string>{37.5759,126.9765}</string>
+		<string>{37.5758,126.9757}</string>
+		<string>{37.5759,126.9747}</string>
+		<string>{37.5760,126.9744}</string>
+		<string>{37.5769,126.9742}</string>
+		<string>{37.5772,126.9740}</string>
+		<string>{37.5776,126.9740}</string>
+		<string>{37.5783,126.9739}</string>
+		<string>{37.5787,126.9739}</string>
+		<string>{37.5798,126.9738}</string>
+		<string>{37.5806,126.9734}</string>
+		<string>{37.5806,126.9736}</string>
+		<string>{37.5821,126.9735}</string>
+		<string>{37.5830,126.9736}</string>
+		<string>{37.5836,126.9737}</string>
+		<string>{37.5840,126.9754}</string>
+		<string>{37.5835,126.9760}</string>
+		<string>{37.5839,126.9769}</string>
+		<string>{37.5837,126.9777}</string>
+		<string>{37.5835,126.9784}</string>
+		<string>{37.5834,126.9790}</string>
+		<string>{37.5833,126.9795}</string>
+		<string>{37.5828,126.9800}</string>
+		<string>{37.5823,126.9801}</string>
+		<string>{37.5816,126.9802}</string>
+		<string>{37.5799,126.9797}</string>
+		<string>{37.5789,126.9797}</string>
+		<string>{37.5781,126.9796}</string>
+		<string>{37.5764,126.9796}</string>
+		<string>{37.5764,126.9790}</string>
+		<string>{37.5758,126.9780}</string>
+	</array>
+</dict>
+</plist>

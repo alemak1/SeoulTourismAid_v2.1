@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "DirectionsMenuController.h"
 #import "LocationSearchController.h"
-//#import "ToHostelDirectionsController.h"
+#import "ToHostelDirectionsController.h"
 //#import "TouristLocationTableViewController.h"
 #import "UserLocationManager.h"
-//#import "MKDirectionsRequest+HelperMethods.h"
+#import "MKDirectionsRequest+HelperMethods.h"
 #import "WarMemorialNavigationController.h"
-//#import "DestinationCategory.h"
+#import "DestinationCategory.h"
 #import "NavigationAidEntryController.h"
 //#import "HostelAreaNavigationController.h"
 //#import "TouristLocationTBNavigationController.h"
@@ -209,7 +209,6 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     
     UIViewController* nextViewController;
     
-    UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     
     switch (self.currentNextViewController) {
@@ -237,13 +236,14 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case INSADONG_LOCAL_AREA_MAPVIEW:
             nextViewController = [self getLocalAreaAnnotationController:INSADONG];
             break;
+            **/
+            
         case BIKING_JOGGING_ROUTE_CONTROLLER:
-            nextViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"BikeRouteNavigationController"];
+            nextViewController = [self getBikeRouteNavigationController];
             break;
         case POLYGON_NAVIGATION_CONTROLLER:
-            nextViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"PolygonNavigationController"];
+            nextViewController = [self getPolygonNavigationController];
             break;
-            **/
         case NAVIGATION_AID_CONTROLLER_WAR_MEMORIAL:
             nextViewController = [self getNavigationAidControllerForArea:WAR_MEMORIAL_NAV_AREA];
             break;
@@ -256,14 +256,12 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case NAVIGATION_AID_CONTROLLER_SEOUL_GRAND_PARK:
             nextViewController = [self getNavigationAidControllerForArea:SEOUL_GRAND_PARK_AREA];
             break;
-            /**
         case TO_AIRPORT_DIRECTIONS_CONTROLLER:
             nextViewController = [self getToAirportDirectionsController];
             break;
         case TO_SEOUL_STATION_DIRECTIONS_CONTROLLER:
             nextViewController = [self getToSeoulStationDirectionsController];
             break;
-             **/
         default:
             break;
     }
@@ -469,7 +467,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
 }
 
 
-/**
+
 -(ToHostelDirectionsController*)getToAirportDirectionsController{
     
     MKDirectionsResponse* directionsResponse = [MKDirectionsRequest getDirectionsResponseForIncheonInternationalAirportDirectionsRequestForTransportationMode:TRANSIT];
@@ -499,9 +497,8 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
 
 }
 
-**/
 
-/**
+
 -(ToHostelDirectionsController*)getToSeoulStationDirectionsController{
     
     MKDirectionsResponse* directionsResponse = [MKDirectionsRequest getDirectionsResponseForSeoulStationDirectionsRequestForTransportationMode:TRANSIT];
@@ -528,7 +525,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     
     return nextViewController;
 }
-**/
+
 
 /**
 -(ToHostelDirectionsController*)getToHostelDirectionsController{
@@ -601,6 +598,26 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     return warMemorialRegion;
 }
 
+
+#pragma mark  ****** HELPER FUNCTION FOR GETTING BIKE ROUTE NAVIGATION CONTROLLER
+
+-(UIViewController*) getBikeRouteNavigationController{
+    
+    UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
+    
+    return [storyboardD instantiateViewControllerWithIdentifier:@"BikeRouteNavigationController"];
+
+}
+
+#pragma mark HELPER FUNCTION FOR GETTING POLYGON NAVIGATION CONTROLLER
+
+-(UIViewController*)getPolygonNavigationController{
+    
+    UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
+
+    return [storyboardD instantiateViewControllerWithIdentifier:@"PolygonNavigationController"];
+
+}
 
 
 #pragma mark ******* HELPER FUNCTIONS FOR CONFIGURING KOREAN WAR MEMORIAL NAVIGATION AID

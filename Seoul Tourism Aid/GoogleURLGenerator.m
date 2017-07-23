@@ -65,6 +65,9 @@
     
     NSString* urlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@",originString,destinationString];
     
+    urlString = [urlString stringByAppendingString:@"&waypoints=optimize:true"];
+    
+    
     return [NSURL URLWithString:urlString];
     
 }
