@@ -154,6 +154,11 @@
 		BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */; };
 		BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A45401F18A4D100DA5A75 /* MapKit.framework */; };
 		BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */; };
+		BD3BCF6A1F26396B00623191 /* ContactInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF671F26396B00623191 /* ContactInfoController.m */; };
+		BD3BCF6B1F26396B00623191 /* ContactScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF691F26396B00623191 /* ContactScrollViewController.m */; };
+		BD3BCF6E1F263A1400623191 /* AcknowledgementsContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF6D1F263A1400623191 /* AcknowledgementsContainerController.m */; };
+		BD3BCF711F263D7300623191 /* FeaturesContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF701F263D7300623191 /* FeaturesContainerController.m */; };
+		BD3BCF741F2645A800623191 /* MiscellaneousContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF731F2645A800623191 /* MiscellaneousContainerController.m */; };
 		BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */; };
 		BD3DCB031F234839001DB69B /* LanguageRecordingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCB021F234839001DB69B /* LanguageRecordingController.m */; };
 		BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3EA2381F2453B5002B6D29 /* NavigationAidEntryController.m */; };
@@ -403,6 +408,16 @@
 		BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleURLGenerator.m; sourceTree = "<group>"; };
 		BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleJSONResponseParser.h; sourceTree = "<group>"; };
 		BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleJSONResponseParser.m; sourceTree = "<group>"; };
+		BD3BCF661F26396B00623191 /* ContactInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfoController.h; sourceTree = "<group>"; };
+		BD3BCF671F26396B00623191 /* ContactInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfoController.m; sourceTree = "<group>"; };
+		BD3BCF681F26396B00623191 /* ContactScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactScrollViewController.h; sourceTree = "<group>"; };
+		BD3BCF691F26396B00623191 /* ContactScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactScrollViewController.m; sourceTree = "<group>"; };
+		BD3BCF6C1F2639FF00623191 /* AcknowledgementsContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsContainerController.h; sourceTree = "<group>"; };
+		BD3BCF6D1F263A1400623191 /* AcknowledgementsContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsContainerController.m; sourceTree = "<group>"; };
+		BD3BCF6F1F263D6600623191 /* FeaturesContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturesContainerController.h; sourceTree = "<group>"; };
+		BD3BCF701F263D7300623191 /* FeaturesContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturesContainerController.m; sourceTree = "<group>"; };
+		BD3BCF721F26453100623191 /* MiscellaneousContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiscellaneousContainerController.h; sourceTree = "<group>"; };
+		BD3BCF731F2645A800623191 /* MiscellaneousContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscellaneousContainerController.m; sourceTree = "<group>"; };
 		BD3DCAFE1F2338B5001DB69B /* LanguageTranslationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageTranslationController.h; sourceTree = "<group>"; };
 		BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTranslationController.m; sourceTree = "<group>"; };
 		BD3DCB011F234829001DB69B /* LanguageRecordingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageRecordingController.h; sourceTree = "<group>"; };
@@ -497,8 +512,16 @@
 				BD2E4D361F25CB06005770D1 /* Acknowledgements */,
 				BD2E4D271F25B4B3005770D1 /* ScrollableInfoController.h */,
 				BD2E4D281F25B4B3005770D1 /* ScrollableInfoController.m */,
+				BD3BCF661F26396B00623191 /* ContactInfoController.h */,
+				BD3BCF671F26396B00623191 /* ContactInfoController.m */,
+				BD3BCF681F26396B00623191 /* ContactScrollViewController.h */,
+				BD3BCF691F26396B00623191 /* ContactScrollViewController.m */,
 				BD2E4D2A1F25B519005770D1 /* content_iPhone.plist */,
 				BD2E4D2C1F25B54B005770D1 /* IconAcknowledgements.plist */,
+				BD3BCF6F1F263D6600623191 /* FeaturesContainerController.h */,
+				BD3BCF701F263D7300623191 /* FeaturesContainerController.m */,
+				BD3BCF721F26453100623191 /* MiscellaneousContainerController.h */,
+				BD3BCF731F2645A800623191 /* MiscellaneousContainerController.m */,
 			);
 			name = ScrollableInfoController;
 			sourceTree = "<group>";
@@ -512,6 +535,8 @@
 				BD2E4D3B1F25D16D005770D1 /* AuthorPicCell.m */,
 				BD2E4D3D1F25D36D005770D1 /* AcknowledgementsIndexVC.h */,
 				BD2E4D3E1F25D381005770D1 /* AcknowledgementsIndexVC.m */,
+				BD3BCF6C1F2639FF00623191 /* AcknowledgementsContainerController.h */,
+				BD3BCF6D1F263A1400623191 /* AcknowledgementsContainerController.m */,
 			);
 			name = Acknowledgements;
 			sourceTree = "<group>";
@@ -1166,6 +1191,7 @@
 				BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */,
 				BD32321F1F1E3082000E2236 /* FlickrProgressControllerIPAD.m in Sources */,
 				BD32EBF31F24FDB300B5E8D2 /* AudioSection.m in Sources */,
+				BD3BCF6B1F26396B00623191 /* ContactScrollViewController.m in Sources */,
 				BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */,
 				BD32EBEB1F24FB6000B5E8D2 /* AudioSampleCell.m in Sources */,
 				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
@@ -1182,6 +1208,7 @@
 				BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */,
 				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
 				BD3570961F24D1E7003BE859 /* BikeRouteMapController.m in Sources */,
+				BD3BCF711F263D7300623191 /* FeaturesContainerController.m in Sources */,
 				BD2EDB9B1F1B903E00C86D37 /* UIViewController+HelperMethods.m in Sources */,
 				BD38F2CE1F1B365C00471E16 /* AppDelegate.m in Sources */,
 				BD3EA23F1F2454CF002B6D29 /* WarMemorialAnnotation.m in Sources */,
@@ -1193,6 +1220,7 @@
 				BD35708C1F24D197003BE859 /* PolygonMapController.m in Sources */,
 				BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */,
 				BD38F2CA1F1B363400471E16 /* MainVideoPreviewController.m in Sources */,
+				BD3BCF6E1F263A1400623191 /* AcknowledgementsContainerController.m in Sources */,
 				BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */,
 				BD3EA23C1F245444002B6D29 /* WarMemorialNavigationController.m in Sources */,
 				BD3713FE1F1E457500283629 /* TranslationController.m in Sources */,
@@ -1208,6 +1236,7 @@
 				BD8A35E71F1DF85800346F88 /* FlickrProgressController.m in Sources */,
 				BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */,
 				BD38F2C51F1B361200471E16 /* EntryViewGameSceneController.m in Sources */,
+				BD3BCF6A1F26396B00623191 /* ContactInfoController.m in Sources */,
 				BD35709B1F24D1F1003BE859 /* BoundaryOverlay.m in Sources */,
 				BD8A35E41F1DF85800346F88 /* FlickrHelper.m in Sources */,
 				BD2EDB841F1B8F9500C86D37 /* WeatherForecastCollectionController.m in Sources */,
@@ -1222,6 +1251,7 @@
 				BD2EDB801F1B8F8500C86D37 /* WeatherForecastSite.m in Sources */,
 				BD38F2C41F1B360D00471E16 /* EntryViewControllerPad.m in Sources */,
 				BD2EDB881F1B8FA200C86D37 /* WeatherDetailController.m in Sources */,
+				BD3BCF741F2645A800623191 /* MiscellaneousContainerController.m in Sources */,
 				BD38F2C31F1B360700471E16 /* SKViewCell.m in Sources */,
 				BD2EDB971F1B901A00C86D37 /* UIView+HelperMethods.m in Sources */,
 				BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */,

@@ -72,10 +72,43 @@
             </objects>
             <point key="canvasLocation" x="2261" y="-833"/>
         </scene>
-        <!--RoomInfoController-->
+        <!--Item-->
+        <scene sceneID="Hsv-Rf-3fu">
+            <objects>
+                <viewController id="PB3-xu-ohh" customClass="FeaturesContainerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AdC-Qv-qis"/>
+                        <viewControllerLayoutGuide type="bottom" id="NaD-g9-PGl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gz7-Ix-mMe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmC-F9-fzL">
+                                <rect key="frame" x="16" y="0.0" width="288" height="305"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dmC-F9-fzL" secondAttribute="trailing" id="4IL-6C-3g8"/>
+                            <constraint firstItem="dmC-F9-fzL" firstAttribute="leading" secondItem="gz7-Ix-mMe" secondAttribute="leadingMargin" id="6zo-Lu-19X"/>
+                            <constraint firstItem="dmC-F9-fzL" firstAttribute="top" secondItem="AdC-Qv-qis" secondAttribute="bottom" id="K5h-8h-nrj"/>
+                            <constraint firstItem="NaD-g9-PGl" firstAttribute="top" secondItem="dmC-F9-fzL" secondAttribute="bottom" id="nAo-Pf-zxB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="DRh-2r-AW3"/>
+                    <connections>
+                        <outlet property="scrollView" destination="dmC-F9-fzL" id="dgg-iz-Lqy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phz-2b-vcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4748" y="-189"/>
+        </scene>
+        <!--AcknowledgementContainerController-->
         <scene sceneID="RF8-U4-OQo">
             <objects>
-                <viewController title="RoomInfoController" id="jDf-Se-atr" customClass="RoomInfoController" sceneMemberID="viewController">
+                <viewController title="RoomInfoController" id="jDf-Se-atr" userLabel="AcknowledgementContainerController" customClass="AcknowledgementsContainerController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aER-0f-33y"/>
                         <viewControllerLayoutGuide type="bottom" id="eUi-w7-5Ng"/>
@@ -100,45 +133,45 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="scrollView" destination="TeE-GK-heQ" id="bYD-jk-FCp"/>
+                        <outlet property="scrollView" destination="TeE-GK-heQ" id="IjU-SD-HJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfD-1m-Bc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3364" y="149"/>
+            <point key="canvasLocation" x="-4041" y="-189"/>
         </scene>
-        <!--FeatureScrollViewController-->
-        <scene sceneID="yvD-31-bfM">
+        <!--Item-->
+        <scene sceneID="noJ-qT-cba">
             <objects>
-                <viewController title="FeatureScrollViewController" id="EwS-FD-vZF" customClass="FeatureScrollViewController" sceneMemberID="viewController">
+                <viewController id="Kmf-Ag-s6u" customClass="MiscellaneousContainerController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zNY-bH-Fp6"/>
-                        <viewControllerLayoutGuide type="bottom" id="cpv-9T-mJu"/>
+                        <viewControllerLayoutGuide type="top" id="XdI-vz-vK9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ged-Kg-USF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SOb-P7-rzY">
+                    <view key="view" contentMode="scaleToFill" id="WaI-Pj-BGZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94m-4V-59p">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zM-tA-xa5">
+                                <rect key="frame" x="16" y="0.0" width="288" height="305"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="94m-4V-59p" firstAttribute="leading" secondItem="SOb-P7-rzY" secondAttribute="leading" id="KCC-b5-BSa"/>
-                            <constraint firstAttribute="trailing" secondItem="94m-4V-59p" secondAttribute="trailing" id="Op1-NM-9gd"/>
-                            <constraint firstItem="94m-4V-59p" firstAttribute="top" secondItem="zNY-bH-Fp6" secondAttribute="bottom" id="kmQ-IO-GWu"/>
-                            <constraint firstItem="cpv-9T-mJu" firstAttribute="top" secondItem="94m-4V-59p" secondAttribute="bottom" id="rci-QY-Z60"/>
+                            <constraint firstItem="Ged-Kg-USF" firstAttribute="top" secondItem="7zM-tA-xa5" secondAttribute="bottom" id="K3Q-wK-1M9"/>
+                            <constraint firstItem="7zM-tA-xa5" firstAttribute="top" secondItem="XdI-vz-vK9" secondAttribute="bottom" id="Mfa-67-fGh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7zM-tA-xa5" secondAttribute="trailing" id="ohg-0X-XXe"/>
+                            <constraint firstItem="7zM-tA-xa5" firstAttribute="leading" secondItem="WaI-Pj-BGZ" secondAttribute="leadingMargin" id="uOD-zO-MCj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Facility" id="fUM-UR-Xbg"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="Kfs-wJ-FuI"/>
                     <connections>
-                        <outlet property="scrollView" destination="94m-4V-59p" id="hK3-hC-F3v"/>
+                        <outlet property="scrollView" destination="7zM-tA-xa5" id="9Xb-sh-Au6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L2G-dQ-lmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Em3-wh-ZUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2628" y="150"/>
+            <point key="canvasLocation" x="-3139" y="-188"/>
         </scene>
         <!--Filter Annotations By:-->
         <scene sceneID="nBq-eg-xXR">
@@ -588,7 +621,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRo-Pe-lKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1729" y="-731"/>
+            <point key="canvasLocation" x="-4517" y="863"/>
         </scene>
         <!--Scrollable Info Controller-->
         <scene sceneID="Qpe-u1-zVL">
@@ -649,7 +682,7 @@
         <!--AcknowledgementsIndexVC-->
         <scene sceneID="E82-zH-XX0">
             <objects>
-                <viewController storyboardIdentifier="ContactInfoController" title="AcknowledgementsIndexVC" id="rlU-te-xtf" customClass="AcknowledgementsIndexVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcknowledgementsIndexVC" title="AcknowledgementsIndexVC" id="rlU-te-xtf" customClass="AcknowledgementsIndexVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y51-KH-YUi"/>
                         <viewControllerLayoutGuide type="bottom" id="TGa-ja-gsI"/>
@@ -821,7 +854,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCR-CT-c7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1269" y="-1403"/>
+            <point key="canvasLocation" x="-3514" y="864"/>
         </scene>
         <!--Hostel Area Container Controller-->
         <scene sceneID="BgB-z5-F2u">
@@ -872,7 +905,7 @@
         <!--FeatureViewController-->
         <scene sceneID="Pl1-PK-KTM">
             <objects>
-                <viewController storyboardIdentifier="FeatureViewController" title="FeatureViewController" id="5iN-p4-st2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppFeatureController" title="FeatureViewController" id="5iN-p4-st2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1xF-1w-fVF"/>
                         <viewControllerLayoutGuide type="bottom" id="Kvr-KF-bHM"/>
@@ -899,7 +932,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Annotated navigation aids for tourist regions">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -909,20 +942,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ek-kq-ioX">
-                                        <rect key="frame" x="0.0" y="72" width="288" height="22.5"/>
+                                        <rect key="frame" x="0.0" y="72.5" width="288" height="19"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapAddressA" translatesAutoresizingMaskIntoConstraints="NO" id="rR8-PC-ELU">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="9M7-Vo-9Dy"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bdu-nX-Yc1">
-                                                <rect key="frame" x="30" y="0.0" width="258" height="22.5"/>
+                                                <rect key="frame" x="30" y="0.0" width="258" height="19"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Region monitoring for major hotspots ">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -933,7 +966,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRB-Ff-Sjc">
-                                        <rect key="frame" x="0.0" y="136" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="134" width="288" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partlyCloudyA" translatesAutoresizingMaskIntoConstraints="NO" id="YwQ-F8-oJ8">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -947,7 +980,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Weather forecasts for major Korean cities">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -957,7 +990,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-Da-9n1">
-                                        <rect key="frame" x="0.0" y="208" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="206.5" width="277.5" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currencyC" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-rl-fy7">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -967,11 +1000,11 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AQb-yG-O1z">
-                                                <rect key="frame" x="30" y="0.0" width="258" height="30"/>
+                                                <rect key="frame" x="30" y="0.0" width="247.5" height="30"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Prices for common Korean products">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -981,7 +1014,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dus-7O-WD3">
-                                        <rect key="frame" x="0.0" y="280" width="288" height="40"/>
+                                        <rect key="frame" x="0.0" y="278.5" width="288" height="40"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatA" translatesAutoresizingMaskIntoConstraints="NO" id="P0P-bQ-h14">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
@@ -994,7 +1027,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Basic Korean phrases and translation help">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1004,7 +1037,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-Do-p7i">
-                                        <rect key="frame" x="0.0" y="362" width="280" height="30"/>
+                                        <rect key="frame" x="0.0" y="361" width="280" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bunny2_walk1" translatesAutoresizingMaskIntoConstraints="NO" id="bcV-9b-V1l">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1021,7 +1054,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="     Brainy Bunny Learns Korean (2D Platformer)">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1032,20 +1065,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwr-ca-IP4">
-                                        <rect key="frame" x="0.0" y="433.5" width="288" height="22.5"/>
+                                        <rect key="frame" x="0.0" y="433.5" width="191" height="22"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paintingA" translatesAutoresizingMaskIntoConstraints="NO" id="yoU-Xi-9c1">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="vt3-UB-Ul2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="10R-eZ-Aeh">
-                                                <rect key="frame" x="30" y="0.0" width="258" height="22.5"/>
+                                                <rect key="frame" x="30" y="0.0" width="161" height="22"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="     Flickr image galleries and YouTube tourism videos">
+                                                    <fragment content="     Flickr image galleries ">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1056,7 +1089,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-bH-jHc">
-                                        <rect key="frame" x="0.0" y="498" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="498" width="200.5" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tvA" translatesAutoresizingMaskIntoConstraints="NO" id="WqX-N7-8gJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1065,11 +1098,11 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-hr-ivE">
-                                                <rect key="frame" x="30" y="0.0" width="258" height="30"/>
+                                                <rect key="frame" x="30" y="0.0" width="170.5" height="30"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="     Tourism Videos and Image Galleries">
+                                                    <fragment content="     YouTube tourism videos">
                                                         <attributes>
-                                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                            <font key="NSFont" size="14" name="Futura-Medium"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1092,39 +1125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gis-vj-jkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-615" y="-1427"/>
-        </scene>
-        <!--ContactInfoScrollController-->
-        <scene sceneID="OMK-tT-9NM">
-            <objects>
-                <viewController title="ContactInfoScrollController" id="3O5-c1-QEk" customClass="ContactScrollViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hQu-z9-gpr"/>
-                        <viewControllerLayoutGuide type="bottom" id="uzL-FL-JtA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gHT-0E-jCq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVT-2G-xwn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
-                            </scrollView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="UVT-2G-xwn" firstAttribute="top" secondItem="hQu-z9-gpr" secondAttribute="bottom" id="5WX-Z7-8Lp"/>
-                            <constraint firstAttribute="trailing" secondItem="UVT-2G-xwn" secondAttribute="trailing" id="UkM-t4-Dcf"/>
-                            <constraint firstItem="UVT-2G-xwn" firstAttribute="leading" secondItem="gHT-0E-jCq" secondAttribute="leading" id="cwu-l6-B3E"/>
-                            <constraint firstItem="uzL-FL-JtA" firstAttribute="top" secondItem="UVT-2G-xwn" secondAttribute="bottom" id="vJb-bF-tzC"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Contact/Address Info" id="bc6-0F-BaT"/>
-                    <connections>
-                        <outlet property="scrollView" destination="UVT-2G-xwn" id="TNX-pv-tdp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P8K-BN-VDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1865" y="67"/>
+            <point key="canvasLocation" x="-5649" y="-132"/>
         </scene>
         <!--Hostel Collection Controller-->
         <scene sceneID="9Ce-1L-Zg8">
@@ -1324,7 +1325,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qa-Y6-pug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2601" y="-1236"/>
+            <point key="canvasLocation" x="-2061" y="562"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RPl-DS-mZf">
+            <objects>
+                <viewController storyboardIdentifier="MiscellaneousInfoController" id="S4N-Jv-srm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C8K-Fk-Vno"/>
+                        <viewControllerLayoutGuide type="bottom" id="mYL-hI-jdk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="86y-aZ-Zrz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-HM-eRO">
+                                <rect key="frame" x="16" y="20" width="288" height="548"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-LO-GGd">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="109.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahc-in-EYj">
+                                        <rect key="frame" x="0.0" y="109.5" width="288" height="109.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dp-8C-lsO">
+                                        <rect key="frame" x="0.0" y="219" width="288" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-fN-VFu">
+                                        <rect key="frame" x="0.0" y="329" width="288" height="109.5"/>
+                                        <state key="normal" title="Leave Us a Review"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rC-FM-vdq">
+                                        <rect key="frame" x="0.0" y="438.5" width="288" height="109.5"/>
+                                        <state key="normal" title="Visit Our App Support Website"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cbv-HM-eRO" firstAttribute="top" secondItem="C8K-Fk-Vno" secondAttribute="bottom" id="4dR-5o-Ejo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cbv-HM-eRO" secondAttribute="trailing" id="TQh-0o-qDv"/>
+                            <constraint firstItem="mYL-hI-jdk" firstAttribute="top" secondItem="cbv-HM-eRO" secondAttribute="bottom" id="ack-ih-ZMl"/>
+                            <constraint firstItem="cbv-HM-eRO" firstAttribute="leading" secondItem="86y-aZ-Zrz" secondAttribute="leadingMargin" id="cy0-53-DJa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDR-CB-TVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4941" y="421"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="shM-GU-geV">
@@ -1338,14 +1396,14 @@
                         <color key="selectedImageTintColor" red="0.90980392160000001" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3O5-c1-QEk" kind="relationship" relationship="viewControllers" id="2il-zq-hYy"/>
-                        <segue destination="EwS-FD-vZF" kind="relationship" relationship="viewControllers" id="975-sM-wGg"/>
                         <segue destination="jDf-Se-atr" kind="relationship" relationship="viewControllers" id="wSw-2O-Rzc"/>
+                        <segue destination="PB3-xu-ohh" kind="relationship" relationship="viewControllers" id="Nau-gm-yEH"/>
+                        <segue destination="Kmf-Ag-s6u" kind="relationship" relationship="viewControllers" id="zdv-Kf-BJE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0A-qc-Yxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2343" y="-542"/>
+            <point key="canvasLocation" x="-4232" y="-781"/>
         </scene>
         <!--Weather Display Controller-->
         <scene sceneID="j8S-ah-WIy">
