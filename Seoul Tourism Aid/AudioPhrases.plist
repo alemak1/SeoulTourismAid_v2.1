@@ -174,6 +174,48 @@
 			<key>originalPhrase</key>
 			<string>Can I park my bike here?</string>
 		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio9</string>
+			<key>originalPhrase</key>
+			<string>Can I take the high-speed train?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio10</string>
+			<key>originalPhrase</key>
+			<string>Where is the gate for this flight?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio11</string>
+			<key>originalPhrase</key>
+			<string>Do I have to declare this at customs?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio12</string>
+			<key>originalPhrase</key>
+			<string>Which bus goes to this place?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio13</string>
+			<key>originalPhrase</key>
+			<string>Where is the baggage claim area?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio14</string>
+			<key>originalPhrase</key>
+			<string>What time is this flight?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio15</string>
+			<key>originalPhrase</key>
+			<string>Do you stop at this place?</string>
+		</dict>
 	</array>
 </dict>
 </plist>

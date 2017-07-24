@@ -27,6 +27,13 @@
 		BD2E4D391F25CB39005770D1 /* AcknowledgementsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E4D381F25CB39005770D1 /* AcknowledgementsVC.m */; };
 		BD2E4D3C1F25D16D005770D1 /* AuthorPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E4D3B1F25D16D005770D1 /* AuthorPicCell.m */; };
 		BD2E4D3F1F25D381005770D1 /* AcknowledgementsIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E4D3E1F25D381005770D1 /* AcknowledgementsIndexVC.m */; };
+		BD2E4D411F25DAAA005770D1 /* transportationAudio9.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D401F25DAAA005770D1 /* transportationAudio9.caf */; };
+		BD2E4D431F25DB23005770D1 /* transportationAudio10.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D421F25DB23005770D1 /* transportationAudio10.caf */; };
+		BD2E4D451F25DB8C005770D1 /* transportationAudio11.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D441F25DB8C005770D1 /* transportationAudio11.caf */; };
+		BD2E4D471F25DBE8005770D1 /* transportationAudio12.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D461F25DBE8005770D1 /* transportationAudio12.caf */; };
+		BD2E4D491F25DC50005770D1 /* transportationAudio13.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D481F25DC50005770D1 /* transportationAudio13.caf */; };
+		BD2E4D4B1F25DCB0005770D1 /* transportationAudio14.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D4A1F25DCB0005770D1 /* transportationAudio14.caf */; };
+		BD2E4D4D1F25DCFF005770D1 /* transportationAudio15.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D4C1F25DCFF005770D1 /* transportationAudio15.caf */; };
 		BD2EDB7C1F1B8F7B00C86D37 /* WeatherIconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB7B1F1B8F7B00C86D37 /* WeatherIconManager.m */; };
 		BD2EDB801F1B8F8500C86D37 /* WeatherForecastSite.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB7E1F1B8F8500C86D37 /* WeatherForecastSite.m */; };
 		BD2EDB811F1B8F8500C86D37 /* WeatherForecastSites.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD2EDB7F1F1B8F8500C86D37 /* WeatherForecastSites.plist */; };
@@ -201,6 +208,13 @@
 		BD2E4D3B1F25D16D005770D1 /* AuthorPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorPicCell.m; sourceTree = "<group>"; };
 		BD2E4D3D1F25D36D005770D1 /* AcknowledgementsIndexVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsIndexVC.h; sourceTree = "<group>"; };
 		BD2E4D3E1F25D381005770D1 /* AcknowledgementsIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsIndexVC.m; sourceTree = "<group>"; };
+		BD2E4D401F25DAAA005770D1 /* transportationAudio9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio9.caf; sourceTree = "<group>"; };
+		BD2E4D421F25DB23005770D1 /* transportationAudio10.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio10.caf; sourceTree = "<group>"; };
+		BD2E4D441F25DB8C005770D1 /* transportationAudio11.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio11.caf; sourceTree = "<group>"; };
+		BD2E4D461F25DBE8005770D1 /* transportationAudio12.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio12.caf; sourceTree = "<group>"; };
+		BD2E4D481F25DC50005770D1 /* transportationAudio13.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio13.caf; sourceTree = "<group>"; };
+		BD2E4D4A1F25DCB0005770D1 /* transportationAudio14.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio14.caf; sourceTree = "<group>"; };
+		BD2E4D4C1F25DCFF005770D1 /* transportationAudio15.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio15.caf; sourceTree = "<group>"; };
 		BD2EDB7A1F1B8F7B00C86D37 /* WeatherIconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherIconManager.h; sourceTree = "<group>"; };
 		BD2EDB7B1F1B8F7B00C86D37 /* WeatherIconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherIconManager.m; sourceTree = "<group>"; };
 		BD2EDB7D1F1B8F8500C86D37 /* WeatherForecastSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastSite.h; sourceTree = "<group>"; };
@@ -729,6 +743,13 @@
 		BD3931E61F2585A2008B3C1B /* SoundFiles */ = {
 			isa = PBXGroup;
 			children = (
+				BD2E4D4C1F25DCFF005770D1 /* transportationAudio15.caf */,
+				BD2E4D481F25DC50005770D1 /* transportationAudio13.caf */,
+				BD2E4D4A1F25DCB0005770D1 /* transportationAudio14.caf */,
+				BD2E4D461F25DBE8005770D1 /* transportationAudio12.caf */,
+				BD2E4D441F25DB8C005770D1 /* transportationAudio11.caf */,
+				BD2E4D421F25DB23005770D1 /* transportationAudio10.caf */,
+				BD2E4D401F25DAAA005770D1 /* transportationAudio9.caf */,
 				BD2E4D341F25BE03005770D1 /* transportationAudio8.caf */,
 				BD2E4D321F25BDAD005770D1 /* transportationAudio7.caf */,
 				BD2E4D301F25BD50005770D1 /* transportationAudio6.caf */,
@@ -1004,17 +1025,20 @@
 				BD3932051F2590D5008B3C1B /* clothingAudio1.caf in Resources */,
 				BD2E4D1D1F25A72B005770D1 /* transportationAudio4.caf in Resources */,
 				BD3931ED1F2585DE008B3C1B /* foodAudio4.caf in Resources */,
+				BD2E4D431F25DB23005770D1 /* transportationAudio10.caf in Resources */,
 				BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */,
 				BD35709E1F24D248003BE859 /* DonatedRelicsExhibit.plist in Resources */,
 				BD2E4D331F25BDAD005770D1 /* transportationAudio7.caf in Resources */,
 				BD3570B61F24D2A3003BE859 /* ROKArmedForcesRoom.plist in Resources */,
 				BD8A35E91F1DF85800346F88 /* FlickrSearchTerms.plist in Resources */,
+				BD2E4D4D1F25DCFF005770D1 /* transportationAudio15.caf in Resources */,
 				BD3931E91F2585CA008B3C1B /* foodAudio2.caf in Resources */,
 				BD3932011F258EF5008B3C1B /* miscAudio3.caf in Resources */,
 				BD3570A01F24D255003BE859 /* Gwanghuamun.plist in Resources */,
 				BD3570AC1F24D283003BE859 /* NationalSecurityPavilionPath.plist in Resources */,
 				BD3570B21F24D293003BE859 /* path1.plist in Resources */,
 				BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */,
+				BD2E4D451F25DB8C005770D1 /* transportationAudio11.caf in Resources */,
 				BD2E4D2D1F25B54B005770D1 /* IconAcknowledgements.plist in Resources */,
 				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
 				BD3931F91F258D04008B3C1B /* foodAudio8.caf in Resources */,
@@ -1036,6 +1060,7 @@
 				BD3932031F258F3E008B3C1B /* miscAudio4.caf in Resources */,
 				BD3145221F19D05D00999981 /* Assets.xcassets in Resources */,
 				BD2E4D351F25BE03005770D1 /* transportationAudio8.caf in Resources */,
+				BD2E4D4B1F25DCB0005770D1 /* transportationAudio14.caf in Resources */,
 				BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */,
 				BD3570B91F24D2B6003BE859 /* SeoulGrandParkArea.plist in Resources */,
 				BD2E4D1B1F25A6B5005770D1 /* transportationAudio3.caf in Resources */,
@@ -1044,6 +1069,7 @@
 				BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */,
 				BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */,
 				BD3931EB1F2585D5008B3C1B /* foodAudio3.caf in Resources */,
+				BD2E4D411F25DAAA005770D1 /* transportationAudio9.caf in Resources */,
 				BD3570BF1F24D2D1003BE859 /* WarHistoryExhibit2.plist in Resources */,
 				BD3931EF1F2585E9008B3C1B /* foodAudio5.caf in Resources */,
 				BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */,
@@ -1060,6 +1086,8 @@
 				BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */,
 				BD3570A61F24D270003BE859 /* KoreanWarExhibitRoom2.plist in Resources */,
 				BD2E4D191F25A621005770D1 /* transportationAudio2.caf in Resources */,
+				BD2E4D471F25DBE8005770D1 /* transportationAudio12.caf in Resources */,
+				BD2E4D491F25DC50005770D1 /* transportationAudio13.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

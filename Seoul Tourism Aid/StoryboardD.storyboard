@@ -546,7 +546,7 @@
         <scene sceneID="zMj-8M-cKu">
             <objects>
                 <collectionViewController id="Dxa-tJ-5oe" customClass="AcknowledgementsVC" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YiB-jp-Bag">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="YiB-jp-Bag">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1188,7 +1188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="12" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-8Q-Vmd">
-                                <rect key="frame" x="16" y="198" width="288" height="103"/>
+                                <rect key="frame" x="16" y="198" width="288" height="102"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="afX-VB-cNG">
                                     <size key="itemSize" width="200" height="90"/>
@@ -1198,7 +1198,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MidTopCollectionViewCell" id="YtI-7d-H1s">
-                                        <rect key="frame" x="0.0" y="6.5" width="200" height="90"/>
+                                        <rect key="frame" x="0.0" y="6" width="200" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
@@ -1213,7 +1213,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmu-8T-PjU">
-                                <rect key="frame" x="16" y="316" width="132" height="21"/>
+                                <rect key="frame" x="16" y="315" width="132" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SouthWest Room">
                                         <attributes>
@@ -1225,7 +1225,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="13" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-Fs-Ewv">
-                                <rect key="frame" x="16" y="342" width="288" height="103"/>
+                                <rect key="frame" x="16" y="341" width="288" height="102"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a0S-0E-Izs">
                                     <size key="itemSize" width="200" height="90"/>
@@ -1235,7 +1235,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MidBottomCollectionViewCell" id="t7I-EC-V1J">
-                                        <rect key="frame" x="0.0" y="6.5" width="200" height="90"/>
+                                        <rect key="frame" x="0.0" y="6" width="200" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
@@ -1250,7 +1250,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14Y-gN-Uei">
-                                <rect key="frame" x="16" y="466" width="125" height="23"/>
+                                <rect key="frame" x="16" y="464" width="125" height="23"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SouthEast Room">
                                         <attributes>
@@ -1262,7 +1262,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="14" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-sg-ryP">
-                                <rect key="frame" x="16" y="494" width="288" height="103"/>
+                                <rect key="frame" x="16" y="492" width="288" height="102"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oIb-yB-kP8">
                                     <size key="itemSize" width="200" height="90"/>
@@ -1272,7 +1272,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BottomCollectionViewCell" id="qbk-fL-Rtq">
-                                        <rect key="frame" x="0.0" y="6.5" width="200" height="90"/>
+                                        <rect key="frame" x="0.0" y="6" width="200" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
@@ -3083,13 +3083,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-tD-br2">
-                                <rect key="frame" x="0.0" y="64" width="320" height="153.5"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="154.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-WN-Hal">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="51.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Il-Eu-q2m">
-                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="51"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="51.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="   Filter by Max Distance:">
                                                         <attributes>
@@ -3102,7 +3102,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="500" minValue="0.0" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="rZ2-gq-WWz">
-                                                <rect key="frame" x="180.5" y="0.0" width="141.5" height="52"/>
+                                                <rect key="frame" x="180.5" y="0.0" width="141.5" height="52.5"/>
                                                 <connections>
                                                     <action selector="didChangeSelectedDistance:" destination="SO1-yC-mBF" eventType="valueChanged" id="abm-Ud-Q5q"/>
                                                 </connections>
@@ -3113,10 +3113,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YFY-pa-SK3">
-                                        <rect key="frame" x="0.0" y="51" width="320" height="51"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="320" height="51.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GMF-dG-hD7">
-                                                <rect key="frame" x="0.0" y="0.0" width="210" height="51"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="51.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="   Filter by Admission Fee:">
                                                         <attributes>
@@ -3140,7 +3140,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m3-Zt-0av">
-                                        <rect key="frame" x="0.0" y="102" width="320" height="51.5"/>
+                                        <rect key="frame" x="0.0" y="103" width="320" height="51.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XEG-e2-6ER">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="51.5"/>
@@ -3189,7 +3189,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3F-qP-mU3">
-                                <rect key="frame" x="81" y="222.5" width="158" height="35.5"/>
+                                <rect key="frame" x="81" y="223.5" width="158" height="35.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Search Tourist Sites">
