@@ -20,8 +20,9 @@
 #import <GTMAppAuthFetcherAuthorization.h>
 #import <GTMSessionFetcherService.h>
 
+#import <MessageUI/MessageUI.h>
 
-@interface LanguageTranslationController () <UITextViewDelegate>
+@interface LanguageTranslationController () <UITextViewDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *sourceLanguageTextView;
 
@@ -32,6 +33,11 @@
 - (IBAction)translateToKorean:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+- (IBAction)showMailPicker:(UIButton *)sender;
+
+- (IBAction)showSMSPicker:(UIButton *)sender;
+
 
 @end
 
@@ -215,5 +221,203 @@
     self.sourceText = [self.sourceLanguageTextView text];
 
 }
+
+- (IBAction)showMailPicker:(UIButton *)sender {
+    // You must check that the current device can send email messages before you
+    // attempt to create an instance of MFMailComposeViewController.  If the
+    // device can not send email messages,
+    // [[MFMailComposeViewController alloc] init] will return nil.  Your app
+    // will crash when it calls -presentViewController:animated:completion: with
+    // a nil view controller.
+    if ([MFMailComposeViewController canSendMail])
+        // The device can send email.
+    {
+        [self displayMailComposerSheet];
+    }
+    else
+        // The device can not send email.
+    {
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Failed to send mail!" message:@"The current device is not configured to send mail." preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alertController addAction:okay];
+        
+    }
+}
+
+- (IBAction)showSMSPicker:(UIButton *)sender {
+    
+    // You must check that the current device can send SMS messages before you
+    // attempt to create an instance of MFMessageComposeViewController.  If the
+    // device can not send SMS messages,
+    // [[MFMessageComposeViewController alloc] init] will return nil.  Your app
+    // will crash when it calls -presentViewController:animated:completion: with
+    // a nil view controller.
+    if ([MFMessageComposeViewController canSendText])
+        // The device can send email.
+    {
+        [self displaySMSComposerSheet];
+    }
+    else
+        // The device can not send email.
+    {
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Failed to send SMS!" message:@"The current device is not configured to send SMS." preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alertController addAction:okay];
+    }
+}
+
+
+#pragma mark - Compose Mail/SMS
+
+- (void)displayMailComposerSheet
+{
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    picker.mailComposeDelegate = self;
+    
+    [picker setSubject:@"Hello from California!"];
+    
+    // Set up recipients
+    NSArray *toRecipients = [NSArray arrayWithObject:@"first@example.com"];
+    NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil];
+    NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@example.com"];
+    
+    [picker setToRecipients:toRecipients];
+    [picker setCcRecipients:ccRecipients];
+    [picker setBccRecipients:bccRecipients];
+    
+    // Attach an image to the email
+    /**
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"jpg"];
+    NSData *myData = [NSData dataWithContentsOfFile:path];
+    [picker addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"rainy"];
+    **/
+    
+    NSString* messageToSend = [self.translatedTextLabel text];
+    
+    if(messageToSend == nil){
+        messageToSend = self.sourceText;
+    }
+    
+    // Fill out the email body text
+    NSString *emailBody = messageToSend;
+    
+    [picker setMessageBody:emailBody isHTML:NO];
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+// -------------------------------------------------------------------------------
+//  displayMailComposerSheet
+//  Displays an SMS composition interface inside the application.
+// -------------------------------------------------------------------------------
+- (void)displaySMSComposerSheet
+{
+    MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
+    picker.messageComposeDelegate = self;
+    
+    // You can specify one or more preconfigured recipients.  The user has
+    // the option to remove or add recipients from the message composer view
+    // controller.
+    /* picker.recipients = @[@"Phone number here"]; */
+    
+    // You can specify the initial message text that will appear in the message
+    // composer view controller.
+    
+    NSString* messageToSend = [self.translatedTextLabel text];
+    
+    if(messageToSend == nil){
+        messageToSend = self.sourceText;
+    }
+    
+    picker.body = messageToSend;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+
+#pragma mark - Delegate Methods
+
+// -------------------------------------------------------------------------------
+//  mailComposeController:didFinishWithResult:
+//  Dismisses the email composition interface when users tap Cancel or Send.
+//  Proceeds to update the message field with the result of the operation.
+// -------------------------------------------------------------------------------
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    NSString* alertMessage = nil;
+    
+    // Notifies users about errors associated with the interface
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            alertMessage = @"Result: Mail sending canceled";
+            break;
+        case MFMailComposeResultSaved:
+            alertMessage = @"Result: Mail saved";
+            break;
+        case MFMailComposeResultSent:
+            alertMessage = @"Result: Mail sent";
+            break;
+        case MFMailComposeResultFailed:
+            alertMessage = @"Result: Mail sending failed";
+            break;
+        default:
+            alertMessage = @"Result: Mail not sent";
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:alertMessage message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:okay];
+    
+}
+
+// -------------------------------------------------------------------------------
+//  messageComposeViewController:didFinishWithResult:
+//  Dismisses the message composition interface when users tap Cancel or Send.
+//  Proceeds to update the feedback message field with the result of the
+//  operation.
+// -------------------------------------------------------------------------------
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller
+                 didFinishWithResult:(MessageComposeResult)result
+{
+    NSString* alertMessage = nil;
+    
+    // Notifies users about errors associated with the interface
+    switch (result)
+    {
+        case MessageComposeResultCancelled:
+            alertMessage = @"Result: SMS sending canceled";
+            break;
+        case MessageComposeResultSent:
+            alertMessage = @"Result: SMS sent";
+            break;
+        case MessageComposeResultFailed:
+            alertMessage = @"Result: SMS sending failed";
+            break;
+        default:
+            alertMessage = @"Result: SMS not sent";
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+
+    
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:alertMessage message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:okay];
+}
+
 
 @end

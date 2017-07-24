@@ -116,7 +116,7 @@
         
         switch (selectedOptionIndex) {
             case 0:
-                //Information about hostel
+                //App information controller
                 requestedViewController = [self getInformationControllerFromStoryBoard];
                 NSLog(@"You selected option %d",(int)selectedOptionIndex);
                 break;
@@ -283,18 +283,18 @@
     
     // decide which kind of content we need based on the device idiom,
     // when we load the proper storyboard, the "ContentController" class will take it from here
-    UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
     
     
     NSString *storyBoardIdentifier = @"PadInformationController";
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
-        storyBoardIdentifier = @"PhoneInformationController";
+        storyBoardIdentifier = @"ScollableInfoController";
     }
     
     
-    return [mainStoryBoard instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+    return [storyboardD instantiateViewControllerWithIdentifier:storyBoardIdentifier];
     
 }
 

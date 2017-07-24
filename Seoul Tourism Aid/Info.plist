@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>The app would like to record your speech so that it can translate the recorded speech into Korean, so that you can better communicate with locals while on your trip.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The app would like to record your speech so that it can translate the recorded text to Korean, which you can use to help communicate with locals while in Korea.</string>
 	<key>NSCameraUsageDescription</key>

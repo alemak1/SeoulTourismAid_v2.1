@@ -7,6 +7,8 @@
 //
 
 #import <AVFoundation/AVFoundation.h>
+#import <Speech/Speech.h>
+
 #import "LanguageRecordingController.h"
 #import "Constants.h"
 
@@ -22,17 +24,30 @@
 #import <GTMSessionFetcherService.h>
 
 
-@interface LanguageRecordingController () <AVAudioRecorderDelegate>
+@interface LanguageRecordingController () <SFSpeechRecognizerDelegate>
+
+@property (readonly) SFSpeechRecognizer* speechRecognizer;
+@property (readonly) AVAudioEngine* audioEngine;
+
+@property SFSpeechAudioBufferRecognitionRequest* recognitionRequest;
+@property SFSpeechRecognitionTask* recognitionTask;
 
 @property AVAudioRecorder* recorder;
 @property NSString* recorderFilePath;
 @property NSData* audioData;
+@property NSString* sourceText;
 
 /** IBOutlets **/
 
-- (IBAction)startRecording:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
-- (IBAction)stopRecording:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property (weak, nonatomic) IBOutlet UIButton *recordButton;
+
+- (IBAction)toggleRecordButton:(UIButton *)sender;
+
+
 
 @property (weak, nonatomic) IBOutlet UIButton *translateToKorean;
 
@@ -43,197 +58,209 @@
 
 @implementation LanguageRecordingController
 
-CGFloat _recordingSampleRate = 44100.0;
+@synthesize speechRecognizer = _speechRecognizer;
+@synthesize audioEngine = _audioEngine;
+
+
 
 -(void)viewDidLoad{
     
-    _recordingSampleRate = 44100.0;
+    [self.recordButton setEnabled:NO];
+    [self.textView setHidden:NO];
+    [self.activityIndicator setHidden:YES];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [self.speechRecognizer setDelegate:self];
+    
+    [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus authStatus){
+    
+    
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        
+            switch (authStatus) {
+                case SFSpeechRecognizerAuthorizationStatusAuthorized:
+                    [self.recordButton setEnabled:YES];
+                    break;
+                case SFSpeechRecognizerAuthorizationStatusDenied:
+                    [self.recordButton setEnabled:NO];
+                    [self.recordButton setTitle:@"User denied access to speech recognition" forState:UIControlStateDisabled];
+                    break;
+                case SFSpeechRecognizerAuthorizationStatusRestricted:
+                    [self.recordButton setEnabled:YES];
+                    [self.recordButton setTitle:@"Speech recognition restricted on this device" forState:UIControlStateDisabled];
+                    break;
+                case SFSpeechRecognizerAuthorizationStatusNotDetermined:
+                    [self.recordButton setEnabled:NO];
+                    [self.recordButton setTitle:@"Speech recognition not yet authorized" forState:UIControlStateDisabled];
+                    break;
+                default:
+                    break;
+            }
+        
+        }];
+    }];
 }
 
 
 -(void)startRecording{
     
-    /**
-    if([self.recorder isRecording]){
-        
-        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Recording already in progress. Would you like to stop the current recording?" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* stopRecording = [UIAlertAction actionWithTitle:@"Stop Recording" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
-        
-            [self stopRecording];
-        }];
-        
-        UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
-        
-        [alertController addAction:stopRecording];
-        [alertController addAction:cancel];
-
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-        
-        
-        return;
+    [self.textView setHidden:YES];
+    [self.activityIndicator setHidden:NO];
+    [self.activityIndicator startAnimating];
+    
+    if(self.recognitionTask){
+        [self.recognitionTask cancel];
+        self.recognitionTask = nil;
     }
-    
-    **/
-    
-    
-    NSLog(@"Staring recording...");
-    
     
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
     
-    NSError* audioError = nil;
+    NSError* audioSessionError = nil;
     
-    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&audioError];
+    [audioSession setCategory:AVAudioSessionCategoryRecord error:&audioSessionError];
     
-    if(audioError){
-        NSLog(@"AudioSession: %@ %ld %@", [audioError domain], [audioError code], [[audioError userInfo] description]);
+    if(audioSessionError){
+        NSLog(@"Error configuring audio session: %@",[audioSessionError localizedDescription]);
+    }
+    
+    [audioSession setMode:AVAudioSessionModeMeasurement error:&audioSessionError];
+    
+    if(audioSessionError){
+        NSLog(@"Error configuring audio session: %@",[audioSessionError localizedDescription]);
+    }
+    
+    [audioSession setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&audioSessionError];
+    
+    if(audioSessionError){
+        NSLog(@"Error configuring audio session: %@",[audioSessionError localizedDescription]);
+    }
+    
+    self.recognitionRequest = [[SFSpeechAudioBufferRecognitionRequest alloc] init];
+    
+    AVAudioInputNode* inputNode = [self.audioEngine inputNode];
+    
+    if(!inputNode){
+        NSLog(@"Audio Engine has no input node");
         return;
     }
     
-    [audioSession setActive:YES error:&audioError];
-    
-    if(audioError){
-        NSLog(@"AudioSession: %@ %ld %@", [audioError domain], [audioError code], [[audioError userInfo] description]);
+    if(!self.recognitionRequest){
+        NSLog(@"Unable to create an audio buffer recognition request");
+
         return;
     }
     
-    NSMutableDictionary* recordSetting = [[NSMutableDictionary alloc] init];
+    [self.recognitionRequest setShouldReportPartialResults:YES];
     
+    self.recognitionTask = [self.speechRecognizer recognitionTaskWithRequest:self.recognitionRequest resultHandler:^(SFSpeechRecognitionResult*result,NSError*error){
     
-    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
-    [recordSetting setValue:[NSNumber numberWithFloat:16000] forKey:AVSampleRateKey];
-    [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
-    
-    [recordSetting setValue :[NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
-    [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
-    [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
-
-    
-    // Create a new dated file
-    NSDate *now = [NSDate dateWithTimeIntervalSinceNow:0];
-    NSString *caldate = [now description];
-    self.recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", DOCUMENTS_FOLDER, caldate];
-    
-    NSURL *url = [NSURL fileURLWithPath:self.recorderFilePath];
-    
-    NSError* err = nil;
-    
-    self.recorder = [[AVAudioRecorder alloc] initWithURL:url settings:recordSetting error:&err];
-    
-    if(!self.recorder){
-        NSLog(@"Recorder: %@ %ld %@", [err domain], [err code], [[err userInfo] description]);
+        BOOL isFinal = false;
         
-        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Warning" message:[err localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+        if(result){
+            [self.textView setText:result.bestTranscription.formattedString];
+            self.sourceText = result.bestTranscription.formattedString;
+            
+            isFinal = result.isFinal;
+        }
+    
+        if(error || isFinal){
+            
+            [self.audioEngine stop];
+            [inputNode removeTapOnBus:0];
+            
+            self.recognitionRequest = nil;
+            self.recognitionTask = nil;
+            
+            [self.recordButton setEnabled:YES];
+            [self.recordButton setTitle:@"Start Recording" forState:UIControlStateNormal];
         
-        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+            
+        }
+    
+    }];
+    
+    
+     AVAudioFormat* outputFormat = [inputNode outputFormatForBus:0];
+    
+    [inputNode installTapOnBus:0 bufferSize:1024 format:outputFormat block:^(AVAudioPCMBuffer*buffer,AVAudioTime*when){
+    
+        [self.recognitionRequest appendAudioPCMBuffer:buffer];
         
-        [alertController addAction:okay];
         
-        [self presentViewController:alertController animated:YES completion:nil];
-        
+    }];
+    
+    [self.audioEngine prepare];
+    
+    NSError* audioEngineError = nil;
+    
+    [self.audioEngine startAndReturnError:&audioEngineError];
+    
+    if(audioEngineError){
+        NSLog(@"Error configuring audio engine while instaling tap on bus: %@",[audioEngineError localizedDescription]);
         return;
     }
     
-    //prepare to record
-    [self.recorder setDelegate:self];
-    [self.recorder prepareToRecord];
-    self.recorder.meteringEnabled = YES;
     
-    BOOL audioHWAvailable = [audioSession isInputAvailable];
+    [self.activityIndicator stopAnimating];
+    [self.activityIndicator setHidden:YES];
+    [self.textView setHidden:NO];
     
-    if (!audioHWAvailable) {
-        
-        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Audio input hardware not available" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
-        
-        [alertController addAction:okay];
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-        return;
-    }
+    [self.textView setText:@"Speech recognizer activated.  Your recorded speech will appear here.  Start recording speech...."];
     
-    // start recording
-    [self.recorder recordForDuration:(NSTimeInterval) 10];
+
 }
 
 
+#pragma mark ****** SFSpeechRecognizer Delegate
 
-- (void) stopRecording{
-    /**
-    if(![self.recorder isRecording]){
-        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"No recording in progress." message:@"Press the play button to start recording." preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
-        
-        [alertController addAction:okay];
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-        return;
-    }
-    **/
+-(void)speechRecognizer:(SFSpeechRecognizer *)speechRecognizer availabilityDidChange:(BOOL)available{
     
-    [self.recorder stop];
-    
-    NSURL *url = [NSURL fileURLWithPath: self.recorderFilePath];
-    
-    NSError *err = nil;
-    
-    self.audioData = [NSData dataWithContentsOfFile:[url path] options: 0 error:&err];
-    
-    
-    if(!self.audioData)
-        NSLog(@"audio data: %@ %ld %@", [err domain], [err code], [[err userInfo] description]);
-    
-    
-    NSFileManager *fm = [NSFileManager defaultManager];
-    
-    err = nil;
-    [fm removeItemAtPath:[url path] error:&err];
-    
-    if(err){
-        NSLog(@"File Manager: %@ %ld %@", [err domain], [err code], [[err userInfo] description]);
-    
-    }
-    
-    self.recorder = nil;
+    if(available){
+        [self.recordButton setEnabled:YES];
+        [self.recordButton setTitle:@"Start Recording" forState:UIControlStateNormal];
+    } else {
+        [self.recordButton setEnabled:NO];
+        [self.recordButton setTitle:@"Recognition not available" forState:UIControlStateDisabled];
+   }
+
 }
 
-- (void)audioRecorderDidFinishRecording:(AVAudioRecorder *) aRecorder successfully:(BOOL)flag
-{
-    
-    NSLog (@"audioRecorderDidFinishRecording:successfully:");
-    NSLog(@"Audio data info: %@",[self.audioData description]);
-    
-    
-    //Perform speech translation here
-    
-    if(self.audioData){
-        [self performAnalysisOnRecordedAudio:self.audioData];
-    }
-    
-}
-- (IBAction)startRecording:(UIButton *)sender {
-    
-    [self startRecording];
-}
-
-- (IBAction)stopRecording:(UIButton *)sender {
-    [self stopRecording];
-}
 
 - (IBAction)translateToKorean:(UIButton *)sender {
     
 
+    if(!self.sourceText){
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"No text recorded." message:@"Please record your speech before using translation services." preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        
+        [alertController addAction:okay];
+        
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    
+    
+    NSString* sourceText = self.sourceText;
+    
+    NSLog(@"Source text is: %@",sourceText);
+    
+    [self.activityIndicator setHidden:NO];
+    [self.textView setHidden:YES];
+    [self.activityIndicator startAnimating];
+    
+    [self performTranslationsOnSourceText:sourceText andTargetLanguage:@"ko"];
+    
+    
 }
 
 
--(void)performAnalysisOnRecordedAudio:(NSData*)recordedAudio{
+-(void)performTranslationsOnSourceText:(NSString*)text andTargetLanguage:(NSString*)targetLanguage{
     
     NSLog(@"Preparing to make API request..");
     
@@ -243,31 +270,22 @@ CGFloat _recordingSampleRate = 44100.0;
     GTMSessionFetcherService *fetcherService = [[GTMSessionFetcherService alloc] init];
     fetcherService.authorizer = fromKeychainAuthorization;
     
+ 
+    
     /** Convert the captured image into a base64encoded string which can be submitted via the HTTP body to Google Servers **/
     
-    NSString* audioStr = [recordedAudio base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];
+    
     
     NSDictionary* requestBodyDict = @{
-        @"config":@{
-            @"encoding":@"LINEAR16",
-            @"sampleRateHertz":[NSNumber numberWithFloat:16000],
-            @"languageCode":@"en-US",
-            @"maxAlternatives":@1
-                },
-        @"audio":@{
-               @"content":audioStr
-            },
-        
-    
-    };
+                                      @"q":text,
+                                      @"target":targetLanguage
+                                      };
     
     NSError* error = nil;
     
     NSData* postData = [NSJSONSerialization dataWithJSONObject:requestBodyDict options:NSJSONWritingPrettyPrinted error:&error];
     
-    NSLog(@"Data submitted to GoogleCloud endpoint");
-    
-    NSURL* url = [NSURL URLWithString:GOOLE_SPEECH_RECOGNIZTION_BASE_URL_ENDPOINT];
+    NSURL* url = [NSURL URLWithString:GOOGLE_TRANSLATE_BASE_URL_ENDPOINT];
     
     // Creates a fetcher for the API call.
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -304,30 +322,108 @@ CGFloat _recordingSampleRate = 44100.0;
         
         // Parses the JSON response.
         NSError *jsonError = nil;
+        NSDictionary* jsonDict =
+        [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
-        if(data){
-            NSDictionary* jsonDict =
-            [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        
-            // Success response!
-            NSLog(@"Success: %@", jsonDict);
-        }
         // JSON error.
         if (jsonError) {
             NSLog(@"JSON decoding error %@", jsonError);
             return;
         }
         
+        NSString* translatedText = [self parseJSONResponseForTranslatedText:jsonDict];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-                //Update the UI
+            [self.activityIndicator setHidden:YES];
+            [self.activityIndicator stopAnimating];
+
+            [self.textView setHidden:NO];
+            [self.textView setText:translatedText];
+           
+            
         });
         
-       
+        // Success response!
+        NSLog(@"Success: %@", jsonDict);
     }];
     
 }
 
+-(NSString*)parseJSONResponseForTranslatedText:(NSDictionary*)jsonDict{
+    
+    NSString* unavailableMessage = @"No translation available for entered text";
+    
+    NSDictionary* dataDict = jsonDict[@"data"];
+    
+    if(!dataDict){
+        return unavailableMessage;
+    }
+    
+    NSArray* translationsArray = dataDict[@"translations"];
+    
+    if(!translationsArray){
+        return unavailableMessage;
+    }
+    
+    NSDictionary* translationDict = [translationsArray firstObject];
+    
+    if(!translationDict){
+        
+        return unavailableMessage;
+    }
+    
+    NSString* translatedText = translationDict[@"translatedText"];
+    
+    if(translatedText){
+        return translatedText;
+    } else {
+        return unavailableMessage;
+    }
+    
+}
 
+
+#pragma mark ****** Configure AVAudioEngine and SFSpeechRecognizer
+
+-(AVAudioEngine *)audioEngine{
+    if(_audioEngine == nil){
+        _audioEngine = [[AVAudioEngine alloc] init];
+    }
+    
+    return _audioEngine;
+}
+
+
+-(SFSpeechRecognizer *)speechRecognizer{
+    
+    if(_speechRecognizer == nil){
+        _speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
+    }
+    
+    return _speechRecognizer;
+}
+
+
+#pragma mark ***** Interface builder actions
+
+- (IBAction)toggleRecordButton:(UIButton *)sender {
+    
+    if([self.audioEngine isRunning]){
+        [self.audioEngine stop];
+        
+        if(self.recognitionRequest){
+            [self.recognitionRequest endAudio];
+        
+        }
+        
+        [self.recordButton setEnabled:NO];
+        [self.recordButton setTitle:@"Stopping" forState:UIControlStateDisabled];
+        
+    } else {
+        
+        [self startRecording];
+        [self.recordButton setTitle:@"Stop Recording" forState:UIControlStateSelected];
+    }
+}
 @end

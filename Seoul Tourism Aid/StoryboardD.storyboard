@@ -593,7 +593,7 @@
         <!--Scrollable Info Controller-->
         <scene sceneID="Qpe-u1-zVL">
             <objects>
-                <viewController storyboardIdentifier="PhoneInformationController" id="DdF-pG-gpp" customClass="ScrollableInfoController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScollableInfoController" id="DdF-pG-gpp" customClass="ScrollableInfoController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QaD-35-8vS"/>
                         <viewControllerLayoutGuide type="bottom" id="uUf-z4-0Ar"/>
@@ -605,7 +605,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iib-Nm-Rqw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
                                 <connections>
-                                    <outlet property="delegate" destination="DdF-pG-gpp" id="956-xY-AzA"/>
+                                    <outlet property="delegate" destination="DdF-pG-gpp" id="bnN-mt-vDU"/>
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uPi-cX-dXu">
@@ -637,9 +637,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containingView" destination="nDe-3O-yHL" id="W8v-7X-wtb"/>
-                        <outlet property="pageControl" destination="uPi-cX-dXu" id="Jkj-X4-H7b"/>
-                        <outlet property="scrollView" destination="Iib-Nm-Rqw" id="YMc-Yk-48z"/>
+                        <outlet property="containingView" destination="nDe-3O-yHL" id="7eZ-7A-2PJ"/>
+                        <outlet property="pageControl" destination="uPi-cX-dXu" id="SUp-dL-G7H"/>
+                        <outlet property="scrollView" destination="Iib-Nm-Rqw" id="9Hl-4M-jCf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPX-79-sF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
