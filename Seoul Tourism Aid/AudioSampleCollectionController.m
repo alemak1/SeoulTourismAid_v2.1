@@ -11,6 +11,7 @@
 #import "AudioSection.h"
 #import "AudioSampleCell.h"
 #import "AudioController.h"
+#import "AudioHeaderView.h"
 
 @interface AudioSampleCollectionController ()
 
@@ -61,5 +62,48 @@
     
 }
 
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
+    if([kind isEqualToString:UICollectionElementKindSectionHeader]){
+        AudioHeaderView* audioHeaderView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"AudioHeaderView" forIndexPath:indexPath];
+        
+        AudioSection audioSection = (AudioSection)indexPath.section;
+        
+        switch (audioSection) {
+            case CLOTHING:
+                audioHeaderView.headerText = @"Clothing";
+                audioHeaderView.headerImage = [UIImage imageNamed:@"red_shirt"];
+                break;
+            case RESTAURANTS:
+                audioHeaderView.headerText = @"Restaurants";
+                audioHeaderView.headerImage = [UIImage imageNamed:@"otherRestaurantsA"];
+                break;
+            case TRANSPORTATION:
+                audioHeaderView.headerText = @"Transportation";
+                audioHeaderView.headerImage = [UIImage imageNamed:@"undergroundA"];
+                break;
+            case MISCELLANEOUS:
+                audioHeaderView.headerText = @"Miscellaneous";
+                audioHeaderView.headerImage = [UIImage imageNamed:@"blenderA"];
+                break;
+            case FOOD:
+                audioHeaderView.headerText = @"Food";
+                audioHeaderView.headerImage = [UIImage imageNamed:@"cerealA"];
+                break;
+            case BASIC:
+                audioHeaderView.headerText = @"Basic";
+                audioHeaderView.headerImage = [UIImage imageNamed:@"chatA"];
+                break;
+            default:
+                break;
+        }
+        
+        
+        return audioHeaderView;
+        
+    }
+    
+    return nil;
+}
 
 @end

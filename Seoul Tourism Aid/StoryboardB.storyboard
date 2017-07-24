@@ -183,7 +183,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="K06-cC-FkM">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sT2-Ee-3NU">
-                                <rect key="frame" x="912" y="7" width="92" height="30"/>
+                                <rect key="frame" x="267" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </barButtonItem>
@@ -365,7 +365,7 @@
         <scene sceneID="SJ8-Aw-ufK">
             <objects>
                 <collectionViewController id="T9T-gO-8Da" customClass="SeoulFlickSearchController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="P7G-kg-RDP">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="P7G-kg-RDP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -930,18 +930,18 @@
                                 <exclude reference="rA4-FQ-IJS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Wob-vf-u1Y"/>
-                                <exclude reference="i0q-AL-0bK"/>
-                                <exclude reference="jXo-VJ-m25"/>
                                 <exclude reference="Di1-hs-Gxb"/>
                                 <exclude reference="EUh-Lu-ZJy"/>
                                 <exclude reference="JCT-we-04G"/>
                                 <exclude reference="T4X-f6-2QM"/>
                                 <exclude reference="aUb-1F-KLn"/>
                                 <exclude reference="an3-AJ-QXo"/>
-                                <exclude reference="kf2-pC-fNl"/>
                                 <exclude reference="2pq-fZ-QdA"/>
                                 <exclude reference="4tj-8B-B7V"/>
+                                <exclude reference="Wob-vf-u1Y"/>
+                                <exclude reference="i0q-AL-0bK"/>
+                                <exclude reference="jXo-VJ-m25"/>
+                                <exclude reference="kf2-pC-fNl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -949,14 +949,14 @@
                                 <include reference="rA4-FQ-IJS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Wob-vf-u1Y"/>
-                                <include reference="i0q-AL-0bK"/>
-                                <include reference="jXo-VJ-m25"/>
                                 <include reference="Di1-hs-Gxb"/>
                                 <include reference="EUh-Lu-ZJy"/>
                                 <include reference="JCT-we-04G"/>
-                                <include reference="kf2-pC-fNl"/>
                                 <include reference="4tj-8B-B7V"/>
+                                <include reference="Wob-vf-u1Y"/>
+                                <include reference="i0q-AL-0bK"/>
+                                <include reference="jXo-VJ-m25"/>
+                                <include reference="kf2-pC-fNl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1191,7 +1191,7 @@
         <scene sceneID="b4x-Ts-v0A">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductPriceController" id="9vq-uf-f8l" customClass="ProductPriceController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="zjb-9f-LgT">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zjb-9f-LgT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1241,7 +1241,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ProductPriceNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="OV6-BX-VD1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EmK-NH-Y8E">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EmK-NH-Y8E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1258,7 +1258,7 @@
         <scene sceneID="A0U-4M-RDt">
             <objects>
                 <navigationController id="ZDS-Jc-X7h" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TCE-0A-CyV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TCE-0A-CyV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1451,21 +1451,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="2rL-To-QrI"/>
-                                <exclude reference="JcW-BN-3KO"/>
-                                <exclude reference="KS2-aQ-phg"/>
-                                <exclude reference="KVx-tJ-9UI"/>
-                                <exclude reference="N3V-2e-s4T"/>
-                                <exclude reference="OlS-30-MRF"/>
-                                <exclude reference="PBD-jg-2OR"/>
-                                <exclude reference="XMb-pi-gFn"/>
-                                <exclude reference="eub-gS-Jza"/>
-                                <exclude reference="g6N-3w-d2d"/>
-                                <exclude reference="m6H-y9-9RC"/>
-                                <exclude reference="olR-1K-uoA"/>
-                                <exclude reference="pVe-sM-aJh"/>
-                                <exclude reference="uOV-ff-hje"/>
-                                <exclude reference="wuJ-NB-hUY"/>
                                 <exclude reference="3LP-ox-XBY"/>
                                 <exclude reference="9sH-Xm-fdY"/>
                                 <exclude reference="JvZ-rV-Fnr"/>
@@ -1483,6 +1468,21 @@
                                 <exclude reference="qbn-5W-UQi"/>
                                 <exclude reference="smK-jS-Mbk"/>
                                 <exclude reference="zt3-Ix-SzL"/>
+                                <exclude reference="2rL-To-QrI"/>
+                                <exclude reference="JcW-BN-3KO"/>
+                                <exclude reference="KS2-aQ-phg"/>
+                                <exclude reference="KVx-tJ-9UI"/>
+                                <exclude reference="N3V-2e-s4T"/>
+                                <exclude reference="OlS-30-MRF"/>
+                                <exclude reference="PBD-jg-2OR"/>
+                                <exclude reference="XMb-pi-gFn"/>
+                                <exclude reference="eub-gS-Jza"/>
+                                <exclude reference="g6N-3w-d2d"/>
+                                <exclude reference="m6H-y9-9RC"/>
+                                <exclude reference="olR-1K-uoA"/>
+                                <exclude reference="pVe-sM-aJh"/>
+                                <exclude reference="uOV-ff-hje"/>
+                                <exclude reference="wuJ-NB-hUY"/>
                                 <exclude reference="Emi-KZ-aWd"/>
                                 <exclude reference="sef-mo-GFN"/>
                                 <exclude reference="u0S-eW-h8h"/>
@@ -1500,10 +1500,6 @@
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="OlS-30-MRF"/>
-                                <include reference="XMb-pi-gFn"/>
-                                <include reference="uOV-ff-hje"/>
-                                <include reference="wuJ-NB-hUY"/>
                                 <exclude reference="3LP-ox-XBY"/>
                                 <include reference="XTc-7O-Vnq"/>
                                 <include reference="c4f-p3-c6U"/>
@@ -1511,6 +1507,10 @@
                                 <include reference="Cgw-w4-2lL"/>
                                 <include reference="SSh-wP-vT6"/>
                                 <include reference="smK-jS-Mbk"/>
+                                <include reference="OlS-30-MRF"/>
+                                <include reference="XMb-pi-gFn"/>
+                                <include reference="uOV-ff-hje"/>
+                                <include reference="wuJ-NB-hUY"/>
                                 <include reference="u0S-eW-h8h"/>
                                 <include reference="vX1-0z-T2x"/>
                                 <include reference="SRa-yy-V9J"/>
@@ -1520,15 +1520,15 @@
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
+                                <include reference="9sH-Xm-fdY"/>
+                                <include reference="agK-lx-cJJ"/>
+                                <include reference="dzo-Zg-aJ2"/>
                                 <include reference="2rL-To-QrI"/>
                                 <include reference="JcW-BN-3KO"/>
                                 <include reference="KVx-tJ-9UI"/>
                                 <include reference="N3V-2e-s4T"/>
                                 <include reference="PBD-jg-2OR"/>
                                 <include reference="g6N-3w-d2d"/>
-                                <include reference="9sH-Xm-fdY"/>
-                                <include reference="agK-lx-cJJ"/>
-                                <include reference="dzo-Zg-aJ2"/>
                                 <include reference="sef-mo-GFN"/>
                                 <include reference="RcV-hx-Rmv"/>
                                 <include reference="WtQ-rX-j0X"/>
@@ -1537,11 +1537,6 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="KS2-aQ-phg"/>
-                                <include reference="eub-gS-Jza"/>
-                                <include reference="m6H-y9-9RC"/>
-                                <include reference="olR-1K-uoA"/>
-                                <include reference="pVe-sM-aJh"/>
                                 <include reference="JvZ-rV-Fnr"/>
                                 <include reference="KBq-2R-ci3"/>
                                 <include reference="Zio-ks-o9Z"/>
@@ -1549,6 +1544,11 @@
                                 <include reference="QCv-Il-A4a"/>
                                 <include reference="qbn-5W-UQi"/>
                                 <include reference="zt3-Ix-SzL"/>
+                                <include reference="KS2-aQ-phg"/>
+                                <include reference="eub-gS-Jza"/>
+                                <include reference="m6H-y9-9RC"/>
+                                <include reference="olR-1K-uoA"/>
+                                <include reference="pVe-sM-aJh"/>
                                 <include reference="Emi-KZ-aWd"/>
                                 <include reference="v8G-KY-sT7"/>
                                 <include reference="IUW-QJ-bbN"/>
@@ -1573,7 +1573,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MonitoredRegionsController" automaticallyAdjustsScrollViewInsets="NO" id="gDO-s1-NmE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dbG-TS-MGf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dbG-TS-MGf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1827,7 +1827,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MonitoredRegionsController_iPad" automaticallyAdjustsScrollViewInsets="NO" id="MJ4-5S-ldC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VPC-Pu-a42">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VPC-Pu-a42">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2055,12 +2055,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="1px-Jb-1aT"/>
-                                <exclude reference="DkM-JA-2PJ"/>
-                                <exclude reference="Tew-hz-gfw"/>
-                                <exclude reference="YzR-DQ-Svo"/>
-                                <exclude reference="ZfO-T4-NPX"/>
-                                <exclude reference="bou-4r-2px"/>
                                 <exclude reference="B02-j2-qky"/>
                                 <exclude reference="RoO-nc-aiJ"/>
                                 <exclude reference="Xdk-hM-vUS"/>
@@ -2071,6 +2065,12 @@
                                 <exclude reference="k8K-DV-Tjx"/>
                                 <exclude reference="sf3-f3-ANF"/>
                                 <exclude reference="y0u-C9-75T"/>
+                                <exclude reference="1px-Jb-1aT"/>
+                                <exclude reference="DkM-JA-2PJ"/>
+                                <exclude reference="Tew-hz-gfw"/>
+                                <exclude reference="YzR-DQ-Svo"/>
+                                <exclude reference="ZfO-T4-NPX"/>
+                                <exclude reference="bou-4r-2px"/>
                                 <exclude reference="7aC-iy-SSx"/>
                                 <exclude reference="CcH-F5-rsF"/>
                                 <exclude reference="EDi-MS-4ux"/>
@@ -2087,13 +2087,13 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="Tew-hz-gfw"/>
-                                <include reference="YzR-DQ-Svo"/>
-                                <include reference="ZfO-T4-NPX"/>
                                 <include reference="Xdk-hM-vUS"/>
                                 <include reference="ddl-Ta-gPy"/>
                                 <include reference="k8K-DV-Tjx"/>
                                 <include reference="y0u-C9-75T"/>
+                                <include reference="Tew-hz-gfw"/>
+                                <include reference="YzR-DQ-Svo"/>
+                                <include reference="ZfO-T4-NPX"/>
                                 <include reference="CcH-F5-rsF"/>
                                 <exclude reference="EDi-MS-4ux"/>
                                 <include reference="L0y-kK-t8p"/>
@@ -2105,15 +2105,15 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="1px-Jb-1aT"/>
-                                <include reference="DkM-JA-2PJ"/>
-                                <include reference="bou-4r-2px"/>
                                 <include reference="B02-j2-qky"/>
                                 <include reference="RoO-nc-aiJ"/>
                                 <include reference="bQT-iK-QPl"/>
                                 <exclude reference="iGg-aW-SSm"/>
                                 <include reference="iaJ-YO-JaD"/>
                                 <exclude reference="sf3-f3-ANF"/>
+                                <include reference="1px-Jb-1aT"/>
+                                <include reference="DkM-JA-2PJ"/>
+                                <include reference="bou-4r-2px"/>
                                 <include reference="7aC-iy-SSx"/>
                                 <include reference="HoC-Vx-z2c"/>
                                 <include reference="Msa-Qb-G91"/>
@@ -2194,7 +2194,7 @@
                 <navigationController storyboardIdentifier="WarMemorialNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Rnl-zt-I7I" customClass="NavigationAidEntryController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="z6i-c7-Gcg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DAV-5n-Zk5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DAV-5n-Zk5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2212,7 +2212,7 @@
             <objects>
                 <navigationController storyboardIdentifier="WarMemorialNavigationController_iPad" automaticallyAdjustsScrollViewInsets="NO" id="5Qe-Pi-SFg" customClass="NavigationAidEntryController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gWl-lZ-gol">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWl-lZ-gol">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2230,7 +2230,7 @@
             <objects>
                 <navigationController storyboardIdentifier="TouristLocationTableViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="YiP-ck-ka8" customClass="TouristLocationTBNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sNS-xt-W7P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sNS-xt-W7P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2248,7 +2248,7 @@
             <objects>
                 <navigationController storyboardIdentifier="TouristLocationTableViewNavigationController_iPad" automaticallyAdjustsScrollViewInsets="NO" id="WA1-lo-oWG" customClass="TouristLocationTBNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xKT-fU-O6A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xKT-fU-O6A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2283,7 +2283,7 @@
             <objects>
                 <navigationController storyboardIdentifier="SeoulFlickrSearchController" automaticallyAdjustsScrollViewInsets="NO" id="nWw-ze-fX1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aUv-6g-btU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aUv-6g-btU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

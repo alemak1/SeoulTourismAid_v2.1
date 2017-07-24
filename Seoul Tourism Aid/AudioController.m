@@ -23,7 +23,7 @@
 @property SystemSoundID* restaurantSounds;
 @property SystemSoundID* foodSounds;
 @property SystemSoundID* miscellaneousSounds;
-
+@property SystemSoundID* clothingSounds;
 
 @end
 
@@ -71,6 +71,9 @@
         case TRANSPORTATION:
             AudioServicesPlaySystemSound(_transportationSounds[indexPath.row]);
             break;
+        case CLOTHING:
+            AudioServicesPlaySystemSound(_clothingSounds[indexPath.row]);
+            break;
         default:
             break;
     }
@@ -87,6 +90,7 @@
     // And only one sound plays at a time!
     
     
+    NSLog(@"Determine the number of sounds files for each section...");
     
     int numberOfTransportationSounds = (int)[AudioSectionHelper numberOfAudioPhrasesForSection:TRANSPORTATION];
     
@@ -98,12 +102,18 @@
     
     int numberOfBasicPhraseSounds = (int)[AudioSectionHelper numberOfAudioPhrasesForSection:BASIC];
 
+    int numberOfClothingSounds = (int)[AudioSectionHelper numberOfAudioPhrasesForSection:CLOTHING];
     
+    NSLog(@"Allocating memory for sound files in each section...");
+
     _transportationSounds = calloc(sizeof(SystemSoundID), numberOfTransportationSounds);
     _foodSounds = calloc(sizeof(SystemSoundID), numberOfFoodSounds);
     _restaurantSounds = calloc(sizeof(SystemSoundID), numberOfRestaurantSounds);
     _miscellaneousSounds = calloc(sizeof(SystemSoundID), numberOfMiscellaneousSounds);
     _basicPhraseSounds = calloc(sizeof(SystemSoundID), numberOfBasicPhraseSounds);
+    _clothingSounds = calloc(sizeof(SystemSoundID), numberOfClothingSounds);
+
+    NSLog(@"Loading transportation sounds...");
 
     for (int i = 0; i < numberOfTransportationSounds; i++) {
         
@@ -111,17 +121,30 @@
         
         NSString* fileName = [AudioSectionHelper getFilePathFor:indexPath];
         
+        if(!fileName){
+            fileName = @"foodAudio1";
+        }
+        
+        
         NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"caf"];
         NSURL* url = [NSURL fileURLWithPath:path];
         
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &_transportationSounds[i]);
     }
     
+    NSLog(@"Loading food sounds...");
+
+    
     for (int i = 0; i < numberOfFoodSounds; i++) {
+        
         
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:FOOD];
         
         NSString* fileName = [AudioSectionHelper getFilePathFor:indexPath];
+        
+        if(fileName == nil){
+            fileName = @"foodAudio1";
+        }
         
         NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"caf"];
         NSURL* url = [NSURL fileURLWithPath:path];
@@ -129,11 +152,19 @@
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &_foodSounds[i]);
     }
     
+    NSLog(@"Loading restaurant sounds...");
+
+    
     for (int i = 0; i < numberOfRestaurantSounds; i++) {
         
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:RESTAURANTS];
         
         NSString* fileName = [AudioSectionHelper getFilePathFor:indexPath];
+        
+        if(fileName == nil){
+            fileName = @"foodAudio1";
+        }
+        
         
         NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"caf"];
         NSURL* url = [NSURL fileURLWithPath:path];
@@ -141,11 +172,18 @@
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &_restaurantSounds[i]);
     }
     
+    NSLog(@"Loading basic phrase sounds...");
+
+    
     for (int i = 0; i < numberOfBasicPhraseSounds; i++) {
         
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:BASIC];
         
         NSString* fileName = [AudioSectionHelper getFilePathFor:indexPath];
+        
+        if(fileName == nil){
+            fileName = @"foodAudio1";
+        }
         
         NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"caf"];
         NSURL* url = [NSURL fileURLWithPath:path];
@@ -153,16 +191,41 @@
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &_basicPhraseSounds[i]);
     }
     
+    NSLog(@"Loading miscellaneous phrase sounds...");
+
+    
     for (int i = 0; i < numberOfMiscellaneousSounds; i++) {
         
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:MISCELLANEOUS];
         
         NSString* fileName = [AudioSectionHelper getFilePathFor:indexPath];
         
+        if(fileName == nil || indexPath == nil){
+            fileName = @"foodAudio1";
+        }
+        
+        
         NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"caf"];
         NSURL* url = [NSURL fileURLWithPath:path];
         
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &_miscellaneousSounds[i]);
+    }
+    
+    for (int i = 0; i < numberOfClothingSounds; i++) {
+        
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:CLOTHING];
+        
+        NSString* fileName = [AudioSectionHelper getFilePathFor:indexPath];
+        
+        if(fileName == nil || indexPath == nil){
+            fileName = @"foodAudio1";
+        }
+        
+        
+        NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"caf"];
+        NSURL* url = [NSURL fileURLWithPath:path];
+        
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &_clothingSounds[i]);
     }
     
     

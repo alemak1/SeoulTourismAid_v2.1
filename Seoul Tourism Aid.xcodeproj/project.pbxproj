@@ -9,6 +9,24 @@
 /* Begin PBXBuildFile section */
 		B9B5618E3C09F558559566A7 /* libPods-Seoul Tourism Aid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D706A61430A7A3775EE78206 /* libPods-Seoul Tourism Aid.a */; };
 		BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2E091C1F1A457A00CB69D4 /* EntryGameSceneBackground.sks */; };
+		BD2E4D171F25A54E005770D1 /* transportationAudio1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D161F25A54E005770D1 /* transportationAudio1.caf */; };
+		BD2E4D191F25A621005770D1 /* transportationAudio2.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D181F25A621005770D1 /* transportationAudio2.caf */; };
+		BD2E4D1B1F25A6B5005770D1 /* transportationAudio3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D1A1F25A6B5005770D1 /* transportationAudio3.caf */; };
+		BD2E4D1D1F25A72B005770D1 /* transportationAudio4.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D1C1F25A72B005770D1 /* transportationAudio4.caf */; };
+		BD2E4D1F1F25A90A005770D1 /* foodPhraseAudio1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D1E1F25A90A005770D1 /* foodPhraseAudio1.caf */; };
+		BD2E4D211F25A95B005770D1 /* foodPhraseAudio2.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D201F25A95B005770D1 /* foodPhraseAudio2.caf */; };
+		BD2E4D231F25AA07005770D1 /* miscAudio5.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D221F25AA07005770D1 /* miscAudio5.caf */; };
+		BD2E4D251F25AA5B005770D1 /* miscAudio6.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D241F25AA5B005770D1 /* miscAudio6.caf */; };
+		BD2E4D291F25B4B3005770D1 /* ScrollableInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E4D281F25B4B3005770D1 /* ScrollableInfoController.m */; };
+		BD2E4D2B1F25B519005770D1 /* content_iPhone.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D2A1F25B519005770D1 /* content_iPhone.plist */; };
+		BD2E4D2D1F25B54B005770D1 /* IconAcknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D2C1F25B54B005770D1 /* IconAcknowledgements.plist */; };
+		BD2E4D2F1F25BCD1005770D1 /* transportationAudio5.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D2E1F25BCD1005770D1 /* transportationAudio5.caf */; };
+		BD2E4D311F25BD50005770D1 /* transportationAudio6.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D301F25BD50005770D1 /* transportationAudio6.caf */; };
+		BD2E4D331F25BDAD005770D1 /* transportationAudio7.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D321F25BDAD005770D1 /* transportationAudio7.caf */; };
+		BD2E4D351F25BE03005770D1 /* transportationAudio8.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D341F25BE03005770D1 /* transportationAudio8.caf */; };
+		BD2E4D391F25CB39005770D1 /* AcknowledgementsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E4D381F25CB39005770D1 /* AcknowledgementsVC.m */; };
+		BD2E4D3C1F25D16D005770D1 /* AuthorPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E4D3B1F25D16D005770D1 /* AuthorPicCell.m */; };
+		BD2E4D3F1F25D381005770D1 /* AcknowledgementsIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2E4D3E1F25D381005770D1 /* AcknowledgementsIndexVC.m */; };
 		BD2EDB7C1F1B8F7B00C86D37 /* WeatherIconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB7B1F1B8F7B00C86D37 /* WeatherIconManager.m */; };
 		BD2EDB801F1B8F8500C86D37 /* WeatherForecastSite.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EDB7E1F1B8F8500C86D37 /* WeatherForecastSite.m */; };
 		BD2EDB811F1B8F8500C86D37 /* WeatherForecastSites.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD2EDB7F1F1B8F8500C86D37 /* WeatherForecastSites.plist */; };
@@ -105,6 +123,21 @@
 		BD38F2D51F1B369B00471E16 /* GoogleJSONResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */; };
 		BD38F2D61F1B37DA00471E16 /* GeneralGameSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F2B91F1B308400471E16 /* GeneralGameSceneController.m */; };
 		BD38F2D71F1B37E700471E16 /* KoreanLearningScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38F2B41F1B29A200471E16 /* KoreanLearningScene.m */; };
+		BD3931E91F2585CA008B3C1B /* foodAudio2.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931E81F2585CA008B3C1B /* foodAudio2.caf */; };
+		BD3931EB1F2585D5008B3C1B /* foodAudio3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931EA1F2585D5008B3C1B /* foodAudio3.caf */; };
+		BD3931ED1F2585DE008B3C1B /* foodAudio4.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931EC1F2585DE008B3C1B /* foodAudio4.caf */; };
+		BD3931EF1F2585E9008B3C1B /* foodAudio5.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931EE1F2585E9008B3C1B /* foodAudio5.caf */; };
+		BD3931F11F2585F1008B3C1B /* foodAudio6.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931F01F2585F1008B3C1B /* foodAudio6.caf */; };
+		BD3931F51F258637008B3C1B /* foodAudio1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931F41F258637008B3C1B /* foodAudio1.caf */; };
+		BD3931F71F258C90008B3C1B /* foodAudio7.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931F61F258C90008B3C1B /* foodAudio7.caf */; };
+		BD3931F91F258D04008B3C1B /* foodAudio8.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931F81F258D04008B3C1B /* foodAudio8.caf */; };
+		BD3931FB1F258D57008B3C1B /* foodAudio9.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931FA1F258D57008B3C1B /* foodAudio9.caf */; };
+		BD3931FD1F258E04008B3C1B /* miscAudio1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931FC1F258E04008B3C1B /* miscAudio1.caf */; };
+		BD3931FF1F258E69008B3C1B /* miscAudio2.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3931FE1F258E69008B3C1B /* miscAudio2.caf */; };
+		BD3932011F258EF5008B3C1B /* miscAudio3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3932001F258EF5008B3C1B /* miscAudio3.caf */; };
+		BD3932031F258F3E008B3C1B /* miscAudio4.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3932021F258F3E008B3C1B /* miscAudio4.caf */; };
+		BD3932051F2590D5008B3C1B /* clothingAudio1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD3932041F2590D5008B3C1B /* clothingAudio1.caf */; };
+		BD3932081F259223008B3C1B /* AudioHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3932071F259223008B3C1B /* AudioHeaderView.m */; };
 		BD3944C71F22C7890024F92D /* LanguageHelpOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3944C61F22C7890024F92D /* LanguageHelpOptionsController.m */; };
 		BD3944CA1F22C83A0024F92D /* AuthorizationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3944C91F22C83A0024F92D /* AuthorizationController.m */; };
 		BD3944CD1F22D6540024F92D /* MediaPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3944CC1F22D6540024F92D /* MediaPickerManager.m */; };
@@ -146,6 +179,28 @@
 		BD2E09171F1A327D00CB69D4 /* EntryGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryGameScene.h; sourceTree = "<group>"; };
 		BD2E09181F1A329C00CB69D4 /* EntryGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryGameScene.m; sourceTree = "<group>"; };
 		BD2E091C1F1A457A00CB69D4 /* EntryGameSceneBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EntryGameSceneBackground.sks; sourceTree = "<group>"; };
+		BD2E4D161F25A54E005770D1 /* transportationAudio1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio1.caf; sourceTree = "<group>"; };
+		BD2E4D181F25A621005770D1 /* transportationAudio2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio2.caf; sourceTree = "<group>"; };
+		BD2E4D1A1F25A6B5005770D1 /* transportationAudio3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio3.caf; sourceTree = "<group>"; };
+		BD2E4D1C1F25A72B005770D1 /* transportationAudio4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio4.caf; sourceTree = "<group>"; };
+		BD2E4D1E1F25A90A005770D1 /* foodPhraseAudio1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio1.caf; sourceTree = "<group>"; };
+		BD2E4D201F25A95B005770D1 /* foodPhraseAudio2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio2.caf; sourceTree = "<group>"; };
+		BD2E4D221F25AA07005770D1 /* miscAudio5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = miscAudio5.caf; sourceTree = "<group>"; };
+		BD2E4D241F25AA5B005770D1 /* miscAudio6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = miscAudio6.caf; sourceTree = "<group>"; };
+		BD2E4D271F25B4B3005770D1 /* ScrollableInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollableInfoController.h; sourceTree = "<group>"; };
+		BD2E4D281F25B4B3005770D1 /* ScrollableInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollableInfoController.m; sourceTree = "<group>"; };
+		BD2E4D2A1F25B519005770D1 /* content_iPhone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = content_iPhone.plist; sourceTree = "<group>"; };
+		BD2E4D2C1F25B54B005770D1 /* IconAcknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IconAcknowledgements.plist; sourceTree = "<group>"; };
+		BD2E4D2E1F25BCD1005770D1 /* transportationAudio5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio5.caf; sourceTree = "<group>"; };
+		BD2E4D301F25BD50005770D1 /* transportationAudio6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio6.caf; sourceTree = "<group>"; };
+		BD2E4D321F25BDAD005770D1 /* transportationAudio7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio7.caf; sourceTree = "<group>"; };
+		BD2E4D341F25BE03005770D1 /* transportationAudio8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = transportationAudio8.caf; sourceTree = "<group>"; };
+		BD2E4D371F25CB29005770D1 /* AcknowledgementsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsVC.h; sourceTree = "<group>"; };
+		BD2E4D381F25CB39005770D1 /* AcknowledgementsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsVC.m; sourceTree = "<group>"; };
+		BD2E4D3A1F25D15D005770D1 /* AuthorPicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorPicCell.h; sourceTree = "<group>"; };
+		BD2E4D3B1F25D16D005770D1 /* AuthorPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorPicCell.m; sourceTree = "<group>"; };
+		BD2E4D3D1F25D36D005770D1 /* AcknowledgementsIndexVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsIndexVC.h; sourceTree = "<group>"; };
+		BD2E4D3E1F25D381005770D1 /* AcknowledgementsIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsIndexVC.m; sourceTree = "<group>"; };
 		BD2EDB7A1F1B8F7B00C86D37 /* WeatherIconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherIconManager.h; sourceTree = "<group>"; };
 		BD2EDB7B1F1B8F7B00C86D37 /* WeatherIconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherIconManager.m; sourceTree = "<group>"; };
 		BD2EDB7D1F1B8F8500C86D37 /* WeatherForecastSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastSite.h; sourceTree = "<group>"; };
@@ -284,6 +339,22 @@
 		BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = KoreanLearningSceneBackground.sks; sourceTree = "<group>"; };
 		BD38F2B81F1B307800471E16 /* GeneralGameSceneController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralGameSceneController.h; sourceTree = "<group>"; };
 		BD38F2B91F1B308400471E16 /* GeneralGameSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralGameSceneController.m; sourceTree = "<group>"; };
+		BD3931E81F2585CA008B3C1B /* foodAudio2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio2.caf; sourceTree = "<group>"; };
+		BD3931EA1F2585D5008B3C1B /* foodAudio3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio3.caf; sourceTree = "<group>"; };
+		BD3931EC1F2585DE008B3C1B /* foodAudio4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio4.caf; sourceTree = "<group>"; };
+		BD3931EE1F2585E9008B3C1B /* foodAudio5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio5.caf; sourceTree = "<group>"; };
+		BD3931F01F2585F1008B3C1B /* foodAudio6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio6.caf; sourceTree = "<group>"; };
+		BD3931F41F258637008B3C1B /* foodAudio1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio1.caf; sourceTree = "<group>"; };
+		BD3931F61F258C90008B3C1B /* foodAudio7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio7.caf; sourceTree = "<group>"; };
+		BD3931F81F258D04008B3C1B /* foodAudio8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio8.caf; sourceTree = "<group>"; };
+		BD3931FA1F258D57008B3C1B /* foodAudio9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodAudio9.caf; sourceTree = "<group>"; };
+		BD3931FC1F258E04008B3C1B /* miscAudio1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = miscAudio1.caf; sourceTree = "<group>"; };
+		BD3931FE1F258E69008B3C1B /* miscAudio2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = miscAudio2.caf; sourceTree = "<group>"; };
+		BD3932001F258EF5008B3C1B /* miscAudio3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = miscAudio3.caf; sourceTree = "<group>"; };
+		BD3932021F258F3E008B3C1B /* miscAudio4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = miscAudio4.caf; sourceTree = "<group>"; };
+		BD3932041F2590D5008B3C1B /* clothingAudio1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothingAudio1.caf; sourceTree = "<group>"; };
+		BD3932061F259218008B3C1B /* AudioHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioHeaderView.h; sourceTree = "<group>"; };
+		BD3932071F259223008B3C1B /* AudioHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioHeaderView.m; sourceTree = "<group>"; };
 		BD3944C51F22C77A0024F92D /* LanguageHelpOptionsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageHelpOptionsController.h; sourceTree = "<group>"; };
 		BD3944C61F22C7890024F92D /* LanguageHelpOptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageHelpOptionsController.m; sourceTree = "<group>"; };
 		BD3944C81F22C82F0024F92D /* AuthorizationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorizationController.h; sourceTree = "<group>"; };
@@ -406,6 +477,31 @@
 			name = DataModels;
 			sourceTree = "<group>";
 		};
+		BD2E4D261F25B49B005770D1 /* ScrollableInfoController */ = {
+			isa = PBXGroup;
+			children = (
+				BD2E4D361F25CB06005770D1 /* Acknowledgements */,
+				BD2E4D271F25B4B3005770D1 /* ScrollableInfoController.h */,
+				BD2E4D281F25B4B3005770D1 /* ScrollableInfoController.m */,
+				BD2E4D2A1F25B519005770D1 /* content_iPhone.plist */,
+				BD2E4D2C1F25B54B005770D1 /* IconAcknowledgements.plist */,
+			);
+			name = ScrollableInfoController;
+			sourceTree = "<group>";
+		};
+		BD2E4D361F25CB06005770D1 /* Acknowledgements */ = {
+			isa = PBXGroup;
+			children = (
+				BD2E4D371F25CB29005770D1 /* AcknowledgementsVC.h */,
+				BD2E4D381F25CB39005770D1 /* AcknowledgementsVC.m */,
+				BD2E4D3A1F25D15D005770D1 /* AuthorPicCell.h */,
+				BD2E4D3B1F25D16D005770D1 /* AuthorPicCell.m */,
+				BD2E4D3D1F25D36D005770D1 /* AcknowledgementsIndexVC.h */,
+				BD2E4D3E1F25D381005770D1 /* AcknowledgementsIndexVC.m */,
+			);
+			name = Acknowledgements;
+			sourceTree = "<group>";
+		};
 		BD2EDB791F1B8EC500C86D37 /* WeatherForecastControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +602,8 @@
 				BD32EBEF1F24FC9900B5E8D2 /* AudioPhrases.plist */,
 				BD32EBF11F24FD3C00B5E8D2 /* AudioSection.h */,
 				BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */,
+				BD3932061F259218008B3C1B /* AudioHeaderView.h */,
+				BD3932071F259223008B3C1B /* AudioHeaderView.m */,
 			);
 			name = AudioCollectionController;
 			sourceTree = "<group>";
@@ -628,6 +726,39 @@
 			name = KoreanLearningGame;
 			sourceTree = "<group>";
 		};
+		BD3931E61F2585A2008B3C1B /* SoundFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BD2E4D341F25BE03005770D1 /* transportationAudio8.caf */,
+				BD2E4D321F25BDAD005770D1 /* transportationAudio7.caf */,
+				BD2E4D301F25BD50005770D1 /* transportationAudio6.caf */,
+				BD2E4D2E1F25BCD1005770D1 /* transportationAudio5.caf */,
+				BD2E4D241F25AA5B005770D1 /* miscAudio6.caf */,
+				BD2E4D221F25AA07005770D1 /* miscAudio5.caf */,
+				BD2E4D201F25A95B005770D1 /* foodPhraseAudio2.caf */,
+				BD2E4D1E1F25A90A005770D1 /* foodPhraseAudio1.caf */,
+				BD2E4D1C1F25A72B005770D1 /* transportationAudio4.caf */,
+				BD2E4D1A1F25A6B5005770D1 /* transportationAudio3.caf */,
+				BD2E4D181F25A621005770D1 /* transportationAudio2.caf */,
+				BD2E4D161F25A54E005770D1 /* transportationAudio1.caf */,
+				BD3932041F2590D5008B3C1B /* clothingAudio1.caf */,
+				BD3932021F258F3E008B3C1B /* miscAudio4.caf */,
+				BD3931FC1F258E04008B3C1B /* miscAudio1.caf */,
+				BD3931FE1F258E69008B3C1B /* miscAudio2.caf */,
+				BD3932001F258EF5008B3C1B /* miscAudio3.caf */,
+				BD3931EC1F2585DE008B3C1B /* foodAudio4.caf */,
+				BD3931E81F2585CA008B3C1B /* foodAudio2.caf */,
+				BD3931F41F258637008B3C1B /* foodAudio1.caf */,
+				BD3931EA1F2585D5008B3C1B /* foodAudio3.caf */,
+				BD3931EE1F2585E9008B3C1B /* foodAudio5.caf */,
+				BD3931F01F2585F1008B3C1B /* foodAudio6.caf */,
+				BD3931F61F258C90008B3C1B /* foodAudio7.caf */,
+				BD3931F81F258D04008B3C1B /* foodAudio8.caf */,
+				BD3931FA1F258D57008B3C1B /* foodAudio9.caf */,
+			);
+			name = SoundFiles;
+			sourceTree = "<group>";
+		};
 		BD3A45131F18A3EC00DA5A75 = {
 			isa = PBXGroup;
 			children = (
@@ -650,6 +781,8 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD2E4D261F25B49B005770D1 /* ScrollableInfoController */,
+				BD3931E61F2585A2008B3C1B /* SoundFiles */,
 				BD32EBE81F24F6C500B5E8D2 /* AudioCollectionController */,
 				BD714D681F21FEDE003D4C66 /* NavigationAidControllers */,
 				BD45566E1F21B1C100D21756 /* MonitoredRegionsController */,
@@ -861,44 +994,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3570B41F24D293003BE859 /* PetraeusBuilding.plist in Resources */,
+				BD2E4D231F25AA07005770D1 /* miscAudio5.caf in Resources */,
 				BD3570AA1F24D279003BE859 /* LottoHotel.plist in Resources */,
 				BD3570BA1F24D2B6003BE859 /* SeoulGrandParkRegions.plist in Resources */,
 				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
 				BD3570C21F24D2E3003BE859 /* WeddingHall.plist in Resources */,
+				BD2E4D211F25A95B005770D1 /* foodPhraseAudio2.caf in Resources */,
 				BD3570B31F24D293003BE859 /* path2.plist in Resources */,
+				BD3932051F2590D5008B3C1B /* clothingAudio1.caf in Resources */,
+				BD2E4D1D1F25A72B005770D1 /* transportationAudio4.caf in Resources */,
+				BD3931ED1F2585DE008B3C1B /* foodAudio4.caf in Resources */,
 				BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */,
 				BD35709E1F24D248003BE859 /* DonatedRelicsExhibit.plist in Resources */,
+				BD2E4D331F25BDAD005770D1 /* transportationAudio7.caf in Resources */,
 				BD3570B61F24D2A3003BE859 /* ROKArmedForcesRoom.plist in Resources */,
 				BD8A35E91F1DF85800346F88 /* FlickrSearchTerms.plist in Resources */,
+				BD3931E91F2585CA008B3C1B /* foodAudio2.caf in Resources */,
+				BD3932011F258EF5008B3C1B /* miscAudio3.caf in Resources */,
 				BD3570A01F24D255003BE859 /* Gwanghuamun.plist in Resources */,
 				BD3570AC1F24D283003BE859 /* NationalSecurityPavilionPath.plist in Resources */,
 				BD3570B21F24D293003BE859 /* path1.plist in Resources */,
 				BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */,
+				BD2E4D2D1F25B54B005770D1 /* IconAcknowledgements.plist in Resources */,
 				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
+				BD3931F91F258D04008B3C1B /* foodAudio8.caf in Resources */,
 				BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */,
 				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
 				BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */,
 				BD3570A51F24D270003BE859 /* KoreanWarExhibitRoom1.plist in Resources */,
 				BD3570A81F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist in Resources */,
 				BD3570BE1F24D2D1003BE859 /* WarHistoryExhibit.plist in Resources */,
+				BD2E4D2B1F25B519005770D1 /* content_iPhone.plist in Resources */,
+				BD2E4D2F1F25BCD1005770D1 /* transportationAudio5.caf in Resources */,
 				BD3570B11F24D293003BE859 /* ParkRoute.plist in Resources */,
+				BD3931FB1F258D57008B3C1B /* foodAudio9.caf in Resources */,
+				BD3931FF1F258E69008B3C1B /* miscAudio2.caf in Resources */,
 				BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */,
+				BD3931F71F258C90008B3C1B /* foodAudio7.caf in Resources */,
 				BD3570A71F24D270003BE859 /* KoreanWarExhibitRoom3.plist in Resources */,
 				BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */,
+				BD3932031F258F3E008B3C1B /* miscAudio4.caf in Resources */,
 				BD3145221F19D05D00999981 /* Assets.xcassets in Resources */,
+				BD2E4D351F25BE03005770D1 /* transportationAudio8.caf in Resources */,
 				BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */,
 				BD3570B91F24D2B6003BE859 /* SeoulGrandParkArea.plist in Resources */,
+				BD2E4D1B1F25A6B5005770D1 /* transportationAudio3.caf in Resources */,
+				BD3931F51F258637008B3C1B /* foodAudio1.caf in Resources */,
+				BD3931F11F2585F1008B3C1B /* foodAudio6.caf in Resources */,
 				BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */,
 				BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */,
+				BD3931EB1F2585D5008B3C1B /* foodAudio3.caf in Resources */,
 				BD3570BF1F24D2D1003BE859 /* WarHistoryExhibit2.plist in Resources */,
+				BD3931EF1F2585E9008B3C1B /* foodAudio5.caf in Resources */,
 				BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */,
 				BD3570C01F24D2D1003BE859 /* WarMemorialMainBuilding.plist in Resources */,
+				BD3931FD1F258E04008B3C1B /* miscAudio1.caf in Resources */,
+				BD2E4D311F25BD50005770D1 /* transportationAudio6.caf in Resources */,
 				BD2EDB811F1B8F8500C86D37 /* WeatherForecastSites.plist in Resources */,
 				BD32EBF01F24FC9900B5E8D2 /* AudioPhrases.plist in Resources */,
+				BD2E4D171F25A54E005770D1 /* transportationAudio1.caf in Resources */,
 				BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */,
 				BD2EDBA01F1B92F900C86D37 /* EntryUIOverlay.sks in Resources */,
+				BD2E4D1F1F25A90A005770D1 /* foodPhraseAudio1.caf in Resources */,
+				BD2E4D251F25AA5B005770D1 /* miscAudio6.caf in Resources */,
 				BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */,
 				BD3570A61F24D270003BE859 /* KoreanWarExhibitRoom2.plist in Resources */,
+				BD2E4D191F25A621005770D1 /* transportationAudio2.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +1129,7 @@
 				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
 				BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */,
 				BD3944CA1F22C83A0024F92D /* AuthorizationController.m in Sources */,
+				BD2E4D3F1F25D381005770D1 /* AcknowledgementsIndexVC.m in Sources */,
 				BD3812221F2063F0003D7367 /* TouristSiteManager.m in Sources */,
 				BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */,
 				BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */,
@@ -981,6 +1143,7 @@
 				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
 				BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */,
 				BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */,
+				BD2E4D291F25B4B3005770D1 /* ScrollableInfoController.m in Sources */,
 				BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */,
 				BD35708D1F24D197003BE859 /* PolygonSelectionController.m in Sources */,
 				BD2EDB8F1F1B8FB400C86D37 /* WeatherCollectionCell.m in Sources */,
@@ -997,6 +1160,7 @@
 				BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */,
 				BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */,
 				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
+				BD2E4D391F25CB39005770D1 /* AcknowledgementsVC.m in Sources */,
 				BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */,
 				BD35708C1F24D197003BE859 /* PolygonMapController.m in Sources */,
 				BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */,
@@ -1012,6 +1176,7 @@
 				BD3570821F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.m in Sources */,
 				BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */,
 				BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */,
+				BD2E4D3C1F25D16D005770D1 /* AuthorPicCell.m in Sources */,
 				BD8A35E71F1DF85800346F88 /* FlickrProgressController.m in Sources */,
 				BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */,
 				BD38F2C51F1B361200471E16 /* EntryViewGameSceneController.m in Sources */,
@@ -1036,6 +1201,7 @@
 				BD3570861F24CF2B003BE859 /* ToHostelDirectionsController.m in Sources */,
 				BD3570971F24D1E7003BE859 /* BikeRoutePoint.m in Sources */,
 				BD2EDB901F1B8FB400C86D37 /* WeatherConfiguration.m in Sources */,
+				BD3932081F259223008B3C1B /* AudioHeaderView.m in Sources */,
 				BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */,
 				BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */,
 				BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */,

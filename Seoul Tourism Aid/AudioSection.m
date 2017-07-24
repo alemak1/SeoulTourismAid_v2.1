@@ -27,6 +27,8 @@
             return @"Food";
         case MISCELLANEOUS:
             return @"Miscellaneous";
+        case CLOTHING:
+            return @"Clothing";
         default:
             break;
     }

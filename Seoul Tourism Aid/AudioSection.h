@@ -23,6 +23,7 @@ typedef enum AudioSection{
     TRANSPORTATION,
     FOOD,
     MISCELLANEOUS,
+    CLOTHING,
     TOTAL_NUMBER_OF_AUDIO_SECTIONS
 }AudioSection;
 

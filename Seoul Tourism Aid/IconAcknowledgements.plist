@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Iconnice</key>
+	<array>
+		<string>precipA</string>
+	</array>
+	<key>Icon Pond</key>
+	<array>
+		<string>routeA</string>
+	</array>
+	<key>Alfredo Hernandez</key>
+	<array>
+		<string>cloudyA</string>
+	</array>
+	<key>Graphberry</key>
+	<array>
+		<string>cloudCoverA</string>
+	</array>
+	<key>Swifticons</key>
+	<array>
+		<string>cloudyNightA</string>
+	</array>
+	<key>Zlatko Najdenovski</key>
+	<array>
+		<string>fogA</string>
+	</array>
+	<key>Freepik</key>
+	<array>
+		<string>pharmacyA</string>
+		<string>paintingA</string>
+		<string>noodles</string>
+		<string>creamIconA</string>
+		<string>googleMaps40A</string>
+		<string>googleMaps20</string>
+		<string>hail2A</string>
+		<string>coloredPhoneA</string>
+		<string>currencyC</string>
+		<string>convenienceStoreA</string>
+		<string>shoppingCartA</string>
+		<string>tankA</string>
+		<string>subway</string>
+		<string>undergroundA</string>
+		<string>sleetA</string>
+		<string>koreaB30</string>
+		<string>koreaA30</string>
+		<string>windSpeedA</string>
+		<string>zooCageA</string>
+	</array>
+	<key>Pixel Buddha</key>
+	<array>
+		<string>snowA</string>
+		<string>tvA</string>
+	</array>
+	<key>Oliver</key>
+	<array>
+		<string>piggyBankA</string>
+		<string>phoneA</string>
+		<string>coffeeA</string>
+		<string>fruitA</string>
+		<string>coffeeGlassA</string>
+		<string>templeA</string>
+		<string>streetStandA</string>
+		<string>wirelessA</string>
+	</array>
+	<key>Vectors Market</key>
+	<array>
+		<string>otherRestaurantsA</string>
+		<string>emailA</string>
+		<string>webSiteA</string>
+	</array>
+	<key>Roundicons</key>
+	<array>
+		<string>compassA</string>
+		<string>trophyA</string>
+		<string>windyB</string>
+		<string>windy2A</string>
+	</array>
+	<key>DinosoftLabs</key>
+	<array>
+		<string>keyboard30</string>
+	</array>
+	<key>Yannick</key>
+	<array>
+		<string>temperatureA</string>
+	</array>
+	<key>Nikita Golubev</key>
+	<array>
+		<string>sim_card</string>
+	</array>
+</dict>
+</plist>

@@ -2,55 +2,177 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Basic Phrases</key>
+	<key>Clothing</key>
 	<array>
 		<dict>
 			<key>filePath</key>
-			<string>audioFile1</string>
+			<string>clothingAudio1</string>
 			<key>originalPhrase</key>
-			<string>I&apos;m lost.</string>
+			<string>Do you have this in a smaller size?</string>
+		</dict>
+	</array>
+	<key>Basic Phrases</key>
+	<array/>
+	<key>Restaurants</key>
+	<array>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio1</string>
+			<key>originalPhrase</key>
+			<string>Can I eat this food raw?</string>
 		</dict>
 		<dict>
 			<key>filePath</key>
-			<string>audioFile2</string>
+			<string>foodAudio2</string>
 			<key>originalPhrase</key>
-			<string>How are you?</string>
+			<string>Can I get seconds for this?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio3</string>
+			<key>originalPhrase</key>
+			<string>Can I have the bill please?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio4</string>
+			<key>originalPhrase</key>
+			<string>Do you have any desserts?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio5</string>
+			<key>originalPhrase</key>
+			<string>Can I pay by credit card?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio6</string>
+			<key>originalPhrase</key>
+			<string>Can I see the menu?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio7</string>
+			<key>originalPhrase</key>
+			<string>This is not what I ordered.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio8</string>
+			<key>originalPhrase</key>
+			<string>I&apos;m really full.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodAudio9</string>
+			<key>originalPhrase</key>
+			<string>This food really sucks.</string>
 		</dict>
 	</array>
 	<key>Food</key>
 	<array>
 		<dict>
 			<key>filePath</key>
-			<string></string>
+			<string>foodPhraseAudio1</string>
 			<key>originalPhrase</key>
-			<string></string>
+			<string>How long do I cook this?</string>
 		</dict>
-	</array>
-	<key>Restaurants</key>
-	<array>
 		<dict>
 			<key>filePath</key>
-			<string></string>
+			<string>foodPhraseAudio2</string>
 			<key>originalPhrase</key>
-			<string></string>
+			<string>How many calories does this have?</string>
 		</dict>
 	</array>
 	<key>Miscellaneous</key>
 	<array>
 		<dict>
 			<key>filePath</key>
-			<string></string>
+			<string>miscAudio1</string>
 			<key>originalPhrase</key>
-			<string></string>
+			<string>I lost my wallet.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>miscAudio2</string>
+			<key>originalPhrase</key>
+			<string>Do you have a Facebook page?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>miscAudio3</string>
+			<key>originalPhrase</key>
+			<string>What is the Wifi password?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>miscAudio4</string>
+			<key>originalPhrase</key>
+			<string>I&apos;m lost.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>miscAudio5</string>
+			<key>originalPhrase</key>
+			<string>Can I have a refund?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>miscAudio6</string>
+			<key>originalPhrase</key>
+			<string>Can I exchange this for something else?</string>
 		</dict>
 	</array>
 	<key>Transportation</key>
 	<array>
 		<dict>
 			<key>filePath</key>
-			<string></string>
+			<string>transportationAudio1</string>
 			<key>originalPhrase</key>
-			<string></string>
+			<string>I need to go to Mapogu. Which line should I take?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio2</string>
+			<key>originalPhrase</key>
+			<string>Where can I buy a T-money card?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio3</string>
+			<key>originalPhrase</key>
+			<string>How can I recharge my T-mony card?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio4</string>
+			<key>originalPhrase</key>
+			<string>How can I buy a subway ticket?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio5</string>
+			<key>originalPhrase</key>
+			<string>How can I get to the airport?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio6</string>
+			<key>originalPhrase</key>
+			<string>Where can I rent a public bike?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio7</string>
+			<key>originalPhrase</key>
+			<string>Where can I park my bike?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>transportationAudio8</string>
+			<key>originalPhrase</key>
+			<string>Can I park my bike here?</string>
 		</dict>
 	</array>
 </dict>
