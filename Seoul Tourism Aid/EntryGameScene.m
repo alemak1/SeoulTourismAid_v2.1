@@ -122,7 +122,8 @@ NSOperationQueue* _operationQueue;
     
     [self configureOverlayButtons];
 
-    
+    [self.worldNode setScale:0.50];
+    [self.overlayNode setScale:0.50];
 }
 
 
@@ -660,8 +661,8 @@ NSOperationQueue* _operationQueue;
     
     [self.mainMenuButton moveToParent:self.overlayNode];
     
-    CGFloat yPos = [UIScreen mainScreen].bounds.size.height*0.40;
-    CGFloat xPos = [UIScreen mainScreen].bounds.size.width*0.30;
+    CGFloat yPos = [UIScreen mainScreen].bounds.size.height*0.50;
+    CGFloat xPos = [UIScreen mainScreen].bounds.size.width*0.45;
     
     [self.mainMenuButton setPosition:CGPointMake(xPos, yPos)];
 }

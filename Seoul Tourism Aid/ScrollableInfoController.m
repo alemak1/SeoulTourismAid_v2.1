@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIView *containingView;
 
 
-
 @property UIDynamicAnimator* animator;
 
 @property UIPushBehavior* pushBehavior;
@@ -31,6 +30,17 @@
 
 @implementation ScrollableInfoController
 
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
 
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
@@ -56,7 +66,7 @@
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.scrollsToTop = NO;
     self.scrollView.alwaysBounceVertical = NO;
-    self.scrollView.alwaysBounceHorizontal = YES;
+    self.scrollView.alwaysBounceHorizontal = NO;
     self.scrollView.bounces = FALSE;
     
     [self loadImagesForScrollView];
@@ -149,19 +159,22 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+
+
 }
 
 -(void) loadImagesForScrollView{
     
+    CGRect imageViewFrame = self.scrollView.frame;
+    CGFloat scrollViewFrameWidth = CGRectGetWidth(self.scrollView.bounds);
+    
     for(int i = 0; i < self.contentList.count; i++){
         
-        CGRect imageViewFrame = self.scrollView.bounds;
-        CGFloat scrollViewFrameWidth = CGRectGetWidth(self.scrollView.bounds);
-        CGFloat adjustedScrollViewFrameWidth = scrollViewFrameWidth*1.2;
-        
+       
         imageViewFrame.origin.y = 0;
-        imageViewFrame.origin.x = i * adjustedScrollViewFrameWidth;
-        imageViewFrame.size.width = adjustedScrollViewFrameWidth;
+        imageViewFrame.origin.x = i * scrollViewFrameWidth;
+        imageViewFrame.size.width = scrollViewFrameWidth;
         
         UIImageView* imageView = [[UIImageView alloc] initWithFrame: imageViewFrame];
         [self.scrollView addSubview:imageView];
@@ -173,6 +186,29 @@
         
         imageView.image = image;
     }
+    
+    [self.scrollView setContentOffset:CGPointMake(-scrollViewFrameWidth*0.033, 0.00)];
+    
+}
+
+
+
+-(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    
+    for(UIView*subview in self.scrollView.subviews){
+        [subview removeFromSuperview];
+    }
+    
+    [self loadImagesForScrollView];
+
+    
+}
+
+
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection{
+  
+   
+    
 }
 
 - (IBAction)changePage:(id)sender {
@@ -198,7 +234,7 @@
 
 
     
-    [self goToPoint:page*pageWidth];
+    [self goToPoint:page*pageWidth-pageWidth*0.033];
     
     
 }
@@ -222,23 +258,7 @@
    
 }
 
--(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
-    
-    for (UIView *view in self.scrollView.subviews)
-    {
-        [view removeFromSuperview];
-    }
-}
 
--(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection{
-    
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.showsVerticalScrollIndicator = NO;
-    self.scrollView.scrollsToTop = NO;
-    self.scrollView.alwaysBounceVertical = NO;
-    
-    [self loadImagesForScrollView];
-}
+
 
 @end

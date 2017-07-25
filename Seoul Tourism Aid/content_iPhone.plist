@@ -4,51 +4,27 @@
 <array>
 	<dict>
 		<key>imageKey</key>
-		<string>Guests1</string>
+		<string>guanghuamun</string>
 		<key>nameKey</key>
-		<string>Meet other backpackers and travelers from different parts of the world...</string>
+		<string>Detailed information for major tourist sites</string>
 	</dict>
 	<dict>
 		<key>imageKey</key>
-		<string>RoomNo1_2</string>
+		<string>korean_dress_store</string>
 		<key>nameKey</key>
-		<string>All-female and all-male rooms available, with double bunk beds to accomodate 4 guests per room</string>
+		<string>Region monitoring to alert visitors when they are close to tourist sites</string>
 	</dict>
 	<dict>
 		<key>imageKey</key>
-		<string>SubwayMap_2</string>
+		<string>national_museum_of_contemporary_history</string>
 		<key>nameKey</key>
-		<string>Easy access to subway, with a direct line from the airport...</string>
+		<string>Language and translation help</string>
 	</dict>
 	<dict>
 		<key>imageKey</key>
-		<string>RoomNo3_12</string>
+		<string>pagoda_national_palace_museum</string>
 		<key>nameKey</key>
-		<string>Rooms can be booked for days or even longer periods for a discount....</string>
-	</dict>
-	<dict>
-		<key>imageKey</key>
-		<string>Kitchen_1</string>
-		<key>nameKey</key>
-		<string>Kitchen is available for all guests....</string>
-	</dict>
-	<dict>
-		<key>imageKey</key>
-		<string>RoomNo3_6</string>
-		<key>nameKey</key>
-		<string>All rooms are equipped with WiFi, personal lockers, and air-conditioning...</string>
-	</dict>
-	<dict>
-		<key>imageKey</key>
-		<string>SubwayMap_1</string>
-		<key>nameKey</key>
-		<string>Right across the street from Gongdeok subway station, with easy access to major tourist sites...</string>
-	</dict>
-	<dict>
-		<key>imageKey</key>
-		<string>WallLogo2</string>
-		<key>nameKey</key>
-		<string>Located in a quiet area with quick access to major tourist sites...</string>
+		<string>Image galleries, tourism vidoes, and more....</string>
 	</dict>
 </array>
 </plist>

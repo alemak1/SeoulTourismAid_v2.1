@@ -40,21 +40,50 @@ SKView* _skView;
 
 -(void)viewWillLayoutSubviews{
     
+    [self.skView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    
+    [self.view addSubview:self.skView];
+    
+   
+    NSArray<NSLayoutConstraint*>* constraints = [NSArray arrayWithObjects:
+            [[self.skView centerXAnchor] constraintEqualToAnchor:[self.view centerXAnchor]],
+            [[self.skView centerYAnchor] constraintEqualToAnchor:[self.view centerYAnchor]],
+            [[self.skView widthAnchor] constraintEqualToConstant:1050],
+            [[self.skView heightAnchor] constraintEqualToConstant:1433.3], nil];
+   
+    [NSLayoutConstraint activateConstraints:constraints];
+
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    
     [self registerNotifications];
     
     SKScene* gameScene = [[EntryGameScene alloc] initWithSize:self.view.bounds.size];
     
     [self.skView presentScene:gameScene];
     
-   
-    
-
 }
 
 
-
--(void)viewDidLoad{
+-(void)viewDidAppear:(BOOL)animated{
     
+    [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortrait) forKey:@"orientation"];
+
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
+
+-(BOOL)shouldAutorotate{
+    return NO;
 }
 
 -(SKView *)skView{
@@ -62,9 +91,8 @@ SKView* _skView;
     
     if(_skView == nil){
         
-        _skView = [[SKView alloc] initWithFrame:self.view.bounds];
+        _skView = [[SKView alloc] init];
         
-        [self.view addSubview:_skView];
     }
 
     return _skView;
@@ -77,13 +105,7 @@ SKView* _skView;
 }
 
 
--(UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
-}
 
--(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return UIInterfaceOrientationPortrait;
-}
 
 -(void)dealloc{
     [self removeNotifications];
@@ -202,9 +224,23 @@ SKView* _skView;
 
 
 -(void)presentAppInfoControllerRequestAlert{
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"App Information Aid" message:@"Do you want to learn more information about how to use this app or leave a review?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"App Information Aid" message:@"Do you want to learn more information about this app or leave a review?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+    
+        
+        UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
+        
+        
+        NSString *storyBoardIdentifier = @"ScrollableInfoController";
+       
+        
+        UIViewController* viewController = [storyboardD instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+        
+        [self showViewController:viewController sender:nil];
+
+    
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     

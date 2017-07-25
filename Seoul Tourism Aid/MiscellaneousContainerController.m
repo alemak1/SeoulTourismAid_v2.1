@@ -34,12 +34,14 @@
     
     [self.scrollView setDelegate:self];
     
-    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame)*1.80)];
+    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*1.80)];
     
     [self.scrollView setScrollsToTop:NO];
     [self.scrollView setPagingEnabled:NO];
     [self.scrollView setScrollEnabled:YES];
-    [self.scrollView setAlwaysBounceVertical:NO];
+    [self.scrollView setAlwaysBounceVertical:YES];
+    [self.scrollView setAlwaysBounceHorizontal:NO];
+    [self.scrollView setDirectionalLockEnabled:YES];
     
     /** Instantiate the feature view controller from the storyboard, add it as a child view controller, and add it view to the scroll view **/
     
@@ -56,6 +58,8 @@
     [miscellaneousInfoController.view setFrame:CGRectMake(0.00, 0.00, self.scrollView.contentSize.width, self.scrollView.contentSize.height)];
     
     [miscellaneousInfoController didMoveToParentViewController:self];
+    
+    
 }
 
 @end

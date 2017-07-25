@@ -62,6 +62,7 @@ typedef enum IconBitmask{
 @implementation KoreanLearningScene
 
 BOOL _notificationHasJustBeenSent = false;
+BOOL _introWindowAlreadyShown = false;
 
 CGFloat _lastUpdatedPlayerVelocity = 0.00;
 NSTimeInterval _notificationDelayFrameCount = 0.00;
@@ -98,6 +99,9 @@ NSOperationQueue* _helperOperationQueue;
     [self configureOverlayNode];
     
     [self configureOverlayButtons];
+    
+    [self.overlayNode setScale:0.50];
+    [self.worldNode setScale:0.50];
     
     NSLog(@"Player bunny information: %@",[self.userBunny description]);
     
@@ -578,7 +582,7 @@ NSOperationQueue* _helperOperationQueue;
     
     [self.scoreBoard setPosition:CGPointMake(0.00, yPosOffsetScoreboard)];
     
-    if(!self.hasRestarted){
+    if(!self.hasRestarted && !_introWindowAlreadyShown){
         SKNode* introLabel = [overlayCollection childNodeWithName:@"IntroLabel"];
     
         [introLabel moveToParent:self.overlayNode];
@@ -592,6 +596,8 @@ NSOperationQueue* _helperOperationQueue;
         }], nil]];
     
         [introLabel runAction:labelAction];
+        
+        _introWindowAlreadyShown = true;
     }
 }
 

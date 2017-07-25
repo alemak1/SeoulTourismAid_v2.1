@@ -107,8 +107,10 @@
             case 0:
                 //App information controller
                 requestedViewController = [self getInformationControllerFromStoryBoard];
+                
+                [self presentViewController:requestedViewController animated:YES completion:nil];
                 NSLog(@"You selected option %d",(int)selectedOptionIndex);
-                break;
+                return;
             case 1:
                 //Directions
                 requestedViewController = [self getNavigationAidMenuController];
@@ -300,12 +302,9 @@
     UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
     
     
-    NSString *storyBoardIdentifier = @"PadInformationController";
+   
+    NSString* storyBoardIdentifier = @"ScrollableInfoController";
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-    {
-        storyBoardIdentifier = @"ScollableInfoController";
-    }
     
     
     return [storyboardD instantiateViewControllerWithIdentifier:storyBoardIdentifier];
