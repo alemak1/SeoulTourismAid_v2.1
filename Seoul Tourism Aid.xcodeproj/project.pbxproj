@@ -61,6 +61,18 @@
 		BD32EBF01F24FC9900B5E8D2 /* AudioPhrases.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD32EBEF1F24FC9900B5E8D2 /* AudioPhrases.plist */; };
 		BD32EBF31F24FDB300B5E8D2 /* AudioSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */; };
 		BD32EBF61F25060100B5E8D2 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF51F25060100B5E8D2 /* AudioController.m */; };
+		BD34DFFA1F273E850073A9F4 /* foodPhraseAudio3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34DFF91F273E850073A9F4 /* foodPhraseAudio3.caf */; };
+		BD34DFFC1F273EE40073A9F4 /* foodPhraseAudio4.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34DFFB1F273EE40073A9F4 /* foodPhraseAudio4.caf */; };
+		BD34DFFE1F273F2A0073A9F4 /* foodPhraseAudio5.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34DFFD1F273F2A0073A9F4 /* foodPhraseAudio5.caf */; };
+		BD34E0001F273F690073A9F4 /* foodPhraseAudio6.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34DFFF1F273F690073A9F4 /* foodPhraseAudio6.caf */; };
+		BD34E0021F273FBA0073A9F4 /* foodPhraseAudio7.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E0011F273FBA0073A9F4 /* foodPhraseAudio7.caf */; };
+		BD34E0041F2740340073A9F4 /* clothingAudio2.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E0031F2740340073A9F4 /* clothingAudio2.caf */; };
+		BD34E0061F2740850073A9F4 /* clothingAudio3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E0051F2740850073A9F4 /* clothingAudio3.caf */; };
+		BD34E0081F2740C90073A9F4 /* clothingAudio4.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E0071F2740C90073A9F4 /* clothingAudio4.caf */; };
+		BD34E00A1F27411C0073A9F4 /* clothingAudio5.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E0091F27411C0073A9F4 /* clothingAudio5.caf */; };
+		BD34E00C1F27415D0073A9F4 /* clothingAudio6.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E00B1F27415D0073A9F4 /* clothingAudio6.caf */; };
+		BD34E00E1F2741BE0073A9F4 /* clothingAudio7.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E00D1F2741BE0073A9F4 /* clothingAudio7.caf */; };
+		BD34E0101F27420D0073A9F4 /* foodPhraseAudio8.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34E00F1F27420D0073A9F4 /* foodPhraseAudio8.caf */; };
 		BD355AF31F1C3A460000CB55 /* GameObjectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD355AF21F1C3A460000CB55 /* GameObjectList.plist */; };
 		BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF51F1C4A540000CB55 /* GameQuestion.m */; };
 		BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BD355AF81F1C51060000CB55 /* GameObjectArchiverKeys.m */; };
@@ -288,6 +300,18 @@
 		BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSection.m; sourceTree = "<group>"; };
 		BD32EBF41F25060100B5E8D2 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		BD32EBF51F25060100B5E8D2 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		BD34DFF91F273E850073A9F4 /* foodPhraseAudio3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio3.caf; sourceTree = "<group>"; };
+		BD34DFFB1F273EE40073A9F4 /* foodPhraseAudio4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio4.caf; sourceTree = "<group>"; };
+		BD34DFFD1F273F2A0073A9F4 /* foodPhraseAudio5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio5.caf; sourceTree = "<group>"; };
+		BD34DFFF1F273F690073A9F4 /* foodPhraseAudio6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio6.caf; sourceTree = "<group>"; };
+		BD34E0011F273FBA0073A9F4 /* foodPhraseAudio7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio7.caf; sourceTree = "<group>"; };
+		BD34E0031F2740340073A9F4 /* clothingAudio2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothingAudio2.caf; sourceTree = "<group>"; };
+		BD34E0051F2740850073A9F4 /* clothingAudio3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothingAudio3.caf; sourceTree = "<group>"; };
+		BD34E0071F2740C90073A9F4 /* clothingAudio4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothingAudio4.caf; sourceTree = "<group>"; };
+		BD34E0091F27411C0073A9F4 /* clothingAudio5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothingAudio5.caf; sourceTree = "<group>"; };
+		BD34E00B1F27415D0073A9F4 /* clothingAudio6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothingAudio6.caf; sourceTree = "<group>"; };
+		BD34E00D1F2741BE0073A9F4 /* clothingAudio7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothingAudio7.caf; sourceTree = "<group>"; };
+		BD34E00F1F27420D0073A9F4 /* foodPhraseAudio8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio8.caf; sourceTree = "<group>"; };
 		BD355AF21F1C3A460000CB55 /* GameObjectList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameObjectList.plist; sourceTree = "<group>"; };
 		BD355AF41F1C4A480000CB55 /* GameQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameQuestion.h; sourceTree = "<group>"; };
 		BD355AF51F1C4A540000CB55 /* GameQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameQuestion.m; sourceTree = "<group>"; };
@@ -820,7 +844,14 @@
 			children = (
 				BD7C2FDB1F2711D900B835EE /* basicAudio1.caf */,
 				BD7C2FDD1F27124A00B835EE /* basicAudio2.caf */,
+				BD34E00F1F27420D0073A9F4 /* foodPhraseAudio8.caf */,
+				BD34E0051F2740850073A9F4 /* clothingAudio3.caf */,
+				BD34E00B1F27415D0073A9F4 /* clothingAudio6.caf */,
+				BD34E0091F27411C0073A9F4 /* clothingAudio5.caf */,
 				BD7C2FE11F27133300B835EE /* basicAudio3.caf */,
+				BD34E0031F2740340073A9F4 /* clothingAudio2.caf */,
+				BD34E0071F2740C90073A9F4 /* clothingAudio4.caf */,
+				BD34E00D1F2741BE0073A9F4 /* clothingAudio7.caf */,
 				BD7C2FDF1F2712D100B835EE /* basicAudio4.caf */,
 				BD7C2FE51F27144C00B835EE /* basicAudio5.caf */,
 				BD7C2FE31F2713A800B835EE /* basicAudio6.caf */,
@@ -830,6 +861,11 @@
 				BD7C2FED1F27156600B835EE /* basicAudio10.caf */,
 				BD7C2FEF1F2715C400B835EE /* basicAudio11.caf */,
 				BD7C2FF11F27160100B835EE /* basicAudio12.caf */,
+				BD34DFF91F273E850073A9F4 /* foodPhraseAudio3.caf */,
+				BD34DFFB1F273EE40073A9F4 /* foodPhraseAudio4.caf */,
+				BD34DFFD1F273F2A0073A9F4 /* foodPhraseAudio5.caf */,
+				BD34DFFF1F273F690073A9F4 /* foodPhraseAudio6.caf */,
+				BD34E0011F273FBA0073A9F4 /* foodPhraseAudio7.caf */,
 				BD7C2FF31F27168500B835EE /* basicAudio13.caf */,
 				BD7C2FF51F2716D400B835EE /* basicAudio14.caf */,
 				BD2E4D4C1F25DCFF005770D1 /* transportationAudio15.caf */,
@@ -1127,15 +1163,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3570B41F24D293003BE859 /* PetraeusBuilding.plist in Resources */,
+				BD34E0101F27420D0073A9F4 /* foodPhraseAudio8.caf in Resources */,
 				BD2E4D231F25AA07005770D1 /* miscAudio5.caf in Resources */,
 				BD3570AA1F24D279003BE859 /* LottoHotel.plist in Resources */,
 				BD7C2FD31F26F1ED00B835EE /* KoreanProducts.plist in Resources */,
 				BD3570BA1F24D2B6003BE859 /* SeoulGrandParkRegions.plist in Resources */,
 				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
 				BD3570C21F24D2E3003BE859 /* WeddingHall.plist in Resources */,
+				BD34E0061F2740850073A9F4 /* clothingAudio3.caf in Resources */,
 				BD2E4D211F25A95B005770D1 /* foodPhraseAudio2.caf in Resources */,
 				BD3570B31F24D293003BE859 /* path2.plist in Resources */,
 				BD3932051F2590D5008B3C1B /* clothingAudio1.caf in Resources */,
+				BD34E0021F273FBA0073A9F4 /* foodPhraseAudio7.caf in Resources */,
 				BD2E4D1D1F25A72B005770D1 /* transportationAudio4.caf in Resources */,
 				BD3931ED1F2585DE008B3C1B /* foodAudio4.caf in Resources */,
 				BD2E4D431F25DB23005770D1 /* transportationAudio10.caf in Resources */,
@@ -1154,17 +1193,24 @@
 				BD3570B21F24D293003BE859 /* path1.plist in Resources */,
 				BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */,
 				BD2E4D451F25DB8C005770D1 /* transportationAudio11.caf in Resources */,
+				BD34E0081F2740C90073A9F4 /* clothingAudio4.caf in Resources */,
 				BD2E4D2D1F25B54B005770D1 /* IconAcknowledgements.plist in Resources */,
 				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
+				BD34DFFA1F273E850073A9F4 /* foodPhraseAudio3.caf in Resources */,
 				BD7C2FF01F2715C400B835EE /* basicAudio11.caf in Resources */,
 				BD7C2FF61F2716D400B835EE /* basicAudio14.caf in Resources */,
 				BD3931F91F258D04008B3C1B /* foodAudio8.caf in Resources */,
 				BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */,
 				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
+				BD34E0001F273F690073A9F4 /* foodPhraseAudio6.caf in Resources */,
 				BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */,
 				BD3570A51F24D270003BE859 /* KoreanWarExhibitRoom1.plist in Resources */,
+				BD34DFFE1F273F2A0073A9F4 /* foodPhraseAudio5.caf in Resources */,
+				BD34E00C1F27415D0073A9F4 /* clothingAudio6.caf in Resources */,
 				BD3570A81F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist in Resources */,
+				BD34E0041F2740340073A9F4 /* clothingAudio2.caf in Resources */,
 				BD3570BE1F24D2D1003BE859 /* WarHistoryExhibit.plist in Resources */,
+				BD34E00E1F2741BE0073A9F4 /* clothingAudio7.caf in Resources */,
 				BD7C2FEA1F2714EA00B835EE /* basicAudio8.caf in Resources */,
 				BD7C2FEC1F27152900B835EE /* basicAudio9.caf in Resources */,
 				BD2E4D2B1F25B519005770D1 /* content_iPhone.plist in Resources */,
@@ -1205,6 +1251,7 @@
 				BD7C2FE21F27133300B835EE /* basicAudio3.caf in Resources */,
 				BD32EBF01F24FC9900B5E8D2 /* AudioPhrases.plist in Resources */,
 				BD2E4D171F25A54E005770D1 /* transportationAudio1.caf in Resources */,
+				BD34DFFC1F273EE40073A9F4 /* foodPhraseAudio4.caf in Resources */,
 				BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */,
 				BD2EDBA01F1B92F900C86D37 /* EntryUIOverlay.sks in Resources */,
 				BD2E4D1F1F25A90A005770D1 /* foodPhraseAudio1.caf in Resources */,
@@ -1213,6 +1260,7 @@
 				BD3570A61F24D270003BE859 /* KoreanWarExhibitRoom2.plist in Resources */,
 				BD2E4D191F25A621005770D1 /* transportationAudio2.caf in Resources */,
 				BD7C2FEE1F27156600B835EE /* basicAudio10.caf in Resources */,
+				BD34E00A1F27411C0073A9F4 /* clothingAudio5.caf in Resources */,
 				BD2E4D471F25DBE8005770D1 /* transportationAudio12.caf in Resources */,
 				BD2E4D491F25DC50005770D1 /* transportationAudio13.caf in Resources */,
 			);

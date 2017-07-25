@@ -12,6 +12,18 @@
 #import "EntryViewGameSceneController.h"
 #import "EntryGameScene.h"
 #import "Constants.h"
+#import "AuthorizationController.h"
+
+#import <OIDServiceConfiguration.h>
+#import <OIDAuthorizationService.h>
+#import <OIDAuthState.h>
+#import <OIDAuthorizationRequest.h>
+#import <OIDTokenResponse.h>
+
+#import <GTMAppAuth.h>
+#import <GTMAppAuthFetcherAuthorization.h>
+#import <GTMSessionFetcherService.h>
+
 
 
 @interface EntryViewGameSceneController ()
@@ -64,6 +76,14 @@ SKView* _skView;
     
 }
 
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
 
 -(void)dealloc{
     [self removeNotifications];
@@ -179,19 +199,7 @@ SKView* _skView;
     [self showViewController:alertController sender:nil];
 }
 
--(void)presentKoreanAudioControllerRequestAlert{
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Korean Language Aid" message:@"Do you want to hear authentic phrases in Korean or get translations for English phrases?" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
-    
-    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
-    
-    [alertController addAction:okay];
-    [alertController addAction:cancel];
-    
-    
-    [self showViewController:alertController sender:nil];
-}
+
 
 -(void)presentAppInfoControllerRequestAlert{
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"App Information Aid" message:@"Do you want to learn more information about how to use this app or leave a review?" preferredStyle:UIAlertControllerStyleAlert];
@@ -246,6 +254,55 @@ SKView* _skView;
     
 }
 
+
+
+-(void)presentLanguageHelpOptionsController{
+    
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Korean Language Help" message:@"Do you want to get help understanding or translating to the Korean language?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+        
+        
+        
+        GTMAppAuthFetcherAuthorization* fromKeychainAuthorization =
+        [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];
+        
+        NSLog(@"Authorization token is %@",fromKeychainAuthorization.authState.lastTokenResponse.accessToken);
+        
+        UIViewController* nextViewController;
+        
+        if(fromKeychainAuthorization == nil){
+            AuthorizationController* authorizationController = [[AuthorizationController alloc] init];
+            
+            nextViewController = authorizationController;
+        } else {
+            
+            UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+            
+            
+            nextViewController = [storyboardC instantiateViewControllerWithIdentifier:@"LanguageOptionsController"];
+            
+            NSLog(@"Authorization already obtained...");
+        }
+        
+        
+        [self showViewController:nextViewController sender:nil];
+        
+    }];
+    
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:okay];
+    [alertController addAction:cancel];
+    
+    
+    [self showViewController:alertController sender:nil];
+    
+
+    
+}
+
+
 #pragma mark ****** HELPER METHODS FOR REGISTERING AND REMOVING NOTIFICATIONS
 
 -(void) registerNotifications{
@@ -262,7 +319,7 @@ SKView* _skView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentImageGalleryControllerRequestAlert) name:DID_REQUEST_IMAGE_GALLERY_NOTIFICATION object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentKoreanAudioControllerRequestAlert) name:DID_REQUEST_KOREAN_AUDIO_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentLanguageHelpOptionsController) name:DID_REQUEST_KOREAN_AUDIO_NOTIFICATION object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentWeatherInfoControllerRequestAlert) name:DID_REQUEST_WEATHER_INFO_NOTIFICATION object:nil];
     
@@ -270,9 +327,17 @@ SKView* _skView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentMonitoredRegionsControllerRequestAlert) name:DID_REQUEST_MONITORED_REGIONS_NOTIFICATION object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentLanguageHelpOptionsController) name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
+
+    
+    
+    
 }
 
 -(void)removeNotifications{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
+
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_WEATHER_INFO_NOTIFICATION object:nil];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DID_REQUEST_KOREAN_AUDIO_NOTIFICATION object:nil];

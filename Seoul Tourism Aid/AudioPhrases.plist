@@ -10,6 +10,48 @@
 			<key>originalPhrase</key>
 			<string>Do you have this in a smaller size?</string>
 		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>clothingAudio2</string>
+			<key>originalPhrase</key>
+			<string>Do you have this in a different style?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>clothingAudio3</string>
+			<key>originalPhrase</key>
+			<string>Do you have this in a bigger size?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>clothingAudio4</string>
+			<key>originalPhrase</key>
+			<string>Do you have this in another color?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>clothingAudio5</string>
+			<key>originalPhrase</key>
+			<string>How much time do I have to return this?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>clothingAudio6</string>
+			<key>originalPhrase</key>
+			<string>Is there a discount for this?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>clothingAudio6</string>
+			<key>originalPhrase</key>
+			<string>Is there a discount for this?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>clothingAudio7</string>
+			<key>originalPhrase</key>
+			<string>Can you give me a discount for this?</string>
+		</dict>
 	</array>
 	<key>Basic Phrases</key>
 	<array>
@@ -168,6 +210,42 @@
 			<string>foodPhraseAudio2</string>
 			<key>originalPhrase</key>
 			<string>How many calories does this have?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodPhraseAudio3</string>
+			<key>originalPhrase</key>
+			<string>Do you have any seafood?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodPhraseAudio4</string>
+			<key>originalPhrase</key>
+			<string>Do you have anything sweet?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodPhraseAudio5</string>
+			<key>originalPhrase</key>
+			<string>This is too salty.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodPhraseAudio6</string>
+			<key>originalPhrase</key>
+			<string>When does this food spoil?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodPhraseAudio7</string>
+			<key>originalPhrase</key>
+			<string>I&apos;m allergic to this.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>foodPhraseAudio8</string>
+			<key>originalPhrase</key>
+			<string>What kind of taste does this have?</string>
 		</dict>
 	</array>
 	<key>Miscellaneous</key>
