@@ -12,7 +12,92 @@
 		</dict>
 	</array>
 	<key>Basic Phrases</key>
-	<array/>
+	<array>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio1</string>
+			<key>originalPhrase</key>
+			<string>What time is it?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio2</string>
+			<key>originalPhrase</key>
+			<string>What&apos;s the date today?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio4</string>
+			<key>originalPhrase</key>
+			<string>Goodbye</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio3</string>
+			<key>originalPhrase</key>
+			<string>Hello</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio5</string>
+			<key>originalPhrase</key>
+			<string>Who&apos;s your favorite K-pop singer?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio6</string>
+			<key>originalPhrase</key>
+			<string>What&apos;s your favorite Korean drama?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio7</string>
+			<key>originalPhrase</key>
+			<string>What&apos;s your favorite song?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio8</string>
+			<key>originalPhrase</key>
+			<string>I&apos;m from Canada.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio9</string>
+			<key>originalPhrase</key>
+			<string>My name is Tina.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio10</string>
+			<key>originalPhrase</key>
+			<string>How much does this cost?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio11</string>
+			<key>originalPhrase</key>
+			<string>What&apos;s your name?</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio12</string>
+			<key>originalPhrase</key>
+			<string>You&apos;re welcome</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio13</string>
+			<key>originalPhrase</key>
+			<string>Nice to meet you.</string>
+		</dict>
+		<dict>
+			<key>filePath</key>
+			<string>basicAudio14</string>
+			<key>originalPhrase</key>
+			<string>Where are you from?</string>
+		</dict>
+	</array>
 	<key>Restaurants</key>
 	<array>
 		<dict>

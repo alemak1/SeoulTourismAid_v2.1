@@ -6,8 +6,17 @@
 	<array>
 		<string>precipA</string>
 	</array>
+	<key>Pro Symbols</key>
+	<array>
+		<string>letter120</string>
+	</array>
+	<key>OCHA</key>
+	<array>
+		<string>gas120</string>
+	</array>
 	<key>Icon Pond</key>
 	<array>
+		<string>travel120</string>
 		<string>routeA</string>
 	</array>
 	<key>Alfredo Hernandez</key>
@@ -28,6 +37,20 @@
 	</array>
 	<key>Freepik</key>
 	<array>
+		<string>dog120</string>
+		<string>medicine120</string>
+		<string>spa120</string>
+		<string>bowling120</string>
+		<string>bouquet120</string>
+		<string>shoe120</string>
+		<string>hairCare120</string>
+		<string>repairCar120</string>
+		<string>rentalCar120</string>
+		<string>bicycle120</string>
+		<string>tent120</string>
+		<string>laundry120</string>
+		<string>diamond120</string>
+		<string>gym120</string>
 		<string>pharmacyA</string>
 		<string>paintingA</string>
 		<string>noodles</string>
@@ -55,6 +78,10 @@
 	</array>
 	<key>Oliver</key>
 	<array>
+		<string>parking120</string>
+		<string>atm120</string>
+		<string>dentist120</string>
+		<string>vault120</string>
 		<string>piggyBankA</string>
 		<string>phoneA</string>
 		<string>coffeeA</string>

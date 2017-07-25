@@ -100,18 +100,7 @@
 - (void)showMenu:(UIGestureRecognizer *)gestureRecognizer {
     [self.menuComponent showMenuWithSelectionHandler:^(NSInteger selectedOptionIndex) {
         
-        
-        UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-        
-        UIStoryboard* storyBoardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
-        
-        UIStoryboard* storyBoardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
-        
-        UIStoryboard* storyBoardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
-        
-        UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
-        
+
         UIViewController* requestedViewController;
         
         switch (selectedOptionIndex) {
@@ -123,25 +112,19 @@
             case 1:
                 //Directions
                 requestedViewController = [self getNavigationAidMenuController];
-                    NSLog(@"You selected option %d",(int)selectedOptionIndex);
-
                 break;
             case 2:
                 //Contact info
-                 requestedViewController = [storyBoardA instantiateViewControllerWithIdentifier:@"DirectionsMenuController"];
-                    NSLog(@"You selected option %d",(int)selectedOptionIndex);
-
+                requestedViewController = [self getDirectionsMenuController];
                 break;
             case 3:
                 //Seoul tourism
                 requestedViewController = [self getSeoulTouristSiteInformationController];
-                    NSLog(@"You selected option %d",(int)selectedOptionIndex);
 
                 break;
             case 4:
                 //Weather
-                 requestedViewController = [storyboardD instantiateViewControllerWithIdentifier:@"WeatherNavigationController"];
-                NSLog(@"You selected option %d",(int)selectedOptionIndex);
+                requestedViewController = [self getWeatherNavigationController];
 
                 break;
             case 5:
@@ -150,7 +133,7 @@
                 break;
             case 6:
                 //Korean Product Prices
-                requestedViewController = [storyBoardB instantiateViewControllerWithIdentifier:@"ProductPriceNavigationController"];
+                requestedViewController = [self getProductPriceController];
                 break;
             case 7:
                 //Monitored Regions
@@ -183,6 +166,37 @@
 }
 
 
+#pragma mark HELPER FUNCTIONS FOR GETTING VIEWCONTROLLER CORRESPONDING TO MENU OPTION CHOICE
+
+-(UIViewController*)getWeatherNavigationController{
+    
+    UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
+    
+    UIViewController* requestedViewController = [storyboardD instantiateViewControllerWithIdentifier:@"WeatherNavigationController"];
+
+    return requestedViewController;
+}
+
+
+
+-(UIViewController*)getDirectionsMenuController{
+    
+    UIStoryboard* storyBoardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
+    
+    UIViewController* requestedViewController = [storyBoardA instantiateViewControllerWithIdentifier:@"DirectionsMenuController"];
+    
+    return requestedViewController;
+
+}
+
+-(UIViewController*)getProductPriceController{
+    
+    UIStoryboard* storyboardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
+
+     UIViewController* requestedViewController = [storyboardB instantiateViewControllerWithIdentifier:@"ProductPriceNavigationController"];
+    
+    return requestedViewController;
+}
 
 -(UIViewController*)getLanguageHelpMenuOptions{
     

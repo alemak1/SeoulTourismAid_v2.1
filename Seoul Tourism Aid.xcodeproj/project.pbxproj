@@ -168,6 +168,27 @@
 		BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */; };
 		BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD55E02E1F2270A000CFBE68 /* Seoul.geojson */; };
 		BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */; };
+		BD7C2FCC1F26F18E00B835EE /* ProductPriceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FC71F26F18E00B835EE /* ProductPriceController.m */; };
+		BD7C2FCD1F26F18E00B835EE /* ProductPriceDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FC91F26F18E00B835EE /* ProductPriceDisplayController.m */; };
+		BD7C2FCE1F26F18E00B835EE /* ProductSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FCB1F26F18E00B835EE /* ProductSearchController.m */; };
+		BD7C2FD11F26F1B400B835EE /* NSString+CurrencyHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FD01F26F1B400B835EE /* NSString+CurrencyHelperMethods.m */; };
+		BD7C2FD31F26F1ED00B835EE /* KoreanProducts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FD21F26F1ED00B835EE /* KoreanProducts.plist */; };
+		BD7C2FD91F26F29400B835EE /* KoreanProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FD61F26F29400B835EE /* KoreanProduct.m */; };
+		BD7C2FDA1F26F29400B835EE /* KoreanProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FD81F26F29400B835EE /* KoreanProductCell.m */; };
+		BD7C2FDC1F2711D900B835EE /* basicAudio1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FDB1F2711D900B835EE /* basicAudio1.caf */; };
+		BD7C2FDE1F27124A00B835EE /* basicAudio2.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FDD1F27124A00B835EE /* basicAudio2.caf */; };
+		BD7C2FE01F2712D100B835EE /* basicAudio4.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FDF1F2712D100B835EE /* basicAudio4.caf */; };
+		BD7C2FE21F27133300B835EE /* basicAudio3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FE11F27133300B835EE /* basicAudio3.caf */; };
+		BD7C2FE41F2713A800B835EE /* basicAudio6.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FE31F2713A800B835EE /* basicAudio6.caf */; };
+		BD7C2FE61F27144C00B835EE /* basicAudio5.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FE51F27144C00B835EE /* basicAudio5.caf */; };
+		BD7C2FE81F2714A400B835EE /* basicAudio7.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FE71F2714A400B835EE /* basicAudio7.caf */; };
+		BD7C2FEA1F2714EA00B835EE /* basicAudio8.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FE91F2714EA00B835EE /* basicAudio8.caf */; };
+		BD7C2FEC1F27152900B835EE /* basicAudio9.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FEB1F27152900B835EE /* basicAudio9.caf */; };
+		BD7C2FEE1F27156600B835EE /* basicAudio10.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FED1F27156600B835EE /* basicAudio10.caf */; };
+		BD7C2FF01F2715C400B835EE /* basicAudio11.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FEF1F2715C400B835EE /* basicAudio11.caf */; };
+		BD7C2FF21F27160100B835EE /* basicAudio12.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FF11F27160100B835EE /* basicAudio12.caf */; };
+		BD7C2FF41F27168500B835EE /* basicAudio13.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FF31F27168500B835EE /* basicAudio13.caf */; };
+		BD7C2FF61F2716D400B835EE /* basicAudio14.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FF51F2716D400B835EE /* basicAudio14.caf */; };
 		BD8A35E41F1DF85800346F88 /* FlickrHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DA1F1DF85800346F88 /* FlickrHelper.m */; };
 		BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DC1F1DF85800346F88 /* FlickrPhoto.m */; };
 		BD8A35E61F1DF85800346F88 /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A35DE1F1DF85800346F88 /* FlickrPhotoCell.m */; };
@@ -434,6 +455,35 @@
 		BD55E02E1F2270A000CFBE68 /* Seoul.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Seoul.geojson; sourceTree = "<group>"; };
 		BD714D691F21FEEB003D4C66 /* DirectionsMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsMenuController.h; sourceTree = "<group>"; };
 		BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsMenuController.m; sourceTree = "<group>"; };
+		BD7C2FC51F26F18E00B835EE /* ProductCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategory.h; sourceTree = "<group>"; };
+		BD7C2FC61F26F18E00B835EE /* ProductPriceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductPriceController.h; sourceTree = "<group>"; };
+		BD7C2FC71F26F18E00B835EE /* ProductPriceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductPriceController.m; sourceTree = "<group>"; };
+		BD7C2FC81F26F18E00B835EE /* ProductPriceDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductPriceDisplayController.h; sourceTree = "<group>"; };
+		BD7C2FC91F26F18E00B835EE /* ProductPriceDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductPriceDisplayController.m; sourceTree = "<group>"; };
+		BD7C2FCA1F26F18E00B835EE /* ProductSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSearchController.h; sourceTree = "<group>"; };
+		BD7C2FCB1F26F18E00B835EE /* ProductSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSearchController.m; sourceTree = "<group>"; };
+		BD7C2FCF1F26F1B400B835EE /* NSString+CurrencyHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CurrencyHelperMethods.h"; sourceTree = "<group>"; };
+		BD7C2FD01F26F1B400B835EE /* NSString+CurrencyHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CurrencyHelperMethods.m"; sourceTree = "<group>"; };
+		BD7C2FD21F26F1ED00B835EE /* KoreanProducts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KoreanProducts.plist; sourceTree = "<group>"; };
+		BD7C2FD41F26F22300B835EE /* CurrencyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyType.h; sourceTree = "<group>"; };
+		BD7C2FD51F26F29400B835EE /* KoreanProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KoreanProduct.h; sourceTree = "<group>"; };
+		BD7C2FD61F26F29400B835EE /* KoreanProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KoreanProduct.m; sourceTree = "<group>"; };
+		BD7C2FD71F26F29400B835EE /* KoreanProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KoreanProductCell.h; sourceTree = "<group>"; };
+		BD7C2FD81F26F29400B835EE /* KoreanProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KoreanProductCell.m; sourceTree = "<group>"; };
+		BD7C2FDB1F2711D900B835EE /* basicAudio1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio1.caf; sourceTree = "<group>"; };
+		BD7C2FDD1F27124A00B835EE /* basicAudio2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio2.caf; sourceTree = "<group>"; };
+		BD7C2FDF1F2712D100B835EE /* basicAudio4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio4.caf; sourceTree = "<group>"; };
+		BD7C2FE11F27133300B835EE /* basicAudio3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio3.caf; sourceTree = "<group>"; };
+		BD7C2FE31F2713A800B835EE /* basicAudio6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio6.caf; sourceTree = "<group>"; };
+		BD7C2FE51F27144C00B835EE /* basicAudio5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio5.caf; sourceTree = "<group>"; };
+		BD7C2FE71F2714A400B835EE /* basicAudio7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio7.caf; sourceTree = "<group>"; };
+		BD7C2FE91F2714EA00B835EE /* basicAudio8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio8.caf; sourceTree = "<group>"; };
+		BD7C2FEB1F27152900B835EE /* basicAudio9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio9.caf; sourceTree = "<group>"; };
+		BD7C2FED1F27156600B835EE /* basicAudio10.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio10.caf; sourceTree = "<group>"; };
+		BD7C2FEF1F2715C400B835EE /* basicAudio11.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio11.caf; sourceTree = "<group>"; };
+		BD7C2FF11F27160100B835EE /* basicAudio12.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio12.caf; sourceTree = "<group>"; };
+		BD7C2FF31F27168500B835EE /* basicAudio13.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio13.caf; sourceTree = "<group>"; };
+		BD7C2FF51F2716D400B835EE /* basicAudio14.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basicAudio14.caf; sourceTree = "<group>"; };
 		BD8A35D91F1DF85800346F88 /* FlickrHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrHelper.h; sourceTree = "<group>"; };
 		BD8A35DA1F1DF85800346F88 /* FlickrHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrHelper.m; sourceTree = "<group>"; };
 		BD8A35DB1F1DF85800346F88 /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
@@ -768,6 +818,20 @@
 		BD3931E61F2585A2008B3C1B /* SoundFiles */ = {
 			isa = PBXGroup;
 			children = (
+				BD7C2FDB1F2711D900B835EE /* basicAudio1.caf */,
+				BD7C2FDD1F27124A00B835EE /* basicAudio2.caf */,
+				BD7C2FE11F27133300B835EE /* basicAudio3.caf */,
+				BD7C2FDF1F2712D100B835EE /* basicAudio4.caf */,
+				BD7C2FE51F27144C00B835EE /* basicAudio5.caf */,
+				BD7C2FE31F2713A800B835EE /* basicAudio6.caf */,
+				BD7C2FE71F2714A400B835EE /* basicAudio7.caf */,
+				BD7C2FE91F2714EA00B835EE /* basicAudio8.caf */,
+				BD7C2FEB1F27152900B835EE /* basicAudio9.caf */,
+				BD7C2FED1F27156600B835EE /* basicAudio10.caf */,
+				BD7C2FEF1F2715C400B835EE /* basicAudio11.caf */,
+				BD7C2FF11F27160100B835EE /* basicAudio12.caf */,
+				BD7C2FF31F27168500B835EE /* basicAudio13.caf */,
+				BD7C2FF51F2716D400B835EE /* basicAudio14.caf */,
 				BD2E4D4C1F25DCFF005770D1 /* transportationAudio15.caf */,
 				BD2E4D481F25DC50005770D1 /* transportationAudio13.caf */,
 				BD2E4D4A1F25DCB0005770D1 /* transportationAudio14.caf */,
@@ -827,6 +891,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD7C2FC41F26F17B00B835EE /* ProductPriceControllers */,
 				BD2E4D261F25B49B005770D1 /* ScrollableInfoController */,
 				BD3931E61F2585A2008B3C1B /* SoundFiles */,
 				BD32EBE81F24F6C500B5E8D2 /* AudioCollectionController */,
@@ -919,6 +984,28 @@
 				BD3570871F24CF47003BE859 /* DestinationCategory.h */,
 			);
 			name = NavigationAidControllers;
+			sourceTree = "<group>";
+		};
+		BD7C2FC41F26F17B00B835EE /* ProductPriceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD7C2FD41F26F22300B835EE /* CurrencyType.h */,
+				BD7C2FD21F26F1ED00B835EE /* KoreanProducts.plist */,
+				BD7C2FCF1F26F1B400B835EE /* NSString+CurrencyHelperMethods.h */,
+				BD7C2FD01F26F1B400B835EE /* NSString+CurrencyHelperMethods.m */,
+				BD7C2FC51F26F18E00B835EE /* ProductCategory.h */,
+				BD7C2FC61F26F18E00B835EE /* ProductPriceController.h */,
+				BD7C2FC71F26F18E00B835EE /* ProductPriceController.m */,
+				BD7C2FC81F26F18E00B835EE /* ProductPriceDisplayController.h */,
+				BD7C2FC91F26F18E00B835EE /* ProductPriceDisplayController.m */,
+				BD7C2FCA1F26F18E00B835EE /* ProductSearchController.h */,
+				BD7C2FCB1F26F18E00B835EE /* ProductSearchController.m */,
+				BD7C2FD51F26F29400B835EE /* KoreanProduct.h */,
+				BD7C2FD61F26F29400B835EE /* KoreanProduct.m */,
+				BD7C2FD71F26F29400B835EE /* KoreanProductCell.h */,
+				BD7C2FD81F26F29400B835EE /* KoreanProductCell.m */,
+			);
+			name = ProductPriceControllers;
 			sourceTree = "<group>";
 		};
 		BD8A35D81F1DF7FF00346F88 /* FlickrViewController */ = {
@@ -1042,6 +1129,7 @@
 				BD3570B41F24D293003BE859 /* PetraeusBuilding.plist in Resources */,
 				BD2E4D231F25AA07005770D1 /* miscAudio5.caf in Resources */,
 				BD3570AA1F24D279003BE859 /* LottoHotel.plist in Resources */,
+				BD7C2FD31F26F1ED00B835EE /* KoreanProducts.plist in Resources */,
 				BD3570BA1F24D2B6003BE859 /* SeoulGrandParkRegions.plist in Resources */,
 				BD3A45321F18A3ED00DA5A75 /* LaunchScreen.storyboard in Resources */,
 				BD3570C21F24D2E3003BE859 /* WeddingHall.plist in Resources */,
@@ -1052,6 +1140,7 @@
 				BD3931ED1F2585DE008B3C1B /* foodAudio4.caf in Resources */,
 				BD2E4D431F25DB23005770D1 /* transportationAudio10.caf in Resources */,
 				BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */,
+				BD7C2FF21F27160100B835EE /* basicAudio12.caf in Resources */,
 				BD35709E1F24D248003BE859 /* DonatedRelicsExhibit.plist in Resources */,
 				BD2E4D331F25BDAD005770D1 /* transportationAudio7.caf in Resources */,
 				BD3570B61F24D2A3003BE859 /* ROKArmedForcesRoom.plist in Resources */,
@@ -1061,11 +1150,14 @@
 				BD3932011F258EF5008B3C1B /* miscAudio3.caf in Resources */,
 				BD3570A01F24D255003BE859 /* Gwanghuamun.plist in Resources */,
 				BD3570AC1F24D283003BE859 /* NationalSecurityPavilionPath.plist in Resources */,
+				BD7C2FF41F27168500B835EE /* basicAudio13.caf in Resources */,
 				BD3570B21F24D293003BE859 /* path1.plist in Resources */,
 				BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */,
 				BD2E4D451F25DB8C005770D1 /* transportationAudio11.caf in Resources */,
 				BD2E4D2D1F25B54B005770D1 /* IconAcknowledgements.plist in Resources */,
 				BD32B1FA1F1B669E000F5F7E /* StoryboardC.storyboard in Resources */,
+				BD7C2FF01F2715C400B835EE /* basicAudio11.caf in Resources */,
+				BD7C2FF61F2716D400B835EE /* basicAudio14.caf in Resources */,
 				BD3931F91F258D04008B3C1B /* foodAudio8.caf in Resources */,
 				BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */,
 				BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */,
@@ -1073,12 +1165,16 @@
 				BD3570A51F24D270003BE859 /* KoreanWarExhibitRoom1.plist in Resources */,
 				BD3570A81F24D270003BE859 /* KoreanWarMemorialCircleRegions.plist in Resources */,
 				BD3570BE1F24D2D1003BE859 /* WarHistoryExhibit.plist in Resources */,
+				BD7C2FEA1F2714EA00B835EE /* basicAudio8.caf in Resources */,
+				BD7C2FEC1F27152900B835EE /* basicAudio9.caf in Resources */,
 				BD2E4D2B1F25B519005770D1 /* content_iPhone.plist in Resources */,
+				BD7C2FDC1F2711D900B835EE /* basicAudio1.caf in Resources */,
 				BD2E4D2F1F25BCD1005770D1 /* transportationAudio5.caf in Resources */,
 				BD3570B11F24D293003BE859 /* ParkRoute.plist in Resources */,
 				BD3931FB1F258D57008B3C1B /* foodAudio9.caf in Resources */,
 				BD3931FF1F258E69008B3C1B /* miscAudio2.caf in Resources */,
 				BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */,
+				BD7C2FE61F27144C00B835EE /* basicAudio5.caf in Resources */,
 				BD3931F71F258C90008B3C1B /* foodAudio7.caf in Resources */,
 				BD3570A71F24D270003BE859 /* KoreanWarExhibitRoom3.plist in Resources */,
 				BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */,
@@ -1086,6 +1182,7 @@
 				BD3145221F19D05D00999981 /* Assets.xcassets in Resources */,
 				BD2E4D351F25BE03005770D1 /* transportationAudio8.caf in Resources */,
 				BD2E4D4B1F25DCB0005770D1 /* transportationAudio14.caf in Resources */,
+				BD7C2FE41F2713A800B835EE /* basicAudio6.caf in Resources */,
 				BD2E091D1F1A457A00CB69D4 /* EntryGameSceneBackground.sks in Resources */,
 				BD3570B91F24D2B6003BE859 /* SeoulGrandParkArea.plist in Resources */,
 				BD2E4D1B1F25A6B5005770D1 /* transportationAudio3.caf in Resources */,
@@ -1093,7 +1190,10 @@
 				BD3931F11F2585F1008B3C1B /* foodAudio6.caf in Resources */,
 				BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */,
 				BD3A452A1F18A3EC00DA5A75 /* Main.storyboard in Resources */,
+				BD7C2FE81F2714A400B835EE /* basicAudio7.caf in Resources */,
 				BD3931EB1F2585D5008B3C1B /* foodAudio3.caf in Resources */,
+				BD7C2FE01F2712D100B835EE /* basicAudio4.caf in Resources */,
+				BD7C2FDE1F27124A00B835EE /* basicAudio2.caf in Resources */,
 				BD2E4D411F25DAAA005770D1 /* transportationAudio9.caf in Resources */,
 				BD3570BF1F24D2D1003BE859 /* WarHistoryExhibit2.plist in Resources */,
 				BD3931EF1F2585E9008B3C1B /* foodAudio5.caf in Resources */,
@@ -1102,6 +1202,7 @@
 				BD3931FD1F258E04008B3C1B /* miscAudio1.caf in Resources */,
 				BD2E4D311F25BD50005770D1 /* transportationAudio6.caf in Resources */,
 				BD2EDB811F1B8F8500C86D37 /* WeatherForecastSites.plist in Resources */,
+				BD7C2FE21F27133300B835EE /* basicAudio3.caf in Resources */,
 				BD32EBF01F24FC9900B5E8D2 /* AudioPhrases.plist in Resources */,
 				BD2E4D171F25A54E005770D1 /* transportationAudio1.caf in Resources */,
 				BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */,
@@ -1111,6 +1212,7 @@
 				BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */,
 				BD3570A61F24D270003BE859 /* KoreanWarExhibitRoom2.plist in Resources */,
 				BD2E4D191F25A621005770D1 /* transportationAudio2.caf in Resources */,
+				BD7C2FEE1F27156600B835EE /* basicAudio10.caf in Resources */,
 				BD2E4D471F25DBE8005770D1 /* transportationAudio12.caf in Resources */,
 				BD2E4D491F25DC50005770D1 /* transportationAudio13.caf in Resources */,
 			);
@@ -1214,7 +1316,9 @@
 				BD3EA23F1F2454CF002B6D29 /* WarMemorialAnnotation.m in Sources */,
 				BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */,
 				BD38F2CC1F1B364400471E16 /* CLLocation+Constants.m in Sources */,
+				BD7C2FCE1F26F18E00B835EE /* ProductSearchController.m in Sources */,
 				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
+				BD7C2FCD1F26F18E00B835EE /* ProductPriceDisplayController.m in Sources */,
 				BD2E4D391F25CB39005770D1 /* AcknowledgementsVC.m in Sources */,
 				BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */,
 				BD35708C1F24D197003BE859 /* PolygonMapController.m in Sources */,
@@ -1224,6 +1328,8 @@
 				BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */,
 				BD3EA23C1F245444002B6D29 /* WarMemorialNavigationController.m in Sources */,
 				BD3713FE1F1E457500283629 /* TranslationController.m in Sources */,
+				BD7C2FCC1F26F18E00B835EE /* ProductPriceController.m in Sources */,
+				BD7C2FD91F26F29400B835EE /* KoreanProduct.m in Sources */,
 				BD3944CD1F22D6540024F92D /* MediaPickerManager.m in Sources */,
 				BD38F2C91F1B362C00471E16 /* SeoulVideoCollectionViewController.m in Sources */,
 				BDA7BEDA1F1F8DF80084F39D /* NSString+HelperMethods.m in Sources */,
@@ -1258,7 +1364,9 @@
 				BD38F2C21F1B360400471E16 /* UIColor+HelperMethods.m in Sources */,
 				BD3570861F24CF2B003BE859 /* ToHostelDirectionsController.m in Sources */,
 				BD3570971F24D1E7003BE859 /* BikeRoutePoint.m in Sources */,
+				BD7C2FD11F26F1B400B835EE /* NSString+CurrencyHelperMethods.m in Sources */,
 				BD2EDB901F1B8FB400C86D37 /* WeatherConfiguration.m in Sources */,
+				BD7C2FDA1F26F29400B835EE /* KoreanProductCell.m in Sources */,
 				BD3932081F259223008B3C1B /* AudioHeaderView.m in Sources */,
 				BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */,
 				BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */,
