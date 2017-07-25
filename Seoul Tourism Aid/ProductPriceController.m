@@ -84,10 +84,7 @@ static void* CurrencyCodeContext = &CurrencyCodeContext;
     }
 }
 
-
--(void)dealloc{
-    
-    /** Cancel outstanding URL sessions upon exit to avoid memory leaks **/
+-(void)viewDidDisappear:(BOOL)animated{
     
     [self.apiRequestSession invalidateAndCancel];
     
