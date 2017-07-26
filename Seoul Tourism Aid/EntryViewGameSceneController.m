@@ -70,21 +70,11 @@ SKView* _skView;
 
 -(void)viewDidAppear:(BOOL)animated{
     
-    [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortrait) forKey:@"orientation"];
 
 }
 
--(UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
-}
 
--(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return UIInterfaceOrientationPortrait;
-}
 
--(BOOL)shouldAutorotate{
-    return NO;
-}
 
 -(SKView *)skView{
     
@@ -232,7 +222,7 @@ SKView* _skView;
         UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
         
         
-        NSString *storyBoardIdentifier = @"ScrollableInfoController";
+        NSString *storyBoardIdentifier = @"ScrollableInfoController_iPad";
        
         
         UIViewController* viewController = [storyboardD instantiateViewControllerWithIdentifier:storyBoardIdentifier];

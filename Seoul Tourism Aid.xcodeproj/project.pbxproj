@@ -106,6 +106,7 @@
 		BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */; };
 		BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */; };
 		BD36668A1F20E66400BEBE4E /* WVController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666891F20E66400BEBE4E /* WVController.m */; };
+		BD36A24B1F285ABE00918EB0 /* IPadAttributionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD36A24A1F285ABE00918EB0 /* IPadAttributionController.m */; };
 		BD3713FE1F1E457500283629 /* TranslationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3713FD1F1E457500283629 /* TranslationController.m */; };
 		BD3728D01F1F3FDA009DFF50 /* OperatingHours.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728CF1F1F3FDA009DFF50 /* OperatingHours.m */; };
 		BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3728D21F1F4AE2009DFF50 /* DebugController.m */; };
@@ -366,6 +367,8 @@
 		BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedInfoController.m; sourceTree = "<group>"; };
 		BD3666881F20E65900BEBE4E /* WVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WVController.h; sourceTree = "<group>"; };
 		BD3666891F20E66400BEBE4E /* WVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVController.m; sourceTree = "<group>"; };
+		BD36A2491F285AB000918EB0 /* IPadAttributionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPadAttributionController.h; sourceTree = "<group>"; };
+		BD36A24A1F285ABE00918EB0 /* IPadAttributionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPadAttributionController.m; sourceTree = "<group>"; };
 		BD3713FC1F1E456800283629 /* TranslationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslationController.h; sourceTree = "<group>"; };
 		BD3713FD1F1E457500283629 /* TranslationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationController.m; sourceTree = "<group>"; };
 		BD3728CE1F1F3FCF009DFF50 /* OperatingHours.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperatingHours.h; sourceTree = "<group>"; };
@@ -596,6 +599,8 @@
 				BD3BCF701F263D7300623191 /* FeaturesContainerController.m */,
 				BD3BCF721F26453100623191 /* MiscellaneousContainerController.h */,
 				BD3BCF731F2645A800623191 /* MiscellaneousContainerController.m */,
+				BD36A2491F285AB000918EB0 /* IPadAttributionController.h */,
+				BD36A24A1F285ABE00918EB0 /* IPadAttributionController.m */,
 			);
 			name = ScrollableInfoController;
 			sourceTree = "<group>";
@@ -1409,6 +1414,7 @@
 				BD38F2C31F1B360700471E16 /* SKViewCell.m in Sources */,
 				BD2EDB971F1B901A00C86D37 /* UIView+HelperMethods.m in Sources */,
 				BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */,
+				BD36A24B1F285ABE00918EB0 /* IPadAttributionController.m in Sources */,
 				BD38F2C21F1B360400471E16 /* UIColor+HelperMethods.m in Sources */,
 				BD3570861F24CF2B003BE859 /* ToHostelDirectionsController.m in Sources */,
 				BD3570971F24D1E7003BE859 /* BikeRoutePoint.m in Sources */,
