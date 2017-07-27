@@ -28,6 +28,14 @@
 
 @property (readonly) UIFont* defaultLabelFont;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *iPadMainMenuButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *iPhoneMainMenuButton;
+
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
+
 @end
 
 @implementation ProductPriceDisplayController
@@ -42,12 +50,33 @@
 }
 
 
+-(void)setOverrideTraitCollection:(UITraitCollection *)collection forChildViewController:(UIViewController *)childViewController{
+    
+    
+    
+    
+    
+}
 
 -(void)viewDidLoad{
     
     [self.currencyPickerView setDelegate:self];
     [self.currencyPickerView setDataSource:self];
+    
+    
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+      
+        [self.iPhoneMainMenuButton setHidden:YES];
+        [self.iPhoneMainMenuButton setEnabled:NO];
     }
+    
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        
+        [self.iPadMainMenuButton setEnabled:NO];
+        [self.iPadMainMenuButton setHidden:YES];
+    }
+    
+}
 
 
 #pragma mark ********** PICKER VIEW DELEGATE AND DATA SOURCE METHODS

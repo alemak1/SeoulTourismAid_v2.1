@@ -210,7 +210,16 @@ SKView* _skView;
 -(void)presentProductInfoControllerRequestAlert{
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Product Price Info" message:@"Do you want to get information about common products in Korea?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+    
+        
+        UIStoryboard* storyboardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
+        
+        UIViewController* viewController = [storyboardB instantiateViewControllerWithIdentifier:@"ProductPriceNavigationController"];
+        
+        [self showViewController:viewController sender:nil];
+
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     
