@@ -291,7 +291,7 @@
 
 -(UILabel*)getLabelFromRawFrame:(CGRect)rawFrame andWithTitle:(NSString*)title andLabelHeight:(CGFloat)labelHeight{
     
-    CGFloat yOffset = rawFrame.size.height*0.05;
+    CGFloat yOffset = rawFrame.size.height*0.02;
     
     CGRect modifiedFrame1 = CGRectMake(rawFrame.origin.x+20, rawFrame.origin.y-yOffset, rawFrame.size.width,labelHeight);
     
