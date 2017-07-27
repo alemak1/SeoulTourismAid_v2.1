@@ -262,7 +262,7 @@
     
     self.otherSitesViewController = [self addChildViewControllerWithFrame:frame9 andWithTouristCategory:OTHER];
     
-    UILabel* label9 = [self getLabelFromRawFrame:frame8 andWithTitle:@"Other Sites of Interest" andLabelHeight:20];
+    UILabel* label9 = [self getLabelFromRawFrame:frame9 andWithTitle:@"Other Sites of Interest" andLabelHeight:20];
     
     [self.scrollView addSubview:label9];
     

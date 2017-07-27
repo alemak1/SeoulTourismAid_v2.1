@@ -57,6 +57,11 @@ BOOL _alreadyPerformedOpHoursSegue = false;
 BOOL _alreadyPerformedParkingInfoSegue = false;
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.descriptionLabel setText:self.descriptionText];
+
+}
+
 -(void)viewDidLoad{
     
    
@@ -68,6 +73,11 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
     [self.detailImageView setImage:self.detailImage];
     
     
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self.descriptionLabel setText:self.descriptionText];
+
 }
 
 - (IBAction)showDetailOperatingHoursVC:(UIButton *)sender {

@@ -12,14 +12,17 @@
 #import "TouristSiteManager.h"
 
 #import "TouristSiteSectionHeaderCell.h"
+#import "TouristSiteDetailController.h"
+
 #import "CloudKitHelper.h"
+#import "Constants.h"
 
 @interface TouristSiteCVC_IPAD ()
 
 
 @property (readonly) CloudKitHelper* ckHelper;
 @property (readonly) NSDictionary* dataSourceDict;
-
+@property TouristSiteConfiguration* selectedTouristSiteConfiguration;
 
 @property NSMutableArray<TouristSiteConfiguration*>* masterArray;
 
@@ -41,6 +44,8 @@
 
 
 @implementation TouristSiteCVC_IPAD
+
+BOOL isFirstLaunch = true;
 
 
  NSString* const kSeoulTowerKey  = @"Seoul Tower ";
@@ -78,6 +83,26 @@ static void* ObservedArrayContext = &ObservedArrayContext;
     return @[@"Don't miss out on these places...",@"Make sure to visit the sites below...",@"Check out the places below...",@"Be sure to include the sites below in your itinerary",@"If you go to Seoul, don't forget to see the sites below...",@"If you have time, be sure to see the places below.",@"The sites below are definitely worth a visit.",@"Try to make a trip to one of the sites below, you won't regret it!",@"Seoul is full of cool places to see, like these...",@"You haven't seen all of Seoul until you see the places below...",@"A trip to Seoul won't be complete until you check out the places below...",@"While you are in Seoul, try to pay a visit to the places below...."];
 }
 
+
+
+-(void)loadTouristSiteConfiguration:(NSNotification*)notification{
+    
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+        self.selectedTouristSiteConfiguration = (TouristSiteConfiguration*) notification.userInfo[@"touristSiteConfiguration"];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self performSegueWithIdentifier:@"showTouristSiteDetailController" sender:nil];
+        });
+    });
+    
+}
+
+
+
 -(void)viewWillAppear:(BOOL)animated{
     
     /**  Alternative implementations for code below coud also involve filtering the TouristSiteManager from the parent view controller to generate a copy with only the objects that are true for the filtering condition **/
@@ -85,6 +110,11 @@ static void* ObservedArrayContext = &ObservedArrayContext;
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadTouristSiteConfiguration:) name:DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER object:nil];
+    
+    
+    if(isFirstLaunch){
+        
     
     [self.ckHelper performLoopQueryWithTouristSiteCategory:OTHER andWithBatchCompletionHandler:^(CKRecord*record){
         
@@ -271,14 +301,32 @@ static void* ObservedArrayContext = &ObservedArrayContext;
     
     
     
-    
-    
+        isFirstLaunch = false;
+    }
 }
      
+
+-(IBAction)unwindToTouristSiteCollectionControllerIPAD:(UIStoryboardSegue*)unwindSegue{
     
+}
     
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"showTouristSiteDetailController"]){
+        
+        TouristSiteDetailController* detailController = (TouristSiteDetailController*)segue.destinationViewController;
+        
+        detailController.touristSiteConfiguration = self.selectedTouristSiteConfiguration;
+        
+        detailController.titleText = self.selectedTouristSiteConfiguration.siteTitle;
+        detailController.subtitleText = self.selectedTouristSiteConfiguration.siteSubtitle;
+        detailController.descriptionText = self.selectedTouristSiteConfiguration.siteDescription;
+        
+        detailController.detailImage = self.selectedTouristSiteConfiguration.largeImage;
+        detailController.regionMonitoringStatus = self.selectedTouristSiteConfiguration.isUnderRegionMonitoring;
+    }
+}
 
 
 
