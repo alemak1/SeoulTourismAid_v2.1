@@ -35,6 +35,7 @@
 @property NSMutableArray<TouristSiteConfiguration*>* monumentSites;
 
 @property (readonly) NSOrderedSet* sectionKeyArray;
+@property (readonly) NSArray<NSString*>* genericHeaderViewTitles;
 
 @end
 
@@ -64,8 +65,18 @@ static void* ObservedArrayContext = &ObservedArrayContext;
 
 
 
+-(NSString*)getRandomGenericHeaderTitle{
+    
+    int totalGenericTitles = (int)[self.genericHeaderViewTitles count];
+    
+    int randomIndex = (int)arc4random_uniform(totalGenericTitles);
+    
+    return [self.genericHeaderViewTitles objectAtIndex:randomIndex];
+}
 
-
+-(NSArray<NSString *> *)genericHeaderViewTitles{
+    return @[@"Don't miss out on these places...",@"Make sure to visit the sites below...",@"Check out the places below...",@"Be sure to include the sites below in your itinerary",@"If you go to Seoul, don't forget to see the sites below...",@"If you have time, be sure to see the places below.",@"The sites below are definitely worth a visit.",@"Try to make a trip to one of the sites below, you won't regret it!",@"Seoul is full of cool places to see, like these...",@"You haven't seen all of Seoul until you see the places below...",@"A trip to Seoul won't be complete until you check out the places below...",@"While you are in Seoul, try to pay a visit to the places below...."];
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     
@@ -236,6 +247,30 @@ static void* ObservedArrayContext = &ObservedArrayContext;
         
     }];
     
+    [self.ckHelper performLoopQueryWithTouristSiteCategory:YANGGU_COUNTY andWithBatchCompletionHandler:^(CKRecord*record){
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            TouristSiteConfiguration* siteConfiguration = [[TouristSiteConfiguration alloc] initWithCKRecord:record];
+            
+            [self populateDataSourceArrayWithTouristSiteConfiguration:siteConfiguration];
+            
+            NSLog(@"Record info %@",[record description]);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.collectionView reloadData];
+                
+            });
+            
+        }];
+        
+        
+        
+    }];
+    
+    
+    
     
     
 }
@@ -278,20 +313,16 @@ static void* ObservedArrayContext = &ObservedArrayContext;
 
 
 
-/**
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
     TouristSiteSectionHeaderCell* view = nil;
 
     if([kind isEqualToString:UICollectionElementKindSectionHeader]){
         
+       
         view = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"TouristSiteSectionHeaderCell" forIndexPath:indexPath];
-        
-        
-        NSString* sectionKeyStr = [self.sectionKeyArray objectAtIndex:indexPath.section];
-        
-        
-        view.titleText = sectionKeyStr;
+                
+        view.titleText = [self getRandomGenericHeaderTitle];
         
         
     }
@@ -299,7 +330,6 @@ static void* ObservedArrayContext = &ObservedArrayContext;
     return view;
 
 }
-**/
 
 
 -(void)configureTouristCollectionCell:(TouristSiteCollectionViewCell*)cell forIndexPath:(NSIndexPath*)indexPath{
