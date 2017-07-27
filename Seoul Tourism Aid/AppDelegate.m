@@ -79,6 +79,8 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         
         /**TranslationController* translationController = [[TranslationController alloc] init]; **/
         
+        
+        
         [self.window setRootViewController:rootViewController];
         
         [self.window makeKeyAndVisible];

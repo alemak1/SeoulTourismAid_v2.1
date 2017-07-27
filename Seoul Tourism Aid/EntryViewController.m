@@ -49,7 +49,8 @@
     [[UserLocationManager sharedLocationManager] requestAuthorizationAndStartUpdates];
     
     
- 
+    
+    
 }
 
 
@@ -117,13 +118,13 @@
                 break;
             case 2:
                 //Contact info
-                requestedViewController = [self getDirectionsMenuController];
+                requestedViewController = [self getVisitedSitesController];
                 break;
             case 3:
                 //Seoul tourism
                 requestedViewController = [self getSeoulTouristSiteInformationController];
-
-                break;
+                [self presentViewController:requestedViewController animated:YES completion:nil];
+                return;
             case 4:
                 //Weather
                 requestedViewController = [self getWeatherNavigationController];
@@ -311,6 +312,18 @@
     
 }
 
+-(UIViewController*)getVisitedSitesController{
+    
+    UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+    
+    
+    NSString *storyBoardIdentifier = @"VisitedSitesController";
+    
+  
+    return [storyboardC instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+    
+}
+
 -(UIViewController*)getSeoulTouristSiteInformationController{
     
     // decide which kind of content we need based on the device idiom,
@@ -318,11 +331,11 @@
     UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
     
     
-    NSString *storyBoardIdentifier = @"TouristSiteCSCNavController_iPad";
+    NSString *storyBoardIdentifier = @"TouristSiteCSCNavController";
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
-        storyBoardIdentifier = @"TouristSiteCSCNavController";
+        storyBoardIdentifier = @"TouristSiteCSCNavController_iPad";
     }
     
     

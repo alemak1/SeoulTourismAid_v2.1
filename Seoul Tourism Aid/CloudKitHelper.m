@@ -42,6 +42,56 @@ NSOperationQueue* _dbOperationQueue;
     return self;
 }
 
+
+
+-(void)performLoopQueryForAllTouristSitesandWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler{
+    
+    
+    self.batchCompletionHandler = batchCompletionHandler;
+    
+    NSLog(@"Preparing to perform query on CloudKit public database...");
+    
+    NSPredicate* predicate = [NSPredicate predicateWithValue:YES];
+    
+    NSLog(@"Predicate initialized. Initializing query...");
+    
+    
+    
+    CKQuery* query = [[CKQuery alloc] initWithRecordType:@"Annotation" predicate:predicate];
+    
+    CKQueryOperation* operation = [[CKQueryOperation alloc] initWithQuery:query];
+    
+    [operation setResultsLimit:2];
+    
+    [operation setRecordFetchedBlock:^(CKRecord* record){
+        
+        batchCompletionHandler(record);
+        
+    }];
+    
+    [operation setQueryCompletionBlock:^(CKQueryCursor*cursor,NSError*error){
+        
+        
+        if(error){
+            NSLog(@"Error occurred during recursive iteration of query cursor: %@",[error localizedDescription]);
+        }
+        _queryCursor = cursor;
+        
+        
+        [self performNextFetchOperation:_queryCursor andWithCompletionHandler:self.batchCompletionHandler];
+        
+        
+    }];
+    
+    [self.publicDB addOperation:operation];
+    
+    
+    
+}
+
+
+
+
 -(void)performLoopQueryWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler{
     
     

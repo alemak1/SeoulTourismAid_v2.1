@@ -288,8 +288,15 @@ static UserLocationManager* mySharedLocationManager;
     [alerController addAction:okayAction];
     [alerController addAction:cancelAction];
     
-    [self.currentPresentingViewController presentViewController:alerController animated:YES completion:nil];
     
+    /** Each time the user enters the region, the date is stored in an array, accessible via UserDefaults using a key corresponding to the region identifier **/
+    
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:region.identifier];
+
+    
+    [self.currentPresentingViewController presentViewController:alerController animated:YES completion:nil];
     
     
     

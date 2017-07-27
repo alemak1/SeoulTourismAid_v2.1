@@ -24,6 +24,37 @@
 @synthesize ckHelper = _ckHelper;
 
 
+-(instancetype)initFromCloudWithAllTouristSiteCategoryAndWithBatchCompletionHandler:(void(^)(void))completionHandler{
+    
+    self = [super init];
+    
+    
+    [self.ckHelper performLoopQueryForAllTouristSitesandWithBatchCompletionHandler:^(CKRecord*record){
+        
+        if(!record){
+            NSLog(@"Error: no results available for the download");
+        }
+        
+        
+        self.configurationArray = [[NSMutableArray alloc] init];
+
+        TouristSiteConfiguration* siteConfiguration = [[TouristSiteConfiguration alloc] initWithCKRecord:record];
+        
+        [self.configurationArray addObject:siteConfiguration];
+        
+        
+        completionHandler();
+        
+    }];
+    
+    
+    
+    
+    return self;
+    
+}
+
+
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(void))completionHandler{
     
     self = [super init];
@@ -69,17 +100,16 @@
             NSLog(@"Error: no results available for the download");
         }
         
-        NSMutableArray<TouristSiteConfiguration*>* touristSiteArray = [[NSMutableArray alloc] init];
+        self.configurationArray = [[NSMutableArray alloc] init];
         
         for(CKRecord*record in results){
             
             TouristSiteConfiguration* siteConfiguration = [[TouristSiteConfiguration alloc] initWithCKRecord:record];
             
-            [touristSiteArray addObject:siteConfiguration];
+            [self.configurationArray addObject:siteConfiguration];
             
         }
-        
-        self.configurationArray = [NSArray arrayWithArray:touristSiteArray];
+                
         
         completionHandler();
         
@@ -117,7 +147,7 @@
             
         }
         
-        self.configurationArray = [NSArray arrayWithArray:touristSiteArray];
+        self.configurationArray = touristSiteArray;
         
         completionHandler();
         
@@ -159,7 +189,7 @@
             
             }
             
-            self.configurationArray = [NSArray arrayWithArray:touristSiteArray];
+            self.configurationArray = touristSiteArray;
             
         
         }];
@@ -190,6 +220,42 @@
 -(NSInteger)totalNumberOfTouristSitesInMasterArray{
     return [self.configurationArray count];
 }
+
+-(NSInteger)totalNumberOfTouristSitesForCategory:(TouristSiteCategory)
+category{
+    
+    
+    NSLog(@"Calculatnig the total number of tourist sites for section: %d",category);
+    
+    NSArray<TouristSiteConfiguration*>* filteredArray = [self.configurationArray filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(TouristSiteConfiguration*configuration,NSDictionary*bindings){
+    
+    
+        return configuration.touristSiteCategory == category;
+    }]];
+    
+    if(filteredArray){
+        return [filteredArray count];
+    }
+    
+    return 0;
+}
+
+-(TouristSiteConfiguration*)getTouristSiteConfigurationForIndexPath:(NSIndexPath*)indexPath{
+    
+    NSLog(@"Getting tourist site configuration for indexPath: %@",[indexPath description]);
+    
+    TouristSiteCategory indexPathCategory = (int)indexPath.section;
+    
+    NSArray<TouristSiteConfiguration*>* filteredArray = [self.configurationArray filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(TouristSiteConfiguration*configuration,NSDictionary*bindings){
+        
+        
+        return configuration.touristSiteCategory == indexPathCategory;
+    }]];
+    
+    return [filteredArray objectAtIndex:indexPath.row];
+    
+}
+
 
 -(TouristSiteConfiguration*)getConfigurationObjectFromConfigurationArray:(NSInteger)index{
     

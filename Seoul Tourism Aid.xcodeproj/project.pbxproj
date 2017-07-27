@@ -103,6 +103,7 @@
 		BD3570BF1F24D2D1003BE859 /* WarHistoryExhibit2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570BC1F24D2D1003BE859 /* WarHistoryExhibit2.plist */; };
 		BD3570C01F24D2D1003BE859 /* WarMemorialMainBuilding.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570BD1F24D2D1003BE859 /* WarMemorialMainBuilding.plist */; };
 		BD3570C21F24D2E3003BE859 /* WeddingHall.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3570C11F24D2E3003BE859 /* WeddingHall.plist */; };
+		BD35873D1F29D41D00B7ECFE /* VisitedSitesController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35873C1F29D41D00B7ECFE /* VisitedSitesController.m */; };
 		BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */; };
 		BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */; };
 		BD36668A1F20E66400BEBE4E /* WVController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3666891F20E66400BEBE4E /* WVController.m */; };
@@ -172,13 +173,16 @@
 		BD3BCF6E1F263A1400623191 /* AcknowledgementsContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF6D1F263A1400623191 /* AcknowledgementsContainerController.m */; };
 		BD3BCF711F263D7300623191 /* FeaturesContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF701F263D7300623191 /* FeaturesContainerController.m */; };
 		BD3BCF741F2645A800623191 /* MiscellaneousContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF731F2645A800623191 /* MiscellaneousContainerController.m */; };
+		BD3D24F51F28AE0D0063ED11 /* TouristSiteCSCNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3D24F41F28AE0D0063ED11 /* TouristSiteCSCNavController.m */; };
 		BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */; };
 		BD3DCB031F234839001DB69B /* LanguageRecordingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3DCB021F234839001DB69B /* LanguageRecordingController.m */; };
 		BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3EA2381F2453B5002B6D29 /* NavigationAidEntryController.m */; };
 		BD3EA23C1F245444002B6D29 /* WarMemorialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3EA23B1F245444002B6D29 /* WarMemorialNavigationController.m */; };
 		BD3EA23F1F2454CF002B6D29 /* WarMemorialAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3EA23E1F2454CF002B6D29 /* WarMemorialAnnotation.m */; };
+		BD41387F1F28C24E00F7C8FF /* TouristSiteCVC_IPAD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41387E1F28C24E00F7C8FF /* TouristSiteCVC_IPAD.m */; };
 		BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */; };
 		BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */; };
+		BD50485E1F29A9B400226922 /* TouristSiteSectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD50485D1F29A9B400226922 /* TouristSiteSectionHeaderCell.m */; };
 		BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD55E02E1F2270A000CFBE68 /* Seoul.geojson */; };
 		BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */; };
 		BD7C2FCC1F26F18E00B835EE /* ProductPriceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FC71F26F18E00B835EE /* ProductPriceController.m */; };
@@ -355,6 +359,8 @@
 		BD3570BC1F24D2D1003BE859 /* WarHistoryExhibit2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WarHistoryExhibit2.plist; sourceTree = "<group>"; };
 		BD3570BD1F24D2D1003BE859 /* WarMemorialMainBuilding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WarMemorialMainBuilding.plist; sourceTree = "<group>"; };
 		BD3570C11F24D2E3003BE859 /* WeddingHall.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeddingHall.plist; sourceTree = "<group>"; };
+		BD35873B1F29D40E00B7ECFE /* VisitedSitesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisitedSitesController.h; sourceTree = "<group>"; };
+		BD35873C1F29D41D00B7ECFE /* VisitedSitesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitedSitesController.m; sourceTree = "<group>"; };
 		BD35A4821F19F908003C337B /* UIColor+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HelperMethods.h"; sourceTree = "<group>"; };
 		BD35A4831F19F908003C337B /* UIColor+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HelperMethods.m"; sourceTree = "<group>"; };
 		BD35A4851F1A0EF7003C337B /* MenuComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuComponent.h; sourceTree = "<group>"; };
@@ -466,6 +472,8 @@
 		BD3BCF701F263D7300623191 /* FeaturesContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturesContainerController.m; sourceTree = "<group>"; };
 		BD3BCF721F26453100623191 /* MiscellaneousContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiscellaneousContainerController.h; sourceTree = "<group>"; };
 		BD3BCF731F2645A800623191 /* MiscellaneousContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscellaneousContainerController.m; sourceTree = "<group>"; };
+		BD3D24F31F28AE010063ED11 /* TouristSiteCSCNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteCSCNavController.h; sourceTree = "<group>"; };
+		BD3D24F41F28AE0D0063ED11 /* TouristSiteCSCNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteCSCNavController.m; sourceTree = "<group>"; };
 		BD3DCAFE1F2338B5001DB69B /* LanguageTranslationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageTranslationController.h; sourceTree = "<group>"; };
 		BD3DCAFF1F2338C4001DB69B /* LanguageTranslationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTranslationController.m; sourceTree = "<group>"; };
 		BD3DCB011F234829001DB69B /* LanguageRecordingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageRecordingController.h; sourceTree = "<group>"; };
@@ -476,9 +484,13 @@
 		BD3EA23B1F245444002B6D29 /* WarMemorialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarMemorialNavigationController.m; sourceTree = "<group>"; };
 		BD3EA23D1F2454CF002B6D29 /* WarMemorialAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarMemorialAnnotation.h; sourceTree = "<group>"; };
 		BD3EA23E1F2454CF002B6D29 /* WarMemorialAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarMemorialAnnotation.m; sourceTree = "<group>"; };
+		BD41387D1F28C23B00F7C8FF /* TouristSiteCVC_IPAD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteCVC_IPAD.h; sourceTree = "<group>"; };
+		BD41387E1F28C24E00F7C8FF /* TouristSiteCVC_IPAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteCVC_IPAD.m; sourceTree = "<group>"; };
 		BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoredRegionsController.h; sourceTree = "<group>"; };
 		BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredRegionsController.m; sourceTree = "<group>"; };
 		BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegionIdentifiers.plist; sourceTree = "<group>"; };
+		BD50485C1F29A99B00226922 /* TouristSiteSectionHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteSectionHeaderCell.h; sourceTree = "<group>"; };
+		BD50485D1F29A9B400226922 /* TouristSiteSectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteSectionHeaderCell.m; sourceTree = "<group>"; };
 		BD55E02E1F2270A000CFBE68 /* Seoul.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Seoul.geojson; sourceTree = "<group>"; };
 		BD714D691F21FEEB003D4C66 /* DirectionsMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsMenuController.h; sourceTree = "<group>"; };
 		BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsMenuController.m; sourceTree = "<group>"; };
@@ -752,6 +764,15 @@
 			name = SupportingPlists;
 			sourceTree = "<group>";
 		};
+		BD35873A1F29D3EF00B7ECFE /* VisitedSitesController */ = {
+			isa = PBXGroup;
+			children = (
+				BD35873B1F29D40E00B7ECFE /* VisitedSitesController.h */,
+				BD35873C1F29D41D00B7ECFE /* VisitedSitesController.m */,
+			);
+			name = VisitedSitesController;
+			sourceTree = "<group>";
+		};
 		BD35A47B1F19F851003C337B /* EntryViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,6 +818,12 @@
 				BD3666771F20C0B000BEBE4E /* TouristSiteDetailController.m */,
 				BD3666791F20D01200BEBE4E /* DetailedInfoController.h */,
 				BD36667A1F20D02300BEBE4E /* DetailedInfoController.m */,
+				BD3D24F31F28AE010063ED11 /* TouristSiteCSCNavController.h */,
+				BD3D24F41F28AE0D0063ED11 /* TouristSiteCSCNavController.m */,
+				BD41387D1F28C23B00F7C8FF /* TouristSiteCVC_IPAD.h */,
+				BD41387E1F28C24E00F7C8FF /* TouristSiteCVC_IPAD.m */,
+				BD50485C1F29A99B00226922 /* TouristSiteSectionHeaderCell.h */,
+				BD50485D1F29A9B400226922 /* TouristSiteSectionHeaderCell.m */,
 			);
 			name = TouristSiteVCs;
 			sourceTree = "<group>";
@@ -932,6 +959,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD35873A1F29D3EF00B7ECFE /* VisitedSitesController */,
 				BD7C2FC41F26F17B00B835EE /* ProductPriceControllers */,
 				BD2E4D261F25B49B005770D1 /* ScrollableInfoController */,
 				BD3931E61F2585A2008B3C1B /* SoundFiles */,
@@ -1340,6 +1368,7 @@
 				BD2E4D3F1F25D381005770D1 /* AcknowledgementsIndexVC.m in Sources */,
 				BD3812221F2063F0003D7367 /* TouristSiteManager.m in Sources */,
 				BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */,
+				BD50485E1F29A9B400226922 /* TouristSiteSectionHeaderCell.m in Sources */,
 				BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */,
 				BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
@@ -1355,6 +1384,7 @@
 				BD2E4D291F25B4B3005770D1 /* ScrollableInfoController.m in Sources */,
 				BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */,
 				BD35708D1F24D197003BE859 /* PolygonSelectionController.m in Sources */,
+				BD3D24F51F28AE0D0063ED11 /* TouristSiteCSCNavController.m in Sources */,
 				BD2EDB8F1F1B8FB400C86D37 /* WeatherCollectionCell.m in Sources */,
 				BD2EDB891F1B8FA200C86D37 /* WeatherDisplayController.m in Sources */,
 				BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */,
@@ -1365,6 +1395,7 @@
 				BD3570961F24D1E7003BE859 /* BikeRouteMapController.m in Sources */,
 				BD3BCF711F263D7300623191 /* FeaturesContainerController.m in Sources */,
 				BD2EDB9B1F1B903E00C86D37 /* UIViewController+HelperMethods.m in Sources */,
+				BD41387F1F28C24E00F7C8FF /* TouristSiteCVC_IPAD.m in Sources */,
 				BD38F2CE1F1B365C00471E16 /* AppDelegate.m in Sources */,
 				BD3EA23F1F2454CF002B6D29 /* WarMemorialAnnotation.m in Sources */,
 				BD38F2CD1F1B364B00471E16 /* YTPlayerView.m in Sources */,
@@ -1380,6 +1411,7 @@
 				BD3BCF6E1F263A1400623191 /* AcknowledgementsContainerController.m in Sources */,
 				BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */,
 				BD3EA23C1F245444002B6D29 /* WarMemorialNavigationController.m in Sources */,
+				BD35873D1F29D41D00B7ECFE /* VisitedSitesController.m in Sources */,
 				BD3713FE1F1E457500283629 /* TranslationController.m in Sources */,
 				BD7C2FCC1F26F18E00B835EE /* ProductPriceController.m in Sources */,
 				BD7C2FD91F26F29400B835EE /* KoreanProduct.m in Sources */,

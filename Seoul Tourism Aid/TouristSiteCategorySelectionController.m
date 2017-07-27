@@ -136,109 +136,6 @@
 }
 
 
-
--(void)configureScrollViewWithCachedViewControllers:(UITraitCollection*)newTraitCollection{
-    
-    CGFloat scrollViewWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]);
-    CGFloat scrollViewHeight = CGRectGetHeight(self.scrollView.frame);
-    
-    
-    self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*3.50);
-    
-    [self.scrollView setShowsHorizontalScrollIndicator:NO];
-    
-    __block CGFloat controllerIndex = 0;
-    
-    CGFloat controllerHeight = scrollViewHeight*0.30;
-    
-    CGRect(^getControllerFrame)(void) = ^CGRect(void){
-        
-        CGRect frame = CGRectMake(0.00, controllerIndex*controllerHeight+controllerHeight*0.20, scrollViewWidth, controllerHeight);
-        
-        return frame;
-    };
-    
-    
-    
-    CGRect frame1 = getControllerFrame();
-    
-    [self addChildViewController:self.museumsViewController];
-    
-    [self.scrollView addSubview:self.museumsViewController.view];
-    
-    [self.museumsViewController.view setFrame:frame1];
-    
-    [self.museumsViewController didMoveToParentViewController:self];
-    
-    [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.museumsViewController];
-    
-    UILabel* label1 = [self getLabelFromRawFrame:frame1 andWithTitle:@"Museums and Other Cultural Sites" andLabelHeight:20];
-    
-    [self.scrollView addSubview:label1];
-    
-    controllerIndex++;
-    
-    CGRect frame2 = getControllerFrame();
-    
-    [self addChildViewController:self.yangguCountyController];
-    
-    [self.scrollView addSubview:self.yangguCountyController.view];
-    
-    [self.yangguCountyController.view setFrame:frame2];
-    
-    [self.yangguCountyController didMoveToParentViewController:self];
-    
-    [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.yangguCountyController];
-
-    
-
-    
-    UILabel* label2 = [self getLabelFromRawFrame:frame2 andWithTitle:@"Yanggu County and Related Sites" andLabelHeight:20];
-    
-    [self.scrollView addSubview:label2];
-    
-    controllerIndex++;
-    
-    CGRect frame3 = getControllerFrame();
-    
-    [self addChildViewController:self.parksViewController];
-    
-    [self.scrollView addSubview:self.parksViewController.view];
-    
-    [self.parksViewController.view setFrame:frame3];
-    
-    [self.parksViewController didMoveToParentViewController:self];
-    
-    [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.parksViewController];
-    
-    UILabel* label3 = [self getLabelFromRawFrame:frame3 andWithTitle:@"Yanggu County and Related Sites" andLabelHeight:20];
-    
-    [self.scrollView addSubview:label3];
-    
-    
-    controllerIndex++;
-    
-    CGRect frame4 = getControllerFrame();
-    
-    [self addChildViewController:self.shoppingViewController];
-    
-    [self.scrollView addSubview:self.shoppingViewController.view];
-    
-    [self.shoppingViewController.view setFrame:frame3];
-    
-    [self.shoppingViewController didMoveToParentViewController:self];
-    
-    [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.shoppingViewController];
-    
-    UILabel* label4 = [self getLabelFromRawFrame:frame4 andWithTitle:@"Yanggu County and Related Sites" andLabelHeight:20];
-    
-    [self.scrollView addSubview:label4];
-    
-    controllerIndex++;
-
-
-}
-
 -(void) configureScrollView{
     
     CGFloat scrollViewWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]);
@@ -358,16 +255,14 @@
     
     controllerIndex++;
     
-    
 
     //Configure the next view controller...
 
     CGRect frame9 = getControllerFrame();
     
-    
     self.otherSitesViewController = [self addChildViewControllerWithFrame:frame9 andWithTouristCategory:OTHER];
     
-    UILabel* label9 = [self getLabelFromRawFrame:frame8 andWithTitle:@"Seoul Tower Area" andLabelHeight:20];
+    UILabel* label9 = [self getLabelFromRawFrame:frame8 andWithTitle:@"Other Sites of Interest" andLabelHeight:20];
     
     [self.scrollView addSubview:label9];
     
@@ -396,9 +291,9 @@
 
 -(UILabel*)getLabelFromRawFrame:(CGRect)rawFrame andWithTitle:(NSString*)title andLabelHeight:(CGFloat)labelHeight{
     
-    CGFloat yOffset = rawFrame.size.height*0.20;
+    CGFloat yOffset = rawFrame.size.height*0.05;
     
-    CGRect modifiedFrame1 = CGRectMake(rawFrame.origin.x+20, rawFrame.origin.y+yOffset, rawFrame.size.width,labelHeight);
+    CGRect modifiedFrame1 = CGRectMake(rawFrame.origin.x+20, rawFrame.origin.y-yOffset, rawFrame.size.width,labelHeight);
     
     UILabel* label = [[UILabel alloc] initWithFrame:modifiedFrame1];
     
@@ -431,6 +326,114 @@
  
  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setSelectedTouristSiteConfigurationForDetailController:) name:@"presentTouristSiteDetailNotification" object:nil];
  
+ 
+ 
+ -(void)configureScrollViewWithCachedViewControllers:(UITraitCollection*)newTraitCollection{
+ 
+ CGFloat scrollViewWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]);
+ CGFloat scrollViewHeight = CGRectGetHeight(self.scrollView.frame);
+ 
+ 
+ self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*3.50);
+ 
+ [self.scrollView setShowsHorizontalScrollIndicator:NO];
+ 
+ __block CGFloat controllerIndex = 0;
+ 
+ CGFloat controllerHeight = scrollViewHeight*0.30;
+ 
+ 
+ 
+ CGRect(^getControllerFrame)(void) = ^CGRect(void){
+ 
+ CGRect frame = CGRectMake(0.00, controllerIndex*controllerHeight+controllerHeight*0.20, scrollViewWidth, controllerHeight);
+ 
+ 
+ 
+ return frame;
+ };
+ 
+ 
+ 
+ CGRect frame1 = getControllerFrame();
+ 
+ [self addChildViewController:self.museumsViewController];
+ 
+ [self.scrollView addSubview:self.museumsViewController.view];
+ 
+ [self.museumsViewController.view setFrame:frame1];
+ 
+ [self.museumsViewController didMoveToParentViewController:self];
+ 
+ [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.museumsViewController];
+ 
+ UILabel* label1 = [self getLabelFromRawFrame:frame1 andWithTitle:@"Museums and Other Cultural Sites" andLabelHeight:20];
+ 
+ [self.scrollView addSubview:label1];
+ 
+ controllerIndex++;
+ 
+ CGRect frame2 = getControllerFrame();
+ 
+ [self addChildViewController:self.yangguCountyController];
+ 
+ [self.scrollView addSubview:self.yangguCountyController.view];
+ 
+ [self.yangguCountyController.view setFrame:frame2];
+ 
+ [self.yangguCountyController didMoveToParentViewController:self];
+ 
+ [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.yangguCountyController];
+ 
+ 
+ 
+ 
+ UILabel* label2 = [self getLabelFromRawFrame:frame2 andWithTitle:@"Yanggu County and Related Sites" andLabelHeight:20];
+ 
+ [self.scrollView addSubview:label2];
+ 
+ controllerIndex++;
+ 
+ CGRect frame3 = getControllerFrame();
+ 
+ [self addChildViewController:self.parksViewController];
+ 
+ [self.scrollView addSubview:self.parksViewController.view];
+ 
+ [self.parksViewController.view setFrame:frame3];
+ 
+ [self.parksViewController didMoveToParentViewController:self];
+ 
+ [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.parksViewController];
+ 
+ UILabel* label3 = [self getLabelFromRawFrame:frame3 andWithTitle:@"Yanggu County and Related Sites" andLabelHeight:20];
+ 
+ [self.scrollView addSubview:label3];
+ 
+ 
+ controllerIndex++;
+ 
+ CGRect frame4 = getControllerFrame();
+ 
+ [self addChildViewController:self.shoppingViewController];
+ 
+ [self.scrollView addSubview:self.shoppingViewController.view];
+ 
+ [self.shoppingViewController.view setFrame:frame3];
+ 
+ [self.shoppingViewController didMoveToParentViewController:self];
+ 
+ [self setOverrideTraitCollection:newTraitCollection forChildViewController:self.shoppingViewController];
+ 
+ UILabel* label4 = [self getLabelFromRawFrame:frame4 andWithTitle:@"Yanggu County and Related Sites" andLabelHeight:20];
+ 
+ [self.scrollView addSubview:label4];
+ 
+ controllerIndex++;
+ 
+ 
+ }
+
  **/
 
 

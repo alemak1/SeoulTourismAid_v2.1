@@ -25,6 +25,8 @@
 
 -(void)performQueryWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler;
 
+-(void)performLoopQueryForAllTouristSitesandWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler;
+
 -(void)performLoopQueryWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler;
 
 -(void)executeQueryOperationOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName forWarMemorialNavigationController:(WarMemorialNavigationController*)navigationController;

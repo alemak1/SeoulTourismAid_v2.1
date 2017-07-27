@@ -25,17 +25,16 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     
-    /**  Alternative implementations for code below coud also involve filtering the TouristSiteManager from the parent view controller to generate a copy with only the objects that are true for the filtering condition **/
-    
+  
     
     self.siteManager = [[TouristSiteManager alloc] initFromCloudWithTouristSiteCategory:self.category andWithBatchCompletionHandler:^{
     
-        dispatch_async(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.collectionView reloadData];
         
-            [self.collectionView reloadData];
         
-        
-        });
+            });
     
     }];
     
@@ -58,14 +57,16 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
+
     
     return [self.siteManager totalNumberOfTouristSitesInMasterArray];
 
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    
-      return 1;
+
+  
+    return 1;
 
 }
 
@@ -76,7 +77,8 @@
 
     TouristSiteConfiguration* configurationObject = [self.siteManager getConfigurationObjectFromConfigurationArray:indexPath.row];
     
-   cell.siteImage = [configurationObject largeImage];
+    
+    cell.siteImage = [configurationObject largeImage];
     
     cell.titleText = [configurationObject siteTitle];
     
@@ -91,6 +93,21 @@
 }
 
 
+-(void)configureTouristCollectionCell:(TouristSiteCollectionViewCell*)cell forIndexPath:(NSIndexPath*)indexPath{
+    
+    TouristSiteConfiguration* configurationObject = [self.siteManager getConfigurationObjectFromConfigurationArray:indexPath.row];
+    
+   
+    cell.siteImage = [configurationObject largeImage];
+    
+    cell.titleText = [configurationObject siteTitle];
+    
+    cell.isOpenStatusText = [configurationObject isOpen] ? @"Open" : @"Closed";
+    
+    cell.distanceToSiteText = [configurationObject distanceFromUserString];
+    
+    cell.touristSiteConfigurationObject = configurationObject;
+}
 
 /**
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{

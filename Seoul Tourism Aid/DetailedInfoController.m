@@ -29,6 +29,9 @@
         
         UILabel* stringLabel = [[UILabel alloc] init];
         [stringLabel setText:detailString];
+        [stringLabel setMinimumScaleFactor:0.20];
+        [stringLabel setAdjustsFontSizeToFitWidth:YES];
+        [stringLabel setLineBreakMode:NSLineBreakByWordWrapping];
         
         [self.vStackView addArrangedSubview:stringLabel];
         

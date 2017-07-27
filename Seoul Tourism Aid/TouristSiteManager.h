@@ -17,10 +17,19 @@
 
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category;
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category andWithCompletionHandler:(void(^)(void))completionHandler;
+
+
 -(instancetype)initFromCloudWithAllTouristSitesandWithCompletionHandler:(void(^)(void))completionHandler;
+
+-(instancetype)initFromCloudWithAllTouristSiteCategoryAndWithBatchCompletionHandler:(void(^)(void))completionHandler;
+
 
 
 -(instancetype)initFromCloudWithTouristSiteCategory:(TouristSiteCategory)category andWithBatchCompletionHandler:(void(^)(void))completionHandler;
+
+-(NSInteger)totalNumberOfTouristSitesForCategory:(TouristSiteCategory)
+category;
+-(TouristSiteConfiguration*)getTouristSiteConfigurationForIndexPath:(NSIndexPath*)indexPath;
 
 -(NSInteger)totalNumberOfTouristSitesInMasterArray;
 -(TouristSiteConfiguration*)getConfigurationObjectFromConfigurationArray:(NSInteger)index;

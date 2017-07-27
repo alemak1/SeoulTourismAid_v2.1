@@ -139,7 +139,17 @@ SKView* _skView;
 -(void)presentTouristSiteInfoControllerRequestAlert{
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Tourist Information Aids" message:@"Do you want to explore information about famous Tourist Sites in Korea?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+        
+        
+        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+        
+        UIViewController* viewController = [storyboardC instantiateViewControllerWithIdentifier:@"TouristSiteCSCNavController_iPad"];
+        
+        [self presentViewController:viewController animated:NO completion:nil];
+        
+        
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     
@@ -243,9 +253,22 @@ SKView* _skView;
 }
 
 -(void)presentMonitoredRegionsControllerRequestAlert{
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"App Information Aid" message:@"Do you want to learn more information about how to use this app or leave a review?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Region Monitoring Check" message:@"Do you want to adjust or see which regions are currently under region monitoring?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+    
+    
+        UIStoryboard* storyboardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
+        
+        
+        NSString *storyBoardIdentifier = @"MonitoredRegionsController_iPad";
+        
+        UIViewController* viewController = [storyboardB instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+        
+        [self showViewController:viewController sender:nil];
+
+    
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     
