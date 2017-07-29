@@ -657,14 +657,14 @@ NSOperationQueue* _operationQueue;
     self.optionsSelectionPanel = [overlayCollection childNodeWithName:@"RootNode"];
     
     [self configureOptionsPanelButtons];
-    
-    
+        
     [self.mainMenuButton moveToParent:self.overlayNode];
     
-    CGFloat yPos = [UIScreen mainScreen].bounds.size.height*0.50;
-    CGFloat xPos = [UIScreen mainScreen].bounds.size.width*0.45;
+    CGFloat yPos = -[UIScreen mainScreen].bounds.size.height*0.30;
+    CGFloat xPos = [UIScreen mainScreen].bounds.size.width*0.30;
     
     [self.mainMenuButton setPosition:CGPointMake(xPos, yPos)];
+    
 }
 
 

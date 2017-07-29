@@ -992,5 +992,797 @@
 		<key>brand</key>
 		<string>Samsung A5 2017</string>
 	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>13</integer>
+		<key>unitQuantity</key>
+		<string>1 bouquet</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>6000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Jana Roses</string>
+		<key>brand</key>
+		<string>Yangjae Flower Market (in Gangnam)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>13</integer>
+		<key>unitQuantity</key>
+		<string>1 big bouquet</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>10000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Freesia Flowers</string>
+		<key>brand</key>
+		<string>Yangjae Flower Market (in Gangnam)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>17</integer>
+		<key>unitQuantity</key>
+		<string>1 gallon</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>8238.74</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Gasoline</string>
+		<key>brand</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>22</integer>
+		<key>unitQuantity</key>
+		<string>1 dog</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>300000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Pure-Bred Pomeranian</string>
+		<key>brand</key>
+		<string>(http://www.dog-zzang.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>22</integer>
+		<key>unitQuantity</key>
+		<string>1 dog</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>200000</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Toy Poodle</string>
+		<key>brand</key>
+		<string>(http://www.dog-zzang.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>14</integer>
+		<key>unitQuantity</key>
+		<string>1 pair</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>8900</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Heeled Sandals / High Heels</string>
+		<key>brand</key>
+		<string>HEELSTORY (Women&apos;s shoes) (item2.gmarket.co.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>14</integer>
+		<key>unitQuantity</key>
+		<string>1 pair</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>29800</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Heeled Sandals / High Heels</string>
+		<key>brand</key>
+		<string>PAPERPLANES Unisex sneakers and running shoes (item2.gmarket.co.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>14</integer>
+		<key>unitQuantity</key>
+		<string>1 pair</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>16800</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Flip flops/ Sandals</string>
+		<key>brand</key>
+		<string>OLLIE shoes (item2.gmarket.co.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>19</integer>
+		<key>unitQuantity</key>
+		<string>(up to 0.5 kg, for delivery to the USA)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>21400</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 parcel</string>
+		<key>brand</key>
+		<string>Korea Post (http://eng.koreapost.go.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>19</integer>
+		<key>unitQuantity</key>
+		<string>(up to 0.5 kg, for delivery to the China)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>16700</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 parcel</string>
+		<key>brand</key>
+		<string>Korea Post (http://eng.koreapost.go.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>19</integer>
+		<key>unitQuantity</key>
+		<string>(up to 20 g)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>440</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 letter (ground delivery)</string>
+		<key>brand</key>
+		<string>Korea Post (http://eng.koreapost.go.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>19</integer>
+		<key>unitQuantity</key>
+		<string>1 postcard</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>280</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 postcard (ground delivery)</string>
+		<key>brand</key>
+		<string>Korea Post (http://eng.koreapost.go.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>19</integer>
+		<key>unitQuantity</key>
+		<string>(up to 10 g)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>540</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 letter (air delivery, zone 1)</string>
+		<key>brand</key>
+		<string>Korea Post (http://eng.koreapost.go.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>19</integer>
+		<key>unitQuantity</key>
+		<string>(up to 10 g)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>680</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 letter (air delivery, zone 4)</string>
+		<key>brand</key>
+		<string>Korea Post (http://eng.koreapost.go.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>19</integer>
+		<key>unitQuantity</key>
+		<string>(up to 2000 g)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>19890</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 letter (air delivery, zone 1)</string>
+		<key>brand</key>
+		<string>Korea Post (http://eng.koreapost.go.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>18</integer>
+		<key>unitQuantity</key>
+		<string>First 12 hours, includes gown rental</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>14000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Spa and Sauna</string>
+		<key>brand</key>
+		<string>Spa Lei (Hot Springs) (spalei.co.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>18</integer>
+		<key>unitQuantity</key>
+		<string>Entrance Fee</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>10000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Jjimjilbang (찜질방)</string>
+		<key>brand</key>
+		<string>Korean Bathhouse</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>16</integer>
+		<key>unitQuantity</key>
+		<string>2 bottles, 13.5oz(400ml) each</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>46510.09</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Anti Hair Loss Damaged Hair Shampoo</string>
+		<key>brand</key>
+		<string>Ryoe</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>16</integer>
+		<key>unitQuantity</key>
+		<string>1 package</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>8900</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Heated Hair Roll (USB powered, portable)</string>
+		<key>brand</key>
+		<string>Rollipop (http://item2.gmarket.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>16</integer>
+		<key>unitQuantity</key>
+		<string>1 cannister</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>4700</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Mousse</string>
+		<key>brand</key>
+		<string>Gatsby (http://item2.gmarket.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>16</integer>
+		<key>unitQuantity</key>
+		<string>Buy 1, Get 1 Free</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>6500</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Hair Gel</string>
+		<key>brand</key>
+		<string>Gwail Nara(Confume) (http://item2.gmarket.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Adults (single-level bus)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>12000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Seoul City Tour (downtown/palace course)</string>
+		<key>brand</key>
+		<string>Seoul Tourism Department (http://english.visitkorea.or.kr/enu/ATR/SI_ENG_2_5_1.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Adults (high-decker open-top bus + trolley bus)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>12000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Seoul City Tour (panorama course)</string>
+		<key>brand</key>
+		<string>Seoul Tourism Department (http://english.visitkorea.or.kr/enu/ATR/SI_ENG_2_5_1.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Adults (high-decker open-top bus + trolley bus)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>12000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Seoul City Tour (panorama course)</string>
+		<key>brand</key>
+		<string>Seoul Tourism Department (http://english.visitkorea.or.kr/enu/ATR/SI_ENG_2_5_1.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Adults (trolley bus)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>7000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Seoul City Tour (around Gangnam course)</string>
+		<key>brand</key>
+		<string>Seoul Tourism Department (http://english.visitkorea.or.kr/enu/ATR/SI_ENG_2_5_1.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Adults (single-level bus)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>6000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Seoul City Tour (night course)</string>
+		<key>brand</key>
+		<string>Seoul Tourism Department (http://english.visitkorea.or.kr/enu/ATR/SI_ENG_2_5_1.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Adults (high-decker bus)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>12000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Seoul City Tour (night course)</string>
+		<key>brand</key>
+		<string>Seoul Tourism Department (http://english.visitkorea.or.kr/enu/ATR/SI_ENG_2_5_1.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Price varies depending upon many factors</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>200000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>White Fillings</string>
+		<key>brand</key>
+		<string>U.S. Dental (http://www.whatclinic.com/dentists/south-korea/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Price varies depending upon many factors</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>200000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>White Fillings</string>
+		<key>brand</key>
+		<string>The Bright Dental (http://www.whatclinic.com/dentists/south-korea/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>15</integer>
+		<key>unitQuantity</key>
+		<string>Price varies depending upon many factors</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>70000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Root Filling</string>
+		<key>brand</key>
+		<string>Blanche Hyung Dental (http://www.whatclinic.com/dentists/south-korea/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>31</integer>
+		<key>unitQuantity</key>
+		<string>1 game</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>5000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Bowling Alley</string>
+		<key>brand</key>
+		<string>Pierrot Strike (Bowling Alley in Gangnam)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>26</integer>
+		<key>unitQuantity</key>
+		<string>4 campers (who bring their own tents)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>5000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Nanji Camping Site (Campground Reservation)</string>
+		<key>brand</key>
+		<string>Facility Utilization Fee (not including tent rental)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>26</integer>
+		<key>unitQuantity</key>
+		<string>Includes 1 tent, 4 mats, admission fees for 4 people and set-up and maintenance costs</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>28000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Family-Type Tent</string>
+		<key>brand</key>
+		<string>Nanji Hangang Park Campground</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>26</integer>
+		<key>unitQuantity</key>
+		<string>KRW 90,000 for Mobile Homes (rate for four people during off-season weekends</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>10000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Self-Camping Rservation Fee</string>
+		<key>brand</key>
+		<string>Jarasum Camping</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>26</integer>
+		<key>unitQuantity</key>
+		<string>4 people (KRW 15,000 for 3 people )</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>20000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Campground Admission Fee</string>
+		<key>brand</key>
+		<string>Gangdong Greenway Family Campground </string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>25</integer>
+		<key>unitQuantity</key>
+		<string>10 minutes of parking time</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>1000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>On-street parking </string>
+		<key>brand</key>
+		<string>Business Districts (http://www.reinventingparking.org/2012/04/seouls-parking-visual-tour.html)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>25</integer>
+		<key>unitQuantity</key>
+		<string>3 months of day+night on-street parking </string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>40000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Parking Permit</string>
+		<key>brand</key>
+		<string>Shared Row of Permit-Parking Only Spaces (http://www.reinventingparking.org/2012/04/seouls-parking-visual-tour.html)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>23</integer>
+		<key>unitQuantity</key>
+		<string>1 oil change</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>29000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Oil Change</string>
+		<key>brand</key>
+		<string>Hyundai Sonata (Source: http://www.businesskorea.co.kr/english/news/politics/1335-import-cars-repair-costs-burden-consumers)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>23</integer>
+		<key>unitQuantity</key>
+		<string>1 oil change</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>130000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Oil Change</string>
+		<key>brand</key>
+		<string>BMW 320D (Source: http://www.businesskorea.co.kr/english/news/politics/1335-import-cars-repair-costs-burden-consumers)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>23</integer>
+		<key>unitQuantity</key>
+		<string>1 oil change</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>170000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Oil Change</string>
+		<key>brand</key>
+		<string>Audi A4 (Source: http://www.businesskorea.co.kr/english/news/politics/1335-import-cars-repair-costs-burden-consumers)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>23</integer>
+		<key>unitQuantity</key>
+		<string>1 oil change</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>160000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Oil Change</string>
+		<key>brand</key>
+		<string>Volkswagen Passat(Source: http://www.businesskorea.co.kr/english/news/politics/1335-import-cars-repair-costs-burden-consumers)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>23</integer>
+		<key>unitQuantity</key>
+		<string>1 oil change</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>260000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Oil Change</string>
+		<key>brand</key>
+		<string>Mercedes Benz E200 (Source: http://www.businesskorea.co.kr/english/news/politics/1335-import-cars-repair-costs-burden-consumers)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>27</integer>
+		<key>unitQuantity</key>
+		<string>1 bicycle (21-speed / 24-26 inch frame / V-brake)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>59000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Mountain Bike</string>
+		<key>brand</key>
+		<string>K2BIKE Mountain Bike (http://item2.gmarket.co.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>27</integer>
+		<key>unitQuantity</key>
+		<string>1 bicycle (Hi-ten hybrid frame / 21 or 7-transmission)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>117000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>City Cruiser</string>
+		<key>brand</key>
+		<string>STACCATO City Cruiser (http://item2.gmarket.co.kr)</string>
+	</dict>
 </array>
 </plist>

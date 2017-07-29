@@ -8,6 +8,7 @@
 
 #import "AcknowledgementsVC.h"
 #import "AuthorPicCell.h"
+#import "TouristSiteSectionHeaderCell.h"
 
 @interface AcknowledgementsVC ()
 
@@ -36,6 +37,23 @@
     return [[self getImgPathArrayForAuthor:author] count];
 }
 
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
+    TouristSiteSectionHeaderCell* headerView;
+    
+    if([kind isEqualToString:UICollectionElementKindSectionHeader]){
+        
+        headerView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"AcknolwedgementsHeaderCell" forIndexPath:indexPath];
+        
+        AUTHOR author = (AUTHOR)indexPath.section;
+        
+        
+        headerView.titleText = [self getStringForAuthor:author];
+        
+    }
+    
+    return headerView;
+}
 
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -71,7 +89,7 @@
 -(NSString*)getStringForAuthor:(AUTHOR)author{
     switch (author) {
         case FREEPIK:
-            return @"Freepick";
+            return @"Freepik";
         case NIKITA_GOLUBEV:
             return @"Nikita Golubev";
         case ALFREDO_HERNANDEZ:

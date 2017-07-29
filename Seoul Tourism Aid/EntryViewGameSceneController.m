@@ -49,8 +49,8 @@ SKView* _skView;
     NSArray<NSLayoutConstraint*>* constraints = [NSArray arrayWithObjects:
             [[self.skView centerXAnchor] constraintEqualToAnchor:[self.view centerXAnchor]],
             [[self.skView centerYAnchor] constraintEqualToAnchor:[self.view centerYAnchor]],
-            [[self.skView widthAnchor] constraintEqualToConstant:1050],
-            [[self.skView heightAnchor] constraintEqualToConstant:1433.3], nil];
+            [[self.skView widthAnchor] constraintEqualToConstant:1500],
+            [[self.skView heightAnchor] constraintEqualToConstant:2000], nil];
    
     [NSLayoutConstraint activateConstraints:constraints];
 
@@ -58,6 +58,9 @@ SKView* _skView;
 
 
 -(void)viewWillAppear:(BOOL)animated{
+    
+    [self.skView setNeedsLayout];
+    [self.skView layoutIfNeeded];
     
     [self registerNotifications];
     
@@ -91,7 +94,8 @@ SKView* _skView;
 
 
 -(IBAction)unwindToEntryViewGameSceneController:(UIStoryboardSegue *)segue {
-    
+ 
+  
 }
 
 
@@ -105,7 +109,18 @@ SKView* _skView;
 -(void)presentNavigationAidControllerRequestAlert{
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Navigation Aids" message:@"Do you want to explore our navigation aids for the Seoul Area? Navigation aids help you get directions, search for interesting locations, and get detailed map info for select places." preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Let's Go" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+    
+        
+        
+        UIStoryboard* storyboardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
+        
+        UIViewController* directionsMenuController = [storyboardA instantiateViewControllerWithIdentifier:@"DirectionsMenuController"];
+        
+        [self presentViewController:directionsMenuController animated:NO completion:nil];
+    
+        
+    }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleDefault handler:nil];
     

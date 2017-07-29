@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imagefilepath</key>
+		<string>mg_bank</string>
+		<key>subtitle</key>
+		<string>In the back alleys around hostel</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5419,126.9513}</string>
+		<key>address</key>
+		<string>183-2 Dohwadong</string>
+		<key>title</key>
+		<string>MG Bank</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>mg_bank</string>
+		<key>subtitle</key>
+		<string>In the back alleys around hostel</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5419,126.9513}</string>
+		<key>address</key>
+		<string>183-2 Dohwadong</string>
+		<key>title</key>
+		<string>MG Bank</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>izakaya</string>
+		<key>subtitle</key>
+		<string>In the back alleys around hostel</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5420,126.9519}</string>
+		<key>address</key>
+		<string>4 Saechangno4gil</string>
+		<key>title</key>
+		<string>Izakaya</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>shinhan_bank</string>
+		<key>subtitle</key>
+		<string>On busy street</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5413,126.9486}</string>
+		<key>address</key>
+		<string>563-2 Dohwadong</string>
+		<key>title</key>
+		<string>Shinhan Bank</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>sk_telecom_mapodaero</string>
+		<key>subtitle</key>
+		<string>On busy street</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5415,126.9486}</string>
+		<key>address</key>
+		<string>Mapodaero</string>
+		<key>title</key>
+		<string>SK Telecom</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>sk_telecom_mapodaero</string>
+		<key>subtitle</key>
+		<string>On busy street</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5415,126.9486}</string>
+		<key>address</key>
+		<string>Mapodaero</string>
+		<key>title</key>
+		<string>SK Telecom</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Right next to Hana Bank</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5410,126.9474}</string>
+		<key>address</key>
+		<string>39-9 Dohwadong</string>
+		<key>title</key>
+		<string>Guinot Skin Care</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>hana_bank</string>
+		<key>subtitle</key>
+		<string>Hana Bank</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5410,126.9474}</string>
+		<key>address</key>
+		<string>39-9 Dohwadong</string>
+		<key>title</key>
+		<string>Hana Bank</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>i_love_pub</string>
+		<key>subtitle</key>
+		<string>I Love Pub</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5404,126.9478}</string>
+		<key>address</key>
+		<string>Dohwadong</string>
+		<key>title</key>
+		<string>I Love Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>super_star_bar</string>
+		<key>subtitle</key>
+		<string>On the second floor</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5404,126.9485}</string>
+		<key>address</key>
+		<string>22 Dohwagil</string>
+		<key>title</key>
+		<string>Super Star Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>super_star_bar</string>
+		<key>subtitle</key>
+		<string>On the second floor</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5404,126.9485}</string>
+		<key>address</key>
+		<string>22 Dohwagil</string>
+		<key>title</key>
+		<string>Super Star Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>coffee_bene</string>
+		<key>subtitle</key>
+		<string>Coffee shop on intersection</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5406,126.9493}</string>
+		<key>address</key>
+		<string>6-51 Dohwadong</string>
+		<key>title</key>
+		<string>Coffee Bene</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>u_plus_square</string>
+		<key>subtitle</key>
+		<string>Help with mobile service/cell phones</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5404,126.9498}</string>
+		<key>address</key>
+		<string>548 Dohwadong</string>
+		<key>title</key>
+		<string>U+ Square</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>sk_telecom_world_32_dohwagil</string>
+		<key>subtitle</key>
+		<string>Help with mobile service/cell phones</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5409,126.9498}</string>
+		<key>address</key>
+		<string>32 Dohwagil</string>
+		<key>title</key>
+		<string>SK Telecom World</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>sk_telecom_world_32_dohwagil</string>
+		<key>subtitle</key>
+		<string>SK Telecom World</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5409,126.9498}</string>
+		<key>address</key>
+		<string>32 Dohwagil</string>
+		<key>title</key>
+		<string>Tofu House</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>tofu_house</string>
+		<key>subtitle</key>
+		<string>Tofu Restaurant on intersection</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5412,126.9497}</string>
+		<key>address</key>
+		<string>7-1 Dohwadong</string>
+		<key>title</key>
+		<string>Tofu House</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>bobo_hair</string>
+		<key>subtitle</key>
+		<string>Hair Salon/Styling</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5412,126.9506}</string>
+		<key>address</key>
+		<string>7-1 Dohwadong</string>
+		<key>title</key>
+		<string>Bobo Hair</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Near Ediya Coffee</string>
+		<key>type</key>
+		<integer>3</integer>
+		<key>location</key>
+		<string>{37.5428,126.9529}</string>
+		<key>address</key>
+		<string>56-37 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Pharmacy</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Near Welltz Tower</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5430,126.9531}</string>
+		<key>address</key>
+		<string>56-34 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Dunkin Donuts</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>On 2nd Floor</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5434,126.9526}</string>
+		<key>address</key>
+		<string>53-3 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Skin/Facial/Cosmetic Clinics</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>On 2nd Floor</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5435,126.9522} </string>
+		<key>address</key>
+		<string>Gongdeokdong</string>
+		<key>title</key>
+		<string>JS Clinic</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In basement floor</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5434,126.9526}</string>
+		<key>address</key>
+		<string>57-8 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Electronic Cigarette Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In basement</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5434,126.9527}</string>
+		<key>address</key>
+		<string>57-8 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Dry Cleaning</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In basement</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5434,126.9527}</string>
+		<key>address</key>
+		<string>57-8 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Supplies Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In basement</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5434,126.9528}</string>
+		<key>address</key>
+		<string>167 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Internet Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In basement</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5434,126.9528}</string>
+		<key>address</key>
+		<string>167 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Go Hong Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In basement</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5434,126.9528}</string>
+		<key>address</key>
+		<string>167 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Skin Care Clinic</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In basement</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5433,126.9526}</string>
+		<key>address</key>
+		<string>57-8 Sin-gongdeokgong</string>
+		<key>title</key>
+		<string>Lee Yeonju Hairshop</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>1st Floor, Inside</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5443,126.9537}</string>
+		<key>address</key>
+		<string>22 Mallijaero</string>
+		<key>title</key>
+		<string>The Clige Hair</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>1st Floor, Inside</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5442,126.9537}</string>
+		<key>address</key>
+		<string>24-20 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Anne&apos;s Nail</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Semi-Outdoor Entrance</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5445,126.9542}</string>
+		<key>address</key>
+		<string>24-6 Sin-gongdeokdong</string>
+		<key>title</key>
+		<string>Hwa Dong Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>rotary_grinding_mill</string>
+		<key>subtitle</key>
+		<string>Relic near National Folk Museum</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5806,126.9797}</string>
+		<key>address</key>
+		<string>Gwanghuamun</string>
+		<key>title</key>
+		<string>Rotary Grinding Mill</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>rotary_grinding_mill</string>
+		<key>subtitle</key>
+		<string>Relic near National Folk Museum</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5804,126.9706}</string>
+		<key>address</key>
+		<string>Gwanghuamun</string>
+		<key>title</key>
+		<string>The Epitaph, Statues of Scholar and Stone Objects of Gen. Nam Oh-Seong&apos;s Grave</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>print_shop</string>
+		<key>subtitle</key>
+		<string>Relic near National Folk Museum</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5811,126.9797}</string>
+		<key>address</key>
+		<string>Gwanghuamun</string>
+		<key>title</key>
+		<string>The Print Shop</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>ochondaek</string>
+		<key>subtitle</key>
+		<string>Relic near National Folk Museum</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5806,126.9790}</string>
+		<key>address</key>
+		<string>Gwanghuamun</string>
+		<key>title</key>
+		<string>Ochondaek</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>1970_model_street</string>
+		<key>subtitle</key>
+		<string>Relic near National Folk Museum</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5811,126.9798}</string>
+		<key>address</key>
+		<string>Gwanghuamun</string>
+		<key>title</key>
+		<string>1970s-80s Era Korean Model Street</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>bambo_war_store</string>
+		<key>subtitle</key>
+		<string>Relic near National Folk Museum</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5810,126.9797}</string>
+		<key>address</key>
+		<string>Gwanghuamun</string>
+		<key>title</key>
+		<string>Bamboo Ware Store, Herbal Medicine Store, Korean Hat Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>national_folk_museum</string>
+		<key>subtitle</key>
+		<string>Relic near National Folk Museum</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5815,126.9784}</string>
+		<key>address</key>
+		<string>Gwanghuamun</string>
+		<key>title</key>
+		<string>National Folk Museum</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>seoul_education_museum</string>
+		<key>subtitle</key>
+		<string>A small museum about Seoul culture and history</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5796,126.9832}</string>
+		<key>address</key>
+		<string>In BukChon Old Street Area</string>
+		<key>title</key>
+		<string>Seoul Education Museum</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>bukchon_exhibit_room</string>
+		<key>subtitle</key>
+		<string>A small exhibit about the historic street of BukChon.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5796,126.9826}</string>
+		<key>address</key>
+		<string>In BukChon Old Street Area</string>
+		<key>title</key>
+		<string>Bukchon Exhibit Room</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>jongdeok_library</string>
+		<key>subtitle</key>
+		<string>A library in the BukChon Old Street Area with cafeteria and outdoor sitting area.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5797,126.9826}</string>
+		<key>address</key>
+		<string>In BukChon Old Street Area</string>
+		<key>title</key>
+		<string>Jongdeok Library</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>gagosipo_gallery</string>
+		<key>subtitle</key>
+		<string>A small art gallery in BukChon Old Street Are</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5803,126.9820}</string>
+		<key>address</key>
+		<string>In BukChon Old Street Area</string>
+		<key>title</key>
+		<string>Gagosipo Gallery</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>gagosipo_gallery</string>
+		<key>subtitle</key>
+		<string>A small art gallery in BukChon Old Street Are</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5803,126.9820}</string>
+		<key>address</key>
+		<string>In BukChon Old Street Area</string>
+		<key>title</key>
+		<string>Gagosipo Gallery</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>seoul_education_museum</string>
+		<key>subtitle</key>
+		<string>A small museum near Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5796,126.9832}</string>
+		<key>address</key>
+		<string>A museum near Gwanghuamun.</string>
+		<key>title</key>
+		<string>Seoul Education Museum</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>national_museum_of_korean_culture</string>
+		<key>subtitle</key>
+		<string>A small museum near Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5736,126.9775}</string>
+		<key>address</key>
+		<string>A museum near Gwanghuamun.</string>
+		<key>title</key>
+		<string>National Museum of Korean Culture</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>temple_byeomnyeknsa</string>
+		<key>subtitle</key>
+		<string>A Buddhist temple near the eastern wall of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>14</integer>
+		<key>location</key>
+		<string>{37.5736,126.9775}</string>
+		<key>address</key>
+		<string>A Buddhist temple near the eastern wall of Gwanghuamun.</string>
+		<key>title</key>
+		<string>Temple Byeomnyeknsa</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>temple_byeomnyeknsa</string>
+		<key>subtitle</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5774, 126.9798}</string>
+		<key>address</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>title</key>
+		<string>Gallery Hyundai</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>barakat_sculpture_museum</string>
+		<key>subtitle</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5811,126.9805}</string>
+		<key>address</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>title</key>
+		<string>Barakat Sculpture Museum</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>gallery_hakgojae</string>
+		<key>subtitle</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5803,126.9802}</string>
+		<key>address</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>title</key>
+		<string>Gallery HakGojae</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>seum_artspace</string>
+		<key>subtitle</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5800,126.9801}</string>
+		<key>address</key>
+		<string>A small art gallery near the eastern wall of Gwanghuamun.</string>
+		<key>title</key>
+		<string>Seum Artspace</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>seum_artspace</string>
+		<key>subtitle</key>
+		<string>A museum/education center about South Korean presidents.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5800,126.9801}</string>
+		<key>address</key>
+		<string>Located on the northwestern corner of Gwanghuamen, outside the old city wall.</string>
+		<key>title</key>
+		<string>Cheongwadae Sarangchae</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>seum_artspace</string>
+		<key>subtitle</key>
+		<string>An art museum located towards the inside of small inroad, close to the western side of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5774,126.9737}</string>
+		<key>address</key>
+		<string>Located on the western sid of Gwanghuamen, outside the old city wall.</string>
+		<key>title</key>
+		<string>Daemlim Museum</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>seum_artspace</string>
+		<key>subtitle</key>
+		<string>An art museum located towards the inside of small inroad, close to the western side of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5761,126.9745}</string>
+		<key>address</key>
+		<string>Located inside Gwanghuamun, adjacent to the western flank of the main palace.</string>
+		<key>title</key>
+		<string>National Palace Museum</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>kumho_museum_art</string>
+		<key>subtitle</key>
+		<string>An art museum located on the eastern side of Gwanghuamun.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5774,126.9798}</string>
+		<key>address</key>
+		<string>Located on the eastern side of Gwanghuamun.</string>
+		<key>title</key>
+		<string>Kumho Museum of Art</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>national_folk_musem</string>
+		<key>subtitle</key>
+		<string>A museum featuring exhibits about Korean prehistory and history.</string>
+		<key>type</key>
+		<integer>13</integer>
+		<key>location</key>
+		<string>{37.5815,126.9784}</string>
+		<key>address</key>
+		<string>Located inside Gwanghuamun, on the northeast side of the complex.</string>
+		<key>title</key>
+		<string>National Folk Museum</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>national_security_pavilion</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>PKM-357 National Security Pavilion</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>war_history_room_2</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5370,126.9765}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>War History Room 2</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>Hwaseong Fortress</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5371,126.9765}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>Hwaseong Fortress</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>war_history_room_2</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5371,126.9766}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>War History Room 2</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>war_history_room_2</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5373,126.9772}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>Memorial Hall</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>war_memorial_of_korea</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5365,126.9772}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>War Memorial of Korea (Main Entrance)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>patrol_boat</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5359,126.9782}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>Restored Patrol Boat (War Memorial)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>mk30_naval_gun</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5365,126.9782}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>MK-30 Naval Gun</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>mk30_naval_gun</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5357,126.9785}</string>
+		<key>address</key>
+		<string></string>
+		<key>title</key>
+		<string>C-46 Commando Transport</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>b52_bomber</string>
+		<key>subtitle</key>
+		<string>National Security Pavilion</string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5354,126.9784}</string>
+		<key>address</key>
+		<string>8-3 Yongsandong1ga</string>
+		<key>title</key>
+		<string>B-52 Bomber</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>15</integer>
+		<key>location</key>
+		<string>{37.5368,126.9768}</string>
+		<key>address</key>
+		<string>National Security Pavilion (War Memorial of Korea)</string>
+		<key>title</key>
+		<string>Children&apos;s Museum (War Memorial of Korea)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>coffeenamu</string>
+		<key>subtitle</key>
+		<string>War Memorial of Korea</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5369,126.9783}</string>
+		<key>address</key>
+		<string>Yongsandong1ga, Yongsan-gu</string>
+		<key>title</key>
+		<string>Coffenamu</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>coffeenamu</string>
+		<key>subtitle</key>
+		<string>Digital Media City</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5785,126.9008}</string>
+		<key>address</key>
+		<string>Digital Media City</string>
+		<key>title</key>
+		<string>Tom N Toms Coffee</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>coffeenamu</string>
+		<key>subtitle</key>
+		<string>Digital Media City</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5777,126.9006}</string>
+		<key>address</key>
+		<string>Digital Media City</string>
+		<key>title</key>
+		<string>Deuxville Building</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>samho_garden</string>
+		<key>subtitle</key>
+		<string>Digital Media City</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5805,126.8980}</string>
+		<key>address</key>
+		<string>Digital Media City</string>
+		<key>title</key>
+		<string>Samho Garden</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>samsung_retail_dmc</string>
+		<key>subtitle</key>
+		<string>Digital Media City</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5811,126.8973}</string>
+		<key>address</key>
+		<string>Digital Media City</string>
+		<key>title</key>
+		<string>Samsung Retail Outlet</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>world_cup_stadium</string>
+		<key>subtitle</key>
+		<string>World Cup Stadium</string>
+		<key>type</key>
+		<integer>17</integer>
+		<key>location</key>
+		<string>{37.5693,126.8988}</string>
+		<key>address</key>
+		<string>World Cup Stadium</string>
+		<key>title</key>
+		<string>World Cup Stadium Imax</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>entirely_new_war</string>
+		<key>subtitle</key>
+		<string>War Memorial of Korea</string>
+		<key>type</key>
+		<integer>17</integer>
+		<key>location</key>
+		<string>{37.5371,126.9765}</string>
+		<key>address</key>
+		<string>War Memorial of Korea</string>
+		<key>title</key>
+		<string>War Film Exhibit (An Entirely New War)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string>slam_eagle</string>
+		<key>subtitle</key>
+		<string>War Memorial of Korea</string>
+		<key>type</key>
+		<integer>17</integer>
+		<key>location</key>
+		<string>{37.5367,126.9781}</string>
+		<key>address</key>
+		<string>War Memorial of Korea</string>
+		<key>title</key>
+		<string>3D Movie Exhibit (F-15 Slam Eagle)</string>
+	</dict>
+</array>
+</plist>

@@ -61,6 +61,20 @@
 		BD32EBF01F24FC9900B5E8D2 /* AudioPhrases.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD32EBEF1F24FC9900B5E8D2 /* AudioPhrases.plist */; };
 		BD32EBF31F24FDB300B5E8D2 /* AudioSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */; };
 		BD32EBF61F25060100B5E8D2 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF51F25060100B5E8D2 /* AudioController.m */; };
+		BD34A2511F2C12F200326E9B /* TouristLocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A24E1F2C12F200326E9B /* TouristLocationTableViewController.m */; };
+		BD34A2521F2C12F200326E9B /* TouristLocationTBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2501F2C12F200326E9B /* TouristLocationTBNavigationController.m */; };
+		BD34A2551F2C135000326E9B /* LocalAreaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2541F2C135000326E9B /* LocalAreaNavController.m */; };
+		BD34A2571F2C138A00326E9B /* PlacemarksNearHostel.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD34A2561F2C138A00326E9B /* PlacemarksNearHostel.plist */; };
+		BD34A25A1F2C13CF00326E9B /* HostelAreaContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2591F2C13CF00326E9B /* HostelAreaContainerController.m */; };
+		BD34A25D1F2C140700326E9B /* SeoulLocationAnnotation+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A25C1F2C140700326E9B /* SeoulLocationAnnotation+HelperMethods.m */; };
+		BD34A2601F2C141A00326E9B /* HostelLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A25F1F2C141A00326E9B /* HostelLocationAnnotation.m */; };
+		BD34A2631F2C145800326E9B /* TouristLocationParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2621F2C145800326E9B /* TouristLocationParentController.m */; };
+		BD34A2661F2C148F00326E9B /* HostelAreaMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2651F2C148F00326E9B /* HostelAreaMapViewController.m */; };
+		BD34A2691F2C14AA00326E9B /* HeaderViewConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2681F2C14AA00326E9B /* HeaderViewConfiguration.m */; };
+		BD34A26C1F2C14C100326E9B /* AnnotationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A26B1F2C14C100326E9B /* AnnotationManager.m */; };
+		BD34A26F1F2C14E000326E9B /* AnnotationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A26E1F2C14E000326E9B /* AnnotationMapViewController.m */; };
+		BD34A2721F2C150A00326E9B /* HostelAreaMapOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2711F2C150A00326E9B /* HostelAreaMapOptionsController.m */; };
+		BD34A2751F2C152100326E9B /* HostelLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2741F2C152100326E9B /* HostelLocationAnnotationView.m */; };
 		BD34DFFA1F273E850073A9F4 /* foodPhraseAudio3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34DFF91F273E850073A9F4 /* foodPhraseAudio3.caf */; };
 		BD34DFFC1F273EE40073A9F4 /* foodPhraseAudio4.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34DFFB1F273EE40073A9F4 /* foodPhraseAudio4.caf */; };
 		BD34DFFE1F273F2A0073A9F4 /* foodPhraseAudio5.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD34DFFD1F273F2A0073A9F4 /* foodPhraseAudio5.caf */; };
@@ -305,6 +319,35 @@
 		BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSection.m; sourceTree = "<group>"; };
 		BD32EBF41F25060100B5E8D2 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		BD32EBF51F25060100B5E8D2 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		BD34A24A1F2C12B600326E9B /* HostelAreaNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelAreaNavigationController.h; sourceTree = "<group>"; };
+		BD34A24B1F2C12B600326E9B /* HostelAreaNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelAreaNavigationController.m; sourceTree = "<group>"; };
+		BD34A24D1F2C12F200326E9B /* TouristLocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristLocationTableViewController.h; sourceTree = "<group>"; };
+		BD34A24E1F2C12F200326E9B /* TouristLocationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristLocationTableViewController.m; sourceTree = "<group>"; };
+		BD34A24F1F2C12F200326E9B /* TouristLocationTBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristLocationTBNavigationController.h; sourceTree = "<group>"; };
+		BD34A2501F2C12F200326E9B /* TouristLocationTBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristLocationTBNavigationController.m; sourceTree = "<group>"; };
+		BD34A2531F2C135000326E9B /* LocalAreaNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalAreaNavController.h; sourceTree = "<group>"; };
+		BD34A2541F2C135000326E9B /* LocalAreaNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalAreaNavController.m; sourceTree = "<group>"; };
+		BD34A2561F2C138A00326E9B /* PlacemarksNearHostel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PlacemarksNearHostel.plist; sourceTree = "<group>"; };
+		BD34A2581F2C13CF00326E9B /* HostelAreaContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelAreaContainerController.h; sourceTree = "<group>"; };
+		BD34A2591F2C13CF00326E9B /* HostelAreaContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelAreaContainerController.m; sourceTree = "<group>"; };
+		BD34A25B1F2C140700326E9B /* SeoulLocationAnnotation+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SeoulLocationAnnotation+HelperMethods.h"; sourceTree = "<group>"; };
+		BD34A25C1F2C140700326E9B /* SeoulLocationAnnotation+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SeoulLocationAnnotation+HelperMethods.m"; sourceTree = "<group>"; };
+		BD34A25E1F2C141A00326E9B /* HostelLocationAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelLocationAnnotation.h; sourceTree = "<group>"; };
+		BD34A25F1F2C141A00326E9B /* HostelLocationAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelLocationAnnotation.m; sourceTree = "<group>"; };
+		BD34A2611F2C145800326E9B /* TouristLocationParentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristLocationParentController.h; sourceTree = "<group>"; };
+		BD34A2621F2C145800326E9B /* TouristLocationParentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristLocationParentController.m; sourceTree = "<group>"; };
+		BD34A2641F2C148F00326E9B /* HostelAreaMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelAreaMapViewController.h; sourceTree = "<group>"; };
+		BD34A2651F2C148F00326E9B /* HostelAreaMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelAreaMapViewController.m; sourceTree = "<group>"; };
+		BD34A2671F2C14AA00326E9B /* HeaderViewConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewConfiguration.h; sourceTree = "<group>"; };
+		BD34A2681F2C14AA00326E9B /* HeaderViewConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewConfiguration.m; sourceTree = "<group>"; };
+		BD34A26A1F2C14C100326E9B /* AnnotationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationManager.h; sourceTree = "<group>"; };
+		BD34A26B1F2C14C100326E9B /* AnnotationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationManager.m; sourceTree = "<group>"; };
+		BD34A26D1F2C14E000326E9B /* AnnotationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationMapViewController.h; sourceTree = "<group>"; };
+		BD34A26E1F2C14E000326E9B /* AnnotationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationMapViewController.m; sourceTree = "<group>"; };
+		BD34A2701F2C150A00326E9B /* HostelAreaMapOptionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelAreaMapOptionsController.h; sourceTree = "<group>"; };
+		BD34A2711F2C150A00326E9B /* HostelAreaMapOptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelAreaMapOptionsController.m; sourceTree = "<group>"; };
+		BD34A2731F2C152100326E9B /* HostelLocationAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelLocationAnnotationView.h; sourceTree = "<group>"; };
+		BD34A2741F2C152100326E9B /* HostelLocationAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelLocationAnnotationView.m; sourceTree = "<group>"; };
 		BD34DFF91F273E850073A9F4 /* foodPhraseAudio3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio3.caf; sourceTree = "<group>"; };
 		BD34DFFB1F273EE40073A9F4 /* foodPhraseAudio4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio4.caf; sourceTree = "<group>"; };
 		BD34DFFD1F273F2A0073A9F4 /* foodPhraseAudio5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodPhraseAudio5.caf; sourceTree = "<group>"; };
@@ -741,6 +784,29 @@
 		BD35709C1F24D233003BE859 /* SupportingPlists */ = {
 			isa = PBXGroup;
 			children = (
+				BD34A2561F2C138A00326E9B /* PlacemarksNearHostel.plist */,
+				BD34A2731F2C152100326E9B /* HostelLocationAnnotationView.h */,
+				BD34A2741F2C152100326E9B /* HostelLocationAnnotationView.m */,
+				BD34A2701F2C150A00326E9B /* HostelAreaMapOptionsController.h */,
+				BD34A2711F2C150A00326E9B /* HostelAreaMapOptionsController.m */,
+				BD34A26D1F2C14E000326E9B /* AnnotationMapViewController.h */,
+				BD34A26E1F2C14E000326E9B /* AnnotationMapViewController.m */,
+				BD34A26A1F2C14C100326E9B /* AnnotationManager.h */,
+				BD34A26B1F2C14C100326E9B /* AnnotationManager.m */,
+				BD34A2671F2C14AA00326E9B /* HeaderViewConfiguration.h */,
+				BD34A2681F2C14AA00326E9B /* HeaderViewConfiguration.m */,
+				BD34A2641F2C148F00326E9B /* HostelAreaMapViewController.h */,
+				BD34A2651F2C148F00326E9B /* HostelAreaMapViewController.m */,
+				BD34A2611F2C145800326E9B /* TouristLocationParentController.h */,
+				BD34A2621F2C145800326E9B /* TouristLocationParentController.m */,
+				BD34A25E1F2C141A00326E9B /* HostelLocationAnnotation.h */,
+				BD34A25F1F2C141A00326E9B /* HostelLocationAnnotation.m */,
+				BD34A25B1F2C140700326E9B /* SeoulLocationAnnotation+HelperMethods.h */,
+				BD34A25C1F2C140700326E9B /* SeoulLocationAnnotation+HelperMethods.m */,
+				BD34A2581F2C13CF00326E9B /* HostelAreaContainerController.h */,
+				BD34A2591F2C13CF00326E9B /* HostelAreaContainerController.m */,
+				BD34A2531F2C135000326E9B /* LocalAreaNavController.h */,
+				BD34A2541F2C135000326E9B /* LocalAreaNavController.m */,
 				BD3570C11F24D2E3003BE859 /* WeddingHall.plist */,
 				BD3570AB1F24D283003BE859 /* NationalSecurityPavilionPath.plist */,
 				BD3570B51F24D2A3003BE859 /* ROKArmedForcesRoom.plist */,
@@ -1029,6 +1095,12 @@
 			children = (
 				BD35709C1F24D233003BE859 /* SupportingPlists */,
 				BD3570991F24D1F1003BE859 /* BoundaryOverlay.h */,
+				BD34A24D1F2C12F200326E9B /* TouristLocationTableViewController.h */,
+				BD34A24E1F2C12F200326E9B /* TouristLocationTableViewController.m */,
+				BD34A24F1F2C12F200326E9B /* TouristLocationTBNavigationController.h */,
+				BD34A2501F2C12F200326E9B /* TouristLocationTBNavigationController.m */,
+				BD34A24A1F2C12B600326E9B /* HostelAreaNavigationController.h */,
+				BD34A24B1F2C12B600326E9B /* HostelAreaNavigationController.m */,
 				BD35709A1F24D1F1003BE859 /* BoundaryOverlay.m */,
 				BD35708F1F24D1E7003BE859 /* BikeRouteMapController.h */,
 				BD3570901F24D1E7003BE859 /* BikeRouteMapController.m */,
@@ -1251,6 +1323,7 @@
 				BD2E4D2F1F25BCD1005770D1 /* transportationAudio5.caf in Resources */,
 				BD3570B11F24D293003BE859 /* ParkRoute.plist in Resources */,
 				BD3931FB1F258D57008B3C1B /* foodAudio9.caf in Resources */,
+				BD34A2571F2C138A00326E9B /* PlacemarksNearHostel.plist in Resources */,
 				BD3931FF1F258E69008B3C1B /* miscAudio2.caf in Resources */,
 				BD3A453A1F18A3F600DA5A75 /* Podfile in Resources */,
 				BD7C2FE61F27144C00B835EE /* basicAudio5.caf in Resources */,
@@ -1361,27 +1434,33 @@
 				BD38F2D61F1B37DA00471E16 /* GeneralGameSceneController.m in Sources */,
 				BD38F2D51F1B369B00471E16 /* GoogleJSONResponseParser.m in Sources */,
 				BD3728D01F1F3FDA009DFF50 /* OperatingHours.m in Sources */,
+				BD34A2521F2C12F200326E9B /* TouristLocationTBNavigationController.m in Sources */,
 				BD38F2D41F1B369200471E16 /* GoogleURLGenerator.m in Sources */,
 				BD38F2D31F1B368900471E16 /* WayPointConfiguration.m in Sources */,
 				BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */,
 				BD3944CA1F22C83A0024F92D /* AuthorizationController.m in Sources */,
 				BD2E4D3F1F25D381005770D1 /* AcknowledgementsIndexVC.m in Sources */,
+				BD34A25A1F2C13CF00326E9B /* HostelAreaContainerController.m in Sources */,
 				BD3812221F2063F0003D7367 /* TouristSiteManager.m in Sources */,
 				BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */,
 				BD50485E1F29A9B400226922 /* TouristSiteSectionHeaderCell.m in Sources */,
 				BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */,
+				BD34A26F1F2C14E000326E9B /* AnnotationMapViewController.m in Sources */,
 				BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
 				BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */,
+				BD34A2721F2C150A00326E9B /* HostelAreaMapOptionsController.m in Sources */,
 				BD32321F1F1E3082000E2236 /* FlickrProgressControllerIPAD.m in Sources */,
 				BD32EBF31F24FDB300B5E8D2 /* AudioSection.m in Sources */,
 				BD3BCF6B1F26396B00623191 /* ContactScrollViewController.m in Sources */,
+				BD34A2751F2C152100326E9B /* HostelLocationAnnotationView.m in Sources */,
 				BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */,
 				BD32EBEB1F24FB6000B5E8D2 /* AudioSampleCell.m in Sources */,
 				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
 				BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */,
 				BD38F2D11F1B367700471E16 /* UserLocationManager.m in Sources */,
 				BD2E4D291F25B4B3005770D1 /* ScrollableInfoController.m in Sources */,
+				BD34A2601F2C141A00326E9B /* HostelLocationAnnotation.m in Sources */,
 				BD38F2D01F1B366D00471E16 /* SpecificLocationMapController.m in Sources */,
 				BD35708D1F24D197003BE859 /* PolygonSelectionController.m in Sources */,
 				BD3D24F51F28AE0D0063ED11 /* TouristSiteCSCNavController.m in Sources */,
@@ -1389,8 +1468,10 @@
 				BD2EDB891F1B8FA200C86D37 /* WeatherDisplayController.m in Sources */,
 				BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */,
 				BD3DCB031F234839001DB69B /* LanguageRecordingController.m in Sources */,
+				BD34A2551F2C135000326E9B /* LocalAreaNavController.m in Sources */,
 				BD3570981F24D1E7003BE859 /* BikingRoutesController.m in Sources */,
 				BD32B2061F1B7968000F5F7E /* GoogleLocationSearchController.m in Sources */,
+				BD34A2511F2C12F200326E9B /* TouristLocationTableViewController.m in Sources */,
 				BD38F2CF1F1B366500471E16 /* ViewController.m in Sources */,
 				BD3570961F24D1E7003BE859 /* BikeRouteMapController.m in Sources */,
 				BD3BCF711F263D7300623191 /* FeaturesContainerController.m in Sources */,
@@ -1403,6 +1484,7 @@
 				BD7C2FCE1F26F18E00B835EE /* ProductSearchController.m in Sources */,
 				BD38F2CB1F1B363B00471E16 /* VideoScrollViewController.m in Sources */,
 				BD7C2FCD1F26F18E00B835EE /* ProductPriceDisplayController.m in Sources */,
+				BD34A2691F2C14AA00326E9B /* HeaderViewConfiguration.m in Sources */,
 				BD2E4D391F25CB39005770D1 /* AcknowledgementsVC.m in Sources */,
 				BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */,
 				BD35708C1F24D197003BE859 /* PolygonMapController.m in Sources */,
@@ -1426,6 +1508,8 @@
 				BD2E4D3C1F25D16D005770D1 /* AuthorPicCell.m in Sources */,
 				BD8A35E71F1DF85800346F88 /* FlickrProgressController.m in Sources */,
 				BD38F2C61F1B361600471E16 /* EntryGameScene.m in Sources */,
+				BD34A26C1F2C14C100326E9B /* AnnotationManager.m in Sources */,
+				BD34A2661F2C148F00326E9B /* HostelAreaMapViewController.m in Sources */,
 				BD38F2C51F1B361200471E16 /* EntryViewGameSceneController.m in Sources */,
 				BD3BCF6A1F26396B00623191 /* ContactInfoController.m in Sources */,
 				BD35709B1F24D1F1003BE859 /* BoundaryOverlay.m in Sources */,
@@ -1436,6 +1520,7 @@
 				BD2EDB931F1B8FD900C86D37 /* WFSManager.m in Sources */,
 				BD8A35EC1F1DF8D100346F88 /* SeoulFlickrSearchController.m in Sources */,
 				BD32EBEE1F24FC8C00B5E8D2 /* AudioSampleCollectionController.m in Sources */,
+				BD34A2631F2C145800326E9B /* TouristLocationParentController.m in Sources */,
 				BD2EDB7C1F1B8F7B00C86D37 /* WeatherIconManager.m in Sources */,
 				BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */,
 				BD32EBF61F25060100B5E8D2 /* AudioController.m in Sources */,
@@ -1443,6 +1528,7 @@
 				BD38F2C41F1B360D00471E16 /* EntryViewControllerPad.m in Sources */,
 				BD2EDB881F1B8FA200C86D37 /* WeatherDetailController.m in Sources */,
 				BD3BCF741F2645A800623191 /* MiscellaneousContainerController.m in Sources */,
+				BD34A25D1F2C140700326E9B /* SeoulLocationAnnotation+HelperMethods.m in Sources */,
 				BD38F2C31F1B360700471E16 /* SKViewCell.m in Sources */,
 				BD2EDB971F1B901A00C86D37 /* UIView+HelperMethods.m in Sources */,
 				BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */,

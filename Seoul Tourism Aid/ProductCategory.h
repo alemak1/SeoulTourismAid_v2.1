@@ -36,29 +36,29 @@ typedef enum AssortedProductCategory{
     CLOTHES = 10,
     SIM_CARD = 11,
     CELL_PHONE = 12,
-    FLOWER, //florist
-    SHOES, //shoe_store,
-    TRAVEL_TOUR, //travel_agency
-    HAIR_GEL, //hair_care,
-    GAS,//gas_station
-    SPA,//spa
-    LETTER,//post_office,
-    ROOT_CANAL, //dentist
-    PILLS, //pharmacy
-    PET,//pet_store
-    OIL_CHANGE,//car_repair,
-    RENTAL_CAR, //car_rental
-    PARKING_SPACE,//parking
-    CAMPGROUND,//campground
-    BICYCLE_STORE,//bicycle_store
-    ATM,//atm
-    BANK,//bank
-    BOOK,//book_store
-    BOWLING,//bowling_alley
-    JEWELRY,//jewelry_store
-    LAUNDRY,//laundry
-    MOVIE_TICKET,//movie_theater
-    GYM,//gym
+    FLOWER = 13, //florist
+    SHOES = 14, //shoe_store,
+    TRAVEL_TOUR = 15, //travel_agency
+    HAIR_GEL = 16, //hair_care,
+    GAS = 17,//gas_station
+    SPA = 18,//spa
+    LETTER = 19,//post_office,
+    ROOT_CANAL = 20, //dentist
+    PILLS = 21, //pharmacy
+    PET = 22,//pet_store
+    OIL_CHANGE = 23,//car_repair,
+    RENTAL_CAR = 24, //car_rental
+    PARKING_SPACE = 25,//parking
+    CAMPGROUND = 26,//campground
+    BICYCLE_STORE = 27,//bicycle_store
+    ATM = 28,//atm
+    BANK = 29,//bank
+    BOOK = 30,//book_store
+    BOWLING = 31,//bowling_alley
+    JEWELRY = 32,//jewelry_store
+    LAUNDRY = 33,//laundry
+    MOVIE_TICKET = 34,//movie_theater
+    GYM = 35,//gym
     LAST_ASSORTED_PRODUCT_INDEX,
     BARBECUE,
     HAIRCUT,

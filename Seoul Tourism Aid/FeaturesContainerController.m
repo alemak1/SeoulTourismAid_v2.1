@@ -25,6 +25,32 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*3.5)];
+    
+    
+    [self.scrollView setScrollsToTop:NO];
+    [self.scrollView setPagingEnabled:NO];
+    [self.scrollView setScrollEnabled:YES];
+    [self.scrollView setAlwaysBounceVertical:YES];
+    [self.scrollView setAlwaysBounceHorizontal:NO];
+    [self.scrollView setDirectionalLockEnabled:YES];
+    
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*3.5)];
+    
+    
+    [self.scrollView setScrollsToTop:NO];
+    [self.scrollView setPagingEnabled:NO];
+    [self.scrollView setScrollEnabled:YES];
+    [self.scrollView setAlwaysBounceVertical:YES];
+    [self.scrollView setAlwaysBounceHorizontal:NO];
+    [self.scrollView setDirectionalLockEnabled:YES];
+    
+    
 }
 
 -(void)viewDidLoad{
@@ -35,7 +61,7 @@
     
     [self.scrollView setDelegate:self];
     
-    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*1.80)];
+    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*3.5)];
 
     
     [self.scrollView setScrollsToTop:NO];
