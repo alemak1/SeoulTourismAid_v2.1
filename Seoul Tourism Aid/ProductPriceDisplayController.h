@@ -21,6 +21,8 @@
 
 @property NSString* productPriceDescription;
 
+@property (readonly) BOOL didSelectCurrency;
+
 
 @end
 

@@ -38,19 +38,29 @@
         case NearHostelLocationCosmeticsSkinFacialCare:
             return @"Cosmetics and Skin Care";
         case TouristAttractionTower:
-            return @"Radio Towers";
+            return @"  Radio Towers";
         case TouristAttractionMuseumLibrary:
-            return @"Museums and Libraries";
+            return @"  Museums and Libraries";
         case TouristAttractionTempleMonumentRelic:
-            return @"Temples, Monuments, & Historical Sites";
+            return @"  Monuments/Cultural Sites";
         case TouristAttractionWarMemorial:
-            return @"Korean War Memorial";
+            return @"  Korean War Memorial";
         case TouristAttractionShoppingArea:
-            return @"Shopping Area";
+            return @"  Shopping Area";
         case TouristAttractionStreetMarket:
-            return @"Night Market";
+            return @"  Night Market";
         case TouristAttractionTheaterMovie:
-            return @"Movies and Theaters";
+            return @"  Movies and Theaters";
+        case TouristAttractionTheaterHotelLodging:
+            return @"  Hotels and Lodging";
+        case TouristAttractionPoliceFireStation:
+            return @"  Police and Fire Stations";
+        case TouristAttractionSaunaMassage:
+            return @"  Sauna/Massage";
+        case TouristAttractionClothingStore:
+            return @"  Clothing Store";
+        case TouristAttractionHospitalClinic:
+            return @"  Hospital and/or Clinic";
         default:
             return nil;
     }
@@ -65,7 +75,7 @@
         case NearHostelLocationConvenienceStore:
             return @"convenienceStoreA";
         case NearHostelLocationOtherRestaurants:
-            return @"otherRestaurantsA";
+            return @"regularRestaurantA";
         case NearHostelLocationSportsRecreation:
             return @"microphoneA";
         case NearHostelLocationPharmacyDrugstore:
@@ -93,7 +103,17 @@
         case TouristAttractionStreetMarket:
             return @"streetStandA";
         case TouristAttractionTheaterMovie:
-            return @"tvD";
+            return @"tvA";
+        case TouristAttractionSaunaMassage:
+            return @"massageA";
+        case TouristAttractionClothingStore:
+            return @"clothingA";
+        case TouristAttractionHospitalClinic:
+            return @"pharmacyA";
+        case TouristAttractionPoliceFireStation:
+            return @"policeA";
+        case TouristAttractionTheaterHotelLodging:
+            return @"city1";
         default:
             return nil;
     }
@@ -139,6 +159,16 @@
             return [UIColor yellowColor];
         case TouristAttractionTheaterMovie:
             return [UIColor greenColor];
+        case TouristAttractionHospitalClinic:
+            return [UIColor redColor];
+        case TouristAttractionClothingStore:
+            return [UIColor purpleColor];
+        case TouristAttractionSaunaMassage:
+            return [UIColor magentaColor];
+        case TouristAttractionPoliceFireStation:
+            return [UIColor blueColor];
+        case TouristAttractionTheaterHotelLodging:
+            return [UIColor grayColor];
         default:
             return nil;
     }

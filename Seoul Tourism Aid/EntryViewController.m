@@ -328,10 +328,10 @@
     
     // decide which kind of content we need based on the device idiom,
     // when we load the proper storyboard, the "ContentController" class will take it from here
-    UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+    UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
     
     
-    NSString *storyBoardIdentifier = @"TouristSiteCSCNavController";
+    NSString *storyBoardIdentifier = @"SeoulTourismNavigationController";
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
@@ -339,7 +339,7 @@
     }
     
     
-    return [storyboardC instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+    return [storyboardD instantiateViewControllerWithIdentifier:storyBoardIdentifier];
     
 }
 

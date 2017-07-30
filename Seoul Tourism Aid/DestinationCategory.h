@@ -11,7 +11,8 @@
 
 typedef enum DestinationCategory{
     SEOUL_STATION,
-    INCHEON_AIRPORT
+    INCHEON_AIRPORT,
+    GIMPO_INTERNATIONAL_AIRPORT
 }DestinationCategory;
 
 #endif /* DestinationCategory_h */

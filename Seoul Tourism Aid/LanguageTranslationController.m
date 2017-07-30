@@ -113,28 +113,68 @@
         
         // Parses the JSON response.
         NSError *jsonError = nil;
-        NSDictionary* jsonDict =
-        [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
-        // JSON error.
-        if (jsonError) {
-            NSLog(@"JSON decoding error %@", jsonError);
-            return;
+        if(data){
+            NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+            
+            // JSON error.
+            if (jsonError) {
+                NSLog(@"JSON decoding error %@", jsonError);
+                return;
+            }
+            
+            NSString* translatedText = [self parseJSONResponseForTranslatedText:jsonDict];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.translatedTextLabel setText:translatedText];
+                [self.activityIndicator stopAnimating];
+                [self.activityIndicator setHidden:YES];
+                [self.translatedTextLabel setHidden:NO];
+                
+            });
+            
+            // Success response!
+            NSLog(@"Success: %@", jsonDict);
+        } else {
+            UIAlertController* alertController;
+            
+            if(error){
+                alertController = [UIAlertController alertControllerWithTitle:@"Error!" message:@"An error occurred while trying to translate the text! Please check your Internet connection or try again at a later time." preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+                
+                [alertController addAction:action];
+                
+                [self presentViewController:alertController animated:YES completion:^{
+                    
+                    [self.activityIndicator stopAnimating];
+                    [self.activityIndicator setHidden:YES];
+                    [self.translatedTextLabel setHidden:NO];
+                    
+                    return;
+                }];
+                
+            }
+            
+            
+            alertController = [UIAlertController alertControllerWithTitle:@"Unable to peform translation!" message:@"Check to make sure that an Internet/WiFi connection is available" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+            
+            [alertController addAction:action];
+            
+            [self presentViewController:alertController animated:YES completion:^{
+            
+                [self.activityIndicator stopAnimating];
+                [self.activityIndicator setHidden:YES];
+                [self.translatedTextLabel setHidden:NO];
+
+                return;
+            }];
         }
         
-        NSString* translatedText = [self parseJSONResponseForTranslatedText:jsonDict];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-        
-            [self.translatedTextLabel setText:translatedText];
-            [self.activityIndicator stopAnimating];
-            [self.activityIndicator setHidden:YES];
-            [self.translatedTextLabel setHidden:NO];
-            
-        });
-        
-        // Success response!
-        NSLog(@"Success: %@", jsonDict);
+     
     }];
     
 }

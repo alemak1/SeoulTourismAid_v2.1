@@ -58,6 +58,8 @@
 @property (readonly) CLLocationCoordinate2D incheonAirportCoordinate;
 @property (readonly) CLLocationCoordinate2D seoulStationCoordinate;
 
+@property (readonly) CLLocationCoordinate2D gimpoInternationalCoordinate;
+
 
 @end
 
@@ -84,19 +86,8 @@ CLLocation* _userLocation;
         [self updateHostelDirectionsInterface];
         
     }
-   
     
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    
-
-
-}
-
-
--(void)viewDidLoad{
-    
+    [self setTitleLabel];
     
     
 }
@@ -133,6 +124,9 @@ CLLocation* _userLocation;
              directions = [MKDirectionsRequest getDirectionsToDestinationForTransportMode:selected_transportation_mode andWithDestinationCoordinate:self.incheonAirportCoordinate];
             destinationCoordinate = self.incheonAirportCoordinate;
             break;
+        case GIMPO_INTERNATIONAL_AIRPORT:
+            directions = [MKDirectionsRequest getDirectionsToDestinationForTransportMode:selected_transportation_mode andWithDestinationCoordinate:self.gimpoInternationalCoordinate];
+            destinationCoordinate = self.gimpoInternationalCoordinate;
         default:
             break;
     }
@@ -174,6 +168,27 @@ CLLocation* _userLocation;
     
 }
 
+-(void)setTitleLabel{
+    NSString* titleText;
+    
+    switch (self.destinationCategory) {
+        case INCHEON_AIRPORT:
+            titleText = @"Directions to Incheon Airport";
+            break;
+        case SEOUL_STATION:
+            titleText = @"Directions to Seoul Station";
+            break;
+        case GIMPO_INTERNATIONAL_AIRPORT:
+            titleText = @"Directions to Gimpo International Airport";
+            break;
+        default:
+            break;
+    }
+    
+    [self.titleLabel setText: titleText];
+}
+
+
 /**
 
 - (IBAction)viewDirectionsInGoogleMaps:(UIButton *)sender {
@@ -200,6 +215,9 @@ CLLocation* _userLocation;
             break;
         case SEOUL_STATION:
             destinationCoordinate = self.seoulStationCoordinate;
+            break;
+        case GIMPO_INTERNATIONAL_AIRPORT:
+            destinationCoordinate = self.gimpoInternationalCoordinate;
             break;
         default:
             break;
@@ -336,6 +354,9 @@ CLLocation* _userLocation;
         case SEOUL_STATION:
             destinationCoordinate = self.seoulStationCoordinate;
             break;
+        case GIMPO_INTERNATIONAL_AIRPORT:
+            destinationCoordinate = self.gimpoInternationalCoordinate;
+            break;
         default:
             break;
     }
@@ -345,6 +366,7 @@ CLLocation* _userLocation;
 }
 
 
+#pragma mark ******* COORDINATE FOR DESINATION CATEGORIES
 
 
 -(CLLocationCoordinate2D)seoulStationCoordinate{
@@ -355,6 +377,9 @@ CLLocation* _userLocation;
     return CLLocationCoordinate2DMake(37.460195,126.438507);
 }
 
+-(CLLocationCoordinate2D)gimpoInternationalCoordinate{
+    return CLLocationCoordinate2DMake(37.5586587, 126.7922852);
+}
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
     

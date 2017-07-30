@@ -61,6 +61,7 @@
 		BD32EBF01F24FC9900B5E8D2 /* AudioPhrases.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD32EBEF1F24FC9900B5E8D2 /* AudioPhrases.plist */; };
 		BD32EBF31F24FDB300B5E8D2 /* AudioSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */; };
 		BD32EBF61F25060100B5E8D2 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF51F25060100B5E8D2 /* AudioController.m */; };
+		BD3398451F2CB06700429EE0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3398441F2CB06700429EE0 /* MessageUI.framework */; };
 		BD34A2511F2C12F200326E9B /* TouristLocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A24E1F2C12F200326E9B /* TouristLocationTableViewController.m */; };
 		BD34A2521F2C12F200326E9B /* TouristLocationTBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2501F2C12F200326E9B /* TouristLocationTBNavigationController.m */; };
 		BD34A2551F2C135000326E9B /* LocalAreaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2541F2C135000326E9B /* LocalAreaNavController.m */; };
@@ -132,6 +133,7 @@
 		BD3812281F20693A003D7367 /* TouristSiteCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3812251F20693A003D7367 /* TouristSiteCollectionViewCell.m */; };
 		BD3812291F20693A003D7367 /* TouristSiteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3812271F20693A003D7367 /* TouristSiteCollectionViewController.m */; };
 		BD38122C1F20782B003D7367 /* TouristSiteCategorySelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38122B1F20782B003D7367 /* TouristSiteCategorySelectionController.m */; };
+		BD38D73C1F2DBD9C0026581D /* PlacemarksNearItaewon.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD38D73B1F2DBD9C0026581D /* PlacemarksNearItaewon.plist */; };
 		BD38F0AB1F18F2670012ABCB /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD38F0AA1F18F2670012ABCB /* Assets.bundle */; };
 		BD38F2B71F1B2A4300471E16 /* KoreanLearningSceneBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD38F2B61F1B2A4300471E16 /* KoreanLearningSceneBackground.sks */; };
 		BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35A4861F1A0EF7003C337B /* MenuComponent.m */; };
@@ -319,6 +321,7 @@
 		BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSection.m; sourceTree = "<group>"; };
 		BD32EBF41F25060100B5E8D2 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		BD32EBF51F25060100B5E8D2 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		BD3398441F2CB06700429EE0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BD34A24A1F2C12B600326E9B /* HostelAreaNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelAreaNavigationController.h; sourceTree = "<group>"; };
 		BD34A24B1F2C12B600326E9B /* HostelAreaNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelAreaNavigationController.m; sourceTree = "<group>"; };
 		BD34A24D1F2C12F200326E9B /* TouristLocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristLocationTableViewController.h; sourceTree = "<group>"; };
@@ -438,6 +441,7 @@
 		BD3812271F20693A003D7367 /* TouristSiteCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteCollectionViewController.m; sourceTree = "<group>"; };
 		BD38122A1F20782B003D7367 /* TouristSiteCategorySelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristSiteCategorySelectionController.h; sourceTree = "<group>"; };
 		BD38122B1F20782B003D7367 /* TouristSiteCategorySelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteCategorySelectionController.m; sourceTree = "<group>"; };
+		BD38D73B1F2DBD9C0026581D /* PlacemarksNearItaewon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PlacemarksNearItaewon.plist; sourceTree = "<group>"; };
 		BD38F0A31F18F2380012ABCB /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		BD38F0A41F18F2380012ABCB /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		BD38F0AA1F18F2670012ABCB /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
@@ -592,6 +596,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3398451F2CB06700429EE0 /* MessageUI.framework in Frameworks */,
 				BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */,
 				BD3728D61F1F4C4A009DFF50 /* CloudKit.framework in Frameworks */,
 				BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */,
@@ -605,6 +610,7 @@
 		3EF658D733D4DCD626933478 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD3398441F2CB06700429EE0 /* MessageUI.framework */,
 				BD3728D51F1F4C4A009DFF50 /* CloudKit.framework */,
 				BD3A45401F18A4D100DA5A75 /* MapKit.framework */,
 				BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */,
@@ -785,6 +791,7 @@
 			isa = PBXGroup;
 			children = (
 				BD34A2561F2C138A00326E9B /* PlacemarksNearHostel.plist */,
+				BD38D73B1F2DBD9C0026581D /* PlacemarksNearItaewon.plist */,
 				BD34A2731F2C152100326E9B /* HostelLocationAnnotationView.h */,
 				BD34A2741F2C152100326E9B /* HostelLocationAnnotationView.m */,
 				BD34A2701F2C150A00326E9B /* HostelAreaMapOptionsController.h */,
@@ -1367,6 +1374,7 @@
 				BD2E4D191F25A621005770D1 /* transportationAudio2.caf in Resources */,
 				BD7C2FEE1F27156600B835EE /* basicAudio10.caf in Resources */,
 				BD34E00A1F27411C0073A9F4 /* clothingAudio5.caf in Resources */,
+				BD38D73C1F2DBD9C0026581D /* PlacemarksNearItaewon.plist in Resources */,
 				BD2E4D471F25DBE8005770D1 /* transportationAudio12.caf in Resources */,
 				BD2E4D491F25DC50005770D1 /* transportationAudio13.caf in Resources */,
 			);

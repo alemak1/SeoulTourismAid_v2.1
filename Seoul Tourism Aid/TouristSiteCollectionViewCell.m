@@ -18,7 +18,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-@property (weak,nonatomic) IBOutlet UILabel *isOpenStatusLabel;
+
+
+@property (weak) IBOutlet UILabel *isOpenStatusLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 //Each tourist site cell has detail and directions buttons that perform segues whose string identifiers are configured to match tourist site names or ids; the view controllers that are presented modally can be configured in the storyboard and instantiated using the segue identifiers; tourist site detail and location information can be passed to the dstinationed view controller through the segue; in the prepare for segue method, set exposed properties (corresponding to site location and details) in the prepare for segue method
@@ -70,12 +73,16 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
 }
 
 
--(void)setIsOpenStatusLabel:(UILabel*)isOpenStatusLabel{
+
+
+
+-(void)setIsOpenStatusText:(NSString *)isOpenStatusText{
     
     [self.isOpenStatusLabel setAdjustsFontSizeToFitWidth:YES];
     [self.isOpenStatusLabel setMinimumScaleFactor:0.50];
+    [self.isOpenStatusLabel setText:isOpenStatusText];
     
-    [self.isOpenStatusLabel setText:self.isOpenStatusText];
+    self.isOpenStatusText = isOpenStatusText;
 }
 
 -(NSString *)isOpenStatusText{
@@ -84,18 +91,18 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
 
 -(void)setDistanceToSiteText:(NSString *)distanceToSiteText{
     
-    NSString* labelString;
+    NSString* labelString = [[NSString alloc] init];
     
     if(distanceToSiteText){
    
-        labelString = [labelString stringByAppendingString:@"Distance Away: "];
+        labelString = [labelString stringByAppendingString:@"Distance: "];
         
         labelString = [labelString stringByAppendingString:distanceToSiteText];
     
         labelString = [labelString stringByAppendingString:@" km"];
     }
     
-    if(!labelString){
+    if([labelString isEqualToString:@""]){
         [self.distanceLabel setText:@"Getting distance..."];
     } else{
         [self.distanceLabel setText:labelString];
@@ -106,7 +113,23 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
 }
 
 -(NSString *)distanceToSiteText{
-    return [self.distanceLabel text];
+    
+    CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+    
+    CLLocation* endLocation;
+    
+    endLocation = self.touristSiteConfigurationObject.location ? self.touristSiteConfigurationObject.location : [[CLLocation alloc] initWithLatitude:self.touristSiteConfigurationObject.coordinate.latitude longitude:self.touristSiteConfigurationObject.coordinate.longitude];
+    
+    
+    CLLocationDistance distanceToSite = [userLocation distanceFromLocation:endLocation]/1000.00;
+    
+    
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setMaximumFractionDigits:2];
+    
+    
+    return [numberFormatter stringFromNumber:[NSNumber numberWithDouble:distanceToSite]];
+    
 }
 
 

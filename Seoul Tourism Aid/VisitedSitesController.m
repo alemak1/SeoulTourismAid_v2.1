@@ -19,6 +19,26 @@
 
 @implementation VisitedSitesController
 
+-(void)viewWillLayoutSubviews{
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"RegionIdentifiers" ofType:@"plist"];
+    
+    NSArray* regionDictArray = [NSArray arrayWithContentsOfFile:path];
+    
+    for (NSDictionary* regionDict in regionDictArray) {
+        
+        
+        NSString* regionIdentifier = regionDict[@"RegionIdentifier"];
+        
+        NSString* savedIdentifier = [[NSUserDefaults standardUserDefaults] valueForKey:regionIdentifier];
+        
+        if(!savedIdentifier){
+            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:regionIdentifier];
+
+        }
+    }
+}
+
 -(void)viewDidLoad{
     
 }

@@ -53,11 +53,11 @@ typedef enum AssortedProductCategory{
     BICYCLE_STORE = 27,//bicycle_store
     ATM = 28,//atm
     BANK = 29,//bank
-    BOOK = 30,//book_store
+    BOOK = 30,//book_store TODO
     BOWLING = 31,//bowling_alley
     JEWELRY = 32,//jewelry_store
     LAUNDRY = 33,//laundry
-    MOVIE_TICKET = 34,//movie_theater
+    MOVIE_TICKET = 34,//movie_theater 
     GYM = 35,//gym
     LAST_ASSORTED_PRODUCT_INDEX,
     BARBECUE,

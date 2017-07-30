@@ -198,7 +198,7 @@ BOOL _seeNameOnly = true;
         fullString = [NSString stringWithFormat:@"%@",name];
 
     } else {
-        fullString = [NSString stringWithFormat:@"%@ on %@",name,address];
+        fullString = [NSString stringWithFormat:@"%@  %@",name,address];
 
     }
     

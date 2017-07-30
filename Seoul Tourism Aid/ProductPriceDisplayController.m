@@ -40,26 +40,22 @@
 
 @implementation ProductPriceDisplayController
 
+BOOL _didSelectCurrency = false;
 
 @synthesize foreignPrice = _foreignPrice;
 @synthesize  koreanPrice = _koreanPrice;
 @synthesize productPriceDescription = _productPriceDescription;
 
 
--(void)viewWillAppear:(BOOL)animated{
+-(BOOL)didSelectCurrency{
+    return _didSelectCurrency;
 }
 
-
--(void)setOverrideTraitCollection:(UITraitCollection *)collection forChildViewController:(UIViewController *)childViewController{
-    
-    
-    
-    
-    
-}
 
 -(void)viewDidLoad{
     
+    BOOL _didSelectCurrency = false;
+
     [self.currencyPickerView setDelegate:self];
     [self.currencyPickerView setDataSource:self];
     
@@ -86,6 +82,8 @@
     NSString* currencyAbbreviation = [NSString getCurrencyAbbreviationForCurrencyType:(int)row];
     
     [self configureForeignCurrencyDisplayWithCurrencyAbbreviation:currencyAbbreviation];
+    
+    _didSelectCurrency = true;
     
 }
 

@@ -216,7 +216,99 @@
     }
 }
 
+
 +(NSString*)getSearchQueryAssociatedWithAssortedProductCategory:(AssortedProductCategory)assortedProductCategory{
+    
+    switch(assortedProductCategory){
+        case KIMCHI_STEW:
+            return @"식당";
+        case NOODLES:
+            return @"식당";
+        case MAKEUP:
+            return @"salon";
+        case SIM_CARD:
+            return @"phones";
+        case CLOTHES:
+            return @"의류";
+        case BARBECUE:
+            return @"";
+        case CELL_PHONE:
+            return @"phones";
+        case HAIR_GEL:
+            return @"cosmetics";
+        case HAIRCUT:
+            return @"미용실";
+        case BEER:
+            return @"맥주";
+        case COMPUTER:
+            return @"electronics";
+        case CEREAL:
+            return @"슈퍼마켓";
+        case MICROWAVE:
+            return @"electronics";
+        case BLENDER:
+            return @"electronics";
+        case FRUIT:
+            return @"과일";
+        case COFFEE:
+            return @"coffee shop";
+        case TV:
+            return @"electronics";
+        case RICE_COOKER:
+            return @"electronics";
+            /** Need icons for images below **/
+        case FLOWER:
+            return @"꽃";
+        case SHOES:
+            return @"구두";
+        case TRAVEL_TOUR:
+            return @"161, Sajik-ro, Jongno-gu, Seoul";
+        case GAS:
+            return @"주유소";
+        case SPA:
+            return @"찜질방"; //native word for "bathhouse"
+        case LETTER:
+            return @"우체국";
+        case ROOT_CANAL:
+            return @"치과 진료소";
+        case PILLS:
+            return @"약국";
+        case OIL_CHANGE:
+            return @"자동차 수리";
+        case RENTAL_CAR:
+            return @"렌트카";
+        case PARKING_SPACE:
+            return @"주차";
+        case CAMPGROUND:
+            return @"캠프장";
+        case BICYCLE_STORE:
+            return @"자전거";
+        case ATM:
+            return @"ATM";
+        case BANK:
+            return @"은행";
+        case BOOK:
+            return @"도서";
+        case BOWLING:
+            return @"볼링장";
+        case JEWELRY:
+            return @"귀금속 상점";
+        case LAUNDRY:
+            return @"빨래";
+        case MOVIE_TICKET:
+            return @"영화";
+        case GYM:
+            return @"헬스장";
+        case PET:
+            return @"pet";
+        default:
+            return nil;
+    }
+}
+
+
+
++(NSString*)getGoogleTypesForAssortedProductCategory:(AssortedProductCategory)assortedProductCategory{
     
     switch(assortedProductCategory){
         case KIMCHI_STEW:

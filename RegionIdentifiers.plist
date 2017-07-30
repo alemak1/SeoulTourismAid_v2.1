@@ -253,5 +253,75 @@
 		<key>RegionIdentifier</key>
 		<string>Gangnam Station Underground Shopping Center</string>
 	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Jongno3-ga, Jongno-gu, Seoul-si
+</string>
+		<key>Coord</key>
+		<string>{37.5703334,126.9901877}</string>
+		<key>RegionIdentifier</key>
+		<string>Jongno 3(sam)-ga Jewelry District</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Janghoe-ri, Danseong-myeon, Danyang-gun, Chungcheongbuk-do
+</string>
+		<key>Coord</key>
+		<string>{36.9317376,128.2421095}</string>
+		<key>RegionIdentifier</key>
+		<string>Gudambong Peak &amp; Oksunbong Peak</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>139, Seobinggo-ro, Yongsan-gu, Seoul
+</string>
+		<key>Coord</key>
+		<string>{37.5211782,126.9787493}</string>
+		<key>RegionIdentifier</key>
+		<string>National Hangeul Museum</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>9, Digital-ro 10-gil, Geumcheon-gu, Seoul
+</string>
+		<key>Coord</key>
+		<string>{37.4773606,126.8869551}</string>
+		<key>RegionIdentifier</key>
+		<string>Hyundai City Outlet - Gasan Branch</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>618, Jaranman-ro, Hai-myeon, Goseong-gun, Gyeongsangnam-do
+</string>
+		<key>Coord</key>
+		<string>{34.9082134,128.1465743}</string>
+		<key>RegionIdentifier</key>
+		<string>Goseong Dinosaur Museum</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>23, Digital-ro 9-gil, Geumcheon-gu, Seoul</string>
+		<key>Coord</key>
+		<string>{37.4786755,126.8843081}</string>
+		<key>RegionIdentifier</key>
+		<string>Mario Outlet</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>1, Jong-ro, Jongno-gu, Seoul</string>
+		<key>Coord</key>
+		<string>{37.5709047,126.975844}</string>
+		<key>RegionIdentifier</key>
+		<string>Kyobo Bookstore Ltd.</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Dobong-dong, Dobong-gu, Seoul 
+</string>
+		<key>Coord</key>
+		<string>{37.6854511,127.0104753}</string>
+		<key>RegionIdentifier</key>
+		<string>Dobongsan Mountain</string>
+	</dict>
 </array>
 </plist>

@@ -22,6 +22,7 @@
 /** Outlets for Labels **/
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @property DestinationCategory destinationCategory;
 
 @end

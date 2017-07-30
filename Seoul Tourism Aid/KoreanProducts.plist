@@ -1480,7 +1480,7 @@
 	</dict>
 	<dict>
 		<key>assortedCategory</key>
-		<integer>15</integer>
+		<integer>20</integer>
 		<key>unitQuantity</key>
 		<string>Price varies depending upon many factors</string>
 		<key>specificCategory</key>
@@ -1498,7 +1498,7 @@
 	</dict>
 	<dict>
 		<key>assortedCategory</key>
-		<integer>15</integer>
+		<integer>20</integer>
 		<key>unitQuantity</key>
 		<string>Price varies depending upon many factors</string>
 		<key>specificCategory</key>
@@ -1516,7 +1516,7 @@
 	</dict>
 	<dict>
 		<key>assortedCategory</key>
-		<integer>15</integer>
+		<integer>20</integer>
 		<key>unitQuantity</key>
 		<string>Price varies depending upon many factors</string>
 		<key>specificCategory</key>
@@ -1783,6 +1783,474 @@
 		<string>City Cruiser</string>
 		<key>brand</key>
 		<string>STACCATO City Cruiser (http://item2.gmarket.co.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>25</integer>
+		<key>unitQuantity</key>
+		<string>Small-Sized Car Parking Space</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>4000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Parking Space</string>
+		<key>brand</key>
+		<string>Seoul Grand Park Parking Area</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>25</integer>
+		<key>unitQuantity</key>
+		<string>Small-Sized Car Parking Space</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>4000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Parking Space</string>
+		<key>brand</key>
+		<string>Seoul Grand Park Parking Area</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>25</integer>
+		<key>unitQuantity</key>
+		<string>Per-Hour Fee</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>6000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Parking Space</string>
+		<key>brand</key>
+		<string>Mapo-gu Emart Shopping Center</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>28</integer>
+		<key>unitQuantity</key>
+		<string>Single Withdrawal (varies with bank, ATM card, and other factors)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>3000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Cash Withdrawal</string>
+		<key>brand</key>
+		<string>General ATM Withdrawal Fee</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>33</integer>
+		<key>unitQuantity</key>
+		<string>Single Load</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>6000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Self-Service Laundering</string>
+		<key>brand</key>
+		<string>Self-Service Laundering (General)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>21</integer>
+		<key>unitQuantity</key>
+		<string>10 capsules</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>3000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Cough Medicine</string>
+		<key>brand</key>
+		<string>Chong Kun Dang</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>21</integer>
+		<key>unitQuantity</key>
+		<string>10 pills </string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>3000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Headache Pain Reliever</string>
+		<key>brand</key>
+		<string>Ildong Pharmaceutical</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>21</integer>
+		<key>unitQuantity</key>
+		<string>10 capsules</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>3000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Diarrhea Relief Medicine</string>
+		<key>brand</key>
+		<string>Choa Products (choa.co.kr)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>29</integer>
+		<key>unitQuantity</key>
+		<string>Single Transfer of &lt; 500 USD</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>11500</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>International Wire Transfer</string>
+		<key>brand</key>
+		<string>KEB Hanabank Easy-One Account</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>29</integer>
+		<key>unitQuantity</key>
+		<string>Single Transfer of 500 - 2000 USD</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>15000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>International Wire Transfer</string>
+		<key>brand</key>
+		<string>KEB Hanabank Easy-One Account</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>29</integer>
+		<key>unitQuantity</key>
+		<string>Single Transfer of &lt; 5000 USD</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>8000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>International Wire Transfer</string>
+		<key>brand</key>
+		<string>KEB Hanabank  (from local savings account to international account)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>29</integer>
+		<key>unitQuantity</key>
+		<string>Single Transfer of &gt; 10000 USD</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>10000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>International Wire Transfer</string>
+		<key>brand</key>
+		<string>KEB Hanabank  (from local savings account to international account)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>32</integer>
+		<key>unitQuantity</key>
+		<string>3.7 kg</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>200000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Women&apos;s Simple 14k gold band</string>
+		<key>brand</key>
+		<string>Department Stores (http://english.visitkorea.or.kr/enu/SH/SH_EN_7_3_4.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>32</integer>
+		<key>unitQuantity</key>
+		<string>3.7 kg</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>100000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Women&apos;s Simple 14k gold band</string>
+		<key>brand</key>
+		<string>Lloyd,Minigold, Retail Stores (http://english.visitkorea.or.kr/enu/SH/SH_EN_7_3_4.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>32</integer>
+		<key>unitQuantity</key>
+		<string>3.7 kg</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>75000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Women&apos;s Simple 14k gold band</string>
+		<key>brand</key>
+		<string>Wholesale Stores (http://english.visitkorea.or.kr/enu/SH/SH_EN_7_3_4.jsp)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>24</integer>
+		<key>unitQuantity</key>
+		<string>Per-Day Fee</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>89918</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Rental Car</string>
+		<key>brand</key>
+		<string>Hyundai Avante (Compact)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>24</integer>
+		<key>unitQuantity</key>
+		<string>Per-Day Fee (includes air conditioning, automatic transmission)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>136000.97</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Rental Car</string>
+		<key>brand</key>
+		<string>Hyundai Lf Sonata (Intermediate)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>24</integer>
+		<key>unitQuantity</key>
+		<string>Per-Day Fee (includes air conditioning, automatic transmission)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>151736.63</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Rental Car</string>
+		<key>brand</key>
+		<string>Hyundai Tucson (Standard)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>34</integer>
+		<key>unitQuantity</key>
+		<string>Single Ticket (Lotte Cinema Avenuel (Myungdong))</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>11500</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>1 Movie Ticket (booked online)</string>
+		<key>brand</key>
+		<string>cineinkorea.com (money transfer through Korean bank)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>24</integer>
+		<key>unitQuantity</key>
+		<string>Daily Rental Fee</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>180959.97</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Rental Car</string>
+		<key>brand</key>
+		<string>Hyundai Santafe (Full Size)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>30</integer>
+		<key>unitQuantity</key>
+		<string>Digital E-Book (full purchase price)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>8960</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>&quot;All Relationships Begin in Tone&quot; (Written by Kim Bum Jun )</string>
+		<key>brand</key>
+		<string>Wisdom House (Kyobo BookStore, http://digital.kyobobook.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>30</integer>
+		<key>unitQuantity</key>
+		<string>Paperback</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>10800</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>&quot;The Vegetarian&quot; (Written by Han Kang )</string>
+		<key>brand</key>
+		<string>Wisdom House (Kyobo BookStore, http://digital.kyobobook.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>30</integer>
+		<key>unitQuantity</key>
+		<string>Paperback</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>10800</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>&quot;The Vegetarian&quot; (Written by Han Kang )</string>
+		<key>brand</key>
+		<string>Wisdom House (Kyobo BookStore, http://digital.kyobobook.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>30</integer>
+		<key>unitQuantity</key>
+		<string>Hot-Selling Paperback Item (Hardcover)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>14670</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>&quot;Kill the Knight 1: Hyun Hyun&apos;s Idea&quot; (by Murakami Haruki)</string>
+		<key>brand</key>
+		<string>Literary Neighborhood (Kyobo BookStore, http://digital.kyobobook.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>30</integer>
+		<key>unitQuantity</key>
+		<string>Hot-Selling Paperback Item (Hardcover)</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<real>12420</real>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>&quot;Language Temperatures&quot; (by Yigiju)</string>
+		<key>brand</key>
+		<string>Horse Glitter (Kyobo BookStore, http://digital.kyobobook.co.kr/)</string>
+	</dict>
+	<dict>
+		<key>assortedCategory</key>
+		<integer>35</integer>
+		<key>unitQuantity</key>
+		<string>6 month membership period</string>
+		<key>specificCategory</key>
+		<integer>0</integer>
+		<key>generalCategory</key>
+		<integer>0</integer>
+		<key>priceInKRW</key>
+		<integer>85000</integer>
+		<key>imagePath</key>
+		<string></string>
+		<key>name</key>
+		<string>Membership (Sports Center)</string>
+		<key>brand</key>
+		<string>Samsung Leport Center (http://www.ssleports.com/)</string>
 	</dict>
 </array>
 </plist>

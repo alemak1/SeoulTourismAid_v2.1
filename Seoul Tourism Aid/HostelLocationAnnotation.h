@@ -18,23 +18,28 @@
 
 typedef NS_ENUM(NSUInteger, SeoulLocationType) {
     NearHostelLocationSportsRecreation = 0,
-    NearHostelLocationCoffeeShop,
-    NearHostelLocationConvenienceStore,
-    NearHostelLocationPharmacyDrugstore,
-    NearHostelLocationCosmeticsSkinFacialCare,
-    NearHostelLocationPhoneMobileServices,
-    NearHostelLocationKoreanBarbecue,
-    NearHostelLocationOtherRestaurants,
-    NearHostelLocationOtherStores,
-    NearHostelLocationPubsBars,
-    NearHostelLocationBankATM,
-    TouristAttractionStreetMarket,
-    TouristAttractionShoppingArea,
-    TouristAttractionMuseumLibrary,
-    TouristAttractionTempleMonumentRelic,
-    TouristAttractionWarMemorial,
-    TouristAttractionTower,
-    TouristAttractionTheaterMovie,
+    NearHostelLocationCoffeeShop, //1
+    NearHostelLocationConvenienceStore, //2
+    NearHostelLocationPharmacyDrugstore, //3
+    NearHostelLocationCosmeticsSkinFacialCare, //4
+    NearHostelLocationPhoneMobileServices, //5
+    NearHostelLocationKoreanBarbecue, //6
+    NearHostelLocationOtherRestaurants, //7
+    NearHostelLocationOtherStores, //8
+    NearHostelLocationPubsBars, //9
+    NearHostelLocationBankATM, //10
+    TouristAttractionStreetMarket, //11
+    TouristAttractionShoppingArea, //12
+    TouristAttractionMuseumLibrary, //13
+    TouristAttractionTempleMonumentRelic, //14
+    TouristAttractionWarMemorial, //15
+    TouristAttractionTower, //16
+    TouristAttractionTheaterMovie, //17
+    TouristAttractionTheaterHotelLodging, //18
+    TouristAttractionSaunaMassage, //19
+    TouristAttractionClothingStore,//20
+    TouristAttractionHospitalClinic,//21
+    TouristAttractionPoliceFireStation,//22
     LAST_LOCATION_TYPE_INDEX
     
     

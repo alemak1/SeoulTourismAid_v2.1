@@ -320,32 +320,57 @@
         
         
         
-        // Parses the JSON response.
-        NSError *jsonError = nil;
-        NSDictionary* jsonDict =
-        [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if(data){
+            // Parses the JSON response.
+            NSError *jsonError = nil;
+            NSDictionary* jsonDict =
+            [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
-        // JSON error.
-        if (jsonError) {
-            NSLog(@"JSON decoding error %@", jsonError);
-            return;
-        }
+            // JSON error.
+            if (jsonError) {
+                NSLog(@"JSON decoding error %@", jsonError);
+                return;
+            }
         
-        NSString* translatedText = [self parseJSONResponseForTranslatedText:jsonDict];
+            NSString* translatedText = [self parseJSONResponseForTranslatedText:jsonDict];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
             
-            [self.activityIndicator setHidden:YES];
-            [self.activityIndicator stopAnimating];
+                [self.activityIndicator setHidden:YES];
+                [self.activityIndicator stopAnimating];
 
-            [self.textView setHidden:NO];
-            [self.textView setText:translatedText];
+                [self.textView setHidden:NO];
+                [self.textView setText:translatedText];
            
             
-        });
+            });
         
-        // Success response!
-        NSLog(@"Success: %@", jsonDict);
+            // Success response!
+            NSLog(@"Success: %@", jsonDict);
+        } else {
+            
+            UIAlertController* alertController;
+            
+            if(error){
+                alertController = [UIAlertController alertControllerWithTitle:@"Eror!" message:@"Unable to translate text.  Check that a WiFi/Internet connection is available, or try again later when the servers might be available" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+                
+                [alertController addAction:action];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+                
+            }
+            
+            alertController = [UIAlertController alertControllerWithTitle:@"Eror!" message:@"Unable to translate text.  Check that a WiFi/Internet connection is available, or try again later when the servers might be available" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+            
+            [alertController addAction:action];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+        }
     }];
     
 }

@@ -6,6 +6,10 @@
 	<array>
 		<string>precipA</string>
 	</array>
+	<key>Baianat</key>
+	<array>
+		<string>beerA</string>
+	</array>
 	<key>Pro Symbols</key>
 	<array>
 		<string>letter120</string>
@@ -37,6 +41,12 @@
 	</array>
 	<key>Freepik</key>
 	<array>
+		<string>clothingA</string>
+		<string>spaA</string>
+		<string>policeA</string>
+		<string>regularRestaurantC</string>
+		<string>regularRestaurantB</string>
+		<string>regularRestaurantA</string>
 		<string>dog120</string>
 		<string>medicine120</string>
 		<string>spa120</string>
@@ -113,6 +123,10 @@
 		<string>temperatureA</string>
 	</array>
 	<key>Nikita Golubev</key>
+	<array>
+		<string>sim_card</string>
+	</array>
+	<key>Nikita Golubev - 2</key>
 	<array>
 		<string>sim_card</string>
 	</array>

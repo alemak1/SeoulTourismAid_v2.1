@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h18-7e-0Gb">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,17 +20,17 @@
                         <viewControllerLayoutGuide type="bottom" id="Ihz-rq-1U6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pf8-Ol-fae">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-K3-IzK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <connections>
                                     <outlet property="delegate" destination="VOS-e8-uQo" id="Udz-ZN-ZNP"/>
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BjP-jQ-kY8">
-                                <rect key="frame" x="168" y="580" width="39" height="37"/>
+                                <rect key="frame" x="364.5" y="937" width="39" height="37"/>
                                 <connections>
                                     <action selector="changePage:" destination="VOS-e8-uQo" eventType="valueChanged" id="paW-o8-aAZ"/>
                                 </connections>
@@ -65,14 +65,14 @@
                         <viewControllerLayoutGuide type="bottom" id="t8a-e0-XuZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ah8-HW-XzY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RoomNo1_1" translatesAutoresizingMaskIntoConstraints="NO" id="1Vz-q2-PqS">
-                                <rect key="frame" x="0.0" y="156" width="375" height="355"/>
+                                <rect key="frame" x="0.0" y="334.5" width="768" height="355"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy access to fun tourist hotspots...." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzI-qy-MTg">
-                                <rect key="frame" x="37.5" y="60" width="300" height="21"/>
+                                <rect key="frame" x="77" y="60" width="614" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,7 +106,7 @@
                         <viewControllerLayoutGuide type="bottom" id="h91-tI-j63"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yMi-fM-rmG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -124,17 +124,17 @@
                         <viewControllerLayoutGuide type="bottom" id="LnO-yI-nlI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eDa-DW-i1q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qdl-jB-FCw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="289"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AaE-3q-zKM">
-                                <rect key="frame" x="0.0" y="359" width="230" height="90"/>
+                                <rect key="frame" x="0.0" y="359" width="623" height="90"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Ju-apr">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="623" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Latitude:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9s-YU-mAo">
                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
@@ -146,7 +146,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Selected Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qr-F1-b7Y">
-                                                <rect key="frame" x="96" y="0.0" width="134" height="30"/>
+                                                <rect key="frame" x="96" y="0.0" width="527" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-iz-gXQ">
-                                        <rect key="frame" x="0.0" y="30" width="230" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="623" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Longitude:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKf-cL-WGa">
                                                 <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
@@ -166,7 +166,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Selected Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rO-zQ-We2">
-                                                <rect key="frame" x="82" y="0.0" width="148" height="30"/>
+                                                <rect key="frame" x="82" y="0.0" width="541" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0F-Kx-9KL">
-                                        <rect key="frame" x="0.0" y="60" width="230" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="623" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="3oL-hb-VkP"/>
                                         </constraints>
@@ -223,10 +223,10 @@
                         <viewControllerLayoutGuide type="bottom" id="fk0-A5-BHG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DUu-b5-6Jf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NRo-py-fUa">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NRo-py-fUa">
                                 <rect key="frame" x="230.5" y="229" width="307" height="29"/>
                                 <segments>
                                     <segment title="Walk"/>
@@ -238,13 +238,13 @@
                                     <action selector="makeRequestForNewTransportationType:" destination="XsF-MM-hbA" eventType="valueChanged" id="uN3-K1-Gzh"/>
                                 </connections>
                             </segmentedControl>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EVg-l5-Hg6">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EVg-l5-Hg6">
                                 <rect key="frame" x="77" y="307" width="614" height="410"/>
                                 <connections>
                                     <outlet property="delegate" destination="XsF-MM-hbA" id="VdZ-Zw-pUx"/>
                                 </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-5o-2Fz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-5o-2Fz">
                                 <rect key="frame" x="154" y="123" width="460.5" height="58"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Directions to GDJ Hostel">
@@ -257,7 +257,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-Yy-LH6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-Yy-LH6">
                                 <rect key="frame" x="180.5" y="737" width="307" height="31.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Distance to Destination:">
@@ -270,25 +270,25 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Estimated Travelling Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt7-77-6BA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Travelling Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt7-77-6BA">
                                 <rect key="frame" x="180" y="788.5" width="281" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mn8-B5-JIC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mn8-B5-JIC">
                                 <rect key="frame" x="538" y="738.5" width="66" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-Rk-KiO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-Rk-KiO">
                                 <rect key="frame" x="537.5" y="807.5" width="66" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiR-GC-NLB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiR-GC-NLB">
                                 <rect key="frame" x="180" y="840" width="256" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="View Directions in Maps"/>
@@ -296,7 +296,7 @@
                                     <action selector="viewDirectionsToHostelWithMapsApp:" destination="XsF-MM-hbA" eventType="touchUpInside" id="3Hb-tp-64V"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="compassB" translatesAutoresizingMaskIntoConstraints="NO" id="vf1-0H-Evy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compassB" translatesAutoresizingMaskIntoConstraints="NO" id="vf1-0H-Evy">
                                 <rect key="frame" x="466" y="840.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Eta-sn-JiT"/>
@@ -312,7 +312,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcl-uP-RTV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcl-uP-RTV">
                                 <rect key="frame" x="291.5" y="886" width="185" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Back"/>
@@ -322,7 +322,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93137937780000002" green="0.61003148060000001" blue="0.57834213160000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.77444118920000005" green="0.97334855789999997" blue="1" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="fDg-Rk-KiO" firstAttribute="leading" secondItem="mn8-B5-JIC" secondAttribute="leading" id="3xd-rv-q91"/>
                             <constraint firstItem="mn8-B5-JIC" firstAttribute="centerY" secondItem="ytP-Yy-LH6" secondAttribute="centerY" id="5Dp-LP-5hY"/>
@@ -441,10 +441,10 @@
                         <viewControllerLayoutGuide type="bottom" id="GnH-zA-ipR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WVL-sK-mEy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egb-nV-Ajp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egb-nV-Ajp">
                                 <rect key="frame" x="25" y="445.5" width="150" height="19"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Distance to Hostel:">
@@ -457,25 +457,25 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YRq-8i-6eH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YRq-8i-6eH">
                                 <rect key="frame" x="225" y="444.5" width="112.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-It-tBJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-It-tBJ">
                                 <rect key="frame" x="225" y="478" width="112.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Travelling Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-Rw-SvF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Estimated Travelling Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-Rw-SvF">
                                 <rect key="frame" x="25" y="479.5" width="164" height="19"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5v-FX-Vwf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5v-FX-Vwf">
                                 <rect key="frame" x="93.5" y="26" width="188" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Directions to GDJ Hostel">
@@ -488,7 +488,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-HH-Yic">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-HH-Yic">
                                 <rect key="frame" x="102.5" y="59" width="170" height="29"/>
                                 <segments>
                                     <segment title="Walk"/>
@@ -499,17 +499,17 @@
                                     <action selector="makeRequestForNewTransportationType:" destination="XsF-MM-hbA" eventType="valueChanged" id="h24-2c-ngD"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSg-Gb-f0B">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSg-Gb-f0B">
                                 <rect key="frame" x="75" y="522" width="164" height="30"/>
                                 <state key="normal" title="View Directions in Maps"/>
                                 <connections>
                                     <action selector="viewDirectionsToHostelWithMapsApp:" destination="XsF-MM-hbA" eventType="touchUpInside" id="NE3-m0-etP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeA" translatesAutoresizingMaskIntoConstraints="NO" id="Tu2-uU-QFA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="routeA" translatesAutoresizingMaskIntoConstraints="NO" id="Tu2-uU-QFA">
                                 <rect key="frame" x="247" y="527" width="20" height="20"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdO-da-kyv">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdO-da-kyv">
                                 <rect key="frame" x="165" y="621" width="45" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Back"/>
@@ -517,14 +517,14 @@
                                     <action selector="dismissCurrentViewController:" destination="XsF-MM-hbA" eventType="touchUpInside" id="caW-Fm-OCe"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fF2-ld-p7Q">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fF2-ld-p7Q">
                                 <rect key="frame" x="0.0" y="97" width="375" height="333.5"/>
                                 <connections>
                                     <outlet property="delegate" destination="XsF-MM-hbA" id="9bJ-Cm-zPh"/>
                                 </connections>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90980392160000001" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.77444118920000005" green="0.97334855789999997" blue="1" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="egb-nV-Ajp" firstAttribute="leading" secondItem="fF2-ld-p7Q" secondAttribute="trailing" constant="21.333333333333314" id="1kg-Jw-OcS"/>
                             <constraint firstItem="GnH-zA-ipR" firstAttribute="top" secondItem="fF2-ld-p7Q" secondAttribute="bottom" id="2QN-eN-lLx"/>
@@ -765,13 +765,14 @@
                     <connections>
                         <outlet property="distanceToHostelIndicator" destination="YRq-8i-6eH" id="esZ-05-plM"/>
                         <outlet property="routeDisplayMap" destination="fF2-ld-p7Q" id="CRd-4v-kEM"/>
+                        <outlet property="titleLabel" destination="w5v-FX-Vwf" id="ywp-ev-ixy"/>
                         <outlet property="transportationMode" destination="fU3-HH-Yic" id="Uay-kt-Jxm"/>
                         <outlet property="travelTimeIndicator" destination="bNu-It-tBJ" id="Xev-LI-hvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCj-BU-Ofl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2489" y="-3124"/>
+            <point key="canvasLocation" x="-3286" y="-3162"/>
         </scene>
         <!--Hostel Scroll View Controller-->
         <scene sceneID="yGz-Xm-smo">
@@ -782,17 +783,17 @@
                         <viewControllerLayoutGuide type="bottom" id="uBD-fx-wnS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="689-Ui-m64">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-Ma-7BY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="428"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="785"/>
                                 <connections>
                                     <outlet property="delegate" destination="Ogn-Jz-1M9" id="QmZ-3o-4k9"/>
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-J4-Wv9">
-                                <rect key="frame" x="112" y="563" width="150" height="37"/>
+                                <rect key="frame" x="116" y="920" width="535" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -824,20 +825,20 @@
                         <viewControllerLayoutGuide type="bottom" id="3Wy-pI-9oJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OMa-bP-dx6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xmy-Fv-vbQ">
+                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmy-Fv-vbQ">
                                 <rect key="frame" x="0.0" y="55" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qr9-w3-x5E">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qr9-w3-x5E">
                                 <rect key="frame" x="0.0" y="99" width="375" height="394"/>
                                 <connections>
                                     <outlet property="delegate" destination="1sy-i1-5sf" id="y5b-89-OVH"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-jV-VNr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-jV-VNr">
                                 <rect key="frame" x="161" y="609" width="53" height="43"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -853,7 +854,7 @@
                                     <segue destination="ygL-mK-DbN" kind="unwind" unwindAction="unwindToDirectionsMenuController:" id="5gz-KV-utw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-dH-3Bz">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-dH-3Bz">
                                 <rect key="frame" x="106" y="498" width="203" height="31"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -870,7 +871,7 @@
                                     <action selector="getDirectionsInMaps:" destination="1sy-i1-5sf" eventType="touchUpInside" id="rf7-03-0QW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCc-Mu-2fk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCc-Mu-2fk">
                                 <rect key="frame" x="16" y="20" width="343" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="gC7-KH-EBJ">
@@ -911,7 +912,7 @@
                                     </attributedString>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxe-5z-Pjj">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxe-5z-Pjj">
                                 <rect key="frame" x="106" y="537" width="213" height="31"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -927,14 +928,14 @@
                                     <action selector="getDirectionsInGoogleMaps:" destination="1sy-i1-5sf" eventType="touchUpInside" id="CUi-2F-Ma1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsS-tO-7gi" userLabel="Search Google Maps">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsS-tO-7gi" userLabel="Search Google Maps">
                                 <rect key="frame" x="73" y="542" width="20" height="22"/>
                                 <state key="normal" image="googleMaps20"/>
                                 <connections>
                                     <action selector="getDirectionsInGoogleMaps:" destination="1sy-i1-5sf" eventType="touchUpInside" id="FHy-1G-rgG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aed-4f-tCd" userLabel="GetDirectionsInAppleMaps">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aed-4f-tCd" userLabel="GetDirectionsInAppleMaps">
                                 <rect key="frame" x="73" y="503" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="UyU-FJ-1QN"/>
@@ -945,7 +946,7 @@
                                     <action selector="getDirectionsInMaps:" destination="1sy-i1-5sf" eventType="touchUpInside" id="QXf-iN-au5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPl-32-j1w">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPl-32-j1w">
                                 <rect key="frame" x="64.5" y="572" width="246" height="31"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -1206,14 +1207,14 @@
                         <viewControllerLayoutGuide type="bottom" id="MW3-fn-Mzh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7hq-8Z-xOf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byx-2w-qaW" userLabel="GoogleMapView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byx-2w-qaW" userLabel="GoogleMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNX-93-pmc">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNX-93-pmc">
                                 <rect key="frame" x="12.5" y="434.5" width="350" height="20"/>
                                 <state key="normal" image="googleMaps20">
                                     <attributedString key="attributedTitle">
@@ -1229,7 +1230,7 @@
                                     <action selector="searchForLocationsInGoogleMaps:" destination="l1D-0Q-GYP" eventType="touchUpInside" id="Srp-wI-SnC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-qc-hTn">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-qc-hTn">
                                 <rect key="frame" x="157.5" y="593" width="60" height="43"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -1246,7 +1247,7 @@
                                     <segue destination="BaK-7l-AUq" kind="unwind" unwindAction="unwindToDirectionsMenuController:" id="CX3-HT-ece"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-Tp-5cq">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-Tp-5cq">
                                 <rect key="frame" x="63" y="514" width="248" height="20"/>
                                 <state key="normal" image="compassA">
                                     <attributedString key="attributedTitle">
@@ -1264,7 +1265,7 @@
                                     <segue destination="1sy-i1-5sf" kind="show" id="c3Y-so-Ly5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-oc-Trw">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-oc-Trw">
                                 <rect key="frame" x="82" y="474" width="210" height="20"/>
                                 <state key="normal" image="googleMaps20">
                                     <attributedString key="attributedTitle">
@@ -1452,20 +1453,20 @@
                         <viewControllerLayoutGuide type="bottom" id="fyd-Vo-GgZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zHi-DL-Mig">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-M7-LQg">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-M7-LQg">
                                 <rect key="frame" x="115" y="256" width="538" height="512"/>
                                 <connections>
                                     <outlet property="delegate" destination="1sy-i1-5sf" id="1KC-Ob-Udp"/>
                                 </connections>
                             </mapView>
-                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dh-9H-XK9">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3dh-9H-XK9">
                                 <rect key="frame" x="196" y="182" width="376" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV6-mp-Rvd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV6-mp-Rvd">
                                 <rect key="frame" x="142.5" y="54" width="483" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0X9-Gc-i3p">
@@ -1520,7 +1521,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izF-nW-Gt7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izF-nW-Gt7">
                                 <rect key="frame" x="209" y="778" width="430" height="66.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -1539,7 +1540,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i42-na-OPi">
-                                <rect key="frame" x="85" y="604" width="53" height="43"/>
+                                <rect key="frame" x="89" y="961" width="53" height="43"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Back">
@@ -1555,7 +1556,7 @@
                                     <action selector="dismissViewController:" destination="2a4-bW-4sE" eventType="touchUpInside" id="tsf-Du-IKA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="routeA" translatesAutoresizingMaskIntoConstraints="NO" id="fBx-pu-Lvm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeA" translatesAutoresizingMaskIntoConstraints="NO" id="fBx-pu-Lvm">
                                 <rect key="frame" x="121.5" y="801.5" width="40" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="UKx-dw-aqW">
@@ -1573,7 +1574,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2n-e8-6ou">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2n-e8-6ou">
                                 <rect key="frame" x="209" y="852" width="430" height="43"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -1590,7 +1591,7 @@
                                     <action selector="getDirectionsInGoogleMaps:" destination="2a4-bW-4sE" eventType="touchUpInside" id="frn-Wq-v8b"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="googleMaps40" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-lz-CCB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleMaps40" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-lz-CCB">
                                 <rect key="frame" x="121.5" y="853.5" width="40" height="40"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxL-X5-m2S">
@@ -1705,11 +1706,11 @@
                         <viewControllerLayoutGuide type="bottom" id="iLj-HK-buK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xHx-B4-b1I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEv-m6-swp">
-                                <rect key="frame" x="37.5" y="102" width="300" height="333.5"/>
+                                <rect key="frame" x="77" y="102" width="614" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-mX-0rb">
@@ -1749,7 +1750,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQi-4l-ax9">
-                                <rect key="frame" x="42" y="587" width="53" height="43"/>
+                                <rect key="frame" x="46" y="944" width="53" height="43"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Back">
@@ -1806,11 +1807,11 @@
                         <viewControllerLayoutGuide type="bottom" id="DLg-pe-Ekn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d0g-0r-dQH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6cq-ay-bJj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <connections>
                                     <outlet property="delegate" destination="BVW-Lk-56N" id="Z7f-c1-rQG"/>
                                 </connections>
@@ -1863,15 +1864,15 @@
             <objects>
                 <tableViewController id="oCb-PX-g34" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iL5-eJ-mbG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cZr-TQ-4kV">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cZr-TQ-4kV" id="zKZ-Hi-HqC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1895,27 +1896,27 @@
                         <viewControllerLayoutGuide type="bottom" id="Io3-Qk-lhk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fdg-cN-TAH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="korean_dress_store" translatesAutoresizingMaskIntoConstraints="NO" id="oku-oN-gEQ">
-                                <rect key="frame" x="-20" y="0.0" width="415" height="333.5"/>
+                                <rect key="frame" x="-20" y="0.0" width="808" height="512"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="70s_coffee_shop" translatesAutoresizingMaskIntoConstraints="NO" id="eh2-Zq-N33">
-                                <rect key="frame" x="-20" y="333.5" width="415" height="333.5"/>
+                                <rect key="frame" x="-20" y="512" width="808" height="512"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectionBarA" translatesAutoresizingMaskIntoConstraints="NO" id="7ld-EI-uUW">
-                                <rect key="frame" x="9.5" y="282" width="356" height="103"/>
+                                <rect key="frame" x="19" y="460.5" width="730" height="103"/>
                             </imageView>
                             <pickerView contentMode="scaleAspectFit" verticalCompressionResistancePriority="760" translatesAutoresizingMaskIntoConstraints="NO" id="Jkx-OZ-H7Q">
-                                <rect key="frame" x="-10" y="225.5" width="395" height="216"/>
+                                <rect key="frame" x="-10" y="404" width="788" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="h18-7e-0Gb" id="bxE-kO-7UX"/>
                                     <outlet property="delegate" destination="h18-7e-0Gb" id="VMl-t6-Rbm"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVg-iu-ngp">
-                                <rect key="frame" x="236.5" y="597" width="112.5" height="40"/>
+                                <rect key="frame" x="673" y="954" width="65" height="40"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" backgroundImage="arrowRight">
                                     <attributedString key="attributedTitle">
@@ -1933,7 +1934,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9t-oY-Bg0">
-                                <rect key="frame" x="26" y="597" width="112.5" height="40"/>
+                                <rect key="frame" x="30" y="954" width="50" height="40"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" backgroundImage="arrowLeft">
                                     <attributedString key="attributedTitle">
@@ -2006,20 +2007,20 @@
                         <viewControllerLayoutGuide type="bottom" id="vbu-y5-9LW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JMW-on-XSw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Mr-eg-tOU">
-                                <rect key="frame" x="83" y="433" width="209" height="2"/>
+                                <rect key="frame" x="87" y="790" width="594" height="2"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ImageCache TestController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01c-2Q-Woe">
-                                <rect key="frame" x="83" y="59" width="209" height="21"/>
+                                <rect key="frame" x="279.5" y="59" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcF-eZ-lb8">
-                                <rect key="frame" x="83" y="129" width="209" height="119"/>
+                                <rect key="frame" x="87" y="129" width="594" height="476"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.4406584482" blue="0.66813755249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2053,7 +2054,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -2066,8 +2067,8 @@
         <scene sceneID="Y30-Ek-p2r">
             <objects>
                 <collectionViewController id="vm2-2Q-aTe" customClass="PhotoListController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="jyj-O3-Iqq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jyj-O3-Iqq">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="buQ-Ue-EfA">
@@ -2105,11 +2106,11 @@
                         <viewControllerLayoutGuide type="bottom" id="vbk-Sw-222"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qDq-Kv-sW2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nKo-oA-ZQY">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="20" y="20" width="728" height="1004"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2133,7 +2134,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HostelLocalAreaMapNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="IEc-ZF-zxZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZYr-EM-9bp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZYr-EM-9bp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -50,6 +50,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     LOCATION_SEARCH_CONTROLLER,
     TO_AIRPORT_DIRECTIONS_CONTROLLER,
     TO_SEOUL_STATION_DIRECTIONS_CONTROLLER,
+    TO_GIMPO_AIRPORT_DIRECTIONS_CONTROLLER,
     MAPOGU_LOCAL_AREA_MAPVIEW,
     ITAEWON_LOCAL_AREA_MAPVIEW,
     INSADONG_LOCAL_AREA_MAPVIEW,
@@ -258,6 +259,9 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case TO_SEOUL_STATION_DIRECTIONS_CONTROLLER:
             nextViewController = [self getToSeoulStationDirectionsController];
             break;
+        case TO_GIMPO_AIRPORT_DIRECTIONS_CONTROLLER:
+            nextViewController = [self getToGimpoAirportDirectionsController];
+            break;
         default:
             break;
     }
@@ -339,6 +343,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             nextViewController.annotationFilePath = @"PlacemarksNearHostel";
             break;
         case ITAEWON:
+            nextViewController.annotationFilePath = @"PlacemarksNearItaewon";
             break;
         case INSADONG:
             break;
@@ -382,6 +387,8 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             return @"Directions to Seoul Station";
         case TO_AIRPORT_DIRECTIONS_CONTROLLER:
             return @"Directions to Incheon Airport";
+        case TO_GIMPO_AIRPORT_DIRECTIONS_CONTROLLER:
+            return @"Directions to Gimpo International Airport";
         case LAST_VIEW_CONTROLLER:
             return nil;
     }
@@ -483,7 +490,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     
     
     
-    [nextViewController.titleLabel setAttributedText:[self getAttributedTitleForToDestinationControllerWithString:@"Directions to Airport"]];
+    [nextViewController.titleLabel setAttributedText:[self getAttributedTitleForToDestinationControllerWithString:@"Directions to Incheon Airport"]];
     
     nextViewController.destinationCategory = INCHEON_AIRPORT;
     
@@ -516,6 +523,33 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     
     
     nextViewController.destinationCategory = SEOUL_STATION;
+    
+    nextViewController.directionsResponse = directionsResponse;
+    
+    return nextViewController;
+}
+
+-(ToHostelDirectionsController*)getToGimpoAirportDirectionsController{
+    
+    MKDirectionsResponse* directionsResponse = [MKDirectionsRequest getDirectionsResponseForSeoulStationDirectionsRequestForTransportationMode:TRANSIT];
+    
+    
+    UIStoryboard* storyBoardA = [UIStoryboard storyboardWithName:@"StoryboardA" bundle:nil];
+    
+    NSString* storyboardIdentifier = @"ToHostelDirectionsController";
+    
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad){
+        
+        storyboardIdentifier = @"ToHostelDirectionsController_iPad";
+        
+    }
+    
+    ToHostelDirectionsController* nextViewController = [storyBoardA instantiateViewControllerWithIdentifier:storyboardIdentifier];
+    
+    [nextViewController.titleLabel setAttributedText:[self getAttributedTitleForToDestinationControllerWithString:@"Directions to Gimpo International Airport"]];
+    
+    
+    nextViewController.destinationCategory = GIMPO_INTERNATIONAL_AIRPORT;
     
     nextViewController.directionsResponse = directionsResponse;
     

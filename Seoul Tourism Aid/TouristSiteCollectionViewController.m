@@ -104,6 +104,7 @@
     
     cell.isOpenStatusText = [configurationObject isOpen] ? @"Open" : @"Closed";
     
+    
     cell.distanceToSiteText = [configurationObject distanceFromUserString];
     
     cell.touristSiteConfigurationObject = configurationObject;

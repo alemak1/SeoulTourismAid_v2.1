@@ -142,18 +142,18 @@
     CGFloat scrollViewHeight = CGRectGetHeight(self.scrollView.frame);
     
     
-    self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*4.50);
+    self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*5.30);
     
     [self.scrollView setShowsHorizontalScrollIndicator:NO];
     
     __block CGFloat controllerIndex = 0;
     
-    CGFloat controllerHeight = scrollViewHeight*0.50;
+    CGFloat controllerHeight = scrollViewHeight*0.60;
     
     CGRect(^getControllerFrame)(void) = ^CGRect(void){
         
         CGRect frame = CGRectMake(0.00, controllerIndex*controllerHeight+controllerHeight*0.30, scrollViewWidth, controllerHeight);
-        
+    
         return frame;
     };
     
@@ -291,7 +291,7 @@
 
 -(UILabel*)getLabelFromRawFrame:(CGRect)rawFrame andWithTitle:(NSString*)title andLabelHeight:(CGFloat)labelHeight{
     
-    CGFloat yOffset = rawFrame.size.height*0.02;
+    CGFloat yOffset = rawFrame.size.height*0.05;
     
     CGRect modifiedFrame1 = CGRectMake(rawFrame.origin.x+20, rawFrame.origin.y-yOffset, rawFrame.size.width,labelHeight);
     
@@ -311,6 +311,10 @@
 - (IBAction)returnToMainMenu:(UIBarButtonItem *)sender {
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+-(IBAction)returnToTouristSiteCategorySelectionController:(UIStoryboardSegue*)segue{
     
 }
 

@@ -885,7 +885,15 @@ NSString* siteDescription = record[@"description"]; //String
 
     CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
 
-    return [self.location distanceFromLocation:userLocation];
+    
+    if(!self.location){
+        CLLocationDegrees lat = self.coordinate.latitude;
+        CLLocationDegrees lon = self.coordinate.longitude;
+        
+        self.location = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+    }
+    
+    return [userLocation distanceFromLocation:self.location];
 }
 
 -(NSString*)distanceFromUserString{

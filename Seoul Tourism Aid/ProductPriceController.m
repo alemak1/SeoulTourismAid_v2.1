@@ -122,6 +122,20 @@ static void* CurrencyCodeContext = &CurrencyCodeContext;
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    ProductPriceDisplayController* productPriceDisplayController = (ProductPriceDisplayController*)self.parentViewController;
+    
+    if(!productPriceDisplayController.didSelectCurrency){
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"No currency selected!" message:@"Please first select a currency in order to see product prices" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+        
+        [alertController addAction:action];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    
     KoreanProduct* randomlySelectedProduct = [self getRandomKoreanProductForIndexPath:indexPath];
     
     CGFloat productPrice = [[randomlySelectedProduct priceInKRW] floatValue];

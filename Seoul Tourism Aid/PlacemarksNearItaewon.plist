@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5348,126.9941}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Shinhan Bank</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>19</integer>
+		<key>location</key>
+		<string>{37.5348,126.9941}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Hamilton Hotel Sauna</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>18</integer>
+		<key>location</key>
+		<string>{37.5349,126.9939}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Hamilton Hotel </string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5347,126.9945}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>AcessoryHolic</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5346,126.9946}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Aimerfeel Japan (Women&apos;s Clothing and Lingerie)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5347,126.9947}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Olleh Cell Phone</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5347,126.9949}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>The Coffee Bean</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5347,126.9954}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Eyeglass Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Close to Itaewon Station exit</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5348,126.9954}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Lagarto Handbags</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on the 2nd Floor</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9952}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Cas Antonio Italian Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located in back alley behind main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9949}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Oreno French-Italian Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pizza Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9948}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Fifth Avenue In NY Pizza</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pub and Bar</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5350,126.9948}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Sherlock Holmes Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Mexican Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9946}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Toma Tillo Mexican Grill</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the back alley behind main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9945}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Off the Record Vinyl Music Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the back alley behind main street</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5350,126.9943}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Asahi Bar and Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the back alley behind main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9943}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Otimo Italian Bar and Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Korean Restaurant</string>
+		<key>type</key>
+		<integer>6</integer>
+		<key>location</key>
+		<string>{37.5350,126.9942}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Jin Shan Li Korean Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Korean Restaurant</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5349,126.9939}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Maple Tree Korean Premium Beer</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Korean Restaurant</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5349,126.9939}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Club Mute</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Chinese Restaurant (Behind Hamilton Hotel)</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9938}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Ho Lee Chow Chinatown Cuisine</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In alley behind main street</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5349,126.9936}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Chi Mc</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In alley behind main street</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5350,126.9935}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Prost Pub and Grill</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Ice Cream Restaurant - In alley behind main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9933}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Soft Queen Ice Cream</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5349,126.9932}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Valerie 79 Kraft Beer Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Thai/Asian Food - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350, 126.9931}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Thai China</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Brazilian Steakhouse - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9930}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Copacabana Grill (Brazilian Steakhouse)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9930}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>My Chelsea Brunch and Dinner</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5350,126.9928}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Guinness Bar and Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5349,126.9927}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Bermuda Triangle Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Italian Restaurant - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9926}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Peroni Italy Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Mexican Restaurant - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9925}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Tapas Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Italian Cuisine - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9923}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Bee Dining Lounge </string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Spanish Cuisine - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9923}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Mi Casa Wine Lounge</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Asian Cuisine - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9921}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Thai Licious</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>English Pub - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5348,126.9921}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>The Rose Crown</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>French Restaurant - In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9921}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Les Deux Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9922}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Craft Hans Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5350,126.9921}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Rusty&apos;s Smokehouse</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In the alley behind the restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9920}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Le Blanc New Zealand Dining</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Ice Cream/Gelato Place</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9919}</string>
+		<key>address</key>
+		<string>118-67 Itaewondong</string>
+		<key>title</key>
+		<string>Gelati Gelati</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pub and Grill</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5349,126.9918}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Praha Pub and Grill</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pub and Grill</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5348,126.9918}</string>
+		<key>address</key>
+		<string>9 Itaewollo19gil</string>
+		<key>title</key>
+		<string>Shenanigans, The Hike Bar</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Shared location</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5342,126.9921}</string>
+		<key>address</key>
+		<string>72-35 Itaewondong</string>
+		<key>title</key>
+		<string>Money Exchange</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Shared location</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5342,126.9921}</string>
+		<key>address</key>
+		<string>72-35 Itaewondong</string>
+		<key>title</key>
+		<string>The Rye Post</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5344,126.9923}</string>
+		<key>address</key>
+		<string>Street section with multiple clothing stores</string>
+		<key>title</key>
+		<string>Clothing Store Section</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Ice Cream/Desserts - Located on main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5345,126.9926}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Ice Flakes Ice Cream Shop</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5345,126.9927}</string>
+		<key>address</key>
+		<string>Street section with multiple clothing stores</string>
+		<key>title</key>
+		<string>Etam Paris Women&apos;s Lingerie</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5345,126.9928}</string>
+		<key>address</key>
+		<string>Shared, multi-level location</string>
+		<key>title</key>
+		<string>Marley Cafe and Outback Steakhouse</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5344,126.9928}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Descente Sportswear</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5346,126.9932}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Club Clio Cosmetics</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>6</integer>
+		<key>location</key>
+		<string>{37.5343,126.9934}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Hannam Pig Korean BBQ</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Women&apos;s Clothing Store</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5343,126.9934}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>A&amp;H NY State Outlet</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Coffee Shop (5 stories high)</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5345,126.9937}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Nescafe Itaewon</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Ice Cream</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5345,126.9937}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Baskins Robbins</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Ice Cream</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5344, 126.9937}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>White Veil Cake Boutique</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Ice Cream</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5342,126.9940}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Oriental Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Vietnamese Cuisine</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5342, 126.9939}</string>
+		<key>address</key>
+		<string>Located on main street</string>
+		<key>title</key>
+		<string>Emoi Vietnam Kitchen</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fast Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5341,126.9939}</string>
+		<key>address</key>
+		<string>Close to main intersection</string>
+		<key>title</key>
+		<string>Taco Bell</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Above IBK Bank</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5342,126.9940}</string>
+		<key>address</key>
+		<string>Close to main intersection</string>
+		<key>title</key>
+		<string>Geckos Bar and Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Above IBK Bank</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5342,126.9940}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>IBK Bank</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Above IBK Bank</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5340,126.9953}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Aladdin Indian Cuisine</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Above IBK Bank</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5340,126.9952}</string>
+		<key>address</key>
+		<string>20 Bogwangno60gil</string>
+		<key>title</key>
+		<string>Korean Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pub/Restaurant - Multi-Level Building</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5338,126.9955}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Pearl Pub and Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>2nd Floor</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5342,126.9957}</string>
+		<key>address</key>
+		<string>46 Usadallo</string>
+		<key>title</key>
+		<string>Hawaiian Barbecue</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>2nd Floor</string>
+		<key>type</key>
+		<integer>3</integer>
+		<key>location</key>
+		<string>{37.5340,126.9955}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Somyung Drugstore</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>1st Floor/Below International Pub Club</string>
+		<key>type</key>
+		<integer>6</integer>
+		<key>location</key>
+		<string>{37.5344,126.9961}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Korean Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>2nd Floor/Above 7-11</string>
+		<key>type</key>
+		<integer>21</integer>
+		<key>location</key>
+		<string>{37.5344,126.9955}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Itaewon Clinic</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on intersection corner</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5345,126.9955}</string>
+		<key>address</key>
+		<string>47 Usadallo</string>
+		<key>title</key>
+		<string>IBK ATM</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pizza Place - Located on intersection corner</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5344,126.9955}</string>
+		<key>address</key>
+		<string>126-13 Itaewondong</string>
+		<key>title</key>
+		<string>Pizza Revolution</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Turkish Restaurant, located on main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5343,126.9952}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Kervan Beef Doner and Shishkebab</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fast Food, located on main street</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5349,126.9954}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Subway</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on 2nd Floor</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5346,126.9948}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Rmonster Seafood and Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street, close to subway station exit</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5346,126.9946}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>KB Bank and Western Union</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street, close to subway station exit</string>
+		<key>type</key>
+		<integer>22</integer>
+		<key>location</key>
+		<string>{37.5346,126.9944}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Police Station</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on intersection</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5345,126.9939}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Olive Young Cosmetics</string>
+	</dict>
+</array>
+</plist>
