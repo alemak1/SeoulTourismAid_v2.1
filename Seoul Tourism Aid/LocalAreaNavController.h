@@ -19,6 +19,7 @@
 @property NSString* annotationSourceFileName;
 
 
+@property NSMutableArray* selectedOptions;
 
 @end
 

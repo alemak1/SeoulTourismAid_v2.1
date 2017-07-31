@@ -12,14 +12,22 @@
 #import "HostelLocationAnnotation.h"
 #import "SeoulLocationAnnotation+HelperMethods.h"
 #import "DirectionsMenuController.h"
+#import "LocalAreaNavController.h"
+
+@interface HostelAreaMapViewController ()
+
+
+@end
+
 
 @implementation HostelAreaMapOptionsController
 
 static void* SelectedOptionsContext = &SelectedOptionsContext;
 
--(void)viewWillLayoutSubviews{
-    
 
+
+-(void)viewDidAppear:(BOOL)animated{
+    self.selectedOptions = [[NSMutableArray alloc] init];
 
 }
 
@@ -31,8 +39,6 @@ static void* SelectedOptionsContext = &SelectedOptionsContext;
     [self.tableView setAllowsMultipleSelection:YES];
     [self.tableView setAllowsSelectionDuringEditing:YES];
     
-    
-   
     
 }
 
@@ -61,25 +67,66 @@ static void* SelectedOptionsContext = &SelectedOptionsContext;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    /**
-    DirectionsMenuController* directionsMenuController = (DirectionsMenuController*)self.presentingViewController;
     
-    [directionsMenuController.selectedOptions addObject:[NSNumber numberWithInt:indexPath.row]];
-     **/
+    LocalAreaNavController* localAreaNavController = (LocalAreaNavController*)self.presentingViewController;
+    
+    [localAreaNavController.selectedOptions addObject:[NSNumber numberWithInt:(int)indexPath.row]];
+    
     
 }
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    /**
-    DirectionsMenuController* directionsMenuController = (DirectionsMenuController*)self.presentingViewController;
     
-    [directionsMenuController.selectedOptions removeObject:[NSNumber numberWithInt:indexPath.row]];
-     **/
+    LocalAreaNavController* localAreaNavController = (LocalAreaNavController*)self.presentingViewController;
+    
+    [localAreaNavController.selectedOptions removeObject:[NSNumber numberWithInt:(int)indexPath.row]];
+
+   
+}
+
+
+    
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleNone;
+}
+
+-(void)dismissMapOptionsViewController{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
+    
+        UIButton* backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+        [backButton setTitle:@"Back to Map View" forState:UIControlStateNormal];
+    
+        [backButton addTarget:self action:@selector(dismissMapOptionsViewController) forControlEvents:UIControlEventTouchDown];
+    
+    
+    
+        return backButton;
 
+    
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 100;
+}
+
+-(void)setSelectedOptions:(NSMutableArray *)selectedOptions{
+    LocalAreaNavController* localAreaNavController = (LocalAreaNavController*)self.presentingViewController;
+    
+    localAreaNavController.selectedOptions = selectedOptions;
+}
+
+-(NSMutableArray<NSNumber *> *)selectedOptions{
+    LocalAreaNavController* localAreaNavController = (LocalAreaNavController*)self.presentingViewController;
+    
+    return localAreaNavController.selectedOptions;
+}
 
 @end

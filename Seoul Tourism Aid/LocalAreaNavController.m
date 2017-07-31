@@ -22,7 +22,7 @@
 
 
 -(void)viewDidLoad{
-    
+    self.selectedOptions = [[NSMutableArray alloc] init];
 }
 
 

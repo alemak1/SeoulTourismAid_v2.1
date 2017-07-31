@@ -12,6 +12,7 @@
 #import "AnnotationManager.h"
 #import "HostelLocationAnnotationView.h"
 #import "DirectionsMenuController.h"
+#import "LocalAreaNavController.h"
 
 @interface HostelAreaMapViewController ()
 
@@ -38,7 +39,7 @@ static void* HostelAreaMapControllerContext = &HostelAreaMapControllerContext;
 
 -(void)viewWillLayoutSubviews{
     
-    
+
     self.annotationManager = [[AnnotationManager alloc] initWithFilename:self.annotationSourceFilePath];
     
    // [self addObserver:self forKeyPath:@"mapRegion" options:NSKeyValueObservingOptionInitial context:nil];
@@ -62,40 +63,37 @@ static void* HostelAreaMapControllerContext = &HostelAreaMapControllerContext;
     }
 }
 
--(void)viewWillDisappear:(BOOL)animated{
-    
-   // [self removeObserver:self forKeyPath:@"mapRegion"];
-   // [self removeObserver:self forKeyPath:@"annotationSourceFilePath"];
-
-}
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self.mapView setDelegate:self];
-    [self configureMapRegion];
-    [self configureAnnotations];
     
-    
-
-}
-
--(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"Selected options are: %@",[self.selectedOptions description]);
     
     [self.mapView setDelegate:self];
     [self configureMapRegion];
-    [self configureAnnotations];
     
+    [self.mapView removeAnnotations:self.mapView.annotations];
 
+    if(self.selectedOptions == nil || self.selectedOptions.count == 0){
+        NSLog(@"Adding all annotations...");
+        [self configureAnnotations];
+    
+    } else {
+        NSLog(@"Adding selected annotations...");
+
+        for (NSNumber*option in self.selectedOptions) {
+            SeoulLocationType locationType = (SeoulLocationType)[option integerValue];
+            
+            NSLog(@"Selected option include: %d",locationType);
+
+            
+            [self.mapView addAnnotations:[self.annotationManager getAnnotationsOfType:locationType]];
+        }
+        
+    }
     
    
 }
 
--(void)viewDidLoad{
-    [self.mapView setDelegate:self];
-    [self configureMapRegion];
-    [self configureAnnotations];
-    
-   
-}
 
 -(void)configureMapRegion{
     self.mapView.region = self.mapRegion;
@@ -103,10 +101,18 @@ static void* HostelAreaMapControllerContext = &HostelAreaMapControllerContext;
 }
 
 -(void)configureAnnotations{
-    [self.mapView removeAnnotations:self.mapView.annotations];
+    
     
     [self.mapView addAnnotations:[self.annotationManager getAllAnnotations]];
+    
 
+}
+
+-(NSMutableArray *)selectedOptions{
+    
+    LocalAreaNavController* localAreaNavController = (LocalAreaNavController*)self.navigationController;
+    
+    return localAreaNavController.selectedOptions;
 }
 
 //-(void)viewDidLoad{
@@ -159,7 +165,11 @@ static void* HostelAreaMapControllerContext = &HostelAreaMapControllerContext;
     
     SeoulLocationAnnotationView* annotationView = [[SeoulLocationAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"seoulLocationAnnotation"];
     
+    
     return annotationView;
+
+    
+    
 }
 
 

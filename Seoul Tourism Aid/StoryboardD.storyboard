@@ -191,6 +191,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerView" id="GUd-DL-AdK" customClass="UITableViewHeaderFooterView">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GUd-DL-AdK" id="afg-EK-tPr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="6Xz-Ta-EuG" id="yDQ-1j-5VV"/>
@@ -200,7 +208,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3K-07-zt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="-1460"/>
+            <point key="canvasLocation" x="662" y="-1489"/>
         </scene>
         <!--Biking Routes Controller-->
         <scene sceneID="GKa-3a-lz3">
@@ -1303,7 +1311,7 @@
                             <state key="normal" title="Filter Locations"/>
                             <connections>
                                 <action selector="showFilterOptionsController:" destination="Tq0-RR-Jzj" eventType="touchUpInside" id="eNb-0E-owh"/>
-                                <segue destination="6Xz-Ta-EuG" kind="show" identifier="showFilterOptionsSegue" id="dQR-y5-c27"/>
+                                <segue destination="6Xz-Ta-EuG" kind="presentation" identifier="showFilterOptionsSegue" id="dQR-y5-c27"/>
                             </connections>
                         </button>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="23B-LO-vsc">
@@ -1324,7 +1332,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emN-Gc-ch2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="AkM-5e-rTJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="-1449"/>
+            <point key="canvasLocation" x="-294" y="-1592"/>
         </scene>
         <!--FeatureViewController-->
         <scene sceneID="Pl1-PK-KTM">
@@ -3708,7 +3716,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCi-fu-QJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-554" y="-1592"/>
+            <point key="canvasLocation" x="-1092" y="-1592"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T3e-Ag-ehA">

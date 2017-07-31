@@ -21,6 +21,7 @@
 @property MKCoordinateRegion mapRegion;
 @property NSString* annotationSourceFilePath;
 
+@property (readonly) NSMutableArray* selectedOptions;
 
 @end
 

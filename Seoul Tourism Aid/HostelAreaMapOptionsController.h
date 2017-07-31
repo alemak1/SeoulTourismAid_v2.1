@@ -14,7 +14,7 @@
 
 @interface HostelAreaMapOptionsController : UITableViewController
 
-@property NSMutableArray<NSNumber*>* selectedOptions;
+@property NSMutableArray* selectedOptions;
 
 @end
 
