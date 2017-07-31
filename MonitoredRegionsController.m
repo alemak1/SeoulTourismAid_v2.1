@@ -39,8 +39,17 @@
 -(void)viewDidLoad{
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MonitoredRegionCell"];
+    
+    [self.tableView setEditing:NO];
+    
 }
 
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return UITableViewCellEditingStyleNone;
+
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;

@@ -184,6 +184,7 @@
 		BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */; };
 		BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3A45401F18A4D100DA5A75 /* MapKit.framework */; };
 		BD3A454A1F18BB0500DA5A75 /* PlaceIDInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3A45491F18BB0500DA5A75 /* PlaceIDInformation.plist */; };
+		BD3B967D1F2EF701002B8B6A /* AppUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3B967C1F2EF701002B8B6A /* AppUtility.m */; };
 		BD3BCF6A1F26396B00623191 /* ContactInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF671F26396B00623191 /* ContactInfoController.m */; };
 		BD3BCF6B1F26396B00623191 /* ContactScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF691F26396B00623191 /* ContactScrollViewController.m */; };
 		BD3BCF6E1F263A1400623191 /* AcknowledgementsContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BCF6D1F263A1400623191 /* AcknowledgementsContainerController.m */; };
@@ -509,6 +510,8 @@
 		BD3A45511F18C2D900DA5A75 /* GoogleURLGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleURLGenerator.m; sourceTree = "<group>"; };
 		BD3A45531F18CDBF00DA5A75 /* GoogleJSONResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleJSONResponseParser.h; sourceTree = "<group>"; };
 		BD3A45541F18CDCB00DA5A75 /* GoogleJSONResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleJSONResponseParser.m; sourceTree = "<group>"; };
+		BD3B967B1F2EF6EB002B8B6A /* AppUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtility.h; sourceTree = "<group>"; };
+		BD3B967C1F2EF701002B8B6A /* AppUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtility.m; sourceTree = "<group>"; };
 		BD3BCF661F26396B00623191 /* ContactInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfoController.h; sourceTree = "<group>"; };
 		BD3BCF671F26396B00623191 /* ContactInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfoController.m; sourceTree = "<group>"; };
 		BD3BCF681F26396B00623191 /* ContactScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactScrollViewController.h; sourceTree = "<group>"; };
@@ -719,6 +722,8 @@
 				BD2EDB961F1B901A00C86D37 /* UIView+HelperMethods.m */,
 				BDA7BED81F1F8DF80084F39D /* NSString+HelperMethods.h */,
 				BDA7BED91F1F8DF80084F39D /* NSString+HelperMethods.m */,
+				BD3B967B1F2EF6EB002B8B6A /* AppUtility.h */,
+				BD3B967C1F2EF701002B8B6A /* AppUtility.m */,
 			);
 			name = OtherUtils;
 			sourceTree = "<group>";
@@ -1510,6 +1515,7 @@
 				BDA7BEDA1F1F8DF80084F39D /* NSString+HelperMethods.m in Sources */,
 				BD38F2C81F1B362400471E16 /* VideoThumbnailCell.m in Sources */,
 				BD32B2031F1B6CD8000F5F7E /* OverlayConfiguration.m in Sources */,
+				BD3B967D1F2EF701002B8B6A /* AppUtility.m in Sources */,
 				BD3570821F24CE42003BE859 /* MKDirectionsRequest+HelperMethods.m in Sources */,
 				BD36667B1F20D02300BEBE4E /* DetailedInfoController.m in Sources */,
 				BD38F2C71F1B361D00471E16 /* GMSLocationSearchController.m in Sources */,

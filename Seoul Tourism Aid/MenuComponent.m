@@ -289,7 +289,7 @@
     [self.optionsTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.menuView addSubview:self.optionsTableView];
     
-    CGRect logoFrame = CGRectMake(menuFrameWidth*0.17, menuFrameHeight*0.01, menuFrameHeight*0.03, menuFrameHeight*0.03);
+    CGRect logoFrame = CGRectMake(menuFrameWidth*0.17, menuFrameHeight*0.01, menuFrameWidth*0.05, menuFrameHeight*0.05);
     
 
     
@@ -346,12 +346,12 @@
     
 
     if(CW_CH){
-        self.optionCellHeight = 40.0;
+        self.optionCellHeight = 25.0;
 
     }
     
     if(RW_CH){
-        self.optionCellHeight = 40.0;
+        self.optionCellHeight = 33.0;
 
     }
     
@@ -360,6 +360,7 @@
     
     // Indicate that initially the menu is not shown.
     self.isMenuShown = NO;
+
     
 
 }
@@ -387,42 +388,57 @@
     CGFloat menuFrameWidth = CGRectGetWidth(self.menuFrame);
     CGFloat menuFrameHeight = CGRectGetHeight(self.menuFrame);
     
-    self.optionsTableView = [[UITableView alloc] initWithFrame:CGRectMake(menuFrameWidth*0.01, menuFrameHeight*0.20, self.menuFrame.size.width, self.menuFrame.size.height) style:UITableViewStylePlain];
+    self.optionsTableView = [[UITableView alloc] initWithFrame:CGRectMake(menuFrameWidth*0.01, menuFrameHeight*0.20, self.menuFrame.size.width, self.menuFrame.size.height*0.80) style:UITableViewStylePlain];
     
-    CGRect logoFrame = CGRectMake(menuFrameWidth*0.10, menuFrameHeight*0.02, 120, 120);
+    CGRect logoFrame = CGRectMake(menuFrameWidth*0.25, menuFrameHeight*0.02, menuFrameWidth*0.35, menuFrameHeight*0.15);
     
-    [self.optionsTableView setScrollEnabled:NO];
-    
+    [self.optionsTableView setScrollEnabled:YES];
+    [self.optionsTableView setDirectionalLockEnabled:YES];
+    [self.optionsTableView setAlwaysBounceHorizontal:NO];
 
     if(CW_CH){
-        self.optionsTableView = [[UITableView alloc] initWithFrame:CGRectMake(menuFrameWidth*0.01, menuFrameHeight*0.15, self.menuFrame.size.width, menuFrameHeight) style:UITableViewStylePlain];
+        self.optionsTableView = [[UITableView alloc] initWithFrame:CGRectMake(menuFrameWidth*0.01, menuFrameHeight*0.01, self.menuFrame.size.width, menuFrameHeight) style:UITableViewStylePlain];
         
-        
-        [self.optionsTableView setContentSize:CGSizeMake(self.menuFrame.size.width, 600)];
-        
-        logoFrame = CGRectMake(menuFrameWidth*0.20, menuFrameHeight*0.005, 150, 100);
         [self.optionsTableView setScrollEnabled:YES];
         [self.optionsTableView setContentInset:UIEdgeInsetsMake(20, 0, 50, 0)];
         [self.optionsTableView setAlwaysBounceHorizontal:NO];
         [self.optionsTableView setScrollsToTop:NO];
+        [self.optionsTableView setDirectionalLockEnabled:YES];
+
+        [self.optionsTableView setContentSize:CGSizeMake(self.menuFrame.size.width, 1500)];
+        
 
     }
     
     if(CW_RH){
         //Not yet implemented
+        self.planeSpriteView = [[SKView alloc] initWithFrame:logoFrame];
+        
+        SKScene* planeScene = [[SKScene alloc] initWithSize:logoFrame.size];
+        
+        [self configurePlaneScene:planeScene];
+        
+        
+        [self.menuView addSubview:self.planeSpriteView];
+        
+        [ self.planeSpriteView presentScene:planeScene];
+        
+        
     }
     
     if(RW_CH){
-        self.optionsTableView = [[UITableView alloc] initWithFrame:CGRectMake(menuFrameWidth*0.01, menuFrameHeight*0.15, self.menuFrame.size.width, menuFrameHeight) style:UITableViewStylePlain];
+        self.optionsTableView = [[UITableView alloc] initWithFrame:CGRectMake(menuFrameWidth*0.01, menuFrameHeight*0.01, self.menuFrame.size.width, menuFrameHeight) style:UITableViewStylePlain];
         
         
-        [self.optionsTableView setContentSize:CGSizeMake(self.menuFrame.size.width, 600)];
+        [self.optionsTableView setContentSize:CGSizeMake(self.menuFrame.size.width, 1500)];
         
-        logoFrame = CGRectMake(menuFrameWidth*0.20, menuFrameHeight*0.005, 150, 100);
         [self.optionsTableView setScrollEnabled:YES];
         [self.optionsTableView setAlwaysBounceHorizontal:NO];
         [self.optionsTableView setContentInset:UIEdgeInsetsMake(20, 0, 50, 0)];
-        [self.optionsTableView setScrollsToTop:NO];
+        [self.optionsTableView setScrollsToTop:YES];
+        
+        [self.optionsTableView setContentSize:CGSizeMake(self.menuFrame.size.width, 1500)];
+
 
     }
 
@@ -432,17 +448,6 @@
     [self.menuView addSubview:self.optionsTableView];
     
     
-    self.planeSpriteView = [[SKView alloc] initWithFrame:logoFrame];
-    
-    SKScene* planeScene = [[SKScene alloc] initWithSize:logoFrame.size];
-
-    [self configurePlaneScene:planeScene];
-    
-    
-    [self.menuView addSubview:self.planeSpriteView];
-    
-    [ self.planeSpriteView presentScene:planeScene];
-
     
     
     [self.optionsTableView setDelegate:self];
@@ -688,4 +693,10 @@
         self.selectionHandler(indexPath.row);
     }
 }
+
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleNone;
+}
+
 @end

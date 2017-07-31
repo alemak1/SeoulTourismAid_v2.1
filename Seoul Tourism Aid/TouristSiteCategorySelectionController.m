@@ -38,10 +38,6 @@
 @implementation TouristSiteCategorySelectionController
 
 
--(void)viewWillLayoutSubviews{
-    
-    
-}
 
 -(void)viewWillAppear:(BOOL)animated{
     
@@ -49,41 +45,13 @@
     
     [sharedLocationManager requestAuthorizationAndStartUpdates];
 
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
 
     
 }
 
-/**
 
--(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
-    
-    
-    for(UIViewController* childViewController in self.childViewControllers){
-    
-        [self setOverrideTraitCollection:newCollection forChildViewController:childViewController];
-    }
-    
-    /** Remove all of the subviews from the scroll view **/
-    
-   /**
-    
-    for (UIView*subview in self.scrollView.subviews) {
-        [subview removeFromSuperview];
-    }
 
-    
-    /** Remove all child view controllers **/
-    
-    /**
-    for(UIViewController*childViewController in self.childViewControllers){
-        [childViewController removeFromParentViewController];
-    }
-    
-    [self configureScrollViewWithCachedViewControllers:newCollection];
-    
-}
-
-**/
 
 -(void)viewDidLoad{
     
@@ -92,7 +60,7 @@
     [self.view setBackgroundColor:[UIColor skyBlueColor]];
     
 
-
+    
     [self configureScrollView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadTouristSiteConfiguration:) name:DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER object:nil];
@@ -276,6 +244,7 @@
     
     TouristSiteCollectionViewController* touristSiteCVC = [storyboardC instantiateViewControllerWithIdentifier:@"TouristSiteCVC"];
     
+    
     [self addChildViewController:touristSiteCVC];
     
     [touristSiteCVC.view setFrame:frame];
@@ -323,6 +292,22 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
 }
+
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+
+
+
 
 @end
 

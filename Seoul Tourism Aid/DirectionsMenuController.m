@@ -274,10 +274,10 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
 
 - (UINavigationController*) getLocalAreaAnnotationController:(ANNOTATION_LOCAL_AREA)annotationLocalArea{
     
-    UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
     
     
-     LocalAreaNavController* nextViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"HostelAreaNavigationController"];
+     LocalAreaNavController* nextViewController = [storyboardD instantiateViewControllerWithIdentifier:@"HostelAreaNavigationController"];
     
     [self configureHostelAreaAnnotationControllerForViewController:nextViewController andForAnnotationArea:annotationLocalArea];
     

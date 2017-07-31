@@ -44,6 +44,30 @@ NSOperationQueue* _dbOperationQueue;
 
 
 
+-(void)performFetchFromPublicDBforRecordID:(CKRecordID*)recordID andCompletionHandler:(void(^)(CKRecord*record,NSError*error))handler{
+    
+    [self.publicDB fetchRecordWithID:recordID completionHandler:^(CKRecord* record,NSError*error){
+    
+        if(error){
+            
+            NSLog(@"Error: unable to fetch record: %@",[error description]);
+            handler(nil,error);
+            return;
+        }
+        
+        if(record){
+            handler(record,nil);
+            return;
+        } else {
+            NSLog(@"Error: no results available for recordID %@",recordID.recordName);
+            handler(nil,nil);
+            return;
+        }
+    }];
+    
+    
+}
+
 -(void)performLoopQueryForAllTouristSitesandWithBatchCompletionHandler:(void(^)(CKRecord*record))batchCompletionHandler{
     
     

@@ -31,6 +31,8 @@
 
 -(void)executeQueryOperationOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName forWarMemorialNavigationController:(WarMemorialNavigationController*)navigationController;
 
+-(void)performFetchFromPublicDBforRecordID:(CKRecordID*)recordID andCompletionHandler:(void(^)(CKRecord*record,NSError*error))handler;
+
 /**
 -(void)executeQueryOperationOnPublicDBWithNavigationRegionName:(NSString*)navigationRegionName andWithCompletionHandler:(void(^)(NSMutableArray<WarMemorialAnnotation*>*results))completion;
 

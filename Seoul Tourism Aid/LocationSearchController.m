@@ -10,24 +10,15 @@
 #import "LocationSearchController.h"
 #import "UserLocationManager.h"
 #import "OverlayConfiguration.h"
+#import "AnnotationMapViewController.h"
 
 #import "AuthorizationController.h"
 #import "Constants.h"
 #import "AppDelegate.h"
 
-#import <OIDServiceConfiguration.h>
-#import <OIDAuthorizationService.h>
-#import <OIDAuthState.h>
-#import <OIDAuthorizationRequest.h>
-#import <OIDTokenResponse.h>
-
-#import <GTMAppAuth.h>
-#import <GTMAppAuthFetcherAuthorization.h>
-#import <GTMSessionFetcherService.h>
-#import "GoogleURLGenerator.h"
 
 
-@interface LocationSearchController ()
+@interface LocationSearchController () <GMSPlacePickerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *locationSearchBar;
 
@@ -47,7 +38,6 @@
 - (IBAction)searchLocationsInGoogleMaps:(UIButton *)sender;
 
 @property (readonly) CGRect mapViewFrame;
-@property (readonly) GTMAppAuthFetcherAuthorization* fetcherAuthorization;
 
 @end
 
@@ -136,104 +126,17 @@
     
 }
 
-- (IBAction)getDirectionsInGoogleMaps:(UIButton *)sender {
+- (IBAction)showGooglePlacePicker:(UIButton *)sender {
     
-    if(!self.selectedLocation){
-        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"No Location Selected" message:@"Select a location on the map to get directions in the Apple Maps App" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
-        
-        [alertController addAction:okayAction];
-        
-        [self showViewController:alertController sender:nil];
-        
-        return;
-    }
+    GMSPlacePickerConfig *config = [[GMSPlacePickerConfig alloc] initWithViewport:nil];
+    GMSPlacePickerViewController *placePicker =
+    [[GMSPlacePickerViewController alloc] initWithConfig:config];
+    placePicker.delegate = self;
     
-    
-    if(!self.fetcherAuthorization){
-        AuthorizationController* authorizationController = [[AuthorizationController alloc] init];
-        
-        [self showViewController:authorizationController sender:nil];
-        
-    } else {
-        [self performGoogleDirectionsSearchForSelectedLocation];
-    }
-    
+    [self presentViewController:placePicker animated:YES completion:nil];
 }
 
 
--(void)performGoogleDirectionsSearchForSelectedLocation{
-    
-    GTMSessionFetcherService *fetcherService = [[GTMSessionFetcherService alloc] init];
-    fetcherService.authorizer = self.fetcherAuthorization;
-    
-    WayPointConfiguration* destinationWaypoint = [[WayPointConfiguration alloc] initWithLocation:self.selectedLocation.placemark.location andWithName:@"Selected Destination"];
-    
-    NSURL* url = [GoogleURLGenerator getURLFromUserLocationToDestination:destinationWaypoint];
-    
-    NSLog(@"The url generated for this directions request is: %@",[url absoluteString]);
-    
-    // Create an URL request for the API call.
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    
-    /** Set the HTTP Method as POST **/
-    
-    [request setHTTPMethod:@"GET"];
-    
-    /** Set Content-Type Header to 'application/json' **/
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    
-    /** Set the access key as the value for 'authorizaiton' in a separate authorization header **/
-    NSString* authValue = [NSString stringWithFormat:@"Bearer %@",self.fetcherAuthorization.authState.lastTokenResponse.accessToken];
-    
-    [request setValue:authValue forHTTPHeaderField:@"Authorization"];
-    
-    
-    GTMSessionFetcher *fetcher = [fetcherService fetcherWithRequest:request];
-    
-    
-    [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
-        // Checks for an error.
-        
-        if(error){
-            NSLog(@"Error occurred: %@",[error localizedDescription]);
-        }
-        
-        // Parses the JSON response.
-        NSError *jsonError = nil;
-        NSDictionary* jsonDict =
-        [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        
-        // JSON error.
-        if (jsonError) {
-            NSLog(@"JSON decoding error %@", jsonError);
-            return;
-        }
-        
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            NSLog(@"Directions JSON data: %@",[data description]);
-        });
-        
-        // Success response!
-        NSLog(@"Success: %@", jsonDict);
-    }];
-    
-    
-
-    
-}
-
-
-- (IBAction)searchLocationsInGoogleMaps:(UIButton *)sender {
-    
-    [self performSegueWithIdentifier:@"showGoogleMapsSearchController" sender:nil];
-    
-}
 
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
@@ -286,15 +189,62 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    if([segue.identifier isEqualToString:@"showGoogleMapsSearchController"]){
+    if([segue.identifier isEqualToString:@"showAnnotationDetailView"]){
+        
+        AnnotationMapViewController* destVC = segue.destinationViewController;
+        
+        CLLocationCoordinate2D selectedCoordinate = self.selectedLocation.placemark.coordinate;
+        
+        NSString* locStr = [NSString stringWithFormat:@"{%f,%f}",selectedCoordinate.latitude,selectedCoordinate.longitude];
+        
+        NSDictionary* configurationDict = @{
+                                            
+                @"location":locStr,
+                @"title":self.selectedLocation.placemark.title,
+                @"subtitle":self.selectedLocation.placemark.subtitle,
+                @"address":self.selectedLocation.placemark.postalCode,
+                @"imagefilepath":@"city3",
+                @"type": [NSNumber numberWithInt:0]
+                };
+        
+        destVC.annotation = [[SeoulLocationAnnotation alloc] initWithDict:configurationDict];
         
     }
 }
 
--(GTMAppAuthFetcherAuthorization *)fetcherAuthorization{
+
+
+- (void)placePicker:(GMSPlacePickerViewController *)viewController didPickPlace:(GMSPlace *)place {
     
-    return [GTMAppAuthFetcherAuthorization authorizationFromKeychainForName:kGTMAppAuthAuthorizerKey];;
+    // Dismiss the place picker, as it cannot dismiss itself.
+    [viewController dismissViewControllerAnimated:YES completion:nil];
+    
+    
+    [self.mainMapView removeAnnotations:self.mainMapView.annotations];
+    
+    OverlayConfiguration* placeAnnotation = [[OverlayConfiguration alloc] initWithCoordinate:CLLocationCoordinate2DMake(place.coordinate.latitude, place.coordinate.longitude) andWithName:place.name];
+    
+    MKPlacemark* selectedPlacemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(place.coordinate.latitude, place.coordinate.longitude)];
+    
+    self.selectedLocation = [[MKMapItem alloc] initWithPlacemark:selectedPlacemark];
+    
+    [self.mainMapView addAnnotation:placeAnnotation];
+    
+    NSLog(@"Place name %@", place.name);
+    NSLog(@"Place address %@", place.formattedAddress);
+    NSLog(@"Place attributions %@", place.attributions.string);
 }
+
+- (void)placePickerDidCancel:(GMSPlacePickerViewController *)viewController {
+    // Dismiss the place picker, as it cannot dismiss itself.
+    [viewController dismissViewControllerAnimated:YES completion:nil];
+    
+    NSLog(@"No place selected");
+}
+
+
+
+
 
 -(void)dealloc{
     

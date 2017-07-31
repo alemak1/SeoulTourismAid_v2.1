@@ -27,7 +27,7 @@
     
     [self.scrollView setDelegate:self];
     
-    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*3.5)];
+    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*1.5)];
     
     [self.scrollView setScrollsToTop:NO];
     [self.scrollView setPagingEnabled:NO];
@@ -41,7 +41,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [self.scrollView setDelegate:self];
     
-    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*3.5)];
+    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*1.5)];
     
     [self.scrollView setScrollsToTop:NO];
     [self.scrollView setPagingEnabled:NO];
@@ -59,7 +59,7 @@
     
     [self.scrollView setDelegate:self];
     
-    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*3.5)];
+    [self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.scrollView.frame)*0.90, CGRectGetHeight(self.scrollView.frame)*1.5)];
     
     [self.scrollView setScrollsToTop:NO];
     [self.scrollView setPagingEnabled:NO];

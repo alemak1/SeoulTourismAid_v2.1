@@ -13,15 +13,10 @@
 #import "Constants.h"
 
 @interface TouristSiteCollectionViewCell ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *siteImageView;
-
-
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-
-
 @property (weak) IBOutlet UILabel *isOpenStatusLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 //Each tourist site cell has detail and directions buttons that perform segues whose string identifiers are configured to match tourist site names or ids; the view controllers that are presented modally can be configured in the storyboard and instantiated using the segue identifiers; tourist site detail and location information can be passed to the dstinationed view controller through the segue; in the prepare for segue method, set exposed properties (corresponding to site location and details) in the prepare for segue method
@@ -31,6 +26,7 @@
 - (IBAction)getDetailsForTouristSite:(id)sender;
 
 
+@property (readonly) OperatingHours* operatingHours;
 
 @end
 
@@ -44,9 +40,55 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
 
 
 
+
 /** Implement getters and setters for labels and image view **/
 
+-(instancetype)init{
+    
+    if(self = [super init]){
+        
+        [self addObserver:self forKeyPath:@"touristSiteConfigurationObject.operatingHours" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew context:TouristConfigurationContext];
+    }
+    
+    return self;
+}
 
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        
+        [self addObserver:self forKeyPath:@"touristSiteConfigurationObject.operatingHours" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew context:TouristConfigurationContext];
+
+    }
+    
+    return self;
+}
+
+
+
+-(void)dealloc{
+    [self removeObserver:self forKeyPath:@"touristSiteConfigurationObject.operatingHours"];
+}
+
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    
+    if([keyPath isEqualToString:@"touristSiteConfigurationObject.operatingHours"]){
+        NSLog(@"Updating isOpenStatus");
+        
+        NSString* isOpenStatus = self.touristSiteConfigurationObject.isOpen ? @"Open" : @"Closed";
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self setIsOpenStatusText:isOpenStatus];
+
+        
+        });
+        
+    }
+}
+
+
+#pragma mark ************ TITLE TEXT and TITLE LABEL
 
 -(void)setTitleText:(NSString *)titleText{
     
@@ -60,6 +102,9 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
 -(NSString *)titleText{
     return [self.titleLabel text];
 }
+
+
+#pragma mark ********* IMAGEVIEW AND IMAGE
 
 -(void)setSiteImage:(UIImage *)siteImage{
     
@@ -75,6 +120,7 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
 
 
 
+#pragma mark ******* IS_OPEN_STATUS TEXT and LABEL
 
 -(void)setIsOpenStatusText:(NSString *)isOpenStatusText{
     
@@ -82,12 +128,16 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
     [self.isOpenStatusLabel setMinimumScaleFactor:0.50];
     [self.isOpenStatusLabel setText:isOpenStatusText];
     
-    self.isOpenStatusText = isOpenStatusText;
+    [self layoutSubviews];
+    
 }
 
 -(NSString *)isOpenStatusText{
     return [self.isOpenStatusLabel text];
 }
+
+#pragma mark ******* DISTANCE TO SITE TEXT and LABEL
+
 
 -(void)setDistanceToSiteText:(NSString *)distanceToSiteText{
     
@@ -132,6 +182,7 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
     
 }
 
+#pragma mark ****** IBACTION IMPLEMENTATIONS
 
 - (IBAction)getDirectionsForTouristSite:(id)sender {
     
@@ -175,6 +226,17 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
     [[NSNotificationCenter defaultCenter] postNotificationName:DID_REQUEST_LOAD_TOURIST_SITE_DETAIL_CONTROLLER object:self userInfo:userInfoDict];
 }
 
+#pragma mark ******** OPERATING HOURS
 
+-(OperatingHours *)operatingHours{
+    
+    return self.touristSiteConfigurationObject.operatingHours;
+    
+}
+
+
++(NSSet<NSString *> *)keyPathsForValuesAffectingOperatingHours{
+    return [NSSet setWithObjects:@"touristSiteConfigurationObject", nil];
+}
 
 @end

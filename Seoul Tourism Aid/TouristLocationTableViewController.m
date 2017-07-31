@@ -11,6 +11,7 @@
 #import "HeaderViewConfiguration.h"
 #import "HostelLocationAnnotation.h"
 #import "AnnotationManager.h"
+#import "AnnotationMapViewController.h"
 #import "SeoulLocationAnnotation+HelperMethods.h"
 
 @interface TouristLocationTableViewController ()
@@ -86,6 +87,13 @@ BOOL _seeNameOnly = true;
     [self.tableView reloadData];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@""]){
+        
+    }
+    
+}
 
 #pragma mark ******* TABLEVIEW DATA SOURCE METHODS
 

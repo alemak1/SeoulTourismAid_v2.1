@@ -7,17 +7,16 @@
 //
 
 #import "LocalAreaNavController.h"
-#import "HostelAreaContainerController.h"
-
+#import "HostelAreaMapViewController.h"
 
 @implementation LocalAreaNavController
 
 -(void)viewWillLayoutSubviews{
     
-    HostelAreaContainerController* containerController = (HostelAreaContainerController*)[self.viewControllers firstObject];
+    HostelAreaMapViewController* hostelAreaMapViewController = (HostelAreaMapViewController*)[self.viewControllers firstObject];
     
-    containerController.annotationSourceFilePath = self.annotationSourceFileName;
-    containerController.mapRegion = self.mapViewingRegion;
+    hostelAreaMapViewController.annotationSourceFilePath = self.annotationSourceFileName;
+    hostelAreaMapViewController.mapRegion = self.mapViewingRegion;
     
 }
 

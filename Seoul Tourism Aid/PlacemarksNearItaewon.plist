@@ -1066,5 +1066,103 @@
 		<key>title</key>
 		<string>Olive Young Cosmetics</string>
 	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5340,126.9942}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>CU Convenience Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5348,126.9938}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>IntroMart</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5348,126.9938}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>ATM (in front of IntroMart)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5346,126.9928}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Coffee Bro Coffee Shop</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5344,126.9919}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Withme Convenience Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>In front of Withme Convenience Store</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5344,126.9919}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>ATM</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Located on main street</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5342,126.9911}</string>
+		<key>address</key>
+		<string>Itaewon</string>
+		<key>title</key>
+		<string>Coffeesmith</string>
+	</dict>
 </array>
 </plist>

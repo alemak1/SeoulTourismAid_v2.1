@@ -52,8 +52,38 @@
 
 -(void)viewDidLoad{
     
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
+    }
 }
 
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+
+        return UIInterfaceOrientationMaskPortrait;
+    }
+    
+    return UIInterfaceOrientationMaskAll;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+
+        return UIInterfaceOrientationPortrait;
+    }
+    
+    return UIInterfaceOrientationUnknown;
+}
+
+-(BOOL)shouldAutorotate{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+
+        return NO;
+    }
+    
+    return YES;
+}
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
@@ -82,7 +112,7 @@
     
     cell.titleText = [configurationObject siteTitle];
     
-    cell.isOpenStatusText = [configurationObject isOpen] ? @"Open" : @"Closed";
+    cell.isOpenStatusText = @"Checking if open....";
     
     cell.distanceToSiteText = [configurationObject distanceFromUserString];
     
@@ -102,7 +132,7 @@
     
     cell.titleText = [configurationObject siteTitle];
     
-    cell.isOpenStatusText = [configurationObject isOpen] ? @"Open" : @"Closed";
+    cell.isOpenStatusText = @"Checking if open...";
     
     
     cell.distanceToSiteText = [configurationObject distanceFromUserString];

@@ -84,40 +84,46 @@
         
         NSMutableDictionary* mutableDict = [[NSMutableDictionary alloc] init];
         
-
         NSArray* monArray = record[@"Monday"];
         if(monArray){
+
             [mutableDict setObject:monArray forKey:@"Monday"];
         }
 
         NSArray* tuesArray = record[@"Tuesday"];
         if(tuesArray){
+
             [mutableDict setObject:tuesArray forKey:@"Tuesday"];
         }
 
         NSArray* wedArray = record[@"Wednesday"];
         if(wedArray){
+
         [mutableDict setObject:wedArray forKey:@"Wednesday"];
         }
         
         NSArray* thursArray = record[@"Thursday"];
         if(thursArray){
+
         [mutableDict setObject:thursArray forKey:@"Thursday"];
         }
         
         
         NSArray* friArray = record[@"Friday"];
         if(friArray){
+
             [mutableDict setObject:friArray forKey:@"Friday"];
         }
         
         NSArray* satArray = record[@"Saturday"];
         if(satArray){
+
         [mutableDict setObject:satArray forKey:@"Saturday"];
         }
         
         NSArray* sunArray = record[@"Sunday"];
         if(sunArray){
+
             [mutableDict setObject:sunArray forKey:@"Sunday"];
         }
         
@@ -126,12 +132,14 @@
         NSDate* closingDate = record[@"endDate"];
 
         if(closingDate){
+
             self.closingDate = [self getCurrentYearDateForDateWithMonthAndDay:closingDate];
         }
         
         NSDate* startingDate = record[@"startDate"];
         
         if(startingDate){
+
             self.openingDate = [self getCurrentYearDateForDateWithMonthAndDay:startingDate];
 
         }

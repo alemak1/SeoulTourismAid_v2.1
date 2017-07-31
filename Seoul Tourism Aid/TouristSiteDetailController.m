@@ -72,7 +72,36 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
     [self.regionMonitoringSwitch setOn:self.regionMonitoringStatus];
     [self.detailImageView setImage:self.detailImage];
     
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIUserInterfaceIdiomPhone] forKey:@"orientation"];
+        
+    }
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return UIInterfaceOrientationMaskPortrait;
+
+    }
     
+    return UIInterfaceOrientationMaskAll;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return UIInterfaceOrientationPortrait;
+    }
+    
+    return UIInterfaceOrientationUnknown;
+}
+
+
+-(BOOL)shouldAutorotate{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return NO;
+    }
+    
+    return YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{

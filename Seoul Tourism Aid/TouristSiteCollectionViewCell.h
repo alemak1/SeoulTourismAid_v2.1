@@ -29,7 +29,6 @@
 @property NSString* isOpenStatusText;
 @property NSString* distanceToSiteText;
 
--(void)configureIsOpenStatusLabel;
 
 @property TouristSiteConfiguration* touristSiteConfigurationObject;
 

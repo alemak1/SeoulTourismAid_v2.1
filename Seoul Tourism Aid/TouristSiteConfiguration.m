@@ -9,6 +9,7 @@
 #import "TouristSiteConfiguration.h"
 #import "UserLocationManager.h"
 #import "NSString+HelperMethods.h"
+#import "CloudKitHelper.h"
 
 @interface TouristSiteConfiguration ()
 
@@ -192,16 +193,38 @@
 
 -(void)initializeOperatingHoursWithRecord:(CKRecord*)record{
 
+    
     CKReference* operatingHoursRef = record[@"operatingHoursByDay"]; //Reference Type (operating hours)
 
     if(operatingHoursRef){
+        
+
     
         CKRecordID* recordID = operatingHoursRef.recordID;
-        CKRecord* record = [[CKRecord alloc] initWithRecordType:@"Annotation" recordID:recordID];
-    
-        if(record){
-            self.operatingHours = [[OperatingHours alloc] initWithCKRecord:record];
-        }
+        
+        CloudKitHelper* ckHelper = [[CloudKitHelper alloc] init];
+
+        
+        [ckHelper performFetchFromPublicDBforRecordID:recordID andCompletionHandler:^(CKRecord*record,NSError*error){
+        
+            if(error){
+                NSLog(@"CKRecord failed to download with error: %@",[error description]);
+                return;
+            }
+        
+            if(record){
+                
+                self.operatingHours = [[OperatingHours alloc] initWithCKRecord:record];
+              
+                
+            } else {
+                NSLog(@"CKRecord failed to download");
+                return;
+            }
+        
+        }];
+        
+       
     }
 }
 

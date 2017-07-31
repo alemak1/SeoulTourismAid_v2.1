@@ -14,6 +14,7 @@
 #import "UserLocationManager.h"
 #import "AuthorizationController.h"
 #import "LanguageHelpOptionsController.h"
+#import "GeneralGameSceneController.h"
 
 #import <OIDServiceConfiguration.h>
 #import <OIDAuthorizationService.h>
@@ -87,7 +88,7 @@
     self.menuComponent = [[MenuComponent alloc] initMenuWithFrame:desiredMenuFrame
                     targetView:self.view
                     direction:menuDirectionRightToLeft
-                    options:@[@"About the App", @"Explore Nearby", @"Visited Sites", @"Seoul Tourism",@"Weather",@"Survival Korean", @"Product Prices",@"Monitored Regions",@"Tourism Videos",@"Image Galleries",@"Brainy Bunny Learns Korean"]
+                    options:@[@"About the App", @"Explore Nearby", @"Visited Sites", @"Seoul Tourism",@"Weather",@"Survival Korean", @"Product Prices",@"Monitored Regions",@"Tourism Videos",@"Image Galleries",@"Brainy Bunny Game"]
                     optionImages:@[@"informationB", @"compassB", @"city1", @"templeB",@"cloudyA",@"chatA", @"shoppingCartB",@"mapAddressB",@"tvB",@"paintingB",@"bunny2_walk1"]];
     
   
@@ -145,6 +146,8 @@
             case 8:
                 //YouTubeTourism Videos
                 requestedViewController = [self getYouTubeVideoController];
+                [self presentViewController:requestedViewController animated:YES completion:nil];
+
                 break;
             case 9:
                 //Flickr Image Galleries
@@ -238,9 +241,12 @@
 
 -(UIViewController*)getBunnyGameController{
     
+
     UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
     
     UIViewController* gameSceneController = [storyboardC instantiateViewControllerWithIdentifier:@"GeneralGameSceneController"];
+
+    
     
     return gameSceneController;
 }
@@ -331,12 +337,7 @@
     UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
     
     
-    NSString *storyBoardIdentifier = @"SeoulTourismNavigationController";
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        storyBoardIdentifier = @"TouristSiteCSCNavController_iPad";
-    }
+    NSString *storyBoardIdentifier = @"TouristSiteCategorySelectionController";
     
     
     return [storyboardD instantiateViewControllerWithIdentifier:storyBoardIdentifier];

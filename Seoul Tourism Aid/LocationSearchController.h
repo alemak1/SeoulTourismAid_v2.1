@@ -13,8 +13,14 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+@import GooglePlaces;
+@import GoogleMaps;
+@import GooglePlacePicker;
+
+
 @interface LocationSearchController : UIViewController<MKMapViewDelegate,UISearchBarDelegate>
 
+@property GMSPlace* selectedPlace;
 
 
 @end

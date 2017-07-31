@@ -34,6 +34,22 @@ SKView* _mainSkView;
     
     [self registerNotifications];
     
+    /**
+    [self.skView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    
+    [self.view addSubview:self.skView];
+    
+    
+    NSArray<NSLayoutConstraint*>* constraints = [NSArray arrayWithObjects:
+                                                 [[self.skView centerXAnchor] constraintEqualToAnchor:[self.view centerXAnchor]],
+                                                 [[self.skView centerYAnchor] constraintEqualToAnchor:[self.view centerYAnchor]],
+                                                 [[self.skView widthAnchor] constraintEqualToConstant:1000],
+                                                 [[self.skView heightAnchor] constraintEqualToConstant:1000], nil];
+    
+    [NSLayoutConstraint activateConstraints:constraints];
+    **/
+    
     [self startGame];
     
 }

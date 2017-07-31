@@ -89,4 +89,28 @@
     }
 }
 
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return UIInterfaceOrientationMaskPortrait;
+    }
+    
+    return UIInterfaceOrientationMaskAll;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return UIInterfaceOrientationPortrait;
+    }
+    
+    return UIInterfaceOrientationPortrait;
+}
+
+-(BOOL)shouldAutorotate{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        
+    }
+    
+    return YES;
+}
+
 @end

@@ -21,11 +21,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="533.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aAw-tV-A29">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="533.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4K6-pU-qWv"/>
                                 </connections>
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261" y="-833"/>
+            <point key="canvasLocation" x="956" y="-2310"/>
         </scene>
         <!--Item-->
         <scene sceneID="Hsv-Rf-3fu">
@@ -200,7 +200,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3K-07-zt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539" y="-131"/>
+            <point key="canvasLocation" x="1126" y="-1460"/>
         </scene>
         <!--Biking Routes Controller-->
         <scene sceneID="GKa-3a-lz3">
@@ -580,7 +580,7 @@
         <scene sceneID="zMj-8M-cKu">
             <objects>
                 <collectionViewController id="Dxa-tJ-5oe" customClass="AcknowledgementsVC" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YiB-jp-Bag">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="YiB-jp-Bag">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -649,7 +649,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="ILf-Ja-tlG">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UPG-9h-tVp">
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UPG-9h-tVp">
                             <rect key="frame" x="307.5" y="7" width="409" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Back to Acknowledgements"/>
@@ -1268,10 +1268,10 @@
             </objects>
             <point key="canvasLocation" x="-3514" y="864"/>
         </scene>
-        <!--Hostel Area Container Controller-->
+        <!--Hostel Area Map View Controller-->
         <scene sceneID="BgB-z5-F2u">
             <objects>
-                <viewController id="Tq0-RR-Jzj" customClass="HostelAreaContainerController" sceneMemberID="viewController">
+                <viewController id="Tq0-RR-Jzj" customClass="HostelAreaMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wM8-t2-ie4"/>
                         <viewControllerLayoutGuide type="bottom" id="RnK-yA-eW2"/>
@@ -1280,19 +1280,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08i-EA-pj7">
-                                <rect key="frame" x="0.0" y="133.5" width="375" height="533.5"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-St-uNO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="embed" identifier="embedHostelAreaMapViewController" id="SW1-gi-1PS"/>
+                                    <outlet property="delegate" destination="Tq0-RR-Jzj" id="2WV-C7-yVA"/>
                                 </connections>
-                            </containerView>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="08i-EA-pj7" secondAttribute="trailing" id="F9w-wk-vcd"/>
-                            <constraint firstItem="08i-EA-pj7" firstAttribute="height" secondItem="Jo4-WQ-JG4" secondAttribute="height" multiplier="0.8" id="XYt-y9-p0p"/>
-                            <constraint firstItem="08i-EA-pj7" firstAttribute="leading" secondItem="Jo4-WQ-JG4" secondAttribute="leading" id="XvK-CU-Ztx"/>
-                            <constraint firstItem="RnK-yA-eW2" firstAttribute="top" secondItem="08i-EA-pj7" secondAttribute="bottom" id="pvV-gV-p03"/>
+                            <constraint firstItem="4FD-St-uNO" firstAttribute="top" secondItem="wM8-t2-ie4" secondAttribute="bottom" id="fUs-ud-uhT"/>
+                            <constraint firstAttribute="trailing" secondItem="4FD-St-uNO" secondAttribute="trailing" id="i3u-Zk-WB1"/>
+                            <constraint firstItem="RnK-yA-eW2" firstAttribute="top" secondItem="4FD-St-uNO" secondAttribute="bottom" id="rvc-u9-SGO"/>
+                            <constraint firstItem="4FD-St-uNO" firstAttribute="leading" secondItem="Jo4-WQ-JG4" secondAttribute="leading" id="xmv-rO-WGb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FAh-IG-tyQ">
@@ -1302,17 +1302,29 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Filter Locations"/>
                             <connections>
-                                <segue destination="6Xz-Ta-EuG" kind="show" id="dQR-y5-c27"/>
+                                <action selector="showFilterOptionsController:" destination="Tq0-RR-Jzj" eventType="touchUpInside" id="eNb-0E-owh"/>
+                                <segue destination="6Xz-Ta-EuG" kind="show" identifier="showFilterOptionsSegue" id="dQR-y5-c27"/>
                             </connections>
                         </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="23B-LO-vsc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qZn-iQ-ID1">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="AkM-5e-rTJ" kind="unwind" unwindAction="unwindToDirectionsMenuController:" id="jC4-Mf-3Pg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="containerView" destination="08i-EA-pj7" id="Uhp-iy-dNn"/>
+                        <outlet property="mapView" destination="4FD-St-uNO" id="ihq-bS-PeI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emN-Gc-ch2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AkM-5e-rTJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="-330"/>
+            <point key="canvasLocation" x="-900" y="-1449"/>
         </scene>
         <!--FeatureViewController-->
         <scene sceneID="Pl1-PK-KTM">
@@ -1330,17 +1342,17 @@
                                 <rect key="frame" x="28" y="33.5" width="319" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgd-Lf-caR">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="86"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="85.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tvA" translatesAutoresizingMaskIntoConstraints="NO" id="Ne1-4O-TEy">
-                                                <rect key="frame" x="-1.5" y="28" width="30" height="30"/>
+                                                <rect key="frame" x="-1.5" y="27" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="SNG-ZC-naO"/>
                                                     <constraint firstAttribute="width" constant="30" id="ilw-kI-KBT"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LE-j4-CNN">
-                                                <rect key="frame" x="48.5" y="0.0" width="222.5" height="86"/>
+                                                <rect key="frame" x="48.5" y="0.0" width="223" height="85.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="YouTube videos for Korea tourism">
                                                         <attributes>
@@ -1363,17 +1375,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ip-ca-Sf8">
-                                        <rect key="frame" x="0.0" y="86" width="319" height="84.5"/>
+                                        <rect key="frame" x="0.0" y="85.5" width="319" height="86"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paintingA" translatesAutoresizingMaskIntoConstraints="NO" id="5wo-Ma-aDF">
-                                                <rect key="frame" x="-1.5" y="28" width="30" height="30"/>
+                                                <rect key="frame" x="-1.5" y="28.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="1ps-wF-YZf"/>
                                                     <constraint firstAttribute="height" constant="30" id="YyB-hn-jd6"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu8-Dy-3tz">
-                                                <rect key="frame" x="48.5" y="0.0" width="223.5" height="84.5"/>
+                                                <rect key="frame" x="48.5" y="0.0" width="223.5" height="86"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Flickr-powered image galleries">
                                                         <attributes>
@@ -1396,17 +1408,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXL-yW-hdL">
-                                        <rect key="frame" x="0.0" y="170.5" width="319" height="86.5"/>
+                                        <rect key="frame" x="0.0" y="171.5" width="319" height="85.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partlyCloudyA" translatesAutoresizingMaskIntoConstraints="NO" id="ynA-Q7-UWt">
-                                                <rect key="frame" x="-2" y="28.5" width="30" height="30"/>
+                                                <rect key="frame" x="-2.5" y="27.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="bFJ-Jd-UEN"/>
                                                     <constraint firstAttribute="width" constant="30" id="rYi-m8-UNC"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVv-bR-0qT">
-                                                <rect key="frame" x="48" y="0.0" width="222.5" height="86.5"/>
+                                                <rect key="frame" x="47.5" y="0.0" width="223.5" height="85.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Weather forecasts for major Korean cities">
                                                         <attributes>
@@ -1432,14 +1444,14 @@
                                         <rect key="frame" x="0.0" y="257" width="319" height="86"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currencyC" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-S6-n3X">
-                                                <rect key="frame" x="-2.5" y="28.5" width="30" height="30"/>
+                                                <rect key="frame" x="-2" y="28.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ZKU-0l-Lhc"/>
                                                     <constraint firstAttribute="width" constant="30" id="cWF-jJ-yT9"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-yo-ZLu">
-                                                <rect key="frame" x="47.5" y="0.0" width="223" height="86"/>
+                                                <rect key="frame" x="48" y="0.0" width="222.5" height="86"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Prices for common Korean products">
                                                         <attributes>
@@ -1462,17 +1474,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ou-6q-j3c">
-                                        <rect key="frame" x="0.0" y="343" width="319" height="86.5"/>
+                                        <rect key="frame" x="0.0" y="343" width="319" height="85.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapAddressA" translatesAutoresizingMaskIntoConstraints="NO" id="eCu-2A-8px">
-                                                <rect key="frame" x="-2.5" y="28" width="30" height="30"/>
+                                                <rect key="frame" x="-2" y="28" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="BTq-Sd-Rb7"/>
                                                     <constraint firstAttribute="width" constant="30" id="c3n-Sd-ErG"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGH-ar-JxV">
-                                                <rect key="frame" x="47.5" y="0.0" width="223.5" height="86.5"/>
+                                                <rect key="frame" x="48" y="0.0" width="222.5" height="85.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Region monitoring for major hotspots">
                                                         <attributes>
@@ -1495,17 +1507,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFp-5a-Xur">
-                                        <rect key="frame" x="0.0" y="429.5" width="319" height="84.5"/>
+                                        <rect key="frame" x="0.0" y="428.5" width="319" height="86"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatA" translatesAutoresizingMaskIntoConstraints="NO" id="qJE-2j-w5a">
-                                                <rect key="frame" x="-2.5" y="26.5" width="30" height="30"/>
+                                                <rect key="frame" x="-2" y="27.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="278-J2-zYp"/>
                                                     <constraint firstAttribute="width" constant="30" id="CIC-Uk-wPa"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hac-sk-3Fg">
-                                                <rect key="frame" x="47.5" y="0.0" width="223" height="84.5"/>
+                                                <rect key="frame" x="48" y="0.0" width="222.5" height="86"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Korean language translation help">
                                                         <attributes>
@@ -1528,17 +1540,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dw0-J6-KJm">
-                                        <rect key="frame" x="0.0" y="514" width="319" height="86"/>
+                                        <rect key="frame" x="0.0" y="514.5" width="319" height="85.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compassA" translatesAutoresizingMaskIntoConstraints="NO" id="sPT-p6-xAD">
-                                                <rect key="frame" x="-2" y="28" width="30" height="30"/>
+                                                <rect key="frame" x="-2.5" y="27.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="d5x-Op-H5d"/>
                                                     <constraint firstAttribute="height" constant="30" id="uBT-ue-bUv"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMi-KH-oP3">
-                                                <rect key="frame" x="48" y="0.0" width="222.5" height="86"/>
+                                                <rect key="frame" x="47.5" y="0.0" width="223.5" height="85.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Annotated navigation aids for tourist regions">
                                                         <attributes>
@@ -1958,7 +1970,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFF-Gp-2WB">
-                                <rect key="frame" x="31" y="303.5" width="155.5" height="23.5"/>
+                                <rect key="frame" x="31" y="303" width="155.5" height="23.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Forecast Period:">
                                         <attributes>
@@ -1980,13 +1992,13 @@
                                 </variation>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Vt-oC-Kqz">
-                                <rect key="frame" x="214.5" y="300" width="154" height="31"/>
+                                <rect key="frame" x="214.5" y="299.5" width="154" height="31"/>
                                 <connections>
                                     <action selector="changedForecastPeriod:" destination="Xfz-PO-w8Y" eventType="valueChanged" id="DRK-vQ-lb3"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast Period" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3q-vg-Cya">
-                                <rect key="frame" x="216.5" y="335" width="120" height="14"/>
+                                <rect key="frame" x="216.5" y="334.5" width="120" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1999,7 +2011,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kr0-gb-N2n">
-                                <rect key="frame" x="28" y="334" width="179" height="40"/>
+                                <rect key="frame" x="28" y="333.5" width="179" height="40"/>
                                 <state key="normal" image="cloudyA">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Get Forecast">
@@ -3059,7 +3071,7 @@
         <scene sceneID="Ldm-I9-5VY">
             <objects>
                 <collectionViewController id="wbe-oi-UkB" customClass="WeatherForecastCollectionController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4WI-tg-aSw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="4WI-tg-aSw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3349,7 +3361,7 @@
         <!--TouristSiteCategoryController-->
         <scene sceneID="foH-fj-Zze">
             <objects>
-                <viewController title="TouristSiteCategoryController" id="A01-ZA-Z48" customClass="TouristSiteCategorySelectionController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TouristSiteCategorySelectionController" title="TouristSiteCategoryController" id="A01-ZA-Z48" customClass="TouristSiteCategorySelectionController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W0b-gJ-ZMu"/>
                         <viewControllerLayoutGuide type="bottom" id="xlR-50-mda"/>
@@ -3359,15 +3371,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4G-2L-qhd">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="583.5"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4K2-4U-1kM">
+                                <rect key="frame" x="123.5" y="613.5" width="128" height="33.5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="     Back to Main Menu">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="Futura-CondensedMedium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="thi-aU-hhW" kind="unwind" unwindAction="unwindBacktoEntryViewController:" id="xfh-3T-4D4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4K2-4U-1kM" firstAttribute="height" secondItem="JWa-No-fIZ" secondAttribute="height" multiplier="0.05" id="69s-qh-Mzc"/>
                             <constraint firstItem="y4G-2L-qhd" firstAttribute="top" secondItem="W0b-gJ-ZMu" secondAttribute="bottom" id="Exb-Vd-ffD"/>
                             <constraint firstItem="y4G-2L-qhd" firstAttribute="leading" secondItem="JWa-No-fIZ" secondAttribute="leading" id="ICQ-Bh-72f"/>
+                            <constraint firstItem="4K2-4U-1kM" firstAttribute="top" secondItem="y4G-2L-qhd" secondAttribute="bottom" constant="10" id="UaR-86-cpe"/>
+                            <constraint firstItem="xlR-50-mda" firstAttribute="top" secondItem="4K2-4U-1kM" secondAttribute="bottom" constant="20" id="aE1-dS-L8h"/>
                             <constraint firstAttribute="trailing" secondItem="y4G-2L-qhd" secondAttribute="trailing" id="hgc-Tv-RVk"/>
-                            <constraint firstItem="xlR-50-mda" firstAttribute="top" secondItem="y4G-2L-qhd" secondAttribute="bottom" id="njW-hO-TB6"/>
+                            <constraint firstItem="4K2-4U-1kM" firstAttribute="centerX" secondItem="JWa-No-fIZ" secondAttribute="centerX" id="hjQ-KC-BUm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vjc-kx-rt9">
@@ -3388,8 +3420,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuq-hT-c1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="thi-aU-hhW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-5427"/>
+            <point key="canvasLocation" x="1866" y="-5937"/>
         </scene>
         <!--Tourist Filter Controller-->
         <scene sceneID="1fF-st-Htl">
@@ -3404,7 +3437,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-tD-br2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-WN-Hal">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -3510,7 +3543,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3F-qP-mU3">
-                                <rect key="frame" x="108.5" y="249" width="158" height="35.5"/>
+                                <rect key="frame" x="108.5" y="205" width="158" height="35.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Search Tourist Sites">
@@ -3567,7 +3600,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yp-24-J2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464.8" y="-1454.1229385307347"/>
+            <point key="canvasLocation" x="1625" y="-1691"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HDi-qw-8mg">
@@ -3585,33 +3618,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGI-pR-8AR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="-1033"/>
+            <point key="canvasLocation" x="206" y="-813"/>
         </scene>
         <!--Seoul Tourism Navigation Controller-->
         <scene sceneID="cXV-dG-gGL">
             <objects>
                 <navigationController storyboardIdentifier="SeoulTourismNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="xSA-EY-f9L" customClass="SeoulTourismNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bTY-fc-d4e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bTY-fc-d4e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="A01-ZA-Z48" kind="relationship" relationship="rootViewController" id="wso-AZ-0q2"/>
                         <segue destination="uhn-pe-38s" kind="show" identifier="showTouristSiteDetailController_iPad" id="5Eg-bk-Tbb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BC-rG-FgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3806" y="-5575"/>
+            <point key="canvasLocation" x="3052" y="-6160"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZNC-C8-X8y">
             <objects>
                 <navigationController storyboardIdentifier="WeatherNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hXy-oF-CLz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nur-eU-X61">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nur-eU-X61">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3629,7 +3661,7 @@
             <objects>
                 <navigationController storyboardIdentifier="BikeRouteNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="FNi-LG-IPf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S3h-NW-3gv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="S3h-NW-3gv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3647,7 +3679,7 @@
             <objects>
                 <navigationController storyboardIdentifier="PolygonNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pYc-Gc-14Z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ukT-4V-BKP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ukT-4V-BKP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3660,12 +3692,12 @@
             </objects>
             <point key="canvasLocation" x="4614.375" y="-1198.943661971831"/>
         </scene>
-        <!--Hostel Area Navigation Controller-->
+        <!--Local Area Nav Controller-->
         <scene sceneID="Li3-dG-aIL">
             <objects>
-                <navigationController storyboardIdentifier="HostelAreaNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="o5I-X9-sVO" customClass="HostelAreaNavigationController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HostelAreaNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="o5I-X9-sVO" customClass="LocalAreaNavController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RRX-uI-WJB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RRX-uI-WJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3676,7 +3708,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCi-fu-QJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454" y="-1312"/>
+            <point key="canvasLocation" x="-554" y="-1592"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T3e-Ag-ehA">
@@ -3735,7 +3767,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="czf-H4-byR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rqD-Sa-BtG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rqD-Sa-BtG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3777,7 +3809,7 @@
                                 <rect key="frame" x="30" y="53" width="315" height="533.5"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sM-qe-KEA">
-                                <rect key="frame" x="16" y="586.5" width="343" height="41"/>
+                                <rect key="frame" x="16" y="586.5" width="343" height="70.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Back">
@@ -3802,6 +3834,7 @@
                             <constraint firstAttribute="trailing" secondItem="H2q-ay-9eY" secondAttribute="trailing" constant="30" id="AMy-ZG-KwI"/>
                             <constraint firstItem="H2q-ay-9eY" firstAttribute="leading" secondItem="kWi-qW-ucG" secondAttribute="leading" constant="30" id="R6w-kw-fZd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2sM-qe-KEA" secondAttribute="trailing" id="ShH-3e-X8t"/>
+                            <constraint firstItem="eU2-1i-Do5" firstAttribute="top" secondItem="2sM-qe-KEA" secondAttribute="bottom" constant="10" id="U12-86-bpU"/>
                             <constraint firstItem="KRR-8V-c1O" firstAttribute="top" secondItem="Feo-yk-gh0" secondAttribute="bottom" id="b99-oz-L04"/>
                             <constraint firstItem="H2q-ay-9eY" firstAttribute="height" secondItem="kWi-qW-ucG" secondAttribute="height" multiplier="0.8" id="dLk-gV-ygB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KRR-8V-c1O" secondAttribute="trailing" id="nbh-iA-YS2"/>
@@ -3833,13 +3866,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zkn-3D-cZT">
-                                <rect key="frame" x="280" y="605" width="51" height="31"/>
+                                <rect key="frame" x="280" y="586" width="51" height="31"/>
                                 <connections>
                                     <action selector="changedRegionMonitoringStatus:" destination="KhQ-KP-tjA" eventType="valueChanged" id="Xhr-nB-4K9"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-Lw-zn5">
-                                <rect key="frame" x="19" y="606" width="126" height="30"/>
+                                <rect key="frame" x="19" y="587" width="126" height="30"/>
                                 <state key="normal" title="Detailed Price Info"/>
                                 <connections>
                                     <action selector="showDetailedPriceInfoVC:" destination="KhQ-KP-tjA" eventType="touchUpInside" id="yr9-yu-9E9"/>
@@ -3847,7 +3880,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayW-mI-pmK">
-                                <rect key="frame" x="19" y="544" width="171" height="30"/>
+                                <rect key="frame" x="19" y="525" width="171" height="30"/>
                                 <state key="normal" title="Detailed Parking Fee Info"/>
                                 <connections>
                                     <action selector="showDetailedParkingInfoVC:" destination="KhQ-KP-tjA" eventType="touchUpInside" id="Q1v-MU-gfu"/>
@@ -3908,7 +3941,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nr0-bx-ntr">
-                                <rect key="frame" x="19" y="575" width="204" height="30"/>
+                                <rect key="frame" x="19" y="556" width="204" height="30"/>
                                 <state key="normal" title="Detailed Operating Hours Info"/>
                                 <connections>
                                     <action selector="showDetailOperatingHoursVC:" destination="KhQ-KP-tjA" eventType="touchUpInside" id="iSG-5l-XSe"/>
@@ -3964,8 +3997,8 @@
                                     <action selector="loadWebsite:" destination="KhQ-KP-tjA" eventType="touchUpInside" id="QjI-3T-OCf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-3n-yjf" userLabel="Back">
-                                <rect key="frame" x="161" y="637" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-3n-yjf" userLabel="Back">
+                                <rect key="frame" x="170.5" y="627" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="eAz-F9-oqB" kind="unwind" unwindAction="returnToTouristSiteCategorySelectionController:" id="DiG-FH-NVN"/>
@@ -3982,7 +4015,7 @@
                             <constraint firstItem="bpb-Ta-goO" firstAttribute="top" secondItem="BYH-r8-E4b" secondAttribute="bottom" constant="-69.5" id="3wT-cV-FZW"/>
                             <constraint firstItem="BYH-r8-E4b" firstAttribute="leading" secondItem="eFp-6C-8Z5" secondAttribute="trailing" constant="-201.5" id="40a-o8-Txl"/>
                             <constraint firstItem="ayW-mI-pmK" firstAttribute="leading" secondItem="Nr0-bx-ntr" secondAttribute="leading" id="4CS-zj-JKv"/>
-                            <constraint firstItem="iWs-Fg-9Ls" firstAttribute="top" secondItem="DuW-3n-yjf" secondAttribute="bottom" id="51m-M3-tke"/>
+                            <constraint firstItem="iWs-Fg-9Ls" firstAttribute="top" secondItem="DuW-3n-yjf" secondAttribute="bottom" constant="10" id="51m-M3-tke"/>
                             <constraint firstItem="UNf-Nz-112" firstAttribute="top" secondItem="BYH-r8-E4b" secondAttribute="bottom" constant="7.5" id="56h-MD-Ha1"/>
                             <constraint firstItem="Nr0-bx-ntr" firstAttribute="leading" secondItem="bTr-Lw-zn5" secondAttribute="leading" id="5ns-t4-cI6"/>
                             <constraint firstItem="Y74-ZC-9r0" firstAttribute="centerY" secondItem="eFp-6C-8Z5" secondAttribute="centerY" id="5vE-0P-W8Z"/>
@@ -4017,7 +4050,7 @@
                             <constraint firstItem="Zkn-3D-cZT" firstAttribute="centerY" secondItem="tV3-HP-rb3" secondAttribute="centerY" id="lH4-du-zpg"/>
                             <constraint firstItem="bTr-Lw-zn5" firstAttribute="leading" secondItem="UNf-Nz-112" secondAttribute="leading" id="lP0-E5-2Pf"/>
                             <constraint firstItem="Y74-ZC-9r0" firstAttribute="leading" secondItem="eFp-6C-8Z5" secondAttribute="leading" id="niG-Ry-MaN"/>
-                            <constraint firstItem="iWs-Fg-9Ls" firstAttribute="top" secondItem="bTr-Lw-zn5" secondAttribute="bottom" constant="31" id="oK4-R6-dwt"/>
+                            <constraint firstItem="iWs-Fg-9Ls" firstAttribute="top" secondItem="bTr-Lw-zn5" secondAttribute="bottom" constant="50" id="oK4-R6-dwt"/>
                             <constraint firstItem="DuW-3n-yjf" firstAttribute="centerX" secondItem="2xu-0r-KV4" secondAttribute="centerX" id="oTR-NA-Tt9"/>
                             <constraint firstItem="UNf-Nz-112" firstAttribute="width" secondItem="BYH-r8-E4b" secondAttribute="width" multiplier="0.9" id="pMo-ga-a22"/>
                             <constraint firstItem="ayW-mI-pmK" firstAttribute="leading" secondItem="2xu-0r-KV4" secondAttribute="leadingMargin" constant="56.5" id="qG2-x1-pwU"/>
@@ -4176,7 +4209,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87f-gL-l5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eAz-F9-oqB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="454" y="-6019"/>
+            <point key="canvasLocation" x="889" y="-6093"/>
         </scene>
     </scenes>
     <resources>
