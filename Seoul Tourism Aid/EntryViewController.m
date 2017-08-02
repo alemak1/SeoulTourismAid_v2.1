@@ -29,6 +29,7 @@
 #import "Constants.h"
 
 
+
 @interface EntryViewController ()
 
 @property UIImageView* backgroundImageView;
@@ -51,14 +52,12 @@
     
     
     
-    
 }
 
 
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
     
     
 }

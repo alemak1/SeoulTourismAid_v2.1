@@ -22,6 +22,8 @@
 #import "AppDelegate.h"
 #import "Constants.h"
 
+#import "GooglePlaceManager.h"
+
 @interface LanguageHelpOptionsController ()
 
 @property(readonly)GTMAppAuthFetcherAuthorization* authorization;
@@ -43,7 +45,21 @@
         [self presentViewController:authorizationController animated:YES completion:nil];
         
     }
-      
+    
+    
+   
+    GooglePlaceManager* googlePlaceManager = [GooglePlaceManager sharedManager];
+    
+    [googlePlaceManager loadCategoryArrayWithUserDefinedCategory:Outdoor_NaturalSite andWithSinglePlaceItemCompletionHandler:^{
+        NSLog(@"Another Natural Site finished loading");
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.00 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [googlePlaceManager showDebugInfoForNaturalSites];
+        
+    });
+
     
 }
 

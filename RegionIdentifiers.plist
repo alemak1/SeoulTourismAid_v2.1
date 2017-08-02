@@ -3,6 +3,10 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJfYjlFvWifDURYSDsoxYbN80</string>
 		<key>Address</key>
 		<string>21, Namdaemunsijang 4-gil, Jung-gu, Seoul
 </string>
@@ -12,6 +16,10 @@
 		<string>Namdaemun Shopping Center</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>10</integer>
+		<key>placeID</key>
+		<string>ChIJqWqOqFeifDURpYJ5LnxX-Fw</string>
 		<key>Address</key>
 		<string>105, Namsangongwon-gil, Yongsan-gu, Seoul
 </string>
@@ -21,6 +29,10 @@
 		<string>Seoul Tower Plaza</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>6</integer>
+		<key>placeID</key>
+		<string>ChIJH4mmNDCEcDURQnqe23vEoWM</string>
 		<key>Address</key>
 		<string>123, Meodeu-ro, Boryeong-si, Chungcheongnam-do
 </string>
@@ -30,6 +42,10 @@
 		<string>Daecheon Beach</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>6</integer>
+		<key>placeID</key>
+		<string>ChIJ1_pBVZ672F8RrHEZ0Renrm8</string>
 		<key>Address</key>
 		<string>190, Haeoreum-ro, Sokcho-si, Gangwon-do
 </string>
@@ -39,6 +55,10 @@
 		<string>Sokcho Beach</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string></string>
 		<key>Address</key>
 		<string>621, Hu-ri, Haean-myeon, Yanggu-gun, Gangwon-do
 </string>
@@ -48,6 +68,10 @@
 		<string>Eulji Observatory</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>6</integer>
+		<key>placeID</key>
+		<string>ChIJ11NuUdO4fDURb07Dgu9Aij8</string>
 		<key>Address</key>
 		<string>Dobong-dong, Dobong-gu, Seoul 
 </string>
@@ -57,6 +81,10 @@
 		<string>Dobongsan Mountain</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>7</integer>
+		<key>placeID</key>
+		<string>ChIJE0i-X0eZfDURGCuFxA4UFeo</string>
 		<key>Address</key>
 		<string>243-60, World Cup-ro, Mapo-gu, Seoul
 </string>
@@ -66,6 +94,10 @@
 		<string>World Cup Park</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>7</integer>
+		<key>placeID</key>
+		<string>ChIJJR4cLTCffDURLe2HKl7I7SY</string>
 		<key>Address</key>
 		<string>Seoul-si Seongdong-gu Seongsu1-ga 1-dong
 </string>
@@ -75,6 +107,10 @@
 		<string>Hangang Park</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>10</integer>
+		<key>placeID</key>
+		<string>ChIJ9eMqtPeifDUR2ia2kC5oOIc</string>
 		<key>Address</key>
 		<string>83, Sopa-ro, Jung-gu, Seoul
 </string>
@@ -84,6 +120,10 @@
 		<string>Namsan Cable Car</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>6</integer>
+		<key>placeID</key>
+		<string>ChIJR4m9MBt_cDUR0EbFo19ETmE</string>
 		<key>Address</key>
 		<string>57-228, Hwajanggol-gil, Seongju-myeon, Boryeong-si, Chungcheongnam-do
 </string>
@@ -93,6 +133,10 @@
 		<string>Seongjusan Recreational Forest</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string>ChIJd7hHuLyH2F8RPBoSduSiU0g</string>
 		<key>Address</key>
 		<string>233-4, Ihyeon-ri, Haean-myeon, Yanggu-gun, Gangwon-do
 </string>
@@ -102,6 +146,10 @@
 		<string>The 4th Tunnel</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>9</integer>
+		<key>placeID</key>
+		<string></string>
 		<key>Address</key>
 		<string>Do-dong, Ulleung-eup, Ulleung-gun, Gyeongsangbuk-do
 </string>
@@ -111,6 +159,10 @@
 		<string>Dokdo Island Observatory Car</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>2</integer>
+		<key>placeID</key>
+		<string>ChIJod7tSseifDUR9hXHLFNGMIs</string>
 		<key>Address</key>
 		<string>161, Sajik-ro, Jongno-gu, Seoul</string>
 		<key>Coord</key>
@@ -119,6 +171,10 @@
 		<string>Gyeongbokgung Palace</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>9</integer>
+		<key>placeID</key>
+		<string>ChIJ20xMxqGgfDURGokBIQOyJVI</string>
 		<key>Address</key>
 		<string>181, Gwangmyeong-ro, Gwacheon-si, Gyeonggi-do
 </string>
@@ -128,6 +184,10 @@
 		<string>Seoulland</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>2</integer>
+		<key>placeID</key>
+		<string> ChIJ8cRRtD-ifDURoBcqFZyRluE</string>
 		<key>Address</key>
 		<string>29, Itaewon-ro, Yongsan-gu, Seoul
 </string>
@@ -137,6 +197,10 @@
 		<string>The War Memorial of Korea</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>0</integer>
+		<key>placeID</key>
+		<string>ChIJN2x0fu2ifDUR51BupseGYmE</string>
 		<key>Address</key>
 		<string>137, Seobinggo-ro, Yongsan-gu, Seoul
 </string>
@@ -146,6 +210,10 @@
 		<string>National Museum of Korea</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>9</integer>
+		<key>placeID</key>
+		<string>ChIJ8aJ1KRaZfDURVUHcej_gDWg</string>
 		<key>Address</key>
 		<string>240, World Cup-ro, Mapo-gu, Seoul
 </string>
@@ -155,6 +223,10 @@
 		<string>Seoul World Cup Stadium</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>1</integer>
+		<key>placeID</key>
+		<string>ChIJTTazIxOeZTUR4m1JS3PNB5c</string>
 		<key>Address</key>
 		<string>95, Jikjisa-gil, Daehang-myeon, Gimcheon-si, Gyeongsangbuk-do
 </string>
@@ -164,6 +236,10 @@
 		<string>Jikjisa Temple</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>1</integer>
+		<key>placeID</key>
+		<string>ChIJS5om2hXOejURJF2k542ypRg</string>
 		<key>Address</key>
 		<string>137, Biamsa-gil, Jeonui-myeon, , Sejong-si
 </string>
@@ -173,6 +249,10 @@
 		<string>Biamsa Temple</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>1</integer>
+		<key>placeID</key>
+		<string>ChIJxyJTK6JSezURvPL4KM00bP8</string>
 		<key>Address</key>
 		<string>25-15, Haegok-ro, Cheoin-gu, Yongin-si, Gyeonggi-do
 </string>
@@ -182,6 +262,10 @@
 		<string>Wawoojongsa Temple</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJ9clw89vjZTURV0V7EGyFW0s</string>
 		<key>Address</key>
 		<string>161, Taepyeong-ro, Buk-gu, Daegu
 </string>
@@ -191,6 +275,10 @@
 		<string>Lotte Department Store - Daegu Branch</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJkVttek58ezURRyk_xo_f77A</string>
 		<key>Address</key>
 		<string>7 Bupyeong-daero, Bupyeong-gu, Incheon
 </string>
@@ -200,6 +288,10 @@
 		<string>Bupyeong Modoo Mall</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>10</integer>
+		<key>placeID</key>
+		<string>ChIJsYmocVaifDUR99wwIJ9jOmU</string>
 		<key>Address</key>
 		<string>105, Namsangongwon-gil, Yongsan-gu, Seoul
 </string>
@@ -209,6 +301,10 @@
 		<string>Namsan Seoul Tower</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string>ChIJy9gVVfSG2F8RNESxbhjMA_A</string>
 		<key>Address</key>
 		<string>35, Haeanseohwa-ro, Haean-myeon, Yanggu-gun, Gangwon-do
 </string>
@@ -218,6 +314,10 @@
 		<string>Yanggu Unification Hall</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>7</integer>
+		<key>placeID</key>
+		<string>ChIJ0URvckGFfDUR7R6yo-PKp-I</string>
 		<key>Address</key>
 		<string>595, Hosu-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do
 </string>
@@ -227,6 +327,10 @@
 		<string>Ilsan Lake Park</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>0</integer>
+		<key>placeID</key>
+		<string>ChIJj7MPqnKZfDURQZVwU_rxTlQ</string>
 		<key>Address</key>
 		<string>400, World Cup buk-ro, Mapo-gu, Seoul</string>
 		<key>Coord</key>
@@ -235,6 +339,10 @@
 		<string>Korean Film Museum</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string></string>
 		<key>Address</key>
 		<string>35, Haeanseohwa-ro, Yanggu-gun, Gangwon-do
 </string>
@@ -244,6 +352,10 @@
 		<string>War Memorial Museum in Yanggu</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJKxs2jFmhfDURPP--kvKavw0</string>
 		<key>Address</key>
 		<string>Underground, 396, Gangnam-daero, Gangnam-gu, Seoul
 </string>
@@ -254,6 +366,10 @@
 		<string>Gangnam Station Underground Shopping Center</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJ9yr6O96ifDURdKrVvYhgwk0</string>
 		<key>Address</key>
 		<string>Jongno3-ga, Jongno-gu, Seoul-si
 </string>
@@ -263,6 +379,10 @@
 		<string>Jongno 3(sam)-ga Jewelry District</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>6</integer>
+		<key>placeID</key>
+		<string>ChIJ4SOmeEx0ZDURAy2_z0V2gbI</string>
 		<key>Address</key>
 		<string>Janghoe-ri, Danseong-myeon, Danyang-gun, Chungcheongbuk-do
 </string>
@@ -272,6 +392,10 @@
 		<string>Gudambong Peak &amp; Oksunbong Peak</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>0</integer>
+		<key>placeID</key>
+		<string></string>
 		<key>Address</key>
 		<string>139, Seobinggo-ro, Yongsan-gu, Seoul
 </string>
@@ -281,6 +405,10 @@
 		<string>National Hangeul Museum</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJb2xjNSOjfDUREaXhU_OIY6w</string>
 		<key>Address</key>
 		<string>9, Digital-ro 10-gil, Geumcheon-gu, Seoul
 </string>
@@ -290,6 +418,10 @@
 		<string>Hyundai City Outlet - Gasan Branch</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>0</integer>
+		<key>placeID</key>
+		<string>ChIJ67sUjqCSbjURtLoTq7vfgdg</string>
 		<key>Address</key>
 		<string>618, Jaranman-ro, Hai-myeon, Goseong-gun, Gyeongsangnam-do
 </string>
@@ -299,6 +431,10 @@
 		<string>Goseong Dinosaur Museum</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJOUUtJuJhezURw6f_q8eWPtI</string>
 		<key>Address</key>
 		<string>23, Digital-ro 9-gil, Geumcheon-gu, Seoul</string>
 		<key>Coord</key>
@@ -307,6 +443,10 @@
 		<string>Mario Outlet</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>3</integer>
+		<key>placeID</key>
+		<string>ChIJATCIfeuifDURIwx4Zcd_eEw</string>
 		<key>Address</key>
 		<string>1, Jong-ro, Jongno-gu, Seoul</string>
 		<key>Coord</key>
@@ -315,6 +455,10 @@
 		<string>Kyobo Bookstore Ltd.</string>
 	</dict>
 	<dict>
+		<key>category</key>
+		<integer>6</integer>
+		<key>placeID</key>
+		<string>ChIJ11NuUdO4fDURb07Dgu9Aij8</string>
 		<key>Address</key>
 		<string>Dobong-dong, Dobong-gu, Seoul 
 </string>
@@ -322,6 +466,45 @@
 		<string>{37.6854511,127.0104753}</string>
 		<key>RegionIdentifier</key>
 		<string>Dobongsan Mountain</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string>ChIJtcAH6G99YjURbdvR9h8FnQc</string>
+		<key>Address</key>
+		<string>510 Ha-ri, Yanggu-eup, Yanggu, Gangwon-do, South Korea
+</string>
+		<key>Coord</key>
+		<string>{37.8719411,127.0138134}</string>
+		<key>RegionIdentifier</key>
+		<string>Yanggu Shrine Museum</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string>ChIJJWnxsu6AYjURTipL6U0S4t8</string>
+		<key>Address</key>
+		<string>239-3 Jangpyeong-ri, Bangsan-myeon, Yanggu, Gangwon-do, South Korea
+</string>
+		<key>Coord</key>
+		<string>{37.8719411,127.0138134}</string>
+		<key>RegionIdentifier</key>
+		<string>Minshan Museum</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string>ChIJHZB9Y_NwYjURmKsew2NpX1k</string>
+		<key>Address</key>
+		<string>415-1 Sangdong-ri, Inje-eup, Inje, Gangwon-do, South Korea
+</string>
+		<key>Coord</key>
+		<string>{37.8719411,127.0138134}</string>
+		<key>RegionIdentifier</key>
+		<string>Inje Mountain Village Folk Museum</string>
 	</dict>
 </array>
 </plist>

@@ -32,7 +32,22 @@
     
     [[GMSPlacesClient sharedClient] lookUpPlaceID:placeID callback:^(GMSPlace*result, NSError*error){
         
-        place = result;
+        if(result){
+            place = result;
+        } else {
+            
+            if(error){
+                
+                NSLog(@"Error occurred while looking up Location via Google PlaceID: %@",[error localizedDescription]);
+                NSLog(@"Reasone for failure: %@",[error localizedFailureReason]);
+                
+            } else {
+                NSLog(@"Error: failed to download Google Place; no results obtain from callback");
+
+            }
+            
+            
+        }
     }];
     
     
@@ -47,7 +62,7 @@
             
             photoMetaData = [photos.results firstObject];
             
-            
+        
             [[GMSPlacesClient sharedClient] loadPlacePhoto:photoMetaData constrainedToSize:CGSizeMake(100.0, 200.0) scale:1.0 callback:^(UIImage*image,NSError*error){
                 
                 self.largeImage = image;

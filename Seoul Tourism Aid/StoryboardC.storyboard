@@ -435,7 +435,7 @@
         <scene sceneID="bqn-80-i2b">
             <objects>
                 <collectionViewController id="yTl-uz-byh" customClass="AudioSampleCollectionController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="my5-Mc-voy">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="my5-Mc-voy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.77444118920000005" green="0.97334855789999997" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -454,10 +454,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box150" translatesAutoresizingMaskIntoConstraints="NO" id="Gok-6K-zgn">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="VXF-ac-cXl">
-                                            <rect key="frame" x="6.5" y="5" width="117" height="90"/>
+                                            <rect key="frame" x="6.5" y="6.5" width="117" height="117"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Where is the subway station?">
                                                     <attributes>
@@ -1541,7 +1541,7 @@
         <scene sceneID="gfM-oP-LoU">
             <objects>
                 <collectionViewController storyboardIdentifier="TouristSiteCVC" id="4M4-dP-rUK" customClass="TouristSiteCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jAY-hf-MwJ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="jAY-hf-MwJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1834,6 +1834,103 @@
                 <exit id="7WB-N6-IqR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3816" y="3653"/>
+        </scene>
+        <!--Google Place Collection View Controller-->
+        <scene sceneID="r0c-2U-REv">
+            <objects>
+                <collectionViewController storyboardIdentifier="GooglePlaceCollectionViewController" id="Yk3-xE-M4G" customClass="GooglePlaceCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="w6c-Sp-0s1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Iip-Gp-2TI">
+                            <size key="itemSize" width="170" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GooglePlaceCell" id="8zY-SI-b5J" customClass="GooglePlaceCell">
+                                <rect key="frame" x="10" y="0.0" width="170" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y4s-rr-pb9">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="150"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J12-rf-kMm">
+                                            <rect key="frame" x="12" y="20" width="75" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpenNowStatus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxA-s3-Wup">
+                                            <rect key="frame" x="12" y="99" width="125" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHm-QX-a4W">
+                                            <rect key="frame" x="12" y="121" width="67" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3D-PW-jv1">
+                                            <rect key="frame" x="132" y="12" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="YN6-vz-BNZ"/>
+                                                <constraint firstAttribute="width" constant="20" id="iBY-Fc-Qc2"/>
+                                            </constraints>
+                                            <state key="normal" backgroundImage="compassA"/>
+                                            <connections>
+                                                <action selector="getDirectionsToGooglePlace:" destination="8zY-SI-b5J" eventType="touchUpInside" id="jRW-js-gzE"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OK-EP-qbV">
+                                            <rect key="frame" x="132" y="42" width="20" height="22"/>
+                                            <state key="normal" image="informationA"/>
+                                            <connections>
+                                                <action selector="getInfoForGooglePlace:" destination="8zY-SI-b5J" eventType="touchUpInside" id="bQ6-Bp-D6o"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="e3D-PW-jv1" secondAttribute="trailing" constant="10" id="1S0-Zx-oEU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y4s-rr-pb9" secondAttribute="trailing" id="8Jt-xY-SPO"/>
+                                    <constraint firstItem="Y4s-rr-pb9" firstAttribute="top" secondItem="8zY-SI-b5J" secondAttribute="top" id="986-yM-nwU"/>
+                                    <constraint firstItem="bHm-QX-a4W" firstAttribute="leading" secondItem="SxA-s3-Wup" secondAttribute="leading" id="AdJ-he-KtM"/>
+                                    <constraint firstItem="7OK-EP-qbV" firstAttribute="centerX" secondItem="e3D-PW-jv1" secondAttribute="centerX" id="Bb8-gE-ZYn"/>
+                                    <constraint firstItem="Y4s-rr-pb9" firstAttribute="leading" secondItem="8zY-SI-b5J" secondAttribute="leading" id="GMk-3J-BKP"/>
+                                    <constraint firstItem="SxA-s3-Wup" firstAttribute="leading" secondItem="J12-rf-kMm" secondAttribute="leading" id="HGq-Gq-THA"/>
+                                    <constraint firstItem="J12-rf-kMm" firstAttribute="top" secondItem="8zY-SI-b5J" secondAttribute="topMargin" constant="12" id="JOC-js-nlH"/>
+                                    <constraint firstItem="J12-rf-kMm" firstAttribute="leading" secondItem="8zY-SI-b5J" secondAttribute="leadingMargin" constant="4" id="KId-4c-b9r"/>
+                                    <constraint firstItem="7OK-EP-qbV" firstAttribute="top" secondItem="e3D-PW-jv1" secondAttribute="bottom" constant="10" id="OXd-LT-nBk"/>
+                                    <constraint firstItem="e3D-PW-jv1" firstAttribute="top" secondItem="8zY-SI-b5J" secondAttribute="topMargin" constant="4" id="SzR-je-erx"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="bHm-QX-a4W" secondAttribute="bottom" id="l4G-Lt-a0I"/>
+                                    <constraint firstItem="bHm-QX-a4W" firstAttribute="top" secondItem="SxA-s3-Wup" secondAttribute="bottom" constant="1" id="pAI-pJ-cwd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y4s-rr-pb9" secondAttribute="bottom" id="rzK-qb-G3C"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="distanceLabel" destination="bHm-QX-a4W" id="Enh-tU-i20"/>
+                                    <outlet property="imageView" destination="Y4s-rr-pb9" id="jAB-mU-W8v"/>
+                                    <outlet property="openNowStatusLabel" destination="SxA-s3-Wup" id="RI4-3G-EDN"/>
+                                    <outlet property="titleLabel" destination="J12-rf-kMm" id="eQK-cb-vdm"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Yk3-xE-M4G" id="UGw-98-gGF"/>
+                            <outlet property="delegate" destination="Yk3-xE-M4G" id="Mqz-jT-jK4"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuo-eZ-bMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7858" y="-244"/>
         </scene>
         <!--Tourist SiteCSC Nav Controller-->
         <scene sceneID="X1L-ZP-h3s">
@@ -2128,7 +2225,7 @@
         <scene sceneID="N93-9f-c9r">
             <objects>
                 <collectionViewController id="uus-df-JOM" customClass="TouristSiteCVC_IPAD" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="E3y-lW-L7r">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="E3y-lW-L7r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2321,10 +2418,12 @@
         <image name="box150" width="150" height="150"/>
         <image name="cameraB" width="100" height="100"/>
         <image name="chatA" width="40" height="40"/>
+        <image name="compassA" width="20" height="20"/>
         <image name="compassB" width="40" height="40"/>
         <image name="emailA" width="20" height="20"/>
         <image name="flatDark23" width="80" height="80"/>
         <image name="flatDark32" width="48" height="48"/>
+        <image name="informationA" width="20" height="20"/>
         <image name="informationB" width="40" height="40"/>
         <image name="keyboard50" width="50" height="50"/>
         <image name="phoneA" width="20" height="23"/>

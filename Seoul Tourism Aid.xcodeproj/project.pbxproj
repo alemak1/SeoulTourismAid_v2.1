@@ -62,6 +62,8 @@
 		BD32EBF31F24FDB300B5E8D2 /* AudioSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */; };
 		BD32EBF61F25060100B5E8D2 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EBF51F25060100B5E8D2 /* AudioController.m */; };
 		BD3398451F2CB06700429EE0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3398441F2CB06700429EE0 /* MessageUI.framework */; };
+		BD339C8D1F30B9A30012C4D0 /* GooglePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = BD339C8C1F30B9A30012C4D0 /* GooglePlace.m */; };
+		BD339C901F30F0150012C4D0 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BD339C8F1F30F0150012C4D0 /* NSString+URLEncoding.m */; };
 		BD34A2511F2C12F200326E9B /* TouristLocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A24E1F2C12F200326E9B /* TouristLocationTableViewController.m */; };
 		BD34A2521F2C12F200326E9B /* TouristLocationTBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2501F2C12F200326E9B /* TouristLocationTBNavigationController.m */; };
 		BD34A2551F2C135000326E9B /* LocalAreaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34A2541F2C135000326E9B /* LocalAreaNavController.m */; };
@@ -199,6 +201,10 @@
 		BD41387F1F28C24E00F7C8FF /* TouristSiteCVC_IPAD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41387E1F28C24E00F7C8FF /* TouristSiteCVC_IPAD.m */; };
 		BD4556711F21B1D400D21756 /* MonitoredRegionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */; };
 		BD4556731F21B8F700D21756 /* RegionIdentifiers.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */; };
+		BD48B2D31F319A3B0021B138 /* LookupPlaceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD48B2D21F319A3B0021B138 /* LookupPlaceOperation.m */; };
+		BD48B2D61F31B05D0021B138 /* GooglePlaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD48B2D51F31B05D0021B138 /* GooglePlaceManager.m */; };
+		BD48B2D91F31D2090021B138 /* GooglePlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD48B2D81F31D2090021B138 /* GooglePlaceCell.m */; };
+		BD48B2DC1F31D2770021B138 /* GooglePlaceCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD48B2DB1F31D2770021B138 /* GooglePlaceCollectionViewController.m */; };
 		BD50485E1F29A9B400226922 /* TouristSiteSectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD50485D1F29A9B400226922 /* TouristSiteSectionHeaderCell.m */; };
 		BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD55E02E1F2270A000CFBE68 /* Seoul.geojson */; };
 		BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */; };
@@ -323,6 +329,10 @@
 		BD32EBF41F25060100B5E8D2 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		BD32EBF51F25060100B5E8D2 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		BD3398441F2CB06700429EE0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BD339C8B1F30B9930012C4D0 /* GooglePlace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlace.h; sourceTree = "<group>"; };
+		BD339C8C1F30B9A30012C4D0 /* GooglePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlace.m; sourceTree = "<group>"; };
+		BD339C8E1F30F0150012C4D0 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		BD339C8F1F30F0150012C4D0 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		BD34A24A1F2C12B600326E9B /* HostelAreaNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostelAreaNavigationController.h; sourceTree = "<group>"; };
 		BD34A24B1F2C12B600326E9B /* HostelAreaNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostelAreaNavigationController.m; sourceTree = "<group>"; };
 		BD34A24D1F2C12F200326E9B /* TouristLocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristLocationTableViewController.h; sourceTree = "<group>"; };
@@ -539,6 +549,14 @@
 		BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoredRegionsController.h; sourceTree = "<group>"; };
 		BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredRegionsController.m; sourceTree = "<group>"; };
 		BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegionIdentifiers.plist; sourceTree = "<group>"; };
+		BD48B2CE1F3199B70021B138 /* LookupPlaceOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookupPlaceOperation.h; sourceTree = "<group>"; };
+		BD48B2D21F319A3B0021B138 /* LookupPlaceOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookupPlaceOperation.m; sourceTree = "<group>"; };
+		BD48B2D41F31B04D0021B138 /* GooglePlaceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlaceManager.h; sourceTree = "<group>"; };
+		BD48B2D51F31B05D0021B138 /* GooglePlaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlaceManager.m; sourceTree = "<group>"; };
+		BD48B2D71F31D1FD0021B138 /* GooglePlaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlaceCell.h; sourceTree = "<group>"; };
+		BD48B2D81F31D2090021B138 /* GooglePlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlaceCell.m; sourceTree = "<group>"; };
+		BD48B2DA1F31D26A0021B138 /* GooglePlaceCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlaceCollectionViewController.h; sourceTree = "<group>"; };
+		BD48B2DB1F31D2770021B138 /* GooglePlaceCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlaceCollectionViewController.m; sourceTree = "<group>"; };
 		BD50485C1F29A99B00226922 /* TouristSiteSectionHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteSectionHeaderCell.h; sourceTree = "<group>"; };
 		BD50485D1F29A9B400226922 /* TouristSiteSectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteSectionHeaderCell.m; sourceTree = "<group>"; };
 		BD55E02E1F2270A000CFBE68 /* Seoul.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Seoul.geojson; sourceTree = "<group>"; };
@@ -631,7 +649,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BD2A69661F1F169C00552521 /* DataModels */ = {
+		BD2A69661F1F169C00552521 /* DataModelsAdditional */ = {
 			isa = PBXGroup;
 			children = (
 				BD2A696A1F1F178500552521 /* DayOfWeek.h */,
@@ -643,8 +661,14 @@
 				BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */,
 				BD3812201F2063E5003D7367 /* TouristSiteManager.h */,
 				BD3812211F2063F0003D7367 /* TouristSiteManager.m */,
+				BD339C8B1F30B9930012C4D0 /* GooglePlace.h */,
+				BD339C8C1F30B9A30012C4D0 /* GooglePlace.m */,
+				BD48B2CE1F3199B70021B138 /* LookupPlaceOperation.h */,
+				BD48B2D21F319A3B0021B138 /* LookupPlaceOperation.m */,
+				BD48B2D41F31B04D0021B138 /* GooglePlaceManager.h */,
+				BD48B2D51F31B05D0021B138 /* GooglePlaceManager.m */,
 			);
-			name = DataModels;
+			name = DataModelsAdditional;
 			sourceTree = "<group>";
 		};
 		BD2E4D261F25B49B005770D1 /* ScrollableInfoController */ = {
@@ -724,6 +748,8 @@
 				BDA7BED91F1F8DF80084F39D /* NSString+HelperMethods.m */,
 				BD3B967B1F2EF6EB002B8B6A /* AppUtility.h */,
 				BD3B967C1F2EF701002B8B6A /* AppUtility.m */,
+				BD339C8E1F30F0150012C4D0 /* NSString+URLEncoding.h */,
+				BD339C8F1F30F0150012C4D0 /* NSString+URLEncoding.m */,
 			);
 			name = OtherUtils;
 			sourceTree = "<group>";
@@ -1037,6 +1063,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD48B2DD1F31D3590021B138 /* GooglePlaceViewControllers */,
 				BD35873A1F29D3EF00B7ECFE /* VisitedSitesController */,
 				BD7C2FC41F26F17B00B835EE /* ProductPriceControllers */,
 				BD2E4D261F25B49B005770D1 /* ScrollableInfoController */,
@@ -1047,7 +1074,7 @@
 				BD36667C1F20DFFD00BEBE4E /* WebViewController */,
 				BD3812231F20692C003D7367 /* TouristSiteVCs */,
 				BD3728D41F1F4C45009DFF50 /* Seoul Tourism Aid.entitlements */,
-				BD2A69661F1F169C00552521 /* DataModels */,
+				BD2A69661F1F169C00552521 /* DataModelsAdditional */,
 				BD8A35D81F1DF7FF00346F88 /* FlickrViewController */,
 				BDB696931F1D1248001E2314 /* LanguageHelpControllers */,
 				BD2EDB941F1B900E00C86D37 /* OtherUtils */,
@@ -1100,6 +1127,17 @@
 			);
 			name = MonitoredRegionsController;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		BD48B2DD1F31D3590021B138 /* GooglePlaceViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD48B2D71F31D1FD0021B138 /* GooglePlaceCell.h */,
+				BD48B2D81F31D2090021B138 /* GooglePlaceCell.m */,
+				BD48B2DA1F31D26A0021B138 /* GooglePlaceCollectionViewController.h */,
+				BD48B2DB1F31D2770021B138 /* GooglePlaceCollectionViewController.m */,
+			);
+			name = GooglePlaceViewControllers;
 			sourceTree = "<group>";
 		};
 		BD714D681F21FEDE003D4C66 /* NavigationAidControllers */ = {
@@ -1441,6 +1479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3812281F20693A003D7367 /* TouristSiteCollectionViewCell.m in Sources */,
+				BD48B2D31F319A3B0021B138 /* LookupPlaceOperation.m in Sources */,
 				BD38F2D71F1B37E700471E16 /* KoreanLearningScene.m in Sources */,
 				BD3944C71F22C7890024F92D /* LanguageHelpOptionsController.m in Sources */,
 				BD8A35E61F1DF85800346F88 /* FlickrPhotoCell.m in Sources */,
@@ -1453,6 +1492,7 @@
 				BD3DCB001F2338C4001DB69B /* LanguageTranslationController.m in Sources */,
 				BD3944CA1F22C83A0024F92D /* AuthorizationController.m in Sources */,
 				BD2E4D3F1F25D381005770D1 /* AcknowledgementsIndexVC.m in Sources */,
+				BD48B2DC1F31D2770021B138 /* GooglePlaceCollectionViewController.m in Sources */,
 				BD34A25A1F2C13CF00326E9B /* HostelAreaContainerController.m in Sources */,
 				BD3812221F2063F0003D7367 /* TouristSiteManager.m in Sources */,
 				BD3728DD1F1F54EE009DFF50 /* TouristSiteConfiguration.m in Sources */,
@@ -1460,6 +1500,7 @@
 				BD3728D31F1F4AE2009DFF50 /* DebugController.m in Sources */,
 				BD34A26F1F2C14E000326E9B /* AnnotationMapViewController.m in Sources */,
 				BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */,
+				BD48B2D61F31B05D0021B138 /* GooglePlaceManager.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
 				BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */,
 				BD34A2721F2C150A00326E9B /* HostelAreaMapOptionsController.m in Sources */,
@@ -1468,6 +1509,7 @@
 				BD3BCF6B1F26396B00623191 /* ContactScrollViewController.m in Sources */,
 				BD34A2751F2C152100326E9B /* HostelLocationAnnotationView.m in Sources */,
 				BD3666781F20C0B000BEBE4E /* TouristSiteDetailController.m in Sources */,
+				BD339C8D1F30B9A30012C4D0 /* GooglePlace.m in Sources */,
 				BD32EBEB1F24FB6000B5E8D2 /* AudioSampleCell.m in Sources */,
 				BD32B1F31F1B6625000F5F7E /* LocationSearchController.m in Sources */,
 				BD8A35E51F1DF85800346F88 /* FlickrPhoto.m in Sources */,
@@ -1499,6 +1541,7 @@
 				BD7C2FCD1F26F18E00B835EE /* ProductPriceDisplayController.m in Sources */,
 				BD34A2691F2C14AA00326E9B /* HeaderViewConfiguration.m in Sources */,
 				BD2E4D391F25CB39005770D1 /* AcknowledgementsVC.m in Sources */,
+				BD48B2D91F31D2090021B138 /* GooglePlaceCell.m in Sources */,
 				BD355AF61F1C4A540000CB55 /* GameQuestion.m in Sources */,
 				BD35708C1F24D197003BE859 /* PolygonMapController.m in Sources */,
 				BD8A35E81F1DF85800346F88 /* FlickrSearchResults.m in Sources */,
@@ -1556,6 +1599,7 @@
 				BD3932081F259223008B3C1B /* AudioHeaderView.m in Sources */,
 				BD3EA2391F2453B5002B6D29 /* NavigationAidEntryController.m in Sources */,
 				BD38F2C11F1B35FE00471E16 /* EntryViewController.m in Sources */,
+				BD339C901F30F0150012C4D0 /* NSString+URLEncoding.m in Sources */,
 				BD38F2C01F1B35F900471E16 /* MenuComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
