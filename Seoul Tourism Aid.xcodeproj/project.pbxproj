@@ -207,6 +207,7 @@
 		BD48B2DC1F31D2770021B138 /* GooglePlaceCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD48B2DB1F31D2770021B138 /* GooglePlaceCollectionViewController.m */; };
 		BD50485E1F29A9B400226922 /* TouristSiteSectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD50485D1F29A9B400226922 /* TouristSiteSectionHeaderCell.m */; };
 		BD55E02F1F2270A000CFBE68 /* Seoul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BD55E02E1F2270A000CFBE68 /* Seoul.geojson */; };
+		BD66B8B11F331D1800583181 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66B8B01F331D1800583181 /* MainViewController.m */; };
 		BD714D6B1F21FEEB003D4C66 /* DirectionsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */; };
 		BD7C2FCC1F26F18E00B835EE /* ProductPriceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FC71F26F18E00B835EE /* ProductPriceController.m */; };
 		BD7C2FCD1F26F18E00B835EE /* ProductPriceDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2FC91F26F18E00B835EE /* ProductPriceDisplayController.m */; };
@@ -560,6 +561,8 @@
 		BD50485C1F29A99B00226922 /* TouristSiteSectionHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouristSiteSectionHeaderCell.h; sourceTree = "<group>"; };
 		BD50485D1F29A9B400226922 /* TouristSiteSectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristSiteSectionHeaderCell.m; sourceTree = "<group>"; };
 		BD55E02E1F2270A000CFBE68 /* Seoul.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Seoul.geojson; sourceTree = "<group>"; };
+		BD66B8B01F331D1800583181 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BD66B8B21F331D4200583181 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		BD714D691F21FEEB003D4C66 /* DirectionsMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsMenuController.h; sourceTree = "<group>"; };
 		BD714D6A1F21FEEB003D4C66 /* DirectionsMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsMenuController.m; sourceTree = "<group>"; };
 		BD7C2FC51F26F18E00B835EE /* ProductCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategory.h; sourceTree = "<group>"; };
@@ -1063,6 +1066,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD66B8AF1F331CFD00583181 /* CustomViewControllers */,
 				BD48B2DD1F31D3590021B138 /* GooglePlaceViewControllers */,
 				BD35873A1F29D3EF00B7ECFE /* VisitedSitesController */,
 				BD7C2FC41F26F17B00B835EE /* ProductPriceControllers */,
@@ -1138,6 +1142,15 @@
 				BD48B2DB1F31D2770021B138 /* GooglePlaceCollectionViewController.m */,
 			);
 			name = GooglePlaceViewControllers;
+			sourceTree = "<group>";
+		};
+		BD66B8AF1F331CFD00583181 /* CustomViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD66B8B01F331D1800583181 /* MainViewController.m */,
+				BD66B8B21F331D4200583181 /* MainViewController.h */,
+			);
+			name = CustomViewControllers;
 			sourceTree = "<group>";
 		};
 		BD714D681F21FEDE003D4C66 /* NavigationAidControllers */ = {
@@ -1501,6 +1514,7 @@
 				BD34A26F1F2C14E000326E9B /* AnnotationMapViewController.m in Sources */,
 				BD355AF91F1C51060000CB55 /* GameObjectArchiverKeys.m in Sources */,
 				BD48B2D61F31B05D0021B138 /* GooglePlaceManager.m in Sources */,
+				BD66B8B11F331D1800583181 /* MainViewController.m in Sources */,
 				BD38F2D21F1B367F00471E16 /* main.m in Sources */,
 				BD3728D91F1F4C9B009DFF50 /* CloudKitHelper.m in Sources */,
 				BD34A2721F2C150A00326E9B /* HostelAreaMapOptionsController.m in Sources */,

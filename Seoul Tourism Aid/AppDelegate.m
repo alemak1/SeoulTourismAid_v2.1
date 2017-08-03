@@ -84,9 +84,9 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         
         UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
         
-        GooglePlaceCollectionViewController* cvc = [storyboardC instantiateViewControllerWithIdentifier:@"GooglePlaceCollectionViewController"];
+        UIViewController* cvc = [storyboardC instantiateViewControllerWithIdentifier:@"CDVViewController"];
         
-        cvc.placeCategory = Outdoor_NaturalSite;
+        //cvc.placeCategory = Outdoor_NaturalSite;
         
         [self.window setRootViewController:cvc];
         

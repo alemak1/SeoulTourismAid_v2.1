@@ -435,7 +435,7 @@
         <scene sceneID="bqn-80-i2b">
             <objects>
                 <collectionViewController id="yTl-uz-byh" customClass="AudioSampleCollectionController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="my5-Mc-voy">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="my5-Mc-voy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.77444118920000005" green="0.97334855789999997" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -1541,7 +1541,7 @@
         <scene sceneID="gfM-oP-LoU">
             <objects>
                 <collectionViewController storyboardIdentifier="TouristSiteCVC" id="4M4-dP-rUK" customClass="TouristSiteCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="jAY-hf-MwJ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jAY-hf-MwJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83529411760000005" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1835,11 +1835,29 @@
             </objects>
             <point key="canvasLocation" x="-3816" y="3653"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="a8B-k8-GBP">
+            <objects>
+                <viewController storyboardIdentifier="CDVViewController" id="VZH-K2-FMm" customClass="CDVViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Kj-fT-ZpL"/>
+                        <viewControllerLayoutGuide type="bottom" id="mWh-bb-gD8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IZu-cc-eZq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQM-F2-ULn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8023" y="-222"/>
+        </scene>
         <!--Google Place Collection View Controller-->
         <scene sceneID="r0c-2U-REv">
             <objects>
                 <collectionViewController storyboardIdentifier="GooglePlaceCollectionViewController" id="Yk3-xE-M4G" customClass="GooglePlaceCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="w6c-Sp-0s1">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="w6c-Sp-0s1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1930,7 +1948,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuo-eZ-bMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7858" y="-244"/>
+            <point key="canvasLocation" x="-7069" y="-240"/>
         </scene>
         <!--Tourist SiteCSC Nav Controller-->
         <scene sceneID="X1L-ZP-h3s">
@@ -2225,7 +2243,7 @@
         <scene sceneID="N93-9f-c9r">
             <objects>
                 <collectionViewController id="uus-df-JOM" customClass="TouristSiteCVC_IPAD" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="E3y-lW-L7r">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="E3y-lW-L7r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
