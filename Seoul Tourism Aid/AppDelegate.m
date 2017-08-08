@@ -24,6 +24,7 @@
 
 
 #import "GooglePlaceCollectionViewController.h"
+#import "VideoSearchController.h"
 
 @import GoogleMaps;
 @import GooglePlaces;
@@ -44,8 +45,8 @@ static BOOL willInstantiateRVCFromStoryboard = true;
     /** Service Account Key: f00b9c3b783e0d8f5ea26fcbb59188dda8a11bee **/
     /** API Key: AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg**/
 
-    [GMSServices provideAPIKey:@"AIzaSyB7VFJsPM5YP2q4SKzl_utgD9QRGWEddyg"];
-    [GMSPlacesClient provideAPIKey:@"AIzaSyB7VFJsPM5YP2q4SKzl_utgD9QRGWEddyg"];
+    [GMSServices provideAPIKey:@"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"];
     
     /** Set Korea as the default time zone for the application i.e. 9h + UTC **/
     
@@ -82,13 +83,13 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         /**TranslationController* translationController = [[TranslationController alloc] init]; **/
         
         
-        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+        //UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
         
-        UIViewController* cvc = [storyboardC instantiateViewControllerWithIdentifier:@"CDVViewController"];
+        //UIViewController* cvc = [storyboardC instantiateViewControllerWithIdentifier:@"VideoSearchController"];
         
         //cvc.placeCategory = Outdoor_NaturalSite;
         
-        [self.window setRootViewController:cvc];
+        [self.window setRootViewController:rootViewController];
         
         [self.window makeKeyAndVisible];
     }

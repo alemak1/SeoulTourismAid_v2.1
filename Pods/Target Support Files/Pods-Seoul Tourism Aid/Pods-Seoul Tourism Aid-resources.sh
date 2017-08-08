@@ -80,16 +80,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle"
   install_resource "GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle"
-  install_resource "GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle"
   install_resource "phonegap-ios-template/resources/config.xml"
   install_resource "phonegap-ios-template/resources/www"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle"
   install_resource "GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle"
-  install_resource "GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle"
   install_resource "phonegap-ios-template/resources/config.xml"
   install_resource "phonegap-ios-template/resources/www"
 fi

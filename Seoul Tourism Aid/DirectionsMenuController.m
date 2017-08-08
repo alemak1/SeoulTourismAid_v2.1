@@ -40,13 +40,17 @@ typedef enum NAVIGATION_AID_AREA{
 typedef enum ANNOTATION_LOCAL_AREA{
     MAPOGU,
     ITAEWON,
-    INSADONG
+    INSADONG,
+    HONGDAE,
+    MYEONG_DONG
 }ANNOTATION_LOCAL_AREA;
 
 typedef enum VALID_NEXT_VIEW_CONTROLLER{
     MAPOGU_LOCATION_TABLEVIEW_CONTROLLER = 0,
     ITAEWON_LOCATION_TABLEVIEW_CONTROLLER,
     INSADONG_LOCATION_TABLEVIEW_CONTROLLER,
+    HONGDAE_LOCATION_TABLEVIEW_CONTROLLER,
+    MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER,
     LOCATION_SEARCH_CONTROLLER,
     TO_AIRPORT_DIRECTIONS_CONTROLLER,
     TO_SEOUL_STATION_DIRECTIONS_CONTROLLER,
@@ -54,6 +58,8 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     MAPOGU_LOCAL_AREA_MAPVIEW,
     ITAEWON_LOCAL_AREA_MAPVIEW,
     INSADONG_LOCAL_AREA_MAPVIEW,
+    HONGDAE_LOCAL_AREA_MAPVIEW,
+    MYEONG_DONG_LOCAL_AREA_MAPVIEW,
     BIKING_JOGGING_ROUTE_CONTROLLER,
     POLYGON_NAVIGATION_CONTROLLER,
     NAVIGATION_AID_CONTROLLER_WAR_MEMORIAL,
@@ -222,6 +228,12 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case INSADONG_LOCATION_TABLEVIEW_CONTROLLER:
             nextViewController = [self getNavigationControllerForTouristLocationTableViewControllerWith:INSADONG];
             break;
+        case HONGDAE_LOCATION_TABLEVIEW_CONTROLLER:
+            nextViewController = [self getNavigationControllerForTouristLocationTableViewControllerWith:HONGDAE];
+            break;
+        case MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER:
+            nextViewController = [self getNavigationControllerForTouristLocationTableViewControllerWith:MYEONG_DONG];
+            break;
         case LOCATION_SEARCH_CONTROLLER:
             nextViewController = [self getLocationSearchController];
             break;
@@ -234,6 +246,12 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             break;
         case INSADONG_LOCAL_AREA_MAPVIEW:
             nextViewController = [self getLocalAreaAnnotationController:INSADONG];
+            break;
+        case HONGDAE_LOCAL_AREA_MAPVIEW:
+            nextViewController = [self getLocalAreaAnnotationController:HONGDAE];
+            break;
+        case MYEONG_DONG_LOCAL_AREA_MAPVIEW:
+            nextViewController = [self getLocalAreaAnnotationController:MYEONG_DONG];
             break;
         case BIKING_JOGGING_ROUTE_CONTROLLER:
             nextViewController = [self getBikeRouteNavigationController];
@@ -295,15 +313,31 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             nextViewController.mapViewingRegion = [self getMapoguMapRegion];
             break;
         case ITAEWON:
+            nextViewController.annotationSourceFileName = @"PlacemarksNearItaewon";
+            nextViewController.mapViewingRegion = [self getItaewonMapRegion];
             break;
         case INSADONG:
+            nextViewController.annotationSourceFileName = @"PlacemarksNearInsadong";
+            nextViewController.mapViewingRegion = [self getInsadongMapRegion];
             break;
+        case HONGDAE:
+            nextViewController.annotationSourceFileName = @"PlacemarksNearHongdae";
+            nextViewController.mapViewingRegion = [self getInsadongMapRegion];
         default:
             break;
     }
     
 }
 
+
+
+-(MKCoordinateRegion) getHongdaeMapRegion{
+    
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+    
+    return MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.5542,126.9225), span);
+    
+}
 
 -(MKCoordinateRegion) getMapoguMapRegion{
     
@@ -312,6 +346,22 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     return MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.5416277, 126.9507303), span);
     
 }
+
+-(MKCoordinateRegion) getItaewonMapRegion{
+    
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+    return MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.5348, 126.9941), span);
+    
+}
+
+-(MKCoordinateRegion) getInsadongMapRegion{
+    
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+    return MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.5723, 126.9867), span);
+    
+}
+
+
 
 
 - (UINavigationController*) getNavigationControllerForTouristLocationTableViewControllerWith:(ANNOTATION_LOCAL_AREA)annotationArea{
@@ -346,6 +396,10 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             nextViewController.annotationFilePath = @"PlacemarksNearItaewon";
             break;
         case INSADONG:
+            nextViewController.annotationFilePath = @"PlacemarksNearInsadong";
+            break;
+        case HONGDAE:
+            nextViewController.annotationFilePath = @"PlacemarksNearHongdae";
             break;
         default:
             break;
@@ -358,19 +412,27 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     
     switch (validNextViewController) {
         case MAPOGU_LOCATION_TABLEVIEW_CONTROLLER:
-            return @"Mapo-gu (Recommended Locations)";
+            return @"Gongdeok Station (Recommended Locations)";
         case ITAEWON_LOCATION_TABLEVIEW_CONTROLLER:
             return @"Itaewon (Recommended Locations)";
         case INSADONG_LOCATION_TABLEVIEW_CONTROLLER:
             return @"Insadong (Recommended Locations)";
+        case MYEONG_DONG_LOCAL_AREA_MAPVIEW:
+            return @"Hongdae (Recommended Locations)";
+        case HONGDAE_LOCATION_TABLEVIEW_CONTROLLER:
+            return @"Myeong-dong (Recommended Locations)";
         case LOCATION_SEARCH_CONTROLLER:
             return @"Search for Locations Nearby";
         case MAPOGU_LOCAL_AREA_MAPVIEW:
-            return @"View the Mapo-gu Area";
+            return @"View the Gongdeok Station Area";
         case ITAEWON_LOCAL_AREA_MAPVIEW:
             return @"View the Itaewon Area";
         case INSADONG_LOCAL_AREA_MAPVIEW:
             return @"View the Insadong Area";
+        case HONGDAE_LOCAL_AREA_MAPVIEW:
+            return @"View the Hongdae Area";
+        case MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER:
+            return @"View the Myeong-dong Area";
         case BIKING_JOGGING_ROUTE_CONTROLLER:
             return @"Sight-Seeing Routes";
         case POLYGON_NAVIGATION_CONTROLLER:

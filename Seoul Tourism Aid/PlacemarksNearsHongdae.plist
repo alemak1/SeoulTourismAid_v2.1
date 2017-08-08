@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Convenience Store</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5572,126.9224}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Withme Convenience Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Florist/Flower Shop</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5574,126.9226}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Green Flower</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fried Chicken</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5573,126.9224}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Happy Choice Fried Chicken</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.556,125.9228}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Editing Store Museum Cafe</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Bar/Pub</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5577,126.9227}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Bravo Life Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Footwear Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5578,126.9229}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Foot Shop</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Restaurant/Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5578,126.9228}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Tasty Road</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Restaurant/Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5578,126.9229}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Izakaya</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5578,126.9229}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Cafe Moin</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Hospital/Clinic</string>
+		<key>type</key>
+		<integer>21</integer>
+		<key>location</key>
+		<string>{37.5572,126.9232}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Animal Hospital</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Restaurant/Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5572,126.9229}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Man Jok Oh Hyang Jokbal</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pubs/Bars</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5574,126.9224}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Terrace Pub and Dining</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Leisure/Recreation</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5572,126.9224}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Bonita Salsa Dance Club</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Leisure/Recreation</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5574,126.9224}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Indie Band/Live Et Loud</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Restaurant/Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5575,126.9223}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Indie Band/Live Et Loud</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Beauty Salon</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5577,126.9220}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Beauty Salon</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5572,126.9224}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Cafe Reese</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5568,126.9219}</string>
+		<key>address</key>
+		<string>161-1 Donggyodong</string>
+		<key>title</key>
+		<string>Babeans Coffee</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Seafood Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5567,126.9219}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Indie Band/Live Et Loud</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pubs/Bars</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5561,126.9214}</string>
+		<key>address</key>
+		<string>161-18 Donggyodong</string>
+		<key>title</key>
+		<string>Beer Bang European Free Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Seafood Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5561,126.9208}</string>
+		<key>address</key>
+		<string>171 Donggyoro</string>
+		<key>title</key>
+		<string>Seafood Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Mobile phone services</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5560,126.9208}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>U+ Square</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Korean Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5555,126.9209}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Byulchunji Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fast Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5555,126.9217}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>McDonalds</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5555,126.9217}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>PC Cafe</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Convenience Store</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5555,126.9218}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>CU Convenience Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fast Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5555,126.9218}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>McDonalds</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Korean Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5545,126.9217}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Sinseon Seoultang</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5546,126.9219}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Angel in Us Coffee</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Clothing Store</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5548,126.9219}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Forever 21</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>ATM/Bank</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5550,126.9218}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>KB Bank</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pharmacy/Drugstore</string>
+		<key>type</key>
+		<integer>3</integer>
+		<key>location</key>
+		<string>{37.5550,126.9218}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Pharmacy</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Mobile phone services</string>
+		<key>type</key>
+		<integer>5</integer>
+		<key>location</key>
+		<string>{37.5546,126.9223}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Olleh Oh</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5547,126.9221}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Coffee Turis Babel</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Food/Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5542,126.9225}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Bumble Bee Restaurant</string>
+	</dict>
+</array>
+</plist>

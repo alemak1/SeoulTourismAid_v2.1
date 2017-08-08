@@ -8,9 +8,8 @@
 
 #import "LookupPlaceOperation.h"
 
-@import GooglePlaces;
 
-
+/**
 
 
 @implementation LookupPlaceOperation
@@ -68,3 +67,4 @@ NSString* _placeID;
 }
 
 @end
+ **/

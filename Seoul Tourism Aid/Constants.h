@@ -9,17 +9,20 @@
 #ifndef Constants_h
 #define Constants_h
 
-#define GOOGLE_API_KEY @"AIzaSyB7VFJsPM5YP2q4SKzl_utgD9QRGWEddyg"
+#define GOOGLE_API_KEY @"AIzaSyDYMTsEqV2iwISMUFxKPwZNqAcu-yw8SSg"
 #define CLIENT_ID @"625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com"
 #define REDIRECT_URL @"com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq"
 #define kGTMAppAuthAuthorizerKey @"GTMAppAuthAuthorizerKey"
 #define kGoogleTranslationAPIScope @"https://www.googleapis.com/auth/cloud-translation"
 #define kGoogleCloudServicesScope @"https://www.googleapis.com/auth/cloud-platform"
+#define kGoogleYouTubeScope @"https://www.googleapis.com/auth/youtube"
 #define kGoogleAuthorizationEndpoint @"https://accounts.google.com/o/oauth2/v2/auth"
 #define kGoogleTokenEndpoint @"https://www.googleapis.com/oauth2/v4/token"
 #define kClientID @"625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com"
 #define kRedirectURL @"com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq:/oauthredirect"
 #define GOOGLE_TRANSLATE_BASE_URL_ENDPOINT @"https://translation.googleapis.com/language/translate/v2"
+#define GOOGLE_YOUTUBE_BASE_URL_ENDPOINT @"https://www.googleapis.com/youtube/v3/search?"
+
 #define GOOGLE_PLACES_BASE_URL_ENDPOINT @"https://maps.googleapis.com/maps/api/place/details/json?"
 #define GOOLE_SPEECH_RECOGNIZTION_BASE_URL_ENDPOINT @"https://speech.googleapis.com/v1/speech:recognize"
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
