@@ -321,8 +321,8 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             nextViewController.mapViewingRegion = [self getInsadongMapRegion];
             break;
         case HONGDAE:
-            nextViewController.annotationSourceFileName = @"PlacemarksNearHongdae";
-            nextViewController.mapViewingRegion = [self getInsadongMapRegion];
+            nextViewController.annotationSourceFileName = @"PlacemarksNearsHongdae";
+            nextViewController.mapViewingRegion = [self getHongdaeMapRegion];
         default:
             break;
     }
@@ -399,7 +399,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             nextViewController.annotationFilePath = @"PlacemarksNearInsadong";
             break;
         case HONGDAE:
-            nextViewController.annotationFilePath = @"PlacemarksNearHongdae";
+            nextViewController.annotationFilePath = @"PlacemarksNearsHongdae";
             break;
         default:
             break;
@@ -417,9 +417,9 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             return @"Itaewon (Recommended Locations)";
         case INSADONG_LOCATION_TABLEVIEW_CONTROLLER:
             return @"Insadong (Recommended Locations)";
-        case MYEONG_DONG_LOCAL_AREA_MAPVIEW:
-            return @"Hongdae (Recommended Locations)";
         case HONGDAE_LOCATION_TABLEVIEW_CONTROLLER:
+            return @"Hongdae (Recommended Locations)";
+        case MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER:
             return @"Myeong-dong (Recommended Locations)";
         case LOCATION_SEARCH_CONTROLLER:
             return @"Search for Locations Nearby";
@@ -431,7 +431,7 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             return @"View the Insadong Area";
         case HONGDAE_LOCAL_AREA_MAPVIEW:
             return @"View the Hongdae Area";
-        case MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER:
+        case MYEONG_DONG_LOCAL_AREA_MAPVIEW:
             return @"View the Myeong-dong Area";
         case BIKING_JOGGING_ROUTE_CONTROLLER:
             return @"Sight-Seeing Routes";

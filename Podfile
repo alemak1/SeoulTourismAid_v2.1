@@ -1,14 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
 source 'https://github.com/CocoaPods/Specs.git'
 target 'Seoul Tourism Aid' do
-pod 'GoogleMaps'
-pod 'GooglePlaces'
-pod 'GooglePlacePicker'
-pod 'AFNetworking', '~> 2.5'
-pod 'GTMAppAuth'
-# Pods for CordovaProj
-# CordovaLib Dependency Pod
-
-
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
+    pod 'GooglePlacePicker'
+    pod 'AFNetworking', '~> 2.5'
+    pod 'GTMAppAuth'
+    # Pods for CordovaProj
+    # CordovaLib Dependency Pod
+    
+    
     # Uncomment this line if you're using Swift or would like to use dynamic frameworks
     # use_frameworks!
     
@@ -37,9 +40,9 @@ pod 'GTMAppAuth'
     
     # The following includes the PhoneGap iOS Platform Project Template for a quick start
     pod 'phonegap-ios-template'
-  
     
-
-
-project "Seoul Tourism Aid"
+    
+    
+    
+    project "Seoul Tourism Aid"
 end
