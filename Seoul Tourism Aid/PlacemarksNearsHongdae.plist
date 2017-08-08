@@ -492,5 +492,495 @@
 		<key>title</key>
 		<string>Bumble Bee Restaurant</string>
 	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pharmacy/Drugstore</string>
+		<key>type</key>
+		<integer>3</integer>
+		<key>location</key>
+		<string>{37.5538,126.9224}</string>
+		<key>address</key>
+		<string>100 Eoulmadangno</string>
+		<key>title</key>
+		<string>Pharmacy</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cosmetics Store</string>
+		<key>type</key>
+		<integer>4</integer>
+		<key>location</key>
+		<string>{37.5537,126.9222}</string>
+		<key>address</key>
+		<string>98-1 Eoulmadangno</string>
+		<key>title</key>
+		<string>The Saem Cosmetics</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Womens&apos; Fashion</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5537,126.9221}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Comma Women&apos;s Fashion</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Soup Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5537,126.9222}</string>
+		<key>address</key>
+		<string>98 Eoulmadangno</string>
+		<key>title</key>
+		<string>Soup/Stew Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Italian Cuisine</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5535,126.9221}</string>
+		<key>address</key>
+		<string>96 Eoulmadangno</string>
+		<key>title</key>
+		<string>Kitchen Lab Italian Casual Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string></string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5533,126.9219}</string>
+		<key>address</key>
+		<string>Eoulmadango, Seogyodong, Mapgou</string>
+		<key>title</key>
+		<string>Playground Clothing Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Eyewear Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5533,126.9219}</string>
+		<key>address</key>
+		<string>Eoulmadango, Seogyodong, Mapgou</string>
+		<key>title</key>
+		<string>The Koon Eyewear</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Clothing Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5532,126.9219}</string>
+		<key>address</key>
+		<string>365-1 Seogyodong</string>
+		<key>title</key>
+		<string>Another Awesome Clothing Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Clothing Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5529,126.9218}</string>
+		<key>address</key>
+		<string>88 Eoulmadangno</string>
+		<key>title</key>
+		<string>Around 101 Clothing Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Clothing Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5527,126.9217}</string>
+		<key>address</key>
+		<string>86 Eoulmadangno</string>
+		<key>title</key>
+		<string>Dress24 Homme</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Korean Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5526,126.9217}</string>
+		<key>address</key>
+		<string>365-19 Seogyodong</string>
+		<key>title</key>
+		<string>Room Hof Soju</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Tarot Card Reading</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5524,126.9216}</string>
+		<key>address</key>
+		<string>365-23 Seogyodong</string>
+		<key>title</key>
+		<string>Queeny SBS MBC Tarot Reading</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Clothing/Accessories</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5523,126.9216}</string>
+		<key>address</key>
+		<string>Eoulmadangno</string>
+		<key>title</key>
+		<string>Accessoryholic</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Dessert/Cafe</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5524,126.9215}</string>
+		<key>address</key>
+		<string>Hong-ingno3gil</string>
+		<key>title</key>
+		<string>32 Parfait/Cafe Ann Hoise</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Korean Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5524,126.9213}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Kkunnori Room Soju Hof</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Art/Event Information Booth</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5523,126.9210}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Art Info Center</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Art/Event Information Booth</string>
+		<key>type</key>
+		<integer>22</integer>
+		<key>location</key>
+		<string>{37.5523,126.9209}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Police Station</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Japanese Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5523,126.9207}</string>
+		<key>address</key>
+		<string>30 Jandariro6gil</string>
+		<key>title</key>
+		<string>Konomi Japanese Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Indoor Archery Games</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5523,126.9207}</string>
+		<key>address</key>
+		<string>30 Jandariro6gil</string>
+		<key>title</key>
+		<string>Indoor Archery Games</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Guitar Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5523,126.9203}</string>
+		<key>address</key>
+		<string>369-27 Seogyodong</string>
+		<key>title</key>
+		<string>Guitar Plant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Guitar Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5522,126.9203}</string>
+		<key>address</key>
+		<string>19 Jandariro6gil</string>
+		<key>title</key>
+		<string>Ghandi Indian Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Tattoo/Body Piercing</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5522,126.9201}</string>
+		<key>address</key>
+		<string>17 Jandariro6gil</string>
+		<key>title</key>
+		<string>Tattoo/Piercing</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Tattoo/Body Piercing</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5522,126.9204}</string>
+		<key>address</key>
+		<string>366-27 Seogyodong</string>
+		<key>title</key>
+		<string>Ministop</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Asian Cuisine</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5523,126.9208}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Thai Pho Cha</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Noodle Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5523,126.9208}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Tantan Noodles Kitchen</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Chicken Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5523,126.9210}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Cult2Chicken and Beer</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Chicken Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5520,126.9215}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Korea Tourist Police</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Food/Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5519,126.9215}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Fusion Izakaya Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Sportswear</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5518,126.9214}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Hot Multi Sports Plex Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Contact Lens Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5517,126.9214}</string>
+		<key>address</key>
+		<string>75 Eoulmadango</string>
+		<key>title</key>
+		<string>Contact Lens Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Arcade/Game Area</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5513,126.9215}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Zzang Games Arcade</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Game/Arcade Area</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5502,126.9210}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Game Zone</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fast Food</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>location</key>
+		<string>{37.5495,126.9209}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Babs Steak and Salad Takeout</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fast Food</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5491,126.9207}</string>
+		<key>address</key>
+		<string>41-1 Eoulmadango</string>
+		<key>title</key>
+		<string>Funny Land Cafe</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Footwear</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5506,126.9211}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Dr Martens Footwear</string>
+	</dict>
 </array>
 </plist>
