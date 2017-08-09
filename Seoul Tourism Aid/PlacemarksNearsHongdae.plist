@@ -982,5 +982,439 @@
 		<key>title</key>
 		<string>Dr Martens Footwear</string>
 	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Footwear</string>
+		<key>type</key>
+		<integer>20</integer>
+		<key>location</key>
+		<string>{37.5506,126.9211}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Dr Martens Footwear</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Hostel</string>
+		<key>type</key>
+		<integer>18</integer>
+		<key>location</key>
+		<string>{37.5595,126.9237}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>The Style Hostel</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Local Police Office</string>
+		<key>type</key>
+		<integer>22</integer>
+		<key>location</key>
+		<string>{37.5602,126.9236}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Seoul Mapo Police Station</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5602,126.9238}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Yoger Presso Coffee Shop</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Cafe/Coffee Shop</string>
+		<key>type</key>
+		<integer>9</integer>
+		<key>location</key>
+		<string>{37.5600,126.9239}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Live House Music Pub</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Food/Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5599,126.9238}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Mexican Chicken</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Snack Stand</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>location</key>
+		<string>{37.5598,126.9238}</string>
+		<key>address</key>
+		<string>222 Donggyoro</string>
+		<key>title</key>
+		<string>Box Coffee Juice</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Food/Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5596,126.9238}</string>
+		<key>address</key>
+		<string>220 Donggyoro</string>
+		<key>title</key>
+		<string>Izakaya Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Food/Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5593,126.9236}</string>
+		<key>address</key>
+		<string>198-15 Donggyodong</string>
+		<key>title</key>
+		<string>The Chicken Specialists</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Ice Cream/Dessert</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5600,126.9237}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>The Dala Ice Cream</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Food/Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5600,126.9243}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Yunnam Texas Barbecue</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Convenience Store</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5601,126.9246}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>CU Convenience Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Eyeglass Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5598,126.9248}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Total Sunglass</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Tattoo Parloer</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5598, 126.9245}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Tattoo House</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Dessert/Ice Cream</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5595,126.9247}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Essere Gelato</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Jewelry Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5594,126.9247}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>En Fleur Jewelry</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Convenience Store</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5594,126.9250}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>GS-25</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Japanese Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5590,126.9248}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Ikemen Japanese Food</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Dessert/Snack</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5589,126.9245}</string>
+		<key>address</key>
+		<string>154-27 Donggyodong</string>
+		<key>title</key>
+		<string>Fuhaha Cream Bread</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Dessert/Snack</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5589,126.9246}</string>
+		<key>address</key>
+		<string>154-27 Donggyodong</string>
+		<key>title</key>
+		<string>Eunjin Dessert Studio</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>ATM/Bank</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5591,126.9248}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>ATM Machine</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Hair Salon</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5591,126.9251}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Jessica in New York Hair Salon</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Vietnamese Cuisine</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5588,126.9252}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Vietnam Bistro</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>ATM/Bank</string>
+		<key>type</key>
+		<integer>10</integer>
+		<key>location</key>
+		<string>{37.5587,126.9252}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Shinhan Bank ATM</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pizza Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5586,126.9251}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Monster Pizza Station</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pizza Restaurant</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5586, 126.9251}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Pho Noole Restaurant</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pet Supply Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5586,126.9261}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Spring Pet (Pet Supplies)</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Pet Supply Store</string>
+		<key>type</key>
+		<integer>8</integer>
+		<key>location</key>
+		<string>{37.5588,126.9271}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Jinu Hair</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Grocery Store</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5586, 126.9271}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>U-Mart Grocery Store</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Fried Chicken</string>
+		<key>type</key>
+		<integer>7</integer>
+		<key>location</key>
+		<string>{37.5587,126.9275}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>Popeyes Louisiana Chicken</string>
+	</dict>
+	<dict>
+		<key>imagefilepath</key>
+		<string></string>
+		<key>subtitle</key>
+		<string>Convenience Store</string>
+		<key>type</key>
+		<integer>2</integer>
+		<key>location</key>
+		<string>{37.5586,126.9274}</string>
+		<key>address</key>
+		<string>Hongdae Area</string>
+		<key>title</key>
+		<string>GS-25</string>
+	</dict>
 </array>
 </plist>

@@ -660,12 +660,6 @@
 				BD3728DC1F1F54EE009DFF50 /* TouristSiteConfiguration.m */,
 				BD3812201F2063E5003D7367 /* TouristSiteManager.h */,
 				BD3812211F2063F0003D7367 /* TouristSiteManager.m */,
-				BD339C8B1F30B9930012C4D0 /* GooglePlace.h */,
-				BD339C8C1F30B9A30012C4D0 /* GooglePlace.m */,
-				BD48B2CE1F3199B70021B138 /* LookupPlaceOperation.h */,
-				BD48B2D21F319A3B0021B138 /* LookupPlaceOperation.m */,
-				BD48B2D41F31B04D0021B138 /* GooglePlaceManager.h */,
-				BD48B2D51F31B05D0021B138 /* GooglePlaceManager.m */,
 			);
 			name = DataModelsAdditional;
 			sourceTree = "<group>";
@@ -1136,6 +1130,12 @@
 		BD48B2DD1F31D3590021B138 /* GooglePlaceViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD339C8B1F30B9930012C4D0 /* GooglePlace.h */,
+				BD339C8C1F30B9A30012C4D0 /* GooglePlace.m */,
+				BD48B2CE1F3199B70021B138 /* LookupPlaceOperation.h */,
+				BD48B2D21F319A3B0021B138 /* LookupPlaceOperation.m */,
+				BD48B2D41F31B04D0021B138 /* GooglePlaceManager.h */,
+				BD48B2D51F31B05D0021B138 /* GooglePlaceManager.m */,
 				BD48B2D71F31D1FD0021B138 /* GooglePlaceCell.h */,
 				BD48B2D81F31D2090021B138 /* GooglePlaceCell.m */,
 				BD48B2DA1F31D26A0021B138 /* GooglePlaceCollectionViewController.h */,

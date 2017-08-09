@@ -1869,7 +1869,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQM-F2-ULn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8023" y="-222"/>
+            <point key="canvasLocation" x="-7903" y="-201"/>
         </scene>
         <!--Google Place Collection View Controller-->
         <scene sceneID="r0c-2U-REv">

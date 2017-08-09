@@ -232,9 +232,13 @@
 
         if(category == placeCategory){
             
-            GooglePlace* googlePlace = [[GooglePlace alloc] initWithGMSPlace:placeID andWithUserDefinedCategory:[NSNumber numberWithInt:category] andWithBatchCompletionHandler:nil andCompletionHandler:completionHandler];
+            GooglePlace* googlePlace = [[GooglePlace alloc] initWithGMSPlace:placeID andWithUserDefinedCategory:[NSNumber numberWithInt:category] andWithBatchCompletionHandler:nil andCompletionHandler:^{
+            
+                [self addGooglePlace:googlePlace forCategory:category];
+                
+                completionHandler();
+            }];
 
-            [self addGooglePlace:googlePlace forCategory:category];
            
             
         }
@@ -342,9 +346,73 @@
             return;
         }
         
-        GooglePlace* googlePlace = [[GooglePlace alloc] initWithGMSPlace:placeID andWithUserDefinedCategory:[NSNumber numberWithInt:category] andWithBatchCompletionHandler:nil andCompletionHandler:nil];
+        GooglePlace* googlePlace = [[GooglePlace alloc] initWithGMSPlace:placeID andWithUserDefinedCategory:[NSNumber numberWithInt:category] andWithBatchCompletionHandler:^{
         
-        switch (category) {
+            [self addGMSPlace:googlePlace andWithGooglePlaceCategory:category];
+
+        } andCompletionHandler:^{
+        
+            [self addGMSPlace:googlePlace andWithGooglePlaceCategory:category];
+        }];
+
+    }
+
+}
+
+
+/** This function checks if the GooglePlace object is initialized; if not, it waits for a user-defined interval and then performs a second null check and attempt to add the object to the appropraite array;  if the object fails the second null-case test, it calls itself recursively **/
+
+-(void)addGMSPlace:(GooglePlace*)googlePlace andWithGooglePlaceCategory:(USER_DEFINED_GOOGLE_PLACE_CATEGORY)category{
+    
+        if(!googlePlace){
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.00 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                if(!googlePlace){
+                    return [self addGMSPlace:googlePlace andWithGooglePlaceCategory:category];
+                } else {
+                
+                    switch (category) {
+                    case Museum:
+                        [self.museums addObject:googlePlace];
+                        break;
+                    case Monument_HistoricalCulturalSite:
+                        [self.monumentsAndCulturalSites addObject:googlePlace];
+                        break;
+                    case Outdoor_NaturalSite:
+                        [self.naturalSites addObject:googlePlace];
+                        break;
+                    case Other:
+                        [self.otherSites addObject:googlePlace];
+                        break;
+                    case Park_RecreationSite:
+                        [self.parks addObject:googlePlace];
+                        break;
+                    case SeoulTower:
+                        [self.namsanTowerSites addObject:googlePlace];
+                        break;
+                    case ShoppingArea:
+                        [self.shoppingCenters addObject:googlePlace];
+                        break;
+                    case YangguCounty:
+                        [self.yangguCountySites addObject:googlePlace];
+                        break;
+                    case Temple:
+                        [self.temples addObject:googlePlace];
+                        break;
+                    default:
+                        break;
+                }
+                
+                }
+            });
+            
+            return;
+            
+        } else {
+        
+            NSLog(@"About to add GooglePlace object to appropriate array....");
+        
+            switch (category) {
             case Museum:
                 [self.museums addObject:googlePlace];
                 break;
@@ -376,10 +444,14 @@
                 break;
         }
         
+        
+            NSLog(@"GooglePlace object added to appropriate array....");
+        
     }
+    
+
 
 }
-
 
 -(void) purgeAllCategoryArrays{
     self.museums = nil;

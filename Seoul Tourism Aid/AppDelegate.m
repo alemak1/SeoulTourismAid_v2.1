@@ -83,13 +83,15 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         /**TranslationController* translationController = [[TranslationController alloc] init]; **/
         
         
-        //UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
         
-        //UIViewController* cvc = [storyboardC instantiateViewControllerWithIdentifier:@"VideoSearchController"];
+        UIViewController* videoSearchController = [storyboardC instantiateViewControllerWithIdentifier:@"VideoSearchController"];
         
-        //cvc.placeCategory = Outdoor_NaturalSite;
+        GooglePlaceCollectionViewController* googlePlaceCollectionVC = [storyboardC instantiateViewControllerWithIdentifier:@"GooglePlaceCollectionViewController"];
         
-        [self.window setRootViewController:rootViewController];
+        googlePlaceCollectionVC.placeCategory = Museum;
+        
+        [self.window setRootViewController:googlePlaceCollectionVC];
         
         [self.window makeKeyAndVisible];
     }
