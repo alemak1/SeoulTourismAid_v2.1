@@ -58,7 +58,7 @@
                   moduleName = "Seoul Tourism Aid"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yongrenwang/Desktop/SeoulTourismAid_restore/SeoulTourismAid/Seoul%20Tourism%20Aid/GooglePlace.h"
-                  timestampString = "524337206.092687"
+                  timestampString = "524339389.803388"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "41"
@@ -73,12 +73,12 @@
                   moduleName = "Seoul Tourism Aid"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yongrenwang/Desktop/SeoulTourismAid_restore/SeoulTourismAid/Seoul%20Tourism%20Aid/GooglePlace.h"
-                  timestampString = "524337206.095508"
+                  timestampString = "524339389.805061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "41"
                   endingLineNumber = "41"
-                  offsetFromSymbolStart = "17">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>

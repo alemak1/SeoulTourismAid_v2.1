@@ -230,6 +230,7 @@
 
 - (IBAction)translateToKorean:(UIButton *)sender {
     
+    [self.recognitionTask cancel];
 
     if(!self.sourceText){
         
