@@ -21,6 +21,7 @@
 #import <GTMAppAuthFetcherAuthorization.h>
 #import <GTMSessionFetcherService.h>
 
+#import "LanguageHelpOptionsController.h"
 
 @interface AuthorizationController ()
 
@@ -92,7 +93,14 @@
                     
                     [self dismissViewControllerAnimated:YES completion:^{
                         
-                        [[NSNotificationCenter defaultCenter] postNotificationName:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
+                        
+                        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+                        
+                        LanguageHelpOptionsController* languageOptionsController = [storyboardC instantiateViewControllerWithIdentifier:@"LanguageOptionsController"];
+                        
+                        [self.presentingViewController presentViewController:languageOptionsController animated:YES completion:nil];
+                        
+                        //[[NSNotificationCenter defaultCenter] postNotificationName:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
 
                     }];
                     

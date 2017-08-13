@@ -22,7 +22,6 @@
 #import "AppDelegate.h"
 #import "Constants.h"
 
-#import "GooglePlaceManager.h"
 
 @interface LanguageHelpOptionsController ()
 
@@ -34,32 +33,26 @@
 
 
 
+
 -(void)viewDidLoad{
 
- 
+  
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissViewControllerIfUnauthorized) name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
     
     if(!self.authorization){
         AuthorizationController* authorizationController = [[AuthorizationController alloc] init];
+        
+        
+        
+        authorizationController.nextViewController = self;
         
         [self presentViewController:authorizationController animated:YES completion:nil];
         
     }
     
     
-   
-    GooglePlaceManager* googlePlaceManager = [GooglePlaceManager sharedManager];
-    
-    [googlePlaceManager loadCategoryArrayWithUserDefinedCategory:Outdoor_NaturalSite andWithSinglePlaceItemCompletionHandler:^{
-        NSLog(@"Another Natural Site finished loading");
-    }];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.00 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [googlePlaceManager showDebugInfoForNaturalSites];
-        
-    });
-
+ 
     
 }
 
