@@ -20,6 +20,7 @@
 @property NSString* subtitleText;
 @property NSString* descriptionText;
 @property UIImage* detailImage;
+@property NSString* flickrAuthor;
 
 @property BOOL regionMonitoringStatus;
 

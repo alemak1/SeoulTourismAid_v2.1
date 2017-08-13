@@ -91,7 +91,7 @@ static BOOL willInstantiateRVCFromStoryboard = true;
         
         googlePlaceCollectionVC.placeCategory = Museum;
         
-        [self.window setRootViewController:googlePlaceCollectionVC];
+        [self.window setRootViewController:rootViewController];
         
         [self.window makeKeyAndVisible];
     }

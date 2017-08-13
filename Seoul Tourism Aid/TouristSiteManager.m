@@ -218,7 +218,16 @@
 #pragma mark COLLECTION VIEW DATA SOURCE METHODS
 
 -(NSInteger)totalNumberOfTouristSitesInMasterArray{
-    return [self.configurationArray count];
+    
+    if(self.configurationArray){
+        
+        return [self.configurationArray count];
+    } else {
+        
+        return 0;
+
+    }
+    
 }
 
 -(NSInteger)totalNumberOfTouristSitesForCategory:(TouristSiteCategory)

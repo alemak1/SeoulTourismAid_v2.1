@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TouristSiteCategorySelectionController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TouristSiteCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kph-gJ-hqy">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lms-Qb-FeV">
+                    <rect key="frame" x="20" y="30" width="262.5" height="29"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Title Label">
+                            <attributes>
+                                <color key="NSColor" red="0.013158468065755602" green="0.19361455292149587" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="24" name="Futura-CondensedMedium"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EkI-Gb-lD5">
+                    <rect key="frame" x="20" y="85" width="281.5" height="22.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="openNowStatusLabel">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="17" name="Futura-Medium"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FIe-ao-qdd">
+                    <rect key="frame" x="20" y="614.5" width="281.5" height="22.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="distanceLabel">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="17" name="Futura-Medium"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq2-AR-3jH">
+                    <rect key="frame" x="325" y="25" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="GXD-4k-z7E"/>
+                        <constraint firstAttribute="width" constant="40" id="eNK-4D-nMM"/>
+                    </constraints>
+                    <state key="normal" image="informationB"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FIe-ao-qdd" secondAttribute="bottom" constant="30" id="2yf-yq-iXO"/>
+                <constraint firstItem="lms-Qb-FeV" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.7" id="AyM-g5-Afl"/>
+                <constraint firstItem="EkI-Gb-lD5" firstAttribute="top" secondItem="lms-Qb-FeV" secondAttribute="bottom" constant="26" id="HXJ-tm-3G4"/>
+                <constraint firstAttribute="trailing" secondItem="Rq2-AR-3jH" secondAttribute="trailing" constant="10" id="LBc-bK-pdJ"/>
+                <constraint firstItem="FIe-ao-qdd" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="Wyq-fW-afE"/>
+                <constraint firstAttribute="bottom" secondItem="kph-gJ-hqy" secondAttribute="bottom" id="Zvh-bW-TU9"/>
+                <constraint firstItem="FIe-ao-qdd" firstAttribute="leading" secondItem="EkI-Gb-lD5" secondAttribute="leading" id="a9c-Wd-MG1"/>
+                <constraint firstItem="EkI-Gb-lD5" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="c2S-2B-GQy"/>
+                <constraint firstAttribute="trailing" secondItem="kph-gJ-hqy" secondAttribute="trailing" id="fiM-7L-1Es"/>
+                <constraint firstItem="EkI-Gb-lD5" firstAttribute="leading" secondItem="lms-Qb-FeV" secondAttribute="leading" id="jud-EJ-4t5"/>
+                <constraint firstItem="lms-Qb-FeV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="oKK-zu-BsT"/>
+                <constraint firstItem="Rq2-AR-3jH" firstAttribute="centerY" secondItem="lms-Qb-FeV" secondAttribute="centerY" id="pPO-Hz-h4C"/>
+                <constraint firstItem="kph-gJ-hqy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pyy-1Q-fXV"/>
+                <constraint firstItem="lms-Qb-FeV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="wdX-cI-PA4"/>
+                <constraint firstItem="Rq2-AR-3jH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="y7p-eR-XZq"/>
+                <constraint firstItem="kph-gJ-hqy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zNB-3L-PH2"/>
+            </constraints>
+            <connections>
+                <outlet property="distanceLabel" destination="FIe-ao-qdd" id="So6-q3-rDz"/>
+                <outlet property="isOpenStatusLabel" destination="EkI-Gb-lD5" id="dQM-an-67b"/>
+                <outlet property="siteImageView" destination="kph-gJ-hqy" id="hwk-ip-5pJ"/>
+                <outlet property="titleLabel" destination="lms-Qb-FeV" id="aOr-Q1-AKe"/>
+            </connections>
+            <point key="canvasLocation" x="-375" y="118"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="informationB" width="40" height="40"/>
+    </resources>
+</document>

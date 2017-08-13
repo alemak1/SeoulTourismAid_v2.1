@@ -102,7 +102,8 @@
         [self initializeCategoryNumberWithRecord:record];
         [self initializeSiteDescriptionWithRecord:record];
         [self initializeAdmissionFeeWithRecord:record];
-    
+        [self initializeAttributionInfoWithRecord:record];
+
         [self initializeOperatingHoursWithRecord:record];
         [self initializeOperatingHoursArrayWithRecord:record];
         
@@ -169,6 +170,7 @@
         [self initializeCategoryNumberWithRecord:record];
         [self initializeSiteDescriptionWithRecord:record];
         [self initializeAdmissionFeeWithRecord:record];
+        [self initializeAttributionInfoWithRecord:record];
         
         [self initializeOperatingHoursWithRecord:record];
         [self initializeOperatingHoursArrayWithRecord:record];
@@ -282,6 +284,21 @@
 
     if(webAddress){
         self.webAddress = webAddress;
+    }
+}
+
+-(void)initializeAttributionInfoWithRecord:(CKRecord*)record{
+    
+    NSString* flickrAuthor = record[@"flickrAuthor"]; //String
+    NSString* flickrWebAddress = record[@"flickrAuthorWebAddress"]; //String
+
+    
+    if(flickrAuthor){
+        self.flickrAuthor = flickrAuthor;
+    }
+    
+    if(flickrWebAddress){
+        self.flickrWebAddress = flickrWebAddress;
     }
 }
 

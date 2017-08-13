@@ -90,8 +90,12 @@ static void* ObservedArrayContext = &ObservedArrayContext;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         
+    
         self.selectedTouristSiteConfiguration = (TouristSiteConfiguration*) notification.userInfo[@"touristSiteConfiguration"];
         
+    
+        
+        NSLog(@"Loading the selected tourist site configuration object...");
         
         dispatch_async(dispatch_get_main_queue(), ^{
             

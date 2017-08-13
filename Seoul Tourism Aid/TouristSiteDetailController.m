@@ -37,6 +37,11 @@
 - (IBAction)getGoogleDirections:(UIButton *)sender;
 - (IBAction)getMapsDirections:(id)sender;
 
+- (IBAction)loadFlickAuthorWebsite:(UIButton *)sender;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *flickrAuthorButton;
+
 
 - (IBAction)loadWebsite:(UIButton *)sender;
 
@@ -72,41 +77,57 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
     [self.regionMonitoringSwitch setOn:self.regionMonitoringStatus];
     [self.detailImageView setImage:self.detailImage];
     
+    NSString* buttonTitle = [NSString stringWithFormat:@"Image by: %@",self.flickrAuthor];
+    
+    [self.flickrAuthorButton setTitle:buttonTitle forState:UIControlStateNormal];
+    
+    /**
+     
+     
     if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIUserInterfaceIdiomPhone] forKey:@"orientation"];
         
-    }
-}
-
--(UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
-        return UIInterfaceOrientationMaskPortrait;
-
-    }
+    } 
+     
+    **/
     
-    return UIInterfaceOrientationMaskAll;
-}
-
--(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
-        return UIInterfaceOrientationPortrait;
-    }
-    
-    return UIInterfaceOrientationUnknown;
-}
-
-
--(BOOL)shouldAutorotate{
-    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
-        return NO;
-    }
-    
-    return YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
+    
+    
     [self.descriptionLabel setText:self.descriptionText];
+        
+        
 
+}
+
+
+
+-(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        
+        [self.descriptionLabel setText:self.descriptionText];
+        
+        
+    });
+   
+
+}
+
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3.0*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        
+        [self.descriptionLabel setText:self.descriptionText];
+        
+        
+    });
+   
+
+    
 }
 
 - (IBAction)showDetailOperatingHoursVC:(UIButton *)sender {
@@ -260,6 +281,21 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
                                   [NSValue valueWithMKCoordinateSpan:region.span], MKLaunchOptionsMapSpanKey, nil]];
 }
 
+- (IBAction)loadFlickAuthorWebsite:(UIButton *)sender {
+    
+    UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
+    
+    WVController*webViewController = [storyboardC instantiateViewControllerWithIdentifier:@"WVController"];
+    
+    NSLog(@"Loading website with address...");
+    
+    NSString *webURLStr = [self.touristSiteConfiguration.flickrWebAddress stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    webViewController.webURLString = webURLStr;
+    
+    [self showViewController:webViewController sender:nil];
+}
+
 - (IBAction)loadWebsite:(UIButton *)sender {
     
     UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
@@ -267,7 +303,6 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
     WVController*webViewController = [storyboardC instantiateViewControllerWithIdentifier:@"WVController"];
     
     webViewController.webURLString = self.touristSiteConfiguration.webAddress;
-    // @"https://english.visitkorea.or.kr/enu/index.kto";
     
     [self showViewController:webViewController sender:nil];
 

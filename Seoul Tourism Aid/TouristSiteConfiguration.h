@@ -71,6 +71,8 @@ typedef enum TouristSiteCategory{
 @property UIImage* calloutImage;
 @property NSArray<UIImage*>* accessoryImages;
 
+@property NSString* flickrAuthor;
+@property NSString* flickrWebAddress;
 
 /** Computed properties determined from Google Places API (based on Google PlaceID **/
 
