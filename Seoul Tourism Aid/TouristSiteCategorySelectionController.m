@@ -170,13 +170,13 @@
     CGFloat scrollViewHeight = CGRectGetHeight(self.scrollView.frame);
     
     
-    self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*6.30);
+    self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*5.20);
     
     [self.scrollView setShowsHorizontalScrollIndicator:NO];
     
     __block CGFloat controllerIndex = 0;
     
-    CGFloat controllerHeight = scrollViewHeight*0.80;
+    CGFloat controllerHeight = scrollViewHeight*0.50;
     
     CGRect(^getCollectionViewFrame)(void) = ^CGRect(void){
         
@@ -187,7 +187,7 @@
     
     
     
-    self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*7.20);
+    self.scrollView.contentSize = CGSizeMake(scrollViewWidth, scrollViewHeight*4.20);
     
     [self.scrollView setShowsHorizontalScrollIndicator:NO];
     

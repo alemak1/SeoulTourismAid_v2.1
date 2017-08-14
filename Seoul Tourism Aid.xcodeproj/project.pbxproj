@@ -242,13 +242,11 @@
 		BD7C2FF41F27168500B835EE /* basicAudio13.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FF31F27168500B835EE /* basicAudio13.caf */; };
 		BD7C2FF61F2716D400B835EE /* basicAudio14.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD7C2FF51F2716D400B835EE /* basicAudio14.caf */; };
 		BD8A35E91F1DF85800346F88 /* FlickrSearchTerms.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD8A35E31F1DF85800346F88 /* FlickrSearchTerms.plist */; };
-		C928C9A043BBCAF29E0FBEB9 /* libPods-Seoul Tourism Aid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAD2425670C333C8C9F9B52 /* libPods-Seoul Tourism Aid.a */; };
+		BDF4C1AA1F41939F00097F77 /* MiscInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF4C1A91F41939F00097F77 /* MiscInfoController.m */; };
+		FF707576F96293FC046A896C /* libPods-Seoul Tourism Aid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C14238D1A194DE119A31EB /* libPods-Seoul Tourism Aid.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4EBDA65F351AB32A826EB0E3 /* Pods-Seoul Tourism Aid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seoul Tourism Aid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid.release.xcconfig"; sourceTree = "<group>"; };
-		9CAD2425670C333C8C9F9B52 /* libPods-Seoul Tourism Aid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seoul Tourism Aid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4A9C868BA683D4862BA330B /* Pods-Seoul Tourism Aid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seoul Tourism Aid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid.debug.xcconfig"; sourceTree = "<group>"; };
 		BD2A696A1F1F178500552521 /* DayOfWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOfWeek.h; sourceTree = "<group>"; };
 		BD2E090E1F1A208800CB69D4 /* SKViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKViewCell.h; sourceTree = "<group>"; };
 		BD2E090F1F1A20AF00CB69D4 /* SKViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKViewCell.m; sourceTree = "<group>"; };
@@ -621,6 +619,11 @@
 		BDA7BED91F1F8DF80084F39D /* NSString+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HelperMethods.m"; sourceTree = "<group>"; };
 		BDB696941F1D125E001E2314 /* OCRController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCRController.h; sourceTree = "<group>"; };
 		BDB696951F1D126A001E2314 /* OCRController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCRController.m; sourceTree = "<group>"; };
+		BDF4C1A81F41935500097F77 /* MiscInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiscInfoController.h; sourceTree = "<group>"; };
+		BDF4C1A91F41939F00097F77 /* MiscInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscInfoController.m; sourceTree = "<group>"; };
+		D76BB5AC45BF5FF84ADC53B0 /* Pods-Seoul Tourism Aid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seoul Tourism Aid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid.debug.xcconfig"; sourceTree = "<group>"; };
+		E3C14238D1A194DE119A31EB /* libPods-Seoul Tourism Aid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seoul Tourism Aid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F84B75A2125AFFFF563F9B /* Pods-Seoul Tourism Aid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seoul Tourism Aid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,7 +635,7 @@
 				BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */,
 				BD3728D61F1F4C4A009DFF50 /* CloudKit.framework in Frameworks */,
 				BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */,
-				C928C9A043BBCAF29E0FBEB9 /* libPods-Seoul Tourism Aid.a in Frameworks */,
+				FF707576F96293FC046A896C /* libPods-Seoul Tourism Aid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,18 +649,9 @@
 				BD3728D51F1F4C4A009DFF50 /* CloudKit.framework */,
 				BD3A45401F18A4D100DA5A75 /* MapKit.framework */,
 				BD3A453E1F18A4CC00DA5A75 /* CoreLocation.framework */,
-				9CAD2425670C333C8C9F9B52 /* libPods-Seoul Tourism Aid.a */,
+				E3C14238D1A194DE119A31EB /* libPods-Seoul Tourism Aid.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7165AA1B41AA3414BC9517B6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B4A9C868BA683D4862BA330B /* Pods-Seoul Tourism Aid.debug.xcconfig */,
-				4EBDA65F351AB32A826EB0E3 /* Pods-Seoul Tourism Aid.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		BD2A69661F1F169C00552521 /* DataModelsAdditional */ = {
@@ -694,6 +688,8 @@
 				BD3BCF731F2645A800623191 /* MiscellaneousContainerController.m */,
 				BD36A2491F285AB000918EB0 /* IPadAttributionController.h */,
 				BD36A24A1F285ABE00918EB0 /* IPadAttributionController.m */,
+				BDF4C1A81F41935500097F77 /* MiscInfoController.h */,
+				BDF4C1A91F41939F00097F77 /* MiscInfoController.m */,
 			);
 			name = ScrollableInfoController;
 			sourceTree = "<group>";
@@ -1059,7 +1055,7 @@
 				BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */,
 				BD3A451D1F18A3EC00DA5A75 /* Products */,
 				3EF658D733D4DCD626933478 /* Frameworks */,
-				7165AA1B41AA3414BC9517B6 /* Pods */,
+				C03E88A6EEB9DFEDBE7BBE38 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1269,6 +1265,15 @@
 			name = LanguageHelpControllers;
 			sourceTree = "<group>";
 		};
+		C03E88A6EEB9DFEDBE7BBE38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D76BB5AC45BF5FF84ADC53B0 /* Pods-Seoul Tourism Aid.debug.xcconfig */,
+				F3F84B75A2125AFFFF563F9B /* Pods-Seoul Tourism Aid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1276,12 +1281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD3A45361F18A3ED00DA5A75 /* Build configuration list for PBXNativeTarget "Seoul Tourism Aid" */;
 			buildPhases = (
-				FB6C5E0CAD928FD719D4EA77 /* [CP] Check Pods Manifest.lock */,
+				964E3F95404691A361F93913 /* [CP] Check Pods Manifest.lock */,
 				BD3A45181F18A3EC00DA5A75 /* Sources */,
 				BD3A45191F18A3EC00DA5A75 /* Frameworks */,
 				BD3A451A1F18A3EC00DA5A75 /* Resources */,
-				8434CF822DA8C77672B6C815 /* [CP] Embed Pods Frameworks */,
-				8D0D5DCA2F937D20D6564DBB /* [CP] Copy Pods Resources */,
+				0B7A412F108099FE9C32BA99 /* [CP] Embed Pods Frameworks */,
+				BE43C1EC50BDBD3ABAD93703 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1453,7 +1458,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8434CF822DA8C77672B6C815 /* [CP] Embed Pods Frameworks */ = {
+		0B7A412F108099FE9C32BA99 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1468,7 +1473,25 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D0D5DCA2F937D20D6564DBB /* [CP] Copy Pods Resources */ = {
+		964E3F95404691A361F93913 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Seoul Tourism Aid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE43C1EC50BDBD3ABAD93703 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1488,24 +1511,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seoul Tourism Aid/Pods-Seoul Tourism Aid-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB6C5E0CAD928FD719D4EA77 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Seoul Tourism Aid-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1576,6 +1581,7 @@
 				BD38E3041F39D74D00C97639 /* GoogleURLGenerator.m in Sources */,
 				BD38E3051F39D74D00C97639 /* GoogleJSONResponseParser.m in Sources */,
 				BD38E3061F39D74D00C97639 /* KoreanLearningScene.m in Sources */,
+				BDF4C1AA1F41939F00097F77 /* MiscInfoController.m in Sources */,
 				BD38E3071F39D74D00C97639 /* GeneralGameSceneController.m in Sources */,
 				BD38E3081F39D74D00C97639 /* GameQuestion.m in Sources */,
 				BD38E3091F39D74D00C97639 /* GameObjectArchiverKeys.m in Sources */,
@@ -1709,7 +1715,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1760,7 +1766,7 @@
 		};
 		BD3A45371F18A3ED00DA5A75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4A9C868BA683D4862BA330B /* Pods-Seoul Tourism Aid.debug.xcconfig */;
+			baseConfigurationReference = D76BB5AC45BF5FF84ADC53B0 /* Pods-Seoul Tourism Aid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Seoul Tourism Aid/Seoul Tourism Aid.entitlements";
@@ -1774,7 +1780,7 @@
 		};
 		BD3A45381F18A3ED00DA5A75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EBDA65F351AB32A826EB0E3 /* Pods-Seoul Tourism Aid.release.xcconfig */;
+			baseConfigurationReference = F3F84B75A2125AFFFF563F9B /* Pods-Seoul Tourism Aid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Seoul Tourism Aid/Seoul Tourism Aid.entitlements";

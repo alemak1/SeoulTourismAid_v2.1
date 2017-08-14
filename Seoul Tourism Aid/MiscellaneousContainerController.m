@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "MiscellaneousContainerController.h"
-
-
+#import "UIViewController+HelperMethods.h"
 
 @interface MiscellaneousContainerController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
+
 
 @end
 
@@ -86,5 +88,4 @@
     
     
 }
-
 @end

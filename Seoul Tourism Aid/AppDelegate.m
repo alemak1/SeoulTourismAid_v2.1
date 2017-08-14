@@ -38,7 +38,7 @@
 @implementation AppDelegate
 
 static BOOL willInstantiateRVCFromStoryboard = true;
-
+static BOOL isFirstLaunch = YES;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -72,24 +72,25 @@ static BOOL willInstantiateRVCFromStoryboard = true;
             rootViewController = [[EntryViewController alloc] init];
         }
         
-        /**
-        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
         
-        TouristSiteCollectionViewController* touristSiteCVC = [storyboardC instantiateViewControllerWithIdentifier:@"TouristSiteCSCNavController"];
-     
-        DebugController* debugController = [[DebugController alloc] init];
-        **/
+        if(isFirstLaunch){
+            
+            NSString* path = [[NSBundle mainBundle] pathForResource:@"RegionIdentifiers" ofType:@"plist"];
         
-        /**TranslationController* translationController = [[TranslationController alloc] init]; **/
+            NSArray* regionDictArray = [NSArray arrayWithContentsOfFile:path];
         
-        
-        UIStoryboard* storyboardC = [UIStoryboard storyboardWithName:@"StoryboardC" bundle:nil];
-        
-        UIViewController* videoSearchController = [storyboardC instantiateViewControllerWithIdentifier:@"VideoSearchController"];
-        
-        GooglePlaceCollectionViewController* googlePlaceCollectionVC = [storyboardC instantiateViewControllerWithIdentifier:@"GooglePlaceCollectionViewController"];
-        
-        googlePlaceCollectionVC.placeCategory = Museum;
+            for (NSDictionary* regionDict in regionDictArray) {
+            
+                NSString* regionIdentifier = regionDict[@"RegionIdentifier"];
+            
+                [[NSUserDefaults standardUserDefaults] setObject:[NSNull null] forKey:regionIdentifier];
+            
+            
+            }
+            
+            isFirstLaunch = NO;
+        }
+
         
         [self.window setRootViewController:rootViewController];
         

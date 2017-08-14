@@ -29,7 +29,6 @@ BOOL _shouldSeeVisitedSitesOnly = false;
 
 -(void)viewWillLayoutSubviews{
     
-   
 }
 
 -(void)viewDidLoad{
@@ -44,7 +43,10 @@ BOOL _shouldSeeVisitedSitesOnly = false;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
     return 1;
+
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -60,7 +62,11 @@ BOOL _shouldSeeVisitedSitesOnly = false;
     
     NSDate* siteVisitation = [[NSUserDefaults standardUserDefaults] valueForKey:title];
     
-    if(!siteVisitation){
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterLongStyle];
+    NSString* dateString = [formatter stringFromDate:siteVisitation];
+    
+    if(!dateString){
         NSLog(@"There are no visitations recorded for that site");
         
         [cell.detailTextLabel setText:@"Region has not been entered yet"];
@@ -71,10 +77,7 @@ BOOL _shouldSeeVisitedSitesOnly = false;
     } else {
         NSLog(@"That site has been visited");
 
-        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateStyle:NSDateFormatterLongStyle];
-        NSString* dateString = [formatter stringFromDate:siteVisitation];
-        
+       
         
         NSString* detailString = [NSString stringWithFormat:@"Date of last visitation: %@",dateString];
         
