@@ -60,14 +60,14 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    
- 
     [self setMapRegion];
+
+
 }
 
 
 -(void)viewDidLoad{
-    
+
 }
 
 #pragma mark ******** PUBLIC HELPER METHODS FOR UPDATING THE UI
@@ -194,33 +194,37 @@
     NSLog(@"MapView is loading the downloaded annotations...");
     
     [self.mapView removeAnnotations:self.mapView.annotations];
-
-    [self.mapView addAnnotations:self.annotationStore];
+   
+    if(self.annotationStore){
+        [self.mapView addAnnotations:self.annotationStore];
+    }
 }
 
 
 -(void) loadCircleOverlays{
     
-    for(WarMemorialAnnotation* annotation in self.annotationStore){
+    if(self.annotationStore){
+        for(WarMemorialAnnotation* annotation in self.annotationStore){
         
-        CLLocationCoordinate2D circleCenter = [annotation coordinate];
+            CLLocationCoordinate2D circleCenter = [annotation coordinate];
         
-        MKCircle* circleOverlay = [MKCircle circleWithCenterCoordinate:circleCenter radius:30.0];
+            MKCircle* circleOverlay = [MKCircle circleWithCenterCoordinate:circleCenter radius:30.0];
         
-        NSLog(@"Adding circle overlay with description %@",[circleOverlay description]);
+            NSLog(@"Adding circle overlay with description %@",[circleOverlay description]);
         
-        [self.mapView addOverlay:circleOverlay];
+            [self.mapView addOverlay:circleOverlay];
+        }
     }
 }
 
 
 -(void) loadPolygonOverlays{
     
-  
-    for(NSString* filePath in self.polygonOverlayFileSources){
-        [self loadPolygonOverlayWithFileName:filePath];
+    if(self.polygonOverlayFileSources){
+        for(NSString* filePath in self.polygonOverlayFileSources){
+            [self loadPolygonOverlayWithFileName:filePath];
+        }
     }
-    
 }
 
 

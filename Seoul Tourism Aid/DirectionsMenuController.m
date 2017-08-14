@@ -32,7 +32,8 @@
 typedef enum NAVIGATION_AID_AREA{
     WAR_MEMORIAL_NAV_AREA,
     WORLD_CUP_STADIUM_NAV_AREA,
-    SEOUL_TOWER_NAV_AREA,
+    DMZ_NAV_AREA,
+    DONGDAEMUN_NAV_AREA,
     SEOUL_GRAND_PARK_AREA,
     NAVIGATION_AID_AREA_END_INDEX
 }NAVIGATION_AID_AREA;
@@ -42,7 +43,6 @@ typedef enum ANNOTATION_LOCAL_AREA{
     ITAEWON,
     INSADONG,
     HONGDAE,
-    MYEONG_DONG
 }ANNOTATION_LOCAL_AREA;
 
 typedef enum VALID_NEXT_VIEW_CONTROLLER{
@@ -50,7 +50,6 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     ITAEWON_LOCATION_TABLEVIEW_CONTROLLER,
     INSADONG_LOCATION_TABLEVIEW_CONTROLLER,
     HONGDAE_LOCATION_TABLEVIEW_CONTROLLER,
-    MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER,
     LOCATION_SEARCH_CONTROLLER,
     TO_AIRPORT_DIRECTIONS_CONTROLLER,
     TO_SEOUL_STATION_DIRECTIONS_CONTROLLER,
@@ -59,13 +58,12 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     ITAEWON_LOCAL_AREA_MAPVIEW,
     INSADONG_LOCAL_AREA_MAPVIEW,
     HONGDAE_LOCAL_AREA_MAPVIEW,
-    MYEONG_DONG_LOCAL_AREA_MAPVIEW,
     BIKING_JOGGING_ROUTE_CONTROLLER,
-    POLYGON_NAVIGATION_CONTROLLER,
     NAVIGATION_AID_CONTROLLER_WAR_MEMORIAL,
     NAVIGATION_AID_CONTROLLER_WORLD_CUP_STADIUM,
-    NAVIGATION_AID_CONTROLLER_SEOUL_TOWER,
     NAVIGATION_AID_CONTROLLER_SEOUL_GRAND_PARK,
+    NAVIGATION_AID_CONTROLLER_DONGDAEMUN,
+    NAVIGATION_AID_CONTROLLER_DMZ,
     LAST_VIEW_CONTROLLER,
 }VALID_NEXT_VIEW_CONTROLLER;
 
@@ -231,9 +229,6 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case HONGDAE_LOCATION_TABLEVIEW_CONTROLLER:
             nextViewController = [self getNavigationControllerForTouristLocationTableViewControllerWith:HONGDAE];
             break;
-        case MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER:
-            nextViewController = [self getNavigationControllerForTouristLocationTableViewControllerWith:MYEONG_DONG];
-            break;
         case LOCATION_SEARCH_CONTROLLER:
             nextViewController = [self getLocationSearchController];
             break;
@@ -250,26 +245,23 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case HONGDAE_LOCAL_AREA_MAPVIEW:
             nextViewController = [self getLocalAreaAnnotationController:HONGDAE];
             break;
-        case MYEONG_DONG_LOCAL_AREA_MAPVIEW:
-            nextViewController = [self getLocalAreaAnnotationController:MYEONG_DONG];
-            break;
         case BIKING_JOGGING_ROUTE_CONTROLLER:
             nextViewController = [self getBikeRouteNavigationController];
             break;
-        case POLYGON_NAVIGATION_CONTROLLER:
-            nextViewController = [self getPolygonNavigationController];
-            break;
         case NAVIGATION_AID_CONTROLLER_WAR_MEMORIAL:
             nextViewController = [self getNavigationAidControllerForArea:WAR_MEMORIAL_NAV_AREA];
-            break;
-        case NAVIGATION_AID_CONTROLLER_SEOUL_TOWER:
-            nextViewController = [self getNavigationAidControllerForArea:SEOUL_TOWER_NAV_AREA];
             break;
         case NAVIGATION_AID_CONTROLLER_WORLD_CUP_STADIUM:
             nextViewController = [self getNavigationAidControllerForArea:WORLD_CUP_STADIUM_NAV_AREA];
             break;
         case NAVIGATION_AID_CONTROLLER_SEOUL_GRAND_PARK:
             nextViewController = [self getNavigationAidControllerForArea:SEOUL_GRAND_PARK_AREA];
+            break;
+        case NAVIGATION_AID_CONTROLLER_DMZ:
+            nextViewController = [self getNavigationAidControllerForArea:DMZ_NAV_AREA];
+            break;
+        case NAVIGATION_AID_CONTROLLER_DONGDAEMUN:
+            nextViewController = [self getNavigationAidControllerForArea:DONGDAEMUN_NAV_AREA];
             break;
         case TO_AIRPORT_DIRECTIONS_CONTROLLER:
             nextViewController = [self getToAirportDirectionsController];
@@ -419,8 +411,6 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             return @"Insadong (Recommended Locations)";
         case HONGDAE_LOCATION_TABLEVIEW_CONTROLLER:
             return @"Hongdae (Recommended Locations)";
-        case MYEONGDONG_LOCATION_TABLEVIEW_CONTROLLER:
-            return @"Myeong-dong (Recommended Locations)";
         case LOCATION_SEARCH_CONTROLLER:
             return @"Search for Locations Nearby";
         case MAPOGU_LOCAL_AREA_MAPVIEW:
@@ -431,18 +421,16 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
             return @"View the Insadong Area";
         case HONGDAE_LOCAL_AREA_MAPVIEW:
             return @"View the Hongdae Area";
-        case MYEONG_DONG_LOCAL_AREA_MAPVIEW:
-            return @"View the Myeong-dong Area";
         case BIKING_JOGGING_ROUTE_CONTROLLER:
             return @"Sight-Seeing Routes";
-        case POLYGON_NAVIGATION_CONTROLLER:
-            return @"Local Building, Park, and Site Regions";
         case NAVIGATION_AID_CONTROLLER_WAR_MEMORIAL:
             return @"War Memorial Navigation Aid";
         case NAVIGATION_AID_CONTROLLER_WORLD_CUP_STADIUM:
             return @"World Cup Stadium Navigation Aid";
-        case NAVIGATION_AID_CONTROLLER_SEOUL_TOWER:
-            return @"Seoul Tower Navigation Aid";
+        case NAVIGATION_AID_CONTROLLER_DMZ:
+            return @"DMZ Navigation Aid";
+        case NAVIGATION_AID_CONTROLLER_DONGDAEMUN:
+            return @"Dongdaemun Navigation Aid";
         case NAVIGATION_AID_CONTROLLER_SEOUL_GRAND_PARK:
             return @"Seoul Grand Park Zoo Navigation Aid";
         case TO_SEOUL_STATION_DIRECTIONS_CONTROLLER:
@@ -494,12 +482,14 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
         case WORLD_CUP_STADIUM_NAV_AREA:
             [self configureNavigationAidControllerForWorldCupParkSettings:nextViewController];
             break;
-        case SEOUL_TOWER_NAV_AREA:
-            break;
         case SEOUL_GRAND_PARK_AREA:
-            
             [self configureNavigationAidControllerForSeoulGrandParkSettings:nextViewController];
-        
+            break;
+        case DMZ_NAV_AREA:
+            [self configureNavigationAidControllerForDMZSettings:nextViewController];
+            break;
+        case DONGDAEMUN_NAV_AREA:
+            [self configureNavigationAidControllerForDongdaemunSettings:nextViewController];
             break;
         default:
             break;
@@ -742,7 +732,46 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     return warMemorialRegion;
 }
 
+#pragma mark ******* HELPER FUNCTIONS FOR CONFIGURING DONGDAEMUN NAVIGATION AID
+
+-(void)configureNavigationAidControllerForDongdaemunSettings:(NavigationAidEntryController*)nextViewController{
+    
+    /** navigationRegionName is the searchable query parameter that specifies the navigation region for which annotations will be downloaded from CloudKit and is used to creat the NSPredicate object that is passed to the CKQuery used to download the annotations **/
+    
+    nextViewController.navigationRegionName = @"Dongdaemun";
+    
+    nextViewController.annotationsFileSource = nil;
+    
+    /** The annotation view image used to display annotations on the map view **/
+    
+    nextViewController.annotationViewImagePath = @"koreaB30";
+    
+    nextViewController.polygonOverlayFileSources = nil;
+    
+    nextViewController.mapCoordinateRegion = [self getDongdaemunMapRegion];
+}
+
+#pragma mark ******* HELPER FUNCTIONS FOR CONFIGURING DMZ NAVIGATION AID
+
+-(void)configureNavigationAidControllerForDMZSettings:(NavigationAidEntryController*)nextViewController{
+    
+    /** navigationRegionName is the searchable query parameter that specifies the navigation region for which annotations will be downloaded from CloudKit and is used to creat the NSPredicate object that is passed to the CKQuery used to download the annotations **/
+    
+    nextViewController.navigationRegionName = @"DMZ";
+    
+    nextViewController.annotationsFileSource = nil;
+    
+    /** The annotation view image used to display annotations on the map view **/
+    
+    nextViewController.annotationViewImagePath = @"compassA";
+    
+    nextViewController.polygonOverlayFileSources = nil;
+    
+    nextViewController.mapCoordinateRegion = [self getDMZMapRegion];
+}
+
 #pragma mark ******* HELPER FUNCTIONS FOR CONFIGURING SEOUL GRAND PARK NAVIGATION AID
+
 
 -(void)configureNavigationAidControllerForSeoulGrandParkSettings:(NavigationAidEntryController*)nextViewController{
     
@@ -761,6 +790,26 @@ typedef enum VALID_NEXT_VIEW_CONTROLLER{
     nextViewController.mapCoordinateRegion = [self getSeoulGrandParkMapRegion];
 }
 
+
+-(MKCoordinateRegion)getDMZMapRegion{
+    
+    
+    CLLocationCoordinate2D thirdTunnelCoordinate = CLLocationCoordinate2DMake(37.9166,126.6990);
+    
+    MKCoordinateRegion dmzRegion = MKCoordinateRegionMake(thirdTunnelCoordinate, MKCoordinateSpanMake(0.05, 0.05));
+    
+    return dmzRegion;
+}
+
+-(MKCoordinateRegion)getDongdaemunMapRegion{
+    
+    
+    CLLocationCoordinate2D oroomFashionShowRoomLoc = CLLocationCoordinate2DMake(37.5684,127.0112);
+    
+    MKCoordinateRegion dongdaemunRegion = MKCoordinateRegionMake(oroomFashionShowRoomLoc, MKCoordinateSpanMake(0.005, 0.005));
+    
+    return dongdaemunRegion;
+}
 
 
 -(MKCoordinateRegion)getSeoulGrandParkMapRegion{
