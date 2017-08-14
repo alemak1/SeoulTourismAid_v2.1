@@ -665,6 +665,9 @@ NSString* siteDescription = record[@"description"]; //String
         
         NSString* todayString = [self getDayStringForNSCalendarWeekdayUnit:todayWeekday];
         
+        
+        NSLog(@"Opening time information for: %@",self.name);
+        
         double openingTime = [self.operatingHours getOpeningTimeForDay:todayString];
         NSLog(@"Opening time for today is %f",openingTime);
         
@@ -948,7 +951,7 @@ NSString* siteDescription = record[@"description"]; //String
         self.location = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
     }
     
-    return [userLocation distanceFromLocation:self.location];
+    return [userLocation distanceFromLocation:self.location]/1000;
 }
 
 -(NSString*)distanceFromUserString{

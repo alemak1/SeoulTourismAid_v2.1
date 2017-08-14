@@ -171,15 +171,16 @@ static void *TouristConfigurationContext = &TouristConfigurationContext;
     endLocation = self.touristSiteConfigurationObject.location ? self.touristSiteConfigurationObject.location : [[CLLocation alloc] initWithLatitude:self.touristSiteConfigurationObject.coordinate.latitude longitude:self.touristSiteConfigurationObject.coordinate.longitude];
     
     
-    CLLocationDistance distanceToSite = [userLocation distanceFromLocation:endLocation]/1000.00;
+    CLLocationDistance distanceToSite = [userLocation distanceFromLocation:endLocation];
     
     
-    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc] init];
-    [numberFormatter setMaximumFractionDigits:2];
+    //NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc] init];
+    //[numberFormatter setMaximumFractionDigits:2];
     
+    //return [numberFormatter stringFromNumber:[NSNumber numberWithDouble:distanceToSite]];
+
     
-    return [numberFormatter stringFromNumber:[NSNumber numberWithDouble:distanceToSite]];
-    
+    return [NSString stringWithFormat:@"%2f",distanceToSite/1000];
 }
 
 #pragma mark ****** IBACTION IMPLEMENTATIONS
