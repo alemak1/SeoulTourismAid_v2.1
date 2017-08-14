@@ -1930,9 +1930,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zNA-HO-gZ5">
+                        <barButtonItem key="leftBarButtonItem" title="See Visited Sites Only" id="X2W-Co-4Sd">
+                            <connections>
+                                <action selector="toggleVisitedSites:" destination="WLW-6n-Lhn" id="Aql-z1-Mr3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="pm6-7S-Kpj">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fSn-05-wBL">
-                                <rect key="frame" x="134" y="7" width="170" height="30"/>
+                                <rect key="frame" x="834" y="7" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="App Main Menu"/>
                                 <connections>
@@ -1941,11 +1946,14 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="toggleVisitedSitesButton" destination="X2W-Co-4Sd" id="g21-G0-lRJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOY-S4-GIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7WB-N6-IqR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3816" y="3653"/>
+            <point key="canvasLocation" x="-4006" y="3980"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="a8B-k8-GBP">

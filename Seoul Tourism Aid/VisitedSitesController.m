@@ -15,28 +15,21 @@
 
 @property (readonly) NSSet* visitedSites;
 
+- (IBAction)toggleVisitedSites:(UIBarButtonItem *)sender;
+
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *toggleVisitedSitesButton;
+
 @end
 
 @implementation VisitedSitesController
 
+BOOL _shouldSeeVisitedSitesOnly = false;
+
+
 -(void)viewWillLayoutSubviews{
     
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"RegionIdentifiers" ofType:@"plist"];
-    
-    NSArray* regionDictArray = [NSArray arrayWithContentsOfFile:path];
-    
-    for (NSDictionary* regionDict in regionDictArray) {
-        
-        
-        NSString* regionIdentifier = regionDict[@"RegionIdentifier"];
-        
-        NSString* savedIdentifier = [[NSUserDefaults standardUserDefaults] valueForKey:regionIdentifier];
-        
-        if(!savedIdentifier){
-            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:regionIdentifier];
-
-        }
-    }
+   
 }
 
 -(void)viewDidLoad{
@@ -61,10 +54,8 @@
     
     NSArray* visitedSites = [self.visitedSites allObjects];
     
-    CLRegion* region = [visitedSites objectAtIndex:indexPath.row];
+    NSString* title = [visitedSites objectAtIndex:indexPath.row];
     
-    NSString* title = region.identifier;
-
     [cell.textLabel setText:title];
     
     NSDate* siteVisitation = [[NSUserDefaults standardUserDefaults] valueForKey:title];
@@ -101,10 +92,61 @@
 
 -(NSSet*)visitedSites{
     
-    return [[UserLocationManager sharedLocationManager] monitoredRegions];
+    NSMutableSet* allSites = [[NSMutableSet alloc] init];
+    
+    NSMutableSet* visitedSites = [[NSMutableSet alloc] init];
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"RegionIdentifiers" ofType:@"plist"];
+    
+    NSArray* regionDictArray = [NSArray arrayWithContentsOfFile:path];
+    
+    for (NSDictionary* regionDict in regionDictArray) {
+        
+        
+        NSString* regionIdentifier = regionDict[@"RegionIdentifier"];
+        
+        
+        [allSites addObject:regionIdentifier];
+        
+        NSDate* siteVisitation = [[NSUserDefaults standardUserDefaults] valueForKey:regionIdentifier];
+        
+        if(siteVisitation){
+            
+            [visitedSites addObject:regionIdentifier];
+        
+        }
+
+        
+    }
+    
+    if(_shouldSeeVisitedSitesOnly){
+        
+        return visitedSites;
+    } else {
+        
+        return allSites;
+    }
 
     
     
 }
+
+- (IBAction)toggleVisitedSites:(UIBarButtonItem *)sender {
+    _shouldSeeVisitedSitesOnly = !_shouldSeeVisitedSitesOnly;
+    
+    if(_shouldSeeVisitedSitesOnly){
+        
+        [self.toggleVisitedSitesButton setTitle:@"See All Sites"];
+        
+    } else {
+        
+        [self.toggleVisitedSitesButton setTitle:@"See Visited Sites Only"];
+        
+    }
+    
+    [self.tableView reloadData];
+}
+
+
 
 @end

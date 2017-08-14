@@ -56,19 +56,6 @@
 	</dict>
 	<dict>
 		<key>category</key>
-		<integer>11</integer>
-		<key>placeID</key>
-		<string></string>
-		<key>Address</key>
-		<string>621, Hu-ri, Haean-myeon, Yanggu-gun, Gangwon-do
-</string>
-		<key>Coord</key>
-		<string>{38.3282683,128.124224}</string>
-		<key>RegionIdentifier</key>
-		<string>Eulji Observatory</string>
-	</dict>
-	<dict>
-		<key>category</key>
 		<integer>6</integer>
 		<key>placeID</key>
 		<string>ChIJ11NuUdO4fDURb07Dgu9Aij8</string>
@@ -131,19 +118,6 @@
 		<string>{36.3368165,126.6533277}</string>
 		<key>RegionIdentifier</key>
 		<string>Seongjusan Recreational Forest</string>
-	</dict>
-	<dict>
-		<key>category</key>
-		<integer>11</integer>
-		<key>placeID</key>
-		<string>ChIJd7hHuLyH2F8RPBoSduSiU0g</string>
-		<key>Address</key>
-		<string>233-4, Ihyeon-ri, Haean-myeon, Yanggu-gun, Gangwon-do
-</string>
-		<key>Coord</key>
-		<string>{38.1486,127.9830059}</string>
-		<key>RegionIdentifier</key>
-		<string>The 4th Tunnel</string>
 	</dict>
 	<dict>
 		<key>category</key>
@@ -302,19 +276,6 @@
 	</dict>
 	<dict>
 		<key>category</key>
-		<integer>11</integer>
-		<key>placeID</key>
-		<string>ChIJy9gVVfSG2F8RNESxbhjMA_A</string>
-		<key>Address</key>
-		<string>35, Haeanseohwa-ro, Haean-myeon, Yanggu-gun, Gangwon-do
-</string>
-		<key>Coord</key>
-		<string>{38.2896083,128.1437215}</string>
-		<key>RegionIdentifier</key>
-		<string>Yanggu Unification Hall</string>
-	</dict>
-	<dict>
-		<key>category</key>
 		<integer>7</integer>
 		<key>placeID</key>
 		<string>ChIJ0URvckGFfDUR7R6yo-PKp-I</string>
@@ -337,19 +298,6 @@
 		<string>{37.5804376,126.887287}</string>
 		<key>RegionIdentifier</key>
 		<string>Korean Film Museum</string>
-	</dict>
-	<dict>
-		<key>category</key>
-		<integer>11</integer>
-		<key>placeID</key>
-		<string></string>
-		<key>Address</key>
-		<string>35, Haeanseohwa-ro, Yanggu-gun, Gangwon-do
-</string>
-		<key>Coord</key>
-		<string>{38.2896083,128.1437215}</string>
-		<key>RegionIdentifier</key>
-		<string>War Memorial Museum in Yanggu</string>
 	</dict>
 	<dict>
 		<key>category</key>
@@ -471,40 +419,116 @@
 		<key>category</key>
 		<integer>11</integer>
 		<key>placeID</key>
-		<string>ChIJtcAH6G99YjURbdvR9h8FnQc</string>
+		<string>ChIJR_Mh7oqNfDURCu1WzQZWCec</string>
 		<key>Address</key>
-		<string>510 Ha-ri, Yanggu-eup, Yanggu, Gangwon-do, South Korea
-</string>
+		<string>210-358, Je3ttanggul-ro, Paju-si, Gyeonggi-do</string>
 		<key>Coord</key>
-		<string>{37.8719411,127.0138134}</string>
+		<string>{37.9165,126.6993}</string>
 		<key>RegionIdentifier</key>
-		<string>Yanggu Shrine Museum</string>
+		<string>The 3rd Tunnel</string>
 	</dict>
 	<dict>
 		<key>category</key>
 		<integer>11</integer>
 		<key>placeID</key>
-		<string>ChIJJWnxsu6AYjURTipL6U0S4t8</string>
+		<string>ChIJ4-IaFvvzfDURGc9rCXvxR-M</string>
 		<key>Address</key>
-		<string>239-3 Jangpyeong-ri, Bangsan-myeon, Yanggu, Gangwon-do, South Korea
+		<string>310, Je3ttanggul-ro, Paju-si, Gyeonggi-do
 </string>
 		<key>Coord</key>
-		<string>{37.8719411,127.0138134}</string>
+		<string>{37.9088,126.7045}</string>
 		<key>RegionIdentifier</key>
-		<string>Minshan Museum</string>
+		<string>Dora Observatory</string>
 	</dict>
 	<dict>
 		<key>category</key>
 		<integer>11</integer>
 		<key>placeID</key>
-		<string>ChIJHZB9Y_NwYjURmKsew2NpX1k</string>
+		<string>ChIJN01aPTPyfDURKfg0ywikFhA</string>
 		<key>Address</key>
-		<string>415-1 Sangdong-ri, Inje-eup, Inje, Gangwon-do, South Korea
+		<string>148-53, Imjingak-ro, Paju-si, Gyeonggi-do
 </string>
 		<key>Coord</key>
-		<string>{37.8719411,127.0138134}</string>
+		<string>{37.8897,126.7400}</string>
 		<key>RegionIdentifier</key>
-		<string>Inje Mountain Village Folk Museum</string>
+		<string>Imjingak Resort</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string>ChIJ0bSEKOzzfDURWwFl51vQIbk</string>
+		<key>Address</key>
+		<string>307, Huimang-ro, Paju-si, Gyeonggi-do</string>
+		<key>Coord</key>
+		<string>{37.8991,126.7098}</string>
+		<key>RegionIdentifier</key>
+		<string>Dorasan Station</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>11</integer>
+		<key>placeID</key>
+		<string>ChIJ0bSEKOzzfDURWwFl51vQIbk</string>
+		<key>Address</key>
+		<string>Janghoe-ri, Danseong-myeon, Danyang-gun, Chungcheongbuk-do
+</string>
+		<key>Coord</key>
+		<string>{36.9317376,128.2421095}</string>
+		<key>RegionIdentifier</key>
+		<string>Gudambong Peak &amp; Oksunbong Peak</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>1</integer>
+		<key>placeID</key>
+		<string>ChIJqTGgV2jpZDUR5odOx6-kKC0</string>
+		<key>Address</key>
+		<string>405 beopjusa-ro, Songnisan-myeon, Boeun-gun, Chungcheongbuk-do, South Korea</string>
+		<key>Coord</key>
+		<string>{36.5423722,127.8315389}</string>
+		<key>RegionIdentifier</key>
+		<string>Beopjusa Temple
+</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>1</integer>
+		<key>placeID</key>
+		<string>ChIJ-aXxZAzQZjURt2Wy8hew6oE</string>
+		<key>Address</key>
+		<string>385, Bulguk-ro, Gyeongju-si, Gyeongsangbuk-do
+</string>
+		<key>Coord</key>
+		<string>{35.7900971,129.3299037}</string>
+		<key>RegionIdentifier</key>
+		<string>Bulguksa Temple</string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>1</integer>
+		<key>placeID</key>
+		<string>ChIJJ0hxD_qGZDURljbMXtD4omM</string>
+		<key>Address</key>
+		<string>3811-19, Worak-ro, Danyang-gun, Chungcheongbuk-do
+</string>
+		<key>Coord</key>
+		<string>{36.9801092,128.1567787}</string>
+		<key>RegionIdentifier</key>
+		<string>Chungjuho Lake Ferries · Chungjuho Tour Ship </string>
+	</dict>
+	<dict>
+		<key>category</key>
+		<integer>1</integer>
+		<key>placeID</key>
+		<string>ChIJJ0hxD_qGZDURljbMXtD4omM</string>
+		<key>Address</key>
+		<string>3811-19, Worak-ro, Danyang-gun, Chungcheongbuk-do
+</string>
+		<key>Coord</key>
+		<string>{36.9801092,128.1567787}</string>
+		<key>RegionIdentifier</key>
+		<string>Chungjuho Lake Ferries · Chungjuho Tour Ship </string>
 	</dict>
 </array>
 </plist>

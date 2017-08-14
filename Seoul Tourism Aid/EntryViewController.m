@@ -50,7 +50,8 @@
     
     [[UserLocationManager sharedLocationManager] requestAuthorizationAndStartUpdates];
     
-    
+ 
+
     
 }
 
