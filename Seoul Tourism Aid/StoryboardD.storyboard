@@ -85,165 +85,176 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fr0-x6-PI1">
-                                <rect key="frame" x="16" y="40" width="343" height="607"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tvD" translatesAutoresizingMaskIntoConstraints="NO" id="T3T-wz-50E">
+                                <rect key="frame" x="147.5" y="20" width="80" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIO-s7-dbq">
+                                <rect key="frame" x="19" y="128" width="337.5" height="100"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Special thanks to the following YouTube Content Creators who graciously provided vlogs about Seoul and Korea Tourism for this app.  Click on the links below to view their YouTube channels, Instagram pages, blogs and/or other excellent content:</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Futura-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-n1-fTz">
+                                <rect key="frame" x="105" y="253" width="166" height="58"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Mark Wiens">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="Noteworthy-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kEY-B9-eka">
+                                <rect key="frame" x="92.5" y="326" width="190" height="30"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tvD" translatesAutoresizingMaskIntoConstraints="NO" id="T3T-wz-50E">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIO-s7-dbq">
-                                        <rect key="frame" x="0.0" y="107.5" width="343" height="91"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Special thanks to the following YouTube Content Creators who graciously provided vlogs about Seoul and Korea Tourism for this app.  Click on the links below to view their YouTube channels, Instagram pages, blogs and/or other excellent content:</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="14" name="Futura-Medium"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-n1-fTz">
-                                        <rect key="frame" x="0.0" y="226" width="343" height="47"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Mark Wiens">
-                                                <attributes>
-                                                    <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kEY-B9-eka">
-                                        <rect key="frame" x="0.0" y="300.5" width="343" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-Ad-kZb" userLabel="markWiensYouTube">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
-                                                <state key="normal" image="tvA">
-                                                    <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getMarkWiensYouTubeChannel:" destination="EHi-a2-bui" eventType="touchUpInside" id="nz8-kI-1h8"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRX-ew-8ex" userLabel="markWiensInstagram">
-                                                <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
-                                                <state key="normal" image="instagramA">
-                                                    <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getMarkWiensInstagram:" destination="EHi-a2-bui" eventType="touchUpInside" id="BiK-jj-ScE"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-wJ-U0f" userLabel="markWiensBlog">
-                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
-                                                <state key="normal" image="webSiteA"/>
-                                                <connections>
-                                                    <action selector="getMarkWiensBlogStore:" destination="EHi-a2-bui" eventType="touchUpInside" id="dyU-6Y-Vgo"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pHb-TW-umF">
-                                        <rect key="frame" x="0.0" y="357.5" width="343" height="47"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="GRRRL Traveler">
-                                                <attributes>
-                                                    <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yyW-8H-MAN">
-                                        <rect key="frame" x="0.0" y="432" width="343" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbQ-I6-5W4" userLabel="gTravelerYouTube">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
-                                                <state key="normal" image="tvA">
-                                                    <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getGrrlTravelerYouTubeChannel:" destination="EHi-a2-bui" eventType="touchUpInside" id="BBH-cg-MPO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-6M-o59" userLabel="gTravelerInstagram">
-                                                <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
-                                                <state key="normal" image="instagramA">
-                                                    <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getGrrlTravelerInstagram:" destination="EHi-a2-bui" eventType="touchUpInside" id="DTh-Ih-2GN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-9M-BBF" userLabel="gTravelerBlog">
-                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
-                                                <state key="normal" image="webSiteA">
-                                                    <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getGrrlTravelerBlog:" destination="EHi-a2-bui" eventType="touchUpInside" id="Nd2-mv-fbf"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GdF-7k-O90">
-                                        <rect key="frame" x="0.0" y="489.5" width="343" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="PXC-gG-uwE"/>
-                                            <constraint firstAttribute="width" constant="343" id="Pvj-0F-90I"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Selinas Inspiration">
-                                                <attributes>
-                                                    <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-r5-ygw">
-                                        <rect key="frame" x="0.0" y="577" width="343" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-60-n4B" userLabel="selinasYouTube">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
-                                                <state key="normal" image="tvA">
-                                                    <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getSelinasInspirationYouTubeChannel:" destination="EHi-a2-bui" eventType="touchUpInside" id="Kru-hI-t6z"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIc-Ru-sEW" userLabel="selinasInstagram">
-                                                <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
-                                                <state key="normal" image="instagramA">
-                                                    <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getSelinasInstagram:" destination="EHi-a2-bui" eventType="touchUpInside" id="lTK-fh-UMf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-Xc-2gF" userLabel="selinasBlog">
-                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
-                                                <state key="normal" title="Button" image="webSiteA"/>
-                                                <connections>
-                                                    <action selector="getSelinasBlog:" destination="EHi-a2-bui" eventType="touchUpInside" id="A5u-LA-grF"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-Ad-kZb" userLabel="markWiensYouTube">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="tvA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getMarkWiensYouTubeChannel:" destination="EHi-a2-bui" eventType="touchUpInside" id="VyW-U5-c4C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRX-ew-8ex" userLabel="markWiensInstagram">
+                                        <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="instagramA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getMarkWiensInstagram:" destination="EHi-a2-bui" eventType="touchUpInside" id="BiK-jj-ScE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-wJ-U0f" userLabel="markWiensBlog">
+                                        <rect key="frame" x="160" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="webSiteA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getMarkWiensBlogStore:" destination="EHi-a2-bui" eventType="touchUpInside" id="dyU-6Y-Vgo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yyW-8H-MAN">
+                                <rect key="frame" x="93.5" y="452" width="190" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbQ-I6-5W4" userLabel="gTravelerYouTube">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="tvA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getGrrlTravelerYouTubeChannel:" destination="EHi-a2-bui" eventType="touchUpInside" id="BBH-cg-MPO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-6M-o59" userLabel="gTravelerInstagram">
+                                        <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="instagramA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getGrrlTravelerInstagram:" destination="EHi-a2-bui" eventType="touchUpInside" id="DTh-Ih-2GN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-9M-BBF" userLabel="gTravelerBlog">
+                                        <rect key="frame" x="160" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="webSiteA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getGrrlTravelerBlog:" destination="EHi-a2-bui" eventType="touchUpInside" id="Nd2-mv-fbf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GdF-7k-O90">
+                                <rect key="frame" x="17" y="504" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="PXC-gG-uwE"/>
+                                    <constraint firstAttribute="width" constant="343" id="Pvj-0F-90I"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Selinas Inspiration">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="Noteworthy-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-r5-ygw">
+                                <rect key="frame" x="93.5" y="572" width="190" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-60-n4B" userLabel="selinasYouTube">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="tvA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getSelinasInspirationYouTubeChannel:" destination="EHi-a2-bui" eventType="touchUpInside" id="Kru-hI-t6z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIc-Ru-sEW" userLabel="selinasInstagram">
+                                        <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="instagramA">
+                                            <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getSelinasInstagram:" destination="EHi-a2-bui" eventType="touchUpInside" id="lTK-fh-UMf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-Xc-2gF" userLabel="selinasBlog">
+                                        <rect key="frame" x="160" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="webSiteA"/>
+                                        <connections>
+                                            <action selector="getSelinasBlog:" destination="EHi-a2-bui" eventType="touchUpInside" id="A5u-LA-grF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pHb-TW-umF">
+                                <rect key="frame" x="76.5" y="386" width="224.5" height="58"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="GRRRL Traveler">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="Noteworthy-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fr0-x6-PI1" firstAttribute="top" secondItem="dlQ-bB-YR5" secondAttribute="bottom" constant="20" id="Nec-ST-WZe"/>
-                            <constraint firstItem="Fr0-x6-PI1" firstAttribute="leading" secondItem="NW0-BK-v5F" secondAttribute="leadingMargin" id="Zvu-ae-uw0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fr0-x6-PI1" secondAttribute="trailing" id="hpi-t6-t6r"/>
-                            <constraint firstItem="0hp-qw-mkd" firstAttribute="top" secondItem="Fr0-x6-PI1" secondAttribute="bottom" constant="20" id="vUc-2f-6Bu"/>
+                            <constraint firstItem="GdF-7k-O90" firstAttribute="top" secondItem="yyW-8H-MAN" secondAttribute="bottom" constant="22" id="7sp-jW-DUs"/>
+                            <constraint firstItem="gtC-n1-fTz" firstAttribute="top" secondItem="dIO-s7-dbq" secondAttribute="bottom" constant="25" id="8Pq-cW-uBs"/>
+                            <constraint firstItem="bMs-r5-ygw" firstAttribute="centerX" secondItem="GdF-7k-O90" secondAttribute="centerX" id="Gcc-BU-Pn9"/>
+                            <constraint firstItem="yyW-8H-MAN" firstAttribute="centerX" secondItem="pHb-TW-umF" secondAttribute="centerX" id="JCP-l7-5DA"/>
+                            <constraint firstItem="dIO-s7-dbq" firstAttribute="top" secondItem="T3T-wz-50E" secondAttribute="bottom" constant="28" id="TvM-RR-IFL"/>
+                            <constraint firstItem="pHb-TW-umF" firstAttribute="top" secondItem="kEY-B9-eka" secondAttribute="bottom" constant="30" id="WP4-wp-Ph7"/>
+                            <constraint firstItem="T3T-wz-50E" firstAttribute="centerX" secondItem="NW0-BK-v5F" secondAttribute="centerX" id="WvL-hr-c2m"/>
+                            <constraint firstItem="GdF-7k-O90" firstAttribute="centerX" secondItem="pHb-TW-umF" secondAttribute="centerX" id="YIP-vK-EnH"/>
+                            <constraint firstItem="kEY-B9-eka" firstAttribute="centerX" secondItem="gtC-n1-fTz" secondAttribute="centerX" id="aq0-qH-0aM"/>
+                            <constraint firstItem="kEY-B9-eka" firstAttribute="top" secondItem="gtC-n1-fTz" secondAttribute="bottom" constant="15" id="c8s-DW-496"/>
+                            <constraint firstItem="dIO-s7-dbq" firstAttribute="centerX" secondItem="T3T-wz-50E" secondAttribute="centerX" id="dci-dF-lT2"/>
+                            <constraint firstItem="yyW-8H-MAN" firstAttribute="top" secondItem="pHb-TW-umF" secondAttribute="bottom" constant="8" id="fbY-iU-MOe"/>
+                            <constraint firstItem="pHb-TW-umF" firstAttribute="centerX" secondItem="gtC-n1-fTz" secondAttribute="centerX" id="gjs-kZ-C7d"/>
+                            <constraint firstItem="dIO-s7-dbq" firstAttribute="height" secondItem="NW0-BK-v5F" secondAttribute="height" multiplier="0.15" id="iRv-sW-kcS"/>
+                            <constraint firstItem="bMs-r5-ygw" firstAttribute="top" secondItem="GdF-7k-O90" secondAttribute="bottom" constant="8" id="p0U-XX-ekW"/>
+                            <constraint firstItem="T3T-wz-50E" firstAttribute="top" secondItem="dlQ-bB-YR5" secondAttribute="bottom" id="rlp-Oi-Pro"/>
+                            <constraint firstItem="gtC-n1-fTz" firstAttribute="centerX" secondItem="dIO-s7-dbq" secondAttribute="centerX" id="v3T-lx-Jgk"/>
+                            <constraint firstItem="dIO-s7-dbq" firstAttribute="width" secondItem="NW0-BK-v5F" secondAttribute="width" multiplier="0.9" id="xqb-eQ-FZw"/>
                         </constraints>
                     </view>
                 </viewController>
