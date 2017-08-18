@@ -242,13 +242,10 @@ static UserLocationManager* mySharedLocationManager;
     // Work around a bug in MapKit where user location is not initially zoomed to.
     if (oldLocation == nil && oldLocation != newLocation) {
         
-        if(IS_IN_SIMULATION_MODE){
-            _lastUpdatedUserLocation = [[CLLocation alloc] initWithLatitude:37.5369559 longitude:126.97493];;
+       
+        _lastUpdatedUserLocation = newLocation;
 
-        } else {
-            _lastUpdatedUserLocation = newLocation;
-
-        }
+        
         
         
          NSLog(@"The newLocation is lat: %f, long: %f",_lastUpdatedUserLocation.coordinate.latitude,_lastUpdatedUserLocation.coordinate.longitude);
@@ -480,9 +477,9 @@ static UserLocationManager* mySharedLocationManager;
 -(CLLocation *)lastUpdatedUserLocation{
     
     if(IS_IN_SIMULATION_MODE){
-        return [[CLLocation alloc] initWithLatitude:37.53297 longitude:126.9735352];
+        return [[CLLocation alloc] initWithLatitude:37.5369559 longitude:126.97493];
     }
-    
+ 
     return _lastUpdatedUserLocation;
 }
 

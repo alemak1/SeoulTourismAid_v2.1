@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "GoogleLocationSearchController.h"
 #import "UserLocationManager.h"
+#import "Constants.h"
 
 @interface GoogleLocationSearchController () <GMSPlacePickerViewControllerDelegate>
 
@@ -33,11 +34,48 @@
 @implementation GoogleLocationSearchController
 
 
+-(void)viewWillLayoutSubviews{
+    
+    GMSCameraPosition* initialCameraPosition = [self getInitialCameraPosition];
+    
+    self.googleMapView = [GMSMapView mapWithFrame:self.googleMapViewContainer.frame camera:initialCameraPosition];
+    
+    [self.googleMapView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.view addSubview:self.googleMapView];
+    
+    [NSLayoutConstraint activateConstraints:[NSArray arrayWithObjects:[[self.googleMapView topAnchor] constraintEqualToAnchor:[self.googleMapViewContainer topAnchor]],
+                                             [[self.googleMapView leftAnchor] constraintEqualToAnchor:[self.googleMapViewContainer leftAnchor]],
+                                             [[self.googleMapView rightAnchor] constraintEqualToAnchor:[self.googleMapViewContainer rightAnchor]],
+                                             [[self.googleMapView bottomAnchor] constraintEqualToAnchor:[self.googleMapViewContainer bottomAnchor]],
+                                             nil]];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    
+    
+    [self updateUIWithInitialCameraAndMarkerPosition];
+
+}
+
 -(void)viewDidLoad{
     
+    [self updateUIWithInitialCameraAndMarkerPosition];
+   
+    
+    
+  
+    
+    
+    
+}
+
+
+-(GMSCameraPosition*)getInitialCameraPosition{
     
     GMSCameraPosition* camera;
-    GMSMarker* marker;
     
     if(self.selectedPlace == nil){
         
@@ -46,36 +84,62 @@
         
         camera = [GMSCameraPosition cameraWithTarget:userLocation.coordinate zoom:15.0];
         
-        marker = [GMSMarker markerWithPosition:userLocation.coordinate];
     } else {
         
         camera = [GMSCameraPosition cameraWithTarget:self.selectedPlace.coordinate zoom:15.0];
         
-        marker = [GMSMarker markerWithPosition:self.selectedPlace.coordinate];
     }
-  
     
-    self.googleMapView = [GMSMapView mapWithFrame:self.googleMapViewContainer.frame camera:camera];
-    
-    [self.googleMapView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    [self.view addSubview:self.googleMapView];
-    
-    [NSLayoutConstraint activateConstraints:[NSArray arrayWithObjects:[[self.googleMapView topAnchor] constraintEqualToAnchor:[self.googleMapViewContainer topAnchor]],
-        [[self.googleMapView leftAnchor] constraintEqualToAnchor:[self.googleMapViewContainer leftAnchor]],
-        [[self.googleMapView rightAnchor] constraintEqualToAnchor:[self.googleMapViewContainer rightAnchor]],
-        [[self.googleMapView bottomAnchor] constraintEqualToAnchor:[self.googleMapViewContainer bottomAnchor]],
-        nil]];
-    
-    
-    
-    marker.title = self.selectedPlace != nil ? self.selectedPlace.name : @"Current Location";
-    marker.map = self.googleMapView;
-    
-    
-    
+    return camera;
+
 }
 
+-(void)updateUIWithInitialCameraAndMarkerPosition{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        
+        GMSCameraPosition* camera;
+        GMSMarker* marker;
+        
+        if(self.selectedPlace == nil){
+            
+            
+            CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+            
+            camera = [GMSCameraPosition cameraWithTarget:userLocation.coordinate zoom:15.0];
+            
+            marker = [GMSMarker markerWithPosition:userLocation.coordinate];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                marker.title = self.selectedPlace != nil ? self.selectedPlace.name : @"Current Location";
+                marker.map = self.googleMapView;
+                
+                [self.googleMapView animateToCameraPosition:camera];
+                
+            });
+            
+
+        } else {
+            
+            camera = [GMSCameraPosition cameraWithTarget:self.selectedPlace.coordinate zoom:15.0];
+            
+            marker = [GMSMarker markerWithPosition:self.selectedPlace.coordinate];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                marker.title = self.selectedPlace != nil ? self.selectedPlace.name : @"Current Location";
+                marker.map = self.googleMapView;
+                
+                [self.googleMapView animateToCameraPosition:camera];
+            });
+            
+        }
+        
+
+        
+    });
+}
 
 
 
@@ -154,7 +218,15 @@
     [[GMSPlacePickerViewController alloc] initWithConfig:config];
     placePicker.delegate = self;
     
-    [self presentViewController:placePicker animated:YES completion:nil];
+    [self presentViewController:placePicker animated:YES completion:^{
+    
+    
+        NSDictionary* userInfoDict = [NSDictionary dictionaryWithObjectsAndKeys:self.selectedPlace,@"googlePlace", nil];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:DID_SELECT_GOOGLE_PLACE_FROM_PLACEPICKER object:nil userInfo: userInfoDict];
+        
+    
+    }];
 }
 
 
@@ -175,7 +247,9 @@
     marker.position = place.coordinate;
     marker.title = place.name;
     
+    self.selectedPlace = place;
     
+   
     NSLog(@"Place name %@", place.name);
     NSLog(@"Place address %@", place.formattedAddress);
     NSLog(@"Place attributions %@", place.attributions.string);

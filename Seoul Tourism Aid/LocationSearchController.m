@@ -46,7 +46,12 @@
 @synthesize mapViewFrame = _mapViewFrame;
 
 -(void)viewWillLayoutSubviews{
-    
+    [self.mainMapView setDelegate:self];
+
+    CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+
+    [self.mainMapView setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.01, 0.01))];
+
 
 }
 
@@ -70,11 +75,47 @@
 
 -(void)viewDidLoad{
     
+    CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
+    
+
+    if(self.selectedPlace){
+        OverlayConfiguration* annotation = [[OverlayConfiguration alloc] initWithCoordinate:self.selectedPlace.coordinate andWithName:self.selectedPlace.name];
+        
+        [self.mainMapView removeAnnotations:self.mainMapView.annotations];
+        [self.mainMapView addAnnotation:annotation];
+        
+        [self.mainMapView setRegion:MKCoordinateRegionMake(annotation.coordinate, MKCoordinateSpanMake(0.01, 0.01))];
+
+        
+    } else {
+        [self.mainMapView setRegion:MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.01, 0.01))];
+
+    }
+    
     /** If the user is not currently authorized to call Google APIs, an auhtorization view controller will be shown to obtain user consent. A notification is sent when this authorization controller is dismissed **/
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(performGoogleDirectionsSearchForSelectedLocation) name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetMapViewWithGooglePlace:) name:DID_SELECT_GOOGLE_PLACE_FROM_PLACEPICKER object:nil];
 }
 
+
+-(void)resetMapViewWithGooglePlace:(NSNotification*)notification{
+    
+    NSDictionary* userInfo = [notification userInfo];
+    
+    GMSPlace* googlePlace = userInfo[@"googlePlace"];
+    
+    self.selectedPlace = googlePlace;
+    
+    self.selectedLocation = [[MKMapItem alloc]initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(googlePlace.coordinate.latitude, googlePlace.coordinate.longitude)]];
+
+    OverlayConfiguration* annotation = [[OverlayConfiguration alloc] initWithCoordinate:self.selectedPlace.coordinate andWithName:self.selectedPlace.name];
+    
+    [self.mainMapView removeAnnotations:self.mainMapView.annotations];
+    [self.mainMapView addAnnotation:annotation];
+    
+    [self.mainMapView setRegion:MKCoordinateRegionMake(annotation.coordinate, MKCoordinateSpanMake(0.01, 0.01))];
+
+}
 
 - (IBAction)dismissViewController:(id)sender {
     
@@ -175,10 +216,23 @@
     CLLocationDegrees latitude = view.annotation.coordinate.latitude;
     CLLocationDegrees longitude = view.annotation.coordinate.longitude;
 
+    if([view.annotation isKindOfClass:[OverlayConfiguration class]]){
+        
+        OverlayConfiguration* overlayConfiguration = (OverlayConfiguration*)view.annotation;
+        
+        self.selectedLocation = [[MKMapItem alloc]initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude)]];
+        
+        self.selectedLocation.name = overlayConfiguration.name;
+        
+        
+    } else {
+        
+        self.selectedLocation = [[MKMapItem alloc]initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude)]];
+        
+        self.selectedLocation.name = view.annotation.title;
+    }
     
-    self.selectedLocation = [[MKMapItem alloc]initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude)]];
-    
-    self.selectedLocation.name = view.annotation.title;
+   
     
     
 }

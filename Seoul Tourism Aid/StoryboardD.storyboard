@@ -89,18 +89,10 @@
                                 <rect key="frame" x="16" y="40" width="343" height="607"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tvD" translatesAutoresizingMaskIntoConstraints="NO" id="T3T-wz-50E">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="99"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="8Hl-B2-vK2"/>
-                                            <constraint firstAttribute="height" constant="99" id="Afh-eO-hrd"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIO-s7-dbq">
-                                        <rect key="frame" x="0.0" y="109" width="343" height="85"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="85" id="Eor-je-XnZ"/>
-                                            <constraint firstAttribute="width" constant="343" id="xQG-BR-TGx"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="107.5" width="343" height="91"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Special thanks to the following YouTube Content Creators who graciously provided vlogs about Seoul and Korea Tourism for this app.  Click on the links below to view their YouTube channels, Instagram pages, blogs and/or other excellent content:</string>
@@ -112,11 +104,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-n1-fTz">
-                                        <rect key="frame" x="0.0" y="204" width="343" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="mSb-Pe-iC3"/>
-                                            <constraint firstAttribute="height" constant="60" id="raQ-J0-fBS"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="226" width="343" height="47"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Mark Wiens">
                                                 <attributes>
@@ -128,10 +116,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kEY-B9-eka">
-                                        <rect key="frame" x="0.0" y="274" width="343" height="38"/>
+                                        <rect key="frame" x="0.0" y="300.5" width="343" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-Ad-kZb" userLabel="markWiensYouTube">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
                                                 <state key="normal" image="tvA">
                                                     <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -140,7 +128,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRX-ew-8ex" userLabel="markWiensInstagram">
-                                                <rect key="frame" x="114.5" y="0.0" width="114" height="38"/>
+                                                <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
                                                 <state key="normal" image="instagramA">
                                                     <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -149,24 +137,16 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-wJ-U0f" userLabel="markWiensBlog">
-                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="38"/>
+                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
                                                 <state key="normal" image="webSiteA"/>
                                                 <connections>
                                                     <action selector="getMarkWiensBlogStore:" destination="EHi-a2-bui" eventType="touchUpInside" id="dyU-6Y-Vgo"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="Vnc-Ns-jJH"/>
-                                            <constraint firstAttribute="height" constant="38" id="ZwK-W9-5Ci"/>
-                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pHb-TW-umF">
-                                        <rect key="frame" x="0.0" y="322" width="343" height="60.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60.5" id="QnK-yk-Ncz"/>
-                                            <constraint firstAttribute="width" constant="343" id="plW-Ka-SKQ"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="357.5" width="343" height="47"/>
                                         <attributedString key="attributedText">
                                             <fragment content="GRRRL Traveler">
                                                 <attributes>
@@ -178,10 +158,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yyW-8H-MAN">
-                                        <rect key="frame" x="0.0" y="392.5" width="343" height="38"/>
+                                        <rect key="frame" x="0.0" y="432" width="343" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbQ-I6-5W4" userLabel="gTravelerYouTube">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
                                                 <state key="normal" image="tvA">
                                                     <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -190,7 +170,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-6M-o59" userLabel="gTravelerInstagram">
-                                                <rect key="frame" x="114.5" y="0.0" width="114" height="38"/>
+                                                <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
                                                 <state key="normal" image="instagramA">
                                                     <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -199,7 +179,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-9M-BBF" userLabel="gTravelerBlog">
-                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="38"/>
+                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
                                                 <state key="normal" image="webSiteA">
                                                     <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -208,13 +188,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="Kae-Up-J5v"/>
-                                            <constraint firstAttribute="width" constant="343" id="uhb-Ln-Yyb"/>
-                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GdF-7k-O90">
-                                        <rect key="frame" x="0.0" y="440.5" width="343" height="60"/>
+                                        <rect key="frame" x="0.0" y="489.5" width="343" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="PXC-gG-uwE"/>
                                             <constraint firstAttribute="width" constant="343" id="Pvj-0F-90I"/>
@@ -230,10 +206,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-r5-ygw">
-                                        <rect key="frame" x="0.0" y="510.5" width="343" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="577" width="343" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-60-n4B" userLabel="selinasYouTube">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
                                                 <state key="normal" image="tvA">
                                                     <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -242,7 +218,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIc-Ru-sEW" userLabel="selinasInstagram">
-                                                <rect key="frame" x="114.5" y="0.0" width="114" height="96.5"/>
+                                                <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
                                                 <state key="normal" image="instagramA">
                                                     <color key="titleColor" red="0.10549754259999999" green="0.2327221673" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -251,17 +227,13 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-Xc-2gF" userLabel="selinasBlog">
-                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="96.5"/>
+                                                <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
                                                 <state key="normal" title="Button" image="webSiteA"/>
                                                 <connections>
                                                     <action selector="getSelinasBlog:" destination="EHi-a2-bui" eventType="touchUpInside" id="A5u-LA-grF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="8On-rU-GbK"/>
-                                            <constraint firstAttribute="height" constant="96.5" id="TVK-qN-odz"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -277,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDw-VU-D9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5679" y="-1151"/>
+            <point key="canvasLocation" x="-6225" y="-1062"/>
         </scene>
         <!--YouTube Contributors-->
         <scene sceneID="8Nn-A2-z7R">

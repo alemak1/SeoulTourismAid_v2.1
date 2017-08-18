@@ -36,7 +36,6 @@
 
 -(void)viewDidLoad{
 
-  
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissViewControllerIfUnauthorized) name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
     

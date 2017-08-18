@@ -45,7 +45,7 @@
 
 #define DID_REQUEST_GAME_RESTART_NOTIFICATION @"didRequestGameRestartNotification"
 #define DID_SCORE_POINT_NOTIFICATION @"didScorePointNotification"
-
+#define DID_SELECT_GOOGLE_PLACE_FROM_PLACEPICKER @"didSelectGooglePlaceFromPlacePickerNotification"
 
 #define DARK_SKY_API @"ee1cc0493ff35cc8dc97394f1fcb0348"
 #define FLICKR_COMMERCIAL_API @"38e3f5d1484cdcbebce6a46e830eb4d6"

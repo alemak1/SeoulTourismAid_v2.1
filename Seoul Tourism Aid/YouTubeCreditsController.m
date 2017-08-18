@@ -72,32 +72,38 @@ static NSString* const SELINAS_BLOG_ADDRESS = @"http://www.selinasinspiration.co
 }
 
 - (IBAction)getMarkWiensYouTubeChannel:(UIButton *)sender {
+    NSLog(@"Loading site...");
     [self loadWebsiteWithURLAddress:MARK_WIENS_YOUTUBE_ADDRESS];
 
 }
 
 - (IBAction)getMarkWiensInstagram:(UIButton *)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:MARK_WIENS_INSTAGRAM_ADDRESS];
 }
 
 - (IBAction)getMarkWiensBlogStore:(UIButton *)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:MARK_WIENS_STORE_ADDRESS];
 }
 
 - (IBAction)getGrrlTravelerInstagram:(UIButton *)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:GRRRL_TRAVELER_INSTAGRAM_ADDRESS];
 }
 
 - (IBAction)getGrrlTravelerYouTubeChannel:(UIButton *)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:GRRRL_TRAVELER_YOUTUBE_ADDRESS];
 }
 
 - (IBAction)getGrrlTravelerBlog:(UIButton *)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:GRRRL_TRAVELER_BLOG_ADDRESS];
 
 
@@ -105,17 +111,20 @@ static NSString* const SELINAS_BLOG_ADDRESS = @"http://www.selinasinspiration.co
 }
 
 - (IBAction)getSelinasInspirationYouTubeChannel:(id)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:SELINAS_YOUTUBE_ADDRESS];
 }
 
 - (IBAction)getSelinasInstagram:(UIButton *)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:SELINAS_INSTAGRAM_ADDRESS];
 }
 
 - (IBAction)getSelinasBlog:(UIButton *)sender {
-    
+    NSLog(@"Loading site...");
+
     [self loadWebsiteWithURLAddress:SELINAS_BLOG_ADDRESS];
 }
 @end
