@@ -49,7 +49,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.3</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>comgooglemaps</string>
@@ -70,6 +70,8 @@
 	<string>The app requires access to your current location in order to determine your proximity to major tourist sites, as well as for determing accurate routes to places of interest.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The app would like to record your speech so that it can translate the recorded text to Korean, which you can use to help communicate with locals while in Korea.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The app would like to access your photos in order to access pictures containing Korean text that you want to translate to English.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>The app would like to record your speech so that it can translate the recorded speech into Korean, so that you can better communicate with locals while on your trip.</string>
 	<key>UIBackgroundModes</key>
