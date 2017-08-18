@@ -1,1 +1,0 @@
-../../../cordova-plugin-inappbrowser/src/ios/CDVInAppBrowser.h

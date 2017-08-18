@@ -145,15 +145,15 @@ typedef enum VIDEO_SECTION_4_CATEGORY{
     
     switch (video_section_1_choice) {
         case SEOUL_VIDEO_1:
-            return @"5_2dFjpoClk";
+            return @"yfRjP1nfynA"; //Mark Wiens: Bangkok to Seoul (Day 1)
         case SEOUL_VIDEO_2:
-            return @"KfNaSyiA23U";
+            return @"QZcVXkkhVH0"; //Mark Wiens: Amazing Korean Food and Attractions in Seoul (Day 2)
         case SEOUL_VIDEO_3:
-            return @"2twwUxzndd4";
+            return @"b38wnCBfbbU"; //Mark Wiens: Korean BBQ (Day 3)
         case SEOUL_VIDEO_4:
-            return @"zn5BlL-nN7M";
+            return @"3qfLdficgRI";  //Mark Wiens: Giant Dak Galbi & Day Trip to Nami Island (Day 4)
         case SEOUL_VIDEO_5:
-            return @"J86Hx7RTnIQ";
+            return @"1N2loINKkTA"; //Mark Wiens: Best Korean Street Food in Seoul at Gwangjang Market (Day 5)
         case TOTAL_NUMBER_OF_SECTION1_VIDS:
             return nil;
         default:
@@ -170,15 +170,15 @@ typedef enum VIDEO_SECTION_4_CATEGORY{
     
     switch (video_section_1_choice) {
         case KOREA_VIDEO_1:
-            return @"UJVlHwpS6Nw";
+            return @"_ihNezZ1xF8"; //Mark Wiens: Korean Food in Seoul - Spicy Hairtail Fish Stew 갈치조림 (Day 6)
         case KOREA_VIDEO_2:
-            return @"F8me1vDYdkY";
-        case KOREA_VIDEO_3:
-            return @"aEO-R4m5gmc";
-        case KOREA_VIDEO_4:
-            return @"lL3obqJ5s7w";
-        case KOREA_VIDEO_5:
-            return @"WoDsc4IubDQ";
+            return @"jVLGXDjrQ0Q"; //Mark Wiens: The Ultimate Korean Bibimbap and Attractions in Jeonju (Day 7)
+        case KOREA_VIDEO_3:  //Mark Wiens: Exotic Korean Seafood in Gunsan, South Korea! (Day 8)
+            return @"LFjL6ek6gY4";
+        case KOREA_VIDEO_4: //Mark Wiens: Korean Food - Premium Korean JANGSU BEEF! (Day 9)
+            return @"s6VSAgLf0l4";
+        case KOREA_VIDEO_5: //Mark Wiens: Live Octopus & Chicken Ginseng Soup (Day 10)
+            return @"9YLiCOhlHQI";
         default:
             break;
     }
@@ -192,15 +192,15 @@ typedef enum VIDEO_SECTION_4_CATEGORY{
     
     switch (video_section_1_choice) {
         case KOREA_FOOD_VIDEO_1:
-            return @"H2ZQa8834Qw";
+            return @"FGCfKM5B7D8"; //Grrl Traveler: WHAT TO BUY IN KOREA ♥ (Part I of 2) ♥
         case KOREA_FOOD_VIDEO_2:
-            return @"pgnkD91vcoc";
+            return @"H1haMA1yQlI"; //Grrl Traveler: WHAT TO BUY IN KOREA ♥ Part 2 ♥ SOUVENIR SHOPPING KOREA
         case KOREA_FOOD_VIDEO_3:
-            return @"BcHWw5pkCxE";
+            return @"QLt0Bu4u7-Y";  //Grrl Traveler: TOP 5 TRAVEL TIPS : SURVIVING KOREAN CULTURE
         case KOREA_FOOD_VIDEO_4:
-            return @"6QQ67F8y2b8";
+            return @"Y5JtIVVX5oc"; //Grrl Traveler: MY KOREAN APARTMENT TOUR | TEACH WITH EPIK
         case KOREA_FOOD_VIDEO_5:
-            return @"rJgb92JWMCE";
+            return @"LV47A4iaDOw"; //Grrl Traveler: Odeng 오뎅 | Eomuk 어묵 | Korean Food
         default:
             break;
     }
@@ -215,15 +215,15 @@ typedef enum VIDEO_SECTION_4_CATEGORY{
     
     switch (video_section_1_choice) {
         case KOREA_NATURE_VIDEO_1:
-            return @"_4-slWw26gQ";
+            return @"KfNaSyiA23U";  //Selinas Inspiration
         case KOREA_NATURE_VIDEO_2:
-            return @"ADQY5B1nQFg";
+            return @"N-zrjBpKGiI"; //Mark Wiens: 25 Best Things to Do In Seoul
         case KOREA_NATURE_VIDEO_3:
-            return @"hvEUjl0GoTI";
-        case KOREA_NATURE_VIDEO_4:
-            return @"0CwPlSVQ2NM";
-        case KOREA_NATURE_VIDEO_5:
-            return @"xoeYr_T75BQ";
+            return @"RVQvg-jc0H4"; //Grrl Traveler: TOP 5 TRAVEL TIPS FOR SEOUL, KOREA | TRIP PLANNING ESSENTIALS
+        case KOREA_NATURE_VIDEO_4:  //Grrl Traveler: PATBINGSU & Why Koreans Share? | 팥빙수
+            return @"laNvMrtPo1A";
+        case KOREA_NATURE_VIDEO_5: //Grrl Traveler: Teach in Korea: EPIK Fears!!!
+            return @"06FopHAb34U";
         default:
             break;
     }

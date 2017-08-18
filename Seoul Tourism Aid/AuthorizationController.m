@@ -64,7 +64,7 @@
         
         OIDAuthorizationRequest *request = [[OIDAuthorizationRequest alloc] initWithConfiguration:configuration
             clientId:kClientID
-            scopes:@[kGoogleTranslationAPIScope,kGoogleCloudServicesScope,kGoogleYouTubeScope]
+            scopes:@[kGoogleTranslationAPIScope,kGoogleCloudServicesScope]
             redirectURL:[NSURL URLWithString:kRedirectURL]
             responseType:OIDResponseTypeCode
             additionalParameters:nil];

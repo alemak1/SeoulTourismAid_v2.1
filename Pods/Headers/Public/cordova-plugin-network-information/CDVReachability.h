@@ -1,1 +1,0 @@
-../../../cordova-plugin-network-information/src/ios/CDVReachability.h

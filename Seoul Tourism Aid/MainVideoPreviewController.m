@@ -42,12 +42,13 @@
 
 -(void)viewDidLoad{
     
-    [self.topLabel setText:@"Explore Seoul"];
-    [self.topMiddleLabel setText:@"Explore Korea"];
+    [self.topLabel setText:@"Korean Food I"];
     
-    [self.bottomMiddleLabel setText:@"Korean Food"];
+    [self.topMiddleLabel setText:@"Korean Food II"];
     
-    [self.bottomLabel setText:@"Age of Imagination"];
+    [self.bottomMiddleLabel setText:@"Travel in Seoul and Korea"];
+    
+    [self.bottomLabel setText:@"Other Great Travel Information"];
 
 
 
@@ -89,6 +90,7 @@
     }
 }
 
+/**
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
     if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
         return UIInterfaceOrientationMaskPortrait;
@@ -112,5 +114,6 @@
     
     return YES;
 }
+ **/
 
 @end

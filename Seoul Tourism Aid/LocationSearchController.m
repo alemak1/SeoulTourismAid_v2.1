@@ -102,11 +102,12 @@
     MKPlacemark* userLocationPlacemark = [[MKPlacemark alloc] initWithCoordinate:userLocation.coordinate];
     
     MKMapItem* fromLocation = [[MKMapItem alloc] initWithPlacemark:userLocationPlacemark];
+    fromLocation.name = @"Current Location";
     
     CLLocationCoordinate2D fromLocationCoordinate = fromLocation.placemark.coordinate;
     
     MKMapItem* toLocation = self.selectedLocation;
-    
+
     CLLocationDistance distanceBetweenEndpoints = [fromLocation.placemark.location distanceFromLocation:self.selectedLocation.placemark.location];
     
     // Create a region centered on the starting point with a 10km span
@@ -117,7 +118,7 @@
     NSLog(@"Destination location: %@",[toLocation description]);
     
     // Open the item in Maps, specifying the map region to display.
-    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:toLocation,fromLocation, nil]
+    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:fromLocation,toLocation, nil]
                    launchOptions:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSValue valueWithMKCoordinate:region.center], MKLaunchOptionsMapCenterKey,
                                   [NSValue valueWithMKCoordinateSpan:region.span], MKLaunchOptionsMapSpanKey,
@@ -176,6 +177,10 @@
 
     
     self.selectedLocation = [[MKMapItem alloc]initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude)]];
+    
+    self.selectedLocation.name = view.annotation.title;
+    
+    
 }
 
 -(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view{

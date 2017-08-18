@@ -58,6 +58,23 @@ SKView* _mainSkView;
 
 -(void)viewDidLoad{
     
+    
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
+    
+}
+
+
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 -(SKView *)skView{

@@ -117,6 +117,12 @@
     
     MKMapItem* toLocation = [[MKMapItem alloc] initWithPlacemark:toLocationPlacemark];
     
+    if(self.selectedPlace){
+        toLocation.name = self.selectedPlace.name;
+    } else {
+        toLocation.name = @"Selected Destination";
+    }
+    
     CLLocation* toLocationCL = [[CLLocation alloc] initWithLatitude:self.selectedPlace.coordinate.latitude longitude:self.selectedPlace.coordinate.longitude];
     
     CLLocationDistance distanceBetweenEndpoints = [fromLocation.placemark.location distanceFromLocation: toLocationCL];
@@ -129,7 +135,7 @@
     NSLog(@"Destination location: %@",[toLocation description]);
     
     // Open the item in Maps, specifying the map region to display.
-    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:toLocation,fromLocation, nil]
+    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:fromLocation,toLocation, nil]
                    launchOptions:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSValue valueWithMKCoordinate:region.center], MKLaunchOptionsMapCenterKey,
                                   [NSValue valueWithMKCoordinateSpan:region.span], MKLaunchOptionsMapSpanKey,

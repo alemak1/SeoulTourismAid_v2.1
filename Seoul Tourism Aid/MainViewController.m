@@ -6,7 +6,7 @@
 //  Copyright © 2017 AlexMakedonski. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+//#import <Foundation/Foundation.h>
 
 /*
  Licensed to the Apache Software Foundation (ASF) under one
@@ -33,6 +33,7 @@
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
+/**
 #import "MainViewController.h"
 
 @implementation MainViewController
@@ -118,14 +119,18 @@
  }
  */
 
+/**
 @end
 
 @implementation MainCommandDelegate
+
 
 /* To override the methods, uncomment the line in the init function(s)
  in MainViewController.m
  */
 
+
+/**
 #pragma mark CDVCommandDelegate implementation
 
 - (id)getCommandInstance:(NSString*)className
@@ -145,9 +150,13 @@
 /* To override, uncomment the line in the init function(s)
  in MainViewController.m
  */
+
+/**
 - (BOOL)execute:(CDVInvokedUrlCommand*)command
 {
     return [super execute:command];
 }
 
 @end
+ 
+ **/

@@ -39,7 +39,7 @@
 -(CLRegion*)getRegionWithIdentifier:(NSString*)regionIdentifier;
 
 
--(void)viewLocationInMapsTo:(CLLocationCoordinate2D)regionCenter;
+-(void)viewLocationInMapsTo:(CLLocationCoordinate2D)regionCenter andWithPlacemarkName:(NSString*)placemarkName;
 -(void)viewLocationInMapsFromHostelTo:(CLLocationCoordinate2D)toLocationCoordinate;
 
 @end

@@ -156,6 +156,7 @@
             case 10:
                 //Brainy Bunny Learns Korean
                 requestedViewController = [self getBunnyGameController];
+                [self presentViewController:requestedViewController animated:YES completion:nil];
                 break;
             default:
                 break;

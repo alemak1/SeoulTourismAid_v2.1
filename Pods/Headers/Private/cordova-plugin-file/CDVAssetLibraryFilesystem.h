@@ -1,1 +1,0 @@
-../../../cordova-plugin-file/src/ios/CDVAssetLibraryFilesystem.h

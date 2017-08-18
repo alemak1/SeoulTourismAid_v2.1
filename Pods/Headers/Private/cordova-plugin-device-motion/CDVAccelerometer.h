@@ -1,1 +1,0 @@
-../../../cordova-plugin-device-motion/src/ios/CDVAccelerometer.h

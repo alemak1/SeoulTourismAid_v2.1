@@ -114,19 +114,23 @@ CLLocation* _userLocation;
     
     MKDirections* directions;
     CLLocationCoordinate2D destinationCoordinate;
+    NSString* destinationName = @"Destination";
     
     switch (self.destinationCategory) {
         case SEOUL_STATION:
             directions = [MKDirectionsRequest getDirectionsToDestinationForTransportMode:selected_transportation_mode andWithDestinationCoordinate:self.seoulStationCoordinate];
             destinationCoordinate = self.seoulStationCoordinate;
+            destinationName = @"Seoul Station";
             break;
         case INCHEON_AIRPORT:
              directions = [MKDirectionsRequest getDirectionsToDestinationForTransportMode:selected_transportation_mode andWithDestinationCoordinate:self.incheonAirportCoordinate];
             destinationCoordinate = self.incheonAirportCoordinate;
+            destinationName = @"Incheon International Airport";
             break;
         case GIMPO_INTERNATIONAL_AIRPORT:
             directions = [MKDirectionsRequest getDirectionsToDestinationForTransportMode:selected_transportation_mode andWithDestinationCoordinate:self.gimpoInternationalCoordinate];
             destinationCoordinate = self.gimpoInternationalCoordinate;
+            destinationName = @"Gimpo International Airport";
         default:
             break;
     }
@@ -146,7 +150,9 @@ CLLocation* _userLocation;
             if(routingError){
                 NSLog(@"Error: failed to directions to hostel from server(from IBAction function)");
                 [self dismissViewControllerAnimated:NO completion:^{
-                    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:destinationCoordinate];
+                    
+                    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:destinationCoordinate andWithPlacemarkName:destinationName];
+                    
                     
                 }];
             }
@@ -208,16 +214,20 @@ CLLocation* _userLocation;
 -(void) makeDirectionsRequestsToHostelWithAnyTransportationType{
     
     CLLocationCoordinate2D destinationCoordinate;
+    NSString* destinationName = @"Destination Name";
     
     switch (self.destinationCategory) {
         case INCHEON_AIRPORT:
             destinationCoordinate = self.incheonAirportCoordinate;
+            destinationName = @"Incheon International Airport";
             break;
         case SEOUL_STATION:
             destinationCoordinate = self.seoulStationCoordinate;
+            destinationName = @"Seoul Station";
             break;
         case GIMPO_INTERNATIONAL_AIRPORT:
             destinationCoordinate = self.gimpoInternationalCoordinate;
+            destinationName = @"Gimpo International Airport";
             break;
         default:
             break;
@@ -234,7 +244,7 @@ CLLocation* _userLocation;
         
         if(routingError){
             [self dismissViewControllerAnimated:NO completion:^{
-                [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:destinationCoordinate];
+                [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:destinationCoordinate andWithPlacemarkName:destinationName];
                 
             }];
         }
@@ -346,22 +356,27 @@ CLLocation* _userLocation;
 - (IBAction)viewDirectionsToHostelWithMapsApp:(UIButton *)sender {
     
     CLLocationCoordinate2D destinationCoordinate;
+    NSString* destinationName = @"Destination";
     
     switch (self.destinationCategory) {
         case INCHEON_AIRPORT:
             destinationCoordinate = self.incheonAirportCoordinate;
+            destinationName = @"Incheon International Airport";
             break;
         case SEOUL_STATION:
             destinationCoordinate = self.seoulStationCoordinate;
+            destinationName = @"Seoul Station";
             break;
         case GIMPO_INTERNATIONAL_AIRPORT:
             destinationCoordinate = self.gimpoInternationalCoordinate;
+            destinationName = @"Gimpo International Airport";
             break;
         default:
             break;
     }
     
-    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:destinationCoordinate];
+    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:destinationCoordinate andWithPlacemarkName:destinationName];
+    
 
 }
 

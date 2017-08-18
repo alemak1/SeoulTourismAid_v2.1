@@ -756,12 +756,31 @@ NSOperationQueue* _helperOperationQueue;
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return UIInterfaceOrientationMaskPortrait;
+    }
+    
+    return UIInterfaceOrientationMaskAll;
 }
 
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return UIInterfaceOrientationPortrait;
+    }
+    
     return UIInterfaceOrientationPortrait;
 }
+
+-(BOOL)shouldAutorotate{
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+
 
 @end
 

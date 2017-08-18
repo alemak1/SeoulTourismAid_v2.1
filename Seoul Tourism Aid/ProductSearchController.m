@@ -95,6 +95,7 @@
      {
          NSMutableArray *placemarks = [NSMutableArray array];
          for (MKMapItem *item in response.mapItems) {
+            
              [placemarks addObject:item.placemark];
          }
          
@@ -110,7 +111,8 @@
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
     
-    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:view.annotation.coordinate];
+    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:view.annotation.coordinate andWithPlacemarkName:view.annotation.title];
+    
     
 }
 

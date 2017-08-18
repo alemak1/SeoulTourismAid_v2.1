@@ -64,7 +64,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <RoutingCoverageFileReference
-         identifier = "../Seoul Tourism Aid/Seoul.geojson">
+         identifier = "../Seoul Tourism Aid/EastAsia.geojson">
       </RoutingCoverageFileReference>
    </LaunchAction>
    <ProfileAction

@@ -33,6 +33,7 @@
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
+/**
 #import <Cordova/CDVViewController.h>
 #import <Cordova/CDVCommandDelegateImpl.h>
 #import <Cordova/CDVCommandQueue.h>
@@ -47,4 +48,7 @@
 @interface MainCommandQueue : CDVCommandQueue
 @end
 
-#endif /* MainViewController_h */
+ **/
+
+//#endif /* MainViewController_h */
+

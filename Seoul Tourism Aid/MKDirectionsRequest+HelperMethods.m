@@ -40,6 +40,7 @@
     MKPlacemark* userLocationPlacemark = [[MKPlacemark alloc] initWithCoordinate:userLocation.coordinate];
     
     MKMapItem* currentLocation = [[MKMapItem alloc] initWithPlacemark:userLocationPlacemark];
+    currentLocation.name = @"Current Location";
     
     //Convert the hostel location into an MKMapItem
     
@@ -90,6 +91,7 @@
     MKPlacemark* userLocationPlacemark = [[MKPlacemark alloc] initWithCoordinate:userLocation.coordinate];
     
     MKMapItem* currentLocation = [[MKMapItem alloc] initWithPlacemark:userLocationPlacemark];
+    currentLocation.name = @"Current Location";
     
     //Convert the hostel location into an MKMapItem
     
@@ -143,6 +145,7 @@
     MKPlacemark* userLocationPlacemark = [[MKPlacemark alloc] initWithCoordinate:userLocation.coordinate];
     
     MKMapItem* currentLocation = [[MKMapItem alloc] initWithPlacemark:userLocationPlacemark];
+    currentLocation.name = @"Current Location";
     
     //Convert the hostel location into an MKMapItem
     

@@ -1,1 +1,0 @@
-../../../cordova-plugin-camera/src/ios/CDVExif.h

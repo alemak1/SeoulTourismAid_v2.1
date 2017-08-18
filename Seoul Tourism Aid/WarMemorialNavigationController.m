@@ -8,6 +8,7 @@
 
 #import "WarMemorialNavigationController.h"
 #import "CloudKitHelper.h"
+#import "UserLocationManager.h"
 
 @interface WarMemorialNavigationController () <MKMapViewDelegate>
 
@@ -22,6 +23,10 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 
+- (IBAction)getDirectionsToUserSelectedAnnotation:(UIButton *)sender;
+
+
+@property MKAnnotationView* selectedAnnotationView;
 
 @end
 
@@ -124,6 +129,7 @@
     
     //Set the label and the image view with annotation objects description text and image path respectively
     
+    self.selectedAnnotationView = view;
     
     WarMemorialAnnotation* annotation = [self getWarMemorialAnnotationForAnnotationView:view];
     
@@ -327,5 +333,29 @@
     
 }
 
+
+- (IBAction)getDirectionsToUserSelectedAnnotation:(UIButton *)sender {
+    
+    if(!self.selectedAnnotationView){
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"No location selected!" message:@"Select a location in order to get directions in Maps" preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alertController addAction:okayAction];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+        
+    }
+    
+    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:self.selectedAnnotationView.annotation.coordinate andWithPlacemarkName:self.selectedAnnotationView.annotation.title];
+    
+    
+    
+
+}
 
 @end

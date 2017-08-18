@@ -34,7 +34,7 @@
 -(void)viewWillLayoutSubviews{
     NSLog(@"Annotation title: %@",self.annotation.title);
     NSLog(@"Annotation address: %@",self.annotation.address);
-    
+    NSLog(@"The latitude of this location is: %f, the longitude is: %f",self.annotation.coordinate.latitude,self.annotation.coordinate.longitude);
     
     NSDictionary* attributedTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Futura-Medium" size:30.0],NSFontAttributeName,[UIColor koreanBlue],NSForegroundColorAttributeName, nil];
     
@@ -50,47 +50,58 @@
     [self.titleLabel setAttributedText: attributedTitle];
     [self.addressLabel setAttributedText:attributedAddress];
     
-    [self.mapView setDelegate:self];
-    
     [self.mapView removeAnnotations:self.mapView.annotations];
     
     [self.mapView addAnnotation:self.annotation];
     
+    
     [self setRegionForMap];
     
+    [self.mapView setNeedsLayout];
+
 }
 
 
 
+-(void)viewWillAppear:(BOOL)animated{
+  
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    [self.mapView addAnnotation:self.annotation];
+    
+    
+    [self setRegionForMap];
+    
+    [self.mapView setNeedsLayout];
 
+
+}
 
 -(void)viewDidLoad{
-    [self.mapView setDelegate:self];
-
+    
     [self.mapView removeAnnotations:self.mapView.annotations];
-
+    
     [self.mapView addAnnotation:self.annotation];
     
+    
     [self setRegionForMap];
+    
+    [self.mapView setNeedsLayout];
 
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [self.mapView addAnnotation:self.annotation];
-    
-    [self setRegionForMap];
 
-}
 
 -(void) setRegionForMap{
     
-    self.mapView.region = MKCoordinateRegionMake(self.annotation.coordinate, MKCoordinateSpanMake(0.01, 0.01));
+    self.mapView.region = MKCoordinateRegionMake(self.annotation.coordinate, MKCoordinateSpanMake(0.001, 0.001));
     
 }
 
 - (IBAction)getDirectionsToLocationInMaps:(UIButton *)sender {
     
-    [[UserLocationManager sharedLocationManager] viewLocationInMapsFromHostelTo:self.annotation.coordinate];
+    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:self.annotation.coordinate andWithPlacemarkName:self.annotation.title];
+    
     
 }
 @end

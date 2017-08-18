@@ -1,1 +1,0 @@
-../../../cordova-plugin-vibration/src/ios/CDVVibration.h

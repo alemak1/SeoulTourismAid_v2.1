@@ -264,18 +264,21 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
     MKPlacemark* toPlacemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(toLatitude, toLongitude)];
     
     MKMapItem* toMapItem = [[MKMapItem alloc] initWithPlacemark:toPlacemark];
+    toMapItem.name = self.touristSiteConfiguration.siteTitle;
     
     CLLocation* userLocation = [[UserLocationManager sharedLocationManager] getLastUpdatedUserLocation];
     
     MKPlacemark* userLocationPlacemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)];
+
     
     MKMapItem* fromMapItem = [[MKMapItem alloc] initWithPlacemark:userLocationPlacemark];
+    fromMapItem.name = @"Current Location";
     
     // Create a region centered on the starting point with a 10km span
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(toPlacemark.coordinate, 10000, 10000);
     
     // Open the item in Maps, specifying the map region to display.
-    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:toMapItem,fromMapItem, nil]
+    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:fromMapItem,toMapItem, nil]
                    launchOptions:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSValue valueWithMKCoordinate:region.center], MKLaunchOptionsMapCenterKey,
                                   [NSValue valueWithMKCoordinateSpan:region.span], MKLaunchOptionsMapSpanKey, nil]];

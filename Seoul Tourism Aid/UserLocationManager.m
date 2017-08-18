@@ -13,7 +13,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "UserLocationManager.h"
-
+#import "Constants.h"
 
 /** Additional functionality: user can opt to monitor for notifications when close to a tourist area (a detail view for the iste can be presented); also, the user can be notified when within a given distance from the hostel **/
 
@@ -37,6 +37,7 @@
 
 static UserLocationManager* mySharedLocationManager;
 
+@synthesize lastUpdatedUserLocation = _lastUpdatedUserLocation;
 
 
 
@@ -241,8 +242,13 @@ static UserLocationManager* mySharedLocationManager;
     // Work around a bug in MapKit where user location is not initially zoomed to.
     if (oldLocation == nil && oldLocation != newLocation) {
         
-        
-        _lastUpdatedUserLocation = newLocation;
+        if(IS_IN_SIMULATION_MODE){
+            _lastUpdatedUserLocation = [[CLLocation alloc] initWithLatitude:37.5369559 longitude:126.97493];;
+
+        } else {
+            _lastUpdatedUserLocation = newLocation;
+
+        }
         
         
          NSLog(@"The newLocation is lat: %f, long: %f",_lastUpdatedUserLocation.coordinate.latitude,_lastUpdatedUserLocation.coordinate.longitude);
@@ -277,7 +283,8 @@ static UserLocationManager* mySharedLocationManager;
     
     UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"Give me directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction* alertAction){
         
-        [self viewLocationInMapsTo:circularRegion.center];
+        
+        [self viewLocationInMapsTo:circularRegion.center andWithPlacemarkName:circularRegion.identifier];
         
         
     }];
@@ -318,7 +325,7 @@ static UserLocationManager* mySharedLocationManager;
     
     UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"Give me directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction* alertAction){
         
-        [self viewLocationInMapsTo:circularRegion.center];
+        [self viewLocationInMapsTo:circularRegion.center andWithPlacemarkName:circularRegion.identifier];
         
         
     }];
@@ -429,7 +436,7 @@ static UserLocationManager* mySharedLocationManager;
     
     
     // Open the item in Maps, specifying the map region to display.
-    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:toLocation,fromLocation, nil]
+    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:fromLocation,toLocation, nil]
                    launchOptions:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSValue valueWithMKCoordinate:region.center], MKLaunchOptionsMapCenterKey,
                                   [NSValue valueWithMKCoordinateSpan:region.span], MKLaunchOptionsMapSpanKey,
@@ -437,21 +444,22 @@ static UserLocationManager* mySharedLocationManager;
     
 }
 
--(void)viewLocationInMapsTo:(CLLocationCoordinate2D)regionCenter{
+-(void)viewLocationInMapsTo:(CLLocationCoordinate2D)regionCenter andWithPlacemarkName:(NSString*)placemarkName{
     
     /** Initialize a MapItem with user's current location **/
     CLLocationCoordinate2D userLocation = self.lastUpdatedUserLocation.coordinate;
     
     MKPlacemark* userLocationPlacemark = [[MKPlacemark alloc] initWithCoordinate:userLocation];
     MKMapItem* fromLocation = [[MKMapItem alloc] initWithPlacemark:userLocationPlacemark];
-    
+    fromLocation.name = @"Current Location";
     
     
     /** Initialize a MapItem with the center coordinate of the region that the user has just entered **/
+    
     MKPlacemark* regionPlacemark = [[MKPlacemark alloc] initWithCoordinate:regionCenter];
     
     MKMapItem* toLocation = [[MKMapItem alloc] initWithPlacemark:regionPlacemark];
-    
+    toLocation.name = placemarkName;
     
     
     CLLocationDistance distanceBetweenEndpoints = [self.lastUpdatedUserLocation distanceFromLocation:regionPlacemark.location];
@@ -462,14 +470,27 @@ static UserLocationManager* mySharedLocationManager;
     
     
     // Open the item in Maps, specifying the map region to display.
-    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:toLocation,fromLocation, nil]
+    [MKMapItem openMapsWithItems:[NSArray arrayWithObjects:fromLocation,toLocation, nil]
                    launchOptions:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSValue valueWithMKCoordinate:region.center], MKLaunchOptionsMapCenterKey,
                                   [NSValue valueWithMKCoordinateSpan:region.span], MKLaunchOptionsMapSpanKey,
                                   MKLaunchOptionsDirectionsModeDefault,MKLaunchOptionsDirectionsModeKey, nil]];
 }
 
+-(CLLocation *)lastUpdatedUserLocation{
+    
+    if(IS_IN_SIMULATION_MODE){
+        return [[CLLocation alloc] initWithLatitude:37.53297 longitude:126.9735352];
+    }
+    
+    return _lastUpdatedUserLocation;
+}
 
+-(void)setLastUpdatedUserLocation:(CLLocation *)lastUpdatedUserLocation{
+    
+    _lastUpdatedUserLocation = lastUpdatedUserLocation;
+    
+}
 
 
 @end

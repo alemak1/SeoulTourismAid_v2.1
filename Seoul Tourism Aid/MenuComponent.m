@@ -475,7 +475,7 @@
     
     if(CW_CH){
         self.tableSettings = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-            [UIFont fontWithName:@"Futura-CondensedMedium" size:20.0], @"font",
+            [UIFont fontWithName:@"Futura-CondensedMedium" size:25.0], @"font",
             [NSNumber numberWithInt:NSTextAlignmentLeft], @"textAlignment",
             [UIColor koreanBlue], @"textColor",
             [NSNumber numberWithInt:UITableViewCellSelectionStyleGray], @"selectionStyle",
@@ -485,7 +485,7 @@
     
     if(RW_CH){
         self.tableSettings = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                              [UIFont fontWithName:@"Futura-CondensedMedium" size:20.0], @"font",
+                              [UIFont fontWithName:@"Futura-CondensedMedium" size:25.0], @"font",
                               [NSNumber numberWithInt:NSTextAlignmentLeft], @"textAlignment",
                               [UIColor koreanBlue], @"textColor",
                               [NSNumber numberWithInt:UITableViewCellSelectionStyleGray], @"selectionStyle",

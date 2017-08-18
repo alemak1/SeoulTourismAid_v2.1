@@ -13,6 +13,7 @@
 #import "HostelLocationAnnotationView.h"
 #import "DirectionsMenuController.h"
 #import "LocalAreaNavController.h"
+#import "UserLocationManager.h"
 
 @interface HostelAreaMapViewController ()
 
@@ -27,6 +28,10 @@
 
 
 - (IBAction)showFilterOptionsController:(UIButton *)sender;
+
+@property MKAnnotationView* selectedAnnotationView;
+
+- (IBAction)getDirectionsToSelectedAnnotation:(UIButton *)sender;
 
 
 @end
@@ -180,6 +185,36 @@ static void* HostelAreaMapControllerContext = &HostelAreaMapControllerContext;
 
 - (IBAction)showFilterOptionsController:(UIButton *)sender {
 }
+
+- (IBAction)getDirectionsToSelectedAnnotation:(UIButton *)sender {
+    
+    
+    if(!self.selectedAnnotationView){
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"No location selected!" message:@"Select a location in order to get directions in Maps" preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alertController addAction:okayAction];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+        
+    }
+    
+    [[UserLocationManager sharedLocationManager] viewLocationInMapsTo:self.selectedAnnotationView.annotation.coordinate andWithPlacemarkName:self.selectedAnnotationView.annotation.title];
+    
+    
+
+}
+
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
+    
+    self.selectedAnnotationView = view;
+}
+
 
 
 @end
