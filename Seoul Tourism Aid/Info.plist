@@ -2,36 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>The app would like to record your speech so that it can translate the recorded speech into Korean, so that you can better communicate with locals while on your trip.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>The app would like to record your speech so that it can translate the recorded text to Korean, which you can use to help communicate with locals while in Korea.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>The app would like to use your camera to take a picture of Korean text so that it can translate the photographed characters into English.</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq</string>
-			</array>
-			<key>CFBundleURLName</key>
-			<string>com.AlexMakedonski.Seoul-Tourism-Aid</string>
-		</dict>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq</string>
-			</array>
-			<key>CFBundleURLName</key>
-			<string>com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq</string>
-		</dict>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>
@@ -58,7 +28,26 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.AlexMakedonski.Seoul-Tourism-Aid</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.625367767692-j16r3608poe8amocse5j6rb58i2i47aq</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -68,10 +57,21 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>The app would like to use your camera to take a picture of Korean text so that it can translate the photographed characters into English.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>The app requires access to your current location in order to determine your proximity to major tourist sites, as well as for determing accurate routes to places of interest.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>The app requires access to your current location in order to determine your proximity to major tourist sites, as well as for determing accurate routes to places of interest.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The app would like to record your speech so that it can translate the recorded text to Korean, which you can use to help communicate with locals while in Korea.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>The app would like to record your speech so that it can translate the recorded speech into Korean, so that you can better communicate with locals while on your trip.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

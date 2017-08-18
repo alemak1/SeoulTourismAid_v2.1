@@ -62,6 +62,26 @@
 }
 
 
+-(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSDictionary* attributedTitleAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Futura-Medium" size:30.0],NSFontAttributeName,[UIColor koreanBlue],NSForegroundColorAttributeName, nil];
+        
+        NSAttributedString* attributedTitle = [[NSAttributedString alloc] initWithString:self.annotation.title attributes:attributedTitleAttributes];
+        
+        
+        NSDictionary* attributedAddressAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Futura-Medium" size:25.0],NSFontAttributeName,[UIColor koreanBlue],NSForegroundColorAttributeName, nil];
+        
+        
+        
+        NSAttributedString* attributedAddress = [[NSAttributedString alloc] initWithString:self.annotation.address attributes:attributedAddressAttributes];
+        
+        [self.titleLabel setAttributedText: attributedTitle];
+        [self.addressLabel setAttributedText:attributedAddress];
+        
+    });
+}
 
 -(void)viewWillAppear:(BOOL)animated{
   
