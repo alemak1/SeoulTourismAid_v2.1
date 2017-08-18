@@ -32,6 +32,8 @@
 		BD2E4D4D1F25DCFF005770D1 /* transportationAudio15.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD2E4D4C1F25DCFF005770D1 /* transportationAudio15.caf */; };
 		BD2EDB811F1B8F8500C86D37 /* WeatherForecastSites.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD2EDB7F1F1B8F8500C86D37 /* WeatherForecastSites.plist */; };
 		BD2EDBA01F1B92F900C86D37 /* EntryUIOverlay.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2EDB9F1F1B92F900C86D37 /* EntryUIOverlay.sks */; };
+		BD2EEABB1F470E6500554958 /* YouTubeCreditsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EEABA1F470E6500554958 /* YouTubeCreditsContainer.m */; };
+		BD2EEABE1F470EEB00554958 /* YouTubeCreditsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EEABD1F470EEB00554958 /* YouTubeCreditsController.m */; };
 		BD3145221F19D05D00999981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3145211F19D05D00999981 /* Assets.xcassets */; };
 		BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F51F1B663A000F5F7E /* StoryboardA.storyboard */; };
 		BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F61F1B663A000F5F7E /* StoryboardB.storyboard */; };
@@ -310,6 +312,10 @@
 		BD2EDB991F1B903E00C86D37 /* UIViewController+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HelperMethods.h"; sourceTree = "<group>"; };
 		BD2EDB9A1F1B903E00C86D37 /* UIViewController+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HelperMethods.m"; sourceTree = "<group>"; };
 		BD2EDB9F1F1B92F900C86D37 /* EntryUIOverlay.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EntryUIOverlay.sks; sourceTree = "<group>"; };
+		BD2EEAB91F470E5800554958 /* YouTubeCreditsContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeCreditsContainer.h; sourceTree = "<group>"; };
+		BD2EEABA1F470E6500554958 /* YouTubeCreditsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeCreditsContainer.m; sourceTree = "<group>"; };
+		BD2EEABC1F470EB700554958 /* YouTubeCreditsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeCreditsController.h; sourceTree = "<group>"; };
+		BD2EEABD1F470EEB00554958 /* YouTubeCreditsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeCreditsController.m; sourceTree = "<group>"; };
 		BD3145211F19D05D00999981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD3145241F19DAC900999981 /* GMSLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSLocationSearchController.h; sourceTree = "<group>"; };
 		BD3145251F19DAD600999981 /* GMSLocationSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSLocationSearchController.m; sourceTree = "<group>"; };
@@ -683,6 +689,7 @@
 		BD2E4D261F25B49B005770D1 /* ScrollableInfoController */ = {
 			isa = PBXGroup;
 			children = (
+				BD2EEAB81F470E2F00554958 /* YouTubeCredits */,
 				BD2E4D361F25CB06005770D1 /* Acknowledgements */,
 				BD2E4D271F25B4B3005770D1 /* ScrollableInfoController.h */,
 				BD2E4D281F25B4B3005770D1 /* ScrollableInfoController.m */,
@@ -763,6 +770,17 @@
 				BD339C8F1F30F0150012C4D0 /* NSString+URLEncoding.m */,
 			);
 			name = OtherUtils;
+			sourceTree = "<group>";
+		};
+		BD2EEAB81F470E2F00554958 /* YouTubeCredits */ = {
+			isa = PBXGroup;
+			children = (
+				BD2EEAB91F470E5800554958 /* YouTubeCreditsContainer.h */,
+				BD2EEABA1F470E6500554958 /* YouTubeCreditsContainer.m */,
+				BD2EEABC1F470EB700554958 /* YouTubeCreditsController.h */,
+				BD2EEABD1F470EEB00554958 /* YouTubeCreditsController.m */,
+			);
+			name = YouTubeCredits;
 			sourceTree = "<group>";
 		};
 		BD3145231F19DA9F00999981 /* SearchController */ = {
@@ -1524,6 +1542,7 @@
 				BD38E2CC1F39D74D00C97639 /* BikingRoutesController.m in Sources */,
 				BD38E2CD1F39D74D00C97639 /* PolygonMapController.m in Sources */,
 				BD38E2CE1F39D74D00C97639 /* PolygonSelectionController.m in Sources */,
+				BD2EEABE1F470EEB00554958 /* YouTubeCreditsController.m in Sources */,
 				BD38E2CF1F39D74D00C97639 /* DirectionsMenuController.m in Sources */,
 				BD38E2D01F39D74D00C97639 /* NavigationAidEntryController.m in Sources */,
 				BD38E2D11F39D74D00C97639 /* WarMemorialNavigationController.m in Sources */,
@@ -1634,6 +1653,7 @@
 				BD38E2AD1F39D62100C97639 /* AuthorPicCell.m in Sources */,
 				BD38E2AE1F39D62100C97639 /* AcknowledgementsIndexVC.m in Sources */,
 				BD38E2AF1F39D62100C97639 /* AcknowledgementsContainerController.m in Sources */,
+				BD2EEABB1F470E6500554958 /* YouTubeCreditsContainer.m in Sources */,
 				BD38E2B01F39D62100C97639 /* ScrollableInfoController.m in Sources */,
 				BD38E2B11F39D62100C97639 /* ContactInfoController.m in Sources */,
 				BD38E2B21F39D62100C97639 /* ContactScrollViewController.m in Sources */,
