@@ -476,10 +476,7 @@ static UserLocationManager* mySharedLocationManager;
 
 -(CLLocation *)lastUpdatedUserLocation{
     
-    if(IS_IN_SIMULATION_MODE){
-        return [[CLLocation alloc] initWithLatitude:37.5369559 longitude:126.97493];
-    }
- 
+   
     return _lastUpdatedUserLocation;
 }
 
