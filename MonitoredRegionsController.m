@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <UserNotifications/UserNotifications.h>
 #import "MonitoredRegionsController.h"
 #import "TouristSiteManager.h"
 #import "UserLocationManager.h"
 #import "UIView+HelperMethods.h"
+#import "Constants.h"
 
 @interface MonitoredRegionsController ()
 
@@ -41,7 +42,11 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MonitoredRegionCell"];
     
     [self.tableView setEditing:NO];
+    [self.tableView setAllowsMultipleSelection:YES];
     
+    [[UserLocationManager sharedLocationManager] setPresentingViewControllerTo:self];
+    
+
 }
 
 
@@ -70,6 +75,9 @@
     NSString* regionIdentifier = [regionDict valueForKey:@"RegionIdentifier"];
     NSString* address = [regionDict valueForKey:@"Address"];
     
+    NSLog(@"Dequeuing the cell with the region identifier: %@",regionIdentifier);
+    
+    
     BOOL hasSwitch = false;
     
     for (UIView*subview in cell.contentView.subviews) {
@@ -84,7 +92,7 @@
     
         UISwitch* monitoringToggle = [[UISwitch alloc] initWithFrame:toggleFrame];
     
-        [monitoringToggle setTag:indexPath.row];
+        [cell.contentView setTag:indexPath.row];
     
         BOOL isBeingMonitored = [[UserLocationManager sharedLocationManager] isUnderRegionMonitoring:regionIdentifier];
     
@@ -94,7 +102,8 @@
         
         [cell.contentView addSubview:monitoringToggle];
     }
-
+     
+    
     
     
     [cell.textLabel setText:regionIdentifier];
@@ -111,9 +120,9 @@
 
 -(void)adjustToggleSwitch:(UISwitch*)sender{
     
-    NSLog(@"Toggled switch with tag %d",[sender tag]);
+    NSLog(@"Toggled switch with tag %d",[sender.superview tag]);
     
-    NSDictionary* regionDict = [self.regionDictArray objectAtIndex:sender.tag];
+    NSDictionary* regionDict = [self.regionDictArray objectAtIndex:[sender.superview tag]];
     
     NSString* regionIdentifier = regionDict[@"RegionIdentifier"];
     
@@ -156,18 +165,69 @@
         
         [[UserLocationManager sharedLocationManager] startMonitoringForSingleRegion:region];
         
+        [[UserLocationManager sharedLocationManager] checkAuthoriationStatusWithCompletionHandler:^(NSNumber* authorizationStatus){
+        
+            if(authorizationStatus && [authorizationStatus boolValue] == YES){
+        
+                [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings* settings){
+                
+                    if(settings.authorizationStatus == UNAuthorizationStatusAuthorized){
+                        
+                        UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
+                        
+                        content.title = [NSString localizedUserNotificationStringForKey:@"Tourist Site Nearby" arguments:@[]];
+                        
+                        content.body = [NSString localizedUserNotificationStringForKey:@"You are close to %@" arguments:@[regionIdentifier]];
+
+                        content.categoryIdentifier = NOTIFICATION_CATEGORY_REGION_MONITORING;
+                        
+                        content.sound = [UNNotificationSound defaultSound];
+                        
+                        content.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:monitoringRadius],@"monitoringRadius",[NSNumber numberWithDouble:coordinate.latitude],@"latitude",[NSNumber numberWithDouble:coordinate.longitude],@"longitude", nil];
+                        
+                        UNLocationNotificationTrigger* trigger = [UNLocationNotificationTrigger triggerWithRegion:region repeats:YES];
+                        
+                        region.notifyOnEntry = YES;
+                        region.notifyOnExit = YES;
+                        
+                        
+                        UNNotificationRequest* request = [UNNotificationRequest requestWithIdentifier:regionIdentifier content:content trigger:trigger];
+                        
+                        
+                        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                            if (error != nil) {
+                                NSLog(@"%@", error.localizedDescription);
+                            }
+                        }];
+                        
+                    }
+                
+                
+                }];
+            } else {
+                UIAlertController*alertController = [UIAlertController alertControllerWithTitle:@"Unable to Send Notifications" message:@"Notifications cannot be sent when entering or leaving this region because ocation services are either unavailable or have not been authorized. Try enabling location services in your Settings app and toggling the switch on again" preferredStyle:UIAlertControllerStyleAlert];
+                
+                
+                UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+                
+                [alertController addAction:okay];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+            }
+        
+        }];
+        
     } else {
         
         [[UserLocationManager sharedLocationManager] stopMonitoringForSingleRegion:region];
         
+        [[UNUserNotificationCenter currentNotificationCenter] removePendingNotificationRequestsWithIdentifiers:[NSArray arrayWithObject:regionIdentifier]];
     }
 }
 
 
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-}
+
+
 
 
 @end

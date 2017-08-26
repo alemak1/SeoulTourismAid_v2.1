@@ -34,6 +34,8 @@
 		BD2EDBA01F1B92F900C86D37 /* EntryUIOverlay.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2EDB9F1F1B92F900C86D37 /* EntryUIOverlay.sks */; };
 		BD2EEABB1F470E6500554958 /* YouTubeCreditsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EEABA1F470E6500554958 /* YouTubeCreditsContainer.m */; };
 		BD2EEABE1F470EEB00554958 /* YouTubeCreditsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2EEABD1F470EEB00554958 /* YouTubeCreditsController.m */; };
+		BD2F8D491F4D714D00AAD342 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2F8D481F4D714D00AAD342 /* StoreKit.framework */; };
+		BD2F8D4D1F4D769300AAD342 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2F8D4C1F4D769300AAD342 /* IAPHelper.m */; };
 		BD3145221F19D05D00999981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3145211F19D05D00999981 /* Assets.xcassets */; };
 		BD32B1F71F1B663A000F5F7E /* StoryboardA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F51F1B663A000F5F7E /* StoryboardA.storyboard */; };
 		BD32B1F81F1B663A000F5F7E /* StoryboardB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1F61F1B663A000F5F7E /* StoryboardB.storyboard */; };
@@ -41,6 +43,7 @@
 		BD32B1FC1F1B66C0000F5F7E /* StoryboardD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32B1FB1F1B66C0000F5F7E /* StoryboardD.storyboard */; };
 		BD32EA021F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD32EA011F1FD51900A7F84D /* client_625367767692-j16r3608poe8amocse5j6rb58i2i47aq.apps.googleusercontent.com.plist */; };
 		BD32EBF01F24FC9900B5E8D2 /* AudioPhrases.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD32EBEF1F24FC9900B5E8D2 /* AudioPhrases.plist */; };
+		BD330C941F50411F00818A69 /* MonitoredRegionsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD330C931F50411F00818A69 /* MonitoredRegionsMenuController.m */; };
 		BD3398451F2CB06700429EE0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3398441F2CB06700429EE0 /* MessageUI.framework */; };
 		BD3473591F3E05A20086404D /* ProgrammaticTouristSiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3473581F3E05A20086404D /* ProgrammaticTouristSiteCell.m */; };
 		BD34737C1F3E11CE0086404D /* TouristCollectionCellTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD34737B1F3E11CE0086404D /* TouristCollectionCellTemplate.xib */; };
@@ -316,6 +319,9 @@
 		BD2EEABA1F470E6500554958 /* YouTubeCreditsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeCreditsContainer.m; sourceTree = "<group>"; };
 		BD2EEABC1F470EB700554958 /* YouTubeCreditsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeCreditsController.h; sourceTree = "<group>"; };
 		BD2EEABD1F470EEB00554958 /* YouTubeCreditsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeCreditsController.m; sourceTree = "<group>"; };
+		BD2F8D481F4D714D00AAD342 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BD2F8D4B1F4D768400AAD342 /* IAPHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		BD2F8D4C1F4D769300AAD342 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
 		BD3145211F19D05D00999981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD3145241F19DAC900999981 /* GMSLocationSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSLocationSearchController.h; sourceTree = "<group>"; };
 		BD3145251F19DAD600999981 /* GMSLocationSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSLocationSearchController.m; sourceTree = "<group>"; };
@@ -341,6 +347,8 @@
 		BD32EBF21F24FDB300B5E8D2 /* AudioSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSection.m; sourceTree = "<group>"; };
 		BD32EBF41F25060100B5E8D2 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		BD32EBF51F25060100B5E8D2 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		BD330C921F50410C00818A69 /* MonitoredRegionMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonitoredRegionMenuController.h; sourceTree = "<group>"; };
+		BD330C931F50411F00818A69 /* MonitoredRegionsMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredRegionsMenuController.m; sourceTree = "<group>"; };
 		BD3398441F2CB06700429EE0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BD339C8B1F30B9930012C4D0 /* GooglePlace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlace.h; sourceTree = "<group>"; };
 		BD339C8C1F30B9A30012C4D0 /* GooglePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlace.m; sourceTree = "<group>"; };
@@ -641,6 +649,7 @@
 				BD3398451F2CB06700429EE0 /* MessageUI.framework in Frameworks */,
 				BD3A45411F18A4D100DA5A75 /* MapKit.framework in Frameworks */,
 				BD3728D61F1F4C4A009DFF50 /* CloudKit.framework in Frameworks */,
+				BD2F8D491F4D714D00AAD342 /* StoreKit.framework in Frameworks */,
 				BD3A453F1F18A4CC00DA5A75 /* CoreLocation.framework in Frameworks */,
 				BAB94663F4E520C767BA9497 /* libPods-Seoul Tourism Aid.a in Frameworks */,
 			);
@@ -652,6 +661,7 @@
 		3EF658D733D4DCD626933478 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD2F8D481F4D714D00AAD342 /* StoreKit.framework */,
 				BD3398441F2CB06700429EE0 /* MessageUI.framework */,
 				BD3728D51F1F4C4A009DFF50 /* CloudKit.framework */,
 				BD3A45401F18A4D100DA5A75 /* MapKit.framework */,
@@ -781,6 +791,15 @@
 				BD2EEABD1F470EEB00554958 /* YouTubeCreditsController.m */,
 			);
 			name = YouTubeCredits;
+			sourceTree = "<group>";
+		};
+		BD2F8D4A1F4D767500AAD342 /* IAPHelper */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F8D4B1F4D768400AAD342 /* IAPHelper.h */,
+				BD2F8D4C1F4D769300AAD342 /* IAPHelper.m */,
+			);
+			name = IAPHelper;
 			sourceTree = "<group>";
 		};
 		BD3145231F19DA9F00999981 /* SearchController */ = {
@@ -1098,6 +1117,7 @@
 		BD3A451E1F18A3EC00DA5A75 /* Seoul Tourism Aid */ = {
 			isa = PBXGroup;
 			children = (
+				BD2F8D4A1F4D767500AAD342 /* IAPHelper */,
 				BD66B8AF1F331CFD00583181 /* CustomCordovaViewControllers */,
 				BD48B2DD1F31D3590021B138 /* GooglePlaceViewControllers */,
 				BD35873A1F29D3EF00B7ECFE /* VisitedSitesController */,
@@ -1161,6 +1181,8 @@
 				BD45566F1F21B1D400D21756 /* MonitoredRegionsController.h */,
 				BD4556701F21B1D400D21756 /* MonitoredRegionsController.m */,
 				BD4556721F21B8F700D21756 /* RegionIdentifiers.plist */,
+				BD330C921F50410C00818A69 /* MonitoredRegionMenuController.h */,
+				BD330C931F50411F00818A69 /* MonitoredRegionsMenuController.m */,
 			);
 			name = MonitoredRegionsController;
 			path = ..;
@@ -1333,6 +1355,9 @@
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
 							};
 							com.apple.Keychain = {
 								enabled = 0;
@@ -1553,6 +1578,7 @@
 				BD38E2D01F39D74D00C97639 /* NavigationAidEntryController.m in Sources */,
 				BD38E2D11F39D74D00C97639 /* WarMemorialNavigationController.m in Sources */,
 				BD38E2D21F39D74D00C97639 /* WarMemorialAnnotation.m in Sources */,
+				BD330C941F50411F00818A69 /* MonitoredRegionsMenuController.m in Sources */,
 				BD38E2D31F39D74D00C97639 /* ToHostelDirectionsController.m in Sources */,
 				BD38E2D41F39D74D00C97639 /* MonitoredRegionsController.m in Sources */,
 				BD38E2D51F39D74D00C97639 /* WVController.m in Sources */,
@@ -1662,6 +1688,7 @@
 				BD2EEABB1F470E6500554958 /* YouTubeCreditsContainer.m in Sources */,
 				BD38E2B01F39D62100C97639 /* ScrollableInfoController.m in Sources */,
 				BD38E2B11F39D62100C97639 /* ContactInfoController.m in Sources */,
+				BD2F8D4D1F4D769300AAD342 /* IAPHelper.m in Sources */,
 				BD38E2B21F39D62100C97639 /* ContactScrollViewController.m in Sources */,
 				BD38E2A81F39D61000C97639 /* ProductPriceDisplayController.m in Sources */,
 				BD38E2A91F39D61000C97639 /* ProductSearchController.m in Sources */,

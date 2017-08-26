@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <UserNotifications/UserNotifications.h>
+
 
 #import "UserLocationManager.h"
 #import "Constants.h"
@@ -30,8 +32,13 @@
 
 @property UIViewController* currentPresentingViewController;
 
+typedef void(^AuthorizationStatusHandler)(NSNumber*authorizationStatus);
+
+@property AuthorizationStatusHandler authStatusHandler;
 
 @end
+
+
 
 @implementation UserLocationManager
 
@@ -110,6 +117,59 @@ static UserLocationManager* mySharedLocationManager;
     return self;
 }
 
+
+-(CLAuthorizationStatus)getAuthorizationStatus{
+    return [CLLocationManager authorizationStatus];
+}
+
+-(void)checkAuthoriationStatusWithCompletionHandler:(void(^)(NSNumber*authorizationStatus))completion{
+    
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        completion(nil);
+    } else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        completion([NSNumber numberWithBool:NO]);
+    } else {
+        completion([NSNumber numberWithBool:YES]);
+    }
+    
+}
+
+
+-(void)requestAuthorizationAndStartUpdatesWithCompletionHandler:(void(^)(NSNumber*authStatus))completion{
+    
+    self.authStatusHandler = completion;
+
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        // If status is not determined, then we should ask for authorization.
+        [self requestAlwaysAuthorization];
+        
+        
+    } else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        // If authorization has been denied previously, inform the user.
+        NSLog(@"%s: location services authorization was previously denied by the user.", __PRETTY_FUNCTION__);
+        
+        // Display alert to the user.
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Location services" message:@"Location services were previously denied by the user. Please enable location services for this app in settings." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}]; // Do nothing action to dismiss the alert.
+        
+        [alert addAction:defaultAction];
+        [self.currentPresentingViewController presentViewController:alert animated:YES completion:nil];
+        
+        self.authStatusHandler([NSNumber numberWithBool:NO]);
+        
+    } else { // We do have authorization.
+        // Start the standard location service.
+        [self startUpdatingLocation];
+        [self setAllowsBackgroundLocationUpdates:YES];
+        
+        self.authStatusHandler([NSNumber numberWithBool:YES]);
+    }
+
+    
+    
+}
+
 -(void) requestAuthorizationAndStartUpdates{
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         // If status is not determined, then we should ask for authorization.
@@ -143,6 +203,45 @@ static UserLocationManager* mySharedLocationManager;
         [region setNotifyOnEntry:YES];
         
         [self startMonitoringForRegion:region];
+    }
+}
+
+
+
+-(void)startMonitoringForSingleRegion:(CLRegion*)region withCompletionHandler:(void(^)(NSNumber*authStatus))completion{
+    
+    self.authStatusHandler = completion;
+    
+    if([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]){
+        
+        if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways){
+            
+            
+            NSLog(@"App has started monitoring region %@",[region identifier]);
+            
+            [region setNotifyOnExit:YES];
+            [region setNotifyOnEntry:YES];
+            
+            [self startMonitoringForRegion:region];
+            completion([NSNumber numberWithBool:YES]);
+            
+        } else {
+            NSLog(@"Authorization has been denied for region monitoring");
+            [self requestAlwaysAuthorization];
+        }
+        
+    } else {
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Region Monitoring Unavailable" message:@"Your device hardware configuration does not support region monitoring" preferredStyle:UIAlertControllerStyleAlert];
+        
+        NSLog(@"Your device hardware does not support region monitoring...");
+        
+        [self.currentPresentingViewController presentViewController:alertController animated:YES completion:^{
+        
+            completion([NSNumber numberWithBool:NO]);
+
+        }];
+        
     }
 }
 
@@ -190,6 +289,18 @@ static UserLocationManager* mySharedLocationManager;
     return NO;
 }
 
+-(void)clearMonitoredRegions{
+    
+    NSSet* monitoredRegions = [self monitoredRegions];
+    
+    for (CLRegion* region in monitoredRegions) {
+        
+        [self stopMonitoringForSingleRegion:region];
+    
+    }
+    
+}
+
 -(CLRegion*)getRegionWithIdentifier:(NSString*)regionIdentifier{
     
     NSSet* monitoredRegions = [self monitoredRegions];
@@ -219,7 +330,25 @@ static UserLocationManager* mySharedLocationManager;
         // Start the standard location service.
         [self startUpdatingLocation];
         
+        if(self.authStatusHandler){
+            self.authStatusHandler([NSNumber numberWithBool:YES]);
+        }
+    }
+    
+    if(status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted){
         
+        [self stopUpdatingLocation];
+        
+        if(self.authStatusHandler){
+            self.authStatusHandler([NSNumber numberWithBool:NO]);
+        }
+        
+    }
+    
+    if(status == kCLAuthorizationStatusNotDetermined){
+        if(self.authStatusHandler){
+            self.authStatusHandler(nil);
+        }
     }
     
     
@@ -264,6 +393,9 @@ static UserLocationManager* mySharedLocationManager;
 }
 
 // The device entered a monitored region.
+
+
+
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region  {
     
     NSString* siteName = [region identifier];
@@ -485,6 +617,27 @@ static UserLocationManager* mySharedLocationManager;
     _lastUpdatedUserLocation = lastUpdatedUserLocation;
     
 }
+
+
+#pragma makr USER NOTIFICATION CENTER DELEGATE METHODS
+
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+    
+    if(response){
+        if([response.actionIdentifier isEqualToString:NOTIFICATION_ACTION_IDENTIFIER_GET_DIRECTIONS]){
+            
+            NSString* placeMarkName = response.notification.request.identifier;
+            
+            NSDictionary* userInfoDict = response.notification.request.content.userInfo;
+            
+            double latitude = [userInfoDict[@"latitude"] doubleValue];
+            double longitude = [userInfoDict[@"longitude"] doubleValue];
+            
+            [self viewLocationInMapsTo:CLLocationCoordinate2DMake(latitude, longitude) andWithPlacemarkName:placeMarkName];
+        }
+    }
+}
+
 
 
 @end

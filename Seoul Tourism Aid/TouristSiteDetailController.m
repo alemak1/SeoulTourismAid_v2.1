@@ -11,6 +11,7 @@
 #import "WVController.h"
 #import "UserLocationManager.h"
 #import "GoogleURLGenerator.h"
+#import "Constants.h"
 
 @import GoogleMaps;
 @import GooglePlaces;
@@ -347,10 +348,59 @@ BOOL _alreadyPerformedParkingInfoSegue = false;
         
         [[UserLocationManager sharedLocationManager] startMonitoringForSingleRegion:region];
         
+        
+        [[UserLocationManager sharedLocationManager] checkAuthoriationStatusWithCompletionHandler:^(NSNumber* authorizationStatus){
+            
+            
+            if(authorizationStatus && [authorizationStatus boolValue] == YES){
+                
+                [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings* settings){
+                    
+                    
+                    if(settings.authorizationStatus == UNAuthorizationStatusAuthorized){
+                        
+                        UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
+                        
+                        content.title = [NSString localizedUserNotificationStringForKey:@"Tourist Site Nearby" arguments:@[]];
+                        
+                        content.body = [NSString localizedUserNotificationStringForKey:@"You are close to %@" arguments:@[self.touristSiteConfiguration.siteTitle]];
+                        
+                        content.categoryIdentifier = NOTIFICATION_CATEGORY_REGION_MONITORING;
+                        
+                        content.sound = [UNNotificationSound defaultSound];
+                        
+                        content.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:monitoringRadius],@"monitoringRadius",[NSNumber numberWithDouble:self.touristSiteConfiguration.coordinate.latitude],@"latitude",[NSNumber numberWithDouble:self.touristSiteConfiguration.coordinate.longitude],@"longitude", nil];
+                        
+                        UNLocationNotificationTrigger* trigger = [UNLocationNotificationTrigger triggerWithRegion:region repeats:YES];
+                        
+                        region.notifyOnEntry = YES;
+                        region.notifyOnExit = YES;
+                        
+                        
+                        UNNotificationRequest* request = [UNNotificationRequest requestWithIdentifier:self.touristSiteConfiguration.siteTitle content:content trigger:trigger];
+                        
+                        
+                        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                            if (error != nil) {
+                                NSLog(@"%@", error.localizedDescription);
+                            }
+                        }];
+                    }
+                    
+                }];
+                
+            }
+            
+            
+            
+        }];
+        
+        
     } else {
         
         [[UserLocationManager sharedLocationManager] stopMonitoringForSingleRegion:region];
         
+          [[UNUserNotificationCenter currentNotificationCenter] removePendingNotificationRequestsWithIdentifiers:[NSArray arrayWithObject:region.identifier]];
     }
     
 }

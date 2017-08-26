@@ -145,7 +145,7 @@
         <scene sceneID="mi9-3S-Met">
             <objects>
                 <collectionViewController id="wZ9-JG-LcC" customClass="SeoulVideoCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="has-AF-ygo">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="has-AF-ygo">
                         <rect key="frame" x="0.0" y="0.0" width="696" height="57.999999999999986"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -950,7 +950,7 @@
         <scene sceneID="NfC-Xs-W39">
             <objects>
                 <collectionViewController id="EoX-wJ-VHl" customClass="SeoulVideoCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="hGh-TH-sCB">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hGh-TH-sCB">
                         <rect key="frame" x="0.0" y="0.0" width="515.33333333333326" height="103.66666666666671"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.66807439670000002" green="0.93137937780000002" blue="0.92729187339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

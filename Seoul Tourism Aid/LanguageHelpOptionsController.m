@@ -21,21 +21,41 @@
 
 #import "AppDelegate.h"
 #import "Constants.h"
-
+#import "IAPHelper.h"
 
 @interface LanguageHelpOptionsController ()
 
 @property(readonly)GTMAppAuthFetcherAuthorization* authorization;
+@property (readonly) IAPHelper* store;
 
 @end
 
 @implementation LanguageHelpOptionsController
 
+static NSString* const _productIDforKoreanLanguageHelpAccess = @"com.AlexMakedonski.SeoulTourismAid.KoreanLanguageHelpAccessAlpha";
 
+
+-(void)viewWillAppear:(BOOL)animated{
+   // [GTMAppAuthFetcherAuthorization saveAuthorization:nil toKeychainForName:kGTMAppAuthAuthorizerKey];
+
+   /**  Used only for debug purposes:
+    
+    
+    **/
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    /**  FOR FUTURE VERSIONS (consider moving to entry view controller so to disallow user from access the language help menu completely unless they purchase access to the Korean help feature):
+     
+    [self makeInAppPurchaseOffer];
+     **/
+}
 
 
 -(void)viewDidLoad{
 
+    [GTMAppAuthFetcherAuthorization saveAuthorization:nil toKeychainForName:kGTMAppAuthAuthorizerKey];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissViewControllerIfUnauthorized) name:DID_RECEIVE_USER_AUTHORIZATION_NOTIFICATION object:nil];
     
@@ -48,13 +68,102 @@
         
         [self presentViewController:authorizationController animated:YES completion:nil];
         
-    }
-    
+    } else {
+        
     
  
     
+    }
+    
+    
+    
 }
 
+
+-(void)makeInAppPurchaseOffer{
+    
+    IAPHelper* sharedHelper = [IAPHelper sharedHelper];
+    
+    if([sharedHelper isProductPurchased:_productIDforKoreanLanguageHelpAccess]){
+        
+        //Language help has already been purchased...
+        NSLog(@"Language help has already been purchased by this user.");
+        
+    } else if(sharedHelper.canMakePayments){
+        //Offer in-app purchase to user
+        
+        
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Korean Language Help" message:@"Access to the Korean language help feature requires an in-app purchase price of $0.99.  Would you like to purchase Korean language help access?" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+            
+            
+            
+            //If the product request failed, then notify the user and dismiss the view controller
+            if([sharedHelper purchaseFullKoreanLanguageHelpAccess]){
+                
+                //Purchase succeeded...
+                NSLog(@"Purchase of Korean Language help successful!");
+                
+            } else {
+                
+                NSLog(@"Purchase of Korean Language help failed");
+
+                /** SKProduct list unavailable from Apple servers **/
+                UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Unavailable for Purchase" message:@"The Korean Language Help feature is currently unavailable for purchase. Please try again later." preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+                    
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                    
+                }];
+                
+                [alertController addAction:okay];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+                
+                return;
+                
+            }
+            
+            
+        }];
+        
+        [alertController addAction:okay];
+        
+        
+        UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"No thanks" style:UIAlertActionStyleCancel handler:^(UIAlertAction*action){
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
+        }];
+        
+        
+        
+        [alertController addAction:cancel];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        
+    } else {
+        //If in-app purchases is diabled, then dismiss the view controller and notify user
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Unavailable for Purchase" message:@"The Korean Language Help feature is unavailable for purchase." preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okay = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction*action){
+                        
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [alertController addAction:okay];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        
+    }
+
+}
 
 -(void)dismissViewControllerIfUnauthorized{
     

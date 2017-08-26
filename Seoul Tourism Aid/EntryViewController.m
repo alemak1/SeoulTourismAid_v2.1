@@ -27,7 +27,7 @@
 #import <GTMSessionFetcherService.h>
 
 #import "Constants.h"
-
+#import "IAPHelper.h"
 
 
 @interface EntryViewController ()
@@ -47,11 +47,12 @@
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
 
-    
     [[UserLocationManager sharedLocationManager] requestAuthorizationAndStartUpdates];
     
- 
-
+    /** Restore previously purchased access to Korean language help feature **/
+    IAPHelper* sharedIAPHelper = [IAPHelper sharedHelper];
+    
+  
     
 }
 
@@ -288,18 +289,18 @@
 
 -(UIViewController*)getMonitoredRegionsControllerFromStoryboard{
     
-    UIStoryboard* storyboardB = [UIStoryboard storyboardWithName:@"StoryboardB" bundle:nil];
+    UIStoryboard* storyboardD = [UIStoryboard storyboardWithName:@"StoryboardD" bundle:nil];
     
     
-    NSString *storyBoardIdentifier = @"MonitoredRegionsController_iPad";
+    NSString *storyBoardIdentifier = @"MonitoredRegionsMenuController_iPad";
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
-        storyBoardIdentifier = @"MonitoredRegionsController";
+        storyBoardIdentifier = @"MonitoredRegionsMenuController";
     }
     
     
-    return [storyboardB instantiateViewControllerWithIdentifier:storyBoardIdentifier];
+    return [storyboardD instantiateViewControllerWithIdentifier:storyBoardIdentifier];
     
 }
 
